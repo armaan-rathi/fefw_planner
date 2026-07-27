@@ -1,0 +1,141 @@
+import { useState } from "react";
+import { NavLink, Navigate, Route, Routes } from "react-router-dom";
+import { useData } from "./data/DataContext";
+import { DevModeProvider, useDevMode } from "./data/DevModeContext";
+import { Modal } from "./components/Modal";
+import { RouteSelection } from "./pages/RouteSelection";
+import { TeamPlanner } from "./pages/TeamPlanner";
+import { OverworldMap } from "./pages/OverworldMap";
+import { DevMode } from "./pages/dev/DevMode";
+
+function SaveBadge() {
+  const { saveState } = useData();
+  const map: Record<string, { t: string; c: string }> = {
+    idle: { t: "", c: "" },
+    saving: { t: "Saving…", c: "saving" },
+    saved: { t: "Saved", c: "saved" },
+    error: { t: "Save failed", c: "error" },
+  };
+  const s = map[saveState];
+  if (!s.t) return null;
+  return <span className={"save-badge " + s.c}>{s.t}</span>;
+}
+
+function EditorControls() {
+  const { devMode, protectedMode, login, logout } = useDevMode();
+  const [open, setOpen] = useState(false);
+  const [pw, setPw] = useState("");
+  const [err, setErr] = useState(false);
+  const [busy, setBusy] = useState(false);
+
+  async function submit() {
+    setBusy(true);
+    setErr(false);
+    const ok = await login(pw);
+    setBusy(false);
+    if (ok) {
+      setOpen(false);
+      setPw("");
+    } else {
+      setErr(true);
+    }
+  }
+
+  if (devMode) {
+    return (
+      <div className="row" style={{ gap: 10 }}>
+        <span className="tag">✎ Editor</span>
+        <button className="btn tiny ghost" onClick={logout}>Log out</button>
+      </div>
+    );
+  }
+  return (
+    <>
+      <button className="btn tiny" onClick={() => { setOpen(true); setErr(false); }}>Editor sign-in</button>
+      <Modal
+        open={open}
+        title="Editor sign-in"
+        onClose={() => setOpen(false)}
+        footer={
+          <>
+            <button className="btn ghost" onClick={() => setOpen(false)}>Cancel</button>
+            <button className="btn primary" onClick={submit} disabled={busy}>{busy ? "Checking…" : "Sign in"}</button>
+          </>
+        }
+      >
+        {protectedMode ? (
+          <label className="field"><span>Editor password</span>
+            <input
+              type="password"
+              autoFocus
+              value={pw}
+              onChange={(e) => setPw(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && submit()}
+            />
+          </label>
+        ) : (
+          <p className="muted" style={{ margin: 0 }}>
+            No editor password is set on this server (local/dev mode), so editing is open. Click <b>Sign in</b> to enable the editor.
+          </p>
+        )}
+        {err && <div className="error-text">Incorrect password.</div>}
+      </Modal>
+    </>
+  );
+}
+
+function Shell() {
+  const { devMode } = useDevMode();
+  const { loading, error } = useData();
+
+  return (
+    <div className="app-root">
+      <header className="topbar ornate-edge">
+        <div className="brand">
+          <span className="brand-mark">✦</span>
+          <div>
+            <h1>Fortune Weaver</h1>
+            <p className="brand-sub">Planner for Fire Emblem: Fortune&apos;s Weave</p>
+          </div>
+        </div>
+        <nav className="mainnav">
+          <NavLink to="/routes">Route Selection</NavLink>
+          <NavLink to="/team">Team Planner</NavLink>
+          <NavLink to="/map">Overworld Map</NavLink>
+          {devMode && <NavLink to="/dev">Dev Mode</NavLink>}
+        </nav>
+        <div className="topbar-right">
+          <SaveBadge />
+          <EditorControls />
+        </div>
+      </header>
+
+      <main className="page-wrap">
+        {loading && <div className="loading-state">Summoning the archives…</div>}
+        {error && (
+          <div className="error-state">
+            Couldn&apos;t reach the data server: {error}. Is the backend running on :5174?
+          </div>
+        )}
+        {!loading && !error && (
+          <Routes>
+            <Route path="/" element={<Navigate to="/routes" replace />} />
+            <Route path="/routes" element={<RouteSelection />} />
+            <Route path="/team" element={<TeamPlanner />} />
+            <Route path="/map" element={<OverworldMap />} />
+            <Route path="/dev/*" element={<DevMode />} />
+            <Route path="*" element={<Navigate to="/routes" replace />} />
+          </Routes>
+        )}
+      </main>
+    </div>
+  );
+}
+
+export function App() {
+  return (
+    <DevModeProvider>
+      <Shell />
+    </DevModeProvider>
+  );
+}

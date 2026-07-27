@@ -1,0 +1,227 @@
+import { useMemo, useState } from "react";
+import { useDB } from "../data/DataContext";
+import { useDevMode } from "../data/DevModeContext";
+import { useLocalStorage } from "../hooks/useLocalStorage";
+import { UnitPortrait } from "../components/UnitPortrait";
+import { uid } from "../api";
+import { lordFirst, unitFaction } from "../data/units";
+import type { RatingParam, Unit } from "../types";
+
+const DEFAULT_PARAMS: RatingParam[] = [{ id: "overall", label: "Overall Appeal" }];
+
+type Ratings = Record<string, number>; // key `${unitId}:${paramId}` -> 1..10
+
+function key(unitId: string, paramId: string) {
+  return `${unitId}:${paramId}`;
+}
+
+export function RouteSelection() {
+  const { db } = useDB();
+  const { devMode } = useDevMode();
+  const [ratings, setRatings] = useLocalStorage<Ratings>("fw.ratings", {});
+  // Rating params are per-visitor (personal), so fans can tailor them without
+  // touching the shared, protected database.
+  const [params, setParams] = useLocalStorage<RatingParam[]>("fw.ratingParams", DEFAULT_PARAMS);
+  const [activeRoute, setActiveRoute] = useState(db.routes[0]?.id ?? "");
+  const [adding, setAdding] = useState(false);
+  const [newParam, setNewParam] = useState("");
+
+  // Units on each route (lord first), including the lord character unit.
+  const unitsByRoute = useMemo(() => {
+    const map: Record<string, Unit[]> = {};
+    for (const route of db.routes) {
+      map[route.id] = lordFirst(db.units.filter((u) => u.routeIds.includes(route.id)));
+    }
+    return map;
+  }, [db.routes, db.units]);
+
+  function setRating(unitId: string, paramId: string, value: number) {
+    setRatings((r) => ({ ...r, [key(unitId, paramId)]: value }));
+  }
+  function getRating(unitId: string, paramId: string) {
+    return ratings[key(unitId, paramId)] ?? 5;
+  }
+
+  // Per-route average score across all its units × rating params.
+  const scores = useMemo(() => {
+    return db.routes.map((route) => {
+      const units = unitsByRoute[route.id] ?? [];
+      let sum = 0;
+      let n = 0;
+      for (const u of units) {
+        for (const p of params) {
+          sum += getRating(u.id, p.id);
+          n++;
+        }
+      }
+      return { route, avg: n ? sum / n : 0, count: units.length };
+    });
+  }, [db.routes, params, unitsByRoute, ratings]);
+
+  const ranked = [...scores].sort((a, b) => b.avg - a.avg);
+
+  function addParam() {
+    const label = newParam.trim();
+    if (!label) return;
+    setParams((prev) => [...prev, { id: uid("p_"), label }]);
+    setNewParam("");
+    setAdding(false);
+  }
+  function removeParam(id: string) {
+    setParams((prev) => prev.filter((p) => p.id !== id));
+  }
+
+  const route = db.routes.find((r) => r.id === activeRoute) ?? db.routes[0];
+  const roster = route ? unitsByRoute[route.id] ?? [] : [];
+
+  return (
+    <div>
+      <div className="page-head">
+        <div>
+          <h2>Route Selection</h2>
+          <p>Weigh each route&apos;s path and roster. Rate units 1–10; scores tally per route to help you choose.</p>
+        </div>
+        {adding ? (
+          <div className="inline-add">
+            <input
+              autoFocus
+              type="text"
+              placeholder="e.g. Story, Difficulty, Aesthetics"
+              value={newParam}
+              onChange={(e) => setNewParam(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") addParam();
+                if (e.key === "Escape") { setAdding(false); setNewParam(""); }
+              }}
+              style={{ minWidth: 240 }}
+            />
+            <button className="btn primary" onClick={addParam}>Add</button>
+            <button className="btn ghost" onClick={() => { setAdding(false); setNewParam(""); }}>Cancel</button>
+          </div>
+        ) : (
+          <button className="btn" onClick={() => setAdding(true)}>+ Add rating parameter</button>
+        )}
+      </div>
+
+      {/* Comparison */}
+      <div className="ornate card" style={{ marginBottom: 22 }}>
+        <h3 className="section-title">Route comparison — average appeal</h3>
+        <div className="score-bars">
+          {ranked.map((s, i) => (
+            <div className="score-row" key={s.route.id}>
+              <div className="row" style={{ gap: 8 }}>
+                <span className="dot" style={{ width: 10, height: 10, borderRadius: 5, background: s.route.color, display: "inline-block" }} />
+                <span style={{ fontWeight: 600 }}>{s.route.name}</span>
+                {i === 0 && s.avg > 0 && <span className="tag">Top</span>}
+              </div>
+              <div className="score-track">
+                <div className="score-fill" style={{ width: `${(s.avg / 10) * 100}%`, background: s.route.color }} />
+              </div>
+              <div style={{ textAlign: "right", fontWeight: 700, color: "var(--gold-bright)" }}>
+                {s.avg.toFixed(1)}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Route tabs */}
+      <div className="lord-tabs">
+        {db.routes.map((r) => (
+          <div
+            key={r.id}
+            className={"lord-tab" + (r.id === activeRoute ? " active" : "")}
+            style={{ ["--accent" as any]: r.color }}
+            onClick={() => setActiveRoute(r.id)}
+          >
+            <span className="dot" style={{ background: r.color }} />
+            <UnitPortrait src={r.portrait} name={r.name} size={26} />
+            <span>{r.name}</span>
+          </div>
+        ))}
+      </div>
+
+      {route && (
+        <div className="ornate card" style={{ ["--accent" as any]: route.color }}>
+          <div className="spread" style={{ alignItems: "flex-start" }}>
+            <div className="row" style={{ alignItems: "flex-start", gap: 16 }}>
+              <UnitPortrait src={route.portrait} name={route.name} size={84} shape="square" />
+              <div>
+                <h3 style={{ margin: "0 0 2px", color: "var(--gold-bright)", fontSize: 22 }}>{route.name}</h3>
+                {route.title && <div className="muted" style={{ marginBottom: 6 }}>{route.title}</div>}
+                <p style={{ maxWidth: 620, margin: 0, color: "var(--ink-dim)" }}>
+                  {route.description || "No path details recorded yet. Add them in Dev Mode as new info releases."}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="divider" />
+
+          <h3 className="section-title">Roster &amp; ratings</h3>
+          {roster.length === 0 && (
+            <p className="muted" style={{ marginTop: 0 }}>
+              No units on this route yet.{" "}
+              {devMode ? "Assign units to it in Dev → Units." : "Sign in as editor to assign units to this route."}
+            </p>
+          )}
+          {roster.length > 0 && (
+            <div style={{ overflowX: "auto" }}>
+              <table className="rate-table">
+                <thead>
+                  <tr>
+                    <th>Unit</th>
+                    {params.map((p) => (
+                      <th key={p.id}>
+                        <span className="row" style={{ gap: 6 }}>
+                          {p.label}
+                          {params.length > 1 && (
+                            <button className="icon-btn" title="Remove parameter" onClick={() => removeParam(p.id)} style={{ fontSize: 12 }}>
+                              ✕
+                            </button>
+                          )}
+                        </span>
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {roster.map((u) => (
+                    <tr key={u.id}>
+                      <td>
+                        <div className="row">
+                          <UnitPortrait src={u.portrait} name={u.name} size={38} />
+                          <div>
+                            <div className="row" style={{ gap: 6 }}>
+                              <span style={{ fontWeight: 600 }}>{u.name || "Unnamed"}</span>
+                              {u.isLord && <span className="tag" style={{ borderColor: route.color, color: route.color }}>♛ Lord</span>}
+                            </div>
+                            {unitFaction(u) && <div className="muted" style={{ fontSize: 12 }}>{unitFaction(u)}</div>}
+                          </div>
+                        </div>
+                      </td>
+                      {params.map((p) => (
+                        <td key={p.id}>
+                          <div className="slider-cell">
+                            <input
+                              type="range"
+                              min={1}
+                              max={10}
+                              value={getRating(u.id, p.id)}
+                              onChange={(e) => setRating(u.id, p.id, Number(e.target.value))}
+                            />
+                            <span className="slider-val">{getRating(u.id, p.id)}</span>
+                          </div>
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}

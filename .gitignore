@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+.env
+server/.env
+# Keep the data file & uploaded images out of source control by default.
+# Comment these out if you DO want to version your game data.
+server/data/db.json
+server/data/images/*
+!server/data/images/.gitkeep

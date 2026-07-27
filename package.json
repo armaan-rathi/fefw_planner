@@ -1,0 +1,23 @@
+{
+  "name": "fortune-weaver",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Fortune Weaver — a route & team planner for Fire Emblem: Fortune's Weave",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -n server,client -c green,cyan \"npm run dev -w server\" \"npm run dev -w client\"",
+    "build": "npm run build -w client",
+    "start": "npm run start -w server",
+    "preview": "npm run preview -w client",
+    "migrate:supabase": "node scripts/migrate-to-supabase.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.110.8"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
