@@ -1,15 +1,19 @@
 import { useState } from "react";
 import { useDB } from "../../data/DataContext";
 import { uid } from "../../api";
-import type { FieldDef, FieldType } from "../../types";
+import { OPTION_SOURCES, sourceLabel } from "../../data/fields";
+import type { FieldDef, FieldType, OptionsSource } from "../../types";
 
 const TYPES: { value: FieldType; label: string }[] = [
   { value: "text", label: "Short text" },
   { value: "longtext", label: "Long text" },
   { value: "number", label: "Number" },
-  { value: "dropdown", label: "Dropdown" },
+  { value: "dropdown", label: "Dropdown (single-select)" },
+  { value: "multiselect", label: "Multi-select" },
   { value: "checkbox", label: "Checkbox" },
 ];
+
+const isSelect = (t: FieldType) => t === "dropdown" || t === "multiselect";
 
 function slug(s: string) {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_|_$/g, "") || "field";
@@ -29,7 +33,7 @@ export function FieldsEditor() {
     let n = 2;
     while (existing.has(k)) k = `${key}_${n++}`;
     update((d) => {
-      d.fieldDefs.push({ id: uid("f_"), key: k, label: l, type, ...(type === "dropdown" ? { options: [] } : {}) });
+      d.fieldDefs.push({ id: uid("f_"), key: k, label: l, type, ...(isSelect(type) ? { options: [] } : {}) });
     });
     setLabel("");
     setType("text");
@@ -46,7 +50,21 @@ export function FieldsEditor() {
       const f = d.fieldDefs.find((x) => x.id === id);
       if (!f) return;
       f.type = t;
-      if (t === "dropdown" && !f.options) f.options = [];
+      if (isSelect(t) && !f.options && !f.optionsSource) f.options = [];
+      if (!isSelect(t)) delete f.optionsSource;
+    });
+  }
+  function setSource(id: string, source: OptionsSource | "") {
+    update((d) => {
+      const f = d.fieldDefs.find((x) => x.id === id);
+      if (!f) return;
+      if (source) {
+        f.optionsSource = source;
+        delete f.options; // options now come from the entity list
+      } else {
+        delete f.optionsSource;
+        if (!f.options) f.options = [];
+      }
     });
   }
   function remove(id: string) {
@@ -95,7 +113,30 @@ export function FieldsEditor() {
                 <div className="grow">
                   <input type="text" value={f.label} onChange={(e) => patch(f.id, { label: e.target.value })} />
                   <div className="muted" style={{ fontSize: 11, marginTop: 3 }}>key: {f.key}</div>
-                  {f.type === "dropdown" && <OptionsEditor def={f} onChange={(options) => patch(f.id, { options })} />}
+                  {isSelect(f.type) && (
+                    <div style={{ marginTop: 8 }}>
+                      <label className="row" style={{ gap: 8, fontSize: 12.5 }}>
+                        <span className="muted">Options from</span>
+                        <select
+                          value={f.optionsSource ?? ""}
+                          onChange={(e) => setSource(f.id, e.target.value as OptionsSource | "")}
+                          style={{ width: 180 }}
+                        >
+                          <option value="">Custom list</option>
+                          {OPTION_SOURCES.map((s) => (
+                            <option key={s.value} value={s.value}>{s.label}</option>
+                          ))}
+                        </select>
+                      </label>
+                      {f.optionsSource ? (
+                        <div className="muted" style={{ fontSize: 11.5, marginTop: 6 }}>
+                          Options come from your <b>{sourceLabel(f.optionsSource)}</b> — new ones appear automatically.
+                        </div>
+                      ) : (
+                        <OptionsEditor def={f} onChange={(options) => patch(f.id, { options })} />
+                      )}
+                    </div>
+                  )}
                 </div>
                 <select value={f.type} onChange={(e) => changeType(f.id, e.target.value as FieldType)} style={{ width: 140 }}>
                   {TYPES.map((t) => <option key={t.value} value={t.value}>{t.label}</option>)}

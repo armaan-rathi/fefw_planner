@@ -20,16 +20,23 @@ export interface Route {
   portrait: string | null; // optional route splash art
 }
 
-export type FieldType = "text" | "longtext" | "number" | "dropdown" | "checkbox";
+export type FieldType = "text" | "longtext" | "number" | "dropdown" | "multiselect" | "checkbox";
+
+// A dropdown's options can come from a live entity list instead of a static
+// list — new entities then appear as options automatically. The stored value
+// is that entity's id.
+export type OptionsSource = "classes" | "routes" | "units" | "skillTypes";
+
 export interface FieldDef {
   id: string;
   key: string; // machine key used in Unit.fields
   label: string;
   type: FieldType;
-  options?: string[]; // for `dropdown`
+  options?: string[]; // static options for `dropdown`
+  optionsSource?: OptionsSource; // when set, options come from this entity list
 }
 
-export type FieldValue = string | boolean;
+export type FieldValue = string | boolean | string[];
 
 export type MovementType = "infantry" | "cavalry" | "flying" | "armored" | "monster" | "";
 

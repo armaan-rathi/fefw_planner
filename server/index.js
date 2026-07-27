@@ -199,9 +199,10 @@ if (fs.existsSync(CLIENT_DIST)) {
   app.get(/^\/(?!api\/|images\/).*/, (_req, res) => res.sendFile(path.join(CLIENT_DIST, "index.html")));
 }
 
-// Port: hosts inject PORT (single-service prod). Locally, Vite is on 5173 and
-// this API defaults to 5174 (its proxy target). FW_SERVER_PORT overrides.
-const PORT = process.env.FW_SERVER_PORT || process.env.PORT || 5174;
+// This is the LOCAL dev API only (production uses the /api serverless functions,
+// not this server). Vite proxies /api + /images to 5174, so bind there and
+// ignore any injected PORT that would collide with Vite. FW_SERVER_PORT overrides.
+const PORT = process.env.FW_SERVER_PORT || 5174;
 app.listen(PORT, () => {
   console.log(`Fortune Weaver dev server (editable) on http://localhost:${PORT}`);
 });

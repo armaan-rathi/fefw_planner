@@ -130,6 +130,41 @@
         "axe"
       ],
       "portrait": null
+    },
+    {
+      "id": "class_ornius",
+      "name": "Ornius Rider",
+      "tier": "Base",
+      "description": "Cai's class — flying spear rider. Verify proficiencies/movement from in-game.",
+      "movementType": "flying",
+      "proficiencies": [
+        "lance",
+        "flying",
+        "authority"
+      ],
+      "portrait": null
+    },
+    {
+      "id": "class_priest",
+      "name": "Priest",
+      "tier": "Base",
+      "description": "Staff-wielding healer. Verify.",
+      "movementType": "infantry",
+      "proficiencies": [
+        "faith"
+      ],
+      "portrait": null
+    },
+    {
+      "id": "class_soldier",
+      "name": "Soldier",
+      "tier": "Base",
+      "description": "Base lance infantry. Verify.",
+      "movementType": "infantry",
+      "proficiencies": [
+        "lance"
+      ],
+      "portrait": null
     }
   ],
   "units": [
@@ -166,7 +201,7 @@
       "starterFor": [
         "cai"
       ],
-      "classId": null,
+      "classId": "class_ornius",
       "boons": [],
       "banes": [],
       "skillLevels": {},

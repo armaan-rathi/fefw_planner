@@ -6,6 +6,7 @@ import { UnitPortrait } from "../../components/UnitPortrait";
 import { ImageDrop } from "../../components/ImageDrop";
 import { SkillIcon } from "../../components/icons";
 import { unitFaction } from "../../data/units";
+import { fieldOptions } from "../../data/fields";
 import { GRADES, type FieldValue, type Grade, type Unit } from "../../types";
 
 function blankUnit(): Unit {
@@ -274,6 +275,33 @@ function UnitModal({ unit, onClose, onSave }: { unit: Unit; onClose: () => void;
                 </label>
               );
             }
+            if (f.type === "multiselect") {
+              const arr = Array.isArray(val) ? val : [];
+              const opts = fieldOptions(db, f);
+              return (
+                <div className="field" key={f.id}>
+                  <span style={{ display: "block", fontSize: 12, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--ink-faint)", marginBottom: 5 }}>{f.label}</span>
+                  {opts.length === 0 ? (
+                    <span className="muted" style={{ fontSize: 12 }}>No options — add some in Unit Fields.</span>
+                  ) : (
+                    <div className="chip-wrap">
+                      {opts.map((o) => {
+                        const on = arr.includes(o.value);
+                        return (
+                          <span
+                            key={o.value}
+                            className={"chip-toggle" + (on ? " on" : "")}
+                            onClick={() => setField(f.key, on ? arr.filter((x) => x !== o.value) : [...arr, o.value])}
+                          >
+                            {o.label}
+                          </span>
+                        );
+                      })}
+                    </div>
+                  )}
+                </div>
+              );
+            }
             return (
               <label className="field" key={f.id}>
                 <span>{f.label}</span>
@@ -282,7 +310,7 @@ function UnitModal({ unit, onClose, onSave }: { unit: Unit; onClose: () => void;
                 ) : f.type === "dropdown" ? (
                   <select value={typeof val === "string" ? val : ""} onChange={(e) => setField(f.key, e.target.value)}>
                     <option value="">— None —</option>
-                    {(f.options ?? []).map((o) => <option key={o} value={o}>{o}</option>)}
+                    {fieldOptions(db, f).map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
                   </select>
                 ) : (
                   <input

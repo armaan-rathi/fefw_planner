@@ -499,6 +499,11 @@ label.field > span {
   text-align: left;
   vertical-align: middle;
 }
+/* No trailing divider under the last row — it clashes with the card's
+   darker bottom edge and looks like a stray line. */
+.rate-table tbody tr:last-child td {
+  border-bottom: none;
+}
 .rate-table th {
   font-size: 12px;
   text-transform: uppercase;
