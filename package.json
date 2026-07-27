@@ -9,13 +9,9 @@
   ],
   "scripts": {
     "dev": "concurrently -n server,client -c green,cyan \"npm run dev -w server\" \"npm run dev -w client\"",
-    "build": "npm run build -w client",
+    "build": "npm run build -w client && node scripts/copy-images.mjs",
     "start": "npm run start -w server",
-    "preview": "npm run preview -w client",
-    "migrate:supabase": "node scripts/migrate-to-supabase.mjs"
-  },
-  "dependencies": {
-    "@supabase/supabase-js": "^2.110.8"
+    "preview": "npm run preview -w client"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"

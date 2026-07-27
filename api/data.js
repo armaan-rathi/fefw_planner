@@ -1,36 +1,39 @@
-const { isAuthed, supa, EMPTY_DB, cors } = require("./_lib");
+// Read-only data endpoint for the deployed site.
+// The editable copy lives in the repo at server/data/db.json — edit it locally
+// (via the dev server's editor) and `git push`; Vercel redeploys with the new
+// data baked in. Writes are not accepted here (the live site is read-only).
+const fs = require("fs");
+const path = require("path");
 
-const ROW_ID = 1;
-
-module.exports = async (req, res) => {
-  cors(res);
-  if (req.method === "OPTIONS") return res.status(200).end();
-
-  let db;
+function loadDb() {
+  // Primary: static require so Vercel's bundler traces & includes the JSON.
   try {
-    db = supa();
-  } catch (e) {
-    return res.status(500).json({ error: e.message });
+    return require("../server/data/db.json");
+  } catch (_) {
+    /* fall through */
   }
-
-  if (req.method === "GET") {
-    const { data, error } = await db.from("fw_state").select("data").eq("id", ROW_ID).maybeSingle();
-    if (error) return res.status(500).json({ error: error.message });
-    return res.json(data ? data.data : EMPTY_DB);
-  }
-
-  if (req.method === "PUT") {
-    if (!isAuthed(req)) return res.status(401).json({ error: "Editor sign-in required" });
-    const body = req.body;
-    if (!body || typeof body !== "object" || !Array.isArray(body.routes)) {
-      return res.status(400).json({ error: "Invalid data payload" });
+  // Fallbacks in case the bundle layout differs.
+  for (const p of [
+    path.join(process.cwd(), "server/data/db.json"),
+    path.join(__dirname, "..", "server", "data", "db.json"),
+  ]) {
+    try {
+      return JSON.parse(fs.readFileSync(p, "utf-8"));
+    } catch (_) {
+      /* try next */
     }
-    const { error } = await db
-      .from("fw_state")
-      .upsert({ id: ROW_ID, data: body, updated_at: new Date().toISOString() });
-    if (error) return res.status(500).json({ error: error.message });
-    return res.json({ ok: true });
   }
+  return null;
+}
 
-  return res.status(405).json({ error: "Method not allowed" });
+const DB = loadDb();
+
+module.exports = (req, res) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  if (req.method === "OPTIONS") return res.status(200).end();
+  if (req.method === "GET") {
+    if (!DB) return res.status(500).json({ error: "Data file not found in deployment" });
+    return res.json(DB);
+  }
+  return res.status(405).json({ error: "The live site is read-only. Edit locally and push to publish." });
 };

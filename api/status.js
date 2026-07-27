@@ -1,7 +1,7 @@
-const { PROTECTED, cors } = require("./_lib");
-
+// The deployed site is read-only (editing happens locally + push). Telling the
+// client `editable: false` hides the editor UI for everyone on the live site.
 module.exports = (req, res) => {
-  cors(res);
+  res.setHeader("Access-Control-Allow-Origin", "*");
   if (req.method === "OPTIONS") return res.status(200).end();
-  res.json({ protected: PROTECTED });
+  res.json({ editable: false });
 };

@@ -1,35 +1,28 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { getStatus, getToken, login as apiLogin, setToken } from "../api";
+import { getStatus } from "../api";
+import { useLocalStorage } from "../hooks/useLocalStorage";
 
 interface EditorValue {
-  devMode: boolean; // editor mode active (signed in)
-  protectedMode: boolean; // server requires a password
-  login: (password: string) => Promise<boolean>;
-  logout: () => void;
+  devMode: boolean; // editor mode active (only possible when `editable`)
+  setDevMode: (v: boolean) => void;
+  editable: boolean; // this server accepts edits (i.e. the local dev server)
 }
 
 const Ctx = createContext<EditorValue | null>(null);
 
 export function DevModeProvider({ children }: { children: React.ReactNode }) {
-  const [devMode, setDevMode] = useState<boolean>(() => !!getToken());
-  const [protectedMode, setProtectedMode] = useState<boolean>(false);
+  const [stored, setStored] = useLocalStorage<boolean>("fw.devMode", false);
+  const [editable, setEditable] = useState(false);
 
   useEffect(() => {
-    getStatus().then((s) => setProtectedMode(!!s.protected));
+    getStatus().then((s) => setEditable(!!s.editable));
   }, []);
 
-  async function login(password: string): Promise<boolean> {
-    const token = await apiLogin(password);
-    if (!token) return false;
-    setDevMode(true);
-    return true;
-  }
-  function logout() {
-    setToken(null);
-    setDevMode(false);
-  }
+  // On the read-only live site, editing is never active regardless of the
+  // locally-stored toggle.
+  const devMode = editable && stored;
 
-  return <Ctx.Provider value={{ devMode, protectedMode, login, logout }}>{children}</Ctx.Provider>;
+  return <Ctx.Provider value={{ devMode, setDevMode: setStored, editable }}>{children}</Ctx.Provider>;
 }
 
 export function useDevMode(): EditorValue {

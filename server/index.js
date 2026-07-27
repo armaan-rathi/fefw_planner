@@ -1,7 +1,6 @@
 import express from "express";
 import multer from "multer";
 import cors from "cors";
-import crypto from "crypto";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -150,41 +149,16 @@ app.use(cors());
 app.use(express.json({ limit: "10mb" }));
 app.use("/images", express.static(IMAGES_DIR));
 
-// ---- Auth -------------------------------------------------------------------
-// Reads are always public. Writes (PUT /api/data, POST /api/upload) require a
-// bearer token when ADMIN_PASSWORD is set. With no password configured the
-// server runs "open" (local development), so `npm run dev` needs no setup.
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "";
-const PROTECTED = !!ADMIN_PASSWORD;
-const tokenFor = (pw) => crypto.createHash("sha256").update("fw:" + pw).digest("hex");
-const VALID_TOKEN = PROTECTED ? tokenFor(ADMIN_PASSWORD) : "";
-function safeEq(a, b) {
-  const ba = Buffer.from(String(a));
-  const bb = Buffer.from(String(b));
-  return ba.length === bb.length && crypto.timingSafeEqual(ba, bb);
-}
-function requireAuth(req, res, next) {
-  if (!PROTECTED) return next();
-  const h = req.headers.authorization || "";
-  const tok = h.startsWith("Bearer ") ? h.slice(7) : "";
-  if (tok && safeEq(tok, VALID_TOKEN)) return next();
-  return res.status(401).json({ error: "Editor sign-in required" });
-}
-
-// Lets the client know whether a password is required and (via login) mints a token.
-app.get("/api/status", (_req, res) => res.json({ protected: PROTECTED }));
-app.post("/api/login", (req, res) => {
-  const pw = (req.body && req.body.password) || "";
-  if (!PROTECTED) return res.json({ token: "open", protected: false });
-  if (safeEq(tokenFor(pw), VALID_TOKEN)) return res.json({ token: VALID_TOKEN, protected: true });
-  return res.status(401).json({ error: "Incorrect password" });
-});
+// This is the LOCAL, editable dev server. Editing happens on your own machine;
+// the deployed (Vercel) site is read-only. So no auth here — you publish by
+// committing server/data/ and pushing.
+app.get("/api/status", (_req, res) => res.json({ editable: true }));
 
 app.get("/api/data", (_req, res) => {
   res.json(loadDB());
 });
 
-app.put("/api/data", requireAuth, (req, res) => {
+app.put("/api/data", (req, res) => {
   const body = req.body;
   if (!body || typeof body !== "object" || !Array.isArray(body.routes)) {
     return res.status(400).json({ error: "Invalid data payload" });
@@ -210,7 +184,7 @@ const upload = multer({
   fileFilter: (_req, file, cb) => cb(null, /^image\//.test(file.mimetype)),
 });
 
-app.post("/api/upload", requireAuth, upload.single("image"), (req, res) => {
+app.post("/api/upload", upload.single("image"), (req, res) => {
   if (!req.file) return res.status(400).json({ error: "No image uploaded" });
   res.json({ url: "/images/" + req.file.filename });
 });
@@ -229,8 +203,5 @@ if (fs.existsSync(CLIENT_DIST)) {
 // this API defaults to 5174 (its proxy target). FW_SERVER_PORT overrides.
 const PORT = process.env.FW_SERVER_PORT || process.env.PORT || 5174;
 app.listen(PORT, () => {
-  console.log(
-    `Fortune Weaver server on http://localhost:${PORT}` +
-      (PROTECTED ? " — editing password-protected" : " — editing OPEN (no ADMIN_PASSWORD set)")
-  );
+  console.log(`Fortune Weaver dev server (editable) on http://localhost:${PORT}`);
 });

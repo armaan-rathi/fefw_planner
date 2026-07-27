@@ -4,8 +4,6 @@ dist/
 *.log
 .env
 server/.env
-# Keep the data file & uploaded images out of source control by default.
-# Comment these out if you DO want to version your game data.
-server/data/db.json
-server/data/images/*
-!server/data/images/.gitkeep
+# NOTE: server/data/db.json and server/data/images/ ARE committed on purpose —
+# they are the app's content, edited locally and pushed to publish (Vercel
+# serves the images statically and bundles db.json into the read-only API).

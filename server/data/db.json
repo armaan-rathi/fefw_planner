@@ -1,0 +1,956 @@
+{
+  "schemaVersion": 2,
+  "skillTypes": [
+    {
+      "id": "sword",
+      "label": "Sword",
+      "icon": "sword"
+    },
+    {
+      "id": "lance",
+      "label": "Lance",
+      "icon": "lance"
+    },
+    {
+      "id": "axe",
+      "label": "Axe",
+      "icon": "axe"
+    },
+    {
+      "id": "bow",
+      "label": "Bow",
+      "icon": "bow"
+    },
+    {
+      "id": "brawl",
+      "label": "Brawl",
+      "icon": "brawl"
+    },
+    {
+      "id": "reason",
+      "label": "Reason",
+      "icon": "reason"
+    },
+    {
+      "id": "faith",
+      "label": "Faith",
+      "icon": "faith"
+    },
+    {
+      "id": "authority",
+      "label": "Authority",
+      "icon": "authority"
+    },
+    {
+      "id": "infantry",
+      "label": "Infantry",
+      "icon": "infantry"
+    },
+    {
+      "id": "armor",
+      "label": "Heavy Armor",
+      "icon": "armor"
+    },
+    {
+      "id": "riding",
+      "label": "Riding",
+      "icon": "riding"
+    },
+    {
+      "id": "flying",
+      "label": "Flying",
+      "icon": "flying"
+    }
+  ],
+  "fieldDefs": [
+    {
+      "id": "faction",
+      "key": "faction",
+      "label": "Faction",
+      "type": "dropdown",
+      "options": [
+        "Ribeira Winds",
+        "House Lamine",
+        "Megaera's Torch",
+        "Rose Tempest"
+      ]
+    },
+    {
+      "id": "backstory",
+      "key": "backstory",
+      "label": "Backstory",
+      "type": "longtext"
+    }
+  ],
+  "classes": [
+    {
+      "id": "class_archer",
+      "name": "Archer",
+      "tier": "Base",
+      "description": "Reported from Serenes Forest — verify proficiencies from in-game screens.",
+      "movementType": "infantry",
+      "proficiencies": [
+        "bow",
+        "infantry"
+      ],
+      "portrait": null
+    },
+    {
+      "id": "class_armored",
+      "name": "Armored Knight",
+      "tier": "Base",
+      "description": "Reported — verify. Heavy front-line class.",
+      "movementType": "armored",
+      "proficiencies": [
+        "lance",
+        "axe",
+        "armor"
+      ],
+      "portrait": null
+    },
+    {
+      "id": "class_diviner",
+      "name": "Diviner",
+      "tier": "Base",
+      "description": "Reported — verify. Saramis magic class.",
+      "movementType": "infantry",
+      "proficiencies": [
+        "reason",
+        "faith"
+      ],
+      "portrait": null
+    },
+    {
+      "id": "class_brigand",
+      "name": "Brigand",
+      "tier": "Intermediate",
+      "description": "Reported — verify. Axe-wielding raider class.",
+      "movementType": "infantry",
+      "proficiencies": [
+        "axe"
+      ],
+      "portrait": null
+    }
+  ],
+  "units": [
+    {
+      "id": "unit_mr1qnlz9iihfy",
+      "name": "Tiara",
+      "portrait": "/images/mr1qo75i637vym.jpg",
+      "starterFor": [
+        "cai"
+      ],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "backstory": "Cai’s childhood friend. An avid reader, who has a wide range of knowledge despite being only 15 years old. She lives with her grandfather, who’s a former tactician, and as his granddaughter, she’s inherited his keen talent for strategy.\n\nLikes: Libraries, discussing love, grandfather, board games",
+        "faction": ""
+      },
+      "isLord": false,
+      "routeIds": []
+    },
+    {
+      "id": "unit_cai",
+      "name": "Cai",
+      "portrait": null,
+      "isLord": true,
+      "routeIds": [
+        "cai"
+      ],
+      "starterFor": [
+        "cai"
+      ],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Ribeira Winds"
+      }
+    },
+    {
+      "id": "unit_dietrich",
+      "name": "Dietrich",
+      "portrait": null,
+      "isLord": true,
+      "routeIds": [
+        "dietrich"
+      ],
+      "starterFor": [
+        "dietrich"
+      ],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "House Lamine"
+      }
+    },
+    {
+      "id": "unit_theodora",
+      "name": "Theodora",
+      "portrait": null,
+      "isLord": true,
+      "routeIds": [
+        "theodora"
+      ],
+      "starterFor": [
+        "theodora"
+      ],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Megaera's Torch"
+      }
+    },
+    {
+      "id": "unit_leda",
+      "name": "Leda",
+      "portrait": null,
+      "isLord": true,
+      "routeIds": [
+        "leda"
+      ],
+      "starterFor": [
+        "leda"
+      ],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Rose Tempest"
+      }
+    },
+    {
+      "id": "unit_pieter",
+      "name": "Pieter",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [
+        "cai"
+      ],
+      "starterFor": [],
+      "classId": "class_archer",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Ribeira Winds",
+        "backstory": "Grew up alongside Cai like brothers. A 15-year-old with extraordinary eyesight — said to see the stars even in daytime. Kind and timid by nature, which reportedly holds back otherwise outstanding archery. Joins on Cai's route.\n\nReported by Serenes Forest (verify from in-game screens): class Archer; proficiencies Bow / Infantry; personal skill \"Sharpshooting\" (extends range when using combat arts). Likes: mother's cooking, Ginji fruit, cloud-watching."
+      }
+    },
+    {
+      "id": "unit_tobias",
+      "name": "Tobias",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [
+        "theodora"
+      ],
+      "starterFor": [],
+      "classId": "class_armored",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Megaera's Torch",
+        "backstory": "A tough general of the Kingdom of Saramis, renowned for strength and defence; has served since the previous king's reign. Bluntly addresses Queen Theodora as \"young lady.\" Joins on Theodora's route.\n\nReported by SF (verify): class Armored Knight; proficiencies Lance / Axe / Armor. Bad with names; likes alcohol, fighting, singing, socialising."
+      }
+    },
+    {
+      "id": "unit_bonaparte",
+      "name": "Bonaparte",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [
+        "theodora"
+      ],
+      "starterFor": [],
+      "classId": "class_diviner",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Megaera's Torch",
+        "backstory": "Theodora's right-hand man — a wise general of Saramis who still fights on the front lines. In Saramis, where writing is said to be forbidden, he keeps the nation's entire history and lore in memory. Joins on Theodora's route.\n\nReported by SF (verify): class Diviner; personal skill \"Netherworld Blessing\" (damage reduction); magic-leaning proficiencies (Reason/Faith). Likes memorising knowledge, debate, reciting poetry."
+      }
+    },
+    {
+      "id": "unit_buccar",
+      "name": "Buccar",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [
+        "leda"
+      ],
+      "starterFor": [],
+      "classId": "class_armored",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Rose Tempest",
+        "backstory": "A veteran warrior nicknamed the \"Demon Bear\" (of Baphos). Served Leda's father, Guillermo, for many years and still sometimes calls Leda \"lady\"; reportedly conflicted about her quest for revenge. Joins on Leda's route.\n\nName spelling UNCERTAIN — appears as \"Buccar\" in the Mikaela article but \"Buccaneer\" in the Part 3 summary; treat \"Buccar\" as more likely. Reported by SF (verify): heavy/armored fighter (Lance/Axe/Armor)."
+      }
+    },
+    {
+      "id": "unit_esmeralda",
+      "name": "Esmeralda",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [
+        "dietrich"
+      ],
+      "starterFor": [],
+      "classId": "class_armored",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "House Lamine",
+        "backstory": "A fisher's daughter from a village on the Dagdan coast; wild at heart, with superhuman strength that lets her wear the heaviest armour lightly. Joined Dietrich after he saved her from being offered to a sea beast. Wields her late father Sinza's trident. Joins on Dietrich's route.\n\nReported by SF (verify): proficiencies Lance / Trident; signature weapon \"Sinza's Trident\"; exclusive combat art \"Brute Throw\"; personal skill eases use of heavy weapons. EN VA: Kendell Byrd. (An article also cites a \"Crest of Blaiddyd\" — that is a Three Houses crest name, so treat as unverified.)"
+      }
+    },
+    {
+      "id": "unit_mikaela",
+      "name": "Mikaela",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [
+        "dietrich"
+      ],
+      "starterFor": [],
+      "classId": "class_brigand",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "House Lamine",
+        "backstory": "Full name Mikaela Augustus. An ex-mercenary who came to Dagsion to fund her only daughter's education; once feared as \"Mikaela the Ironblood,\" a name that reached even Buccar, the \"Demon Bear of Baphos.\" Joins on Dietrich's route.\n\nReported by SF (verify): class Brigand (intermediate); proficiency Axe; personal skill \"Veteran Warrior\" (raises hit rate when adjacent to enemies); secondary skill \"Ironblood.\" Likes caring for others, brewing coffee."
+      }
+    }
+  ],
+  "map": {
+    "background": "/images/overworld-map.png",
+    "nodes": [
+      {
+        "id": "obj",
+        "label": "Objective",
+        "type": "objective",
+        "x": 50,
+        "y": 51
+      },
+      {
+        "id": "bw",
+        "label": "Skirmish (West)",
+        "type": "battle",
+        "x": 45,
+        "y": 50
+      },
+      {
+        "id": "be",
+        "label": "Skirmish (East)",
+        "type": "battle",
+        "x": 55,
+        "y": 49
+      },
+      {
+        "id": "sc",
+        "label": "Supply Cache",
+        "type": "supply",
+        "x": 45.96125628462995,
+        "y": 60.77397541302223
+      },
+      {
+        "id": "fn",
+        "label": "Northern Fort",
+        "type": "fort",
+        "x": 31,
+        "y": 6
+      },
+      {
+        "id": "bn",
+        "label": "Sealed Bridge",
+        "type": "blocked",
+        "x": 53,
+        "y": 6
+      },
+      {
+        "id": "gnw",
+        "label": "North Gate",
+        "type": "gate",
+        "x": 38,
+        "y": 15
+      },
+      {
+        "id": "gn",
+        "label": "Mountain Pass",
+        "type": "gate",
+        "x": 58,
+        "y": 15
+      },
+      {
+        "id": "gne",
+        "label": "Highland Gate",
+        "type": "gate",
+        "x": 75,
+        "y": 11
+      },
+      {
+        "id": "jnm",
+        "label": "North Crossroads",
+        "type": "junction",
+        "x": 62,
+        "y": 30
+      },
+      {
+        "id": "bne",
+        "label": "Blocked Pass",
+        "type": "blocked",
+        "x": 72,
+        "y": 27
+      },
+      {
+        "id": "tne",
+        "label": "Relic Site",
+        "type": "treasure",
+        "x": 82,
+        "y": 25
+      },
+      {
+        "id": "fne",
+        "label": "Eastern Watch",
+        "type": "fort",
+        "x": 94,
+        "y": 28
+      },
+      {
+        "id": "jwm",
+        "label": "West Mid Junction",
+        "type": "junction",
+        "x": 34,
+        "y": 31
+      },
+      {
+        "id": "jw",
+        "label": "Western Crossroads",
+        "type": "junction",
+        "x": 24,
+        "y": 47
+      },
+      {
+        "id": "mw",
+        "label": "West Merchant",
+        "type": "merchant",
+        "x": 37.37207518968916,
+        "y": 44.09378636744155
+      },
+      {
+        "id": "bbw",
+        "label": "Broken Bridge",
+        "type": "blocked",
+        "x": 26,
+        "y": 47
+      },
+      {
+        "id": "bfw",
+        "label": "Far West Block",
+        "type": "blocked",
+        "x": 4,
+        "y": 36
+      },
+      {
+        "id": "fc",
+        "label": "Central Fort",
+        "type": "fort",
+        "x": 61,
+        "y": 37
+      },
+      {
+        "id": "me",
+        "label": "East Merchant",
+        "type": "merchant",
+        "x": 74,
+        "y": 47
+      },
+      {
+        "id": "je",
+        "label": "East Junction",
+        "type": "junction",
+        "x": 83,
+        "y": 47
+      },
+      {
+        "id": "ge",
+        "label": "East Gate",
+        "type": "gate",
+        "x": 90,
+        "y": 41
+      },
+      {
+        "id": "fs",
+        "label": "Southern Fort",
+        "type": "fort",
+        "x": 60,
+        "y": 62
+      },
+      {
+        "id": "jsm",
+        "label": "South Mid Junction",
+        "type": "junction",
+        "x": 67,
+        "y": 62
+      },
+      {
+        "id": "ssw",
+        "label": "South Supply",
+        "type": "supply",
+        "x": 37,
+        "y": 63
+      },
+      {
+        "id": "bfsw",
+        "label": "SW Block",
+        "type": "blocked",
+        "x": 3,
+        "y": 67
+      },
+      {
+        "id": "fsw",
+        "label": "SW Fort",
+        "type": "fort",
+        "x": 8,
+        "y": 82
+      },
+      {
+        "id": "jsw",
+        "label": "SW Crossroads",
+        "type": "junction",
+        "x": 18,
+        "y": 84
+      },
+      {
+        "id": "gsw",
+        "label": "South Gate",
+        "type": "gate",
+        "x": 30,
+        "y": 69
+      },
+      {
+        "id": "js",
+        "label": "South Crossroads",
+        "type": "junction",
+        "x": 52,
+        "y": 95
+      },
+      {
+        "id": "ss",
+        "label": "River Supply",
+        "type": "supply",
+        "x": 37,
+        "y": 88
+      },
+      {
+        "id": "gs",
+        "label": "Forest Gate",
+        "type": "gate",
+        "x": 62,
+        "y": 86
+      },
+      {
+        "id": "ms",
+        "label": "South Merchant",
+        "type": "merchant",
+        "x": 75,
+        "y": 88
+      },
+      {
+        "id": "gse",
+        "label": "SE Gate",
+        "type": "gate",
+        "x": 88,
+        "y": 81
+      },
+      {
+        "id": "bse",
+        "label": "SE Block",
+        "type": "blocked",
+        "x": 95,
+        "y": 73
+      },
+      {
+        "id": "gfw",
+        "label": "Far West Gate",
+        "type": "gate",
+        "x": 10,
+        "y": 70
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "from": "obj",
+        "to": "bw",
+        "turns": 1
+      },
+      {
+        "id": "e2",
+        "from": "obj",
+        "to": "be",
+        "turns": 1
+      },
+      {
+        "id": "e3",
+        "from": "obj",
+        "to": "sc",
+        "turns": 1
+      },
+      {
+        "id": "e4",
+        "from": "obj",
+        "to": "fc",
+        "turns": 1
+      },
+      {
+        "id": "e5",
+        "from": "bw",
+        "to": "jw",
+        "turns": 1
+      },
+      {
+        "id": "e6",
+        "from": "bw",
+        "to": "mw",
+        "turns": 1
+      },
+      {
+        "id": "e7",
+        "from": "be",
+        "to": "jnm",
+        "turns": 1
+      },
+      {
+        "id": "e8",
+        "from": "fc",
+        "to": "jnm",
+        "turns": 1
+      },
+      {
+        "id": "e9",
+        "from": "fc",
+        "to": "me",
+        "turns": 1
+      },
+      {
+        "id": "e10",
+        "from": "fc",
+        "to": "fs",
+        "turns": 1
+      },
+      {
+        "id": "e11",
+        "from": "jnm",
+        "to": "gn",
+        "turns": 1
+      },
+      {
+        "id": "e12",
+        "from": "jnm",
+        "to": "bne",
+        "turns": 1
+      },
+      {
+        "id": "e13",
+        "from": "gn",
+        "to": "bn",
+        "turns": 1
+      },
+      {
+        "id": "e14",
+        "from": "gn",
+        "to": "gnw",
+        "turns": 1
+      },
+      {
+        "id": "e15",
+        "from": "gnw",
+        "to": "fn",
+        "turns": 1
+      },
+      {
+        "id": "e16",
+        "from": "gnw",
+        "to": "jwm",
+        "turns": 1
+      },
+      {
+        "id": "e17",
+        "from": "jwm",
+        "to": "jw",
+        "turns": 1
+      },
+      {
+        "id": "e18",
+        "from": "jwm",
+        "to": "mw",
+        "turns": 1
+      },
+      {
+        "id": "e19",
+        "from": "jw",
+        "to": "bbw",
+        "turns": 1
+      },
+      {
+        "id": "e20",
+        "from": "jw",
+        "to": "gfw",
+        "turns": 2
+      },
+      {
+        "id": "e21",
+        "from": "jw",
+        "to": "bfw",
+        "turns": 2
+      },
+      {
+        "id": "e22",
+        "from": "gfw",
+        "to": "fsw",
+        "turns": 2
+      },
+      {
+        "id": "e23",
+        "from": "gne",
+        "to": "bne",
+        "turns": 1
+      },
+      {
+        "id": "e24",
+        "from": "gne",
+        "to": "fne",
+        "turns": 1
+      },
+      {
+        "id": "e25",
+        "from": "bne",
+        "to": "tne",
+        "turns": 1
+      },
+      {
+        "id": "e26",
+        "from": "tne",
+        "to": "fne",
+        "turns": 1
+      },
+      {
+        "id": "e27",
+        "from": "tne",
+        "to": "je",
+        "turns": 1
+      },
+      {
+        "id": "e28",
+        "from": "me",
+        "to": "je",
+        "turns": 1
+      },
+      {
+        "id": "e29",
+        "from": "je",
+        "to": "ge",
+        "turns": 1
+      },
+      {
+        "id": "e30",
+        "from": "je",
+        "to": "jsm",
+        "turns": 1
+      },
+      {
+        "id": "e31",
+        "from": "fs",
+        "to": "jsm",
+        "turns": 1
+      },
+      {
+        "id": "e32",
+        "from": "fs",
+        "to": "ssw",
+        "turns": 1
+      },
+      {
+        "id": "e33",
+        "from": "ssw",
+        "to": "sc",
+        "turns": 1
+      },
+      {
+        "id": "e34",
+        "from": "ssw",
+        "to": "jsw",
+        "turns": 1
+      },
+      {
+        "id": "e35",
+        "from": "ssw",
+        "to": "js",
+        "turns": 1
+      },
+      {
+        "id": "e36",
+        "from": "jsw",
+        "to": "fsw",
+        "turns": 1
+      },
+      {
+        "id": "e37",
+        "from": "jsw",
+        "to": "gsw",
+        "turns": 1
+      },
+      {
+        "id": "e38",
+        "from": "bfsw",
+        "to": "fsw",
+        "turns": 1
+      },
+      {
+        "id": "e39",
+        "from": "gsw",
+        "to": "ss",
+        "turns": 1
+      },
+      {
+        "id": "e40",
+        "from": "ss",
+        "to": "js",
+        "turns": 1
+      },
+      {
+        "id": "e41",
+        "from": "js",
+        "to": "gs",
+        "turns": 1
+      },
+      {
+        "id": "e42",
+        "from": "jsm",
+        "to": "gs",
+        "turns": 1
+      },
+      {
+        "id": "e43",
+        "from": "gs",
+        "to": "ms",
+        "turns": 1
+      },
+      {
+        "id": "e44",
+        "from": "ms",
+        "to": "gse",
+        "turns": 1
+      },
+      {
+        "id": "e45",
+        "from": "gse",
+        "to": "bse",
+        "turns": 1
+      }
+    ]
+  },
+  "ratingParams": [
+    {
+      "id": "overall",
+      "label": "Overall Appeal"
+    },
+    {
+      "id": "p_mr65issest1wb",
+      "label": "Story"
+    }
+  ],
+  "routes": [
+    {
+      "id": "cai",
+      "name": "Cai",
+      "title": "Ribeira Winds",
+      "description": "",
+      "color": "#3f72c7",
+      "portrait": null
+    },
+    {
+      "id": "dietrich",
+      "name": "Dietrich",
+      "title": "House Lamine",
+      "description": "",
+      "color": "#7d5fb0",
+      "portrait": null
+    },
+    {
+      "id": "theodora",
+      "name": "Theodora",
+      "title": "Megaera's Torch",
+      "description": "",
+      "color": "#b8932f",
+      "portrait": null
+    },
+    {
+      "id": "leda",
+      "name": "Leda",
+      "title": "Rose Tempest",
+      "description": "",
+      "color": "#c13a6a",
+      "portrait": null
+    }
+  ]
+}

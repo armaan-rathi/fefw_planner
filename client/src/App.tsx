@@ -1,8 +1,6 @@
-import { useState } from "react";
 import { NavLink, Navigate, Route, Routes } from "react-router-dom";
 import { useData } from "./data/DataContext";
 import { DevModeProvider, useDevMode } from "./data/DevModeContext";
-import { Modal } from "./components/Modal";
 import { RouteSelection } from "./pages/RouteSelection";
 import { TeamPlanner } from "./pages/TeamPlanner";
 import { OverworldMap } from "./pages/OverworldMap";
@@ -22,70 +20,19 @@ function SaveBadge() {
 }
 
 function EditorControls() {
-  const { devMode, protectedMode, login, logout } = useDevMode();
-  const [open, setOpen] = useState(false);
-  const [pw, setPw] = useState("");
-  const [err, setErr] = useState(false);
-  const [busy, setBusy] = useState(false);
-
-  async function submit() {
-    setBusy(true);
-    setErr(false);
-    const ok = await login(pw);
-    setBusy(false);
-    if (ok) {
-      setOpen(false);
-      setPw("");
-    } else {
-      setErr(true);
-    }
-  }
-
-  if (devMode) {
-    return (
-      <div className="row" style={{ gap: 10 }}>
-        <span className="tag">✎ Editor</span>
-        <button className="btn tiny ghost" onClick={logout}>Log out</button>
-      </div>
-    );
-  }
+  const { devMode, setDevMode, editable } = useDevMode();
+  // Only the local dev server is editable; the live site shows no editor UI.
+  if (!editable) return null;
   return (
-    <>
-      <button className="btn tiny" onClick={() => { setOpen(true); setErr(false); }}>Editor sign-in</button>
-      <Modal
-        open={open}
-        title="Editor sign-in"
-        onClose={() => setOpen(false)}
-        footer={
-          <>
-            <button className="btn ghost" onClick={() => setOpen(false)}>Cancel</button>
-            <button className="btn primary" onClick={submit} disabled={busy}>{busy ? "Checking…" : "Sign in"}</button>
-          </>
-        }
-      >
-        {protectedMode ? (
-          <label className="field"><span>Editor password</span>
-            <input
-              type="password"
-              autoFocus
-              value={pw}
-              onChange={(e) => setPw(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && submit()}
-            />
-          </label>
-        ) : (
-          <p className="muted" style={{ margin: 0 }}>
-            No editor password is set on this server (local/dev mode), so editing is open. Click <b>Sign in</b> to enable the editor.
-          </p>
-        )}
-        {err && <div className="error-text">Incorrect password.</div>}
-      </Modal>
-    </>
+    <label className="dev-toggle" title="Edit the underlying game data (local only)">
+      <input type="checkbox" checked={devMode} onChange={(e) => setDevMode(e.target.checked)} />
+      <span>Editor</span>
+    </label>
   );
 }
 
 function Shell() {
-  const { devMode } = useDevMode();
+  const { devMode, editable } = useDevMode();
   const { loading, error } = useData();
 
   return (
@@ -123,7 +70,7 @@ function Shell() {
             <Route path="/routes" element={<RouteSelection />} />
             <Route path="/team" element={<TeamPlanner />} />
             <Route path="/map" element={<OverworldMap />} />
-            <Route path="/dev/*" element={<DevMode />} />
+            {editable && <Route path="/dev/*" element={<DevMode />} />}
             <Route path="*" element={<Navigate to="/routes" replace />} />
           </Routes>
         )}

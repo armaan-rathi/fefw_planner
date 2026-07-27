@@ -28,38 +28,40 @@ Then open **http://localhost:5173**.
 
 ## Editing & access control
 
-- **Reads are public** — fans get full Route Selection, Team Planner, and Map interaction. Their ratings, custom rating parameters, and saved teams live only in *their own browser* (localStorage), so they never touch your data.
-- **Writes are gated** — adding/editing units, classes, routes, fields, and image uploads require signing in. Set `ADMIN_PASSWORD` (see `server/.env.example`); the server then rejects any write without a valid token. Click **Editor sign-in** (top-right) and enter the password to edit.
-- With **no** `ADMIN_PASSWORD` set, the server runs "open" — convenient for local dev, but do not host it publicly that way.
+- **The deployed site is read-only for everyone.** Fans get full Route Selection, Team Planner, and Map interaction; their ratings, custom rating parameters, and saved teams live only in *their own browser* (localStorage).
+- **You edit locally.** Run `npm run dev`, flip the **Editor** toggle (top-right — it only appears against the local server), and add/change units, classes, routes, fields, and images. Changes save to `server/data/db.json` and `server/data/images/`.
+- **Publish by pushing.** Commit the changes and `git push`; Vercel redeploys with the new content. See *Hosting on Vercel* below.
 
-## Hosting: Vercel + Supabase
+## Hosting on Vercel (no database)
 
-Production uses Vercel (static client + serverless API in `/api`) with Supabase for
-data (a single JSONB row) and images (Storage). The local Express/file server is
-untouched and still runs offline for development.
+The content lives **in the repo**: `server/data/db.json` and `server/data/images/`
+are committed. You edit locally and `git push`; Vercel redeploys with the new data.
+The deployed site is **read-only for everyone** (the editor UI only appears against
+the local dev server).
 
-**One-time setup:**
+- `npm run build` runs `vite build`, then copies `server/data/images/*` into
+  `client/dist/images/` so Vercel serves them at `/images/*` (matching the URLs in
+  `db.json`).
+- `api/data.js` serves the committed `db.json` (GET only). `api/status.js` reports
+  `editable: false` so the live site hides editing.
 
-1. **Supabase project** → SQL Editor → run [`supabase/schema.sql`](supabase/schema.sql)
-   (creates the `fw_state` table). Then Storage → New bucket → name **`media`**, **Public** on.
-2. Grab from Supabase → Project Settings → API: the **Project URL** and the
-   **service_role** key (secret — server-side only).
-3. **Migrate your current data** (uploads images + writes the row):
-   ```bash
-   SUPABASE_URL=... SUPABASE_SERVICE_ROLE_KEY=... npm run migrate:supabase
-   ```
-4. **Vercel** → import the repo. It auto-detects `vercel.json` (build → `client/dist`,
-   functions in `/api`). Set Environment Variables:
-   - `ADMIN_PASSWORD` — your editor password
-   - `SUPABASE_URL` — project URL
-   - `SUPABASE_SERVICE_ROLE_KEY` — service_role key
-   - `SUPABASE_BUCKET` — `media` (optional; this is the default)
-5. Deploy. Fans browse read-only; you click **Editor sign-in** and edit live.
+**Vercel setup (one-time):**
 
-**How it maps:** reads → `GET /api/data` (public). Edits → `PUT /api/data` (token-gated).
-Image uploads → `POST /api/upload-url` issues a Supabase signed URL and the browser
-uploads bytes straight to Storage (no Vercel size limit). No persistent disk needed —
-Supabase holds everything.
+1. Import the repo. **Set Root Directory to the repo root** (not `server/` — that
+   folder has no build script and will fail with *"Missing script: build"*).
+2. Framework Preset **Other**; leave Build/Output on defaults so `vercel.json` drives
+   them (build → `client/dist`, functions in `/api`). **No environment variables needed.**
+3. Deploy.
+
+**Publishing edits:**
+
+```bash
+npm run dev            # edit via the Editor toggle (top-right); saves to db.json + images
+git add -A && git commit -m "Add units" && git push   # Vercel auto-redeploys
+```
+
+> Make sure `server/data/db.json` and `server/data/images/` are actually committed —
+> they used to be git-ignored. Run `git status` to confirm they're tracked.
 
 ## Where your data lives
 
