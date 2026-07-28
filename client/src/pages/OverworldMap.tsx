@@ -1,9 +1,9 @@
 import { useMemo, useState } from "react";
 import { useDB } from "../data/DataContext";
 import { MapBackdrop } from "../components/MapBackdrop";
-import { MapNodeIcon } from "../components/mapIcons";
-import { pinStyle, legendFor } from "../components/mapNodeMeta";
-import type { GameMap, MapNode } from "../types";
+import { MapIcon } from "../components/MapIcon";
+import { edgeDots } from "../components/mapShapes";
+import type { GameMap, IconType, MapNode } from "../types";
 
 // Dijkstra shortest path over the (undirected) edge graph, weighted by turns.
 function shortestPath(map: GameMap, from: string, to: string): { path: string[]; turns: number } | null {
@@ -32,8 +32,7 @@ function shortestPath(map: GameMap, from: string, to: string): { path: string[];
         u = n.id;
       }
     }
-    if (u === null) break;
-    if (u === to) break;
+    if (u === null || u === to) break;
     visited.add(u);
     for (const { to: v, w } of adj[u] || []) {
       if (dist[u] + w < dist[v]) {
@@ -63,7 +62,12 @@ export function OverworldMap() {
     return m;
   }, [map.nodes]);
 
-  // Compute the full traversal from the ordered waypoints.
+  const typeById = useMemo(() => {
+    const m: Record<string, IconType> = {};
+    for (const t of db.iconTypes) m[t.id] = t;
+    return m;
+  }, [db.iconTypes]);
+
   const route = useMemo(() => {
     const stops: string[] = [];
     let turns = 0;
@@ -74,31 +78,40 @@ export function OverworldMap() {
         broken = true;
         break;
       }
-      const segNodes = i === 0 ? seg.path : seg.path.slice(1);
-      stops.push(...segNodes);
+      stops.push(...(i === 0 ? seg.path : seg.path.slice(1)));
       turns += seg.turns;
     }
     if (waypoints.length === 1) stops.push(waypoints[0]);
     return { stops, turns, broken };
   }, [waypoints, map]);
 
-  const routeNodeSet = new Set(route.stops);
+  const routeSet = new Set(route.stops);
 
   function onNodeClick(id: string) {
-    setWaypoints((w) => {
-      if (w[w.length - 1] === id) return w; // ignore double click on same end
-      return [...w, id];
-    });
+    setWaypoints((w) => (w[w.length - 1] === id ? w : [...w, id]));
   }
 
-  // SVG polyline points for the computed path.
   const linePoints = route.stops
     .map((id) => nodeById[id])
     .filter(Boolean)
     .map((n) => `${n.x},${n.y}`)
     .join(" ");
 
-  // All edges (faint) for context.
+  const hideMarkers = !!map.hideMarkers;
+
+  // Precompute connector dots for every edge (skipped when markers are hidden —
+  // the live map then relies on the underlying image's own paths).
+  const dots = useMemo(() => {
+    if (hideMarkers) return [];
+    const all: { x: number; y: number }[] = [];
+    for (const e of map.edges) {
+      const a = nodeById[e.from];
+      const b = nodeById[e.to];
+      if (a && b) all.push(...edgeDots(a, b));
+    }
+    return all;
+  }, [map.edges, nodeById, hideMarkers]);
+
   return (
     <div>
       <div className="page-head">
@@ -116,7 +129,6 @@ export function OverworldMap() {
         </div>
       </div>
 
-      {/* Readout */}
       <div className="ornate card" style={{ marginBottom: 18 }}>
         <div className="route-readout">
           <div>
@@ -134,7 +146,7 @@ export function OverworldMap() {
                 {route.stops.map((id, i) => (
                   <span className="stop-chip" key={i}>
                     <span className="idx">{i + 1}</span>
-                    {nodeById[id]?.label || "Node"}
+                    {nodeById[id]?.label || "Stop"}
                   </span>
                 ))}
               </div>
@@ -143,7 +155,6 @@ export function OverworldMap() {
         </div>
       </div>
 
-      {/* Map stage */}
       <div className="map-stage play">
         {map.background ? (
           <img className="map-bg" src={map.background} alt="Overworld map" />
@@ -153,80 +164,46 @@ export function OverworldMap() {
           </div>
         )}
 
-        <svg className="map-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-          {/* faint full graph */}
-          {map.edges.map((e) => {
-            const a = nodeById[e.from];
-            const b = nodeById[e.to];
-            if (!a || !b) return null;
-            return (
-              <line
-                key={e.id}
-                x1={a.x}
-                y1={a.y}
-                x2={b.x}
-                y2={b.y}
-                stroke="rgba(216,182,106,0.25)"
-                strokeWidth={0.4}
-                vectorEffect="non-scaling-stroke"
-              />
-            );
-          })}
-          {/* active route */}
-          {route.stops.length > 1 && (
-            <polyline
-              points={linePoints}
-              fill="none"
-              stroke="#5fa8e8"
-              strokeWidth={2.4}
-              strokeLinejoin="round"
-              strokeLinecap="round"
-              vectorEffect="non-scaling-stroke"
-            />
-          )}
-        </svg>
+        {/* connector dots */}
+        {dots.map((d, i) => (
+          <span key={i} className="map-dot" style={{ left: `${d.x}%`, top: `${d.y}%` }} />
+        ))}
+
+        {/* active route line */}
+        {route.stops.length > 1 && (
+          <svg className="map-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <polyline points={linePoints} fill="none" stroke="#5fa8e8" strokeWidth={2} strokeLinejoin="round" strokeLinecap="round" vectorEffect="non-scaling-stroke" />
+          </svg>
+        )}
 
         {map.nodes.map((n) => {
-          const inRoute = routeNodeSet.has(n.id);
+          const t = typeById[n.iconTypeId];
+          if (!t) return null;
           const isWaypoint = waypoints.includes(n.id);
+          const inRoute = routeSet.has(n.id);
           return (
             <div
               key={n.id}
-              className={"map-node" + (inRoute ? " in-route" : "") + (isWaypoint ? " selected" : "")}
+              className={"map-node icon-node clickable" + (inRoute ? " in-route" : "") + (isWaypoint ? " selected" : "")}
               style={{ left: `${n.x}%`, top: `${n.y}%` }}
               onClick={() => onNodeClick(n.id)}
               title={n.label}
             >
-              <div className="pin" style={inRoute ? undefined : pinStyle(n.type)}>
-                {isWaypoint ? waypoints.indexOf(n.id) + 1 : <MapNodeIcon type={n.type} size={14} />}
+              <div className={hideMarkers ? "ghost" : ""}>
+                <MapIcon type={t} blocked={n.blocked} inactive={n.inactive} />
               </div>
-              <div className="node-label">{n.label}</div>
+              {isWaypoint && <span className="wp-badge">{waypoints.indexOf(n.id) + 1}</span>}
+              {n.label && <div className="node-label">{n.label}</div>}
             </div>
           );
         })}
 
         {map.nodes.length === 0 && (
           <div className="empty-hint" style={{ position: "absolute", inset: "auto 0 12px 0", margin: "0 auto", maxWidth: 420, background: "rgba(8,18,22,0.85)" }}>
-            No map nodes yet. Add them in Dev Mode → Map.
+            No map markers yet. Add them in Dev Mode → Map.
           </div>
         )}
       </div>
-
-      {map.nodes.length > 0 && (
-        <div className="map-legend">
-          {legendFor(map.nodes.map((n) => n.type)).map((m) => (
-            <span key={m.label} className="legend-item">
-              <span className="legend-pin" style={{ background: m.color }}><MapNodeIcon type={m.type} size={12} /></span>
-              {m.label}
-            </span>
-          ))}
-          {!map.background && (
-            <span className="muted" style={{ marginLeft: "auto", fontSize: 12 }}>
-              Backdrop is a placeholder — drop your map screenshot in Dev → Map to replace it.
-            </span>
-          )}
-        </div>
-      )}
     </div>
   );
 }

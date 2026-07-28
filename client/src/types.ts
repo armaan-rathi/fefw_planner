@@ -71,10 +71,24 @@ export interface Unit {
   fields: Record<string, FieldValue>; // custom field values keyed by FieldDef.key (e.g. faction)
 }
 
+export type IconShape = "circle" | "square" | "triangle" | "invtriangle" | "star4" | "star8";
+
+// A user-defined marker style: a shape (and/or image) at a chosen size.
+export interface IconType {
+  id: string;
+  name: string;
+  image: string | null; // optional uploaded icon image (fills the shape)
+  shape: IconShape;
+  size: number; // px on the map
+  color: string; // fill when there's no image
+}
+
 export interface MapNode {
   id: string;
+  iconTypeId: string; // references IconType
   label: string;
-  type: string; // free-form category, e.g. "battle" / "shop" / "rest"
+  blocked: boolean; // shows a red no-entry badge
+  inactive: boolean; // greyed out
   x: number; // percentage 0-100 across the background
   y: number; // percentage 0-100 down the background
 }
@@ -90,6 +104,7 @@ export interface GameMap {
   background: string | null;
   nodes: MapNode[];
   edges: MapEdge[];
+  hideMarkers?: boolean; // on the live map, render markers invisible-but-clickable
 }
 
 export interface RatingParam {
@@ -104,6 +119,7 @@ export interface DB {
   fieldDefs: FieldDef[];
   classes: GameClass[];
   units: Unit[];
+  iconTypes: IconType[];
   map: GameMap;
   ratingParams: RatingParam[];
 }

@@ -79,7 +79,7 @@ export function RouteSelection() {
       <div className="page-head">
         <div>
           <h2>Route Selection</h2>
-          <p>Weigh each route&apos;s path and roster. Rate units 1–10; scores tally per route to help you choose.</p>
+          <p>Weigh each route&apos;s path and roster. Rate units 0–10; scores tally per route to help you choose.</p>
         </div>
         {adding ? (
           <div className="inline-add">

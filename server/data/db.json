@@ -294,7 +294,7 @@
     },
     {
       "id": "class_ms4gsshgfxh2m",
-      "name": "Ornius Knight*",
+      "name": "Armored Ornius Rider*",
       "tier": "Intermediate",
       "description": "",
       "movementType": "flying",
@@ -707,7 +707,7 @@
     {
       "id": "unit_ms3o4850pz0sq",
       "name": "Caspartan*",
-      "portrait": "/images/ms4k7zxdznv8gx.png",
+      "portrait": "/images/ms4p4lmh5ww8yj.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -745,7 +745,7 @@
     {
       "id": "unit_ms3of3twtvl0z",
       "name": "Lilian",
-      "portrait": null,
+      "portrait": "/images/ms4o8t0pfday9q.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -758,7 +758,8 @@
         "description": ""
       },
       "fields": {
-        "faction": "Megaera's Torch"
+        "faction": "Megaera's Torch",
+        "backstory": "A young Saraminian archer. Values money above all else and often lacks manners, even towards her liege, Theodora. Yet her archery skill is undeniable. Her background is slightly complicated; she hails from a renowned family, but her father lost his title after the civil war.\n\nLikes: Gold coins, jewels, older men"
       }
     },
     {
@@ -868,7 +869,7 @@
     {
       "id": "unit_ms4b0fg9gc03t",
       "name": "Lilyhardt*",
-      "portrait": "/images/ms4k4uhgp9cjhu.jpg",
+      "portrait": "/images/ms4p73g5884lgs.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1055,11 +1056,11 @@
     {
       "id": "unit_ms4b6sy674873",
       "name": "Red Face Mark*",
-      "portrait": "/images/ms4hlfplttgovb.png",
+      "portrait": "/images/ms4p2k1silfrti.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": null,
+      "classId": "class_archer",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -1071,12 +1072,12 @@
     },
     {
       "id": "unit_ms4b759ma7nnn",
-      "name": "Simple Mage Woman*",
-      "portrait": null,
+      "name": "Plain Jane*",
+      "portrait": "/images/ms4p5l8dxpc3f2.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": null,
+      "classId": "class_priest",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -1089,11 +1090,11 @@
     {
       "id": "unit_ms4b7sewbatfh",
       "name": "Blurry Bandana*",
-      "portrait": null,
+      "portrait": "/images/ms4p0dukhydpiw.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": null,
+      "classId": "class_archer",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -1123,7 +1124,7 @@
     {
       "id": "unit_ms4b9764g1dhr",
       "name": "Approximately 4 Pixels*",
-      "portrait": null,
+      "portrait": "/images/ms4oqd5rle2w0v.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1160,255 +1161,327 @@
     "nodes": [
       {
         "id": "obj",
+        "iconTypeId": "it_objective",
         "label": "Objective",
-        "type": "objective",
+        "blocked": false,
+        "inactive": false,
         "x": 50,
         "y": 51
       },
       {
         "id": "bw",
+        "iconTypeId": "it_battle",
         "label": "Skirmish (West)",
-        "type": "battle",
+        "blocked": false,
+        "inactive": false,
         "x": 45,
         "y": 50
       },
       {
         "id": "be",
+        "iconTypeId": "it_battle",
         "label": "Skirmish (East)",
-        "type": "battle",
+        "blocked": false,
+        "inactive": false,
         "x": 55,
         "y": 49
       },
       {
         "id": "sc",
+        "iconTypeId": "it_shop",
         "label": "Supply Cache",
-        "type": "supply",
+        "blocked": false,
+        "inactive": false,
         "x": 45.96125628462995,
         "y": 60.77397541302223
       },
       {
         "id": "fn",
+        "iconTypeId": "it_fort",
         "label": "Northern Fort",
-        "type": "fort",
-        "x": 31,
-        "y": 6
+        "blocked": false,
+        "inactive": false,
+        "x": 32.163741972544216,
+        "y": 9.013468140846127
       },
       {
         "id": "bn",
+        "iconTypeId": "it_town",
         "label": "Sealed Bridge",
-        "type": "blocked",
+        "blocked": true,
+        "inactive": false,
         "x": 53,
         "y": 6
       },
       {
         "id": "gnw",
+        "iconTypeId": "it_gate",
         "label": "North Gate",
-        "type": "gate",
+        "blocked": false,
+        "inactive": false,
         "x": 38,
         "y": 15
       },
       {
         "id": "gn",
+        "iconTypeId": "it_gate",
         "label": "Mountain Pass",
-        "type": "gate",
+        "blocked": false,
+        "inactive": false,
         "x": 58,
         "y": 15
       },
       {
         "id": "gne",
+        "iconTypeId": "it_gate",
         "label": "Highland Gate",
-        "type": "gate",
+        "blocked": false,
+        "inactive": false,
         "x": 75,
         "y": 11
       },
       {
         "id": "jnm",
+        "iconTypeId": "it_waypoint",
         "label": "North Crossroads",
-        "type": "junction",
+        "blocked": false,
+        "inactive": false,
         "x": 62,
         "y": 30
       },
       {
         "id": "bne",
+        "iconTypeId": "it_town",
         "label": "Blocked Pass",
-        "type": "blocked",
+        "blocked": true,
+        "inactive": false,
         "x": 72,
         "y": 27
       },
       {
         "id": "tne",
+        "iconTypeId": "it_treasure",
         "label": "Relic Site",
-        "type": "treasure",
+        "blocked": false,
+        "inactive": false,
         "x": 82,
         "y": 25
       },
       {
         "id": "fne",
+        "iconTypeId": "it_fort",
         "label": "Eastern Watch",
-        "type": "fort",
+        "blocked": false,
+        "inactive": false,
         "x": 94,
         "y": 28
       },
       {
         "id": "jwm",
+        "iconTypeId": "it_waypoint",
         "label": "West Mid Junction",
-        "type": "junction",
-        "x": 34,
-        "y": 31
+        "blocked": false,
+        "inactive": false,
+        "x": 42.12353707199683,
+        "y": 20.614960531159372
       },
       {
         "id": "jw",
+        "iconTypeId": "it_waypoint",
         "label": "Western Crossroads",
-        "type": "junction",
+        "blocked": false,
+        "inactive": false,
         "x": 24,
         "y": 47
       },
       {
         "id": "mw",
+        "iconTypeId": "it_shop",
         "label": "West Merchant",
-        "type": "merchant",
+        "blocked": false,
+        "inactive": false,
         "x": 37.37207518968916,
-        "y": 44.09378636744155
+        "y": 43.899076490431895
       },
       {
         "id": "bbw",
+        "iconTypeId": "it_town",
         "label": "Broken Bridge",
-        "type": "blocked",
+        "blocked": true,
+        "inactive": false,
         "x": 26,
         "y": 47
       },
       {
         "id": "bfw",
+        "iconTypeId": "it_town",
         "label": "Far West Block",
-        "type": "blocked",
+        "blocked": true,
+        "inactive": false,
         "x": 4,
         "y": 36
       },
       {
         "id": "fc",
+        "iconTypeId": "it_fort",
         "label": "Central Fort",
-        "type": "fort",
+        "blocked": false,
+        "inactive": false,
         "x": 61,
         "y": 37
       },
       {
         "id": "me",
+        "iconTypeId": "it_shop",
         "label": "East Merchant",
-        "type": "merchant",
+        "blocked": false,
+        "inactive": false,
         "x": 74,
         "y": 47
       },
       {
         "id": "je",
+        "iconTypeId": "it_waypoint",
         "label": "East Junction",
-        "type": "junction",
+        "blocked": false,
+        "inactive": false,
         "x": 83,
         "y": 47
       },
       {
         "id": "ge",
+        "iconTypeId": "it_gate",
         "label": "East Gate",
-        "type": "gate",
+        "blocked": false,
+        "inactive": false,
         "x": 90,
         "y": 41
       },
       {
         "id": "fs",
+        "iconTypeId": "it_fort",
         "label": "Southern Fort",
-        "type": "fort",
+        "blocked": false,
+        "inactive": false,
         "x": 60,
         "y": 62
       },
       {
         "id": "jsm",
+        "iconTypeId": "it_waypoint",
         "label": "South Mid Junction",
-        "type": "junction",
+        "blocked": false,
+        "inactive": false,
         "x": 67,
         "y": 62
       },
       {
         "id": "ssw",
+        "iconTypeId": "it_shop",
         "label": "South Supply",
-        "type": "supply",
+        "blocked": false,
+        "inactive": false,
         "x": 37,
         "y": 63
       },
       {
         "id": "bfsw",
+        "iconTypeId": "it_town",
         "label": "SW Block",
-        "type": "blocked",
+        "blocked": true,
+        "inactive": false,
         "x": 3,
         "y": 67
       },
       {
         "id": "fsw",
+        "iconTypeId": "it_fort",
         "label": "SW Fort",
-        "type": "fort",
+        "blocked": false,
+        "inactive": false,
         "x": 8,
         "y": 82
       },
       {
         "id": "jsw",
+        "iconTypeId": "it_waypoint",
         "label": "SW Crossroads",
-        "type": "junction",
+        "blocked": false,
+        "inactive": false,
         "x": 18,
         "y": 84
       },
       {
         "id": "gsw",
+        "iconTypeId": "it_gate",
         "label": "South Gate",
-        "type": "gate",
+        "blocked": false,
+        "inactive": false,
         "x": 30,
         "y": 69
       },
       {
         "id": "js",
+        "iconTypeId": "it_waypoint",
         "label": "South Crossroads",
-        "type": "junction",
+        "blocked": false,
+        "inactive": false,
         "x": 52,
         "y": 95
       },
       {
         "id": "ss",
+        "iconTypeId": "it_shop",
         "label": "River Supply",
-        "type": "supply",
-        "x": 37,
-        "y": 88
+        "blocked": false,
+        "inactive": false,
+        "x": 33.89985304492586,
+        "y": 85.9889688584029
       },
       {
         "id": "gs",
+        "iconTypeId": "it_gate",
         "label": "Forest Gate",
-        "type": "gate",
+        "blocked": false,
+        "inactive": false,
         "x": 62,
         "y": 86
       },
       {
-        "id": "ms",
-        "label": "South Merchant",
-        "type": "merchant",
-        "x": 75,
-        "y": 88
-      },
-      {
-        "id": "gse",
-        "label": "SE Gate",
-        "type": "gate",
-        "x": 88,
-        "y": 81
-      },
-      {
-        "id": "bse",
-        "label": "SE Block",
-        "type": "blocked",
-        "x": 95,
-        "y": 73
-      },
-      {
         "id": "gfw",
+        "iconTypeId": "it_gate",
         "label": "Far West Gate",
-        "type": "gate",
+        "blocked": false,
+        "inactive": false,
         "x": 10,
         "y": 70
+      },
+      {
+        "id": "n_ms53uygg9tab0",
+        "iconTypeId": "it_waypoint",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 49.524852696360696,
+        "y": 13.151062930782883
+      },
+      {
+        "id": "n_ms53vtg7ymnfn",
+        "iconTypeId": "it_waypoint",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 36.91520385485189,
+        "y": 55.3220844657552
+      },
+      {
+        "id": "n_ms53vuadd9l1b",
+        "iconTypeId": "it_waypoint",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 15.990496719304653,
+        "y": 40.06977197802932
       }
     ],
     "edges": [
@@ -1663,26 +1736,9 @@
         "from": "jsm",
         "to": "gs",
         "turns": 1
-      },
-      {
-        "id": "e43",
-        "from": "gs",
-        "to": "ms",
-        "turns": 1
-      },
-      {
-        "id": "e44",
-        "from": "ms",
-        "to": "gse",
-        "turns": 1
-      },
-      {
-        "id": "e45",
-        "from": "gse",
-        "to": "bse",
-        "turns": 1
       }
-    ]
+    ],
+    "hideMarkers": true
   },
   "ratingParams": [
     {
@@ -1726,6 +1782,72 @@
       "description": "Leda seeks revenge for the death of her father",
       "color": "#c13a6a",
       "portrait": "/images/ms4k0gl2rd60c0.jpg"
+    }
+  ],
+  "iconTypes": [
+    {
+      "id": "it_objective",
+      "name": "Objective",
+      "image": null,
+      "shape": "star8",
+      "size": 30,
+      "color": "#f0c850"
+    },
+    {
+      "id": "it_town",
+      "name": "Town",
+      "image": null,
+      "shape": "circle",
+      "size": 26,
+      "color": "#e8e0cc"
+    },
+    {
+      "id": "it_fort",
+      "name": "Fort",
+      "image": null,
+      "shape": "star8",
+      "size": 26,
+      "color": "#9fb8c4"
+    },
+    {
+      "id": "it_battle",
+      "name": "Battle",
+      "image": null,
+      "shape": "square",
+      "size": 24,
+      "color": "#e0784b"
+    },
+    {
+      "id": "it_gate",
+      "name": "Gate",
+      "image": null,
+      "shape": "triangle",
+      "size": 24,
+      "color": "#d8b66a"
+    },
+    {
+      "id": "it_treasure",
+      "name": "Treasure",
+      "image": null,
+      "shape": "invtriangle",
+      "size": 22,
+      "color": "#b07fd0"
+    },
+    {
+      "id": "it_shop",
+      "name": "Shop",
+      "image": null,
+      "shape": "square",
+      "size": 22,
+      "color": "#5fa8e8"
+    },
+    {
+      "id": "it_waypoint",
+      "name": "Waypoint",
+      "image": null,
+      "shape": "circle",
+      "size": 8,
+      "color": "#cbb98a"
     }
   ]
 }

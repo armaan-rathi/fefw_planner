@@ -742,31 +742,127 @@ input[type="range"] {
 }
 .map-node .node-label {
   position: absolute;
-  top: 26px;
+  top: 100%;
+  margin-top: 4px;
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
   font-size: 11px;
-  background: rgba(8, 18, 22, 0.85);
+  background: rgba(8, 18, 22, 0.88);
   padding: 1px 6px;
   border-radius: 5px;
   border: 1px solid var(--panel-edge);
   color: var(--ink-dim);
   z-index: 2;
-}
-/* On the play map, declutter: labels only on hover / for route stops. */
-.map-stage.play .map-node .node-label {
+  /* Declutter: labels only appear on hover / when highlighted. */
   opacity: 0;
   transition: opacity 0.12s;
   pointer-events: none;
 }
-.map-stage.play .map-node:hover {
-  z-index: 5;
+.map-node:hover {
+  z-index: 6;
 }
-.map-stage.play .map-node:hover .node-label,
-.map-stage.play .map-node.in-route .node-label,
-.map-stage.play .map-node.selected .node-label {
+.map-node:hover .node-label,
+.map-node.in-route .node-label,
+.map-node.selected .node-label,
+.map-node.editing .node-label {
   opacity: 1;
+}
+
+/* ---- New icon-marker map system ---- */
+.map-node.icon-node {
+  transform: translate(-50%, -50%);
+}
+.map-node.clickable {
+  cursor: pointer;
+}
+/* Invisible-but-clickable marker on the live map (players click the image). */
+.ghost {
+  opacity: 0;
+}
+.map-node.in-route.icon-node > div:first-child {
+  filter: drop-shadow(0 0 4px #5fa8e8);
+}
+.map-node.selected.icon-node > div:first-child {
+  filter: drop-shadow(0 0 5px var(--gold-bright));
+}
+.map-node.connect-sel {
+  outline: 2px solid var(--gold-bright);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+.map-dot {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(240, 235, 215, 0.72);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+}
+.wp-badge {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  background: var(--gold);
+  color: #1a1208;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #0a161b;
+}
+.map-bin {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  background: rgba(20, 10, 10, 0.8);
+  border: 1.5px dashed var(--danger);
+  color: var(--danger);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  pointer-events: none;
+  opacity: 0.55;
+  transition: opacity 0.12s, background 0.12s;
+}
+.map-bin.over {
+  opacity: 1;
+  background: rgba(224, 107, 107, 0.28);
+  border-style: solid;
+}
+.icon-palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.palette-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  background: #11292f;
+  border: 1px solid var(--panel-edge);
+  border-radius: 9px;
+  padding: 8px 10px;
+  cursor: pointer;
+  color: var(--ink-dim);
+  font-size: 11.5px;
+  min-width: 54px;
+}
+.palette-icon:hover {
+  border-color: var(--gold-deep);
+}
+.palette-icon.armed {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 1px var(--gold);
+  color: var(--gold-bright);
 }
 .route-readout {
   display: flex;

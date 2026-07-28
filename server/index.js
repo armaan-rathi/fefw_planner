@@ -30,26 +30,38 @@ const STANDARD_SKILLS = [
   { id: "flying", label: "Flying", icon: "flying" },
 ];
 
-// A representative starter overworld graph (central river hub with radiating
-// roads), loosely mirroring the in-game map layout. Edit/replace freely in
-// Dev Mode → Map; drop the real map screenshot in as the backdrop.
+const ICON_TYPES = [
+  { id: "it_objective", name: "Objective", image: null, shape: "star8", size: 30, color: "#f0c850" },
+  { id: "it_town", name: "Town", image: null, shape: "circle", size: 26, color: "#e8e0cc" },
+  { id: "it_fort", name: "Fort", image: null, shape: "star8", size: 26, color: "#9fb8c4" },
+  { id: "it_battle", name: "Battle", image: null, shape: "square", size: 24, color: "#e0784b" },
+  { id: "it_gate", name: "Gate", image: null, shape: "triangle", size: 24, color: "#d8b66a" },
+  { id: "it_treasure", name: "Treasure", image: null, shape: "invtriangle", size: 22, color: "#b07fd0" },
+  { id: "it_shop", name: "Shop", image: null, shape: "square", size: 22, color: "#5fa8e8" },
+  { id: "it_waypoint", name: "Waypoint", image: null, shape: "circle", size: 12, color: "#cbb98a" },
+];
+
+const mapNode = (id, label, iconTypeId, x, y) => ({ id, label, iconTypeId, blocked: false, inactive: false, x, y });
+
+// A representative starter overworld graph (central hub with radiating roads).
+// Edit/replace freely in Dev Mode → Map; drop the real map screenshot in as the backdrop.
 const STARTER_MAP = {
   background: null,
   nodes: [
-    { id: "n_camp", label: "River Camp", type: "rest", x: 50, y: 50 },
-    { id: "n_fordn", label: "North Ford", type: "path", x: 50, y: 27 },
-    { id: "n_fords", label: "South Ford", type: "path", x: 50, y: 73 },
-    { id: "n_west", label: "West Crossroads", type: "crossroad", x: 30, y: 49 },
-    { id: "n_east", label: "East Crossroads", type: "crossroad", x: 70, y: 51 },
-    { id: "n_nw", label: "Highland Pass", type: "battle", x: 22, y: 25 },
-    { id: "n_ne", label: "Watchtower", type: "battle", x: 78, y: 27 },
-    { id: "n_sw", label: "Bog Trail", type: "battle", x: 24, y: 72 },
-    { id: "n_se", label: "Ruined Fort", type: "boss", x: 76, y: 71 },
-    { id: "n_market", label: "Wandering Market", type: "shop", x: 39, y: 63 },
-    { id: "n_shrine", label: "Old Shrine", type: "event", x: 61, y: 37 },
-    { id: "n_gatew", label: "Western Gate", type: "gate", x: 10, y: 50 },
-    { id: "n_gatee", label: "Eastern Gate", type: "gate", x: 90, y: 47 },
-    { id: "n_village", label: "Riverside Village", type: "rest", x: 50, y: 90 },
+    mapNode("n_camp", "River Camp", "it_town", 50, 50),
+    mapNode("n_fordn", "North Ford", "it_waypoint", 50, 27),
+    mapNode("n_fords", "South Ford", "it_waypoint", 50, 73),
+    mapNode("n_west", "West Crossroads", "it_waypoint", 30, 49),
+    mapNode("n_east", "East Crossroads", "it_waypoint", 70, 51),
+    mapNode("n_nw", "Highland Pass", "it_battle", 22, 25),
+    mapNode("n_ne", "Watchtower", "it_battle", 78, 27),
+    mapNode("n_sw", "Bog Trail", "it_battle", 24, 72),
+    mapNode("n_se", "Ruined Fort", "it_fort", 76, 71),
+    mapNode("n_market", "Wandering Market", "it_shop", 39, 63),
+    mapNode("n_shrine", "Old Shrine", "it_treasure", 61, 37),
+    mapNode("n_gatew", "Western Gate", "it_gate", 10, 50),
+    mapNode("n_gatee", "Eastern Gate", "it_gate", 90, 47),
+    mapNode("n_village", "Riverside Village", "it_town", 50, 90),
   ],
   edges: [
     { id: "e1", from: "n_camp", to: "n_fordn", turns: 1 },
@@ -120,6 +132,7 @@ function defaultDB() {
     ],
     classes: [],
     units: lordUnits,
+    iconTypes: JSON.parse(JSON.stringify(ICON_TYPES)),
     map: JSON.parse(JSON.stringify(STARTER_MAP)),
     ratingParams: [{ id: "overall", label: "Overall Appeal" }],
   };
