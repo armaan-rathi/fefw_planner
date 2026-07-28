@@ -205,7 +205,7 @@ export function RouteSelection() {
                           <div className="slider-cell">
                             <input
                               type="range"
-                              min={1}
+                              min={0}
                               max={10}
                               value={getRating(u.id, p.id)}
                               onChange={(e) => setRating(u.id, p.id, Number(e.target.value))}

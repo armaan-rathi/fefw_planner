@@ -3,7 +3,7 @@ import { useDB } from "../data/DataContext";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import { UnitPortrait } from "../components/UnitPortrait";
 import { ProficiencyGrid } from "../components/ProficiencyGrid";
-import { SkillIcon } from "../components/icons";
+import { SkillMark } from "../components/icons";
 import { lordFirst, unitFaction, unitsForRoute } from "../data/units";
 import type { Unit } from "../types";
 
@@ -210,7 +210,7 @@ export function TeamPlanner() {
                             if (!st) return null;
                             return (
                               <span className="tag" key={sid} style={{ display: "inline-flex", alignItems: "center", gap: 5 }}>
-                                <SkillIcon icon={st.icon} size={13} /> {st.label}
+                                <SkillMark type={st} size={13} /> {st.label}
                               </span>
                             );
                           })}

@@ -119,3 +119,28 @@ export function SkillIcon({ icon, size, className }: { icon: string; size?: numb
   const Cmp = Icons[icon] || Icons.star;
   return <Cmp size={size} className={className} />;
 }
+
+// Renders an uploaded icon image if the skill type has one, else the built-in SVG.
+export function SkillMark({
+  type,
+  size = 22,
+  className,
+}: {
+  type: { icon: string; iconImage?: string | null };
+  size?: number;
+  className?: string;
+}) {
+  if (type.iconImage) {
+    return (
+      <img
+        src={type.iconImage}
+        alt=""
+        width={size}
+        height={size}
+        className={className}
+        style={{ objectFit: "contain", display: "block" }}
+      />
+    );
+  }
+  return <SkillIcon icon={type.icon} size={size} className={className} />;
+}

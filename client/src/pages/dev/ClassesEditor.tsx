@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDB } from "../../data/DataContext";
 import { uid } from "../../api";
 import { Modal } from "../../components/Modal";
-import { SkillIcon } from "../../components/icons";
+import { SkillMark } from "../../components/icons";
 import { UnitPortrait } from "../../components/UnitPortrait";
 import { ImageDrop } from "../../components/ImageDrop";
 import type { GameClass, MovementType } from "../../types";
@@ -15,6 +15,8 @@ const MOVES: { value: MovementType; label: string }[] = [
   { value: "armored", label: "Armored" },
   { value: "monster", label: "Monster" },
 ];
+
+const TIERS = ["Base", "Beginner", "Intermediate", "Advanced", "Master", "Special"];
 
 function blankClass(): GameClass {
   return { id: uid("class_"), name: "", tier: "", description: "", movementType: "", proficiencies: [], portrait: null };
@@ -39,6 +41,14 @@ export function ClassesEditor() {
       d.units.forEach((u) => {
         if (u.classId === id) u.classId = null;
       });
+    });
+  }
+  function move(id: string, dir: -1 | 1) {
+    update((d) => {
+      const i = d.classes.findIndex((c) => c.id === id);
+      const j = i + dir;
+      if (i < 0 || j < 0 || j >= d.classes.length) return;
+      [d.classes[i], d.classes[j]] = [d.classes[j], d.classes[i]];
     });
   }
 
@@ -71,7 +81,7 @@ export function ClassesEditor() {
                   if (!st) return null;
                   return (
                     <span className="tag" key={sid} style={{ display: "inline-flex", alignItems: "center", gap: 4 }}>
-                      <SkillIcon icon={st.icon} size={12} /> {st.label}
+                      <SkillMark type={st} size={12} /> {st.label}
                     </span>
                   );
                 })}
@@ -79,6 +89,10 @@ export function ClassesEditor() {
               <div className="row">
                 <button className="btn tiny" onClick={() => setEditing(c)}>Edit</button>
                 <button className="btn tiny danger" onClick={() => remove(c.id)}>Delete</button>
+                <span className="row" style={{ gap: 2, marginLeft: "auto" }}>
+                  <button className="icon-btn" title="Move earlier" disabled={db.classes[0]?.id === c.id} onClick={() => move(c.id, -1)}>▲</button>
+                  <button className="icon-btn" title="Move later" disabled={db.classes[db.classes.length - 1]?.id === c.id} onClick={() => move(c.id, 1)}>▼</button>
+                </span>
               </div>
             </div>
           ))}
@@ -121,7 +135,12 @@ function ClassModal({ cls, onClose, onSave }: { cls: GameClass; onClose: () => v
           </label>
           <div className="two-col">
             <label className="field"><span>Tier</span>
-              <input type="text" placeholder="Beginner / Advanced…" value={draft.tier} onChange={(e) => set({ tier: e.target.value })} />
+              <select value={draft.tier} onChange={(e) => set({ tier: e.target.value })}>
+                <option value="">—</option>
+                {(TIERS.includes(draft.tier) || !draft.tier ? TIERS : [draft.tier, ...TIERS]).map((t) => (
+                  <option key={t} value={t}>{t}</option>
+                ))}
+              </select>
             </label>
             <label className="field"><span>Movement</span>
               <select value={draft.movementType} onChange={(e) => set({ movementType: e.target.value as MovementType })}>
@@ -148,7 +167,7 @@ function ClassModal({ cls, onClose, onSave }: { cls: GameClass; onClose: () => v
             className={"chip-toggle" + (draft.proficiencies.includes(st.id) ? " on" : "")}
             onClick={() => toggleProf(st.id)}
           >
-            <SkillIcon icon={st.icon} size={14} /> {st.label}
+            <SkillMark type={st} size={14} /> {st.label}
           </span>
         ))}
       </div>

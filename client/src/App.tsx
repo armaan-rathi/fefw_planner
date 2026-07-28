@@ -32,7 +32,7 @@ function EditorControls() {
 }
 
 function Shell() {
-  const { devMode, editable } = useDevMode();
+  const { devMode, editable, ready } = useDevMode();
   const { loading, error } = useData();
 
   return (
@@ -70,7 +70,7 @@ function Shell() {
             <Route path="/routes" element={<RouteSelection />} />
             <Route path="/team" element={<TeamPlanner />} />
             <Route path="/map" element={<OverworldMap />} />
-            {editable && <Route path="/dev/*" element={<DevMode />} />}
+            {(!ready || editable) && <Route path="/dev/*" element={<DevMode />} />}
             <Route path="*" element={<Navigate to="/routes" replace />} />
           </Routes>
         )}

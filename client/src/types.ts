@@ -6,7 +6,8 @@ export const GRADES: Grade[] = ["S+", "S", "A", "B", "C", "D", "E"];
 export interface SkillType {
   id: string;
   label: string;
-  icon: string; // icon key, see components/icons.tsx
+  icon: string; // built-in icon key (fallback), see components/icons.tsx
+  iconImage?: string | null; // optional uploaded icon image; overrides `icon`
 }
 
 // A story path. NOT the same as the lord character — the lord is a Unit that

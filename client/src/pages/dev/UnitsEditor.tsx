@@ -4,7 +4,7 @@ import { uid } from "../../api";
 import { Modal } from "../../components/Modal";
 import { UnitPortrait } from "../../components/UnitPortrait";
 import { ImageDrop } from "../../components/ImageDrop";
-import { SkillIcon } from "../../components/icons";
+import { SkillMark } from "../../components/icons";
 import { unitFaction } from "../../data/units";
 import { fieldOptions } from "../../data/fields";
 import { GRADES, type FieldValue, type Grade, type Unit } from "../../types";
@@ -49,6 +49,14 @@ export function UnitsEditor() {
     if (!confirm("Delete this unit?")) return;
     update((d) => {
       d.units = d.units.filter((u) => u.id !== id);
+    });
+  }
+  function move(id: string, dir: -1 | 1) {
+    update((d) => {
+      const i = d.units.findIndex((u) => u.id === id);
+      const j = i + dir;
+      if (i < 0 || j < 0 || j >= d.units.length) return;
+      [d.units[i], d.units[j]] = [d.units[j], d.units[i]];
     });
   }
 
@@ -96,6 +104,12 @@ export function UnitsEditor() {
                 <div className="row">
                   <button className="btn tiny" onClick={() => setEditing(u)}>Edit</button>
                   <button className="btn tiny danger" onClick={() => remove(u.id)}>Delete</button>
+                  {!query && (
+                    <span className="row" style={{ gap: 2, marginLeft: "auto" }}>
+                      <button className="icon-btn" title="Move earlier" disabled={db.units[0]?.id === u.id} onClick={() => move(u.id, -1)}>▲</button>
+                      <button className="icon-btn" title="Move later" disabled={db.units[db.units.length - 1]?.id === u.id} onClick={() => move(u.id, 1)}>▼</button>
+                    </span>
+                  )}
                 </div>
               </div>
             );
@@ -229,7 +243,7 @@ function UnitModal({ unit, onClose, onSave }: { unit: Unit; onClose: () => void;
             <tr key={st.id}>
               <td>
                 <span className="row" style={{ gap: 8 }}>
-                  <SkillIcon icon={st.icon} size={18} /> {st.label}
+                  <SkillMark type={st} size={18} /> {st.label}
                 </span>
               </td>
               <td>

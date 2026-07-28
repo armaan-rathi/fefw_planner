@@ -13,14 +13,14 @@
   --gold: #d8b66a;
   --gold-bright: #f0d590;
   --gold-deep: #9a7d3c;
-  --boon: #5fa8e8;
-  --boon-deep: #2c6aa8;
-  --bane: #e8c45f;
-  --bane-deep: #b08a2c;
+  --boon: #e8c45f; /* boon = gold/strength */
+  --boon-deep: #b08a2c;
+  --bane: #5fa8e8; /* bane = blue/weakness */
+  --bane-deep: #2c6aa8;
   --danger: #e06b6b;
   --ok: #6fd89b;
   --radius: 10px;
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  --shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
   font-synthesis: none;
 }
 
@@ -171,7 +171,7 @@ button {
   border: 1px solid var(--panel-edge);
 }
 .save-badge.saving {
-  color: var(--bane);
+  color: #e8c45f;
 }
 .save-badge.saved {
   color: var(--ok);
@@ -341,6 +341,9 @@ label.field > span {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /* Anchor the square crop to the TOP of the art so tall character portraits
+     keep the head and cut off the bottom instead of the middle. */
+  object-position: top center;
 }
 .portrait-initial {
   font-family: Georgia, serif;
@@ -373,14 +376,14 @@ label.field > span {
   background: linear-gradient(180deg, rgba(216, 182, 106, 0.14), rgba(216, 182, 106, 0.03));
 }
 .prof-cell.is-boon {
-  box-shadow: 0 0 0 1px var(--boon), 0 0 10px rgba(95, 168, 232, 0.4);
+  box-shadow: 0 0 0 1px var(--boon), 0 0 10px rgba(232, 196, 95, 0.4);
   color: var(--boon);
 }
 .prof-cell.is-boon.is-prof {
-  color: #bfe0ff;
+  color: #f0e0b0;
 }
 .prof-cell.is-bane {
-  box-shadow: 0 0 0 1px var(--bane), 0 0 10px rgba(232, 196, 95, 0.35);
+  box-shadow: 0 0 0 1px var(--bane), 0 0 10px rgba(95, 168, 232, 0.35);
   color: var(--bane);
 }
 .prof-grade {
@@ -731,7 +734,7 @@ input[type="range"] {
 }
 .map-node.in-route .pin {
   background: radial-gradient(circle at 35% 30%, #bfe0ff, #2c6aa8);
-  box-shadow: 0 0 0 2px var(--boon), 0 0 12px rgba(95, 168, 232, 0.6);
+  box-shadow: 0 0 0 2px #5fa8e8, 0 0 12px rgba(95, 168, 232, 0.6);
 }
 .map-node.selected .pin {
   outline: 2px solid var(--gold-bright);

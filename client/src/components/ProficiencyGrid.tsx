@@ -1,5 +1,5 @@
 import type { SkillType, Grade } from "../types";
-import { SkillIcon } from "./icons";
+import { SkillMark } from "./icons";
 
 interface Props {
   skillTypes: SkillType[];
@@ -40,7 +40,7 @@ export function ProficiencyGrid({
           .join(" ");
         return (
           <div key={st.id} className={cls} title={st.label + (isBoon ? " (Boon)" : isBane ? " (Bane)" : "")}>
-            <SkillIcon icon={st.icon} size={compact ? 18 : 22} className="prof-icon" />
+            <SkillMark type={st} size={compact ? 18 : 22} className="prof-icon" />
             {grade && <span className="prof-grade">{grade}</span>}
           </div>
         );

@@ -87,7 +87,7 @@
       "id": "class_archer",
       "name": "Archer",
       "tier": "Base",
-      "description": "Reported from Serenes Forest — verify proficiencies from in-game screens.",
+      "description": "",
       "movementType": "infantry",
       "proficiencies": [
         "bow",
@@ -99,7 +99,7 @@
       "id": "class_armored",
       "name": "Armored Knight",
       "tier": "Base",
-      "description": "Reported — verify. Heavy front-line class.",
+      "description": "",
       "movementType": "armored",
       "proficiencies": [
         "lance",
@@ -112,7 +112,7 @@
       "id": "class_diviner",
       "name": "Diviner",
       "tier": "Base",
-      "description": "Reported — verify. Saramis magic class.",
+      "description": "",
       "movementType": "infantry",
       "proficiencies": [
         "reason",
@@ -123,8 +123,8 @@
     {
       "id": "class_brigand",
       "name": "Brigand",
-      "tier": "Intermediate",
-      "description": "Reported — verify. Axe-wielding raider class.",
+      "tier": "Base",
+      "description": "",
       "movementType": "infantry",
       "proficiencies": [
         "axe"
@@ -135,12 +135,14 @@
       "id": "class_ornius",
       "name": "Ornius Rider",
       "tier": "Base",
-      "description": "Cai's class — flying spear rider. Verify proficiencies/movement from in-game.",
+      "description": "",
       "movementType": "flying",
       "proficiencies": [
         "lance",
         "flying",
-        "authority"
+        "riding",
+        "sword",
+        "axe"
       ],
       "portrait": null
     },
@@ -148,10 +150,15 @@
       "id": "class_priest",
       "name": "Priest",
       "tier": "Base",
-      "description": "Staff-wielding healer. Verify.",
+      "description": "",
       "movementType": "infantry",
       "proficiencies": [
-        "faith"
+        "faith",
+        "axe",
+        "brawl",
+        "reason",
+        "authority",
+        "infantry"
       ],
       "portrait": null
     },
@@ -159,41 +166,108 @@
       "id": "class_soldier",
       "name": "Soldier",
       "tier": "Base",
-      "description": "Base lance infantry. Verify.",
+      "description": "",
       "movementType": "infantry",
       "proficiencies": [
-        "lance"
+        "lance",
+        "infantry"
       ],
+      "portrait": null
+    },
+    {
+      "id": "class_ms3o5tbsmr10n",
+      "name": "Light Cavalry",
+      "tier": "Base",
+      "description": "",
+      "movementType": "cavalry",
+      "proficiencies": [
+        "lance",
+        "riding"
+      ],
+      "portrait": null
+    },
+    {
+      "id": "class_ms3o7io5clmwu",
+      "name": "Myrmidon",
+      "tier": "Base",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "sword",
+        "infantry"
+      ],
+      "portrait": null
+    },
+    {
+      "id": "class_ms3o7vuixzpwd",
+      "name": "Hunter",
+      "tier": "Base",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "sword",
+        "bow",
+        "infantry"
+      ],
+      "portrait": null
+    },
+    {
+      "id": "class_ms3os2delbjxu",
+      "name": "Noble",
+      "tier": "Base",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "authority",
+        "infantry"
+      ],
+      "portrait": null
+    },
+    {
+      "id": "class_ms3pz9lcrqj1y",
+      "name": "Pugilist",
+      "tier": "Base",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "brawl",
+        "infantry"
+      ],
+      "portrait": null
+    },
+    {
+      "id": "class_ms4axgsyshgov",
+      "name": "Gladiator",
+      "tier": "Base",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [],
+      "portrait": null
+    },
+    {
+      "id": "class_ms4aypejltz4f",
+      "name": "Pegasus Knight",
+      "tier": "",
+      "description": "",
+      "movementType": "flying",
+      "proficiencies": [],
+      "portrait": null
+    },
+    {
+      "id": "class_ms4czk6qlyp89",
+      "name": "Thief",
+      "tier": "",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [],
       "portrait": null
     }
   ],
   "units": [
     {
-      "id": "unit_mr1qnlz9iihfy",
-      "name": "Tiara",
-      "portrait": "/images/mr1qo75i637vym.jpg",
-      "starterFor": [
-        "cai"
-      ],
-      "classId": null,
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {
-        "backstory": "Cai’s childhood friend. An avid reader, who has a wide range of knowledge despite being only 15 years old. She lives with her grandfather, who’s a former tactician, and as his granddaughter, she’s inherited his keen talent for strategy.\n\nLikes: Libraries, discussing love, grandfather, board games",
-        "faction": ""
-      },
-      "isLord": false,
-      "routeIds": []
-    },
-    {
       "id": "unit_cai",
       "name": "Cai",
-      "portrait": null,
+      "portrait": "/images/ms3omndjnjk96b.jpg",
       "isLord": true,
       "routeIds": [
         "cai"
@@ -202,21 +276,30 @@
         "cai"
       ],
       "classId": "class_ornius",
-      "boons": [],
-      "banes": [],
+      "boons": [
+        "sword",
+        "lance",
+        "faith",
+        "riding"
+      ],
+      "banes": [
+        "bow",
+        "flying"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "",
         "description": ""
       },
       "fields": {
-        "faction": "Ribeira Winds"
+        "faction": "Ribeira Winds",
+        "backstory": "A cheerful, earnest and family-loving boy who lives in the tranquil Ribeira Village. He was living peacefully with his childhood friends, but on his 15th birthday, the cogs of fate began to turn.\n\nLikes: Moving around, catching animals"
       }
     },
     {
       "id": "unit_dietrich",
       "name": "Dietrich",
-      "portrait": null,
+      "portrait": "/images/ms3ophx77zjwou.jpg",
       "isLord": true,
       "routeIds": [
         "dietrich"
@@ -224,7 +307,7 @@
       "starterFor": [
         "dietrich"
       ],
-      "classId": null,
+      "classId": "class_ms3o7io5clmwu",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -233,13 +316,14 @@
         "description": ""
       },
       "fields": {
-        "faction": "House Lamine"
+        "faction": "House Lamine",
+        "backstory": "An elegant swordsman who’s always seeking to fight powerful opponents to satisfy his thirst. A foreigner who travelled across the seas from the land of “Fódlan”.\n\nLikes: Things he finds “beautiful”, sweets, his little sister"
       }
     },
     {
       "id": "unit_theodora",
       "name": "Theodora",
-      "portrait": null,
+      "portrait": "/images/ms3oq8dm5l055n.jpg",
       "isLord": true,
       "routeIds": [
         "theodora"
@@ -247,7 +331,199 @@
       "starterFor": [
         "theodora"
       ],
-      "classId": null,
+      "classId": "class_ms3os2delbjxu",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Megaera's Torch",
+        "backstory": "The young queen of the Kingdom of Saramis, which serves the Dagdan Empire. Possesses an unwavering resolve to face any obstacle and has the qualities of a queen who guides her people.\n\nLikes: Fighting, the well-being of her people"
+      }
+    },
+    {
+      "id": "unit_leda",
+      "name": "Leda",
+      "portrait": "/images/ms3ormetyikgvp.jpg",
+      "isLord": true,
+      "routeIds": [
+        "leda"
+      ],
+      "starterFor": [
+        "leda"
+      ],
+      "classId": "class_ms3o7vuixzpwd",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Rose Tempest",
+        "backstory": "A highly skilled vihuela player who performs enchanting music. Following a “certain incident” 5 years ago, she started walking a path of vengeance and hatred.\n\nLikes: Memories of her parents, performing music from her homeland, jewels, applause"
+      }
+    },
+    {
+      "id": "unit_pieter",
+      "name": "Tialla",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [
+        "cai"
+      ],
+      "starterFor": [
+        "cai"
+      ],
+      "classId": "class_diviner",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Ribeira Winds",
+        "backstory": ""
+      }
+    },
+    {
+      "id": "unit_tobias",
+      "name": "Fabio",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [
+        "dietrich"
+      ],
+      "starterFor": [
+        "dietrich"
+      ],
+      "classId": "class_diviner",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "House Lamine",
+        "backstory": ""
+      }
+    },
+    {
+      "id": "unit_bonaparte",
+      "name": "Bonaventure",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [
+        "theodora"
+      ],
+      "starterFor": [
+        "theodora"
+      ],
+      "classId": "class_diviner",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Megaera's Torch",
+        "backstory": ""
+      }
+    },
+    {
+      "id": "unit_buccar",
+      "name": "Buccar",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [
+        "leda"
+      ],
+      "starterFor": [
+        "leda"
+      ],
+      "classId": "class_armored",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Rose Tempest",
+        "backstory": ""
+      }
+    },
+    {
+      "id": "unit_esmeralda",
+      "name": "Peter",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [
+        "cai"
+      ],
+      "starterFor": [
+        "cai"
+      ],
+      "classId": "class_archer",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Ribeira Winds",
+        "backstory": ""
+      }
+    },
+    {
+      "id": "unit_mikaela",
+      "name": "Esmeralda",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [
+        "dietrich"
+      ],
+      "starterFor": [
+        "dietrich"
+      ],
+      "classId": "class_armored",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "House Lamine",
+        "backstory": ""
+      }
+    },
+    {
+      "id": "unit_ms3o1lfxavq3i",
+      "name": "Tobias",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [
+        "theodora"
+      ],
+      "starterFor": [
+        "theodora"
+      ],
+      "classId": "class_armored",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -260,17 +536,17 @@
       }
     },
     {
-      "id": "unit_leda",
-      "name": "Leda",
+      "id": "unit_ms3o1yebdwa31",
+      "name": "Sirocco",
       "portrait": null,
-      "isLord": true,
+      "isLord": false,
       "routeIds": [
         "leda"
       ],
       "starterFor": [
         "leda"
       ],
-      "classId": null,
+      "classId": "class_diviner",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -283,124 +559,45 @@
       }
     },
     {
-      "id": "unit_pieter",
-      "name": "Pieter",
+      "id": "unit_ms3o2dq8x88ne",
+      "name": "Ultand",
       "portrait": null,
       "isLord": false,
       "routeIds": [
         "cai"
       ],
-      "starterFor": [],
-      "classId": "class_archer",
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {
-        "faction": "Ribeira Winds",
-        "backstory": "Grew up alongside Cai like brothers. A 15-year-old with extraordinary eyesight — said to see the stars even in daytime. Kind and timid by nature, which reportedly holds back otherwise outstanding archery. Joins on Cai's route.\n\nReported by Serenes Forest (verify from in-game screens): class Archer; proficiencies Bow / Infantry; personal skill \"Sharpshooting\" (extends range when using combat arts). Likes: mother's cooking, Ginji fruit, cloud-watching."
-      }
-    },
-    {
-      "id": "unit_tobias",
-      "name": "Tobias",
-      "portrait": null,
-      "isLord": false,
-      "routeIds": [
-        "theodora"
+      "starterFor": [
+        "cai"
       ],
-      "starterFor": [],
-      "classId": "class_armored",
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {
-        "faction": "Megaera's Torch",
-        "backstory": "A tough general of the Kingdom of Saramis, renowned for strength and defence; has served since the previous king's reign. Bluntly addresses Queen Theodora as \"young lady.\" Joins on Theodora's route.\n\nReported by SF (verify): class Armored Knight; proficiencies Lance / Axe / Armor. Bad with names; likes alcohol, fighting, singing, socialising."
-      }
-    },
-    {
-      "id": "unit_bonaparte",
-      "name": "Bonaparte",
-      "portrait": null,
-      "isLord": false,
-      "routeIds": [
-        "theodora"
+      "classId": "class_priest",
+      "boons": [
+        "lance",
+        "faith",
+        "flying"
       ],
-      "starterFor": [],
-      "classId": "class_diviner",
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {
-        "faction": "Megaera's Torch",
-        "backstory": "Theodora's right-hand man — a wise general of Saramis who still fights on the front lines. In Saramis, where writing is said to be forbidden, he keeps the nation's entire history and lore in memory. Joins on Theodora's route.\n\nReported by SF (verify): class Diviner; personal skill \"Netherworld Blessing\" (damage reduction); magic-leaning proficiencies (Reason/Faith). Likes memorising knowledge, debate, reciting poetry."
-      }
-    },
-    {
-      "id": "unit_buccar",
-      "name": "Buccar",
-      "portrait": null,
-      "isLord": false,
-      "routeIds": [
-        "leda"
+      "banes": [
+        "sword"
       ],
-      "starterFor": [],
-      "classId": "class_armored",
-      "boons": [],
-      "banes": [],
       "skillLevels": {},
       "personalSkill": {
         "name": "",
         "description": ""
       },
       "fields": {
-        "faction": "Rose Tempest",
-        "backstory": "A veteran warrior nicknamed the \"Demon Bear\" (of Baphos). Served Leda's father, Guillermo, for many years and still sometimes calls Leda \"lady\"; reportedly conflicted about her quest for revenge. Joins on Leda's route.\n\nName spelling UNCERTAIN — appears as \"Buccar\" in the Mikaela article but \"Buccaneer\" in the Part 3 summary; treat \"Buccar\" as more likely. Reported by SF (verify): heavy/armored fighter (Lance/Axe/Armor)."
+        "faction": "Ribeira Winds"
       }
     },
     {
-      "id": "unit_esmeralda",
-      "name": "Esmeralda",
-      "portrait": null,
-      "isLord": false,
-      "routeIds": [
-        "dietrich"
-      ],
-      "starterFor": [],
-      "classId": "class_armored",
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {
-        "faction": "House Lamine",
-        "backstory": "A fisher's daughter from a village on the Dagdan coast; wild at heart, with superhuman strength that lets her wear the heaviest armour lightly. Joined Dietrich after he saved her from being offered to a sea beast. Wields her late father Sinza's trident. Joins on Dietrich's route.\n\nReported by SF (verify): proficiencies Lance / Trident; signature weapon \"Sinza's Trident\"; exclusive combat art \"Brute Throw\"; personal skill eases use of heavy weapons. EN VA: Kendell Byrd. (An article also cites a \"Crest of Blaiddyd\" — that is a Three Houses crest name, so treat as unverified.)"
-      }
-    },
-    {
-      "id": "unit_mikaela",
+      "id": "unit_ms3o2srrysuum",
       "name": "Mikaela",
       "portrait": null,
       "isLord": false,
       "routeIds": [
         "dietrich"
       ],
-      "starterFor": [],
+      "starterFor": [
+        "dietrich"
+      ],
       "classId": "class_brigand",
       "boons": [],
       "banes": [],
@@ -410,9 +607,516 @@
         "description": ""
       },
       "fields": {
-        "faction": "House Lamine",
-        "backstory": "Full name Mikaela Augustus. An ex-mercenary who came to Dagsion to fund her only daughter's education; once feared as \"Mikaela the Ironblood,\" a name that reached even Buccar, the \"Demon Bear of Baphos.\" Joins on Dietrich's route.\n\nReported by SF (verify): class Brigand (intermediate); proficiency Axe; personal skill \"Veteran Warrior\" (raises hit rate when adjacent to enemies); secondary skill \"Ironblood.\" Likes caring for others, brewing coffee."
+        "faction": "House Lamine"
       }
+    },
+    {
+      "id": "unit_ms3o3ayav4czo",
+      "name": "Lysander",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [
+        "theodora"
+      ],
+      "starterFor": [
+        "theodora"
+      ],
+      "classId": "class_ornius",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Megaera's Torch"
+      }
+    },
+    {
+      "id": "unit_ms3o3pm7kkagj",
+      "name": "Constance von Twovelle*",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [
+        "leda"
+      ],
+      "starterFor": [
+        "leda"
+      ],
+      "classId": "class_priest",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Rose Tempest"
+      }
+    },
+    {
+      "id": "unit_ms3o4850pz0sq",
+      "name": "Casparstan*",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [
+        "cai"
+      ],
+      "starterFor": [
+        "cai"
+      ],
+      "classId": "class_brigand",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Ribeira Winds"
+      }
+    },
+    {
+      "id": "unit_ms3oeprflm40x",
+      "name": "Eshmel",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": ""
+      }
+    },
+    {
+      "id": "unit_ms3of3twtvl0z",
+      "name": "Lilian",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [
+        "theodora"
+      ],
+      "starterFor": [
+        "theodora"
+      ],
+      "classId": "class_archer",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Megaera's Torch"
+      }
+    },
+    {
+      "id": "unit_ms3ofr4f95yg3",
+      "name": "Little Red*",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [
+        "leda"
+      ],
+      "starterFor": [
+        "leda"
+      ],
+      "classId": "class_brigand",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Rose Tempest"
+      }
+    },
+    {
+      "id": "unit_ms4awma1bic3w",
+      "name": "Ursula",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_archer",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_ms4ax1urookeq",
+      "name": "Toothpick",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_ms4axuyt3lodb",
+      "name": "Alexandra",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_ms4aypejltz4f",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_ms4aycsktz7vo",
+      "name": "Not Seteth",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_ms4azwjmprdkp",
+      "name": "Nun with a Gun*",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_ms4b0fg9gc03t",
+      "name": "Lilyhardt*",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_ms4b0v3updg6t",
+      "name": "Merc*",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_ms4axgsyshgov",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_ms4b14v2stjjh",
+      "name": "Highbrow*",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_ms4b1m5a0pltt",
+      "name": "Cat Mask*",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_ms4b1qq82fg7g",
+      "name": "Ninae",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_ms4b1x9i46ue2",
+      "name": "Pink Nabatean*",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_ms4b33j83mhvc",
+      "name": "Gold Knight*",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_ms4b3v4raamqa",
+      "name": "Rapunzel*",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_soldier",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_ms4b44v3k39y1",
+      "name": "Nuzzo",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_archer",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_ms4b4zib7ibpz",
+      "name": "Pink Leia*",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_ms4b5mqtae605",
+      "name": "Lavender Mage*",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_ms4b6sy674873",
+      "name": "Red Face Mark*",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_ms4b759ma7nnn",
+      "name": "Simple Mage Woman*",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_ms4b7sewbatfh",
+      "name": "Blurry Bandana*",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_ms4b8a7pr2e4u",
+      "name": "Shadow Man*",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_ms4b9764g1dhr",
+      "name": "Approximately 4 Pixels*",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_ms4b9qphimjk7",
+      "name": "Red V*",
+      "portrait": null,
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
     }
   ],
   "map": {
