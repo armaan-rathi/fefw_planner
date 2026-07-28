@@ -84,23 +84,24 @@
   ],
   "classes": [
     {
-      "id": "class_archer",
-      "name": "Archer",
-      "tier": "Base",
+      "id": "class_ms3o7io5clmwu",
+      "name": "Gladiator",
+      "tier": "Beginner",
       "description": "",
       "movementType": "infantry",
       "proficiencies": [
-        "bow",
+        "sword",
+        "axe",
         "infantry"
       ],
       "portrait": null
     },
     {
-      "id": "class_armored",
-      "name": "Armored Knight",
-      "tier": "Base",
+      "id": "class_ms4godtdiwiu4",
+      "name": "Soldier",
+      "tier": "Beginner",
       "description": "",
-      "movementType": "armored",
+      "movementType": "infantry",
       "proficiencies": [
         "lance",
         "axe",
@@ -109,32 +110,38 @@
       "portrait": null
     },
     {
-      "id": "class_diviner",
-      "name": "Diviner",
-      "tier": "Base",
+      "id": "class_ms3o7vuixzpwd",
+      "name": "Hunter",
+      "tier": "Beginner",
       "description": "",
       "movementType": "infantry",
       "proficiencies": [
-        "reason",
-        "faith"
+        "sword",
+        "bow",
+        "infantry"
       ],
       "portrait": null
     },
     {
-      "id": "class_brigand",
-      "name": "Brigand",
-      "tier": "Base",
+      "id": "class_diviner",
+      "name": "Diviner",
+      "tier": "Beginner",
       "description": "",
       "movementType": "infantry",
       "proficiencies": [
-        "axe"
+        "sword",
+        "axe",
+        "brawl",
+        "reason",
+        "faith",
+        "authority"
       ],
       "portrait": null
     },
     {
       "id": "class_ornius",
       "name": "Ornius Rider",
-      "tier": "Base",
+      "tier": "Beginner",
       "description": "",
       "movementType": "flying",
       "proficiencies": [
@@ -147,9 +154,120 @@
       "portrait": null
     },
     {
+      "id": "class_ms3os2delbjxu",
+      "name": "Noble",
+      "tier": "Beginner",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "authority",
+        "infantry"
+      ],
+      "portrait": null
+    },
+    {
+      "id": "class_ms4axgsyshgov",
+      "name": "Myrmidon",
+      "tier": "Intermediate",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "sword",
+        "infantry"
+      ],
+      "portrait": null
+    },
+    {
+      "id": "class_ms4czk6qlyp89",
+      "name": "Rogue",
+      "tier": "Intermediate",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "sword",
+        "bow",
+        "infantry"
+      ],
+      "portrait": null
+    },
+    {
+      "id": "class_armored",
+      "name": "Armored Knight",
+      "tier": "Intermediate",
+      "description": "",
+      "movementType": "armored",
+      "proficiencies": [
+        "lance",
+        "axe",
+        "armor"
+      ],
+      "portrait": null
+    },
+    {
+      "id": "class_ms3o5tbsmr10n",
+      "name": "Light Cavalry",
+      "tier": "Intermediate",
+      "description": "",
+      "movementType": "cavalry",
+      "proficiencies": [
+        "sword",
+        "lance",
+        "axe",
+        "riding"
+      ],
+      "portrait": null
+    },
+    {
+      "id": "class_brigand",
+      "name": "Brigand",
+      "tier": "Intermediate",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "axe"
+      ],
+      "portrait": null
+    },
+    {
+      "id": "class_archer",
+      "name": "Archer",
+      "tier": "Intermediate",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "bow",
+        "infantry"
+      ],
+      "portrait": null
+    },
+    {
+      "id": "class_ms3pz9lcrqj1y",
+      "name": "Pugilist",
+      "tier": "Intermediate",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "brawl",
+        "infantry"
+      ],
+      "portrait": null
+    },
+    {
+      "id": "class_soldier",
+      "name": "Shaman",
+      "tier": "Intermediate",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "infantry",
+        "reason"
+      ],
+      "portrait": null
+    },
+    {
       "id": "class_priest",
       "name": "Priest",
-      "tier": "Base",
+      "tier": "Intermediate",
       "description": "",
       "movementType": "infantry",
       "proficiencies": [
@@ -163,103 +281,28 @@
       "portrait": null
     },
     {
-      "id": "class_soldier",
-      "name": "Soldier",
-      "tier": "Base",
-      "description": "",
-      "movementType": "infantry",
-      "proficiencies": [
-        "lance",
-        "infantry"
-      ],
-      "portrait": null
-    },
-    {
-      "id": "class_ms3o5tbsmr10n",
-      "name": "Light Cavalry",
-      "tier": "Base",
-      "description": "",
-      "movementType": "cavalry",
-      "proficiencies": [
-        "lance",
-        "riding"
-      ],
-      "portrait": null
-    },
-    {
-      "id": "class_ms3o7io5clmwu",
-      "name": "Myrmidon",
-      "tier": "Base",
-      "description": "",
-      "movementType": "infantry",
-      "proficiencies": [
-        "sword",
-        "infantry"
-      ],
-      "portrait": null
-    },
-    {
-      "id": "class_ms3o7vuixzpwd",
-      "name": "Hunter",
-      "tier": "Base",
-      "description": "",
-      "movementType": "infantry",
-      "proficiencies": [
-        "sword",
-        "bow",
-        "infantry"
-      ],
-      "portrait": null
-    },
-    {
-      "id": "class_ms3os2delbjxu",
-      "name": "Noble",
-      "tier": "Base",
-      "description": "",
-      "movementType": "infantry",
-      "proficiencies": [
-        "authority",
-        "infantry"
-      ],
-      "portrait": null
-    },
-    {
-      "id": "class_ms3pz9lcrqj1y",
-      "name": "Pugilist",
-      "tier": "Base",
-      "description": "",
-      "movementType": "infantry",
-      "proficiencies": [
-        "brawl",
-        "infantry"
-      ],
-      "portrait": null
-    },
-    {
-      "id": "class_ms4axgsyshgov",
-      "name": "Gladiator",
-      "tier": "Base",
-      "description": "",
-      "movementType": "infantry",
-      "proficiencies": [],
-      "portrait": null
-    },
-    {
       "id": "class_ms4aypejltz4f",
       "name": "Pegasus Knight",
-      "tier": "",
+      "tier": "Intermediate",
       "description": "",
       "movementType": "flying",
-      "proficiencies": [],
+      "proficiencies": [
+        "lance",
+        "flying"
+      ],
       "portrait": null
     },
     {
-      "id": "class_ms4czk6qlyp89",
-      "name": "Thief",
-      "tier": "",
+      "id": "class_ms4gsshgfxh2m",
+      "name": "Ornius Knight*",
+      "tier": "Intermediate",
       "description": "",
-      "movementType": "infantry",
-      "proficiencies": [],
+      "movementType": "flying",
+      "proficiencies": [
+        "infantry",
+        "riding",
+        "flying"
+      ],
       "portrait": null
     }
   ],
@@ -371,7 +414,7 @@
     {
       "id": "unit_pieter",
       "name": "Tialla",
-      "portrait": null,
+      "portrait": "/images/ms4gw3cafe6980.jpg",
       "isLord": false,
       "routeIds": [
         "cai"
@@ -389,13 +432,13 @@
       },
       "fields": {
         "faction": "Ribeira Winds",
-        "backstory": ""
+        "backstory": "Cai’s childhood friend. An avid reader, who has a wide range of knowledge despite being only 15 years old. She lives with her grandfather, who’s a former tactician, and as his granddaughter, she’s inherited his keen talent for strategy.\n\nLikes: Libraries, discussing love, grandfather, board games"
       }
     },
     {
       "id": "unit_tobias",
       "name": "Fabio",
-      "portrait": null,
+      "portrait": "/images/ms4gwz927u78u1.jpg",
       "isLord": false,
       "routeIds": [
         "dietrich"
@@ -413,13 +456,13 @@
       },
       "fields": {
         "faction": "House Lamine",
-        "backstory": ""
+        "backstory": "An enigmatic missionary of the Church of Seiros, from the distant land of Fódlan. While rational, he often looks down on others, calling them “beasts”. He and Dietrich share the same hometown, but didn’t know each other.\n\nLikes: Various types of pain, talking to intelligent people"
       }
     },
     {
       "id": "unit_bonaparte",
       "name": "Bonaventure",
-      "portrait": null,
+      "portrait": "/images/ms4gxznsuj1l08.jpg",
       "isLord": false,
       "routeIds": [
         "theodora"
@@ -437,13 +480,13 @@
       },
       "fields": {
         "faction": "Megaera's Torch",
-        "backstory": ""
+        "backstory": "Theodora’s right hand man; a wise general from the Kingdom of Saramis who continues to serve on the front-lines. In a kingdom where writing is forbidden, he records all of Saramis’s history and wisdom in his memory.\n\nLikes: Memorising knowledge, philosophical debates, reciting poetry"
       }
     },
     {
       "id": "unit_buccar",
       "name": "Buccar",
-      "portrait": null,
+      "portrait": "/images/ms4gzs7mhkk8qy.jpg",
       "isLord": false,
       "routeIds": [
         "leda"
@@ -461,13 +504,13 @@
       },
       "fields": {
         "faction": "Rose Tempest",
-        "backstory": ""
+        "backstory": "A veteran warrior nicknamed the “Demon Bear”. He served Leda’s father for many years and sometimes calls Leda “m’lady” out of habit. He follows Leda on her quest for revenge, but has complicated feelings about it.\n\nLikes: Loyalty, mentoring promising young people, imagining Leda’s happiness"
       }
     },
     {
       "id": "unit_esmeralda",
       "name": "Peter",
-      "portrait": null,
+      "portrait": "/images/ms4h0ggs6iezd0.jpg",
       "isLord": false,
       "routeIds": [
         "cai"
@@ -485,13 +528,13 @@
       },
       "fields": {
         "faction": "Ribeira Winds",
-        "backstory": ""
+        "backstory": "A 15 year old boy who grew up with Cai like brothers. Has amazing eyesight, enough to see the stars during the day. His archery skills are outstanding, but his kind and timid nature holds back his full potential.\n\nLikes: Mother’s cooking, Ginji fruit, cloud watching"
       }
     },
     {
       "id": "unit_mikaela",
       "name": "Esmeralda",
-      "portrait": null,
+      "portrait": "/images/ms4h13bt2m4t1p.jpg",
       "isLord": false,
       "routeIds": [
         "dietrich"
@@ -509,13 +552,13 @@
       },
       "fields": {
         "faction": "House Lamine",
-        "backstory": ""
+        "backstory": "A fisherman’s daughter, from a fishing village on the Dagdan coast. Wild at heart, with superhuman strength despite her build. She joined Dietrich after he rescued her from being sacrificed to a sea beast.\n\nLikes: Handsome men, harpooning, fishing gear maintenance"
       }
     },
     {
       "id": "unit_ms3o1lfxavq3i",
       "name": "Tobias",
-      "portrait": null,
+      "portrait": "/images/ms4h1xr4v4m5et.jpg",
       "isLord": false,
       "routeIds": [
         "theodora"
@@ -532,13 +575,14 @@
         "description": ""
       },
       "fields": {
-        "faction": "Megaera's Torch"
+        "faction": "Megaera's Torch",
+        "backstory": "A tough general of Saramis, known for his strength and defences; he refers to Queen Theodora as “young lady”.\nLike Bonaparte, he served the kingdom since the previous king and has achieved many military feats on the battlefield.\nBad at thinking and remembering names.\n\nLikes: alcohol, fighting, singing, socialising"
       }
     },
     {
       "id": "unit_ms3o1yebdwa31",
       "name": "Sirocco",
-      "portrait": null,
+      "portrait": "/images/ms4h2qul98q2nw.jpg",
       "isLord": false,
       "routeIds": [
         "leda"
@@ -555,13 +599,14 @@
         "description": ""
       },
       "fields": {
-        "faction": "Rose Tempest"
+        "faction": "Rose Tempest",
+        "backstory": "A mysterious bard who appears during Leda’s path of vengeance. Calls himself the “Whimsical Wind”. He’s flirtatious, hitting on every beautiful woman he sees, but also has keen perception and is well-educated.\n\nLikes: Goddess Karla, all women, poetry"
       }
     },
     {
       "id": "unit_ms3o2dq8x88ne",
       "name": "Ultand",
-      "portrait": null,
+      "portrait": "/images/ms4h3vf6hz9tpq.jpg",
       "isLord": false,
       "routeIds": [
         "cai"
@@ -584,13 +629,14 @@
         "description": ""
       },
       "fields": {
-        "faction": "Ribeira Winds"
+        "faction": "Ribeira Winds",
+        "backstory": "A young priestess serving at the Aurora Temple at the upper levels of Dagsion. Kind and caring, she watches over Cai–who’s competing in the gruelling Heroic Games with his childhood friends–like a younger brother, always ready to help him out.\n\nLikes: Taking care of others, family, all types of housework, romance stories"
       }
     },
     {
       "id": "unit_ms3o2srrysuum",
       "name": "Mikaela",
-      "portrait": null,
+      "portrait": "/images/ms4h4jgijzi11w.jpg",
       "isLord": false,
       "routeIds": [
         "dietrich"
@@ -607,13 +653,14 @@
         "description": ""
       },
       "fields": {
-        "faction": "House Lamine"
+        "faction": "House Lamine",
+        "backstory": "An ex-mercenary who came to Dagsion to fund her only daughter’s education. She was once a formidable warrior known as “Mikaela the Ironblood”, her name even reaching Buccar, the “Demon Bear of Baphos”.\n\nLikes: Taking care of others, brewing tasty coffee"
       }
     },
     {
       "id": "unit_ms3o3ayav4czo",
       "name": "Lysander",
-      "portrait": null,
+      "portrait": "/images/ms4h56f9jyog0d.jpg",
       "isLord": false,
       "routeIds": [
         "theodora"
@@ -630,13 +677,14 @@
         "description": ""
       },
       "fields": {
-        "faction": "Megaera's Torch"
+        "faction": "Megaera's Torch",
+        "backstory": "A genius Saraminian knight. Hails from a renowned family; his uncle serves as chancellor, and his father is a great warrior whose name is etched in the kingdom’s history. He’s loyal and capable, but his desire to succeed without relying on his family can cause him to act rashly.\n\nLikes: Gazing at the sky"
       }
     },
     {
       "id": "unit_ms3o3pm7kkagj",
       "name": "Constance von Twovelle*",
-      "portrait": null,
+      "portrait": "/images/ms4heo05bw1abv.jpg",
       "isLord": false,
       "routeIds": [
         "leda"
@@ -658,16 +706,12 @@
     },
     {
       "id": "unit_ms3o4850pz0sq",
-      "name": "Casparstan*",
-      "portrait": null,
+      "name": "Caspartan*",
+      "portrait": "/images/ms4k7zxdznv8gx.png",
       "isLord": false,
-      "routeIds": [
-        "cai"
-      ],
-      "starterFor": [
-        "cai"
-      ],
-      "classId": "class_brigand",
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_ms3pz9lcrqj1y",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -682,7 +726,7 @@
     {
       "id": "unit_ms3oeprflm40x",
       "name": "Eshmel",
-      "portrait": null,
+      "portrait": "/images/ms4jpwlv6133if.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -703,12 +747,8 @@
       "name": "Lilian",
       "portrait": null,
       "isLord": false,
-      "routeIds": [
-        "theodora"
-      ],
-      "starterFor": [
-        "theodora"
-      ],
+      "routeIds": [],
+      "starterFor": [],
       "classId": "class_archer",
       "boons": [],
       "banes": [],
@@ -724,15 +764,11 @@
     {
       "id": "unit_ms3ofr4f95yg3",
       "name": "Little Red*",
-      "portrait": null,
+      "portrait": "/images/ms4hc447pt7xkz.jpg",
       "isLord": false,
-      "routeIds": [
-        "leda"
-      ],
-      "starterFor": [
-        "leda"
-      ],
-      "classId": "class_brigand",
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_ms3pz9lcrqj1y",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -747,7 +783,7 @@
     {
       "id": "unit_ms4awma1bic3w",
       "name": "Ursula",
-      "portrait": null,
+      "portrait": "/images/ms4jkax9q5cs75.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -764,7 +800,7 @@
     {
       "id": "unit_ms4ax1urookeq",
       "name": "Toothpick",
-      "portrait": null,
+      "portrait": "/images/ms4k4f9dq6qw1t.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -781,7 +817,7 @@
     {
       "id": "unit_ms4axuyt3lodb",
       "name": "Alexandra",
-      "portrait": null,
+      "portrait": "/images/ms4jh7q4yheefx.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -798,7 +834,7 @@
     {
       "id": "unit_ms4aycsktz7vo",
       "name": "Not Seteth",
-      "portrait": null,
+      "portrait": "/images/ms4jhdlaqasd9m.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -815,7 +851,7 @@
     {
       "id": "unit_ms4azwjmprdkp",
       "name": "Nun with a Gun*",
-      "portrait": null,
+      "portrait": "/images/ms4k4oqhewa6b9.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -832,7 +868,7 @@
     {
       "id": "unit_ms4b0fg9gc03t",
       "name": "Lilyhardt*",
-      "portrait": null,
+      "portrait": "/images/ms4k4uhgp9cjhu.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -849,7 +885,7 @@
     {
       "id": "unit_ms4b0v3updg6t",
       "name": "Merc*",
-      "portrait": null,
+      "portrait": "/images/ms4ha81vntzfvg.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -866,7 +902,7 @@
     {
       "id": "unit_ms4b14v2stjjh",
       "name": "Highbrow*",
-      "portrait": null,
+      "portrait": "/images/ms4k6pvra4isjo.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -883,7 +919,7 @@
     {
       "id": "unit_ms4b1m5a0pltt",
       "name": "Cat Mask*",
-      "portrait": null,
+      "portrait": "/images/ms4jxzntak0ccy.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -900,7 +936,7 @@
     {
       "id": "unit_ms4b1qq82fg7g",
       "name": "Ninae",
-      "portrait": null,
+      "portrait": "/images/ms4jgxw7tv95tq.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -917,7 +953,7 @@
     {
       "id": "unit_ms4b1x9i46ue2",
       "name": "Pink Nabatean*",
-      "portrait": null,
+      "portrait": "/images/ms4jumfhrce0ek.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -934,7 +970,7 @@
     {
       "id": "unit_ms4b33j83mhvc",
       "name": "Gold Knight*",
-      "portrait": null,
+      "portrait": "/images/ms4jvqo3ri3s9e.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -951,11 +987,11 @@
     {
       "id": "unit_ms4b3v4raamqa",
       "name": "Rapunzel*",
-      "portrait": null,
+      "portrait": "/images/ms4hie1xaaeqdc.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": "class_soldier",
+      "classId": "class_ms4axgsyshgov",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -968,11 +1004,11 @@
     {
       "id": "unit_ms4b44v3k39y1",
       "name": "Nuzzo",
-      "portrait": null,
+      "portrait": "/images/ms4j4uuiviueqn.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": "class_archer",
+      "classId": "class_ms4czk6qlyp89",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -985,7 +1021,7 @@
     {
       "id": "unit_ms4b4zib7ibpz",
       "name": "Pink Leia*",
-      "portrait": null,
+      "portrait": "/images/ms4j52g4qqvh9f.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1002,7 +1038,7 @@
     {
       "id": "unit_ms4b5mqtae605",
       "name": "Lavender Mage*",
-      "portrait": null,
+      "portrait": "/images/ms4j5955sq7n92.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1019,7 +1055,7 @@
     {
       "id": "unit_ms4b6sy674873",
       "name": "Red Face Mark*",
-      "portrait": null,
+      "portrait": "/images/ms4hlfplttgovb.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1069,8 +1105,8 @@
     },
     {
       "id": "unit_ms4b8a7pr2e4u",
-      "name": "Shadow Man*",
-      "portrait": null,
+      "name": "Shy Guy*",
+      "portrait": "/images/ms4jnyi9kmti07.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1104,7 +1140,7 @@
     {
       "id": "unit_ms4b9qphimjk7",
       "name": "Red V*",
-      "portrait": null,
+      "portrait": "/images/ms4jkk40uksxui.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1663,33 +1699,33 @@
       "id": "cai",
       "name": "Cai",
       "title": "Ribeira Winds",
-      "description": "",
+      "description": "Cai joins the Heroic Games in order to save his father",
       "color": "#3f72c7",
-      "portrait": null
+      "portrait": "/images/ms4jzv57wvcit4.jpg"
     },
     {
       "id": "dietrich",
       "name": "Dietrich",
       "title": "House Lamine",
-      "description": "",
+      "description": "Dietrich journeys to Dagda to face the strongest warriors",
       "color": "#7d5fb0",
-      "portrait": null
+      "portrait": "/images/ms4k00rrufho07.jpg"
     },
     {
       "id": "theodora",
       "name": "Theodora",
       "title": "Megaera's Torch",
-      "description": "",
+      "description": "Theodora sets out to establish herself as Queen or Saramis",
       "color": "#b8932f",
-      "portrait": null
+      "portrait": "/images/ms4k08psgjbn1y.jpg"
     },
     {
       "id": "leda",
       "name": "Leda",
       "title": "Rose Tempest",
-      "description": "",
+      "description": "Leda seeks revenge for the death of her father",
       "color": "#c13a6a",
-      "portrait": null
+      "portrait": "/images/ms4k0gl2rd60c0.jpg"
     }
   ]
 }

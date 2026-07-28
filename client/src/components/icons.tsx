@@ -25,86 +25,87 @@ const S = ({ size = 22, className, children }: IconProps & { children: React.Rea
 export const Icons: Record<string, (p: IconProps) => JSX.Element> = {
   sword: (p) => (
     <S {...p}>
-      <path d="M14.5 3.5 20 3l-.5 5.5L8 20l-3-3L14.5 3.5Z" />
-      <path d="m5 17-2 2 3 3 2-2" />
-      <path d="m13.5 9.5 1 1" />
+      <path d="M12 2.5v11" />
+      <path d="M10.4 4 12 2.5 13.6 4" />
+      <path d="M8.5 13.5h7" />
+      <path d="M12 13.5v4" />
+      <path d="M10.8 17.5h2.4" />
     </S>
   ),
   lance: (p) => (
     <S {...p}>
-      <path d="M5 19 19 5" />
-      <path d="M19 5l-4 .4L18.6 9 19 5Z" />
-      <path d="m6 14 4 4" />
+      <path d="M4 20 12 12" />
+      <path d="M12 12c1-4.5 4-7.5 8-8.5-.5 4-3.5 7.5-8 8.5Z" fill="currentColor" stroke="none" />
     </S>
   ),
   axe: (p) => (
     <S {...p}>
-      <path d="M12 4c4 0 7 2.5 7 5.5 0 1.5-1 2.5-3 2.5-1.2 0-2-.5-3-1.5" />
-      <path d="M12 4c-1.5 0-3 .8-3.5 2" />
-      <path d="M10.5 11 6 20" />
-      <path d="m9 11 2 1" />
+      <path d="M5 20 12.5 9.5" />
+      <path d="M12.5 9.5 11 4c4-1 8 0 8.5 3 .5 3-3 4.5-7 2.5Z" fill="currentColor" stroke="none" />
     </S>
   ),
   bow: (p) => (
     <S {...p}>
-      <path d="M6 3c6 2.5 9 8 9 18" />
-      <path d="M6 3 18 21" />
-      <path d="M6 3v3.5L9.5 5" />
+      <path d="M9 3C15 6 15 18 9 21" />
+      <path d="M9 3v18" />
+      <path d="M7.5 3h3M7.5 21h3" />
     </S>
   ),
   brawl: (p) => (
     <S {...p}>
-      <path d="M7 11V7.5a1.5 1.5 0 0 1 3 0V11" />
-      <path d="M10 10.5V6a1.5 1.5 0 0 1 3 0v4.5" />
-      <path d="M13 7.5a1.5 1.5 0 0 1 3 0V13c0 3.5-2 6-5 6s-5-2-5-5v-2l-1.5-1a1.2 1.2 0 0 1 1.5-1.8L8 10" />
+      <path d="M7 12.8v2.7A3.5 3.5 0 0 0 10.5 19h3a3.5 3.5 0 0 0 3.5-3.5V11" />
+      <path d="M7 12.8v-1.3a1.15 1.15 0 0 1 2.3 0v1.3" />
+      <path d="M9.3 12.3v-2a1.15 1.15 0 0 1 2.3 0v2" />
+      <path d="M11.6 12.3v-2a1.15 1.15 0 0 1 2.3 0v2" />
+      <path d="M13.9 12.5v-1.5a1.15 1.15 0 0 1 2.3 0V13" />
+      <path d="M7 15.3 5.7 14a1.1 1.1 0 0 1 1.3-1.75L8 13" />
     </S>
   ),
   reason: (p) => (
     <S {...p}>
-      <path d="M12 5a6 6 0 1 0 0 12" />
-      <path d="M12 5a6 6 0 1 1 0 12" />
-      <path d="M12 8.5v5M9.5 11h5" />
+      <path d="M12 6C9.5 4.8 6.5 4.8 4 5.6v11.2c2.5-.8 5.5-.8 8 .6 2.5-1.4 5.5-1.4 8-.6V5.6C17.5 4.8 14.5 4.8 12 6Z" />
+      <path d="M12 6v11.4" />
     </S>
   ),
   faith: (p) => (
     <S {...p}>
-      <path d="M12 3v8M8.5 6.5h7" />
-      <path d="M7 11c0 4 2.5 7 5 10 2.5-3 5-6 5-10" />
+      <circle cx="12" cy="6" r="2.6" />
+      <path d="M12 8.6V20" />
     </S>
   ),
   authority: (p) => (
     <S {...p}>
-      <path d="M6 3v18" />
-      <path d="M6 4h11l-2.5 3L17 10H6" />
+      <path d="M6.5 3v18" />
+      <path d="M6.5 4h10l-2.5 3 2.5 3h-10" />
     </S>
   ),
   armor: (p) => (
     <S {...p}>
-      <path d="M12 3 5 5.5V11c0 5 3 8 7 10 4-2 7-5 7-10V5.5L12 3Z" />
+      <path d="M12 3 19 5.3v5.2c0 5-3 7.8-7 9.8-4-2-7-4.8-7-9.8V5.3Z" />
       <path d="M12 7v8M9 11h6" />
     </S>
   ),
   infantry: (p) => (
     <S {...p}>
-      <path d="M9 3h3v9l5 2.5V18H9z" />
-      <path d="M9 18h8.5" />
-      <path d="M12 7h-3" />
+      <path d="M9.5 4v9c0 1.3.8 2 2.5 2.3L16 16v1.5H9.5Z" />
+      <path d="M9.5 6.5h2.3" />
     </S>
   ),
   riding: (p) => (
     <S {...p}>
-      <path d="M9.5 4.2a5 3 0 0 1 5 0" />
-      <path d="M7.6 6c-1.6 3.2-1.6 8.4.5 12.6" />
-      <path d="M16.4 6c1.6 3.2 1.6 8.4-.5 12.6" />
-      <circle cx="9" cy="9" r="0.7" fill="currentColor" stroke="none" />
-      <circle cx="15" cy="9" r="0.7" fill="currentColor" stroke="none" />
+      <path d="M8 4.5C5.8 8 5.8 14 8 18" />
+      <path d="M16 4.5c2.2 3.5 2.2 9.5 0 13.5" />
+      <path d="M8.8 4.3a4 2.6 0 0 1 6.4 0" />
+      <circle cx="7.9" cy="9" r="0.6" fill="currentColor" stroke="none" />
+      <circle cx="16.1" cy="9" r="0.6" fill="currentColor" stroke="none" />
+      <circle cx="8.4" cy="13" r="0.6" fill="currentColor" stroke="none" />
+      <circle cx="15.6" cy="13" r="0.6" fill="currentColor" stroke="none" />
     </S>
   ),
   flying: (p) => (
     <S {...p}>
-      <path d="M3 8c5-1 9 1 11 5" />
-      <path d="M21 8c-5-1-9 1-11 5" />
-      <path d="M12 6v3" />
+      <path d="M20 5C11 4 4.5 9 3 18c3.5-4.5 7.5-5.5 11.5-4.5C11.5 10.5 13.5 7.5 20 5Z" />
+      <path d="M7.5 15c2.5-1.5 5-1.5 7-1" />
     </S>
   ),
   // generic fallback

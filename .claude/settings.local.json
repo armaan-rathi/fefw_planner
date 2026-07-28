@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:serenesforest.net)"
+      "WebFetch(domain:serenesforest.net)",
+      "Bash(npm run *)"
     ]
   }
 }
