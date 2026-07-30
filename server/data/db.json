@@ -716,7 +716,7 @@
       "starterFor": [
         "leda"
       ],
-      "classId": "class_ms3pz9lcrqj1y",
+      "classId": "class_ms3o7io5clmwu",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -744,7 +744,7 @@
         "description": ""
       },
       "fields": {
-        "faction": "Ribeira Winds"
+        "faction": ""
       }
     },
     {
@@ -804,7 +804,7 @@
         "description": ""
       },
       "fields": {
-        "faction": "Rose Tempest"
+        "faction": ""
       }
     },
     {
@@ -826,7 +826,7 @@
     },
     {
       "id": "unit_ms4ax1urookeq",
-      "name": "Toothpick",
+      "name": "Toothpick*",
       "portrait": "/images/ms4k4f9dq6qw1t.jpg",
       "isLord": false,
       "routeIds": [],
@@ -860,7 +860,7 @@
     },
     {
       "id": "unit_ms4aycsktz7vo",
-      "name": "Not Seteth",
+      "name": "Not Seteth*",
       "portrait": "/images/ms4jhdlaqasd9m.jpg",
       "isLord": false,
       "routeIds": [],
@@ -968,40 +968,6 @@
       "routeIds": [],
       "starterFor": [],
       "classId": "class_archer",
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {}
-    },
-    {
-      "id": "unit_ms4b1x9i46ue2",
-      "name": "Pink Nabatean*",
-      "portrait": "/images/ms4jumfhrce0ek.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": null,
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {}
-    },
-    {
-      "id": "unit_ms4b33j83mhvc",
-      "name": "Gold Knight*",
-      "portrait": "/images/ms4jvqo3ri3s9e.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": null,
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -1170,6 +1136,91 @@
       "id": "unit_ms4b5mqtae605",
       "name": "Lavender Mage*",
       "portrait": "/images/ms4j5955sq7n92.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_ms4b1x9i46ue2",
+      "name": "Pink Nabatean*",
+      "portrait": "/images/ms4jumfhrce0ek.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_ms4b33j83mhvc",
+      "name": "Gold Knight*",
+      "portrait": "/images/ms4jvqo3ri3s9e.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_ms7k8ivuwpmal",
+      "name": "Pink Feather Lady*",
+      "portrait": "/images/ms7k8q78l1g0hs.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_ms7k4uf6l9u72",
+      "name": "Cain*",
+      "portrait": "/images/ms7k867bmh3usy.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_ms7k892bd498m",
+      "name": "Abel*",
+      "portrait": "/images/ms7k8fulm8obnl.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
