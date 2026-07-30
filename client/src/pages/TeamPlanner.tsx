@@ -21,6 +21,7 @@ export function TeamPlanner() {
   const [route, setRoute] = useState<string>("free");
   const [teams, setTeams] = useLocalStorage<Teams>("fw.teams", {});
   const [dragOver, setDragOver] = useState<number | null>(null);
+  const [picked, setPicked] = useState<string | null>(null); // tap-to-add (mobile-friendly)
 
   const isFree = route === "free";
   const routeObj = isFree ? null : db.routes.find((r) => r.id === route) ?? null;
@@ -73,6 +74,17 @@ export function TeamPlanner() {
     const next = slots.slice();
     next[i] = null;
     setSlots(next);
+  }
+  // Tap-to-add: drop the unit into the first open slot (drag-and-drop doesn't work on touch).
+  function addToTeam(unitId: string) {
+    setPicked(null);
+    if (slots.some((s) => s && s.unitId === unitId)) return; // already on the team
+    const idx = slots.findIndex((s) => !s);
+    if (idx < 0) {
+      window.alert(`All ${SLOT_COUNT} slots are full — remove a unit first.`);
+      return;
+    }
+    assign(idx, unitId);
   }
   function setSlotClass(i: number, classId: string | null) {
     const next = slots.slice();
@@ -133,24 +145,39 @@ export function TeamPlanner() {
             <div className="empty-hint" style={{ padding: 20 }}>No units available. Add some in Dev Mode.</div>
           ) : (
             <div className="palette-list">
-              {available.map((u) => (
-                <div
-                  key={u.id}
-                  className={"palette-item" + (assignedIds.has(u.id) ? " assigned" : "")}
-                  draggable
-                  onDragStart={(e) => e.dataTransfer.setData("text/unit", u.id)}
-                >
-                  <UnitPortrait src={u.portrait} name={u.name} size={36} />
-                  <div className="grow">
-                    <div style={{ fontWeight: 600 }}>{u.name || "Unnamed"}</div>
-                    {unitFaction(u) && <div className="muted" style={{ fontSize: 11.5 }}>{unitFaction(u)}</div>}
+              {available.map((u) => {
+                const assigned = assignedIds.has(u.id);
+                return (
+                  <div
+                    key={u.id}
+                    className={"palette-item" + (assigned ? " assigned" : "") + (picked === u.id ? " picked" : "")}
+                    draggable
+                    onDragStart={(e) => e.dataTransfer.setData("text/unit", u.id)}
+                    onClick={() => setPicked((p) => (p === u.id ? null : u.id))}
+                  >
+                    <UnitPortrait src={u.portrait} name={u.name} size={36} />
+                    <div className="grow">
+                      <div style={{ fontWeight: 600 }}>{u.name || "Unnamed"}</div>
+                      {unitFaction(u) && <div className="muted" style={{ fontSize: 11.5 }}>{unitFaction(u)}</div>}
+                    </div>
+                    {assigned ? (
+                      <span className="tag" title="Already on the team">On team</span>
+                    ) : picked === u.id ? (
+                      <button
+                        className="btn tiny primary"
+                        onClick={(e) => { e.stopPropagation(); addToTeam(u.id); }}
+                      >
+                        + Add
+                      </button>
+                    ) : (
+                      u.isLord && <span className="tag" style={{ borderColor: routeColor, color: routeColor }}>♛</span>
+                    )}
                   </div>
-                  {u.isLord && <span className="tag" style={{ borderColor: routeColor, color: routeColor }}>♛</span>}
-                </div>
-              ))}
+                );
+              })}
             </div>
           )}
-          <p className="muted" style={{ fontSize: 12, marginTop: 10 }}>Drag a unit onto a slot. Dragging a placed unit elsewhere moves it.</p>
+          <p className="muted" style={{ fontSize: 12, marginTop: 10 }}>Drag a unit onto a slot, or tap a unit and press <b>+ Add</b> to drop it in the next open slot.</p>
         </div>
 
         {/* Team grid */}

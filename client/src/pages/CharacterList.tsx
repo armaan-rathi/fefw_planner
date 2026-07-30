@@ -59,7 +59,6 @@ export function CharacterList() {
               <div className="char-card-body">
                 <div className="char-name">
                   {u.name || "Unnamed"}
-                  {u.isLord && <span className="tag" title="Lord">♛</span>}
                 </div>
                 {previewAttrs.map((id) => (
                   <CharAttr key={id} id={id} unit={u} compact />

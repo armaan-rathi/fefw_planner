@@ -530,6 +530,13 @@ label.field > span {
 input[type="range"] {
   accent-color: var(--gold);
   width: 130px;
+  background: transparent;
+  border: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+input[type="range"]:focus {
+  outline: none;
 }
 .slider-val {
   font-weight: 700;
@@ -618,6 +625,10 @@ input[type="range"] {
 .palette-item.assigned {
   opacity: 0.4;
 }
+.palette-item.picked {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 1px var(--gold-deep) inset;
+}
 .team-grid {
   display: grid;
   gap: 14px;
@@ -663,6 +674,48 @@ input[type="range"] {
   width: 100%;
   display: block;
 }
+/* Zoom/pan wrapper for the live overworld map. Stage widens past the viewport
+   when zoomed; drag/scroll to pan. Markers stay centred on the map's icons, so
+   zooming in makes small targets easy to tap on touch screens. */
+.map-outer {
+  position: relative;
+}
+.map-viewport {
+  overflow: auto;
+  border-radius: var(--radius);
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+.map-viewport .map-stage {
+  min-width: 100%;
+}
+.map-zoom-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 20;
+  display: flex;
+  gap: 6px;
+}
+.map-zoom-btn {
+  min-width: 36px;
+  height: 36px;
+  padding: 0;
+  border-radius: 8px;
+  border: 1px solid var(--panel-edge);
+  background: rgba(10, 22, 27, 0.86);
+  color: var(--ink);
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(2px);
+}
+.map-zoom-btn:hover { border-color: var(--gold-deep); color: var(--gold-bright); }
+.map-zoom-btn:disabled { opacity: 0.4; cursor: default; }
+.map-zoom-btn.reset { font-size: 13px; padding: 0 10px; }
 .map-bg-placeholder {
   width: 100%;
   aspect-ratio: 16/9;

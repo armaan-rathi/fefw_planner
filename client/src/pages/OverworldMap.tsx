@@ -60,6 +60,8 @@ export function OverworldMap() {
   const map = db.map;
   const [waypoints, setWaypoints] = useState<string[]>([]);
   const [allowBlocked, setAllowBlocked] = useState(false);
+  const [zoom, setZoom] = useState(1); // map zoom; pan by scrolling the viewport
+  const zoomBy = (d: number) => setZoom((z) => Math.min(4, Math.max(1, Math.round((z + d) * 10) / 10)));
 
   const nodeById = useMemo(() => {
     const m: Record<string, MapNode> = {};
@@ -176,7 +178,16 @@ export function OverworldMap() {
         </div>
       </div>
 
-      <div className="map-stage play">
+      <div className="map-outer">
+        <div className="map-zoom-controls">
+          <button className="map-zoom-btn" onClick={() => zoomBy(0.5)} disabled={zoom >= 4} title="Zoom in" aria-label="Zoom in">＋</button>
+          <button className="map-zoom-btn" onClick={() => zoomBy(-0.5)} disabled={zoom <= 1} title="Zoom out" aria-label="Zoom out">−</button>
+          {zoom !== 1 && (
+            <button className="map-zoom-btn reset" onClick={() => setZoom(1)} title="Reset zoom">{zoom}×</button>
+          )}
+        </div>
+        <div className="map-viewport">
+          <div className="map-stage play" style={{ width: `${zoom * 100}%` }}>
         {map.background ? (
           <img className="map-bg" src={map.background} alt="Overworld map" />
         ) : (
@@ -230,6 +241,8 @@ export function OverworldMap() {
             No map markers yet. Add them in Dev Mode → Map.
           </div>
         )}
+          </div>
+        </div>
       </div>
     </div>
   );
