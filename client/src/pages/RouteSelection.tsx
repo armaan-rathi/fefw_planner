@@ -24,7 +24,7 @@ const clampNum = (v: number, lo: number, hi: number) => Math.min(hi, Math.max(lo
 const fmt = (v: number) => String(Math.round(v * 1000) / 1000);
 
 export function RouteSelection() {
-  const { db } = useDB();
+  const { db, update } = useDB();
   const { devMode } = useDevMode();
   const [ratings, setRatings] = useLocalStorage<Ratings>("fw.ratings", {});
   // Rating params are per-visitor (personal), so fans can tailor them without
@@ -109,9 +109,33 @@ export function RouteSelection() {
   function removeParam(id: string) {
     setParams((prev) => prev.filter((p) => p.id !== id));
   }
+  function resetRatings() {
+    if (window.confirm("Reset all your ratings back to the default value? This clears every slider on this device.")) {
+      setRatings({});
+    }
+  }
 
   const route = db.routes.find((r) => r.id === activeRoute) ?? db.routes[0];
   const roster = route ? unitsByRoute[route.id] ?? [] : [];
+
+  // Editor-only: assign an existing character to (or remove them from) this route.
+  function addCharToRoute(unitId: string) {
+    if (!route || !unitId) return;
+    update((d) => {
+      const u = d.units.find((x) => x.id === unitId);
+      if (u && !u.routeIds.includes(route.id)) u.routeIds.push(route.id);
+    });
+  }
+  function removeCharFromRoute(unitId: string) {
+    if (!route) return;
+    update((d) => {
+      const u = d.units.find((x) => x.id === unitId);
+      if (!u) return;
+      u.routeIds = u.routeIds.filter((r) => r !== route.id);
+      u.starterFor = (u.starterFor ?? []).filter((r) => r !== route.id);
+    });
+  }
+  const offRoute = route ? db.units.filter((u) => !u.routeIds.includes(route.id)) : [];
 
   return (
     <div>
@@ -143,6 +167,7 @@ export function RouteSelection() {
             <button className={"btn" + (scaleOpen ? " primary" : "")} onClick={() => (scaleOpen ? setScaleOpen(false) : openScale())}>
               Adjust rating scale
             </button>
+            <button className="btn ghost" onClick={resetRatings}>Reset ratings</button>
           </div>
         )}
       </div>
@@ -250,11 +275,27 @@ export function RouteSelection() {
 
           <div className="divider" />
 
-          <h3 className="section-title">Roster &amp; ratings</h3>
+          <div className="spread" style={{ flexWrap: "wrap", gap: 10 }}>
+            <h3 className="section-title" style={{ margin: 0 }}>Roster &amp; ratings</h3>
+            {devMode && (
+              <label className="inline-add" style={{ margin: 0 }}>
+                <select
+                  value=""
+                  onChange={(e) => { addCharToRoute(e.target.value); e.target.value = ""; }}
+                  disabled={offRoute.length === 0}
+                >
+                  <option value="">{offRoute.length ? "+ Add character to this route…" : "All characters are on this route"}</option>
+                  {offRoute.map((u) => (
+                    <option key={u.id} value={u.id}>{u.name || "Unnamed"}</option>
+                  ))}
+                </select>
+              </label>
+            )}
+          </div>
           {roster.length === 0 && (
-            <p className="muted" style={{ marginTop: 0 }}>
+            <p className="muted" style={{ marginTop: 10 }}>
               No units on this route yet.{" "}
-              {devMode ? "Assign units to it in Dev → Units." : "Sign in as editor to assign units to this route."}
+              {devMode ? "Use “+ Add character” above, or assign units in Dev → Units." : "Sign in as editor to assign units to this route."}
             </p>
           )}
           {roster.length > 0 && (
@@ -287,6 +328,16 @@ export function RouteSelection() {
                             <div className="row" style={{ gap: 6 }}>
                               <span style={{ fontWeight: 600 }}>{u.name || "Unnamed"}</span>
                               {u.isLord && <span className="tag" style={{ borderColor: route.color, color: route.color }}>♛ Lord</span>}
+                              {devMode && !u.isLord && (
+                                <button
+                                  className="icon-btn"
+                                  title="Remove this character from the route"
+                                  onClick={() => removeCharFromRoute(u.id)}
+                                  style={{ fontSize: 12 }}
+                                >
+                                  ✕
+                                </button>
+                              )}
                             </div>
                             {unitFaction(u) && <div className="muted" style={{ fontSize: 12 }}>{unitFaction(u)}</div>}
                           </div>

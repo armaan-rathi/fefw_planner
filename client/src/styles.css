@@ -125,6 +125,7 @@ button {
 }
 .mainnav {
   display: flex;
+  align-items: stretch;
   gap: 6px;
   margin-left: 10px;
 }
@@ -136,6 +137,9 @@ button {
   font-weight: 600;
   font-size: 14px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid transparent;
   transition: all 0.15s;
 }
@@ -782,8 +786,12 @@ input[type="range"] {
 .map-node.clickable {
   cursor: pointer;
 }
-/* Invisible-but-clickable marker on the live map (players click the image). */
-.ghost {
+.map-node.impassable {
+  cursor: not-allowed;
+}
+/* Invisible-but-clickable marker on the live map (players click the image).
+   Scoped to map markers so it can't collide with .btn.ghost buttons. */
+.map-node .ghost {
   opacity: 0;
 }
 .map-node.in-route.icon-node > div:first-child {
@@ -794,6 +802,11 @@ input[type="range"] {
 }
 .map-node.connect-sel {
   outline: 2px solid var(--gold-bright);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+.map-node.remove-sel {
+  outline: 2px solid #ff5b5b;
   outline-offset: 3px;
   border-radius: 4px;
 }
@@ -1147,6 +1160,60 @@ input[type="range"] {
   }
 }
 
+/* ---- Mobile / small-screen layout ---- */
+@media (max-width: 720px) {
+  /* Topbar: compact brand on row 1, nav becomes a full-width swipeable row */
+  .topbar {
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    padding: 10px 14px;
+  }
+  .brand { gap: 10px; }
+  .brand-mark { font-size: 20px; }
+  .brand h1 { font-size: 18px; white-space: nowrap; }
+  .brand-sub { display: none; }
+  .topbar-right { gap: 10px; }
+  .mainnav {
+    order: 3;
+    width: 100%;
+    margin-left: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .mainnav::-webkit-scrollbar { display: none; }
+  .mainnav a {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    padding: 7px 12px;
+    font-size: 13px;
+  }
+
+  /* Page layout: tighter padding, stacked page headers */
+  .page-wrap { padding: 16px 14px; }
+  .page-head {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .page-head h2 { font-size: 21px; }
+
+  /* Header controls fill the row instead of running off-screen */
+  .page-head .row { width: 100%; flex-wrap: wrap; }
+  .page-head .field { flex: 1 1 100%; min-width: 0 !important; }
+  .page-head select,
+  .page-head input,
+  .page-head textarea { width: 100%; min-width: 0 !important; max-width: 100%; }
+  .inline-add { flex-wrap: wrap; width: 100%; }
+  .inline-add input,
+  .inline-add select { flex: 1 1 100%; min-width: 0 !important; width: 100%; }
+
+  /* Cards & ratings table a touch tighter */
+  .ornate.card, .card { padding: 16px; }
+  .rate-table th, .rate-table td { padding: 8px 10px; }
+}
+
 /* ---- Characters page ---- */
 .char-grid {
   display: grid;
@@ -1254,4 +1321,18 @@ input[type="range"] {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+/* Mobile overrides for rules defined above (must come last to win source order) */
+@media (max-width: 720px) {
+  /* Character grid: two denser columns for easier browsing */
+  .char-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+  }
+  .char-name { font-size: 15px; }
+
+  /* Detail modal: use the full width, smaller hero portrait */
+  .modal-backdrop { padding: 20px 12px; }
+  .char-portrait.large { width: 110px; }
 }

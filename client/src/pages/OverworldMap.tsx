@@ -6,12 +6,16 @@ import { edgeDots } from "../components/mapShapes";
 import type { GameMap, IconType, MapNode } from "../types";
 
 // Dijkstra shortest path over the (undirected) edge graph, weighted by turns.
-function shortestPath(map: GameMap, from: string, to: string): { path: string[]; turns: number } | null {
+// `blocked` holds nodes that can't be traversed; edges touching them are dropped
+// (except the chosen endpoints, which are always kept usable).
+function shortestPath(map: GameMap, from: string, to: string, blocked: Set<string>): { path: string[]; turns: number } | null {
   if (from === to) return { path: [from], turns: 0 };
+  const usable = (id: string) => id === from || id === to || !blocked.has(id);
   const adj: Record<string, { to: string; w: number }[]> = {};
   for (const n of map.nodes) adj[n.id] = [];
   for (const e of map.edges) {
     if (!adj[e.from] || !adj[e.to]) continue;
+    if (!usable(e.from) || !usable(e.to)) continue;
     adj[e.from].push({ to: e.to, w: e.turns });
     adj[e.to].push({ to: e.from, w: e.turns });
   }
@@ -55,12 +59,20 @@ export function OverworldMap() {
   const { db } = useDB();
   const map = db.map;
   const [waypoints, setWaypoints] = useState<string[]>([]);
+  const [allowBlocked, setAllowBlocked] = useState(false);
 
   const nodeById = useMemo(() => {
     const m: Record<string, MapNode> = {};
     for (const n of map.nodes) m[n.id] = n;
     return m;
   }, [map.nodes]);
+
+  // Blocked or inactive markers are impassable unless traversal is allowed.
+  const blockedSet = useMemo(() => {
+    const s = new Set<string>();
+    if (!allowBlocked) for (const n of map.nodes) if (n.blocked || n.inactive) s.add(n.id);
+    return s;
+  }, [map.nodes, allowBlocked]);
 
   const typeById = useMemo(() => {
     const m: Record<string, IconType> = {};
@@ -73,7 +85,7 @@ export function OverworldMap() {
     let turns = 0;
     let broken = false;
     for (let i = 0; i < waypoints.length - 1; i++) {
-      const seg = shortestPath(map, waypoints[i], waypoints[i + 1]);
+      const seg = shortestPath(map, waypoints[i], waypoints[i + 1], blockedSet);
       if (!seg) {
         broken = true;
         break;
@@ -83,12 +95,14 @@ export function OverworldMap() {
     }
     if (waypoints.length === 1) stops.push(waypoints[0]);
     return { stops, turns, broken };
-  }, [waypoints, map]);
+  }, [waypoints, map, blockedSet]);
 
   const routeSet = new Set(route.stops);
 
   function onNodeClick(id: string) {
-    setWaypoints((w) => (w[w.length - 1] === id ? w : [...w, id]));
+    if (blockedSet.has(id)) return; // impassable — can't be a stop
+    // Toggle: clicking a stop that's already a waypoint removes it; otherwise add it.
+    setWaypoints((w) => (w.includes(id) ? w.filter((x) => x !== id) : [...w, id]));
   }
 
   const linePoints = route.stops
@@ -117,9 +131,16 @@ export function OverworldMap() {
       <div className="page-head">
         <div>
           <h2>Overworld Map</h2>
-          <p>Click stops in order to plot a route. Turns are summed along the shortest connecting paths.</p>
+          <p>Click a marker to add it as a stop; click it again to remove it. Turns are summed along the shortest connecting paths; blocked and inactive markers are avoided.</p>
         </div>
-        <div className="row">
+        <div className="row" style={{ flexWrap: "wrap" }}>
+          <button
+            className={"btn" + (allowBlocked ? " primary" : " ghost")}
+            onClick={() => setAllowBlocked((v) => !v)}
+            title="Treat blocked and inactive markers as ordinary, passable stops"
+          >
+            {allowBlocked ? "✓ Inactive traversal on" : "Allow inactive node traversal"}
+          </button>
           <button className="btn ghost" onClick={() => setWaypoints((w) => w.slice(0, -1))} disabled={!waypoints.length}>
             Undo stop
           </button>
@@ -181,13 +202,19 @@ export function OverworldMap() {
           if (!t) return null;
           const isWaypoint = waypoints.includes(n.id);
           const inRoute = routeSet.has(n.id);
+          const impassable = blockedSet.has(n.id);
           return (
             <div
               key={n.id}
-              className={"map-node icon-node clickable" + (inRoute ? " in-route" : "") + (isWaypoint ? " selected" : "")}
+              className={
+                "map-node icon-node" +
+                (impassable ? " impassable" : " clickable") +
+                (inRoute ? " in-route" : "") +
+                (isWaypoint ? " selected" : "")
+              }
               style={{ left: `${n.x}%`, top: `${n.y}%` }}
               onClick={() => onNodeClick(n.id)}
-              title={n.label}
+              title={impassable ? (n.label ? n.label + " (blocked)" : "Blocked") : n.label}
             >
               <div className={hideMarkers ? "ghost" : ""}>
                 <MapIcon type={t} blocked={n.blocked} inactive={n.inactive} />

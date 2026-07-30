@@ -15,12 +15,23 @@ export function MapEditor() {
   const drag = useRef<{ id: string; moved: boolean; sx: number; sy: number } | null>(null);
 
   const [armed, setArmed] = useState<string | null>(null); // icon type id to place
-  const [connectMode, setConnectMode] = useState(false);
-  const [sel, setSel] = useState<string[]>([]); // connect selection
+  const [linkMode, setLinkMode] = useState<"off" | "connect" | "remove">("off");
+  const [sel, setSel] = useState<string[]>([]); // node selection for connect/remove
   const [editingId, setEditingId] = useState<string | null>(null);
   const [overBin, setOverBin] = useState(false);
   const [showTypes, setShowTypes] = useState(false);
   const [markerOpacity, setMarkerOpacity] = useState(100); // editor-only preview; not saved
+
+  const connectMode = linkMode === "connect";
+  const removeMode = linkMode === "remove";
+  const linkActive = linkMode !== "off";
+
+  function enterMode(m: "connect" | "remove") {
+    setLinkMode((cur) => (cur === m ? "off" : m));
+    setArmed(null);
+    setEditingId(null);
+    setSel([]);
+  }
 
   const typeById = (id: string) => db.iconTypes.find((t) => t.id === id);
 
@@ -86,7 +97,7 @@ export function MapEditor() {
   // ---- pointer drag ----
   function onNodeDown(e: React.MouseEvent, id: string) {
     e.stopPropagation();
-    if (connectMode) {
+    if (linkActive) {
       setSel((s) => (s.includes(id) ? s.filter((x) => x !== id) : [...s, id]));
       return;
     }
@@ -125,7 +136,7 @@ export function MapEditor() {
     if (armed) {
       const { x, y } = pct(e);
       addNode(armed, x, y);
-    } else if (!connectMode) {
+    } else if (!linkActive) {
       setEditingId(null);
     }
   }
@@ -146,15 +157,26 @@ export function MapEditor() {
             <div className="row" style={{ flexWrap: "wrap", gap: 8 }}>
               <button
                 className={"btn" + (connectMode ? " primary" : "")}
-                onClick={() => { setConnectMode((v) => !v); setArmed(null); setEditingId(null); setSel([]); }}
+                onClick={() => enterMode("connect")}
               >
                 {connectMode ? "Connecting…" : "Connect nodes"}
+              </button>
+              <button
+                className={"btn" + (removeMode ? " primary" : "")}
+                onClick={() => enterMode("remove")}
+              >
+                {removeMode ? "Removing…" : "Remove paths"}
               </button>
               {connectMode && (
                 <>
                   <button className="btn" onClick={connectSelected} disabled={sel.length < 2}>Join ({sel.length})</button>
-                  <button className="btn ghost" onClick={disconnectSelected} disabled={sel.length < 1}>
-                    {sel.length === 1 ? "Unlink all" : "Disconnect"}
+                  <button className="btn ghost" onClick={() => setSel([])} disabled={!sel.length}>Clear</button>
+                </>
+              )}
+              {removeMode && (
+                <>
+                  <button className="btn danger" onClick={disconnectSelected} disabled={sel.length < 1}>
+                    {sel.length === 1 ? "Unlink all" : `Disconnect (${sel.length})`}
                   </button>
                   <button className="btn ghost" onClick={() => setSel([])} disabled={!sel.length}>Clear</button>
                 </>
@@ -162,7 +184,9 @@ export function MapEditor() {
             </div>
             <p className="muted" style={{ fontSize: 12, marginTop: 8 }}>
               {connectMode
-                ? "Click a path to remove it. Or select nodes in order and Join to link them; select one node and Unlink all to cut its paths."
+                ? "Click nodes in order, then Join to link them. Paths aren't removed here — use Remove paths for that."
+                : removeMode
+                ? "Click any path to remove it. Or select a node and Unlink all to cut every path touching it."
                 : armed
                 ? "Placing — click the map to drop markers. Drag markers to move; drag onto the bin to delete."
                 : "Pick an icon below to place it, or drag existing markers around. Click a marker to edit it."}
@@ -199,7 +223,7 @@ export function MapEditor() {
             <button
               key={t.id}
               className={"palette-icon" + (armed === t.id ? " armed" : "")}
-              onClick={() => { setArmed((a) => (a === t.id ? null : t.id)); setConnectMode(false); }}
+              onClick={() => { setArmed((a) => (a === t.id ? null : t.id)); setLinkMode("off"); setSel([]); }}
               title={t.name}
             >
               <MapIcon type={t} size={Math.min(30, t.size)} />
@@ -247,8 +271,8 @@ export function MapEditor() {
           })}
         </svg>
 
-        {/* Connect mode: clickable paths so you can remove any single edge. */}
-        {connectMode && (
+        {/* Remove mode only: clickable paths so you can delete any single edge. */}
+        {removeMode && (
           <svg className="edge-layer" viewBox="0 0 100 100" preserveAspectRatio="none">
             {map.edges.map((e) => {
               const a = map.nodes.find((n) => n.id === e.from);
@@ -279,8 +303,12 @@ export function MapEditor() {
           return (
             <div
               key={n.id}
-              className={"map-node icon-node editable" + (selected ? " connect-sel" : "") + (editingId === n.id ? " editing" : "")}
-              style={{ left: `${n.x}%`, top: `${n.y}%`, cursor: connectMode ? "pointer" : "grab", opacity: keepVisible ? 1 : markerOpacity / 100 }}
+              className={
+                "map-node icon-node editable" +
+                (selected ? (removeMode ? " remove-sel" : " connect-sel") : "") +
+                (editingId === n.id ? " editing" : "")
+              }
+              style={{ left: `${n.x}%`, top: `${n.y}%`, cursor: linkActive ? "pointer" : "grab", opacity: keepVisible ? 1 : markerOpacity / 100 }}
               onMouseDown={(e) => onNodeDown(e, n.id)}
               onClick={(e) => e.stopPropagation()}
             >

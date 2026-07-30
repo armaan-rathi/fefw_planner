@@ -48,7 +48,7 @@ function Shell() {
         </div>
         <nav className="mainnav">
           <NavLink to="/routes">Route Selection</NavLink>
-          <NavLink to="/characters">Characters</NavLink>
+          <NavLink to="/characters">Character Database</NavLink>
           <NavLink to="/team">Team Planner</NavLink>
           <NavLink to="/map">Overworld Map</NavLink>
           {devMode && <NavLink to="/dev">Dev Mode</NavLink>}

@@ -37,7 +37,7 @@ export function CharacterList() {
     <div>
       <div className="page-head">
         <div>
-          <h2>Characters</h2>
+          <h2>Character Database</h2>
           <p>Browse the cast. Click a character to see full details.</p>
         </div>
         <input
