@@ -327,7 +327,6 @@ export function RouteSelection() {
                           <div>
                             <div className="row" style={{ gap: 6 }}>
                               <span style={{ fontWeight: 600 }}>{u.name || "Unnamed"}</span>
-                              {u.isLord && <span className="tag" style={{ borderColor: route.color, color: route.color }}>♛ Lord</span>}
                               {devMode && !u.isLord && (
                                 <button
                                   className="icon-btn"

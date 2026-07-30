@@ -169,9 +169,7 @@ export function TeamPlanner() {
                       >
                         + Add
                       </button>
-                    ) : (
-                      u.isLord && <span className="tag" style={{ borderColor: routeColor, color: routeColor }}>♛</span>
-                    )}
+                    ) : null}
                   </div>
                 );
               })}
@@ -213,7 +211,6 @@ export function TeamPlanner() {
                         <div>
                           <div className="row" style={{ gap: 6 }}>
                             <span style={{ fontWeight: 700 }}>{unit.name || "Unnamed"}</span>
-                            {isLord && <span className="tag" style={{ borderColor: routeColor, color: routeColor }}>♛ Lord</span>}
                           </div>
                           {unitFaction(unit) && <div className="muted" style={{ fontSize: 11.5 }}>{unitFaction(unit)}</div>}
                         </div>

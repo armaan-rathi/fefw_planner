@@ -77,7 +77,6 @@ export function CharacterList() {
               <div>
                 <h2 className="char-detail-name">
                   {openUnit.name || "Unnamed"}
-                  {openUnit.isLord && <span className="tag">♛ Lord</span>}
                 </h2>
                 {unitFaction(openUnit) && <div className="muted">{unitFaction(openUnit)}</div>}
               </div>
