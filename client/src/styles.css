@@ -36,10 +36,13 @@ body,
 }
 
 body {
+  /* Very soft, large vignette tints — kept low-contrast and pushed off-screen
+     so their fade never reads as a visible band through transparent panels. */
   background:
-    radial-gradient(1200px 700px at 70% -10%, #1a3640 0%, transparent 60%),
-    radial-gradient(900px 600px at 0% 100%, #14272e 0%, transparent 55%),
+    radial-gradient(1700px 1200px at 85% -35%, #15272f 0%, transparent 78%),
+    radial-gradient(1300px 1000px at -25% 130%, #0f1c22 0%, transparent 72%),
     var(--bg-0);
+  background-attachment: fixed;
   color: var(--ink);
   font-family: "Inter", "Segoe UI", system-ui, sans-serif;
   font-size: 15px;
@@ -619,7 +622,8 @@ input[type="range"] {
   min-height: 150px;
   border-radius: var(--radius);
   border: 1px dashed var(--panel-edge);
-  background: rgba(255, 255, 255, 0.015);
+  /* opaque so the page's background tint can't show through unevenly */
+  background: #0e1f26;
   padding: 12px;
   display: flex;
   flex-direction: column;
@@ -628,10 +632,11 @@ input[type="range"] {
 }
 .team-slot.over {
   border-color: var(--gold);
-  background: rgba(216, 182, 106, 0.08);
+  background: #1a2f2c;
 }
 .team-slot.filled {
   border-style: solid;
+  background: linear-gradient(180deg, #163038, #12262d);
 }
 .slot-empty {
   margin: auto;

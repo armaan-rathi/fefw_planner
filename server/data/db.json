@@ -4,62 +4,74 @@
     {
       "id": "sword",
       "label": "Sword",
-      "icon": "sword"
+      "icon": "sword",
+      "iconImage": "/images/ms6basluwxm196.jpg"
     },
     {
       "id": "lance",
       "label": "Lance",
-      "icon": "lance"
+      "icon": "lance",
+      "iconImage": "/images/ms6bb1idr8mfn3.jpg"
     },
     {
       "id": "axe",
       "label": "Axe",
-      "icon": "axe"
+      "icon": "axe",
+      "iconImage": "/images/ms6bb5q3gvkvdq.jpg"
     },
     {
       "id": "bow",
       "label": "Bow",
-      "icon": "bow"
+      "icon": "bow",
+      "iconImage": "/images/ms6bb8vid3bqq9.jpg"
     },
     {
       "id": "brawl",
       "label": "Brawl",
-      "icon": "brawl"
+      "icon": "brawl",
+      "iconImage": "/images/ms6bbcvct4j9uu.jpg"
     },
     {
       "id": "reason",
       "label": "Reason",
-      "icon": "reason"
+      "icon": "reason",
+      "iconImage": "/images/ms6bblnfz51hmq.jpg"
     },
     {
       "id": "faith",
       "label": "Faith",
-      "icon": "faith"
+      "icon": "faith",
+      "iconImage": "/images/ms6bboze9ss4yl.jpg"
     },
     {
       "id": "authority",
       "label": "Authority",
-      "icon": "authority"
+      "icon": "authority",
+      "iconImage": "/images/ms6bbtb61hfc8j.jpg"
     },
     {
       "id": "infantry",
       "label": "Infantry",
-      "icon": "infantry"
+      "icon": "infantry",
+      "iconImage": "/images/ms6bbwnfxbn1h4.jpg"
     },
     {
       "id": "armor",
-      "label": "Heavy Armor",
-      "icon": "armor"
+      "label": "Armor",
+      "icon": "armor",
+      "iconImage": "/images/ms6bc04ol2z1i4.jpg"
     },
     {
       "id": "riding",
       "label": "Riding",
-      "icon": "riding"
+      "icon": "riding",
+      "iconImage": "/images/ms6bc36tsh09f7.jpg"
     },
     {
       "id": "flying",
       "label": "Flying",
-      "icon": "flying"
+      "icon": "flying",
+      "iconImage": "/images/ms6bc63slb8rno.jpg"
     }
   ],
   "fieldDefs": [
@@ -1158,586 +1170,8 @@
   ],
   "map": {
     "background": "/images/overworld-map.png",
-    "nodes": [
-      {
-        "id": "obj",
-        "iconTypeId": "it_objective",
-        "label": "Objective",
-        "blocked": false,
-        "inactive": false,
-        "x": 50,
-        "y": 51
-      },
-      {
-        "id": "bw",
-        "iconTypeId": "it_battle",
-        "label": "Skirmish (West)",
-        "blocked": false,
-        "inactive": false,
-        "x": 45,
-        "y": 50
-      },
-      {
-        "id": "be",
-        "iconTypeId": "it_battle",
-        "label": "Skirmish (East)",
-        "blocked": false,
-        "inactive": false,
-        "x": 55,
-        "y": 49
-      },
-      {
-        "id": "sc",
-        "iconTypeId": "it_shop",
-        "label": "Supply Cache",
-        "blocked": false,
-        "inactive": false,
-        "x": 45.96125628462995,
-        "y": 60.77397541302223
-      },
-      {
-        "id": "fn",
-        "iconTypeId": "it_fort",
-        "label": "Northern Fort",
-        "blocked": false,
-        "inactive": false,
-        "x": 32.163741972544216,
-        "y": 9.013468140846127
-      },
-      {
-        "id": "bn",
-        "iconTypeId": "it_town",
-        "label": "Sealed Bridge",
-        "blocked": true,
-        "inactive": false,
-        "x": 53,
-        "y": 6
-      },
-      {
-        "id": "gnw",
-        "iconTypeId": "it_gate",
-        "label": "North Gate",
-        "blocked": false,
-        "inactive": false,
-        "x": 38,
-        "y": 15
-      },
-      {
-        "id": "gn",
-        "iconTypeId": "it_gate",
-        "label": "Mountain Pass",
-        "blocked": false,
-        "inactive": false,
-        "x": 58,
-        "y": 15
-      },
-      {
-        "id": "gne",
-        "iconTypeId": "it_gate",
-        "label": "Highland Gate",
-        "blocked": false,
-        "inactive": false,
-        "x": 75,
-        "y": 11
-      },
-      {
-        "id": "jnm",
-        "iconTypeId": "it_waypoint",
-        "label": "North Crossroads",
-        "blocked": false,
-        "inactive": false,
-        "x": 62,
-        "y": 30
-      },
-      {
-        "id": "bne",
-        "iconTypeId": "it_town",
-        "label": "Blocked Pass",
-        "blocked": true,
-        "inactive": false,
-        "x": 72,
-        "y": 27
-      },
-      {
-        "id": "tne",
-        "iconTypeId": "it_treasure",
-        "label": "Relic Site",
-        "blocked": false,
-        "inactive": false,
-        "x": 82,
-        "y": 25
-      },
-      {
-        "id": "fne",
-        "iconTypeId": "it_fort",
-        "label": "Eastern Watch",
-        "blocked": false,
-        "inactive": false,
-        "x": 94,
-        "y": 28
-      },
-      {
-        "id": "jwm",
-        "iconTypeId": "it_waypoint",
-        "label": "West Mid Junction",
-        "blocked": false,
-        "inactive": false,
-        "x": 42.12353707199683,
-        "y": 20.614960531159372
-      },
-      {
-        "id": "jw",
-        "iconTypeId": "it_waypoint",
-        "label": "Western Crossroads",
-        "blocked": false,
-        "inactive": false,
-        "x": 24,
-        "y": 47
-      },
-      {
-        "id": "mw",
-        "iconTypeId": "it_shop",
-        "label": "West Merchant",
-        "blocked": false,
-        "inactive": false,
-        "x": 37.37207518968916,
-        "y": 43.899076490431895
-      },
-      {
-        "id": "bbw",
-        "iconTypeId": "it_town",
-        "label": "Broken Bridge",
-        "blocked": true,
-        "inactive": false,
-        "x": 26,
-        "y": 47
-      },
-      {
-        "id": "bfw",
-        "iconTypeId": "it_town",
-        "label": "Far West Block",
-        "blocked": true,
-        "inactive": false,
-        "x": 4,
-        "y": 36
-      },
-      {
-        "id": "fc",
-        "iconTypeId": "it_fort",
-        "label": "Central Fort",
-        "blocked": false,
-        "inactive": false,
-        "x": 61,
-        "y": 37
-      },
-      {
-        "id": "me",
-        "iconTypeId": "it_shop",
-        "label": "East Merchant",
-        "blocked": false,
-        "inactive": false,
-        "x": 74,
-        "y": 47
-      },
-      {
-        "id": "je",
-        "iconTypeId": "it_waypoint",
-        "label": "East Junction",
-        "blocked": false,
-        "inactive": false,
-        "x": 83,
-        "y": 47
-      },
-      {
-        "id": "ge",
-        "iconTypeId": "it_gate",
-        "label": "East Gate",
-        "blocked": false,
-        "inactive": false,
-        "x": 90,
-        "y": 41
-      },
-      {
-        "id": "fs",
-        "iconTypeId": "it_fort",
-        "label": "Southern Fort",
-        "blocked": false,
-        "inactive": false,
-        "x": 60,
-        "y": 62
-      },
-      {
-        "id": "jsm",
-        "iconTypeId": "it_waypoint",
-        "label": "South Mid Junction",
-        "blocked": false,
-        "inactive": false,
-        "x": 67,
-        "y": 62
-      },
-      {
-        "id": "ssw",
-        "iconTypeId": "it_shop",
-        "label": "South Supply",
-        "blocked": false,
-        "inactive": false,
-        "x": 37,
-        "y": 63
-      },
-      {
-        "id": "bfsw",
-        "iconTypeId": "it_town",
-        "label": "SW Block",
-        "blocked": true,
-        "inactive": false,
-        "x": 3,
-        "y": 67
-      },
-      {
-        "id": "fsw",
-        "iconTypeId": "it_fort",
-        "label": "SW Fort",
-        "blocked": false,
-        "inactive": false,
-        "x": 8,
-        "y": 82
-      },
-      {
-        "id": "jsw",
-        "iconTypeId": "it_waypoint",
-        "label": "SW Crossroads",
-        "blocked": false,
-        "inactive": false,
-        "x": 18,
-        "y": 84
-      },
-      {
-        "id": "gsw",
-        "iconTypeId": "it_gate",
-        "label": "South Gate",
-        "blocked": false,
-        "inactive": false,
-        "x": 30,
-        "y": 69
-      },
-      {
-        "id": "js",
-        "iconTypeId": "it_waypoint",
-        "label": "South Crossroads",
-        "blocked": false,
-        "inactive": false,
-        "x": 52,
-        "y": 95
-      },
-      {
-        "id": "ss",
-        "iconTypeId": "it_shop",
-        "label": "River Supply",
-        "blocked": false,
-        "inactive": false,
-        "x": 33.89985304492586,
-        "y": 85.9889688584029
-      },
-      {
-        "id": "gs",
-        "iconTypeId": "it_gate",
-        "label": "Forest Gate",
-        "blocked": false,
-        "inactive": false,
-        "x": 62,
-        "y": 86
-      },
-      {
-        "id": "gfw",
-        "iconTypeId": "it_gate",
-        "label": "Far West Gate",
-        "blocked": false,
-        "inactive": false,
-        "x": 10,
-        "y": 70
-      },
-      {
-        "id": "n_ms53uygg9tab0",
-        "iconTypeId": "it_waypoint",
-        "label": "",
-        "blocked": false,
-        "inactive": false,
-        "x": 49.524852696360696,
-        "y": 13.151062930782883
-      },
-      {
-        "id": "n_ms53vtg7ymnfn",
-        "iconTypeId": "it_waypoint",
-        "label": "",
-        "blocked": false,
-        "inactive": false,
-        "x": 36.91520385485189,
-        "y": 55.3220844657552
-      },
-      {
-        "id": "n_ms53vuadd9l1b",
-        "iconTypeId": "it_waypoint",
-        "label": "",
-        "blocked": false,
-        "inactive": false,
-        "x": 15.990496719304653,
-        "y": 40.06977197802932
-      }
-    ],
-    "edges": [
-      {
-        "id": "e1",
-        "from": "obj",
-        "to": "bw",
-        "turns": 1
-      },
-      {
-        "id": "e2",
-        "from": "obj",
-        "to": "be",
-        "turns": 1
-      },
-      {
-        "id": "e3",
-        "from": "obj",
-        "to": "sc",
-        "turns": 1
-      },
-      {
-        "id": "e4",
-        "from": "obj",
-        "to": "fc",
-        "turns": 1
-      },
-      {
-        "id": "e5",
-        "from": "bw",
-        "to": "jw",
-        "turns": 1
-      },
-      {
-        "id": "e6",
-        "from": "bw",
-        "to": "mw",
-        "turns": 1
-      },
-      {
-        "id": "e7",
-        "from": "be",
-        "to": "jnm",
-        "turns": 1
-      },
-      {
-        "id": "e8",
-        "from": "fc",
-        "to": "jnm",
-        "turns": 1
-      },
-      {
-        "id": "e9",
-        "from": "fc",
-        "to": "me",
-        "turns": 1
-      },
-      {
-        "id": "e10",
-        "from": "fc",
-        "to": "fs",
-        "turns": 1
-      },
-      {
-        "id": "e11",
-        "from": "jnm",
-        "to": "gn",
-        "turns": 1
-      },
-      {
-        "id": "e12",
-        "from": "jnm",
-        "to": "bne",
-        "turns": 1
-      },
-      {
-        "id": "e13",
-        "from": "gn",
-        "to": "bn",
-        "turns": 1
-      },
-      {
-        "id": "e14",
-        "from": "gn",
-        "to": "gnw",
-        "turns": 1
-      },
-      {
-        "id": "e15",
-        "from": "gnw",
-        "to": "fn",
-        "turns": 1
-      },
-      {
-        "id": "e16",
-        "from": "gnw",
-        "to": "jwm",
-        "turns": 1
-      },
-      {
-        "id": "e17",
-        "from": "jwm",
-        "to": "jw",
-        "turns": 1
-      },
-      {
-        "id": "e18",
-        "from": "jwm",
-        "to": "mw",
-        "turns": 1
-      },
-      {
-        "id": "e19",
-        "from": "jw",
-        "to": "bbw",
-        "turns": 1
-      },
-      {
-        "id": "e20",
-        "from": "jw",
-        "to": "gfw",
-        "turns": 2
-      },
-      {
-        "id": "e21",
-        "from": "jw",
-        "to": "bfw",
-        "turns": 2
-      },
-      {
-        "id": "e22",
-        "from": "gfw",
-        "to": "fsw",
-        "turns": 2
-      },
-      {
-        "id": "e23",
-        "from": "gne",
-        "to": "bne",
-        "turns": 1
-      },
-      {
-        "id": "e24",
-        "from": "gne",
-        "to": "fne",
-        "turns": 1
-      },
-      {
-        "id": "e25",
-        "from": "bne",
-        "to": "tne",
-        "turns": 1
-      },
-      {
-        "id": "e26",
-        "from": "tne",
-        "to": "fne",
-        "turns": 1
-      },
-      {
-        "id": "e27",
-        "from": "tne",
-        "to": "je",
-        "turns": 1
-      },
-      {
-        "id": "e28",
-        "from": "me",
-        "to": "je",
-        "turns": 1
-      },
-      {
-        "id": "e29",
-        "from": "je",
-        "to": "ge",
-        "turns": 1
-      },
-      {
-        "id": "e30",
-        "from": "je",
-        "to": "jsm",
-        "turns": 1
-      },
-      {
-        "id": "e31",
-        "from": "fs",
-        "to": "jsm",
-        "turns": 1
-      },
-      {
-        "id": "e32",
-        "from": "fs",
-        "to": "ssw",
-        "turns": 1
-      },
-      {
-        "id": "e33",
-        "from": "ssw",
-        "to": "sc",
-        "turns": 1
-      },
-      {
-        "id": "e34",
-        "from": "ssw",
-        "to": "jsw",
-        "turns": 1
-      },
-      {
-        "id": "e35",
-        "from": "ssw",
-        "to": "js",
-        "turns": 1
-      },
-      {
-        "id": "e36",
-        "from": "jsw",
-        "to": "fsw",
-        "turns": 1
-      },
-      {
-        "id": "e37",
-        "from": "jsw",
-        "to": "gsw",
-        "turns": 1
-      },
-      {
-        "id": "e38",
-        "from": "bfsw",
-        "to": "fsw",
-        "turns": 1
-      },
-      {
-        "id": "e39",
-        "from": "gsw",
-        "to": "ss",
-        "turns": 1
-      },
-      {
-        "id": "e40",
-        "from": "ss",
-        "to": "js",
-        "turns": 1
-      },
-      {
-        "id": "e41",
-        "from": "js",
-        "to": "gs",
-        "turns": 1
-      },
-      {
-        "id": "e42",
-        "from": "jsm",
-        "to": "gs",
-        "turns": 1
-      }
-    ],
+    "nodes": [],
+    "edges": [],
     "hideMarkers": true
   },
   "ratingParams": [
@@ -1787,67 +1221,75 @@
   "iconTypes": [
     {
       "id": "it_objective",
-      "name": "Objective",
+      "name": "Small Blip",
       "image": null,
-      "shape": "star8",
-      "size": 30,
+      "shape": "circle",
+      "size": 8,
       "color": "#f0c850"
     },
     {
       "id": "it_town",
-      "name": "Town",
+      "name": "Big Blip",
       "image": null,
       "shape": "circle",
-      "size": 26,
-      "color": "#e8e0cc"
+      "size": 12,
+      "color": "#13a096"
     },
     {
       "id": "it_fort",
-      "name": "Fort",
+      "name": "Nexus",
       "image": null,
-      "shape": "star8",
-      "size": 26,
-      "color": "#9fb8c4"
+      "shape": "circle",
+      "size": 24,
+      "color": "#f37b39"
     },
     {
       "id": "it_battle",
-      "name": "Battle",
+      "name": "Food",
       "image": null,
       "shape": "square",
       "size": 24,
-      "color": "#e0784b"
+      "color": "#8ae977"
     },
     {
       "id": "it_gate",
-      "name": "Gate",
+      "name": "Fish",
       "image": null,
-      "shape": "triangle",
+      "shape": "square",
       "size": 24,
-      "color": "#d8b66a"
+      "color": "#6985d8"
     },
     {
       "id": "it_treasure",
-      "name": "Treasure",
+      "name": "Wagon",
       "image": null,
-      "shape": "invtriangle",
-      "size": 22,
-      "color": "#b07fd0"
+      "shape": "circle",
+      "size": 24,
+      "color": "#a666d1"
     },
     {
       "id": "it_shop",
-      "name": "Shop",
+      "name": "Bag",
       "image": null,
       "shape": "square",
-      "size": 22,
-      "color": "#5fa8e8"
+      "size": 24,
+      "color": "#e85e65"
     },
     {
       "id": "it_waypoint",
-      "name": "Waypoint",
+      "name": "Cooking",
       "image": null,
-      "shape": "circle",
-      "size": 8,
-      "color": "#cbb98a"
+      "shape": "triangle",
+      "size": 24,
+      "color": "#c6752a"
+    },
+    {
+      "id": "it_ms55s6f92ieko",
+      "name": "Cave",
+      "image": null,
+      "shape": "invtriangle",
+      "size": 24,
+      "color": "#b151f0"
     }
   ]
 }
