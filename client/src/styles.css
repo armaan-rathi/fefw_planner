@@ -527,16 +527,56 @@ label.field > span {
   gap: 10px;
   min-width: 160px;
 }
+/* Fully custom range slider so it looks identical on desktop and mobile
+   (native accent-color renders a light track on iOS). Fill % comes from the
+   inline --fill variable set on each input. */
 input[type="range"] {
-  accent-color: var(--gold);
+  -webkit-appearance: none;
+  appearance: none;
   width: 130px;
+  height: 16px;
   background: transparent;
   border: none;
   outline: none;
+  cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
 input[type="range"]:focus {
   outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 4px;
+  background: linear-gradient(to right, var(--gold) 0 var(--fill, 50%), #3f4347 var(--fill, 50%) 100%);
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 2px solid #0e1f26;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+input[type="range"]::-moz-range-track {
+  height: 6px;
+  border-radius: 4px;
+  background: #3f4347;
+}
+input[type="range"]::-moz-range-progress {
+  height: 6px;
+  border-radius: 4px;
+  background: var(--gold);
+}
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 2px solid #0e1f26;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 .slider-val {
   font-weight: 700;

@@ -207,6 +207,7 @@ export function MapEditor() {
                 max={100}
                 value={markerOpacity}
                 onChange={(e) => setMarkerOpacity(Number(e.target.value))}
+                style={{ ["--fill" as any]: `${markerOpacity}%` }}
               />
             </label>
           </div>

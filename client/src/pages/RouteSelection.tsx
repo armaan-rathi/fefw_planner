@@ -4,7 +4,7 @@ import { useDevMode } from "../data/DevModeContext";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import { UnitPortrait } from "../components/UnitPortrait";
 import { uid } from "../api";
-import { lordFirst, unitFaction } from "../data/units";
+import { lordFirst } from "../data/units";
 import type { RatingParam, Unit } from "../types";
 
 const DEFAULT_PARAMS: RatingParam[] = [{ id: "overall", label: "Overall Appeal" }];
@@ -338,7 +338,6 @@ export function RouteSelection() {
                                 </button>
                               )}
                             </div>
-                            {unitFaction(u) && <div className="muted" style={{ fontSize: 12 }}>{unitFaction(u)}</div>}
                           </div>
                         </div>
                       </td>
@@ -352,6 +351,7 @@ export function RouteSelection() {
                               step={scale.step}
                               value={getRating(u.id, p.id)}
                               onChange={(e) => setRating(u.id, p.id, Number(e.target.value))}
+                              style={{ ["--fill" as any]: `${clampNum(((getRating(u.id, p.id) - scale.min) / (scale.max - scale.min)) * 100, 0, 100)}%` }}
                             />
                             <span className="slider-val">{fmt(getRating(u.id, p.id))}</span>
                           </div>

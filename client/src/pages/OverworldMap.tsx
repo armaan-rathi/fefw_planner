@@ -159,20 +159,12 @@ export function OverworldMap() {
             <div className="big-stat">{route.broken ? "—" : route.turns}</div>
           </div>
           <div style={{ flex: 1 }}>
-            <div className="muted" style={{ fontSize: 12, marginBottom: 6 }}>
-              Stops along the way ({route.stops.length}){route.broken && " — route is broken; some stops aren't connected"}
-            </div>
             {route.stops.length === 0 ? (
-              <span className="muted">No route plotted yet.</span>
+              <span className="muted">Tap markers on the map to plot a route.</span>
+            ) : route.broken ? (
+              <span className="muted">This route is broken — some stops aren&apos;t connected.</span>
             ) : (
-              <div className="stop-chips">
-                {route.stops.map((id, i) => (
-                  <span className="stop-chip" key={i}>
-                    <span className="idx">{i + 1}</span>
-                    {nodeById[id]?.label || "Stop"}
-                  </span>
-                ))}
-              </div>
+              <span className="muted">Route plotted.</span>
             )}
           </div>
         </div>

@@ -748,9 +748,9 @@
       }
     },
     {
-      "id": "unit_ms3oeprflm40x",
-      "name": "Eshmel",
-      "portrait": "/images/ms4jpwlv6133if.jpg",
+      "id": "unit_ms4b1qq82fg7g",
+      "name": "Ninae",
+      "portrait": "/images/ms4jgxw7tv95tq.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -762,9 +762,7 @@
         "name": "",
         "description": ""
       },
-      "fields": {
-        "faction": ""
-      }
+      "fields": {}
     },
     {
       "id": "unit_ms3of3twtvl0z",
@@ -918,7 +916,7 @@
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": "class_ms4axgsyshgov",
+      "classId": "class_ms3o7io5clmwu",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -963,13 +961,13 @@
       "fields": {}
     },
     {
-      "id": "unit_ms4b1qq82fg7g",
-      "name": "Ninae",
-      "portrait": "/images/ms4jgxw7tv95tq.jpg",
+      "id": "unit_ms4b7sewbatfh",
+      "name": "Blurry Bandana*",
+      "portrait": "/images/ms76n49xlq7wdk.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": null,
+      "classId": "class_archer",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -1014,6 +1012,25 @@
       "fields": {}
     },
     {
+      "id": "unit_ms3oeprflm40x",
+      "name": "Eshmel",
+      "portrait": "/images/ms4jpwlv6133if.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": ""
+      }
+    },
+    {
       "id": "unit_ms4b3v4raamqa",
       "name": "Rapunzel*",
       "portrait": "/images/ms76k47otx5ty4.jpg",
@@ -1021,57 +1038,6 @@
       "routeIds": [],
       "starterFor": [],
       "classId": "class_ms4axgsyshgov",
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {}
-    },
-    {
-      "id": "unit_ms4b44v3k39y1",
-      "name": "Nuzzo",
-      "portrait": "/images/ms4j4uuiviueqn.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": "class_ms4czk6qlyp89",
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {}
-    },
-    {
-      "id": "unit_ms4b4zib7ibpz",
-      "name": "Pink Leia*",
-      "portrait": "/images/ms4j52g4qqvh9f.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": null,
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {}
-    },
-    {
-      "id": "unit_ms4b5mqtae605",
-      "name": "Lavender Mage*",
-      "portrait": "/images/ms4j5955sq7n92.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": null,
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -1116,13 +1082,13 @@
       "fields": {}
     },
     {
-      "id": "unit_ms4b7sewbatfh",
-      "name": "Blurry Bandana*",
-      "portrait": "/images/ms76n49xlq7wdk.jpg",
+      "id": "unit_ms4b9qphimjk7",
+      "name": "Red V*",
+      "portrait": "/images/ms76nwpsryu10z.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": "class_archer",
+      "classId": null,
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -1167,9 +1133,43 @@
       "fields": {}
     },
     {
-      "id": "unit_ms4b9qphimjk7",
-      "name": "Red V*",
-      "portrait": "/images/ms76nwpsryu10z.jpg",
+      "id": "unit_ms4b4zib7ibpz",
+      "name": "Pink Leia*",
+      "portrait": "/images/ms4j52g4qqvh9f.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_ms4b44v3k39y1",
+      "name": "Nuzzo",
+      "portrait": "/images/ms4j4uuiviueqn.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_ms4czk6qlyp89",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_ms4b5mqtae605",
+      "name": "Lavender Mage*",
+      "portrait": "/images/ms4j5955sq7n92.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
