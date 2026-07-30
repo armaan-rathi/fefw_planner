@@ -707,8 +707,8 @@
     },
     {
       "id": "unit_ms3ofr4f95yg3",
-      "name": "Muu",
-      "portrait": "/images/ms4hc447pt7xkz.jpg",
+      "name": "Mu",
+      "portrait": "/images/ms7meqfxs69gcl.jpg",
       "isLord": false,
       "routeIds": [
         "leda"
@@ -725,7 +725,8 @@
         "description": ""
       },
       "fields": {
-        "faction": "Rose Tempest"
+        "faction": "Rose Tempest",
+        "backstory": "A young, innocent girl who ran away from home to search for her missing mother. While tracking her mother’s whereabouts, she runs into Leda during her path of vengeance. She dresses and speaks like a boy to protect herself from danger.\n\nLikes: Father, mother, sweets"
       }
     },
     {
@@ -831,7 +832,7 @@
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": null,
+      "classId": "class_soldier",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -882,7 +883,7 @@
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": null,
+      "classId": "class_priest",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -899,7 +900,7 @@
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": null,
+      "classId": "class_priest",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -950,7 +951,7 @@
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": null,
+      "classId": "class_soldier",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -1105,7 +1106,7 @@
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": null,
+      "classId": "class_ms4axgsyshgov",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -1139,7 +1140,7 @@
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": null,
+      "classId": "class_soldier",
       "boons": [],
       "banes": [],
       "skillLevels": {},
