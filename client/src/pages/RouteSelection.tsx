@@ -9,11 +9,19 @@ import type { RatingParam, Unit } from "../types";
 
 const DEFAULT_PARAMS: RatingParam[] = [{ id: "overall", label: "Overall Appeal" }];
 
-type Ratings = Record<string, number>; // key `${unitId}:${paramId}` -> 1..10
+type RatingScale = { min: number; max: number; step: number };
+const DEFAULT_SCALE: RatingScale = { min: 0, max: 10, step: 0.5 };
+const SCALE_CAP = 10000;
+
+type Ratings = Record<string, number>; // key `${unitId}:${paramId}` -> a value within the chosen scale
 
 function key(unitId: string, paramId: string) {
   return `${unitId}:${paramId}`;
 }
+
+const clampNum = (v: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, v));
+// Trim floating-point noise from slider values (e.g. 0.30000000000000004 -> 0.3).
+const fmt = (v: number) => String(Math.round(v * 1000) / 1000);
 
 export function RouteSelection() {
   const { db } = useDB();
@@ -22,9 +30,12 @@ export function RouteSelection() {
   // Rating params are per-visitor (personal), so fans can tailor them without
   // touching the shared, protected database.
   const [params, setParams] = useLocalStorage<RatingParam[]>("fw.ratingParams", DEFAULT_PARAMS);
+  const [scale, setScale] = useLocalStorage<RatingScale>("fw.ratingScale", DEFAULT_SCALE);
   const [activeRoute, setActiveRoute] = useState(db.routes[0]?.id ?? "");
   const [adding, setAdding] = useState(false);
   const [newParam, setNewParam] = useState("");
+  const [scaleOpen, setScaleOpen] = useState(false);
+  const [draft, setDraft] = useState({ min: "0", max: "10", step: "0.5" });
 
   // Units on each route (lord first), including the lord character unit.
   const unitsByRoute = useMemo(() => {
@@ -35,11 +46,39 @@ export function RouteSelection() {
     return map;
   }, [db.routes, db.units]);
 
+  const mid = (scale.min + scale.max) / 2;
+
   function setRating(unitId: string, paramId: string, value: number) {
     setRatings((r) => ({ ...r, [key(unitId, paramId)]: value }));
   }
   function getRating(unitId: string, paramId: string) {
-    return ratings[key(unitId, paramId)] ?? 5;
+    return ratings[key(unitId, paramId)] ?? mid;
+  }
+
+  function openScale() {
+    setDraft({ min: String(scale.min), max: String(scale.max), step: String(scale.step) });
+    setScaleOpen(true);
+    setAdding(false);
+  }
+  // Clamp/normalize the draft into a valid scale: range within ±10000, max above min,
+  // step from 0.1 up to the chosen maximum.
+  function normalizeScale(d: { min: string; max: string; step: string }): RatingScale {
+    let min = Number(d.min);
+    let max = Number(d.max);
+    let step = Number(d.step);
+    if (!Number.isFinite(min)) min = scale.min;
+    if (!Number.isFinite(max)) max = scale.max;
+    if (!Number.isFinite(step)) step = scale.step;
+    min = clampNum(min, -SCALE_CAP, SCALE_CAP);
+    max = clampNum(max, -SCALE_CAP, SCALE_CAP);
+    if (max <= min) max = clampNum(min + 1, -SCALE_CAP, SCALE_CAP);
+    step = clampNum(step, 0.1, Math.max(0.1, max));
+    return { min, max, step };
+  }
+  function applyScale() {
+    const next = normalizeScale(draft);
+    setScale(next);
+    setDraft({ min: String(next.min), max: String(next.max), step: String(next.step) });
   }
 
   // Per-route average score across all its units × rating params.
@@ -79,7 +118,7 @@ export function RouteSelection() {
       <div className="page-head">
         <div>
           <h2>Route Selection</h2>
-          <p>Weigh each route&apos;s path and roster. Rate units 0–10; scores tally per route to help you choose.</p>
+          <p>Weigh each route&apos;s path and roster. Rate each unit; scores tally per route to help you choose.</p>
         </div>
         {adding ? (
           <div className="inline-add">
@@ -99,9 +138,56 @@ export function RouteSelection() {
             <button className="btn ghost" onClick={() => { setAdding(false); setNewParam(""); }}>Cancel</button>
           </div>
         ) : (
-          <button className="btn" onClick={() => setAdding(true)}>+ Add rating parameter</button>
+          <div className="row" style={{ gap: 8, flexWrap: "wrap" }}>
+            <button className="btn" onClick={() => { setAdding(true); setScaleOpen(false); }}>+ Add rating parameter</button>
+            <button className={"btn" + (scaleOpen ? " primary" : "")} onClick={() => (scaleOpen ? setScaleOpen(false) : openScale())}>
+              Adjust rating scale
+            </button>
+          </div>
         )}
       </div>
+
+      {scaleOpen && (
+        <div className="ornate card" style={{ marginBottom: 22 }}>
+          <div className="spread">
+            <h3 className="section-title" style={{ margin: 0 }}>Rating scale</h3>
+            <button className="icon-btn" onClick={() => setScaleOpen(false)}>✕</button>
+          </div>
+          <div className="row" style={{ gap: 14, flexWrap: "wrap", alignItems: "flex-end", marginTop: 10 }}>
+            <label className="field" style={{ margin: 0, width: 120 }}>
+              <span>Minimum</span>
+              <input
+                type="number" min={-SCALE_CAP} max={SCALE_CAP}
+                value={draft.min}
+                onChange={(e) => setDraft((d) => ({ ...d, min: e.target.value }))}
+                onBlur={applyScale}
+              />
+            </label>
+            <label className="field" style={{ margin: 0, width: 120 }}>
+              <span>Maximum</span>
+              <input
+                type="number" min={-SCALE_CAP} max={SCALE_CAP}
+                value={draft.max}
+                onChange={(e) => setDraft((d) => ({ ...d, max: e.target.value }))}
+                onBlur={applyScale}
+              />
+            </label>
+            <label className="field" style={{ margin: 0, width: 120 }}>
+              <span>Step size</span>
+              <input
+                type="number" min={0.1} max={scale.max} step={0.1}
+                value={draft.step}
+                onChange={(e) => setDraft((d) => ({ ...d, step: e.target.value }))}
+                onBlur={applyScale}
+              />
+            </label>
+            <button className="btn primary" onClick={() => { applyScale(); setScaleOpen(false); }}>Done</button>
+          </div>
+          <p className="muted" style={{ marginTop: 10, marginBottom: 0, fontSize: 12 }}>
+            Range from −{SCALE_CAP} to {SCALE_CAP}. Step from 0.1 up to the chosen maximum. Applies to your sliders on this device only.
+          </p>
+        </div>
+      )}
 
       {/* Comparison */}
       <div className="ornate card" style={{ marginBottom: 22 }}>
@@ -115,7 +201,13 @@ export function RouteSelection() {
                 {i === 0 && s.avg > 0 && <span className="tag">Top</span>}
               </div>
               <div className="score-track">
-                <div className="score-fill" style={{ width: `${(s.avg / 10) * 100}%`, background: s.route.color }} />
+                <div
+                  className="score-fill"
+                  style={{
+                    width: `${clampNum(((s.avg - scale.min) / (scale.max - scale.min)) * 100, 0, 100)}%`,
+                    background: s.route.color,
+                  }}
+                />
               </div>
               <div style={{ textAlign: "right", fontWeight: 700, color: "var(--gold-bright)" }}>
                 {s.avg.toFixed(1)}
@@ -205,12 +297,13 @@ export function RouteSelection() {
                           <div className="slider-cell">
                             <input
                               type="range"
-                              min={0}
-                              max={10}
+                              min={scale.min}
+                              max={scale.max}
+                              step={scale.step}
                               value={getRating(u.id, p.id)}
                               onChange={(e) => setRating(u.id, p.id, Number(e.target.value))}
                             />
-                            <span className="slider-val">{getRating(u.id, p.id)}</span>
+                            <span className="slider-val">{fmt(getRating(u.id, p.id))}</span>
                           </div>
                         </td>
                       ))}

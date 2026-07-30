@@ -694,9 +694,9 @@
       }
     },
     {
-      "id": "unit_ms3o3pm7kkagj",
-      "name": "Constance von Twovelle*",
-      "portrait": "/images/ms4heo05bw1abv.jpg",
+      "id": "unit_ms3ofr4f95yg3",
+      "name": "Muu",
+      "portrait": "/images/ms4hc447pt7xkz.jpg",
       "isLord": false,
       "routeIds": [
         "leda"
@@ -704,7 +704,7 @@
       "starterFor": [
         "leda"
       ],
-      "classId": "class_priest",
+      "classId": "class_ms3pz9lcrqj1y",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -719,7 +719,7 @@
     {
       "id": "unit_ms3o4850pz0sq",
       "name": "Caspartan*",
-      "portrait": "/images/ms4p4lmh5ww8yj.png",
+      "portrait": "/images/ms76qh79xt515p.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -759,8 +759,12 @@
       "name": "Lilian",
       "portrait": "/images/ms4o8t0pfday9q.jpg",
       "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
+      "routeIds": [
+        "theodora"
+      ],
+      "starterFor": [
+        "theodora"
+      ],
       "classId": "class_archer",
       "boons": [],
       "banes": [],
@@ -775,13 +779,13 @@
       }
     },
     {
-      "id": "unit_ms3ofr4f95yg3",
-      "name": "Little Red*",
-      "portrait": "/images/ms4hc447pt7xkz.jpg",
+      "id": "unit_ms3o3pm7kkagj",
+      "name": "Constance von Twovelle*",
+      "portrait": "/images/ms4heo05bw1abv.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": "class_ms3pz9lcrqj1y",
+      "classId": "class_priest",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -881,7 +885,7 @@
     {
       "id": "unit_ms4b0fg9gc03t",
       "name": "Lilyhardt*",
-      "portrait": "/images/ms4p73g5884lgs.jpg",
+      "portrait": "/images/ms76hsls1lqwnv.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -915,7 +919,7 @@
     {
       "id": "unit_ms4b14v2stjjh",
       "name": "Highbrow*",
-      "portrait": "/images/ms4k6pvra4isjo.jpg",
+      "portrait": "/images/ms76iupgz7cq5j.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1000,7 +1004,7 @@
     {
       "id": "unit_ms4b3v4raamqa",
       "name": "Rapunzel*",
-      "portrait": "/images/ms4hie1xaaeqdc.jpg",
+      "portrait": "/images/ms76k47otx5ty4.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1068,7 +1072,7 @@
     {
       "id": "unit_ms4b6sy674873",
       "name": "Red Face Mark*",
-      "portrait": "/images/ms4p2k1silfrti.png",
+      "portrait": "/images/ms76lfndngp17i.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1085,7 +1089,7 @@
     {
       "id": "unit_ms4b759ma7nnn",
       "name": "Plain Jane*",
-      "portrait": "/images/ms4p5l8dxpc3f2.jpg",
+      "portrait": "/images/ms76maioub9qsk.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1102,7 +1106,7 @@
     {
       "id": "unit_ms4b7sewbatfh",
       "name": "Blurry Bandana*",
-      "portrait": "/images/ms4p0dukhydpiw.jpg",
+      "portrait": "/images/ms76n49xlq7wdk.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1135,12 +1139,12 @@
     },
     {
       "id": "unit_ms4b9764g1dhr",
-      "name": "Approximately 4 Pixels*",
-      "portrait": "/images/ms4oqd5rle2w0v.jpg",
+      "name": "Blue Ornius Rider*",
+      "portrait": "/images/ms76okdi2h8z4a.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": null,
+      "classId": "class_ornius",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -1153,7 +1157,7 @@
     {
       "id": "unit_ms4b9qphimjk7",
       "name": "Red V*",
-      "portrait": "/images/ms4jkk40uksxui.jpg",
+      "portrait": "/images/ms76nwpsryu10z.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1170,8 +1174,1792 @@
   ],
   "map": {
     "background": "/images/overworld-map.png",
-    "nodes": [],
-    "edges": [],
+    "nodes": [
+      {
+        "id": "n_ms7701n2t40sf",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 51.2024789078922,
+        "y": 41.859664292977996
+      },
+      {
+        "id": "n_ms7703amj1k3f",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 50.13576059731112,
+        "y": 57.21911308429799
+      },
+      {
+        "id": "n_ms7705hx8mx3u",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 46.3537593143418,
+        "y": 65.41541005535676
+      },
+      {
+        "id": "n_ms77098hrz6ml",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 56.0511985014426,
+        "y": 62.31596967653626
+      },
+      {
+        "id": "n_ms770bevu6wnt",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 57.311865595765696,
+        "y": 40.27550476047945
+      },
+      {
+        "id": "n_ms770dyoe1sy8",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 48.972067894859016,
+        "y": 34.076624002838464
+      },
+      {
+        "id": "n_ms770hqng4vb3",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 42.57175803137249,
+        "y": 38.897975703225896
+      },
+      {
+        "id": "n_ms770jei410sc",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 39.37160309962923,
+        "y": 52.15669287929132
+      },
+      {
+        "id": "n_ms770l4ec17pa",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 41.02016776143637,
+        "y": 64.72664552672998
+      },
+      {
+        "id": "n_ms770uldho54o",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 45.77191296311576,
+        "y": 77.70985781094456
+      },
+      {
+        "id": "n_ms770vvbcydwo",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 36.07447377601496,
+        "y": 75.81575535722092
+      },
+      {
+        "id": "n_ms770xjha830u",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 31.613651749948595,
+        "y": 75.12699082859416
+      },
+      {
+        "id": "n_ms770ylsmez6l",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 29.092317561302387,
+        "y": 61.179509123901944
+      },
+      {
+        "id": "n_ms770zu45tp4e",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 33.553139587368754,
+        "y": 40.17219100078528
+      },
+      {
+        "id": "n_ms7711jo938eg",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 40.34134701833931,
+        "y": 31.907016657263977
+      },
+      {
+        "id": "n_ms7714altp965",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 63.3242778917682,
+        "y": 45.3379249654861
+      },
+      {
+        "id": "n_ms7715sgrrf6s",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 67.0093047828665,
+        "y": 45.5101160976428
+      },
+      {
+        "id": "n_ms7717jzxc1lp",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 69.33669018777069,
+        "y": 54.46405496979089
+      },
+      {
+        "id": "n_ms7719b7mmdj3",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 75.3491024837732,
+        "y": 49.29832100509006
+      },
+      {
+        "id": "n_ms771ayzyohq8",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 79.71295011796855,
+        "y": 50.331467798030225
+      },
+      {
+        "id": "n_ms77300pj9com",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 65.16679133731735,
+        "y": 57.907877612924764
+      },
+      {
+        "id": "n_ms773458av58w",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 66.13653525602743,
+        "y": 70.47783026036342
+      },
+      {
+        "id": "n_ms7736ethnqb1",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 69.5306389715127,
+        "y": 72.54412384624375
+      },
+      {
+        "id": "n_ms77392fvti4p",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 62.64545714867115,
+        "y": 83.04778290780207
+      },
+      {
+        "id": "n_ms773b9zp4h2b",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 56.43909606892663,
+        "y": 91.1407661191667
+      },
+      {
+        "id": "n_ms773cyp6xrgn",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 75.05817930816015,
+        "y": 91.48514838348008
+      },
+      {
+        "id": "n_ms773ge3yti3m",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 80.10084768545256,
+        "y": 93.7236331015171
+      },
+      {
+        "id": "n_ms773mie2wzse",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 44.80216904440567,
+        "y": 24.50279797452614
+      },
+      {
+        "id": "n_ms773nwtpmt7r",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 45.77191296311576,
+        "y": 17.098579291788297
+      },
+      {
+        "id": "n_ms773q3j4wyeb",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 49.55391424608507,
+        "y": 12.793800987870952
+      },
+      {
+        "id": "n_ms773rdhjse63",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 57.02094242015268,
+        "y": 20.370210802765484
+      },
+      {
+        "id": "n_ms773ue26jr4m",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 33.068267628013714,
+        "y": 20.370210802765484
+      },
+      {
+        "id": "n_ms773w07c5scv",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 30.35298465562549,
+        "y": 26.052518163936384
+      },
+      {
+        "id": "n_ms773xfv3ehx0",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 28.51047121007634,
+        "y": 20.025828538452096
+      },
+      {
+        "id": "n_ms773yvgm8qgl",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 27.540727291366263,
+        "y": 13.65475664865442
+      },
+      {
+        "id": "n_ms7740spbxcsi",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 16.000774658716313,
+        "y": 16.23762363100483
+      },
+      {
+        "id": "n_ms7741tuzgyms",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 8.242823309035677,
+        "y": 15.37666797022136
+      },
+      {
+        "id": "n_ms7744fdjkwd2",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 4.654770809808382,
+        "y": 14.343521177281197
+      },
+      {
+        "id": "n_ms7747npeqjlf",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 1.3576414861941115,
+        "y": 11.760654194930789
+      },
+      {
+        "id": "n_ms774apn2p510",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 6.303335471615518,
+        "y": 55.49720176273104
+      },
+      {
+        "id": "n_ms774cpry3n9q",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 9.01861844400374,
+        "y": 72.88850611055713
+      },
+      {
+        "id": "n_ms774f4kifo6d",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 17.261441753039417,
+        "y": 91.65733951563678
+      },
+      {
+        "id": "n_ms774ga7a5r90",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 24.340572359622996,
+        "y": 78.57081347172803
+      },
+      {
+        "id": "n_ms774jt2dktxo",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 25.892162629559124,
+        "y": 70.82221252467681
+      },
+      {
+        "id": "n_ms774n5775x9o",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 34.1349859385948,
+        "y": 64.45114063487914
+      },
+      {
+        "id": "n_ms774qm3ra803",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 55.178428974603534,
+        "y": 76.6767110180044
+      },
+      {
+        "id": "n_ms774tj4vvwwm",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 36.26842255975697,
+        "y": 91.65733951563678
+      },
+      {
+        "id": "n_ms774xpp2i3ko",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 42.86268120698552,
+        "y": 97.61515275394409
+      },
+      {
+        "id": "n_ms7751eldbyav",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 87.47090146764917,
+        "y": 35.10977178106419
+      },
+      {
+        "id": "n_ms7753u0lbl76",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 92.80449302055462,
+        "y": 45.26904857830913
+      },
+      {
+        "id": "n_ms7756p99nqwu",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 95.61675038481386,
+        "y": 57.3224278292777
+      },
+      {
+        "id": "n_ms77599124ad4",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 93.87121133113571,
+        "y": 69.72018934455967
+      },
+      {
+        "id": "n_ms775be5ib2ti",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 91.93172349371554,
+        "y": 84.52862671003535
+      },
+      {
+        "id": "n_ms775cel5yegc",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 88.8285429538433,
+        "y": 90.03874293904956
+      },
+      {
+        "id": "n_ms775fjnq723y",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 67.49417674222154,
+        "y": 84.73525613841444
+      },
+      {
+        "id": "n_ms775nac2ida3",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 25.504265062075092,
+        "y": 8.454583012436775
+      },
+      {
+        "id": "n_ms775olqlwbzt",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 29.965087088141463,
+        "y": 1.2225554618556285
+      },
+      {
+        "id": "n_ms775qsblj4rx",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 12.994568510715066,
+        "y": 8.282391880280079
+      },
+      {
+        "id": "n_ms775tqv1k6rl",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 12.994568510715066,
+        "y": 2.427893386952486
+      },
+      {
+        "id": "n_ms775vcbyksnc",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 57.311865595765696,
+        "y": 5.182951501459589
+      },
+      {
+        "id": "n_ms775wg05t7g6",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 61.481764446219046,
+        "y": 3.8054224442060374
+      },
+      {
+        "id": "n_ms7762yzmvc9y",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 78.35530863177443,
+        "y": 0.5337909332288527
+      },
+      {
+        "id": "n_ms7766c7dhbvc",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 81.45848917164669,
+        "y": 3.977613576362731
+      },
+      {
+        "id": "n_ms7767xeye41l",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 88.24669660261725,
+        "y": 3.8054224442060374
+      },
+      {
+        "id": "n_ms77694xy6vgq",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 92.02869788558655,
+        "y": 9.14334754106355
+      },
+      {
+        "id": "n_ms776b75oulnk",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 84.65864410338995,
+        "y": 14.136890373607674
+      },
+      {
+        "id": "n_ms779hr24x4mm",
+        "iconTypeId": "it_town",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 50.81458134040817,
+        "y": 63.28024106758502
+      },
+      {
+        "id": "n_ms779kjqr9sne",
+        "iconTypeId": "it_town",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 39.85647505898427,
+        "y": 45.02798105897546
+      },
+      {
+        "id": "n_ms779nvb95h4w",
+        "iconTypeId": "it_town",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 53.43288992092538,
+        "y": 36.07404218682738
+      },
+      {
+        "id": "n_ms779pouxea2z",
+        "iconTypeId": "it_town",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 61.19084127060602,
+        "y": 38.484718037021096
+      },
+      {
+        "id": "n_ms779vkd18nko",
+        "iconTypeId": "it_town",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 8.5337464846487,
+        "y": 50.365906155832974
+      },
+      {
+        "id": "n_ms779xd72nd23",
+        "iconTypeId": "it_town",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 10.47323432206886,
+        "y": 26.08695652173913
+      },
+      {
+        "id": "n_ms77a0i0krfvx",
+        "iconTypeId": "it_town",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 42.183860463888465,
+        "y": 20.74903142488162
+      },
+      {
+        "id": "n_ms77a2qkjjwwt",
+        "iconTypeId": "it_town",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 73.50658903822404,
+        "y": 20.576840292724924
+      },
+      {
+        "id": "n_ms77a5pclsh4h",
+        "iconTypeId": "it_town",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 89.79828687255336,
+        "y": 48.98837709857942
+      },
+      {
+        "id": "n_ms77a9iefqjbn",
+        "iconTypeId": "it_town",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 84.56166971151895,
+        "y": 95.13560051657339
+      },
+      {
+        "id": "n_ms77acdv4yl72",
+        "iconTypeId": "it_town",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 21.43134060349276,
+        "y": 94.96340938441669
+      },
+      {
+        "id": "n_ms77akeb61rxq",
+        "iconTypeId": "it_town",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 59.154379041314854,
+        "y": 46.68101566493691
+      },
+      {
+        "id": "n_ms77dujnrsd0t",
+        "iconTypeId": "it_ms77d13wtjcel",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 49.941811813569096,
+        "y": 49.952647504342615
+      },
+      {
+        "id": "n_ms77dxuxp56co",
+        "iconTypeId": "it_ms77d13wtjcel",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 92.22264666932857,
+        "y": 27.430047878046977
+      },
+      {
+        "id": "n_ms77e37z2nd54",
+        "iconTypeId": "it_ms77d13wtjcel",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 32.19549810117464,
+        "y": 8.902281007015443
+      },
+      {
+        "id": "n_ms77e7l26zblo",
+        "iconTypeId": "it_ms77cxj76q4aq",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 6.012412296002494,
+        "y": 78.63969002311927
+      },
+      {
+        "id": "n_ms77ebi637nws",
+        "iconTypeId": "it_ms77cxj76q4aq",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 71.56710120080388,
+        "y": 61.35170091291569
+      },
+      {
+        "id": "n_ms77gksrvlqm1",
+        "iconTypeId": "it_ms77cxj76q4aq",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 73.70053782196605,
+        "y": 34.83426524707073
+      },
+      {
+        "id": "n_ms77gsb42cjyd",
+        "iconTypeId": "it_ms77etsrnb7uq",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 82.13730991474374,
+        "y": 24.70942746448558
+      },
+      {
+        "id": "n_ms77hvas5ois5",
+        "iconTypeId": "it_fort",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 25.31031627833308,
+        "y": 2.565646818163474
+      },
+      {
+        "id": "n_ms77hzyiydihw",
+        "iconTypeId": "it_fort",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 24.825444318978036,
+        "y": 17.890657580109234
+      },
+      {
+        "id": "n_ms77i1z1eab68",
+        "iconTypeId": "it_fort",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 34.038011546723794,
+        "y": 29.94403683107781
+      },
+      {
+        "id": "n_ms77i4nywm9ez",
+        "iconTypeId": "it_fort",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 46.159810530599785,
+        "y": 7.731380782864291
+      },
+      {
+        "id": "n_ms77ic0a9yt22",
+        "iconTypeId": "it_fort",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 66.23350964789843,
+        "y": 62.763667671114945
+      },
+      {
+        "id": "n_ms77ie142zcto",
+        "iconTypeId": "it_fort",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 48.19627275989096,
+        "y": 94.42961713747377
+      },
+      {
+        "id": "n_ms77igc5mse2b",
+        "iconTypeId": "it_fort",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 23.273854049041912,
+        "y": 87.90357296599225
+      },
+      {
+        "id": "n_ms77ii3utk9ty",
+        "iconTypeId": "it_fort",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 13.964312429425146,
+        "y": 84.63194145501507
+      },
+      {
+        "id": "n_ms77ikpgm51pe",
+        "iconTypeId": "it_fort",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 85.337464846487,
+        "y": 50.53809728798967
+      },
+      {
+        "id": "n_ms77itijjdjci",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 43.9293995175666,
+        "y": 2.39345568600678
+      },
+      {
+        "id": "n_ms77k25vftqpp",
+        "iconTypeId": "it_ms55s6f92ieko",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 58.28160951447578,
+        "y": 15.479981729915519
+      },
+      {
+        "id": "n_ms77k4x1r9c24",
+        "iconTypeId": "it_ms55s6f92ieko",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 97.36228943849198,
+        "y": 41.13646042126292
+      },
+      {
+        "id": "n_ms77k8a3dq0ph",
+        "iconTypeId": "it_ms55s6f92ieko",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 37.14119208659605,
+        "y": 10.624192328582382
+      },
+      {
+        "id": "n_ms77ka42nwshz",
+        "iconTypeId": "it_ms55s6f92ieko",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 19.976724725427637,
+        "y": 0.7059820653855466
+      },
+      {
+        "id": "n_ms77kf00cz8zb",
+        "iconTypeId": "it_ms55s6f92ieko",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 39.17765431588722,
+        "y": 86.04390821321432
+      },
+      {
+        "id": "n_ms77kiv379mvq",
+        "iconTypeId": "it_ms55s6f92ieko",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 30.4499590474965,
+        "y": 46.956521213644805
+      },
+      {
+        "id": "n_ms77lg4irnktd",
+        "iconTypeId": "it_waypoint",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 0.8727695268390716,
+        "y": 67.24063710718899
+      },
+      {
+        "id": "n_ms77livuzli8i",
+        "iconTypeId": "it_waypoint",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 29.965087088141463,
+        "y": 67.75721050365905
+      },
+      {
+        "id": "n_ms77llak8i2xj",
+        "iconTypeId": "it_waypoint",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 93.7742369392647,
+        "y": 76.19457597933706
+      },
+      {
+        "id": "n_ms77lmujajk71",
+        "iconTypeId": "it_waypoint",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 93.38633937178066,
+        "y": 39.17348256564787
+      },
+      {
+        "id": "n_ms77mucg3knfv",
+        "iconTypeId": "it_battle",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 37.91698722156411,
+        "y": 19.268186637362785
+      },
+      {
+        "id": "n_ms77mvs2nyymj",
+        "iconTypeId": "it_battle",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 20.07369911729865,
+        "y": 17.029701919325767
+      },
+      {
+        "id": "n_ms77n19uja7ib",
+        "iconTypeId": "it_battle",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 6.303335471615518,
+        "y": 24.950493998533684
+      },
+      {
+        "id": "n_ms77n2lvxuqlx",
+        "iconTypeId": "it_battle",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 10.085336754584828,
+        "y": 39.07016683538259
+      },
+      {
+        "id": "n_ms77n3qu9x3k4",
+        "iconTypeId": "it_battle",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 4.75174520167939,
+        "y": 48.02410570753067
+      },
+      {
+        "id": "n_ms77n6qlj0iyo",
+        "iconTypeId": "it_battle",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 29.286266345044403,
+        "y": 54.53293168539638
+      },
+      {
+        "id": "n_ms77n89jvk9fb",
+        "iconTypeId": "it_battle",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 37.62606404595109,
+        "y": 60.38743017872397
+      },
+      {
+        "id": "n_ms77n9r4tatw3",
+        "iconTypeId": "it_battle",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 36.07447377601496,
+        "y": 70.5811451695574
+      },
+      {
+        "id": "n_ms77nc7xqu7dq",
+        "iconTypeId": "it_battle",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 55.95422410957159,
+        "y": 69.51356018302874
+      },
+      {
+        "id": "n_ms77ndpjnlaid",
+        "iconTypeId": "it_battle",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 60.70596931125098,
+        "y": 89.65992264536193
+      },
+      {
+        "id": "n_ms77neu1f9h4i",
+        "iconTypeId": "it_battle",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 66.23350964789843,
+        "y": 77.77873452655005
+      },
+      {
+        "id": "n_ms77nftwubt0t",
+        "iconTypeId": "it_battle",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 70.98525484957783,
+        "y": 89.83211377751863
+      },
+      {
+        "id": "n_ms77nictmj2ij",
+        "iconTypeId": "it_battle",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 59.34832782505687,
+        "y": 30.460610884404932
+      },
+      {
+        "id": "n_ms77nk47o67rx",
+        "iconTypeId": "it_battle",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 44.70519465253467,
+        "y": 32.18252220597187
+      },
+      {
+        "id": "n_ms77nlgelkbf6",
+        "iconTypeId": "it_battle",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 70.98525484957783,
+        "y": 47.50753296791763
+      },
+      {
+        "id": "n_ms77nmsluy4qe",
+        "iconTypeId": "it_battle",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 67.20325356660851,
+        "y": 28.910890694994684
+      },
+      {
+        "id": "n_ms77nobbwehsc",
+        "iconTypeId": "it_battle",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 82.62218187409877,
+        "y": 31.149375413031706
+      },
+      {
+        "id": "n_ms77nph6eq1ok",
+        "iconTypeId": "it_battle",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 81.16756599603366,
+        "y": 16.513129179712724
+      },
+      {
+        "id": "n_ms77nqtzbcb8f",
+        "iconTypeId": "it_battle",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 86.98602950829414,
+        "y": 9.969866157758354
+      },
+      {
+        "id": "n_ms77ntc87tahf",
+        "iconTypeId": "it_battle",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 96.10162234416889,
+        "y": 5.975031760351646
+      },
+      {
+        "id": "n_ms77o09780bum",
+        "iconTypeId": "it_battle",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 42.183860463888465,
+        "y": 92.51829517642024
+      },
+      {
+        "id": "n_ms77o2rlbhszf",
+        "iconTypeId": "it_battle",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 82.23428430661474,
+        "y": 78.57081347172803
+      },
+      {
+        "id": "n_ms77o4kvpnerd",
+        "iconTypeId": "it_battle",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 84.36772092777693,
+        "y": 74.09384403565399
+      },
+      {
+        "id": "n_ms77o5sd0q3lb",
+        "iconTypeId": "it_battle",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 85.62838802210003,
+        "y": 79.94834252898158
+      },
+      {
+        "id": "n_ms77q1mhskj4r",
+        "iconTypeId": "it_gate",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 44.89914343627668,
+        "y": 47.61084804132587
+      },
+      {
+        "id": "n_ms77q3c5jjw2d",
+        "iconTypeId": "it_gate",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 54.59658262337748,
+        "y": 48.29961256995265
+      },
+      {
+        "id": "n_ms77q4g6wlr2c",
+        "iconTypeId": "it_gate",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 53.6268387046674,
+        "y": 16.616444253120967
+      },
+      {
+        "id": "n_ms77q6ystkhap",
+        "iconTypeId": "it_gate",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 10.279285538326842,
+        "y": 79.19070177739209
+      },
+      {
+        "id": "n_ms77qb6ovd020",
+        "iconTypeId": "it_gate",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 51.10550451602119,
+        "y": 79.19070177739209
+      },
+      {
+        "id": "n_ms77qkwbq7gea",
+        "iconTypeId": "it_waypoint",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 71.47012680893286,
+        "y": 3.2888490477359555
+      },
+      {
+        "id": "n_ms77rq04ew8qy",
+        "iconTypeId": "it_treasure",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 37.432115262209074,
+        "y": 43.92595787885833
+      },
+      {
+        "id": "n_ms77rsoijezsj",
+        "iconTypeId": "it_treasure",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 60.70596931125098,
+        "y": 52.36332335453633
+      },
+      {
+        "id": "n_ms77rvs0souce",
+        "iconTypeId": "it_treasure",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 76.02792322687024,
+        "y": 86.45716752156173
+      },
+      {
+        "id": "n_ms77rydbjiwk3",
+        "iconTypeId": "it_treasure",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 89.02249173758531,
+        "y": 43.40938448238824
+      },
+      {
+        "id": "n_ms77s7n37n2k1",
+        "iconTypeId": "it_gate",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 99.39875166778316,
+        "y": 94.58458876230057
+      },
+      {
+        "id": "n_ms77sf3cl2za8",
+        "iconTypeId": "it_shop",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 36.850268910983026,
+        "y": 34.90314196267622
+      },
+      {
+        "id": "n_ms77sgu1t67fb",
+        "iconTypeId": "it_shop",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 45.86888735498677,
+        "y": 60.73181178618031
+      },
+      {
+        "id": "n_ms77sigukp0wm",
+        "iconTypeId": "it_shop",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 40.82621897769435,
+        "y": 77.08996934106625
+      },
+      {
+        "id": "n_ms77skug71ixe",
+        "iconTypeId": "it_shop",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 85.14351606274498,
+        "y": 59.97417152723361
+      },
+      {
+        "id": "n_ms77smnefqfii",
+        "iconTypeId": "it_shop",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 84.27074653590591,
+        "y": 89.31554005262002
+      },
+      {
+        "id": "n_ms77sotapb15s",
+        "iconTypeId": "it_shop",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 33.74708837111077,
+        "y": 97.85622060170627
+      },
+      {
+        "id": "n_ms77srdc1ddyb",
+        "iconTypeId": "it_shop",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 64.19704741860727,
+        "y": 96.47869154445272
+      },
+      {
+        "id": "n_ms77su0472gmj",
+        "iconTypeId": "it_shop",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 12.024824592004988,
+        "y": 15.273352896813119
+      },
+      {
+        "id": "n_ms77uhyhovo9y",
+        "iconTypeId": "it_shop",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 17.455390536781433,
+        "y": 8.006887645286268
+      },
+      {
+        "id": "n_ms77xqvmjvdrn",
+        "iconTypeId": "it_fort",
+        "label": "",
+        "blocked": true,
+        "inactive": false,
+        "x": 4.169898850453342,
+        "y": 1.4636246233318984
+      },
+      {
+        "id": "n_ms77xu9i41aem",
+        "iconTypeId": "it_fort",
+        "label": "",
+        "blocked": true,
+        "inactive": false,
+        "x": 3.1031805398722545,
+        "y": 59.836418424451146
+      },
+      {
+        "id": "n_ms77xw9ds6dvy",
+        "iconTypeId": "it_fort",
+        "label": "",
+        "blocked": true,
+        "inactive": false,
+        "x": 94.16213450674873,
+        "y": 63.969005596211794
+      },
+      {
+        "id": "n_ms77ydb9tmija",
+        "iconTypeId": "it_fort",
+        "label": "",
+        "blocked": true,
+        "inactive": false,
+        "x": 52.754069177828335,
+        "y": 5.9405940594059405
+      },
+      {
+        "id": "n_ms77yexd7r7t1",
+        "iconTypeId": "it_fort",
+        "label": "",
+        "blocked": true,
+        "inactive": false,
+        "x": 70.98525484957783,
+        "y": 27.120103314679294
+      },
+      {
+        "id": "n_ms77yglj2elw6",
+        "iconTypeId": "it_fort",
+        "label": "",
+        "blocked": true,
+        "inactive": false,
+        "x": 90.86500518313446,
+        "y": 15.92767972449419
+      },
+      {
+        "id": "n_ms77yvnwair84",
+        "iconTypeId": "it_fort",
+        "label": "",
+        "blocked": true,
+        "inactive": true,
+        "x": 25.407290670204084,
+        "y": 43.37494513929994
+      },
+      {
+        "id": "n_ms77zk2pnchy3",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 11.636927024520956,
+        "y": 21.024535659875433
+      },
+      {
+        "id": "n_ms77zlvcm78sg",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 9.697439187100795,
+        "y": 32.38915038221723
+      },
+      {
+        "id": "n_ms77zmwg0xkys",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 9.600464795229788,
+        "y": 45.131294161812576
+      },
+      {
+        "id": "n_ms78032gfdfg9",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 5.23661716103443,
+        "y": 69.89238080514488
+      },
+      {
+        "id": "n_ms7804hk0qjuo",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 7.17610499845459,
+        "y": 85.04520043493396
+      },
+      {
+        "id": "n_ms7807049qne9",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 2.4243597967751986,
+        "y": 87.45587628512766
+      },
+      {
+        "id": "n_ms780ldepj0jx",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 38.304884789048145,
+        "y": 99.57813225170173
+      },
+      {
+        "id": "n_ms780n138ulk8",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 52.46314600221531,
+        "y": 94.24020715484423
+      },
+      {
+        "id": "n_ms780o6gx4o77",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 49.941811813569096,
+        "y": 85.97503281132292
+      },
+      {
+        "id": "n_ms7812e40ndy6",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 50.62063255666616,
+        "y": 70.95996529903074
+      },
+      {
+        "id": "n_ms7813ijydubs",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 61.093866878735014,
+        "y": 61.66164416256928
+      },
+      {
+        "id": "n_ms781lwasfy27",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 59.057404649443846,
+        "y": 97.3396475336647
+      },
+      {
+        "id": "n_ms781n2zoaath",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 68.75484383654464,
+        "y": 95.96211847641116
+      },
+      {
+        "id": "n_ms781o0q0yauc",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 73.21566586261102,
+        "y": 97.02970297029702
+      },
+      {
+        "id": "n_ms78254pe0h9h",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 97.94413578971803,
+        "y": 87.04261730520878
+      },
+      {
+        "id": "n_ms7826qh8ti5a",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 97.16834065474997,
+        "y": 79.29401635815756
+      },
+      {
+        "id": "n_ms78337refdx4",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 76.31884640248326,
+        "y": 64.32199728576161
+      },
+      {
+        "id": "n_ms78349f60cuk",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 80.58571964480763,
+        "y": 61.386138613861384
+      },
+      {
+        "id": "n_ms783597r23d3",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 85.14351606274498,
+        "y": 67.75721050365905
+      },
+      {
+        "id": "n_ms7836ouhhriq",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 88.44064538635926,
+        "y": 55.53164012053379
+      },
+      {
+        "id": "n_ms783jsg94lew",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": false,
+        "x": 72.63381951138497,
+        "y": 67.51614282011114
+      },
+      {
+        "id": "n_ms783sc16xp55",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 26.95888094014021,
+        "y": 49.29832166194711
+      },
+      {
+        "id": "n_ms784d6r0oqyz",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 60.70596931125098,
+        "y": 22.608696177659546
+      },
+      {
+        "id": "n_ms784efb32ur0",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 64.6819193779623,
+        "y": 23.814034102756406
+      },
+      {
+        "id": "n_ms784gd70mmkj",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 64.10007302673625,
+        "y": 33.456737503531265
+      },
+      {
+        "id": "n_ms784lfvl1dyh",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 69.91853653899673,
+        "y": 34.66207542862812
+      },
+      {
+        "id": "n_ms785i21dbnai",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 75.54305126751521,
+        "y": 3.7193295055558546
+      },
+      {
+        "id": "n_ms785j5mysfwt",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 70.5003828902228,
+        "y": 9.401636866726754
+      },
+      {
+        "id": "n_ms785k36wxuiy",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 70.5973572820938,
+        "y": 16.28928215299451
+      },
+      {
+        "id": "n_ms785yeeci2rv",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 77.38556471306435,
+        "y": 18.527764243603368
+      },
+      {
+        "id": "n_ms785zkf8qgnq",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 80.58571964480763,
+        "y": 10.606972164395447
+      },
+      {
+        "id": "n_ms78ofg5re486",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 76.22187201061226,
+        "y": 32.27722719728664
+      },
+      {
+        "id": "n_ms78ogabzedvv",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 79.2280781586135,
+        "y": 31.4765381700152
+      },
+      {
+        "id": "n_ms78ohd09dfvi",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 85.43443923835802,
+        "y": 33.370641937452916
+      },
+      {
+        "id": "n_ms78oi6xyp3xs",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 90.57408200752144,
+        "y": 36.88334063933525
+      },
+      {
+        "id": "n_ms78pncw3va4q",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 90.96197957500547,
+        "y": 21.592766921478155
+      },
+      {
+        "id": "n_ms78poi1y2fpe",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 93.6772625473937,
+        "y": 32.991821972193826
+      },
+      {
+        "id": "n_ms78q7qj1eu0l",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 52.3661716103443,
+        "y": 29.85794257871354
+      },
+      {
+        "id": "n_ms78qa5bg6rmv",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 51.396427691634216,
+        "y": 23.14248842460248
+      },
+      {
+        "id": "n_ms78qbkgyk760",
+        "iconTypeId": "it_objective",
+        "label": "",
+        "blocked": false,
+        "inactive": true,
+        "x": 53.72381309653841,
+        "y": 11.089109173633906
+      }
+    ],
+    "edges": [
+      {
+        "id": "e_ms78u664m61rm",
+        "from": "n_ms7747npeqjlf",
+        "to": "n_ms7744fdjkwd2",
+        "turns": 1
+      },
+      {
+        "id": "e_ms78u6641417q",
+        "from": "n_ms7744fdjkwd2",
+        "to": "n_ms7741tuzgyms",
+        "turns": 1
+      },
+      {
+        "id": "e_ms78u6646fgpd",
+        "from": "n_ms7741tuzgyms",
+        "to": "n_ms77su0472gmj",
+        "turns": 1
+      }
+    ],
     "hideMarkers": true
   },
   "ratingParams": [
@@ -1280,7 +3068,7 @@
       "name": "Cooking",
       "image": null,
       "shape": "triangle",
-      "size": 24,
+      "size": 28,
       "color": "#c6752a"
     },
     {
@@ -1288,8 +3076,46 @@
       "name": "Cave",
       "image": null,
       "shape": "invtriangle",
-      "size": 24,
+      "size": 28,
       "color": "#b151f0"
+    },
+    {
+      "id": "it_ms77cxj76q4aq",
+      "name": "Minor Town",
+      "image": null,
+      "shape": "star4",
+      "size": 36,
+      "color": "#697fd8"
+    },
+    {
+      "id": "it_ms77d13wtjcel",
+      "name": "Major Town",
+      "image": null,
+      "shape": "star8",
+      "size": 48,
+      "color": "#d87069"
+    },
+    {
+      "id": "it_ms77etsrnb7uq",
+      "name": "Temple",
+      "image": null,
+      "shape": "star4",
+      "size": 36,
+      "color": "#cbd869"
     }
-  ]
+  ],
+  "characterPage": {
+    "preview": [
+      "field:faction",
+      "class"
+    ],
+    "detail": [
+      "field:faction",
+      "class",
+      "routes",
+      "personalSkill",
+      "proficiencies",
+      "field:backstory"
+    ]
+  }
 }

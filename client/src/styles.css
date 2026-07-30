@@ -135,6 +135,7 @@ button {
   border-radius: 8px;
   font-weight: 600;
   font-size: 14px;
+  text-align: center;
   border: 1px solid transparent;
   transition: all 0.15s;
 }
@@ -806,6 +807,43 @@ input[type="range"] {
   pointer-events: none;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
 }
+/* Bright-red path lines in the map editor (under markers; dimmed by the opacity slider). */
+.edge-lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.edge-line {
+  stroke: #ff2b2b;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+  pointer-events: none;
+  filter: drop-shadow(0 0 1.5px rgba(0, 0, 0, 0.85));
+}
+/* Clickable path hit-lines shown in the map editor's Connect mode. */
+.edge-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 6;
+}
+.edge-hit {
+  stroke: rgba(224, 120, 120, 0);
+  stroke-width: 14;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+  pointer-events: stroke;
+  cursor: pointer;
+  transition: stroke 0.12s;
+}
+.edge-hit:hover {
+  stroke: rgba(233, 94, 101, 0.85);
+}
 .wp-badge {
   position: absolute;
   top: -7px;
@@ -1107,4 +1145,113 @@ input[type="range"] {
   .two-col {
     grid-template-columns: 1fr;
   }
+}
+
+/* ---- Characters page ---- */
+.char-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+.char-card {
+  text-align: left;
+  padding: 0;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid var(--panel-edge);
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+  border-radius: var(--radius);
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.12s, border-color 0.12s, box-shadow 0.12s;
+  font: inherit;
+}
+.char-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--gold-deep);
+  box-shadow: var(--shadow);
+}
+.char-portrait {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background: linear-gradient(160deg, #21434d, #122a31);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: var(--gold);
+}
+.char-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+.char-initial {
+  font-family: Georgia, serif;
+  font-weight: 700;
+  font-size: 40px;
+}
+.char-card-body {
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.char-name {
+  font-weight: 700;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.char-attr {
+  margin-bottom: 12px;
+}
+.char-attr .k {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-faint);
+  margin-bottom: 3px;
+}
+.char-attr.compact {
+  margin-bottom: 0;
+  font-size: 12.5px;
+  color: var(--ink-dim);
+}
+.char-attr.compact .k {
+  display: inline;
+  font-size: 12.5px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.char-longtext {
+  margin: 0;
+  white-space: pre-wrap;
+  color: var(--ink-dim);
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+.char-detail-head {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+.char-portrait.large {
+  width: 150px;
+  aspect-ratio: 3 / 4;
+  border-radius: 8px;
+  border: 1px solid var(--panel-edge);
+  flex: none;
+}
+.char-detail-name {
+  margin: 0 0 4px;
+  font-size: 22px;
+  color: var(--gold-bright);
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }

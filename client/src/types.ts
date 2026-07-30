@@ -112,6 +112,14 @@ export interface RatingParam {
   label: string;
 }
 
+// Which attributes appear on the Characters page (preview cards vs. detail popup).
+// Ids are built-ins ("class","routes","proficiencies","personalSkill") or
+// "field:<key>" for custom fields.
+export interface CharacterPageConfig {
+  preview: string[];
+  detail: string[];
+}
+
 export interface DB {
   schemaVersion: number;
   routes: Route[];
@@ -122,4 +130,5 @@ export interface DB {
   iconTypes: IconType[];
   map: GameMap;
   ratingParams: RatingParam[];
+  characterPage?: CharacterPageConfig;
 }

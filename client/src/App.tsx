@@ -4,6 +4,7 @@ import { DevModeProvider, useDevMode } from "./data/DevModeContext";
 import { RouteSelection } from "./pages/RouteSelection";
 import { TeamPlanner } from "./pages/TeamPlanner";
 import { OverworldMap } from "./pages/OverworldMap";
+import { CharacterList } from "./pages/CharacterList";
 import { DevMode } from "./pages/dev/DevMode";
 
 function SaveBadge() {
@@ -47,6 +48,7 @@ function Shell() {
         </div>
         <nav className="mainnav">
           <NavLink to="/routes">Route Selection</NavLink>
+          <NavLink to="/characters">Characters</NavLink>
           <NavLink to="/team">Team Planner</NavLink>
           <NavLink to="/map">Overworld Map</NavLink>
           {devMode && <NavLink to="/dev">Dev Mode</NavLink>}
@@ -68,6 +70,7 @@ function Shell() {
           <Routes>
             <Route path="/" element={<Navigate to="/routes" replace />} />
             <Route path="/routes" element={<RouteSelection />} />
+            <Route path="/characters" element={<CharacterList />} />
             <Route path="/team" element={<TeamPlanner />} />
             <Route path="/map" element={<OverworldMap />} />
             {(!ready || editable) && <Route path="/dev/*" element={<DevMode />} />}

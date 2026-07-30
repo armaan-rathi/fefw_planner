@@ -2,6 +2,7 @@ import { NavLink, Navigate, Route, Routes } from "react-router-dom";
 import { UnitsEditor } from "./UnitsEditor";
 import { ClassesEditor } from "./ClassesEditor";
 import { RoutesEditor } from "./RoutesEditor";
+import { CharacterPageEditor } from "./CharacterPageEditor";
 import { FieldsEditor } from "./FieldsEditor";
 import { SkillTypesEditor } from "./SkillTypesEditor";
 import { MapEditor } from "./MapEditor";
@@ -23,6 +24,7 @@ export function DevMode() {
         <NavLink to="fields">Unit Fields</NavLink>
         <NavLink to="skills">Skill Types</NavLink>
         <NavLink to="map">Map</NavLink>
+        <NavLink to="characters">Characters Page</NavLink>
       </div>
 
       <Routes>
@@ -33,6 +35,7 @@ export function DevMode() {
         <Route path="fields" element={<FieldsEditor />} />
         <Route path="skills" element={<SkillTypesEditor />} />
         <Route path="map" element={<MapEditor />} />
+        <Route path="characters" element={<CharacterPageEditor />} />
       </Routes>
     </div>
   );

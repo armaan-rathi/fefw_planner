@@ -135,6 +135,10 @@ function defaultDB() {
     iconTypes: JSON.parse(JSON.stringify(ICON_TYPES)),
     map: JSON.parse(JSON.stringify(STARTER_MAP)),
     ratingParams: [{ id: "overall", label: "Overall Appeal" }],
+    characterPage: {
+      preview: ["field:faction", "class"],
+      detail: ["field:faction", "class", "routes", "personalSkill", "proficiencies", "field:backstory"],
+    },
   };
 }
 

@@ -20,6 +20,7 @@ export function MapEditor() {
   const [editingId, setEditingId] = useState<string | null>(null);
   const [overBin, setOverBin] = useState(false);
   const [showTypes, setShowTypes] = useState(false);
+  const [markerOpacity, setMarkerOpacity] = useState(100); // editor-only preview; not saved
 
   const typeById = (id: string) => db.iconTypes.find((t) => t.id === id);
 
@@ -67,9 +68,18 @@ export function MapEditor() {
     });
   }
   function disconnectSelected() {
+    if (!sel.length) return;
     const set = new Set(sel);
     update((d) => {
-      d.map.edges = d.map.edges.filter((e) => !(set.has(e.from) && set.has(e.to)));
+      d.map.edges = d.map.edges.filter((e) =>
+        // 1 node selected: drop every path touching it. 2+: drop paths between selected nodes.
+        set.size === 1 ? !(set.has(e.from) || set.has(e.to)) : !(set.has(e.from) && set.has(e.to))
+      );
+    });
+  }
+  function removeEdge(id: string) {
+    update((d) => {
+      d.map.edges = d.map.edges.filter((e) => e.id !== id);
     });
   }
 
@@ -143,14 +153,16 @@ export function MapEditor() {
               {connectMode && (
                 <>
                   <button className="btn" onClick={connectSelected} disabled={sel.length < 2}>Join ({sel.length})</button>
-                  <button className="btn ghost" onClick={disconnectSelected} disabled={sel.length < 2}>Disconnect</button>
+                  <button className="btn ghost" onClick={disconnectSelected} disabled={sel.length < 1}>
+                    {sel.length === 1 ? "Unlink all" : "Disconnect"}
+                  </button>
                   <button className="btn ghost" onClick={() => setSel([])} disabled={!sel.length}>Clear</button>
                 </>
               )}
             </div>
             <p className="muted" style={{ fontSize: 12, marginTop: 8 }}>
               {connectMode
-                ? "Click nodes in order, then Join to link them with paths."
+                ? "Click a path to remove it. Or select nodes in order and Join to link them; select one node and Unlink all to cut its paths."
                 : armed
                 ? "Placing — click the map to drop markers. Drag markers to move; drag onto the bin to delete."
                 : "Pick an icon below to place it, or drag existing markers around. Click a marker to edit it."}
@@ -162,6 +174,16 @@ export function MapEditor() {
                 onChange={(e) => update((d) => (d.map.hideMarkers = e.target.checked))}
               />
               <span>Hide markers on the live map (players click the image; they stay visible here)</span>
+            </label>
+            <label className="field" style={{ margin: "10px 0 0", maxWidth: 280 }}>
+              <span>Editor marker opacity — {markerOpacity}% (preview only, not saved)</span>
+              <input
+                type="range"
+                min={0}
+                max={100}
+                value={markerOpacity}
+                onChange={(e) => setMarkerOpacity(Number(e.target.value))}
+              />
             </label>
           </div>
         </div>
@@ -211,19 +233,54 @@ export function MapEditor() {
           const b = map.nodes.find((n) => n.id === e.to);
           if (!a || !b) return null;
           return edgeDots(a, b).map((d, i) => (
-            <span key={e.id + i} className="map-dot" style={{ left: `${d.x}%`, top: `${d.y}%` }} />
+            <span key={e.id + i} className="map-dot" style={{ left: `${d.x}%`, top: `${d.y}%`, opacity: markerOpacity / 100 }} />
           ));
         })}
+
+        {/* Visible bright-red path lines (editor aid). Dimmed by the opacity slider. */}
+        <svg className="edge-lines" viewBox="0 0 100 100" preserveAspectRatio="none" style={{ opacity: markerOpacity / 100 }}>
+          {map.edges.map((e) => {
+            const a = map.nodes.find((n) => n.id === e.from);
+            const b = map.nodes.find((n) => n.id === e.to);
+            if (!a || !b) return null;
+            return <line key={e.id} className="edge-line" x1={a.x} y1={a.y} x2={b.x} y2={b.y} />;
+          })}
+        </svg>
+
+        {/* Connect mode: clickable paths so you can remove any single edge. */}
+        {connectMode && (
+          <svg className="edge-layer" viewBox="0 0 100 100" preserveAspectRatio="none">
+            {map.edges.map((e) => {
+              const a = map.nodes.find((n) => n.id === e.from);
+              const b = map.nodes.find((n) => n.id === e.to);
+              if (!a || !b) return null;
+              return (
+                <line
+                  key={e.id}
+                  className="edge-hit"
+                  x1={a.x}
+                  y1={a.y}
+                  x2={b.x}
+                  y2={b.y}
+                  onClick={(ev) => { ev.stopPropagation(); removeEdge(e.id); }}
+                >
+                  <title>Click to remove this path</title>
+                </line>
+              );
+            })}
+          </svg>
+        )}
 
         {map.nodes.map((n) => {
           const t = typeById(n.iconTypeId);
           if (!t) return null;
           const selected = sel.includes(n.id);
+          const keepVisible = selected || editingId === n.id;
           return (
             <div
               key={n.id}
               className={"map-node icon-node editable" + (selected ? " connect-sel" : "") + (editingId === n.id ? " editing" : "")}
-              style={{ left: `${n.x}%`, top: `${n.y}%`, cursor: connectMode ? "pointer" : "grab" }}
+              style={{ left: `${n.x}%`, top: `${n.y}%`, cursor: connectMode ? "pointer" : "grab", opacity: keepVisible ? 1 : markerOpacity / 100 }}
               onMouseDown={(e) => onNodeDown(e, n.id)}
               onClick={(e) => e.stopPropagation()}
             >
