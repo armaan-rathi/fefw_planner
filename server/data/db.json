@@ -83,7 +83,7 @@
       "options": [
         "Ribeira Winds",
         "House Lamine",
-        "Megaera's Torch",
+        "Megaira's Beacon",
         "Rose Tempest"
       ]
     },
@@ -407,7 +407,7 @@
         "description": ""
       },
       "fields": {
-        "faction": "Megaera's Torch",
+        "faction": "Megaira's Beacon",
         "backstory": "The young queen of the Kingdom of Saramis, which serves the Dagdan Empire. Possesses an unwavering resolve to face any obstacle and has the qualities of a queen who guides her people.\n\nLikes: Fighting, the well-being of her people"
       }
     },
@@ -503,7 +503,7 @@
         "description": ""
       },
       "fields": {
-        "faction": "Megaera's Torch",
+        "faction": "Megaira's Beacon",
         "backstory": "Theodora’s right hand man; a wise general from the Kingdom of Saramis who continues to serve on the front-lines. In a kingdom where writing is forbidden, he records all of Saramis’s history and wisdom in his memory.\n\nLikes: Memorising knowledge, philosophical debates, reciting poetry"
       }
     },
@@ -599,7 +599,7 @@
         "description": ""
       },
       "fields": {
-        "faction": "Megaera's Torch",
+        "faction": "Megaira's Beacon",
         "backstory": "A tough general of Saramis, known for his strength and defences; he refers to Queen Theodora as “young lady”.\nLike Bonaparte, he served the kingdom since the previous king and has achieved many military feats on the battlefield.\nBad at thinking and remembering names.\n\nLikes: alcohol, fighting, singing, socialising"
       }
     },
@@ -701,7 +701,7 @@
         "description": ""
       },
       "fields": {
-        "faction": "Megaera's Torch",
+        "faction": "Megaira's Beacon",
         "backstory": "A genius Saraminian knight. Hails from a renowned family; his uncle serves as chancellor, and his father is a great warrior whose name is etched in the kingdom’s history. He’s loyal and capable, but his desire to succeed without relying on his family can cause him to act rashly.\n\nLikes: Gazing at the sky"
       }
     },
@@ -785,7 +785,7 @@
         "description": ""
       },
       "fields": {
-        "faction": "Megaera's Torch",
+        "faction": "Megaira's Beacon",
         "backstory": "A young Saraminian archer. Values money above all else and often lacks manners, even towards her liege, Theodora. Yet her archery skill is undeniable. Her background is slightly complicated; she hails from a renowned family, but her father lost his title after the civil war.\n\nLikes: Gold coins, jewels, older men"
       }
     },

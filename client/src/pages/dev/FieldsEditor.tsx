@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDB } from "../../data/DataContext";
 import { uid } from "../../api";
 import { OPTION_SOURCES, sourceLabel } from "../../data/fields";
@@ -43,6 +43,25 @@ export function FieldsEditor() {
     update((d) => {
       const f = d.fieldDefs.find((x) => x.id === id);
       if (f) Object.assign(f, p);
+    });
+  }
+  // Rename an existing dropdown/multiselect option in place, and carry the change
+  // through to every unit that already stored the old value.
+  function renameOption(def: FieldDef, oldVal: string, newVal: string) {
+    const nv = newVal.trim();
+    if (!nv || nv === oldVal) return;
+    update((d) => {
+      const f = d.fieldDefs.find((x) => x.id === def.id);
+      if (!f || !f.options) return;
+      const idx = f.options.indexOf(oldVal);
+      if (idx < 0 || f.options.includes(nv)) return; // gone, or would duplicate
+      f.options[idx] = nv;
+      for (const u of d.units) {
+        const cur = u.fields?.[f.key];
+        if (cur === undefined) continue;
+        if (Array.isArray(cur)) u.fields[f.key] = cur.map((x) => (x === oldVal ? nv : x));
+        else if (cur === oldVal) u.fields[f.key] = nv;
+      }
     });
   }
   function changeType(id: string, t: FieldType) {
@@ -133,7 +152,11 @@ export function FieldsEditor() {
                           Options come from your <b>{sourceLabel(f.optionsSource)}</b> — new ones appear automatically.
                         </div>
                       ) : (
-                        <OptionsEditor def={f} onChange={(options) => patch(f.id, { options })} />
+                        <OptionsEditor
+                          def={f}
+                          onChange={(options) => patch(f.id, { options })}
+                          onRename={(oldVal, newVal) => renameOption(f, oldVal, newVal)}
+                        />
                       )}
                     </div>
                   )}
@@ -151,7 +174,15 @@ export function FieldsEditor() {
   );
 }
 
-function OptionsEditor({ def, onChange }: { def: FieldDef; onChange: (options: string[]) => void }) {
+function OptionsEditor({
+  def,
+  onChange,
+  onRename,
+}: {
+  def: FieldDef;
+  onChange: (options: string[]) => void;
+  onRename: (oldVal: string, newVal: string) => void;
+}) {
   const options = def.options ?? [];
   const [draft, setDraft] = useState("");
   function addOpt() {
@@ -162,20 +193,65 @@ function OptionsEditor({ def, onChange }: { def: FieldDef; onChange: (options: s
   }
   return (
     <div style={{ marginTop: 8 }}>
-      <div className="muted" style={{ fontSize: 11, marginBottom: 4 }}>Options</div>
-      <div className="chip-wrap" style={{ marginBottom: 6 }}>
+      <div className="muted" style={{ fontSize: 11, marginBottom: 4 }}>
+        Options — edit the text to rename one (units keep their value automatically).
+      </div>
+      <div className="stack" style={{ gap: 6, marginBottom: 8 }}>
         {options.length === 0 && <span className="muted" style={{ fontSize: 12 }}>No options yet.</span>}
         {options.map((o) => (
-          <span key={o} className="tag" style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
-            {o}
-            <button className="icon-btn" style={{ fontSize: 11, padding: "0 2px" }} onClick={() => onChange(options.filter((x) => x !== o))}>✕</button>
-          </span>
+          <OptionRow
+            key={o}
+            value={o}
+            exists={(v) => options.includes(v)}
+            onRename={(newVal) => onRename(o, newVal)}
+            onRemove={() => onChange(options.filter((x) => x !== o))}
+          />
         ))}
       </div>
       <div className="inline-add">
         <input type="text" placeholder="Add option…" value={draft} onChange={(e) => setDraft(e.target.value)} onKeyDown={(e) => e.key === "Enter" && addOpt()} style={{ maxWidth: 220 }} />
         <button className="btn tiny" onClick={addOpt}>Add</button>
       </div>
+    </div>
+  );
+}
+
+function OptionRow({
+  value,
+  exists,
+  onRename,
+  onRemove,
+}: {
+  value: string;
+  exists: (v: string) => boolean;
+  onRename: (newVal: string) => void;
+  onRemove: () => void;
+}) {
+  const [text, setText] = useState(value);
+  // Keep the field in sync if the value changes elsewhere.
+  useEffect(() => setText(value), [value]);
+  function commit() {
+    const v = text.trim();
+    if (!v || v === value || exists(v)) {
+      setText(value); // reset invalid / duplicate / unchanged edits
+      return;
+    }
+    onRename(v);
+  }
+  return (
+    <div className="row" style={{ gap: 6 }}>
+      <input
+        type="text"
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        onBlur={commit}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") e.currentTarget.blur();
+          if (e.key === "Escape") { setText(value); e.currentTarget.blur(); }
+        }}
+        style={{ maxWidth: 220 }}
+      />
+      <button className="btn tiny danger" title="Remove option" onClick={onRemove}>✕</button>
     </div>
   );
 }
