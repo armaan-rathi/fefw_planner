@@ -791,11 +791,15 @@
     },
     {
       "id": "unit_ms3o3pm7kkagj",
-      "name": "Constance von Twovelle*",
-      "portrait": "/images/ms4heo05bw1abv.jpg",
+      "name": "Olympia",
+      "portrait": "/images/ms9e4j4i7kxstk.jpg",
       "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
+      "routeIds": [
+        "leda"
+      ],
+      "starterFor": [
+        "leda"
+      ],
       "classId": "class_priest",
       "boons": [],
       "banes": [],
@@ -805,7 +809,7 @@
         "description": ""
       },
       "fields": {
-        "faction": ""
+        "faction": "Rose Tempest"
       }
     },
     {
@@ -4289,7 +4293,7 @@
     {
       "id": "theodora",
       "name": "Theodora",
-      "title": "Megaera's Torch",
+      "title": "Megaira's Beacon",
       "description": "Theodora sets out to establish herself as Queen or Saramis",
       "color": "#b8932f",
       "portrait": "/images/ms4k08psgjbn1y.jpg"
