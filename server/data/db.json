@@ -84,7 +84,8 @@
         "Ribeira Winds",
         "House Lamine",
         "Megaira's Beacon",
-        "Rose Tempest"
+        "Rose Tempest",
+        "Knights of Arago"
       ]
     },
     {
@@ -443,9 +444,7 @@
       "routeIds": [
         "cai"
       ],
-      "starterFor": [
-        "cai"
-      ],
+      "starterFor": [],
       "classId": "class_diviner",
       "boons": [],
       "banes": [],
@@ -635,9 +634,7 @@
       "routeIds": [
         "cai"
       ],
-      "starterFor": [
-        "cai"
-      ],
+      "starterFor": [],
       "classId": "class_priest",
       "boons": [
         "lance",
@@ -665,9 +662,7 @@
       "routeIds": [
         "dietrich"
       ],
-      "starterFor": [
-        "dietrich"
-      ],
+      "starterFor": [],
       "classId": "class_brigand",
       "boons": [],
       "banes": [],
@@ -689,9 +684,7 @@
       "routeIds": [
         "theodora"
       ],
-      "starterFor": [
-        "theodora"
-      ],
+      "starterFor": [],
       "classId": "class_ornius",
       "boons": [],
       "banes": [],
@@ -713,9 +706,7 @@
       "routeIds": [
         "leda"
       ],
-      "starterFor": [
-        "leda"
-      ],
+      "starterFor": [],
       "classId": "class_ms3o7io5clmwu",
       "boons": [],
       "banes": [],
@@ -773,9 +764,7 @@
       "routeIds": [
         "theodora"
       ],
-      "starterFor": [
-        "theodora"
-      ],
+      "starterFor": [],
       "classId": "class_archer",
       "boons": [],
       "banes": [],
@@ -797,9 +786,7 @@
       "routeIds": [
         "leda"
       ],
-      "starterFor": [
-        "leda"
-      ],
+      "starterFor": [],
       "classId": "class_priest",
       "boons": [],
       "banes": [],
@@ -967,12 +954,12 @@
     },
     {
       "id": "unit_ms4b7sewbatfh",
-      "name": "Blurry Bandana*",
-      "portrait": "/images/ms76n49xlq7wdk.jpg",
+      "name": "Bandana Model Dee*",
+      "portrait": "/images/mscy0kkivcvmnd.jpeg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": "class_archer",
+      "classId": "class_ms4czk6qlyp89",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -1089,7 +1076,7 @@
     {
       "id": "unit_ms4b9764g1dhr",
       "name": "Blue Ornius Rider*",
-      "portrait": "/images/ms76okdi2h8z4a.png",
+      "portrait": "/images/msbwl9ljmmhbdy.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1207,12 +1194,12 @@
     },
     {
       "id": "unit_ms7k4uf6l9u72",
-      "name": "Cain*",
-      "portrait": "/images/ms7k867bmh3usy.jpg",
+      "name": "Nathan",
+      "portrait": "/images/mscxr4iy692ufd.jpeg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": null,
+      "classId": "class_ms3o5tbsmr10n",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -1220,16 +1207,19 @@
         "name": "",
         "description": ""
       },
-      "fields": {}
+      "fields": {
+        "backstory": "A valiant general of the Arago Kingdom, boasting overwhelming attack power.\n\nTogether with the Green Knight Creek, he is known as the \"Twin Pillars of Arago,\" his fame resounding throughout Dagda.\n\nDeeply loyal, with a personality so straightforward it's almost stubbornly honest.\n\nLikes: The red armor bestowed by the king, upholding loyalty, training in all martial arts",
+        "faction": "Knights of Arago"
+      }
     },
     {
       "id": "unit_ms7k892bd498m",
-      "name": "Abel*",
-      "portrait": "/images/ms7k8fulm8obnl.jpg",
+      "name": "Creek",
+      "portrait": "/images/mscy01cedgsum2.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": null,
+      "classId": "class_ms3o5tbsmr10n",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -1237,7 +1227,9 @@
         "name": "",
         "description": ""
       },
-      "fields": {}
+      "fields": {
+        "faction": "Knights of Arago"
+      }
     }
   ],
   "map": {
