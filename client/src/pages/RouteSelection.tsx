@@ -1,6 +1,5 @@
 import { useMemo, useState } from "react";
 import { useDB } from "../data/DataContext";
-import { useDevMode } from "../data/DevModeContext";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import { UnitPortrait } from "../components/UnitPortrait";
 import { uid } from "../api";
@@ -24,27 +23,35 @@ const clampNum = (v: number, lo: number, hi: number) => Math.min(hi, Math.max(lo
 const fmt = (v: number) => String(Math.round(v * 1000) / 1000);
 
 export function RouteSelection() {
-  const { db, update } = useDB();
-  const { devMode } = useDevMode();
+  const { db } = useDB();
   const [ratings, setRatings] = useLocalStorage<Ratings>("fw.ratings", {});
-  // Rating params are per-visitor (personal), so fans can tailor them without
-  // touching the shared, protected database.
+  // Ratings, params, scale and route extras are all per-visitor (personal), so
+  // fans can tailor them without touching the shared, protected database.
   const [params, setParams] = useLocalStorage<RatingParam[]>("fw.ratingParams", DEFAULT_PARAMS);
   const [scale, setScale] = useLocalStorage<RatingScale>("fw.ratingScale", DEFAULT_SCALE);
+  // Units the visitor has provisionally added to a route (route id -> unit ids),
+  // since the real per-route rosters aren't known yet.
+  const [routeExtras, setRouteExtras] = useLocalStorage<Record<string, string[]>>("fw.routeExtras", {});
   const [activeRoute, setActiveRoute] = useState(db.routes[0]?.id ?? "");
   const [adding, setAdding] = useState(false);
   const [newParam, setNewParam] = useState("");
   const [scaleOpen, setScaleOpen] = useState(false);
   const [draft, setDraft] = useState({ min: "0", max: "10", step: "0.5" });
 
-  // Units on each route (lord first), including the lord character unit.
+  // Units on each route (lord first): the canonical DB roster plus any the
+  // visitor has provisionally added on this device.
   const unitsByRoute = useMemo(() => {
     const map: Record<string, Unit[]> = {};
     for (const route of db.routes) {
-      map[route.id] = lordFirst(db.units.filter((u) => u.routeIds.includes(route.id)));
+      const canonical = db.units.filter((u) => u.routeIds.includes(route.id));
+      const canonicalIds = new Set(canonical.map((u) => u.id));
+      const extras = (routeExtras[route.id] ?? [])
+        .map((id) => db.units.find((u) => u.id === id))
+        .filter((u): u is Unit => !!u && !canonicalIds.has(u.id));
+      map[route.id] = lordFirst([...canonical, ...extras]);
     }
     return map;
-  }, [db.routes, db.units]);
+  }, [db.routes, db.units, routeExtras]);
 
   const mid = (scale.min + scale.max) / 2;
 
@@ -109,33 +116,35 @@ export function RouteSelection() {
   function removeParam(id: string) {
     setParams((prev) => prev.filter((p) => p.id !== id));
   }
-  function resetRatings() {
-    if (window.confirm("Reset all your ratings back to the default value? This clears every slider on this device.")) {
+  function resetAll() {
+    if (window.confirm("Reset all your ratings and remove any characters you've added to routes? (This device only.)")) {
       setRatings({});
+      setRouteExtras({});
     }
   }
 
   const route = db.routes.find((r) => r.id === activeRoute) ?? db.routes[0];
   const roster = route ? unitsByRoute[route.id] ?? [] : [];
 
-  // Editor-only: assign an existing character to (or remove them from) this route.
+  // Provisionally add/remove a character on this route (personal, on this device).
   function addCharToRoute(unitId: string) {
     if (!route || !unitId) return;
-    update((d) => {
-      const u = d.units.find((x) => x.id === unitId);
-      if (u && !u.routeIds.includes(route.id)) u.routeIds.push(route.id);
+    setRouteExtras((prev) => {
+      const cur = prev[route.id] ?? [];
+      if (cur.includes(unitId)) return prev;
+      return { ...prev, [route.id]: [...cur, unitId] };
     });
   }
   function removeCharFromRoute(unitId: string) {
     if (!route) return;
-    update((d) => {
-      const u = d.units.find((x) => x.id === unitId);
-      if (!u) return;
-      u.routeIds = u.routeIds.filter((r) => r !== route.id);
-      u.starterFor = (u.starterFor ?? []).filter((r) => r !== route.id);
+    setRouteExtras((prev) => {
+      const cur = prev[route.id] ?? [];
+      if (!cur.includes(unitId)) return prev;
+      return { ...prev, [route.id]: cur.filter((id) => id !== unitId) };
     });
   }
-  const offRoute = route ? db.units.filter((u) => !u.routeIds.includes(route.id)) : [];
+  const rosterIds = new Set(roster.map((u) => u.id));
+  const offRoute = route ? db.units.filter((u) => !rosterIds.has(u.id)) : [];
 
   return (
     <div>
@@ -167,7 +176,7 @@ export function RouteSelection() {
             <button className={"btn" + (scaleOpen ? " primary" : "")} onClick={() => (scaleOpen ? setScaleOpen(false) : openScale())}>
               Adjust rating scale
             </button>
-            <button className="btn ghost" onClick={resetRatings}>Reset ratings</button>
+            <button className="btn ghost" onClick={resetAll}>Reset</button>
           </div>
         )}
       </div>
@@ -277,25 +286,22 @@ export function RouteSelection() {
 
           <div className="spread" style={{ flexWrap: "wrap", gap: 10 }}>
             <h3 className="section-title" style={{ margin: 0 }}>Roster &amp; ratings</h3>
-            {devMode && (
-              <label className="inline-add" style={{ margin: 0 }}>
-                <select
-                  value=""
-                  onChange={(e) => { addCharToRoute(e.target.value); e.target.value = ""; }}
-                  disabled={offRoute.length === 0}
-                >
-                  <option value="">{offRoute.length ? "+ Add character to this route…" : "All characters are on this route"}</option>
-                  {offRoute.map((u) => (
-                    <option key={u.id} value={u.id}>{u.name || "Unnamed"}</option>
-                  ))}
-                </select>
-              </label>
-            )}
+            <label className="inline-add" style={{ margin: 0 }}>
+              <select
+                value=""
+                onChange={(e) => { addCharToRoute(e.target.value); e.target.value = ""; }}
+                disabled={offRoute.length === 0}
+              >
+                <option value="">{offRoute.length ? "+ Add character to this route…" : "All characters are on this route"}</option>
+                {offRoute.map((u) => (
+                  <option key={u.id} value={u.id}>{u.name || "Unnamed"}</option>
+                ))}
+              </select>
+            </label>
           </div>
           {roster.length === 0 && (
             <p className="muted" style={{ marginTop: 10 }}>
-              No units on this route yet.{" "}
-              {devMode ? "Use “+ Add character” above, or assign units in Dev → Units." : "Sign in as editor to assign units to this route."}
+              No units on this route yet. Use “+ Add character to this route” above to add anyone you expect to see here.
             </p>
           )}
           {roster.length > 0 && (
@@ -327,10 +333,10 @@ export function RouteSelection() {
                           <div>
                             <div className="row" style={{ gap: 6 }}>
                               <span style={{ fontWeight: 600 }}>{u.name || "Unnamed"}</span>
-                              {devMode && !u.isLord && (
+                              {route && !u.routeIds.includes(route.id) && (
                                 <button
                                   className="icon-btn"
-                                  title="Remove this character from the route"
+                                  title="Remove this character you added"
                                   onClick={() => removeCharFromRoute(u.id)}
                                   style={{ fontSize: 12 }}
                                 >
