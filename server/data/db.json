@@ -103,8 +103,7 @@
       "description": "",
       "movementType": "infantry",
       "proficiencies": [
-        "authority",
-        "infantry"
+        "authority"
       ],
       "portrait": null
     },
@@ -114,9 +113,7 @@
       "tier": "Base",
       "description": "",
       "movementType": "infantry",
-      "proficiencies": [
-        "infantry"
-      ],
+      "proficiencies": [],
       "portrait": null
     },
     {
@@ -154,8 +151,7 @@
       "movementType": "infantry",
       "proficiencies": [
         "sword",
-        "bow",
-        "infantry"
+        "bow"
       ],
       "portrait": null
     },
@@ -212,8 +208,7 @@
       "movementType": "infantry",
       "proficiencies": [
         "sword",
-        "bow",
-        "infantry"
+        "bow"
       ],
       "portrait": null
     },
@@ -262,8 +257,7 @@
       "description": "",
       "movementType": "infantry",
       "proficiencies": [
-        "bow",
-        "infantry"
+        "bow"
       ],
       "portrait": null
     },
@@ -274,8 +268,7 @@
       "description": "",
       "movementType": "infantry",
       "proficiencies": [
-        "brawl",
-        "infantry"
+        "brawl"
       ],
       "portrait": null
     },
@@ -320,9 +313,21 @@
       "portrait": null
     },
     {
+      "id": "class_msesr7wkkfq1k",
+      "name": "Charioteer",
+      "tier": "Specialty",
+      "description": "",
+      "movementType": "cavalry",
+      "proficiencies": [
+        "lance",
+        "riding"
+      ],
+      "portrait": null
+    },
+    {
       "id": "class_ms4gsshgfxh2m",
       "name": "Armored Ornius Rider*",
-      "tier": "Specialty",
+      "tier": "Advanced",
       "description": "",
       "movementType": "flying",
       "proficiencies": [
@@ -349,8 +354,10 @@
       "name": "Bishop",
       "tier": "Advanced",
       "description": "",
-      "movementType": "",
-      "proficiencies": [],
+      "movementType": "infantry",
+      "proficiencies": [
+        "faith"
+      ],
       "portrait": null
     },
     {
@@ -360,18 +367,10 @@
       "description": "",
       "movementType": "cavalry",
       "proficiencies": [
+        "sword",
         "lance",
         "riding"
       ],
-      "portrait": null
-    },
-    {
-      "id": "class_msesr7wkkfq1k",
-      "name": "Charioteer",
-      "tier": "Intermediate",
-      "description": "",
-      "movementType": "cavalry",
-      "proficiencies": [],
       "portrait": null
     },
     {
@@ -429,7 +428,9 @@
       "tier": "Advanced",
       "description": "",
       "movementType": "infantry",
-      "proficiencies": [],
+      "proficiencies": [
+        "axe"
+      ],
       "portrait": null
     },
     {
@@ -438,7 +439,9 @@
       "tier": "Advanced",
       "description": "",
       "movementType": "",
-      "proficiencies": [],
+      "proficiencies": [
+        "bow"
+      ],
       "portrait": null
     },
     {
@@ -446,8 +449,12 @@
       "name": "Dreadnought",
       "tier": "Advanced",
       "description": "",
-      "movementType": "",
-      "proficiencies": [],
+      "movementType": "infantry",
+      "proficiencies": [
+        "lance",
+        "axe",
+        "armor"
+      ],
       "portrait": null
     },
     {
@@ -455,8 +462,11 @@
       "name": "Forest Knight",
       "tier": "Advanced",
       "description": "",
-      "movementType": "",
-      "proficiencies": [],
+      "movementType": "cavalry",
+      "proficiencies": [
+        "bow",
+        "riding"
+      ],
       "portrait": null
     },
     {
@@ -464,8 +474,10 @@
       "name": "Ovate",
       "tier": "Advanced",
       "description": "",
-      "movementType": "",
-      "proficiencies": [],
+      "movementType": "infantry",
+      "proficiencies": [
+        "reason"
+      ],
       "portrait": null
     }
   ],
@@ -996,7 +1008,7 @@
     },
     {
       "id": "unit_ms4ax1urookeq",
-      "name": "Toothpick*",
+      "name": "Talimoon",
       "portrait": "/images/ms4k4f9dq6qw1t.jpg",
       "isLord": false,
       "routeIds": [],
@@ -1013,7 +1025,7 @@
     },
     {
       "id": "unit_ms4b1m5a0pltt",
-      "name": "Cat Mask*",
+      "name": "Orchel",
       "portrait": "/images/ms4jxzntak0ccy.jpg",
       "isLord": false,
       "routeIds": [],
@@ -1065,7 +1077,7 @@
     {
       "id": "unit_ms4b0fg9gc03t",
       "name": "Lilyhardt*",
-      "portrait": "/images/ms76hsls1lqwnv.jpg",
+      "portrait": "/images/msf9aclmn9q739.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1082,7 +1094,7 @@
     {
       "id": "unit_ms3o4850pz0sq",
       "name": "Noctula",
-      "portrait": "/images/ms76qh79xt515p.png",
+      "portrait": "/images/msf7gdmcl9zxzx.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1138,7 +1150,7 @@
     {
       "id": "unit_ms4b14v2stjjh",
       "name": "Yang Jie",
-      "portrait": "/images/ms76iupgz7cq5j.jpg",
+      "portrait": "/images/msf99y8ydgq6ma.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1175,7 +1187,7 @@
     {
       "id": "unit_ms4aycsktz7vo",
       "name": "Seteth",
-      "portrait": "/images/ms4jhdlaqasd9m.jpg",
+      "portrait": "/images/msf77u5q1iwjj3.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1192,7 +1204,7 @@
     {
       "id": "unit_ms4b3v4raamqa",
       "name": "Rapunzel*",
-      "portrait": "/images/ms76k47otx5ty4.jpg",
+      "portrait": "/images/msf9g01j9szxc4.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1209,7 +1221,7 @@
     {
       "id": "unit_ms4b6sy674873",
       "name": "Kiroc",
-      "portrait": "/images/ms76lfndngp17i.png",
+      "portrait": "/images/msf7ml0dm0w7s4.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1228,7 +1240,7 @@
     {
       "id": "unit_ms4b759ma7nnn",
       "name": "Sofia",
-      "portrait": "/images/ms76maioub9qsk.jpg",
+      "portrait": "/images/msf7meyzk26x82.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1284,7 +1296,7 @@
     {
       "id": "unit_ms4b9764g1dhr",
       "name": "Nydine",
-      "portrait": "/images/msbwl9ljmmhbdy.png",
+      "portrait": "/images/msf7msg9erxlfr.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1358,66 +1370,13 @@
       "fields": {}
     },
     {
-      "id": "unit_ms3oeprflm40x",
-      "name": "Eshmel",
-      "portrait": "/images/ms4jpwlv6133if.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": null,
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {
-        "faction": ""
-      }
-    },
-    {
-      "id": "unit_ms4b33j83mhvc",
-      "name": "Gold Knight*",
-      "portrait": "/images/ms4jvqo3ri3s9e.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": null,
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {}
-    },
-    {
-      "id": "unit_ms7k8ivuwpmal",
-      "name": "Pink Feather Lady*",
-      "portrait": "/images/ms7k8q78l1g0hs.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": null,
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {}
-    },
-    {
       "id": "unit_msesdf1q9njym",
       "name": "Benditz",
-      "portrait": null,
+      "portrait": "/images/msf7qqhh21v2ri.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": null,
+      "classId": "class_msesr7wkkfq1k",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -1430,7 +1389,7 @@
     {
       "id": "unit_msesemmywrm9d",
       "name": "Peppe",
-      "portrait": null,
+      "portrait": "/images/msf7u20bfwo6wp.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1447,7 +1406,7 @@
     {
       "id": "unit_msesipji4v2wt",
       "name": "Io",
-      "portrait": null,
+      "portrait": "/images/msf82kluidbjzo.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1464,7 +1423,7 @@
     {
       "id": "unit_mseslad7245am",
       "name": "Nezha",
-      "portrait": null,
+      "portrait": "/images/msf6yoq8zuvciv.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1481,7 +1440,7 @@
     {
       "id": "unit_msesm42zaq9do",
       "name": "Dante",
-      "portrait": null,
+      "portrait": "/images/msf6zult18gj4v.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1498,7 +1457,7 @@
     {
       "id": "unit_msesn64bv1fun",
       "name": "Goliath",
-      "portrait": null,
+      "portrait": "/images/msf73zkwdwy6w4.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1528,6 +1487,25 @@
         "description": ""
       },
       "fields": {}
+    },
+    {
+      "id": "unit_ms3oeprflm40x",
+      "name": "Eshmel",
+      "portrait": "/images/ms4jpwlv6133if.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": ""
+      }
     }
   ],
   "map": {
@@ -4711,35 +4689,39 @@
     {
       "id": "cast_msetmnaxter8p",
       "name": "Aurora",
-      "portrait": null,
+      "portrait": "/images/msf7z1c79eo2iw.jpg",
       "subtitle": "",
-      "description": ""
+      "description": "",
+      "crest": "Aubin"
     },
     {
       "id": "cast_msetoyu3483vr",
       "name": "Smyrnos",
-      "portrait": null,
+      "portrait": "/images/msf8dsb46454kl.png",
       "subtitle": "",
-      "description": ""
+      "description": "",
+      "crest": "Macuil"
     },
     {
       "id": "cast_msetp3tw9ohgz",
       "name": "Mars",
-      "portrait": null,
+      "portrait": "/images/msf8dxcop7jdsm.png",
       "subtitle": "",
-      "description": ""
+      "description": "",
+      "crest": "Daphnel"
     },
     {
       "id": "cast_msetp6lndpw3d",
       "name": "Fortuna",
-      "portrait": null,
+      "portrait": "/images/msf8e2t507p7z5.png",
       "subtitle": "Fate",
-      "description": ""
+      "description": "",
+      "crest": "Goneril"
     },
     {
       "id": "cast_msetp859txc1o",
-      "name": "Kalla",
-      "portrait": null,
+      "name": "Kalla?",
+      "portrait": "/images/msf8gncvagy4sf.png",
       "subtitle": "Luck",
       "description": ""
     }
@@ -4748,7 +4730,7 @@
     {
       "id": "cast_mseto4xteu04v",
       "name": "Solel",
-      "portrait": null,
+      "portrait": "/images/msf7xreich1e04.jpg",
       "subtitle": "The Divine Sovereign",
       "description": ""
     },
@@ -4757,6 +4739,34 @@
       "name": "Bertrand",
       "portrait": "/images/msev2sz6q40m88.jpg",
       "subtitle": "The White-Maned Demon",
+      "description": ""
+    },
+    {
+      "id": "cast_msf6d3kjkn3gs",
+      "name": "Castor",
+      "portrait": "/images/msf6d9r0h07291.jpg",
+      "subtitle": "Cai's Father",
+      "description": ""
+    },
+    {
+      "id": "cast_msf8ix5msm98z",
+      "name": "Gold Knight*",
+      "portrait": "/images/msf8jck9wtkdnl.jpg",
+      "subtitle": "Possibly Playable",
+      "description": ""
+    },
+    {
+      "id": "cast_msf8j2k0hjgk5",
+      "name": "Pink Feather Lady*",
+      "portrait": "/images/msf8jnnj1wq7lj.jpg",
+      "subtitle": "Possibly Playable",
+      "description": ""
+    },
+    {
+      "id": "cast_msf8obk24tw3b",
+      "name": "Sothis",
+      "portrait": "/images/msf8og9b7tlbdj.jpg",
+      "subtitle": "The Beginning",
       "description": ""
     }
   ]

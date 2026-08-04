@@ -5,6 +5,7 @@ import { UnitPortrait } from "../components/UnitPortrait";
 import { ProficiencyGrid } from "../components/ProficiencyGrid";
 import { SkillMark } from "../components/icons";
 import { lordFirst, unitFaction, unitsForRoute } from "../data/units";
+import { sortBySkillOrder } from "../data/skills";
 import type { Unit } from "../types";
 
 const SLOT_COUNT = 12;
@@ -229,7 +230,7 @@ export function TeamPlanner() {
                       <div>
                         <div className="muted" style={{ fontSize: 11, marginBottom: 4 }}>Available weapons / skills</div>
                         <div className="chip-wrap">
-                          {cls.proficiencies.map((sid) => {
+                          {sortBySkillOrder(cls.proficiencies, db.skillTypes).map((sid) => {
                             const st = db.skillTypes.find((s) => s.id === sid);
                             if (!st) return null;
                             return (

@@ -79,17 +79,20 @@ export function CastEditor({ kind, label, subtitleLabel }: { kind: CastKind; lab
                   <button className="icon-btn" disabled={i === 0} onClick={() => move(m.id, -1)}>▲</button>
                   <button className="icon-btn" disabled={i === list.length - 1} onClick={() => move(m.id, 1)}>▼</button>
                 </div>
-                <div style={{ display: "flex", flexDirection: "column", gap: 8, width: 90 }}>
+                <div style={{ width: 90 }}>
                   <ImageDrop value={m.portrait} onChange={(url) => patch(m.id, { portrait: url })} height={100} label="Portrait" />
-                  {isGods && (
-                    <ImageDrop value={m.crest ?? null} onChange={(url) => patch(m.id, { crest: url })} height={70} label="Crest" />
-                  )}
                 </div>
                 <div className="grow stack" style={{ gap: 8 }}>
                   <label className="field" style={{ margin: 0 }}>
                     <span>Name</span>
                     <input type="text" value={m.name} onChange={(e) => patch(m.id, { name: e.target.value })} />
                   </label>
+                  {isGods && (
+                    <label className="field" style={{ margin: 0 }}>
+                      <span>Crest</span>
+                      <input type="text" value={m.crest ?? ""} onChange={(e) => patch(m.id, { crest: e.target.value })} />
+                    </label>
+                  )}
                   <label className="field" style={{ margin: 0 }}>
                     <span>{subtitleLabel}</span>
                     <input type="text" value={m.subtitle} onChange={(e) => patch(m.id, { subtitle: e.target.value })} />

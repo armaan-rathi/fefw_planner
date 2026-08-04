@@ -74,7 +74,7 @@ export function CastPage({ kind, title, blurb }: { kind: CastKind; title: string
                   {open.crest && (
                     <div className="cast-detail-block">
                       <div className="cast-detail-label">Crest</div>
-                      <img className="god-crest" src={open.crest} alt="Crest" />
+                      <p style={{ margin: 0 }}>{open.crest}</p>
                     </div>
                   )}
                   {[0, 1, 2].map((i) =>
@@ -85,14 +85,9 @@ export function CastPage({ kind, title, blurb }: { kind: CastKind; title: string
                       </div>
                     ) : null
                   )}
-                  {!open.crest && !(open.blessings ?? []).some(Boolean) && (
-                    <p className="muted">No details recorded yet.</p>
-                  )}
                 </>
-              ) : open.description ? (
-                <p className="char-longtext">{open.description}</p>
               ) : (
-                <p className="muted">No details recorded yet.</p>
+                open.description && <p className="char-longtext">{open.description}</p>
               )}
             </div>
           </div>

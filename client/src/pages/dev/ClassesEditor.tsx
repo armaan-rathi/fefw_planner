@@ -5,6 +5,7 @@ import { Modal } from "../../components/Modal";
 import { SkillMark } from "../../components/icons";
 import { UnitPortrait } from "../../components/UnitPortrait";
 import { ImageDrop } from "../../components/ImageDrop";
+import { sortBySkillOrder } from "../../data/skills";
 import type { GameClass, MovementType } from "../../types";
 
 const MOVES: { value: MovementType; label: string }[] = [
@@ -76,7 +77,7 @@ export function ClassesEditor() {
               </div>
               <div className="chip-wrap" style={{ minHeight: 28, marginBottom: 8 }}>
                 {c.proficiencies.length === 0 && <span className="muted" style={{ fontSize: 12 }}>No proficiencies</span>}
-                {c.proficiencies.map((sid) => {
+                {sortBySkillOrder(c.proficiencies, db.skillTypes).map((sid) => {
                   const st = db.skillTypes.find((s) => s.id === sid);
                   if (!st) return null;
                   return (

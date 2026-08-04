@@ -129,7 +129,7 @@ export interface CastMember {
   subtitle: string; // short line, e.g. domain / affiliation (NPCs)
   description: string; // longer blurb (NPCs)
   // God-specific:
-  crest?: string | null; // crest emblem image
+  crest?: string | null; // crest name (text)
   blessings?: string[]; // effects at worship levels 1, 2, 3
 }
 
