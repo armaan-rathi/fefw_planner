@@ -16,7 +16,7 @@ const MOVES: { value: MovementType; label: string }[] = [
   { value: "monster", label: "Monster" },
 ];
 
-const TIERS = ["Base", "Beginner", "Intermediate", "Advanced", "Master", "Special"];
+const TIERS = ["Base", "Beginner", "Specialty", "Advanced", "Unique"];
 
 function blankClass(): GameClass {
   return { id: uid("class_"), name: "", tier: "", description: "", movementType: "", proficiencies: [], portrait: null };

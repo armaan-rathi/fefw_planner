@@ -25,8 +25,8 @@ const STANDARD_SKILLS = [
   { id: "faith", label: "Faith", icon: "faith" },
   { id: "authority", label: "Authority", icon: "authority" },
   { id: "infantry", label: "Infantry", icon: "infantry" },
-  { id: "armor", label: "Heavy Armor", icon: "armor" },
   { id: "riding", label: "Riding", icon: "riding" },
+  { id: "armor", label: "Heavy Armor", icon: "armor" },
   { id: "flying", label: "Flying", icon: "flying" },
 ];
 
@@ -139,6 +139,8 @@ function defaultDB() {
       preview: ["field:faction", "class"],
       detail: ["field:faction", "class", "routes", "personalSkill", "proficiencies", "field:backstory"],
     },
+    gods: [],
+    npcs: [],
   };
 }
 

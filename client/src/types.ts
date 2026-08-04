@@ -120,6 +120,21 @@ export interface CharacterPageConfig {
   detail: string[];
 }
 
+// A non-playable cast member (a God worshipped at temples, or an Important NPC).
+// Deliberately NOT a Unit — these never appear in the roster, team, or ratings.
+export interface CastMember {
+  id: string;
+  name: string;
+  portrait: string | null;
+  subtitle: string; // short line, e.g. domain / affiliation (NPCs)
+  description: string; // longer blurb (NPCs)
+  // God-specific:
+  crest?: string | null; // crest emblem image
+  blessings?: string[]; // effects at worship levels 1, 2, 3
+}
+
+export type CastKind = "gods" | "npcs";
+
 export interface DB {
   schemaVersion: number;
   routes: Route[];
@@ -131,4 +146,6 @@ export interface DB {
   map: GameMap;
   ratingParams: RatingParam[];
   characterPage?: CharacterPageConfig;
+  gods?: CastMember[]; // worshipped at temples
+  npcs?: CastMember[]; // important non-playable characters
 }

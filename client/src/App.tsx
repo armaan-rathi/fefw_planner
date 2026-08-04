@@ -5,6 +5,7 @@ import { RouteSelection } from "./pages/RouteSelection";
 import { TeamPlanner } from "./pages/TeamPlanner";
 import { OverworldMap } from "./pages/OverworldMap";
 import { CharacterList } from "./pages/CharacterList";
+import { CastPage } from "./pages/CastPage";
 import { DevMode } from "./pages/dev/DevMode";
 
 function SaveBadge() {
@@ -71,6 +72,8 @@ function Shell() {
             <Route path="/" element={<Navigate to="/routes" replace />} />
             <Route path="/routes" element={<RouteSelection />} />
             <Route path="/characters" element={<CharacterList />} />
+            <Route path="/gods" element={<CastPage kind="gods" title="Gods" blurb="Deities you can worship at temples." />} />
+            <Route path="/npcs" element={<CastPage kind="npcs" title="Important NPCs" blurb="Key non-playable characters in the story." />} />
             <Route path="/team" element={<TeamPlanner />} />
             <Route path="/map" element={<OverworldMap />} />
             {(!ready || editable) && <Route path="/dev/*" element={<DevMode />} />}

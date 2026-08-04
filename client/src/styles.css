@@ -1075,6 +1075,27 @@ input[type="range"]::-moz-range-thumb {
   border-color: var(--gold-deep);
   background: rgba(216, 182, 106, 0.1);
 }
+/* Sub-nav across the character listings (Units / Gods / Important NPCs) */
+.cast-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+.cast-tabs a {
+  text-decoration: none;
+  color: var(--ink-dim);
+  padding: 7px 13px;
+  border-radius: 8px;
+  border: 1px solid var(--panel-edge);
+  font-size: 13.5px;
+  font-weight: 600;
+}
+.cast-tabs a.active {
+  color: var(--gold-bright);
+  border-color: var(--gold-deep);
+  background: rgba(216, 182, 106, 0.1);
+}
 .list-rows {
   display: flex;
   flex-direction: column;
@@ -1416,6 +1437,22 @@ input[type="range"]::-moz-range-thumb {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+/* God detail: crest + blessing levels */
+.cast-detail-block {
+  margin-bottom: 12px;
+}
+.cast-detail-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-faint);
+  margin-bottom: 3px;
+}
+.god-crest {
+  width: 84px;
+  height: 84px;
+  object-fit: contain;
 }
 
 /* Mobile overrides for rules defined above (must come last to win source order) */

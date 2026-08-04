@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { useDB } from "../data/DataContext";
 import { Modal } from "../components/Modal";
+import { CastTabs } from "../components/CastTabs";
 import { CharAttr } from "../components/CharAttr";
 import { availableAttrs, charPageConfig } from "../data/characterAttrs";
 import { unitFaction } from "../data/units";
@@ -35,10 +36,11 @@ export function CharacterList() {
 
   return (
     <div>
+      <CastTabs />
       <div className="page-head">
         <div>
           <h2>Character Database</h2>
-          <p>Browse the cast. Click a character to see full details.</p>
+          <p>Browse the playable cast. Click a character to see full details.</p>
         </div>
         <input
           type="text"

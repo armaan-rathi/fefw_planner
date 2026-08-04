@@ -6,6 +6,7 @@ import { CharacterPageEditor } from "./CharacterPageEditor";
 import { FieldsEditor } from "./FieldsEditor";
 import { SkillTypesEditor } from "./SkillTypesEditor";
 import { MapEditor } from "./MapEditor";
+import { CastEditor } from "./CastEditor";
 
 export function DevMode() {
   return (
@@ -25,6 +26,8 @@ export function DevMode() {
         <NavLink to="skills">Skill Types</NavLink>
         <NavLink to="map">Map</NavLink>
         <NavLink to="characters">Characters Page</NavLink>
+        <NavLink to="gods">Gods</NavLink>
+        <NavLink to="npcs">Important NPCs</NavLink>
       </div>
 
       <Routes>
@@ -36,6 +39,8 @@ export function DevMode() {
         <Route path="skills" element={<SkillTypesEditor />} />
         <Route path="map" element={<MapEditor />} />
         <Route path="characters" element={<CharacterPageEditor />} />
+        <Route path="gods" element={<CastEditor kind="gods" label="Gods" subtitleLabel="Domain" />} />
+        <Route path="npcs" element={<CastEditor kind="npcs" label="Important NPCs" subtitleLabel="Affiliation / role" />} />
       </Routes>
     </div>
   );
