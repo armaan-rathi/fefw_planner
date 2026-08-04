@@ -699,64 +699,6 @@
       }
     },
     {
-      "id": "unit_ms3ofr4f95yg3",
-      "name": "Mu",
-      "portrait": "/images/ms7meqfxs69gcl.jpg",
-      "isLord": false,
-      "routeIds": [
-        "leda"
-      ],
-      "starterFor": [],
-      "classId": "class_ms3o7io5clmwu",
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {
-        "faction": "Rose Tempest",
-        "backstory": "A young, innocent girl who ran away from home to search for her missing mother. While tracking her mother’s whereabouts, she runs into Leda during her path of vengeance. She dresses and speaks like a boy to protect herself from danger.\n\nLikes: Father, mother, sweets"
-      }
-    },
-    {
-      "id": "unit_ms3o4850pz0sq",
-      "name": "Caspartan*",
-      "portrait": "/images/ms76qh79xt515p.png",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": "class_ms3pz9lcrqj1y",
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {
-        "faction": ""
-      }
-    },
-    {
-      "id": "unit_ms4b1qq82fg7g",
-      "name": "Ninae",
-      "portrait": "/images/ms4jgxw7tv95tq.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": null,
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {}
-    },
-    {
       "id": "unit_ms3of3twtvl0z",
       "name": "Lilian",
       "portrait": "/images/ms4o8t0pfday9q.jpg",
@@ -779,6 +721,28 @@
       }
     },
     {
+      "id": "unit_ms3ofr4f95yg3",
+      "name": "Mu",
+      "portrait": "/images/ms7meqfxs69gcl.jpg",
+      "isLord": false,
+      "routeIds": [
+        "leda"
+      ],
+      "starterFor": [],
+      "classId": "class_ms3o7io5clmwu",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Rose Tempest",
+        "backstory": "A young, innocent girl who ran away from home to search for her missing mother. While tracking her mother’s whereabouts, she runs into Leda during her path of vengeance. She dresses and speaks like a boy to protect herself from danger.\n\nLikes: Father, mother, sweets"
+      }
+    },
+    {
       "id": "unit_ms3o3pm7kkagj",
       "name": "Olympia",
       "portrait": "/images/ms9e4j4i7kxstk.jpg",
@@ -797,6 +761,46 @@
       },
       "fields": {
         "faction": "Rose Tempest"
+      }
+    },
+    {
+      "id": "unit_ms7k4uf6l9u72",
+      "name": "Nathan",
+      "portrait": "/images/msebw5dvivv5jv.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_ms3o5tbsmr10n",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "backstory": "A valiant general of the Arago Kingdom, boasting overwhelming attack power.\n\nTogether with the Green Knight Creek, he is known as the \"Twin Pillars of Arago,\" his fame resounding throughout Dagda.\n\nDeeply loyal, with a personality so straightforward it's almost stubbornly honest.\n\nLikes: The red armor bestowed by the king, upholding loyalty, training in all martial arts",
+        "faction": "Knights of Arago"
+      }
+    },
+    {
+      "id": "unit_ms7k892bd498m",
+      "name": "Creek",
+      "portrait": "/images/msebwb9cp9x2an.jpeg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_ms3o5tbsmr10n",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Knights of Arago",
+        "backstory": "A general of the Arago Kingdom, possessing exceptional intellect and shrewdness.\nTogether with the Red Knight Nathan, he is known as one of the \"Twin Pillars of Arago,\" renowned throughout Dagza.\nA sarcastic man with a cynical outlook on everything.\n\nLikes: The green armor bestowed by the king, beautiful women, research on military strategy"
       }
     },
     {
@@ -824,108 +828,6 @@
       "routeIds": [],
       "starterFor": [],
       "classId": "class_soldier",
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {}
-    },
-    {
-      "id": "unit_ms4axuyt3lodb",
-      "name": "Alexandra",
-      "portrait": "/images/ms4jh7q4yheefx.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": "class_ms4aypejltz4f",
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {}
-    },
-    {
-      "id": "unit_ms4aycsktz7vo",
-      "name": "Not Seteth*",
-      "portrait": "/images/ms4jhdlaqasd9m.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": null,
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {}
-    },
-    {
-      "id": "unit_ms4azwjmprdkp",
-      "name": "Nun with a Gun*",
-      "portrait": "/images/ms4k4oqhewa6b9.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": "class_priest",
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {}
-    },
-    {
-      "id": "unit_ms4b0fg9gc03t",
-      "name": "Lilyhardt*",
-      "portrait": "/images/ms76hsls1lqwnv.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": "class_priest",
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {}
-    },
-    {
-      "id": "unit_ms4b0v3updg6t",
-      "name": "Merc*",
-      "portrait": "/images/ms4ha81vntzfvg.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": "class_ms3o7io5clmwu",
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {}
-    },
-    {
-      "id": "unit_ms4b14v2stjjh",
-      "name": "Highbrow*",
-      "portrait": "/images/ms76iupgz7cq5j.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": null,
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -970,9 +872,62 @@
       "fields": {}
     },
     {
-      "id": "unit_ms3oeprflm40x",
-      "name": "Eshmel",
-      "portrait": "/images/ms4jpwlv6133if.jpg",
+      "id": "unit_ms4azwjmprdkp",
+      "name": "Nun with a Gun*",
+      "portrait": "/images/ms4k4oqhewa6b9.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_priest",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_ms4b0fg9gc03t",
+      "name": "Lilyhardt*",
+      "portrait": "/images/ms76hsls1lqwnv.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_priest",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_ms3o4850pz0sq",
+      "name": "Caspartan*",
+      "portrait": "/images/ms76qh79xt515p.png",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_ms3pz9lcrqj1y",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": ""
+      }
+    },
+    {
+      "id": "unit_ms4b1qq82fg7g",
+      "name": "Ninae",
+      "portrait": "/images/ms4jgxw7tv95tq.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -984,9 +939,75 @@
         "name": "",
         "description": ""
       },
-      "fields": {
-        "faction": ""
-      }
+      "fields": {}
+    },
+    {
+      "id": "unit_ms4b0v3updg6t",
+      "name": "Mercules*",
+      "portrait": "/images/ms4ha81vntzfvg.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_ms3o7io5clmwu",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_ms4b14v2stjjh",
+      "name": "Highbrow*",
+      "portrait": "/images/ms76iupgz7cq5j.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_ms4axuyt3lodb",
+      "name": "Alexandra",
+      "portrait": "/images/ms4jh7q4yheefx.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_ms4aypejltz4f",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_ms4aycsktz7vo",
+      "name": "Not Seteth*",
+      "portrait": "/images/ms4jhdlaqasd9m.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
     },
     {
       "id": "unit_ms4b3v4raamqa",
@@ -1142,6 +1163,25 @@
       "fields": {}
     },
     {
+      "id": "unit_ms3oeprflm40x",
+      "name": "Eshmel",
+      "portrait": "/images/ms4jpwlv6133if.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": ""
+      }
+    },
+    {
       "id": "unit_ms4b1x9i46ue2",
       "name": "Pink Nabatean*",
       "portrait": "/images/ms4jumfhrce0ek.jpg",
@@ -1191,45 +1231,6 @@
         "description": ""
       },
       "fields": {}
-    },
-    {
-      "id": "unit_ms7k4uf6l9u72",
-      "name": "Nathan",
-      "portrait": "/images/mscxr4iy692ufd.jpeg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": "class_ms3o5tbsmr10n",
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {
-        "backstory": "A valiant general of the Arago Kingdom, boasting overwhelming attack power.\n\nTogether with the Green Knight Creek, he is known as the \"Twin Pillars of Arago,\" his fame resounding throughout Dagda.\n\nDeeply loyal, with a personality so straightforward it's almost stubbornly honest.\n\nLikes: The red armor bestowed by the king, upholding loyalty, training in all martial arts",
-        "faction": "Knights of Arago"
-      }
-    },
-    {
-      "id": "unit_ms7k892bd498m",
-      "name": "Creek",
-      "portrait": "/images/mscy01cedgsum2.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": "class_ms3o5tbsmr10n",
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {
-        "faction": "Knights of Arago"
-      }
     }
   ],
   "map": {
