@@ -29,7 +29,7 @@ export function RoutesEditor() {
     });
   }
   function addNew() {
-    setEditing({ id: uid("route_"), name: "", title: "", description: "", color: "#5b7cc2", portrait: null });
+    setEditing({ id: uid("route_"), name: "", title: "", description: "", color: "#5b7cc2", portrait: null, banner: null });
   }
 
   return (
@@ -107,6 +107,8 @@ function RouteModal({ route, onClose, onSave }: { route: Route; onClose: () => v
           <ImageDrop value={draft.portrait} onChange={(url) => set({ portrait: url })} height={160} />
         </div>
       </div>
+      <label className="field"><span>Banner (used on the Route Split page)</span></label>
+      <ImageDrop value={draft.banner ?? null} onChange={(url) => set({ banner: url })} height={110} label="Drop the route banner here" />
       <label className="field"><span>Path description</span>
         <textarea value={draft.description} onChange={(e) => set({ description: e.target.value })} rows={5} />
       </label>

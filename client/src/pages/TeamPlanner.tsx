@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useDB } from "../data/DataContext";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import { UnitPortrait } from "../components/UnitPortrait";
+import { TeamTabs } from "../components/TeamTabs";
 import { ProficiencyGrid } from "../components/ProficiencyGrid";
 import { SkillMark } from "../components/icons";
 import { lordFirst, unitFaction, unitsForRoute } from "../data/units";
@@ -100,6 +101,7 @@ export function TeamPlanner() {
 
   return (
     <div>
+      <TeamTabs />
       <div className="page-head">
         <div>
           <h2>Team Planner</h2>

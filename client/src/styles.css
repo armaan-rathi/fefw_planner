@@ -701,6 +701,164 @@ input[type="range"]::-moz-range-thumb {
   font-size: 13px;
 }
 
+/* ---- Route Split page ---- */
+.split-pool {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding: 14px 16px;
+  min-height: 108px;
+  border: 1px solid var(--panel-edge);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+  margin-bottom: 18px;
+}
+.split-routes {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.split-route {
+  display: flex;
+  border: 1px solid var(--panel-edge);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--panel);
+  min-height: 132px;
+  box-shadow: var(--shadow);
+}
+.split-pool.drop,
+.split-route.drop {
+  outline: 2px dashed var(--gold);
+  outline-offset: -3px;
+  border-color: var(--gold-deep);
+}
+.split-banner {
+  position: relative;
+  flex: 0 0 210px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+}
+.split-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6, 12, 15, 0) 35%, rgba(6, 12, 15, 0.85) 100%);
+}
+.split-banner-label {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 12px;
+}
+.split-route-name {
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.75);
+}
+.split-count {
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.42);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 20px;
+  padding: 1px 9px;
+}
+.split-route-units {
+  flex: 1;
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding: 14px 16px;
+  align-items: flex-start;
+}
+.split-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  width: 62px;
+  flex: 0 0 auto;
+  cursor: grab;
+  transition: transform 0.1s, opacity 0.1s;
+  touch-action: pan-y; /* quick vertical swipe scrolls; long-press lifts for drag */
+  user-select: none;
+  -webkit-user-select: none;
+}
+.split-chip:hover {
+  transform: translateY(-2px);
+}
+.split-chip:active {
+  cursor: grabbing;
+}
+.split-chip.dragging {
+  opacity: 0.35;
+}
+/* Dark, slim scrollbars (the default white ones look out of place here) */
+.split-pool,
+.split-route-units {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(216, 182, 106, 0.35) transparent;
+}
+.split-pool::-webkit-scrollbar,
+.split-route-units::-webkit-scrollbar {
+  height: 8px;
+}
+.split-pool::-webkit-scrollbar-track,
+.split-route-units::-webkit-scrollbar-track {
+  background: transparent;
+}
+.split-pool::-webkit-scrollbar-thumb,
+.split-route-units::-webkit-scrollbar-thumb {
+  background: rgba(216, 182, 106, 0.3);
+  border-radius: 4px;
+}
+.split-pool::-webkit-scrollbar-thumb:hover,
+.split-route-units::-webkit-scrollbar-thumb:hover {
+  background: rgba(216, 182, 106, 0.5);
+}
+/* Floating chip that follows the pointer while dragging */
+.split-ghost {
+  position: fixed;
+  z-index: 200;
+  transform: translate(-50%, -50%) scale(1.05);
+  pointer-events: none;
+  opacity: 0.92;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.55));
+}
+/* On narrow screens the strips wrap instead of scrolling sideways, so drag has
+   no horizontal-scroll conflict and everything is reachable by scrolling down. */
+@media (max-width: 720px) {
+  .split-pool,
+  .split-route-units {
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+  .split-banner {
+    flex-basis: 120px;
+  }
+}
+.split-chip-name {
+  font-size: 11px;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--ink-dim);
+  max-width: 62px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
 /* ---- Overworld map ---- */
 .map-stage {
   position: relative;

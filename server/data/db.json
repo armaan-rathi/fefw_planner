@@ -85,7 +85,10 @@
         "House Lamine",
         "Megaira's Beacon",
         "Rose Tempest",
-        "Knights of Arago"
+        "Knights of Arago",
+        "Moon's Lie",
+        "Linaria's Morning Dew",
+        "Brides of the Pale Raven"
       ]
     },
     {
@@ -606,7 +609,9 @@
       "routeIds": [
         "cai"
       ],
-      "starterFor": [],
+      "starterFor": [
+        "cai"
+      ],
       "classId": "class_diviner",
       "boons": [],
       "banes": [],
@@ -990,6 +995,25 @@
       }
     },
     {
+      "id": "unit_ms4ax1urookeq",
+      "name": "Talimoon",
+      "portrait": "/images/msft4qzcfb2dg5.png",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_soldier",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Moon's Lie"
+      }
+    },
+    {
       "id": "unit_ms4awma1bic3w",
       "name": "Ursula",
       "portrait": "/images/ms4jkax9q5cs75.jpg",
@@ -1004,29 +1028,14 @@
         "name": "",
         "description": ""
       },
-      "fields": {}
-    },
-    {
-      "id": "unit_ms4ax1urookeq",
-      "name": "Talimoon",
-      "portrait": "/images/ms4k4f9dq6qw1t.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": "class_soldier",
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {}
+      "fields": {
+        "faction": "Moon's Lie"
+      }
     },
     {
       "id": "unit_ms4b1m5a0pltt",
       "name": "Orchel",
-      "portrait": "/images/ms4jxzntak0ccy.jpg",
+      "portrait": "/images/msft5g3otqjpvq.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1038,7 +1047,9 @@
         "name": "",
         "description": ""
       },
-      "fields": {}
+      "fields": {
+        "faction": "Linaria's Morning Dew"
+      }
     },
     {
       "id": "unit_ms4b7sewbatfh",
@@ -1055,12 +1066,14 @@
         "name": "",
         "description": ""
       },
-      "fields": {}
+      "fields": {
+        "faction": "Linaria's Morning Dew"
+      }
     },
     {
       "id": "unit_ms4azwjmprdkp",
       "name": "Anatolia",
-      "portrait": "/images/ms4k4oqhewa6b9.jpg",
+      "portrait": "/images/msftcwl7tmnydh.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1072,7 +1085,9 @@
         "name": "",
         "description": ""
       },
-      "fields": {}
+      "fields": {
+        "faction": "Brides of the Pale Raven"
+      }
     },
     {
       "id": "unit_ms4b0fg9gc03t",
@@ -1089,7 +1104,9 @@
         "name": "",
         "description": ""
       },
-      "fields": {}
+      "fields": {
+        "faction": "Brides of the Pale Raven"
+      }
     },
     {
       "id": "unit_ms3o4850pz0sq",
@@ -1208,7 +1225,7 @@
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": "class_ms4axgsyshgov",
+      "classId": "class_ms4godtdiwiu4",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -1393,7 +1410,7 @@
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": null,
+      "classId": "class_ms4axgsyshgov",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -1410,7 +1427,7 @@
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": null,
+      "classId": "class_msesj7wz0j31a",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -1495,7 +1512,7 @@
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": null,
+      "classId": "class_msessr8yloah4",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -1504,8 +1521,28 @@
         "description": ""
       },
       "fields": {
-        "faction": ""
-      }
+        "faction": "",
+        "backstory": "A true hero born to shed light upon the world. Similar to the Herald of the Pale Raven mentioned in a poem long ago.\n\nTravels to the past with Fortuna, Goddess of Fate, at the behest of the progenitor god Sothis to gather allies and defeat the demon god Balor.\n\nLikes: Ambitious people, people of great talent, small and unnamed flowers\n\nInterests: Playing board games"
+      },
+      "postTimeskip": true
+    },
+    {
+      "id": "unit_msftrzee97kx3",
+      "name": "Metwodey*",
+      "portrait": "/images/msfts6thpiky1b.png",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {},
+      "postTimeskip": true
     }
   ],
   "map": {
@@ -4737,7 +4774,7 @@
     {
       "id": "cast_msev2ov2qmcc8",
       "name": "Bertrand",
-      "portrait": "/images/msev2sz6q40m88.jpg",
+      "portrait": "/images/msfusolkz3q0c0.jpg",
       "subtitle": "The White-Maned Demon",
       "description": ""
     },

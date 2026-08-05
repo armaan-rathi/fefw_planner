@@ -191,6 +191,10 @@ function UnitModal({ unit, onClose, onSave }: { unit: Unit; onClose: () => void;
             <input type="checkbox" checked={draft.isLord} onChange={(e) => set({ isLord: e.target.checked })} />
             <span>Is lord? (route leader)</span>
           </label>
+          <label className="dev-toggle" style={{ marginTop: 4 }}>
+            <input type="checkbox" checked={!!draft.postTimeskip} onChange={(e) => set({ postTimeskip: e.target.checked })} />
+            <span>Post-Timeskip Only</span>
+          </label>
         </div>
         <div>
           <label className="field"><span>Portrait</span></label>

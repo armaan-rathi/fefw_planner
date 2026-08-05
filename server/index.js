@@ -87,10 +87,10 @@ const STARTER_MAP = {
 };
 
 const ROUTES = [
-  { id: "cai", name: "Cai", title: "Ribeira Winds", description: "", color: "#3f72c7", portrait: null },
-  { id: "dietrich", name: "Dietrich", title: "House Lamine", description: "", color: "#7d5fb0", portrait: null },
-  { id: "theodora", name: "Theodora", title: "Megaira's Beacon", description: "", color: "#b8932f", portrait: null },
-  { id: "leda", name: "Leda", title: "Rose Tempest", description: "", color: "#c13a6a", portrait: null },
+  { id: "cai", name: "Cai", title: "Ribeira Winds", description: "", color: "#3f72c7", portrait: null, banner: null },
+  { id: "dietrich", name: "Dietrich", title: "House Lamine", description: "", color: "#7d5fb0", portrait: null, banner: null },
+  { id: "theodora", name: "Theodora", title: "Megaira's Beacon", description: "", color: "#b8932f", portrait: null, banner: null },
+  { id: "leda", name: "Leda", title: "Rose Tempest", description: "", color: "#c13a6a", portrait: null, banner: null },
 ];
 
 // A blank unit with all structural fields present.
@@ -108,6 +108,7 @@ function newUnit(id, name, extra = {}) {
     skillLevels: {},
     personalSkill: { name: "", description: "" },
     fields: {},
+    postTimeskip: false,
     ...extra,
   };
 }

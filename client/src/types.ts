@@ -19,6 +19,7 @@ export interface Route {
   description: string;
   color: string; // accent color / motif
   portrait: string | null; // optional route splash art
+  banner?: string | null; // optional wide banner image (used on the Route Split page)
 }
 
 export type FieldType = "text" | "longtext" | "number" | "dropdown" | "multiselect" | "checkbox";
@@ -69,6 +70,7 @@ export interface Unit {
   skillLevels: Record<string, Grade>; // skillTypeId -> grade
   personalSkill: PersonalSkill;
   fields: Record<string, FieldValue>; // custom field values keyed by FieldDef.key (e.g. faction)
+  postTimeskip?: boolean; // only recruitable/available after the timeskip
 }
 
 export type IconShape = "circle" | "square" | "triangle" | "invtriangle" | "star4" | "star8";
