@@ -4585,7 +4585,8 @@
       "title": "Ribeira Winds",
       "description": "Cai joins the Heroic Games in order to save his father",
       "color": "#3f72c7",
-      "portrait": "/images/ms4jzv57wvcit4.jpg"
+      "portrait": "/images/ms4jzv57wvcit4.jpg",
+      "banner": "/images/msfzhioffya43h.png"
     },
     {
       "id": "dietrich",
@@ -4593,7 +4594,8 @@
       "title": "House Lamine",
       "description": "Dietrich journeys to Dagda to face the strongest warriors",
       "color": "#7d5fb0",
-      "portrait": "/images/ms4k00rrufho07.jpg"
+      "portrait": "/images/ms4k00rrufho07.jpg",
+      "banner": "/images/msfzhp1el1eyu6.png"
     },
     {
       "id": "theodora",
@@ -4601,7 +4603,8 @@
       "title": "Megaira's Beacon",
       "description": "Theodora sets out to establish herself as Queen or Saramis",
       "color": "#b8932f",
-      "portrait": "/images/ms4k08psgjbn1y.jpg"
+      "portrait": "/images/ms4k08psgjbn1y.jpg",
+      "banner": "/images/msfzhtve5okary.png"
     },
     {
       "id": "leda",
@@ -4609,7 +4612,8 @@
       "title": "Rose Tempest",
       "description": "Leda seeks revenge for the death of her father",
       "color": "#c13a6a",
-      "portrait": "/images/ms4k0gl2rd60c0.jpg"
+      "portrait": "/images/ms4k0gl2rd60c0.jpg",
+      "banner": "/images/msfzj9i8gyaa85.png"
     }
   ],
   "iconTypes": [
@@ -4767,7 +4771,7 @@
     {
       "id": "cast_mseto4xteu04v",
       "name": "Solel",
-      "portrait": "/images/msf7xreich1e04.jpg",
+      "portrait": "/images/msfzmr2elbs11f.png",
       "subtitle": "The Divine Sovereign",
       "description": ""
     },

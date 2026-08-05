@@ -720,11 +720,11 @@ input[type="range"]::-moz-range-thumb {
 }
 .split-route {
   display: flex;
+  height: 120px;
   border: 1px solid var(--panel-edge);
   border-radius: var(--radius);
   overflow: hidden;
   background: var(--panel);
-  min-height: 132px;
   box-shadow: var(--shadow);
 }
 .split-pool.drop,
@@ -734,34 +734,38 @@ input[type="range"]::-moz-range-thumb {
   border-color: var(--gold-deep);
 }
 .split-banner {
-  position: relative;
-  flex: 0 0 210px;
-  background-size: cover;
-  background-position: center;
+  flex: 0 0 128px;
+  align-self: stretch;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 8px 0;
+  overflow: hidden;
 }
-.split-banner::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(6, 12, 15, 0) 35%, rgba(6, 12, 15, 0.85) 100%);
+/* Transparent crest PNG shown whole (contained), sized to fit — not cover-filled.
+   A background image (not <img>) so it never inflates the panel height. */
+.split-banner-img {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .split-banner-label {
-  position: relative;
-  z-index: 1;
+  flex: 0 0 auto;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  padding: 10px 12px;
+  justify-content: center;
+  gap: 6px;
+  padding: 5px 4px 8px;
 }
 .split-route-name {
   font-weight: 700;
-  font-size: 16px;
+  font-size: 10px;
   color: #fff;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.75);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 .split-count {
   font-size: 12px;
@@ -777,8 +781,8 @@ input[type="range"]::-moz-range-thumb {
   display: flex;
   gap: 14px;
   overflow-x: auto;
-  padding: 14px 16px;
-  align-items: flex-start;
+  padding: 12px 16px;
+  align-items: center;
 }
 .split-chip {
   display: flex;
@@ -842,13 +846,18 @@ input[type="range"]::-moz-range-thumb {
     flex-wrap: wrap;
     overflow-x: visible;
   }
+  .split-route {
+    height: auto; /* wrapped unit rows can grow the panel instead of being clipped */
+    min-height: 120px;
+  }
   .split-banner {
-    flex-basis: 120px;
+    flex-basis: 110px;
   }
 }
 .split-chip-name {
   font-size: 11px;
   line-height: 1.2;
+  height: 2.4em; /* always reserve two lines so every chip/panel/banner is uniform */
   text-align: center;
   color: var(--ink-dim);
   max-width: 62px;

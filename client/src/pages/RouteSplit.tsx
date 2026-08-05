@@ -190,10 +190,10 @@ export function RouteSplit() {
           const shown = units.filter(visible);
           return (
             <div key={r.id} className={"split-route" + (dropTarget === r.id ? " drop" : "")} style={{ ["--accent" as any]: r.color }} data-drop={r.id}>
-              <div className="split-banner" style={{ backgroundColor: r.color, ...(r.banner ? { backgroundImage: `url(${r.banner})` } : {}) }}>
+              <div className="split-banner">
+                <div className="split-banner-img" style={r.banner ? { backgroundImage: `url(${r.banner})` } : undefined} />
                 <div className="split-banner-label">
-                  <span className="split-route-name">{r.name || "Route"}</span>
-                  <span className="split-count">{units.length}/{MAX_PER_ROUTE}</span>
+                  <span className="split-route-name">{r.title || "Route"}</span>
                 </div>
               </div>
               <div className="split-route-units">
