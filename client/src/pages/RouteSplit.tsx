@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from "react";
+import { useMemo, useState } from "react";
 import { useDB } from "../data/DataContext";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import { UnitPortrait } from "../components/UnitPortrait";
@@ -6,28 +6,16 @@ import { TeamTabs } from "../components/TeamTabs";
 import { lordFirst } from "../data/units";
 import type { Unit } from "../types";
 
-const MAX_PER_ROUTE = 12;
+const MAX_PER_ROUTE = 13;
 type Split = Record<string, string[]>; // routeId -> unit ids
-
-function Chip({ unit, dim, onPointerDown }: { unit: Unit; dim?: boolean; onPointerDown: (e: React.PointerEvent) => void }) {
-  return (
-    <div
-      className={"split-chip" + (dim ? " dragging" : "")}
-      onPointerDown={onPointerDown}
-      title={unit.name || "Unnamed"}
-    >
-      <UnitPortrait src={unit.portrait} name={unit.name} size={52} />
-      <span className="split-chip-name">{unit.name || "Unnamed"}</span>
-    </div>
-  );
-}
 
 export function RouteSplit() {
   const { db } = useDB();
   const [split, setSplit] = useLocalStorage<Split>("fw.routeSplit", {});
   const [showPost, setShowPost] = useState(false);
-  const [dropTarget, setDropTarget] = useState<string | null>(null); // routeId | "pool"
-  const [ghost, setGhost] = useState<{ id: string; x: number; y: number } | null>(null);
+  const [dropTarget, setDropTarget] = useState<string | null>(null);
+  const [menu, setMenu] = useState<{ unitId: string; rect: DOMRect } | null>(null);
+  const [fadingId, setFadingId] = useState<string | null>(null); // unit fading out before it moves
 
   const defaultStarters = useMemo(() => {
     const m: Record<string, string[]> = {};
@@ -39,23 +27,21 @@ export function RouteSplit() {
 
   const assignedIds = (routeId: string) => split[routeId] ?? defaultStarters[routeId] ?? [];
 
-  const { routeUnits, pool } = useMemo(() => {
+  const { routeUnits, pool, routeOf } = useMemo(() => {
     const byId = new Map(db.units.map((u) => [u.id, u]));
-    const placed = new Set<string>();
+    const routeOf: Record<string, string> = {};
     const routeUnits: Record<string, Unit[]> = {};
     for (const r of db.routes) {
       const list: Unit[] = [];
       for (const id of assignedIds(r.id)) {
-        if (placed.has(id)) continue;
-        const u = byId.get(id);
-        if (!u) continue;
-        list.push(u);
-        placed.add(id);
+        if (routeOf[id] || !byId.has(id)) continue;
+        list.push(byId.get(id)!);
+        routeOf[id] = r.id;
       }
       routeUnits[r.id] = lordFirst(list);
     }
-    const pool = db.units.filter((u) => !placed.has(u.id));
-    return { routeUnits, pool };
+    const pool = db.units.filter((u) => !routeOf[u.id]);
+    return { routeUnits, pool, routeOf };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [db.routes, db.units, split, defaultStarters]);
 
@@ -70,7 +56,7 @@ export function RouteSplit() {
     setSplit((prev) => {
       const next = materialized(prev);
       for (const r of db.routes) next[r.id] = next[r.id].filter((id) => id !== unitId);
-      if (next[routeId].length >= MAX_PER_ROUTE) return prev; // full — reject
+      if (next[routeId].length >= MAX_PER_ROUTE) return prev;
       next[routeId].push(unitId);
       return next;
     });
@@ -86,76 +72,57 @@ export function RouteSplit() {
     if (window.confirm("Reset the route split back to each route's default starting units?")) setSplit({});
   }
 
-  // ---- Pointer-based drag (works with mouse and touch) --------------------
-  const drag = useRef<{ id: string; sx: number; sy: number; active: boolean; touch: boolean; timer: number | null } | null>(null);
-
-  function zoneAt(x: number, y: number): string | null {
-    const el = document.elementFromPoint(x, y) as HTMLElement | null;
-    const drop = el?.closest("[data-drop]") as HTMLElement | null;
-    return drop?.dataset.drop ?? null;
-  }
-  function preventScroll(e: TouchEvent) {
-    if (drag.current?.active) e.preventDefault();
-  }
-  function activate(x: number, y: number) {
-    const d = drag.current;
-    if (!d || d.active) return;
-    d.active = true;
-    setGhost({ id: d.id, x, y });
-    window.addEventListener("touchmove", preventScroll, { passive: false });
-  }
-  function endDrag() {
-    const d = drag.current;
-    if (d?.timer) window.clearTimeout(d.timer);
-    window.removeEventListener("pointermove", onMove);
-    window.removeEventListener("pointerup", onUp);
-    window.removeEventListener("touchmove", preventScroll);
-    drag.current = null;
-    setGhost(null);
+  // ---- Desktop: native HTML5 drag-and-drop (same as the Team Builder) ------
+  const onDragStart = (id: string) => (e: React.DragEvent) => e.dataTransfer.setData("text/split-unit", id);
+  const dropHandler = (handler: (id: string) => void) => (e: React.DragEvent) => {
+    e.preventDefault();
     setDropTarget(null);
+    const id = e.dataTransfer.getData("text/split-unit");
+    if (id) handler(id);
+  };
+  const overProps = (target: string) => ({
+    onDragOver: (e: React.DragEvent) => { e.preventDefault(); setDropTarget(target); },
+    onDragLeave: () => setDropTarget((t) => (t === target ? null : t)),
+  });
+
+  // ---- Touch/click: tap a unit -> pick a banner (with a slide animation) ---
+  function openMenu(e: React.MouseEvent, id: string) {
+    setMenu({ unitId: id, rect: (e.currentTarget as HTMLElement).getBoundingClientRect() });
   }
-  function onMove(e: PointerEvent) {
-    const d = drag.current;
-    if (!d) return;
-    const moved = Math.abs(e.clientX - d.sx) + Math.abs(e.clientY - d.sy);
-    if (!d.active) {
-      if (d.touch) {
-        if (moved > 12) endDrag(); // it's a scroll — let the browser handle it
-        return;
-      }
-      if (moved > 6) activate(e.clientX, e.clientY); // mouse: drag on move
-      if (!drag.current?.active) return;
-    }
-    setGhost({ id: d.id, x: e.clientX, y: e.clientY });
-    setDropTarget(zoneAt(e.clientX, e.clientY));
-    if (e.clientY < 80) window.scrollBy(0, -14);
-    else if (e.clientY > window.innerHeight - 80) window.scrollBy(0, 14);
+  // Fade the unit out where it is, move it, then it fades back in at the new spot.
+  function fadeThen(unitId: string, action: () => void) {
+    setMenu(null);
+    setFadingId(unitId);
+    window.setTimeout(() => { action(); setFadingId(null); }, 160);
   }
-  function onUp(e: PointerEvent) {
-    const d = drag.current;
-    if (d?.active) {
-      const zone = zoneAt(e.clientX, e.clientY);
-      if (zone === "pool") unassign(d.id);
-      else if (zone) assignToRoute(d.id, zone);
-    }
-    endDrag();
+  function chooseRoute(routeId: string) {
+    if (!menu) return;
+    const uid = menu.unitId;
+    fadeThen(uid, () => assignToRoute(uid, routeId));
   }
-  function startDrag(e: React.PointerEvent, id: string) {
-    if (e.pointerType === "mouse" && e.button !== 0) return;
-    const touch = e.pointerType !== "mouse";
-    drag.current = { id, sx: e.clientX, sy: e.clientY, active: false, touch, timer: null };
-    window.addEventListener("pointermove", onMove);
-    window.addEventListener("pointerup", onUp);
-    if (touch) {
-      // long-press to lift, so a quick swipe still scrolls the list/page
-      drag.current.timer = window.setTimeout(() => {
-        if (drag.current) activate(drag.current.sx, drag.current.sy);
-      }, 200);
-    }
+  function chooseRemove() {
+    if (!menu) return;
+    const uid = menu.unitId;
+    fadeThen(uid, () => unassign(uid));
   }
+
+  const chip = (u: Unit) => (
+    <div
+      key={u.id}
+      className={"split-chip" + (fadingId === u.id ? " fading" : "")}
+      draggable
+      onDragStart={onDragStart(u.id)}
+      onClick={(e) => openMenu(e, u.id)}
+      title={u.name || "Unnamed"}
+    >
+      <UnitPortrait src={u.portrait} name={u.name} size={52} />
+      <span className="split-chip-name">{u.name || "Unnamed"}</span>
+    </div>
+  );
 
   const poolVisible = pool.filter(visible);
-  const ghostUnit = ghost ? db.units.find((u) => u.id === ghost.id) : null;
+  const menuRouteId = menu ? routeOf[menu.unitId] : null;
+  const routeName = (r: (typeof db.routes)[number]) => r.title || r.name || "Route";
 
   return (
     <div>
@@ -163,7 +130,7 @@ export function RouteSplit() {
       <div className="page-head">
         <div>
           <h2>Route Split</h2>
-          <p>Plan who you recruit on each route — a unit placed on one route is spoken for and can&apos;t be on another. Drag units from the top pool into a route (up to {MAX_PER_ROUTE} each). On touch, press and hold a unit to pick it up.</p>
+          <p>Plan who you recruit on each route — a unit placed on one route is spoken for and can&apos;t be on another. Drag a unit into a route, or tap a unit and pick a banner.</p>
         </div>
         <div className="row" style={{ gap: 12, flexWrap: "wrap" }}>
           <label className="dev-toggle" style={{ whiteSpace: "nowrap" }}>
@@ -175,32 +142,31 @@ export function RouteSplit() {
       </div>
 
       {/* Unassigned pool */}
-      <div className={"split-pool" + (dropTarget === "pool" ? " drop" : "")} data-drop="pool">
+      <div className={"split-pool" + (dropTarget === "pool" ? " drop" : "")} data-drop="pool" {...overProps("pool")} onDrop={dropHandler(unassign)}>
         {poolVisible.length === 0 ? (
           <span className="muted" style={{ margin: "auto" }}>Everyone&apos;s assigned to a route.</span>
         ) : (
-          poolVisible.map((u) => <Chip key={u.id} unit={u} dim={ghost?.id === u.id} onPointerDown={(e) => startDrag(e, u.id)} />)
+          poolVisible.map(chip)
         )}
       </div>
 
       {/* Routes */}
       <div className="split-routes">
         {db.routes.map((r) => {
-          const units = routeUnits[r.id] ?? [];
-          const shown = units.filter(visible);
+          const shown = (routeUnits[r.id] ?? []).filter(visible);
           return (
-            <div key={r.id} className={"split-route" + (dropTarget === r.id ? " drop" : "")} style={{ ["--accent" as any]: r.color }} data-drop={r.id}>
+            <div key={r.id} className={"split-route" + (dropTarget === r.id ? " drop" : "")} data-drop={r.id} {...overProps(r.id)} onDrop={dropHandler((id) => assignToRoute(id, r.id))}>
               <div className="split-banner">
                 <div className="split-banner-img" style={r.banner ? { backgroundImage: `url(${r.banner})` } : undefined} />
                 <div className="split-banner-label">
-                  <span className="split-route-name">{r.title || "Route"}</span>
+                  <span className="split-route-name">{routeName(r)}</span>
                 </div>
               </div>
               <div className="split-route-units">
                 {shown.length === 0 ? (
                   <span className="muted" style={{ margin: "auto 8px" }}>Drop units here</span>
                 ) : (
-                  shown.map((u) => <Chip key={u.id} unit={u} dim={ghost?.id === u.id} onPointerDown={(e) => startDrag(e, u.id)} />)
+                  shown.map(chip)
                 )}
               </div>
             </div>
@@ -208,12 +174,40 @@ export function RouteSplit() {
         })}
       </div>
 
-      {/* Floating drag ghost */}
-      {ghost && ghostUnit && (
-        <div className="split-ghost" style={{ left: ghost.x, top: ghost.y }}>
-          <UnitPortrait src={ghostUnit.portrait} name={ghostUnit.name} size={52} />
-        </div>
-      )}
+      {/* Tap menu: pick a route banner (or remove from the current one) */}
+      {menu && (() => {
+        const menuW = db.routes.length * 46 + 18;
+        const menuH = 62;
+        const left = Math.max(12, Math.min(window.innerWidth - menuW - 12, menu.rect.left + menu.rect.width / 2 - menuW / 2));
+        const below = menu.rect.bottom + 8;
+        const top = below + menuH > window.innerHeight ? Math.max(12, menu.rect.top - menuH - 8) : below;
+        return (
+        <>
+          <div className="split-menu-backdrop" onClick={() => setMenu(null)} />
+          <div className="split-menu" style={{ left, top, width: menuW }}>
+            {db.routes.map((r) => {
+              const here = menuRouteId === r.id;
+              return (
+                <button
+                  key={r.id}
+                  className={"split-menu-item" + (here ? " remove" : "")}
+                  onClick={() => (here ? chooseRemove() : chooseRoute(r.id))}
+                  title={here ? "Remove from this route" : routeName(r)}
+                >
+                  {here ? (
+                    <span className="split-menu-crest">
+                      <span className="split-menu-x">✕</span>
+                    </span>
+                  ) : (
+                    <span className="split-menu-crest" style={r.banner ? { backgroundImage: `url(${r.banner})` } : { background: r.color }} />
+                  )}
+                </button>
+              );
+            })}
+          </div>
+        </>
+        );
+      })()}
     </div>
   );
 }

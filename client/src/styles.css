@@ -792,10 +792,15 @@ input[type="range"]::-moz-range-thumb {
   width: 62px;
   flex: 0 0 auto;
   cursor: grab;
-  transition: transform 0.1s, opacity 0.1s;
-  touch-action: pan-y; /* quick vertical swipe scrolls; long-press lifts for drag */
+  transition: transform 0.12s, opacity 0.15s ease;
+  touch-action: manipulation; /* tap opens the banner menu; swipe scrolls the strip */
   user-select: none;
   -webkit-user-select: none;
+  animation: split-chip-in 0.2s ease; /* fade in when it (re)appears in a new spot */
+}
+@keyframes split-chip-in {
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: none; }
 }
 .split-chip:hover {
   transform: translateY(-2px);
@@ -803,8 +808,10 @@ input[type="range"]::-moz-range-thumb {
 .split-chip:active {
   cursor: grabbing;
 }
-.split-chip.dragging {
-  opacity: 0.35;
+/* fade the unit out where it is, just before it moves to its new spot */
+.split-chip.fading {
+  opacity: 0;
+  transform: scale(0.85);
 }
 /* Dark, slim scrollbars (the default white ones look out of place here) */
 .split-pool,
@@ -829,30 +836,77 @@ input[type="range"]::-moz-range-thumb {
 .split-route-units::-webkit-scrollbar-thumb:hover {
   background: rgba(216, 182, 106, 0.5);
 }
-/* Floating chip that follows the pointer while dragging */
-.split-ghost {
+/* Tap menu: pick a route banner (or remove from the current route) */
+.split-menu-backdrop {
   position: fixed;
-  z-index: 200;
-  transform: translate(-50%, -50%) scale(1.05);
-  pointer-events: none;
-  opacity: 0.92;
-  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.55));
+  inset: 0;
+  z-index: 250;
 }
-/* On narrow screens the strips wrap instead of scrolling sideways, so drag has
-   no horizontal-scroll conflict and everything is reachable by scrolling down. */
-@media (max-width: 720px) {
-  .split-pool,
-  .split-route-units {
-    flex-wrap: wrap;
-    overflow-x: visible;
-  }
-  .split-route {
-    height: auto; /* wrapped unit rows can grow the panel instead of being clipped */
-    min-height: 120px;
-  }
-  .split-banner {
-    flex-basis: 110px;
-  }
+.split-menu {
+  position: fixed;
+  z-index: 251;
+  display: flex;
+  gap: 8px;
+  padding: 9px;
+  max-width: calc(100vw - 24px);
+  background: var(--panel-2);
+  border: 1px solid var(--gold-deep);
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55);
+  animation: split-menu-in 0.13s ease-out;
+}
+@keyframes split-menu-in {
+  from { opacity: 0; transform: translateY(-4px) scale(0.96); }
+  to { opacity: 1; transform: none; }
+}
+.split-menu-item {
+  display: flex;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+}
+.split-menu-crest {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 9px;
+  border: 1px solid var(--panel-edge);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.1s, border-color 0.1s;
+}
+.split-menu-item:hover .split-menu-crest {
+  transform: translateY(-2px);
+  border-color: var(--gold);
+}
+.split-menu-item.remove .split-menu-crest {
+  background: rgba(224, 90, 96, 0.16);
+  border-color: var(--danger);
+}
+.split-menu-x {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--danger);
+}
+.split-menu-name {
+  font-size: 11px;
+  line-height: 1.15;
+  text-align: center;
+  max-width: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.split-menu-item.remove .split-menu-name {
+  color: var(--danger);
 }
 .split-chip-name {
   font-size: 11px;
