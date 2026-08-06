@@ -912,9 +912,7 @@
       "name": "Mu",
       "portrait": "/images/ms7meqfxs69gcl.jpg",
       "isLord": false,
-      "routeIds": [
-        "leda"
-      ],
+      "routeIds": [],
       "starterFor": [
         "leda"
       ],
@@ -1530,6 +1528,24 @@
       "id": "unit_msftrzee97kx3",
       "name": "Metwodey*",
       "portrait": "/images/msfts6thpiky1b.png",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {},
+      "postTimeskip": true
+    },
+    {
+      "id": "unit_mshblux2thfxr",
+      "name": "Troy",
+      "portrait": "/images/mshbm0lqzvyb4c.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -4754,7 +4770,7 @@
     {
       "id": "cast_msetp6lndpw3d",
       "name": "Fortuna",
-      "portrait": "/images/msf8e2t507p7z5.png",
+      "portrait": "/images/mshbsolhwdr55o.png",
       "subtitle": "Fate",
       "description": "",
       "crest": "Goneril"
