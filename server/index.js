@@ -142,6 +142,7 @@ function defaultDB() {
     },
     gods: [],
     npcs: [],
+    tierRequirements: {},
   };
 }
 

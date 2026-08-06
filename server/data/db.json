@@ -88,7 +88,8 @@
         "Knights of Arago",
         "Moon's Lie",
         "Linaria's Morning Dew",
-        "Brides of the Pale Raven"
+        "Brides of the Pale Raven",
+        "Thundercloud Knights"
       ]
     },
     {
@@ -329,8 +330,8 @@
     },
     {
       "id": "class_ms4gsshgfxh2m",
-      "name": "Armored Ornius Rider*",
-      "tier": "Advanced",
+      "name": "Armored Ornius Rider",
+      "tier": "Specialty",
       "description": "",
       "movementType": "flying",
       "proficiencies": [
@@ -350,7 +351,24 @@
         "sword",
         "infantry"
       ],
-      "portrait": null
+      "portrait": null,
+      "classAbilities": [
+        {
+          "name": "Combat Arts +2",
+          "description": "",
+          "icon": null
+        },
+        {
+          "name": "Sword Crit +5",
+          "description": "",
+          "icon": null
+        },
+        {
+          "name": "",
+          "description": "",
+          "icon": null
+        }
+      ]
     },
     {
       "id": "class_msetrpdjsxewf",
@@ -361,7 +379,24 @@
       "proficiencies": [
         "faith"
       ],
-      "portrait": null
+      "portrait": null,
+      "classAbilities": [
+        {
+          "name": "White-Magic Seeker?",
+          "description": "",
+          "icon": null
+        },
+        {
+          "name": "Magic Heal +10?",
+          "description": "",
+          "icon": null
+        },
+        {
+          "name": "",
+          "description": "",
+          "icon": null
+        }
+      ]
     },
     {
       "id": "class_msesj7wz0j31a",
@@ -374,7 +409,45 @@
         "lance",
         "riding"
       ],
-      "portrait": null
+      "portrait": null,
+      "classAbilities": [
+        {
+          "name": "Mount/Dismount",
+          "description": "",
+          "icon": null
+        },
+        {
+          "name": "Combat Arts +2",
+          "description": "",
+          "icon": null
+        },
+        {
+          "name": "",
+          "description": "",
+          "icon": null
+        }
+      ],
+      "masteredAbility": {
+        "name": "Aegis",
+        "description": "",
+        "icon": null
+      },
+      "primarySkills": [
+        {
+          "skillTypeId": "riding",
+          "grade": "C"
+        }
+      ],
+      "secondarySkills": [
+        {
+          "skillTypeId": "lance",
+          "grade": "B"
+        },
+        {
+          "skillTypeId": "sword",
+          "grade": "B"
+        }
+      ]
     },
     {
       "id": "class_msess55qlmn68",
@@ -441,7 +514,7 @@
       "name": "Sniper",
       "tier": "Advanced",
       "description": "",
-      "movementType": "",
+      "movementType": "infantry",
       "proficiencies": [
         "bow"
       ],
@@ -458,7 +531,45 @@
         "axe",
         "armor"
       ],
-      "portrait": null
+      "portrait": null,
+      "primarySkills": [
+        {
+          "skillTypeId": "armor",
+          "grade": "D"
+        }
+      ],
+      "secondarySkills": [
+        {
+          "skillTypeId": "axe",
+          "grade": "B"
+        },
+        {
+          "skillTypeId": "lance",
+          "grade": "B"
+        }
+      ],
+      "classAbilities": [
+        {
+          "name": "Combat Arts +2",
+          "description": "",
+          "icon": null
+        },
+        {
+          "name": "Strike-Last Def +5",
+          "description": "",
+          "icon": null
+        },
+        {
+          "name": "",
+          "description": "",
+          "icon": null
+        }
+      ],
+      "masteredAbility": {
+        "name": "Focused Counter",
+        "description": "",
+        "icon": null
+      }
     },
     {
       "id": "class_msetrbyatzubm",
@@ -481,7 +592,35 @@
       "proficiencies": [
         "reason"
       ],
-      "portrait": null
+      "portrait": null,
+      "classAbilities": [
+        {
+          "name": "Black-Magic Seeker",
+          "description": "",
+          "icon": null
+        },
+        {
+          "name": "Magic Hit +5",
+          "description": "",
+          "icon": null
+        },
+        {
+          "name": "",
+          "description": "",
+          "icon": null
+        }
+      ],
+      "masteredAbility": {
+        "name": "Bind Speed",
+        "description": "",
+        "icon": null
+      },
+      "primarySkills": [
+        {
+          "skillTypeId": "reason",
+          "grade": "B"
+        }
+      ]
     }
   ],
   "units": [
@@ -687,7 +826,7 @@
       "starterFor": [
         "leda"
       ],
-      "classId": "class_armored",
+      "classId": "class_ms4godtdiwiu4",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -1399,7 +1538,9 @@
         "name": "",
         "description": ""
       },
-      "fields": {}
+      "fields": {
+        "faction": "Thundercloud Knights"
+      }
     },
     {
       "id": "unit_msesemmywrm9d",
@@ -4827,5 +4968,11 @@
       "subtitle": "The Beginning",
       "description": ""
     }
-  ]
+  ],
+  "tierRequirements": {
+    "Advanced": {
+      "idealLv": 35,
+      "renownLv": 8
+    }
+  }
 }

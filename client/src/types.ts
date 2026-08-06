@@ -42,6 +42,21 @@ export type FieldValue = string | boolean | string[];
 
 export type MovementType = "infantry" | "cavalry" | "flying" | "armored" | "monster" | "";
 
+export const CLASS_TIERS = ["Base", "Beginner", "Specialty", "Advanced", "Unique"];
+
+// A required skill proficiency (skill type + minimum grade) for certification.
+export interface SkillReq {
+  skillTypeId: string;
+  grade: Grade;
+}
+
+// A class ability (class skill or mastered ability).
+export interface ClassAbility {
+  name: string;
+  description: string;
+  icon?: string | null;
+}
+
 export interface GameClass {
   id: string;
   name: string;
@@ -50,6 +65,17 @@ export interface GameClass {
   movementType: MovementType;
   proficiencies: string[]; // skillType ids available to this class
   portrait: string | null;
+  // Certification / class-list info
+  primarySkills?: SkillReq[];
+  secondarySkills?: SkillReq[];
+  classAbilities?: ClassAbility[]; // up to 3 slots (some may be empty)
+  masteredAbility?: ClassAbility;
+}
+
+// Ideal level + renown needed to certify into a tier (shared by all classes in it).
+export interface TierRequirement {
+  idealLv?: number;
+  renownLv?: number;
 }
 
 export interface PersonalSkill {
@@ -150,4 +176,5 @@ export interface DB {
   characterPage?: CharacterPageConfig;
   gods?: CastMember[]; // worshipped at temples
   npcs?: CastMember[]; // important non-playable characters
+  tierRequirements?: Record<string, TierRequirement>; // keyed by tier name
 }
