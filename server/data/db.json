@@ -1047,28 +1047,6 @@
       }
     },
     {
-      "id": "unit_ms3ofr4f95yg3",
-      "name": "Mu",
-      "portrait": "/images/ms7meqfxs69gcl.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [
-        "leda"
-      ],
-      "classId": "class_ms3o7io5clmwu",
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {
-        "faction": "Rose Tempest",
-        "backstory": "A young, innocent girl who ran away from home to search for her missing mother. While tracking her mother’s whereabouts, she runs into Leda during her path of vengeance. She dresses and speaks like a boy to protect herself from danger.\n\nLikes: Father, mother, sweets"
-      }
-    },
-    {
       "id": "unit_ms3o3pm7kkagj",
       "name": "Olympia",
       "portrait": "/images/ms9e4j4i7kxstk.jpg",
@@ -1089,6 +1067,28 @@
       },
       "fields": {
         "faction": "Rose Tempest"
+      }
+    },
+    {
+      "id": "unit_ms3ofr4f95yg3",
+      "name": "Mu",
+      "portrait": "/images/ms7meqfxs69gcl.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [
+        "leda"
+      ],
+      "classId": "class_ms3o7io5clmwu",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Rose Tempest",
+        "backstory": "A young, innocent girl who ran away from home to search for her missing mother. While tracking her mother’s whereabouts, she runs into Leda during her path of vengeance. She dresses and speaks like a boy to protect herself from danger.\n\nLikes: Father, mother, sweets"
       }
     },
     {

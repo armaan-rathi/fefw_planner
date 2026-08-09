@@ -32,26 +32,35 @@ export function RouteSelection() {
   // Units the visitor has provisionally added to a route (route id -> unit ids),
   // since the real per-route rosters aren't known yet.
   const [routeExtras, setRouteExtras] = useLocalStorage<Record<string, string[]>>("fw.routeExtras", {});
+  // Default members (starters) the visitor has removed from a route.
+  const [routeRemovals, setRouteRemovals] = useLocalStorage<Record<string, string[]>>("fw.routeRemovals", {});
   const [activeRoute, setActiveRoute] = useState(db.routes[0]?.id ?? "");
   const [adding, setAdding] = useState(false);
   const [newParam, setNewParam] = useState("");
   const [scaleOpen, setScaleOpen] = useState(false);
   const [draft, setDraft] = useState({ min: "0", max: "10", step: "0.5" });
 
-  // Units on each route (lord first): the canonical DB roster plus any the
-  // visitor has provisionally added on this device.
+  // Units on each route (lord first). Defaults = units locked to the route plus
+  // units that START on it (starterFor), then the visitor's personal add/removes.
+  // Locked units can't be removed; starters and extras can.
   const unitsByRoute = useMemo(() => {
     const map: Record<string, Unit[]> = {};
     for (const route of db.routes) {
-      const canonical = db.units.filter((u) => u.routeIds.includes(route.id));
-      const canonicalIds = new Set(canonical.map((u) => u.id));
+      const locked = db.units.filter((u) => u.routeIds.includes(route.id));
+      const seen = new Set(locked.map((u) => u.id));
+      const starters = db.units.filter((u) => u.starterFor.includes(route.id) && !seen.has(u.id));
+      starters.forEach((u) => seen.add(u.id));
       const extras = (routeExtras[route.id] ?? [])
         .map((id) => db.units.find((u) => u.id === id))
-        .filter((u): u is Unit => !!u && !canonicalIds.has(u.id));
-      map[route.id] = lordFirst([...canonical, ...extras]);
+        .filter((u): u is Unit => !!u && !seen.has(u.id));
+      const removed = new Set(routeRemovals[route.id] ?? []);
+      const members = [...locked, ...starters, ...extras].filter(
+        (u) => u.routeIds.includes(route.id) || !removed.has(u.id) // locked always stay
+      );
+      map[route.id] = lordFirst(members);
     }
     return map;
-  }, [db.routes, db.units, routeExtras]);
+  }, [db.routes, db.units, routeExtras, routeRemovals]);
 
   const mid = (scale.min + scale.max) / 2;
 
@@ -117,9 +126,10 @@ export function RouteSelection() {
     setParams((prev) => prev.filter((p) => p.id !== id));
   }
   function resetAll() {
-    if (window.confirm("Reset all your ratings and remove any characters you've added to routes? (This device only.)")) {
+    if (window.confirm("Reset all your ratings and route roster changes? (This device only.)")) {
       setRatings({});
       setRouteExtras({});
+      setRouteRemovals({});
     }
   }
 
@@ -129,18 +139,26 @@ export function RouteSelection() {
   // Provisionally add/remove a character on this route (personal, on this device).
   function addCharToRoute(unitId: string) {
     if (!route || !unitId) return;
+    // Un-remove it if it was a removed starter, and add it as an extra otherwise.
+    setRouteRemovals((prev) => {
+      const cur = prev[route.id] ?? [];
+      return cur.includes(unitId) ? { ...prev, [route.id]: cur.filter((id) => id !== unitId) } : prev;
+    });
     setRouteExtras((prev) => {
       const cur = prev[route.id] ?? [];
-      if (cur.includes(unitId)) return prev;
-      return { ...prev, [route.id]: [...cur, unitId] };
+      return cur.includes(unitId) ? prev : { ...prev, [route.id]: [...cur, unitId] };
     });
   }
   function removeCharFromRoute(unitId: string) {
     if (!route) return;
+    // Drop from extras if it was one; otherwise mark the (starter) default as removed.
     setRouteExtras((prev) => {
       const cur = prev[route.id] ?? [];
-      if (!cur.includes(unitId)) return prev;
-      return { ...prev, [route.id]: cur.filter((id) => id !== unitId) };
+      return cur.includes(unitId) ? { ...prev, [route.id]: cur.filter((id) => id !== unitId) } : prev;
+    });
+    setRouteRemovals((prev) => {
+      const cur = prev[route.id] ?? [];
+      return cur.includes(unitId) ? prev : { ...prev, [route.id]: [...cur, unitId] };
     });
   }
   const rosterIds = new Set(roster.map((u) => u.id));
