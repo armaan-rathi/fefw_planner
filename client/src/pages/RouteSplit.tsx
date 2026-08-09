@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useDB } from "../data/DataContext";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import { UnitPortrait } from "../components/UnitPortrait";
@@ -11,6 +12,7 @@ type Split = Record<string, string[]>; // routeId -> unit ids
 
 export function RouteSplit() {
   const { db } = useDB();
+  const navigate = useNavigate();
   const [split, setSplit] = useLocalStorage<Split>("fw.routeSplit", {});
   const [showPost, setShowPost] = useState(false);
   const [dropTarget, setDropTarget] = useState<string | null>(null);
@@ -70,6 +72,31 @@ export function RouteSplit() {
   }
   function reset() {
     if (window.confirm("Reset the route split back to each route's default starting units?")) setSplit({});
+  }
+
+  // Push this split into Route Selection's rosters (via its per-device keys), so
+  // you can rate the same line-up there. Locked units always stay on their route.
+  function importToRouteSelection() {
+    if (!window.confirm("Import this split into Route Selection? It replaces your current roster edits there.")) return;
+    const extras: Record<string, string[]> = {};
+    const removals: Record<string, string[]> = {};
+    for (const r of db.routes) {
+      const target = new Set((routeUnits[r.id] ?? []).map((u) => u.id));
+      const lockedSet = new Set(db.units.filter((u) => u.routeIds.includes(r.id)).map((u) => u.id));
+      const starterIds = db.units.filter((u) => u.starterFor.includes(r.id) && !lockedSet.has(u.id)).map((u) => u.id);
+      const defaults = new Set([...lockedSet, ...starterIds]);
+      extras[r.id] = [...target].filter((id) => !defaults.has(id)); // in the split but not a default
+      removals[r.id] = starterIds.filter((id) => !target.has(id)); // a default starter dropped from the split
+    }
+    // Write directly (not via useLocalStorage's effect, which wouldn't flush
+    // before this component unmounts on navigate) so Route Selection reads it on mount.
+    try {
+      localStorage.setItem("fw.routeExtras", JSON.stringify(extras));
+      localStorage.setItem("fw.routeRemovals", JSON.stringify(removals));
+    } catch {
+      /* ignore quota errors */
+    }
+    navigate("/routes");
   }
 
   // ---- Desktop: native HTML5 drag-and-drop (same as the Team Builder) ------
@@ -137,6 +164,7 @@ export function RouteSplit() {
             <input type="checkbox" checked={showPost} onChange={(e) => setShowPost(e.target.checked)} />
             <span>Show Post-Timeskip Units</span>
           </label>
+          <button className="btn" onClick={importToRouteSelection}>Import to Route Selection</button>
           <button className="btn ghost" onClick={reset}>Reset</button>
         </div>
       </div>
