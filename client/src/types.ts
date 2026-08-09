@@ -126,6 +126,7 @@ export interface MapEdge {
   from: string;
   to: string;
   turns: number;
+  aquatic?: boolean; // a water crossing — only usable once water traversal is allowed
 }
 
 export interface GameMap {

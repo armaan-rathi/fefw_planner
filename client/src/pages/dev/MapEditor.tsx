@@ -15,7 +15,7 @@ export function MapEditor() {
   const drag = useRef<{ id: string; moved: boolean; sx: number; sy: number } | null>(null);
 
   const [armed, setArmed] = useState<string | null>(null); // icon type id to place
-  const [linkMode, setLinkMode] = useState<"off" | "connect" | "remove">("off");
+  const [linkMode, setLinkMode] = useState<"off" | "connect" | "remove" | "water">("off");
   const [sel, setSel] = useState<string[]>([]); // node selection for connect/remove
   const [editingId, setEditingId] = useState<string | null>(null);
   const [overBin, setOverBin] = useState(false);
@@ -24,9 +24,10 @@ export function MapEditor() {
 
   const connectMode = linkMode === "connect";
   const removeMode = linkMode === "remove";
+  const waterMode = linkMode === "water";
   const linkActive = linkMode !== "off";
 
-  function enterMode(m: "connect" | "remove") {
+  function enterMode(m: "connect" | "remove" | "water") {
     setLinkMode((cur) => (cur === m ? "off" : m));
     setArmed(null);
     setEditingId(null);
@@ -91,6 +92,12 @@ export function MapEditor() {
   function removeEdge(id: string) {
     update((d) => {
       d.map.edges = d.map.edges.filter((e) => e.id !== id);
+    });
+  }
+  function toggleAquatic(id: string) {
+    update((d) => {
+      const e = d.map.edges.find((x) => x.id === id);
+      if (e) e.aquatic = !e.aquatic;
     });
   }
 
@@ -167,6 +174,12 @@ export function MapEditor() {
               >
                 {removeMode ? "Removing…" : "Remove paths"}
               </button>
+              <button
+                className={"btn" + (waterMode ? " primary" : "")}
+                onClick={() => enterMode("water")}
+              >
+                {waterMode ? "Water mode…" : "Water paths"}
+              </button>
               {connectMode && (
                 <>
                   <button className="btn" onClick={connectSelected} disabled={sel.length < 2}>Join ({sel.length})</button>
@@ -187,6 +200,8 @@ export function MapEditor() {
                 ? "Click nodes in order, then Join to link them. Paths aren't removed here — use Remove paths for that."
                 : removeMode
                 ? "Click any path to remove it. Or select a node and Unlink all to cut every path touching it."
+                : waterMode
+                ? "Click a path to mark it as a water crossing (blue). Water paths need a boat to use on the live map. Click again to unmark."
                 : armed
                 ? "Placing — click the map to drop markers. Drag markers to move; drag onto the bin to delete."
                 : "Pick an icon below to place it, or drag existing markers around. Click a marker to edit it."}
@@ -268,12 +283,12 @@ export function MapEditor() {
             const a = map.nodes.find((n) => n.id === e.from);
             const b = map.nodes.find((n) => n.id === e.to);
             if (!a || !b) return null;
-            return <line key={e.id} className="edge-line" x1={a.x} y1={a.y} x2={b.x} y2={b.y} />;
+            return <line key={e.id} className={"edge-line" + (e.aquatic ? " aquatic" : "")} x1={a.x} y1={a.y} x2={b.x} y2={b.y} />;
           })}
         </svg>
 
-        {/* Remove mode only: clickable paths so you can delete any single edge. */}
-        {removeMode && (
+        {/* Remove / Water mode: clickable paths (delete, or toggle water crossing). */}
+        {(removeMode || waterMode) && (
           <svg className="edge-layer" viewBox="0 0 100 100" preserveAspectRatio="none">
             {map.edges.map((e) => {
               const a = map.nodes.find((n) => n.id === e.from);
@@ -282,14 +297,14 @@ export function MapEditor() {
               return (
                 <line
                   key={e.id}
-                  className="edge-hit"
+                  className={"edge-hit" + (waterMode ? " water" : "")}
                   x1={a.x}
                   y1={a.y}
                   x2={b.x}
                   y2={b.y}
-                  onClick={(ev) => { ev.stopPropagation(); removeEdge(e.id); }}
+                  onClick={(ev) => { ev.stopPropagation(); waterMode ? toggleAquatic(e.id) : removeEdge(e.id); }}
                 >
-                  <title>Click to remove this path</title>
+                  <title>{waterMode ? "Click to toggle water crossing" : "Click to remove this path"}</title>
                 </line>
               );
             })}

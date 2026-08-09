@@ -1151,6 +1151,11 @@ input[type="range"]::-moz-range-thumb {
   pointer-events: none;
   filter: drop-shadow(0 0 1.5px rgba(0, 0, 0, 0.85));
 }
+/* Aquatic edges (water crossings) render blue in the editor. */
+.edge-line.aquatic {
+  stroke: #3fa0e8;
+  stroke-dasharray: 4 3;
+}
 /* Clickable path hit-lines shown in the map editor's Connect mode. */
 .edge-layer {
   position: absolute;
@@ -1171,6 +1176,9 @@ input[type="range"]::-moz-range-thumb {
 }
 .edge-hit:hover {
   stroke: rgba(233, 94, 101, 0.85);
+}
+.edge-hit.water:hover {
+  stroke: rgba(63, 160, 232, 0.85);
 }
 .wp-badge {
   position: absolute;

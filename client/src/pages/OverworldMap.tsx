@@ -6,16 +6,14 @@ import { edgeDots } from "../components/mapShapes";
 import type { GameMap, IconType, MapNode } from "../types";
 
 // Dijkstra shortest path over the (undirected) edge graph, weighted by turns.
-// `blocked` holds nodes that can't be traversed; edges touching them are dropped
-// (except the chosen endpoints, which are always kept usable).
-function shortestPath(map: GameMap, from: string, to: string, blocked: Set<string>): { path: string[]; turns: number } | null {
+// Aquatic edges (water crossings) are only usable once water traversal is allowed.
+function shortestPath(map: GameMap, from: string, to: string, allowWater: boolean): { path: string[]; turns: number } | null {
   if (from === to) return { path: [from], turns: 0 };
-  const usable = (id: string) => id === from || id === to || !blocked.has(id);
   const adj: Record<string, { to: string; w: number }[]> = {};
   for (const n of map.nodes) adj[n.id] = [];
   for (const e of map.edges) {
     if (!adj[e.from] || !adj[e.to]) continue;
-    if (!usable(e.from) || !usable(e.to)) continue;
+    if (e.aquatic && !allowWater) continue; // needs a boat
     adj[e.from].push({ to: e.to, w: e.turns });
     adj[e.to].push({ to: e.from, w: e.turns });
   }
@@ -59,7 +57,7 @@ export function OverworldMap() {
   const { db } = useDB();
   const map = db.map;
   const [waypoints, setWaypoints] = useState<string[]>([]);
-  const [allowBlocked, setAllowBlocked] = useState(false);
+  const [allowWater, setAllowWater] = useState(false);
   const [zoom, setZoom] = useState(1); // map zoom; pan by scrolling the viewport
   const zoomBy = (d: number) => setZoom((z) => Math.min(4, Math.max(1, Math.round((z + d) * 10) / 10)));
 
@@ -68,13 +66,6 @@ export function OverworldMap() {
     for (const n of map.nodes) m[n.id] = n;
     return m;
   }, [map.nodes]);
-
-  // Blocked or inactive markers are impassable unless traversal is allowed.
-  const blockedSet = useMemo(() => {
-    const s = new Set<string>();
-    if (!allowBlocked) for (const n of map.nodes) if (n.blocked || n.inactive) s.add(n.id);
-    return s;
-  }, [map.nodes, allowBlocked]);
 
   const typeById = useMemo(() => {
     const m: Record<string, IconType> = {};
@@ -87,7 +78,7 @@ export function OverworldMap() {
     let turns = 0;
     let broken = false;
     for (let i = 0; i < waypoints.length - 1; i++) {
-      const seg = shortestPath(map, waypoints[i], waypoints[i + 1], blockedSet);
+      const seg = shortestPath(map, waypoints[i], waypoints[i + 1], allowWater);
       if (!seg) {
         broken = true;
         break;
@@ -97,12 +88,11 @@ export function OverworldMap() {
     }
     if (waypoints.length === 1) stops.push(waypoints[0]);
     return { stops, turns, broken };
-  }, [waypoints, map, blockedSet]);
+  }, [waypoints, map, allowWater]);
 
   const routeSet = new Set(route.stops);
 
   function onNodeClick(id: string) {
-    if (blockedSet.has(id)) return; // impassable — can't be a stop
     // Toggle: clicking a stop that's already a waypoint removes it; otherwise add it.
     setWaypoints((w) => (w.includes(id) ? w.filter((x) => x !== id) : [...w, id]));
   }
@@ -133,15 +123,15 @@ export function OverworldMap() {
       <div className="page-head">
         <div>
           <h2>Overworld Map</h2>
-          <p>Click a marker to add it as a stop; click it again to remove it. Turns are summed along the shortest connecting paths; blocked and inactive markers are avoided.</p>
+          <p>Click a marker to add it as a stop; click it again to remove it. Turns are summed along the shortest connecting paths. Water crossings need a boat — enable them below.</p>
         </div>
         <div className="row" style={{ flexWrap: "wrap" }}>
           <button
-            className={"btn" + (allowBlocked ? " primary" : " ghost")}
-            onClick={() => setAllowBlocked((v) => !v)}
-            title="Treat blocked and inactive markers as ordinary, passable stops"
+            className={"btn" + (allowWater ? " primary" : " ghost")}
+            onClick={() => setAllowWater((v) => !v)}
+            title="Allow routes to cross water (once you have a boat)"
           >
-            {allowBlocked ? "✓ Inactive traversal on" : "Allow inactive node traversal"}
+            {allowWater ? "✓ Water traversal on" : "Allow water traversal"}
           </button>
           <button className="btn ghost" onClick={() => setWaypoints((w) => w.slice(0, -1))} disabled={!waypoints.length}>
             Undo stop
@@ -205,19 +195,17 @@ export function OverworldMap() {
           if (!t) return null;
           const isWaypoint = waypoints.includes(n.id);
           const inRoute = routeSet.has(n.id);
-          const impassable = blockedSet.has(n.id);
           return (
             <div
               key={n.id}
               className={
-                "map-node icon-node" +
-                (impassable ? " impassable" : " clickable") +
+                "map-node icon-node clickable" +
                 (inRoute ? " in-route" : "") +
                 (isWaypoint ? " selected" : "")
               }
               style={{ left: `${n.x}%`, top: `${n.y}%` }}
               onClick={() => onNodeClick(n.id)}
-              title={impassable ? (n.label ? n.label + " (blocked)" : "Blocked") : n.label}
+              title={n.label}
             >
               <div className={hideMarkers ? "ghost" : ""}>
                 <MapIcon type={t} blocked={n.blocked} inactive={n.inactive} />
