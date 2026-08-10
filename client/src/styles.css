@@ -1835,3 +1835,148 @@ input[type="range"]::-moz-range-thumb {
   .class-list-scroll { max-height: 260px; }
   .class-skills-row { flex-direction: column; }
 }
+
+/* ---- Tier List page ---- */
+.tier-pool {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 12px 14px;
+  min-height: 96px;
+  border: 1px solid var(--panel-edge);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+  margin-bottom: 16px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(216, 182, 106, 0.35) transparent;
+}
+.tier-pool::-webkit-scrollbar { height: 8px; }
+.tier-pool::-webkit-scrollbar-thumb { background: rgba(216, 182, 106, 0.3); border-radius: 4px; }
+.tier-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.tier-row {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid var(--panel-edge);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--panel);
+  min-height: 84px;
+}
+.tier-pool.drop,
+.tier-row.drop {
+  outline: 2px dashed var(--gold);
+  outline-offset: -3px;
+  border-color: var(--gold-deep);
+}
+.tier-label {
+  flex: 0 0 76px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+}
+.tier-label input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-weight: 800;
+  font-size: 22px;
+  font-family: "Iowan Old Style", Georgia, serif;
+  color: #1a1208;
+  padding: 2px;
+}
+.tier-label input:focus {
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+}
+.tier-units {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  min-width: 0;
+}
+.tier-controls {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  padding: 4px 6px;
+  border-left: 1px solid var(--panel-edge);
+}
+.tier-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 56px;
+  flex: 0 0 auto;
+  cursor: grab;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: transform 0.1s;
+  animation: split-chip-in 0.18s ease;
+}
+.tier-chip:hover { transform: translateY(-2px); }
+.tier-chip:active { cursor: grabbing; }
+.tier-chip-name {
+  font-size: 10.5px;
+  line-height: 1.15;
+  height: 2.3em;
+  text-align: center;
+  color: var(--ink-dim);
+  max-width: 56px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+/* Tap menu — colored tier buttons */
+.tier-menu {
+  position: fixed;
+  z-index: 251;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 9px;
+  width: 190px;
+  max-width: calc(100vw - 24px);
+  background: var(--panel-2);
+  border: 1px solid var(--gold-deep);
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55);
+  animation: split-menu-in 0.13s ease-out;
+}
+.tier-menu-item {
+  min-width: 40px;
+  height: 38px;
+  padding: 0 10px;
+  border: none;
+  border-radius: 8px;
+  color: #1a1208;
+  font-weight: 800;
+  font-size: 15px;
+  cursor: pointer;
+}
+.tier-menu-item.pool {
+  background: #0e2228;
+  color: var(--ink-dim);
+  border: 1px solid var(--panel-edge);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+@media (max-width: 720px) {
+  .tier-label { flex-basis: 56px; }
+  .tier-label input { font-size: 18px; }
+}

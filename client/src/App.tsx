@@ -7,6 +7,7 @@ import { OverworldMap } from "./pages/OverworldMap";
 import { CharacterList } from "./pages/CharacterList";
 import { CastPage } from "./pages/CastPage";
 import { ClassList } from "./pages/ClassList";
+import { TierList } from "./pages/TierList";
 import { RouteSplit } from "./pages/RouteSplit";
 import { DevMode } from "./pages/dev/DevMode";
 
@@ -53,6 +54,7 @@ function Shell() {
           <NavLink to="/routes">Route Selection</NavLink>
           <NavLink to="/characters">Character Database</NavLink>
           <NavLink to="/classes">Class List</NavLink>
+          <NavLink to="/tiers">Tier List</NavLink>
           <NavLink to="/team">Team Planner</NavLink>
           <NavLink to="/map">Overworld Map</NavLink>
           {devMode && <NavLink to="/dev">Dev Mode</NavLink>}
@@ -76,6 +78,7 @@ function Shell() {
             <Route path="/routes" element={<RouteSelection />} />
             <Route path="/characters" element={<CharacterList />} />
             <Route path="/classes" element={<ClassList />} />
+            <Route path="/tiers" element={<TierList />} />
             <Route path="/gods" element={<CastPage kind="gods" title="Gods" blurb="Deities you can worship at temples." />} />
             <Route path="/npcs" element={<CastPage kind="npcs" title="Important NPCs" blurb="Key non-playable characters in the story." />} />
             <Route path="/team" element={<TeamPlanner />} />
