@@ -85,7 +85,7 @@
         "House Lamine",
         "Megaira's Beacon",
         "Rose Tempest",
-        "Knights of Arago",
+        "Arago Elites",
         "Moon's Lie",
         "Linaria's Morning Dew",
         "Brides of the Pale Raven",
@@ -1108,7 +1108,7 @@
       },
       "fields": {
         "backstory": "A valiant general of the Arago Kingdom, boasting overwhelming attack power.\n\nTogether with the Green Knight Creek, he is known as the \"Twin Pillars of Arago,\" his fame resounding throughout Dagda.\n\nDeeply loyal, with a personality so straightforward it's almost stubbornly honest.\n\nLikes: The red armor bestowed by the king, upholding loyalty, training in all martial arts",
-        "faction": "Knights of Arago"
+        "faction": "Arago Elites"
       }
     },
     {
@@ -1127,7 +1127,7 @@
         "description": ""
       },
       "fields": {
-        "faction": "Knights of Arago",
+        "faction": "Arago Elites",
         "backstory": "A general of the Arago Kingdom, possessing exceptional intellect and shrewdness.\nTogether with the Red Knight Nathan, he is known as one of the \"Twin Pillars of Arago,\" renowned throughout Dagza.\nA sarcastic man with a cynical outlook on everything.\n\nLikes: The green armor bestowed by the king, beautiful women, research on military strategy"
       }
     },
@@ -1308,7 +1308,7 @@
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": null,
+      "classId": "class_brigand",
       "boons": [
         "axe",
         "faith"
@@ -1647,7 +1647,7 @@
     {
       "id": "unit_ms3oeprflm40x",
       "name": "Eshmel",
-      "portrait": "/images/ms4jpwlv6133if.jpg",
+      "portrait": "/images/msmwmvcuiquzr1.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1667,12 +1667,12 @@
     },
     {
       "id": "unit_msftrzee97kx3",
-      "name": "Kouka",
-      "portrait": "/images/msfts6thpiky1b.png",
+      "name": "Hong Hua",
+      "portrait": "/images/msmwjwlgz1pfna.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": null,
+      "classId": "class_msetrmdx8vazf",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -1680,7 +1680,9 @@
         "name": "",
         "description": ""
       },
-      "fields": {},
+      "fields": {
+        "backstory": "A woman who assisted in the birth of the \"Savior\", guiding them to the Goddess of Fate Fortuna in the \"Forbidden Lands.\" She is aware of the great sin she committed in the past and is determined to fight, even at the cost of her own life. All to atone for her actions.\n\nLikes: Memories of Happier times"
+      },
       "postTimeskip": true
     },
     {
