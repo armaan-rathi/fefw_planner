@@ -91,7 +91,7 @@ export function TierList() {
     });
   }
   function reset() {
-    if (window.confirm("Reset the tier list back to empty S–F tiers?")) setData(DEFAULT_DATA);
+    if (window.confirm("Reset the tier list back to empty S–D tiers?")) setData(DEFAULT_DATA);
   }
 
   // ---- drag (desktop) + tap menu (mobile) ----
@@ -140,15 +140,21 @@ export function TierList() {
           <h2>Tier List</h2>
           <p>Rank the cast — drag a unit onto a tier (drop onto another unit to slot it in / reorder), or tap a unit and pick a tier. Rename a tier by typing in its label.</p>
         </div>
-        <div className="row" style={{ gap: 14, flexWrap: "wrap", alignItems: "center" }}>
-          <label className="dev-toggle" style={{ whiteSpace: "nowrap" }}>
-            <input type="checkbox" checked={includeGods} onChange={(e) => setIncludeGods(e.target.checked)} />
-            <span>Include Gods</span>
-          </label>
-          <label className="dev-toggle" style={{ whiteSpace: "nowrap" }}>
-            <input type="checkbox" checked={includeNpcs} onChange={(e) => setIncludeNpcs(e.target.checked)} />
-            <span>Include NPCs</span>
-          </label>
+        <div className="row" style={{ gap: 8, flexWrap: "wrap", alignItems: "center" }}>
+          <button
+            className={"btn" + (includeGods ? " primary" : " ghost")}
+            onClick={() => setIncludeGods((v) => !v)}
+            title="Include Gods in the pool"
+          >
+            {includeGods ? "✓ Gods" : "Include Gods"}
+          </button>
+          <button
+            className={"btn" + (includeNpcs ? " primary" : " ghost")}
+            onClick={() => setIncludeNpcs((v) => !v)}
+            title="Include Important NPCs in the pool"
+          >
+            {includeNpcs ? "✓ NPCs" : "Include NPCs"}
+          </button>
           <button className="btn" onClick={addTier}>+ Add tier</button>
           <button className="btn ghost" onClick={reset}>Reset</button>
         </div>
