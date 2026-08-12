@@ -621,6 +621,17 @@
           "grade": "B"
         }
       ]
+    },
+    {
+      "id": "class_msq4e4acse4cv",
+      "name": "War Monk",
+      "tier": "Advanced",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "brawl"
+      ],
+      "portrait": null
     }
   ],
   "units": [
@@ -1688,11 +1699,11 @@
     {
       "id": "unit_mshblux2thfxr",
       "name": "Troy",
-      "portrait": "/images/mshbm0lqzvyb4c.jpg",
+      "portrait": "/images/msq4dns3b5lype.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": null,
+      "classId": "class_msq4e4acse4cv",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -1700,7 +1711,9 @@
         "name": "",
         "description": ""
       },
-      "fields": {},
+      "fields": {
+        "backstory": "A reliable old warrior who joined the Savior Army after receiving contact from the person who prepared Eshmel's body.\nShe has known the kings of Saramis throughout history and was called \"Grandma\" by Theodora when she was a child.\n\nLikes: Her comrades, abundant nature, weapon maintenance"
+      },
       "postTimeskip": true
     }
   ],
