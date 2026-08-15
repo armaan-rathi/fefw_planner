@@ -135,7 +135,12 @@
         "brawl",
         "infantry"
       ],
-      "portrait": null
+      "portrait": null,
+      "masteredAbility": {
+        "name": "Attack Basics",
+        "description": "",
+        "icon": null
+      }
     },
     {
       "id": "class_ms4godtdiwiu4",
@@ -176,7 +181,12 @@
         "faith",
         "authority"
       ],
-      "portrait": null
+      "portrait": null,
+      "masteredAbility": {
+        "name": "Magic Basics",
+        "description": "Grants Mag/Res +1",
+        "icon": null
+      }
     },
     {
       "id": "class_ornius",
