@@ -357,6 +357,29 @@ label.field > span {
   font-family: Georgia, serif;
   font-weight: 700;
 }
+/* "?" badge for possibly enemy-only units (sits outside the clipped portrait) */
+.portrait-wrap {
+  position: relative;
+  display: inline-flex;
+  flex: none;
+}
+.portrait-q {
+  position: absolute;
+  right: -3px;
+  bottom: -3px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gold);
+  color: #1a1208;
+  border-radius: 50%;
+  border: 2px solid #0a161b;
+  font-family: Georgia, serif;
+  font-weight: 800;
+  line-height: 1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
 
 /* ---- Proficiency grid ---- */
 .prof-grid {
@@ -1585,6 +1608,7 @@ input[type="range"]::-moz-range-thumb {
   box-shadow: var(--shadow);
 }
 .char-portrait {
+  position: relative;
   width: 100%;
   aspect-ratio: 3 / 4;
   background: linear-gradient(160deg, #21434d, #122a31);
@@ -1593,6 +1617,25 @@ input[type="range"]::-moz-range-thumb {
   justify-content: center;
   overflow: hidden;
   color: var(--gold);
+}
+.char-q {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  z-index: 2;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gold);
+  color: #1a1208;
+  border-radius: 50%;
+  border: 2px solid #0a161b;
+  font-family: Georgia, serif;
+  font-weight: 800;
+  font-size: 17px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 .char-portrait img {
   width: 100%;

@@ -89,7 +89,12 @@
         "Moon's Lie",
         "Linaria's Morning Dew",
         "Brides of the Pale Raven",
-        "Thundercloud Knights"
+        "Thundercloud Knights",
+        "Gaia Brigadiers",
+        "Silver Knights",
+        "Mane of Flame",
+        "Palma Fighters",
+        "Promised One's Army"
       ]
     },
     {
@@ -106,9 +111,7 @@
       "tier": "Base",
       "description": "",
       "movementType": "infantry",
-      "proficiencies": [
-        "authority"
-      ],
+      "proficiencies": [],
       "portrait": null
     },
     {
@@ -382,7 +385,7 @@
       "portrait": null,
       "classAbilities": [
         {
-          "name": "White-Magic Seeker?",
+          "name": "White-Magic Seeker",
           "description": "",
           "icon": null
         },
@@ -396,7 +399,12 @@
           "description": "",
           "icon": null
         }
-      ]
+      ],
+      "masteredAbility": {
+        "name": "Forcefield",
+        "description": "",
+        "icon": null
+      }
     },
     {
       "id": "class_msesj7wz0j31a",
@@ -631,6 +639,54 @@
       "proficiencies": [
         "brawl"
       ],
+      "portrait": null
+    },
+    {
+      "id": "class_msu3e3ohulo8g",
+      "name": "High Savant",
+      "tier": "Advanced",
+      "description": "",
+      "movementType": "cavalry",
+      "proficiencies": [
+        "reason",
+        "riding"
+      ],
+      "portrait": null
+    },
+    {
+      "id": "class_msu3eg9fgd3kr",
+      "name": "Orichaldia",
+      "tier": "Master",
+      "description": "",
+      "movementType": "",
+      "proficiencies": [],
+      "portrait": null
+    },
+    {
+      "id": "class_msu3fed8hm3kb",
+      "name": "Swordmaster",
+      "tier": "Master",
+      "description": "",
+      "movementType": "",
+      "proficiencies": [],
+      "portrait": null
+    },
+    {
+      "id": "class_msu3fkxu6tsm1",
+      "name": "Sentinel",
+      "tier": "Master",
+      "description": "",
+      "movementType": "",
+      "proficiencies": [],
+      "portrait": null
+    },
+    {
+      "id": "class_msu3frkcvmepo",
+      "name": "Dancer",
+      "tier": "Master",
+      "description": "",
+      "movementType": "",
+      "proficiencies": [],
       "portrait": null
     }
   ],
@@ -1239,7 +1295,7 @@
     },
     {
       "id": "unit_ms4b0fg9gc03t",
-      "name": "Lilyhardt*",
+      "name": "Sha Lan",
       "portrait": "/images/msf9aclmn9q739.png",
       "isLord": false,
       "routeIds": [],
@@ -1347,7 +1403,9 @@
         "name": "",
         "description": ""
       },
-      "fields": {}
+      "fields": {
+        "faction": "Silver Knights"
+      }
     },
     {
       "id": "unit_ms4aycsktz7vo",
@@ -1364,12 +1422,14 @@
         "name": "",
         "description": ""
       },
-      "fields": {}
+      "fields": {
+        "faction": "Linaria's Morning Dew"
+      }
     },
     {
       "id": "unit_ms4b3v4raamqa",
-      "name": "Rapunzel*",
-      "portrait": "/images/msf9g01j9szxc4.png",
+      "name": "Catania",
+      "portrait": "/images/msu4448iole60m.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1443,8 +1503,8 @@
     },
     {
       "id": "unit_ms4b8a7pr2e4u",
-      "name": "Shy Guy*",
-      "portrait": "/images/ms4jnyi9kmti07.png",
+      "name": "Zarconne",
+      "portrait": "/images/msu4tzj18am2xc.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1456,7 +1516,9 @@
         "name": "",
         "description": ""
       },
-      "fields": {}
+      "fields": {
+        "faction": "Gaia Brigadiers"
+      }
     },
     {
       "id": "unit_ms4b9764g1dhr",
@@ -1485,7 +1547,7 @@
     },
     {
       "id": "unit_ms4b4zib7ibpz",
-      "name": "Pink Leia*",
+      "name": "Ludia",
       "portrait": "/images/ms4j52g4qqvh9f.jpg",
       "isLord": false,
       "routeIds": [],
@@ -1498,7 +1560,9 @@
         "name": "",
         "description": ""
       },
-      "fields": {}
+      "fields": {
+        "faction": "Moon's Lie"
+      }
     },
     {
       "id": "unit_ms4b44v3k39y1",
@@ -1519,8 +1583,8 @@
     },
     {
       "id": "unit_ms4b5mqtae605",
-      "name": "Lavender Mage*",
-      "portrait": "/images/ms4j5955sq7n92.jpg",
+      "name": "Fianna",
+      "portrait": "/images/msu4u4elj7zfaa.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1532,7 +1596,9 @@
         "name": "",
         "description": ""
       },
-      "fields": {}
+      "fields": {
+        "faction": "Moon's Lie"
+      }
     },
     {
       "id": "unit_msesdf1q9njym",
@@ -1602,12 +1668,14 @@
         "name": "",
         "description": ""
       },
-      "fields": {}
+      "fields": {
+        "faction": "Brides of the Pale Raven"
+      }
     },
     {
       "id": "unit_msesm42zaq9do",
       "name": "Dante",
-      "portrait": "/images/msf6zult18gj4v.png",
+      "portrait": "/images/msu54ltb9ctk4n.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1619,12 +1687,14 @@
         "name": "",
         "description": ""
       },
-      "fields": {}
+      "fields": {
+        "faction": "Mane of Flame"
+      }
     },
     {
       "id": "unit_msesn64bv1fun",
       "name": "Goliath",
-      "portrait": "/images/msf73zkwdwy6w4.png",
+      "portrait": "/images/msu471katvul0k.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1671,7 +1741,7 @@
         "description": ""
       },
       "fields": {
-        "faction": "",
+        "faction": "Promised One's Army",
         "backstory": "A true hero born to shed light upon the world. Similar to the Herald of the Pale Raven mentioned in a poem long ago.\n\nTravels to the past with Fortuna, Goddess of Fate, at the behest of the progenitor god Sothis to gather allies and defeat the demon god Balor.\n\nLikes: Ambitious people, people of great talent, small and unnamed flowers\n\nInterests: Playing board games"
       },
       "postTimeskip": true
@@ -1692,7 +1762,8 @@
         "description": ""
       },
       "fields": {
-        "backstory": "A woman who assisted in the birth of the \"Savior\", guiding them to the Goddess of Fate Fortuna in the \"Forbidden Lands.\" She is aware of the great sin she committed in the past and is determined to fight, even at the cost of her own life. All to atone for her actions.\n\nLikes: Memories of Happier times"
+        "backstory": "A woman who assisted in the birth of the \"Savior\", guiding them to the Goddess of Fate Fortuna in the \"Forbidden Lands.\" She is aware of the great sin she committed in the past and is determined to fight, even at the cost of her own life. All to atone for her actions.\n\nLikes: Memories of Happier times",
+        "faction": "Promised One's Army"
       },
       "postTimeskip": true
     },
@@ -1712,9 +1783,177 @@
         "description": ""
       },
       "fields": {
-        "backstory": "A reliable old warrior who joined the Savior Army after receiving contact from the person who prepared Eshmel's body.\nShe has known the kings of Saramis throughout history and was called \"Grandma\" by Theodora when she was a child.\n\nLikes: Her comrades, abundant nature, weapon maintenance"
+        "backstory": "A reliable old warrior who joined the Savior Army after receiving contact from the person who prepared Eshmel's body.\nShe has known the kings of Saramis throughout history and was called \"Grandma\" by Theodora when she was a child.\n\nLikes: Her comrades, abundant nature, weapon maintenance",
+        "faction": "Promised One's Army"
       },
       "postTimeskip": true
+    },
+    {
+      "id": "unit_msu41p5eli1ai",
+      "name": "Aswan",
+      "portrait": "/images/msu41uq9kwwlqe.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {},
+      "possiblyEnemyOnly": true
+    },
+    {
+      "id": "unit_msu425y5cxugz",
+      "name": "Halvin",
+      "portrait": "/images/msu42jj8q0ckd2.png",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Brides of the Pale Raven"
+      }
+    },
+    {
+      "id": "unit_msu42ne4imvnh",
+      "name": "Jester",
+      "portrait": "/images/msu431jw2erw37.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_msu45xa66phts",
+      "name": "Long",
+      "portrait": "/images/msu4660pt8tw54.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Brides of the Pale Raven"
+      },
+      "possiblyEnemyOnly": true
+    },
+    {
+      "id": "unit_msu4iccnmpc6w",
+      "name": "Mohawk",
+      "portrait": "/images/msu4ijycf6filj.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Brides of the Pale Raven"
+      },
+      "possiblyEnemyOnly": true
+    },
+    {
+      "id": "unit_msu4dr4u0h6sh",
+      "name": "Jasmine",
+      "portrait": "/images/msu4dxy7cls1ab.png",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Palma Fighters"
+      },
+      "possiblyEnemyOnly": true
+    },
+    {
+      "id": "unit_msu434ibp8q8s",
+      "name": "Maria",
+      "portrait": "/images/msu43dhios42g3.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_msu448hnym292",
+      "name": "Centurio",
+      "portrait": "/images/msu44egr79gufi.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_msu4rfw7l4959",
+      "name": "Loretta",
+      "portrait": "/images/msu4rnk79qthxy.png",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Linaria's Morning Dew"
+      }
     }
   ],
   "map": {
@@ -4947,11 +5186,27 @@
     },
     {
       "id": "cast_msetp859txc1o",
-      "name": "Kalla?",
-      "portrait": "/images/msf8gncvagy4sf.png",
+      "name": "Kalla",
+      "portrait": "/images/msu3ghbb3jdb5a.jpg",
       "subtitle": "Luck",
       "description": "",
       "crest": "Dominic"
+    },
+    {
+      "id": "cast_msu3g6v7nvzvh",
+      "name": "Jurah",
+      "portrait": "/images/msu3gcm5s1edan.jpg",
+      "subtitle": "",
+      "description": "",
+      "crest": "Fraldarius"
+    },
+    {
+      "id": "cast_msu3j0g5oyvkc",
+      "name": "Credna",
+      "portrait": "/images/msu3j53pssvunp.png",
+      "subtitle": "",
+      "description": "",
+      "crest": "Noa"
     }
   ],
   "npcs": [
@@ -4977,24 +5232,108 @@
       "description": ""
     },
     {
-      "id": "cast_msf8ix5msm98z",
-      "name": "Gold Knight*",
-      "portrait": "/images/msf8jck9wtkdnl.jpg",
-      "subtitle": "Possibly Playable",
-      "description": ""
-    },
-    {
-      "id": "cast_msf8j2k0hjgk5",
-      "name": "Pink Feather Lady*",
-      "portrait": "/images/msf8jnnj1wq7lj.jpg",
-      "subtitle": "Possibly Playable",
-      "description": ""
-    },
-    {
       "id": "cast_msf8obk24tw3b",
       "name": "Sothis",
       "portrait": "/images/msf8og9b7tlbdj.jpg",
       "subtitle": "The Beginning",
+      "description": ""
+    },
+    {
+      "id": "cast_msf8ix5msm98z",
+      "name": "Raksha",
+      "portrait": "/images/msu3jo1dvfgaa8.jpg",
+      "subtitle": "",
+      "description": ""
+    },
+    {
+      "id": "cast_msf8j2k0hjgk5",
+      "name": "Lind",
+      "portrait": "/images/msu3jyk2zpb6ym.jpg",
+      "subtitle": "",
+      "description": ""
+    },
+    {
+      "id": "cast_msu3kjg7so7hn",
+      "name": "Kumos",
+      "portrait": "/images/msu3kr7qbzqq6m.jpg",
+      "subtitle": "",
+      "description": ""
+    },
+    {
+      "id": "cast_msu3kukss85rn",
+      "name": "Hannibal",
+      "portrait": "/images/msu3kz9tnn2m8k.jpg",
+      "subtitle": "",
+      "description": ""
+    },
+    {
+      "id": "cast_msu3met13cv6z",
+      "name": "Balboa",
+      "portrait": "/images/msu3mx7hafpu7i.jpg",
+      "subtitle": "",
+      "description": ""
+    },
+    {
+      "id": "cast_msu3mmxprxizg",
+      "name": "Gabriel",
+      "portrait": "/images/msu3n26sadndre.jpg",
+      "subtitle": "",
+      "description": ""
+    },
+    {
+      "id": "cast_msu3l7zix7uae",
+      "name": "Baozi",
+      "portrait": "/images/msu3mb60x9rn83.jpg",
+      "subtitle": "",
+      "description": ""
+    },
+    {
+      "id": "cast_msu3lgh8ush3e",
+      "name": "Verdant Viking*",
+      "portrait": "/images/msu3otm1r2tsiv.jpg",
+      "subtitle": "",
+      "description": ""
+    },
+    {
+      "id": "cast_msu3m38dkik8j",
+      "name": "Azure Moonlighter*",
+      "portrait": "/images/msu3pcci5yewxm.jpg",
+      "subtitle": "",
+      "description": ""
+    },
+    {
+      "id": "cast_msu49mcvnv3fp",
+      "name": "Bjor",
+      "portrait": "/images/msu49vzodl75z0.jpg",
+      "subtitle": "",
+      "description": ""
+    },
+    {
+      "id": "cast_msu41a5e6pr1l",
+      "name": "Bahr Van*",
+      "portrait": "/images/msu41eqoaqvq8u.jpg",
+      "subtitle": "",
+      "description": ""
+    },
+    {
+      "id": "cast_msu4qvpg99aw7",
+      "name": "Dyan",
+      "portrait": "/images/msu4r3pqmtjhze.jpg",
+      "subtitle": "",
+      "description": ""
+    },
+    {
+      "id": "cast_msu3n6a76jn95",
+      "name": "Cruaidin",
+      "portrait": "/images/msu4rbfmbovjbs.png",
+      "subtitle": "",
+      "description": ""
+    },
+    {
+      "id": "cast_msu577owew623",
+      "name": "Dagda",
+      "portrait": "/images/msu57d6ud0t1zi.jpg",
+      "subtitle": "",
       "description": ""
     }
   ],

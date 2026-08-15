@@ -347,7 +347,7 @@ export function RouteSelection() {
                     <tr key={u.id}>
                       <td>
                         <div className="row">
-                          <UnitPortrait src={u.portrait} name={u.name} size={38} />
+                          <UnitPortrait src={u.portrait} name={u.name} size={38} question={u.possiblyEnemyOnly} />
                           <div>
                             <div className="row" style={{ gap: 6 }}>
                               <span style={{ fontWeight: 600 }}>{u.name || "Unnamed"}</span>

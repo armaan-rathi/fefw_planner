@@ -42,7 +42,7 @@ export type FieldValue = string | boolean | string[];
 
 export type MovementType = "infantry" | "cavalry" | "flying" | "armored" | "monster" | "";
 
-export const CLASS_TIERS = ["Base", "Beginner", "Specialty", "Advanced", "Unique"];
+export const CLASS_TIERS = ["Base", "Beginner", "Specialty", "Advanced", "Master"];
 
 // A required skill proficiency (skill type + minimum grade) for certification.
 export interface SkillReq {
@@ -97,6 +97,7 @@ export interface Unit {
   personalSkill: PersonalSkill;
   fields: Record<string, FieldValue>; // custom field values keyed by FieldDef.key (e.g. faction)
   postTimeskip?: boolean; // only recruitable/available after the timeskip
+  possiblyEnemyOnly?: boolean; // may turn out to be enemy-only (shows a "?" on the portrait)
 }
 
 export type IconShape = "circle" | "square" | "triangle" | "invtriangle" | "star4" | "star8";

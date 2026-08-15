@@ -142,7 +142,7 @@ export function RouteSplit() {
       onClick={(e) => openMenu(e, u.id)}
       title={u.name || "Unnamed"}
     >
-      <UnitPortrait src={u.portrait} name={u.name} size={52} />
+      <UnitPortrait src={u.portrait} name={u.name} size={52} question={u.possiblyEnemyOnly} />
       <span className="split-chip-name">{u.name || "Unnamed"}</span>
     </div>
   );

@@ -12,6 +12,7 @@ function Portrait({ unit, className }: { unit: Unit; className?: string }) {
   return (
     <div className={"char-portrait " + (className || "")}>
       {unit.portrait ? <img src={unit.portrait} alt={unit.name} /> : <span className="char-initial">{initial}</span>}
+      {unit.possiblyEnemyOnly && <span className="char-q" title="Possibly enemy-only">?</span>}
     </div>
   );
 }

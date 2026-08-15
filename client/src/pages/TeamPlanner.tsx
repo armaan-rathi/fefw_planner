@@ -158,7 +158,7 @@ export function TeamPlanner() {
                     onDragStart={(e) => e.dataTransfer.setData("text/unit", u.id)}
                     onClick={() => setPicked((p) => (p === u.id ? null : u.id))}
                   >
-                    <UnitPortrait src={u.portrait} name={u.name} size={36} />
+                    <UnitPortrait src={u.portrait} name={u.name} size={36} question={u.possiblyEnemyOnly} />
                     <div className="grow">
                       <div style={{ fontWeight: 600 }}>{u.name || "Unnamed"}</div>
                       {unitFaction(u) && <div className="muted" style={{ fontSize: 11.5 }}>{unitFaction(u)}</div>}
@@ -210,7 +210,7 @@ export function TeamPlanner() {
                   <>
                     <div className="spread">
                       <div className="row">
-                        <UnitPortrait src={unit.portrait} name={unit.name} size={40} />
+                        <UnitPortrait src={unit.portrait} name={unit.name} size={40} question={unit.possiblyEnemyOnly} />
                         <div>
                           <div className="row" style={{ gap: 6 }}>
                             <span style={{ fontWeight: 700 }}>{unit.name || "Unnamed"}</span>

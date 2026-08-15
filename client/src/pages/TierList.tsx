@@ -6,7 +6,7 @@ import { uid } from "../api";
 
 type Tier = { id: string; label: string };
 type TierListData = { tiers: Tier[]; placements: Record<string, string[]> }; // tierId -> item ids
-type RankItem = { id: string; name: string; portrait: string | null };
+type RankItem = { id: string; name: string; portrait: string | null; question?: boolean };
 
 const DEFAULT_TIERS: Tier[] = ["S", "A", "B", "C", "D"].map((l) => ({ id: "t_" + l.toLowerCase(), label: l }));
 const DEFAULT_DATA: TierListData = { tiers: DEFAULT_TIERS, placements: {} };
@@ -23,7 +23,7 @@ export function TierList() {
 
   // Rankable items: units, plus Gods / Important NPCs when toggled on.
   const items = useMemo<RankItem[]>(() => {
-    const list: RankItem[] = db.units.map((u) => ({ id: u.id, name: u.name, portrait: u.portrait }));
+    const list: RankItem[] = db.units.map((u) => ({ id: u.id, name: u.name, portrait: u.portrait, question: u.possiblyEnemyOnly }));
     if (includeGods) for (const g of db.gods ?? []) list.push({ id: g.id, name: g.name, portrait: g.portrait });
     if (includeNpcs) for (const n of db.npcs ?? []) list.push({ id: n.id, name: n.name, portrait: n.portrait });
     return list;
@@ -128,7 +128,7 @@ export function TierList() {
       onClick={(e) => setMenu({ unitId: u.id, rect: (e.currentTarget as HTMLElement).getBoundingClientRect() })}
       title={u.name || "Unnamed"}
     >
-      <UnitPortrait src={u.portrait} name={u.name} size={46} />
+      <UnitPortrait src={u.portrait} name={u.name} size={46} question={u.question} />
       <span className="tier-chip-name">{u.name || "Unnamed"}</span>
     </div>
   );

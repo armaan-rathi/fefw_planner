@@ -109,6 +109,7 @@ function newUnit(id, name, extra = {}) {
     personalSkill: { name: "", description: "" },
     fields: {},
     postTimeskip: false,
+    possiblyEnemyOnly: false,
     ...extra,
   };
 }
