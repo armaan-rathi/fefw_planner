@@ -43,6 +43,28 @@ export function CastEditor({ kind, label, subtitleLabel }: { kind: CastKind; lab
       d[kind] = arr;
     });
   }
+  // Turn an Important NPC into a playable unit: delete the NPC, create a unit
+  // carrying its name and portrait (unit-specific data starts blank).
+  function convertToUnit(m: CastMember) {
+    if (!confirm(`Convert "${m.name || "this NPC"}" into a playable unit?\n\nThe NPC entry will be deleted and re-created as a unit.`)) return;
+    update((d) => {
+      d[kind] = (d[kind] ?? []).filter((x) => x.id !== m.id);
+      d.units.push({
+        id: uid("unit_"),
+        name: m.name,
+        portrait: m.portrait,
+        isLord: false,
+        routeIds: [],
+        starterFor: [],
+        classId: null,
+        boons: [],
+        banes: [],
+        skillLevels: {},
+        personalSkill: { name: "", description: "" },
+        fields: {},
+      });
+    });
+  }
   function setBlessing(id: string, idx: number, val: string) {
     update((d) => {
       const m = (d[kind] ?? []).find((x) => x.id === id);
@@ -111,7 +133,12 @@ export function CastEditor({ kind, label, subtitleLabel }: { kind: CastKind; lab
                     </label>
                   )}
                 </div>
-                <button className="btn tiny danger" onClick={() => remove(m.id)}>Delete</button>
+                <div className="stack" style={{ gap: 6 }}>
+                  {!isGods && (
+                    <button className="btn tiny" title="Delete this NPC and re-create it as a playable unit" onClick={() => convertToUnit(m)}>→ Unit</button>
+                  )}
+                  <button className="btn tiny danger" onClick={() => remove(m.id)}>Delete</button>
+                </div>
               </div>
             ))}
           </div>

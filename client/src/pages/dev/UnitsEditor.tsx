@@ -59,6 +59,23 @@ export function UnitsEditor() {
       [d.units[i], d.units[j]] = [d.units[j], d.units[i]];
     });
   }
+  // Turn a unit into an Important NPC: delete the unit, create an NPC carrying
+  // name, portrait, faction (as subtitle) and personal-skill text (as description).
+  function convertToNpc(u: Unit) {
+    if (!confirm(`Convert "${u.name || "this unit"}" into an Important NPC?\n\nThe unit will be deleted and re-created as an NPC.`)) return;
+    update((d) => {
+      d.units = d.units.filter((x) => x.id !== u.id);
+      const arr = d.npcs ?? [];
+      arr.push({
+        id: uid("cast_"),
+        name: u.name,
+        portrait: u.portrait,
+        subtitle: unitFaction(u),
+        description: u.personalSkill.description || "",
+      });
+      d.npcs = arr;
+    });
+  }
 
   return (
     <div>
@@ -103,6 +120,7 @@ export function UnitsEditor() {
                 </div>
                 <div className="row">
                   <button className="btn tiny" onClick={() => setEditing(u)}>Edit</button>
+                  <button className="btn tiny" title="Delete this unit and re-create it as an Important NPC" onClick={() => convertToNpc(u)}>→ NPC</button>
                   <button className="btn tiny danger" onClick={() => remove(u.id)}>Delete</button>
                   {!query && (
                     <span className="row" style={{ gap: 2, marginLeft: "auto" }}>

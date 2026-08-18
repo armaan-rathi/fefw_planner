@@ -1851,24 +1851,6 @@
       "fields": {}
     },
     {
-      "id": "unit_msu5yxkaz8lpw",
-      "name": "Iliana",
-      "portrait": "/images/msu5z6k7nc562b.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": null,
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {},
-      "possiblyEnemyOnly": true
-    },
-    {
       "id": "unit_msu41p5eli1ai",
       "name": "Aswan",
       "portrait": "/images/msu6112ylub3ua.jpg",
@@ -5361,6 +5343,13 @@
       "id": "cast_msu577owew623",
       "name": "Dagda",
       "portrait": "/images/msu57d6ud0t1zi.jpg",
+      "subtitle": "",
+      "description": ""
+    },
+    {
+      "id": "cast_msydo5etxtzgy",
+      "name": "Iliana",
+      "portrait": "/images/msu5z6k7nc562b.jpg",
       "subtitle": "",
       "description": ""
     }
