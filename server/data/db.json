@@ -94,7 +94,8 @@
         "Silver Knights",
         "Mane of Flame",
         "Palma Fighters",
-        "Promised One's Army"
+        "Promised One's Army",
+        "Aurora's Temple"
       ]
     },
     {
@@ -1458,7 +1459,7 @@
     },
     {
       "id": "unit_msu4iccnmpc6w",
-      "name": "Mohawk",
+      "name": "Dao",
       "portrait": "/images/msu4ijycf6filj.jpg",
       "isLord": false,
       "routeIds": [],
@@ -1871,7 +1872,7 @@
     {
       "id": "unit_msu448hnym292",
       "name": "Centurio",
-      "portrait": "/images/msu44egr79gufi.jpg",
+      "portrait": "/images/mt0es67fwdiblf.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1883,7 +1884,10 @@
         "name": "",
         "description": ""
       },
-      "fields": {}
+      "fields": {
+        "backstory": "A knight serving at Aurora’s Temple. Known as “Corundum”, he’s a “Vulcan”, member of an elite squadron chosen from the temple priests. An old friend of Cai’s father, Castor, and the two share a deep mutual trust.\n\nLikes: Serving Aurora’s temple, patrolling",
+        "faction": "Aurora's Temple"
+      }
     },
     {
       "id": "unit_msu434ibp8q8s",
@@ -5165,7 +5169,7 @@
     {
       "id": "cast_msetmnaxter8p",
       "name": "Aurora",
-      "portrait": "/images/msf7z1c79eo2iw.jpg",
+      "portrait": "/images/mt0eth5el1vt4j.jpg",
       "subtitle": "",
       "description": "",
       "crest": "Aubin"
@@ -5223,9 +5227,9 @@
     {
       "id": "cast_mseto4xteu04v",
       "name": "Solel",
-      "portrait": "/images/msfzmr2elbs11f.png",
+      "portrait": "/images/mt0esjm266kmhw.jpg",
       "subtitle": "The Divine Sovereign",
-      "description": ""
+      "description": "The Sunbearer, a pillar of the Dagdan Pantheon. Acting as the proxy for “Dagda the Great”, who has fallen into a deep slumber, he rules over the empire as the “Divine Sovereign”.\n\nLikes: Board games"
     },
     {
       "id": "cast_msev2ov2qmcc8",
@@ -5349,9 +5353,9 @@
     {
       "id": "cast_msydo5etxtzgy",
       "name": "Iliana",
-      "portrait": "/images/msu5z6k7nc562b.jpg",
+      "portrait": "/images/mt0esvw483gff5.jpg",
       "subtitle": "",
-      "description": ""
+      "description": "A beautiful woman who hides half her face behind a veil. Seems to love watching fierce battles and is eagerly spectating the Heroic Games next to Divine Sovereign Solel. Always keeps her plush doll, Babbu, close at hand.\n\nLikes: Blood, rare flowers"
     }
   ],
   "tierRequirements": {
