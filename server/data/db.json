@@ -1326,7 +1326,7 @@
     {
       "id": "unit_ms4aycsktz7vo",
       "name": "Seteth",
-      "portrait": "/images/msf77u5q1iwjj3.png",
+      "portrait": "/images/mt1yq3an706y37.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1349,7 +1349,7 @@
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": null,
+      "classId": "class_ms3o7io5clmwu",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -1425,7 +1425,7 @@
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": null,
+      "classId": "class_archer",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -1904,7 +1904,8 @@
         "name": "",
         "description": ""
       },
-      "fields": {}
+      "fields": {},
+      "possiblyEnemyOnly": true
     },
     {
       "id": "unit_ms3oeprflm40x",
@@ -5185,8 +5186,8 @@
     {
       "id": "cast_msetp3tw9ohgz",
       "name": "Mars",
-      "portrait": "/images/msf8dxcop7jdsm.png",
-      "subtitle": "",
+      "portrait": "/images/mt1ybjw0owgu4i.jpg",
+      "subtitle": "War",
       "description": "",
       "crest": "Daphnel"
     },
@@ -5201,8 +5202,8 @@
     {
       "id": "cast_msetp859txc1o",
       "name": "Kalla",
-      "portrait": "/images/msu3ghbb3jdb5a.jpg",
-      "subtitle": "Luck",
+      "portrait": "/images/mt1ybp0u9yg95c.jpg",
+      "subtitle": "Hunting and Art",
       "description": "",
       "crest": "Dominic"
     },
@@ -5356,6 +5357,13 @@
       "portrait": "/images/mt0esvw483gff5.jpg",
       "subtitle": "",
       "description": "A beautiful woman who hides half her face behind a veil. Seems to love watching fierce battles and is eagerly spectating the Heroic Games next to Divine Sovereign Solel. Always keeps her plush doll, Babbu, close at hand.\n\nLikes: Blood, rare flowers"
+    },
+    {
+      "id": "cast_mt1ynps0c2hij",
+      "name": "Red Bolt*",
+      "portrait": "/images/mt1yoxpe7nelpw.jpg",
+      "subtitle": "",
+      "description": ""
     }
   ],
   "tierRequirements": {
