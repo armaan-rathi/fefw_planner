@@ -1211,7 +1211,7 @@
     },
     {
       "id": "unit_ms4ax1urookeq",
-      "name": "Talimoon",
+      "name": "Talimun",
       "portrait": "/images/msft4qzcfb2dg5.png",
       "isLord": false,
       "routeIds": [],
@@ -1225,7 +1225,8 @@
         "description": ""
       },
       "fields": {
-        "faction": "Moon's Lie"
+        "faction": "Moon's Lie",
+        "backstory": "The leader of the “Vandahl Merchants”, one of Dagda’s top merchant guilds. He seems carefree and elusive, but has big ambitions. Apparently collecting items known as “Drake’s Treasures”.\n\nLikes: Money, adventure, cinnamon"
       }
     },
     {
@@ -5237,7 +5238,7 @@
       "name": "Bertrand",
       "portrait": "/images/msfusolkz3q0c0.jpg",
       "subtitle": "The White-Maned Demon",
-      "description": ""
+      "description": "A gladiator who continues to fight in the Dagsion arena.\n\nKnown by the moniker \"White-Maned Demon\" for his demonic strength. It is said that five years ago, he committed a great sin and was imprisoned in the underground dungeon of the arena.\n\nLikes: Training, salted meat, well-crafted weapons, reading, board games"
     },
     {
       "id": "cast_msf6d3kjkn3gs",
@@ -5325,7 +5326,7 @@
     },
     {
       "id": "cast_msu41a5e6pr1l",
-      "name": "Bahr Van*",
+      "name": "Bartolomé",
       "portrait": "/images/msu41eqoaqvq8u.jpg",
       "subtitle": "",
       "description": ""
