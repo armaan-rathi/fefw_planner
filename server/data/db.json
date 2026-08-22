@@ -5253,6 +5253,14 @@
   },
   "gods": [
     {
+      "id": "cast_msetp6lndpw3d",
+      "name": "Fortuna",
+      "portrait": "/images/mshbsolhwdr55o.png",
+      "subtitle": "Fate",
+      "description": "",
+      "crest": "Goneril"
+    },
+    {
       "id": "cast_msetmnaxter8p",
       "name": "Aurora",
       "portrait": "/images/mt0eth5el1vt4j.jpg",
@@ -5263,19 +5271,6 @@
         "Halves damage from physical attacks for 1 turn",
         "Halves damage from magical attacks for 1 turn",
         "Neutralizes Underworld Boon on foe for 1 turn"
-      ]
-    },
-    {
-      "id": "cast_msetoyu3483vr",
-      "name": "Smyrnos",
-      "portrait": "/images/msf8dsb46454kl.png",
-      "subtitle": "",
-      "description": "",
-      "crest": "Macuil",
-      "blessings": [
-        "Hit +50 to magical attacks for 1 turn",
-        "Rng +1 to magic for 1 turn",
-        "Mag +5 for 1 turn"
       ]
     },
     {
@@ -5292,24 +5287,16 @@
       ]
     },
     {
-      "id": "cast_msetp6lndpw3d",
-      "name": "Fortuna",
-      "portrait": "/images/mshbsolhwdr55o.png",
-      "subtitle": "Fate",
+      "id": "cast_msetoyu3483vr",
+      "name": "Smyrnos",
+      "portrait": "/images/msf8dsb46454kl.png",
+      "subtitle": "",
       "description": "",
-      "crest": "Goneril"
-    },
-    {
-      "id": "cast_msetp859txc1o",
-      "name": "Kalla",
-      "portrait": "/images/mt1ybp0u9yg95c.jpg",
-      "subtitle": "Hunting and Art",
-      "description": "",
-      "crest": "Dominic",
+      "crest": "Macuil",
       "blessings": [
-        "Grants Avo +50 for 1 turn",
-        "Grants Dex +5 for 1 turn",
-        "Grants Spd +2 for 1 turn"
+        "Hit +50 to magical attacks for 1 turn",
+        "Rng +1 to magic for 1 turn",
+        "Mag +5 for 1 turn"
       ]
     },
     {
@@ -5323,6 +5310,19 @@
         "Prevents effective damage against the user for 1 turn",
         "Prevents follow-up attacks against the user for 1 turn",
         "Prevents critical hits against the user for 1 turn"
+      ]
+    },
+    {
+      "id": "cast_msetp859txc1o",
+      "name": "Kalla",
+      "portrait": "/images/mt1ybp0u9yg95c.jpg",
+      "subtitle": "Hunting and Art",
+      "description": "",
+      "crest": "Dominic",
+      "blessings": [
+        "Grants Avo +50 for 1 turn",
+        "Grants Dex +5 for 1 turn",
+        "Grants Spd +2 for 1 turn"
       ]
     },
     {
