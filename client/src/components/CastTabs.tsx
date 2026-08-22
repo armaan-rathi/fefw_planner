@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 export function CastTabs() {
   return (
     <div className="cast-tabs">
-      <NavLink to="/characters" end>All Units</NavLink>
+      <NavLink to="/characters" end>Units</NavLink>
       <NavLink to="/gods">Gods</NavLink>
       <NavLink to="/npcs">Important NPCs</NavLink>
     </div>

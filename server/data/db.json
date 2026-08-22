@@ -1305,7 +1305,8 @@
       "fields": {
         "faction": "Linaria's Morning Dew"
       },
-      "postTimeskip": true
+      "postTimeskip": false,
+      "possiblyEnemyOnly": true
     },
     {
       "id": "unit_ms4b7sewbatfh",
@@ -5347,9 +5348,23 @@
       "description": ""
     },
     {
+      "id": "cast_msu4qvpg99aw7",
+      "name": "Dyan",
+      "portrait": "/images/msu4r3pqmtjhze.jpg",
+      "subtitle": "",
+      "description": ""
+    },
+    {
       "id": "cast_msu3kukss85rn",
       "name": "Hannibal",
       "portrait": "/images/msu3kz9tnn2m8k.jpg",
+      "subtitle": "",
+      "description": ""
+    },
+    {
+      "id": "cast_mt4v43625na6d",
+      "name": "Poloni",
+      "portrait": "/images/mt4v47fx7skljo.jpg",
       "subtitle": "",
       "description": ""
     },
@@ -5403,9 +5418,9 @@
       "description": ""
     },
     {
-      "id": "cast_msu4qvpg99aw7",
-      "name": "Dyan",
-      "portrait": "/images/msu4r3pqmtjhze.jpg",
+      "id": "cast_mt1ynps0c2hij",
+      "name": "Red Bolt*",
+      "portrait": "/images/mt1yoxpe7nelpw.jpg",
       "subtitle": "",
       "description": ""
     },
@@ -5429,20 +5444,6 @@
       "portrait": "/images/mt0esvw483gff5.jpg",
       "subtitle": "",
       "description": "A beautiful woman who hides half her face behind a veil. Seems to love watching fierce battles and is eagerly spectating the Heroic Games next to Divine Sovereign Solel. Always keeps her plush doll, Babbu, close at hand.\n\nLikes: Blood, rare flowers"
-    },
-    {
-      "id": "cast_mt1ynps0c2hij",
-      "name": "Red Bolt*",
-      "portrait": "/images/mt1yoxpe7nelpw.jpg",
-      "subtitle": "",
-      "description": ""
-    },
-    {
-      "id": "cast_mt4v43625na6d",
-      "name": "Poloni",
-      "portrait": "/images/mt4v47fx7skljo.jpg",
-      "subtitle": "",
-      "description": ""
     }
   ],
   "tierRequirements": {
