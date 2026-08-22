@@ -7,7 +7,7 @@ import { TeamTabs } from "../components/TeamTabs";
 import { lordFirst } from "../data/units";
 import type { Unit } from "../types";
 
-const MAX_PER_ROUTE = 16;
+const MAX_PER_ROUTE = 20;
 type Split = Record<string, string[]>; // routeId -> unit ids
 
 export function RouteSplit() {
