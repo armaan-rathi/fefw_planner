@@ -1212,7 +1212,7 @@
     {
       "id": "unit_ms4ax1urookeq",
       "name": "Talimun",
-      "portrait": "/images/msft4qzcfb2dg5.png",
+      "portrait": "/images/mt4v0idfsjig41.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1227,7 +1227,8 @@
       "fields": {
         "faction": "Moon's Lie",
         "backstory": "The leader of the “Vandahl Merchants”, one of Dagda’s top merchant guilds. He seems carefree and elusive, but has big ambitions. Apparently collecting items known as “Drake’s Treasures”.\n\nLikes: Money, adventure, cinnamon"
-      }
+      },
+      "possiblyEnemyOnly": true
     },
     {
       "id": "unit_ms4awma1bic3w",
@@ -1303,7 +1304,8 @@
       },
       "fields": {
         "faction": "Linaria's Morning Dew"
-      }
+      },
+      "postTimeskip": true
     },
     {
       "id": "unit_ms4b7sewbatfh",
@@ -1379,7 +1381,8 @@
       },
       "fields": {
         "faction": "Brides of the Pale Raven"
-      }
+      },
+      "possiblyEnemyOnly": true
     },
     {
       "id": "unit_ms4b0fg9gc03t",
@@ -1460,8 +1463,8 @@
     },
     {
       "id": "unit_msu4iccnmpc6w",
-      "name": "Dao",
-      "portrait": "/images/msu4ijycf6filj.jpg",
+      "name": "Dadao",
+      "portrait": "/images/mt4v9cy7zjl3v0.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1476,7 +1479,7 @@
       "fields": {
         "faction": "Brides of the Pale Raven"
       },
-      "possiblyEnemyOnly": true
+      "possiblyEnemyOnly": false
     },
     {
       "id": "unit_msesdf1q9njym",
@@ -1552,6 +1555,47 @@
       },
       "fields": {
         "faction": "Palma Fighters"
+      },
+      "possiblyEnemyOnly": true
+    },
+    {
+      "id": "unit_mt4vbrsx1692p",
+      "name": "Bertrand",
+      "portrait": "/images/mt4v0q2mvfqpj5.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "backstory": "A gladiator who continues to fight in the Dagsion arena.\n\nKnown by the moniker \"White-Maned Demon\" for his demonic strength. It is said that five years ago, he committed a great sin and was imprisoned in the underground dungeon of the arena.\n\nLikes: Training, salted meat, well-crafted weapons, reading, board games",
+        "faction": "Mane of Flame"
+      },
+      "possiblyEnemyOnly": true
+    },
+    {
+      "id": "unit_mt4v8155tinj7",
+      "name": "Gaitz",
+      "portrait": "/images/mt4v86j5qvjq4z.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Mane of Flame"
       },
       "possiblyEnemyOnly": true
     },
@@ -1736,7 +1780,7 @@
     {
       "id": "unit_msesipji4v2wt",
       "name": "Io",
-      "portrait": "/images/msf82kluidbjzo.png",
+      "portrait": "/images/mt4v35hs4pdmcc.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1838,7 +1882,7 @@
     {
       "id": "unit_msu42ne4imvnh",
       "name": "Jester",
-      "portrait": "/images/msu431jw2erw37.jpg",
+      "portrait": "/images/mt4v5a0sifaggt.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1970,6 +2014,40 @@
         "faction": "Promised One's Army"
       },
       "postTimeskip": true
+    },
+    {
+      "id": "unit_mt4v2r1q22a0b",
+      "name": "Majide",
+      "portrait": "/images/mt4v2y7e7s2sto.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_mt4v6olgdd4up",
+      "name": "Simon",
+      "portrait": "/images/mt4v6unq0yuo30.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
     }
   ],
   "map": {
@@ -5234,13 +5312,6 @@
       "description": "The Sunbearer, a pillar of the Dagdan Pantheon. Acting as the proxy for “Dagda the Great”, who has fallen into a deep slumber, he rules over the empire as the “Divine Sovereign”.\n\nLikes: Board games"
     },
     {
-      "id": "cast_msev2ov2qmcc8",
-      "name": "Bertrand",
-      "portrait": "/images/msfusolkz3q0c0.jpg",
-      "subtitle": "The White-Maned Demon",
-      "description": "A gladiator who continues to fight in the Dagsion arena.\n\nKnown by the moniker \"White-Maned Demon\" for his demonic strength. It is said that five years ago, he committed a great sin and was imprisoned in the underground dungeon of the arena.\n\nLikes: Training, salted meat, well-crafted weapons, reading, board games"
-    },
-    {
       "id": "cast_msf6d3kjkn3gs",
       "name": "Castor",
       "portrait": "/images/msf6d9r0h07291.jpg",
@@ -5363,6 +5434,13 @@
       "id": "cast_mt1ynps0c2hij",
       "name": "Red Bolt*",
       "portrait": "/images/mt1yoxpe7nelpw.jpg",
+      "subtitle": "",
+      "description": ""
+    },
+    {
+      "id": "cast_mt4v43625na6d",
+      "name": "Poloni",
+      "portrait": "/images/mt4v47fx7skljo.jpg",
       "subtitle": "",
       "description": ""
     }
