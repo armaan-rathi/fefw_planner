@@ -9,7 +9,7 @@ import { lordFirst, unitFaction, unitsForRoute } from "../data/units";
 import { sortBySkillOrder } from "../data/skills";
 import type { Unit } from "../types";
 
-const SLOT_COUNT = 12;
+const SLOT_COUNT = 20;
 const FREE_COLOR = "#e8eef0";
 type Slot = { unitId: string; classId: string | null } | null;
 type Teams = Record<string, Slot[]>; // route key -> slots
