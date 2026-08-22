@@ -51,7 +51,9 @@ export function TeamPlanner() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [route, db.units]);
 
-  const slots = teams[route] ?? emptyTeam();
+  // Pad teams saved before SLOT_COUNT grew (they were stored with fewer slots).
+  const stored = teams[route] ?? emptyTeam();
+  const slots = stored.length >= SLOT_COUNT ? stored : [...stored, ...Array(SLOT_COUNT - stored.length).fill(null)];
 
   function setSlots(next: Slot[]) {
     setTeams((t) => ({ ...t, [route]: next }));
