@@ -95,7 +95,8 @@
         "Mane of Flame",
         "Palma Fighters",
         "Promised One's Army",
-        "Aurora's Temple"
+        "Aurora's Temple",
+        "Brigid Army"
       ]
     },
     {
@@ -1366,6 +1367,25 @@
       }
     },
     {
+      "id": "unit_ms4b1qq82fg7g",
+      "name": "Ninae",
+      "portrait": "/images/ms4jgxw7tv95tq.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Linaria's Morning Dew"
+      }
+    },
+    {
       "id": "unit_ms4azwjmprdkp",
       "name": "Anatolia",
       "portrait": "/images/msftcwl7tmnydh.jpg",
@@ -1620,6 +1640,25 @@
       }
     },
     {
+      "id": "unit_msesemmywrm9d",
+      "name": "Peppe",
+      "portrait": "/images/msf7u20bfwo6wp.png",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_ms4axgsyshgov",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Brigid Army"
+      }
+    },
+    {
       "id": "unit_msestcd1erzsr",
       "name": "Anna",
       "portrait": "/images/mset8fiesk527h.png",
@@ -1796,23 +1835,6 @@
       "fields": {}
     },
     {
-      "id": "unit_ms4b1qq82fg7g",
-      "name": "Ninae",
-      "portrait": "/images/ms4jgxw7tv95tq.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": null,
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {}
-    },
-    {
       "id": "unit_ms4b9qphimjk7",
       "name": "Red V*",
       "portrait": "/images/ms76nwpsryu10z.jpg",
@@ -1837,23 +1859,6 @@
       "routeIds": [],
       "starterFor": [],
       "classId": "class_ms4czk6qlyp89",
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {}
-    },
-    {
-      "id": "unit_msesemmywrm9d",
-      "name": "Peppe",
-      "portrait": "/images/msf7u20bfwo6wp.png",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": "class_ms4axgsyshgov",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -5253,7 +5258,12 @@
       "portrait": "/images/mt0eth5el1vt4j.jpg",
       "subtitle": "",
       "description": "",
-      "crest": "Aubin"
+      "crest": "Aubin",
+      "blessings": [
+        "Halves damage from physical attacks for 1 turn",
+        "Halves damage from magical attacks for 1 turn",
+        "Neutralizes Underworld Boon on foe for 1 turn"
+      ]
     },
     {
       "id": "cast_msetoyu3483vr",
@@ -5261,7 +5271,12 @@
       "portrait": "/images/msf8dsb46454kl.png",
       "subtitle": "",
       "description": "",
-      "crest": "Macuil"
+      "crest": "Macuil",
+      "blessings": [
+        "Hit +50 to magical attacks for 1 turn",
+        "Rng +1 to magic for 1 turn",
+        "Mag +5 for 1 turn"
+      ]
     },
     {
       "id": "cast_msetp3tw9ohgz",
@@ -5269,7 +5284,12 @@
       "portrait": "/images/mt1ybjw0owgu4i.jpg",
       "subtitle": "War",
       "description": "",
-      "crest": "Daphnel"
+      "crest": "Daphnel",
+      "blessings": [
+        "Grants Hit +50 to physical attacks for 1 turn",
+        "Restores some HP when defeating a foe for 1 turn",
+        "Grants Str +5 for 1 turn"
+      ]
     },
     {
       "id": "cast_msetp6lndpw3d",
@@ -5285,7 +5305,12 @@
       "portrait": "/images/mt1ybp0u9yg95c.jpg",
       "subtitle": "Hunting and Art",
       "description": "",
-      "crest": "Dominic"
+      "crest": "Dominic",
+      "blessings": [
+        "Grants Avo +50 for 1 turn",
+        "Grants Dex +5 for 1 turn",
+        "Grants Spd +2 for 1 turn"
+      ]
     },
     {
       "id": "cast_msu3g6v7nvzvh",
@@ -5293,7 +5318,12 @@
       "portrait": "/images/msu3gcm5s1edan.jpg",
       "subtitle": "",
       "description": "",
-      "crest": "Fraldarius"
+      "crest": "Fraldarius",
+      "blessings": [
+        "Prevents effective damage against the user for 1 turn",
+        "Prevents follow-up attacks against the user for 1 turn",
+        "Prevents critical hits against the user for 1 turn"
+      ]
     },
     {
       "id": "cast_msu3j0g5oyvkc",
@@ -5301,7 +5331,12 @@
       "portrait": "/images/msu3j53pssvunp.png",
       "subtitle": "",
       "description": "",
-      "crest": "Noa"
+      "crest": "Noa",
+      "blessings": [
+        "Grants Acc +5 for 1 turn",
+        "Weapons don’t lose durability for 1 turn ",
+        "Always strike first during enemy phase for 1 turn"
+      ]
     }
   ],
   "npcs": [
@@ -5419,7 +5454,7 @@
     },
     {
       "id": "cast_mt1ynps0c2hij",
-      "name": "Red Bolt*",
+      "name": "The Mad Dog*",
       "portrait": "/images/mt1yoxpe7nelpw.jpg",
       "subtitle": "",
       "description": ""
