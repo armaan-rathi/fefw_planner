@@ -1621,6 +1621,44 @@
       "possiblyEnemyOnly": true
     },
     {
+      "id": "unit_msu42ne4imvnh",
+      "name": "Jester",
+      "portrait": "/images/mt4v5a0sifaggt.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Mane of Flame"
+      }
+    },
+    {
+      "id": "unit_msesn64bv1fun",
+      "name": "Goliath",
+      "portrait": "/images/msu471katvul0k.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_armored",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Mane of Flame"
+      }
+    },
+    {
       "id": "unit_msesm42zaq9do",
       "name": "Dante",
       "portrait": "/images/msu54ltb9ctk4n.jpg",
@@ -1859,40 +1897,6 @@
       "routeIds": [],
       "starterFor": [],
       "classId": "class_ms4czk6qlyp89",
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {}
-    },
-    {
-      "id": "unit_msesn64bv1fun",
-      "name": "Goliath",
-      "portrait": "/images/msu471katvul0k.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": "class_armored",
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {}
-    },
-    {
-      "id": "unit_msu42ne4imvnh",
-      "name": "Jester",
-      "portrait": "/images/mt4v5a0sifaggt.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": null,
       "boons": [],
       "banes": [],
       "skillLevels": {},
