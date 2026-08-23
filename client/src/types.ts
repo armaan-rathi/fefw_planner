@@ -64,6 +64,7 @@ export interface GameClass {
   description: string;
   movementType: MovementType;
   proficiencies: string[]; // skillType ids available to this class
+  bonusExp?: string[]; // skillType ids this class earns bonus EXP in (shown with a ▲ on the icon)
   portrait: string | null;
   // Certification / class-list info
   primarySkills?: SkillReq[];

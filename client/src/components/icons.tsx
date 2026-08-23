@@ -145,3 +145,32 @@ export function SkillMark({
   }
   return <SkillIcon icon={type.icon} size={size} className={className} />;
 }
+
+// A skill/weapon icon that optionally carries a small solid-white "up triangle"
+// badge in its bottom-right corner, marking a class's bonus-EXP proficiency.
+export function ProficiencyMark({
+  type,
+  size = 22,
+  bonus,
+  className,
+}: {
+  type: { icon: string; iconImage?: string | null };
+  size?: number;
+  bonus?: boolean;
+  className?: string;
+}) {
+  const mark = <SkillMark type={type} size={size} className={className} />;
+  if (!bonus) return mark;
+  const half = Math.max(2, Math.round(size * 0.25)); // half of the base
+  const height = Math.max(3, Math.round(half * 1.6)); // 0.8x the base -> just shy of equilateral
+  return (
+    <span className="prof-mark">
+      {mark}
+      <span
+        className="bonus-exp-tri"
+        title="Bonus EXP"
+        style={{ borderLeftWidth: half, borderRightWidth: half, borderBottomWidth: height }}
+      />
+    </span>
+  );
+}

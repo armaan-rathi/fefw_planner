@@ -381,6 +381,31 @@ label.field > span {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
+/* Bonus-EXP marker: a small, slightly squat solid-white up-triangle tucked into
+   the bottom-right corner of a proficiency icon. Border widths are set inline
+   (scaled to the icon size); a faint dark drop-shadow keeps it legible on any bg. */
+.prof-mark {
+  position: relative;
+  display: inline-flex;
+  line-height: 0;
+  flex: none;
+}
+.bonus-exp-tri {
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+  z-index: 2;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-top-width: 0;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: var(--gold);
+  filter: drop-shadow(0 0 0.6px rgba(0, 0, 0, 0.75));
+  pointer-events: none;
+}
+
 /* ---- Proficiency grid ---- */
 .prof-grid {
   display: grid;

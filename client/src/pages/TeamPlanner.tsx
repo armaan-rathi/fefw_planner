@@ -4,7 +4,7 @@ import { useLocalStorage } from "../hooks/useLocalStorage";
 import { UnitPortrait } from "../components/UnitPortrait";
 import { TeamTabs } from "../components/TeamTabs";
 import { ProficiencyGrid } from "../components/ProficiencyGrid";
-import { SkillMark } from "../components/icons";
+import { ProficiencyMark } from "../components/icons";
 import { lordFirst, unitFaction, unitsForRoute } from "../data/units";
 import { sortBySkillOrder } from "../data/skills";
 import type { Unit } from "../types";
@@ -239,7 +239,7 @@ export function TeamPlanner() {
                             if (!st) return null;
                             return (
                               <span className="tag" key={sid} style={{ display: "inline-flex", alignItems: "center", gap: 5 }}>
-                                <SkillMark type={st} size={13} /> {st.label}
+                                <ProficiencyMark type={st} size={13} bonus={(cls.bonusExp ?? []).includes(sid)} /> {st.label}
                               </span>
                             );
                           })}

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDB } from "../../data/DataContext";
 import { uid } from "../../api";
 import { Modal } from "../../components/Modal";
-import { SkillMark } from "../../components/icons";
+import { SkillMark, ProficiencyMark } from "../../components/icons";
 import { UnitPortrait } from "../../components/UnitPortrait";
 import { ImageDrop } from "../../components/ImageDrop";
 import { sortBySkillOrder } from "../../data/skills";
@@ -21,7 +21,7 @@ const MOVES: { value: MovementType; label: string }[] = [
 const TIERS = ["Base", "Beginner", "Specialty", "Advanced", "Master"];
 
 function blankClass(): GameClass {
-  return { id: uid("class_"), name: "", tier: "", description: "", movementType: "", proficiencies: [], portrait: null };
+  return { id: uid("class_"), name: "", tier: "", description: "", movementType: "", proficiencies: [], bonusExp: [], portrait: null };
 }
 
 export function ClassesEditor() {
@@ -120,7 +120,7 @@ export function ClassesEditor() {
                   if (!st) return null;
                   return (
                     <span className="tag" key={sid} style={{ display: "inline-flex", alignItems: "center", gap: 4 }}>
-                      <SkillMark type={st} size={12} /> {st.label}
+                      <ProficiencyMark type={st} size={12} bonus={(c.bonusExp ?? []).includes(sid)} /> {st.label}
                     </span>
                   );
                 })}
@@ -152,6 +152,12 @@ function ClassModal({ cls, onClose, onSave }: { cls: GameClass; onClose: () => v
       ...d,
       proficiencies: d.proficiencies.includes(id) ? d.proficiencies.filter((x) => x !== id) : [...d.proficiencies, id],
     }));
+  }
+  function toggleBonusExp(id: string) {
+    setDraft((d) => {
+      const cur = d.bonusExp ?? [];
+      return { ...d, bonusExp: cur.includes(id) ? cur.filter((x) => x !== id) : [...cur, id] };
+    });
   }
 
   return (
@@ -207,6 +213,23 @@ function ClassModal({ cls, onClose, onSave }: { cls: GameClass; onClose: () => v
             onClick={() => toggleProf(st.id)}
           >
             <SkillMark type={st} size={14} /> {st.label}
+          </span>
+        ))}
+      </div>
+
+      <div className="divider" />
+      <h3 className="section-title">Bonus EXP</h3>
+      <p className="muted" style={{ marginTop: 0, fontSize: 12 }}>
+        Which skill / weapon types this class earns bonus EXP in — shown as a small ▲ on the icon wherever the class appears.
+      </p>
+      <div className="chip-wrap">
+        {db.skillTypes.map((st) => (
+          <span
+            key={st.id}
+            className={"chip-toggle" + ((draft.bonusExp ?? []).includes(st.id) ? " on" : "")}
+            onClick={() => toggleBonusExp(st.id)}
+          >
+            <ProficiencyMark type={st} size={14} bonus /> {st.label}
           </span>
         ))}
       </div>

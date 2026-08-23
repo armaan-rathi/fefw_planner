@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { useDB } from "../data/DataContext";
 import { UnitPortrait } from "../components/UnitPortrait";
-import { SkillMark } from "../components/icons";
+import { SkillMark, ProficiencyMark } from "../components/icons";
 import { sortBySkillOrder } from "../data/skills";
 import { CLASS_TIERS } from "../types";
 import type { ClassAbility, GameClass, SkillReq, SkillType, TierRequirement } from "../types";
@@ -88,7 +88,7 @@ function ClassDetail({
           <div className="chip-wrap" style={{ marginTop: 5 }}>
             {profs.map((st) => (
               <span className="tag" key={st.id} style={{ display: "inline-flex", alignItems: "center", gap: 5 }}>
-                <SkillMark type={st} size={13} /> {st.label}
+                <ProficiencyMark type={st} size={13} bonus={(cls.bonusExp ?? []).includes(st.id)} /> {st.label}
               </span>
             ))}
           </div>

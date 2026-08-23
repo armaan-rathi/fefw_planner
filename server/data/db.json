@@ -113,8 +113,23 @@
       "tier": "Base",
       "description": "",
       "movementType": "infantry",
-      "proficiencies": [],
-      "portrait": null
+      "proficiencies": [
+        "sword",
+        "lance",
+        "axe",
+        "bow",
+        "brawl",
+        "reason",
+        "faith",
+        "authority",
+        "infantry"
+      ],
+      "portrait": null,
+      "masteredAbility": {
+        "name": "HP +5?",
+        "description": "",
+        "icon": null
+      }
     },
     {
       "id": "class_ms7dlwnwv0ztv",
@@ -122,8 +137,23 @@
       "tier": "Base",
       "description": "",
       "movementType": "infantry",
-      "proficiencies": [],
-      "portrait": null
+      "proficiencies": [
+        "sword",
+        "lance",
+        "axe",
+        "bow",
+        "brawl",
+        "reason",
+        "faith",
+        "authority",
+        "infantry"
+      ],
+      "portrait": null,
+      "masteredAbility": {
+        "name": "HP +5?",
+        "description": "",
+        "icon": null
+      }
     },
     {
       "id": "class_ms3o7io5clmwu",
@@ -142,7 +172,12 @@
         "name": "Attack Basics",
         "description": "",
         "icon": null
-      }
+      },
+      "bonusExp": [
+        "sword",
+        "axe",
+        "brawl"
+      ]
     },
     {
       "id": "class_ms4godtdiwiu4",
@@ -153,9 +188,15 @@
       "proficiencies": [
         "lance",
         "axe",
+        "infantry",
         "armor"
       ],
-      "portrait": null
+      "portrait": null,
+      "bonusExp": [
+        "lance",
+        "axe",
+        "armor"
+      ]
     },
     {
       "id": "class_ms3o7vuixzpwd",
@@ -165,9 +206,15 @@
       "movementType": "infantry",
       "proficiencies": [
         "sword",
-        "bow"
+        "bow",
+        "infantry",
+        "authority"
       ],
-      "portrait": null
+      "portrait": null,
+      "bonusExp": [
+        "sword",
+        "bow"
+      ]
     },
     {
       "id": "class_diviner",
@@ -188,7 +235,11 @@
         "name": "Magic Basics",
         "description": "Grants Mag/Res +1",
         "icon": null
-      }
+      },
+      "bonusExp": [
+        "reason",
+        "faith"
+      ]
     },
     {
       "id": "class_ornius",
@@ -203,7 +254,12 @@
         "sword",
         "axe"
       ],
-      "portrait": null
+      "portrait": null,
+      "bonusExp": [
+        "lance",
+        "riding",
+        "flying"
+      ]
     },
     {
       "id": "class_ms4axgsyshgov",
@@ -213,11 +269,13 @@
       "movementType": "infantry",
       "proficiencies": [
         "sword",
-        "lance",
-        "authority",
         "infantry"
       ],
-      "portrait": null
+      "portrait": null,
+      "bonusExp": [
+        "sword",
+        "infantry"
+      ]
     },
     {
       "id": "class_ms4czk6qlyp89",
@@ -227,9 +285,14 @@
       "movementType": "infantry",
       "proficiencies": [
         "sword",
-        "bow"
+        "bow",
+        "authority"
       ],
-      "portrait": null
+      "portrait": null,
+      "bonusExp": [
+        "sword",
+        "bow"
+      ]
     },
     {
       "id": "class_armored",
@@ -240,9 +303,16 @@
       "proficiencies": [
         "lance",
         "axe",
-        "armor"
+        "armor",
+        "sword",
+        "infantry"
       ],
-      "portrait": null
+      "portrait": null,
+      "bonusExp": [
+        "lance",
+        "axe",
+        "armor"
+      ]
     },
     {
       "id": "class_ms3o5tbsmr10n",
@@ -256,7 +326,11 @@
         "axe",
         "riding"
       ],
-      "portrait": null
+      "portrait": null,
+      "bonusExp": [
+        "lance",
+        "riding"
+      ]
     },
     {
       "id": "class_brigand",
@@ -265,9 +339,13 @@
       "description": "",
       "movementType": "infantry",
       "proficiencies": [
-        "axe"
+        "axe",
+        "infantry"
       ],
-      "portrait": null
+      "portrait": null,
+      "bonusExp": [
+        "axe"
+      ]
     },
     {
       "id": "class_archer",
@@ -276,9 +354,14 @@
       "description": "",
       "movementType": "infantry",
       "proficiencies": [
-        "bow"
+        "bow",
+        "infantry"
       ],
-      "portrait": null
+      "portrait": null,
+      "bonusExp": [
+        "bow",
+        "infantry"
+      ]
     },
     {
       "id": "class_ms3pz9lcrqj1y",
@@ -287,9 +370,13 @@
       "description": "",
       "movementType": "infantry",
       "proficiencies": [
-        "brawl"
+        "brawl",
+        "infantry"
       ],
-      "portrait": null
+      "portrait": null,
+      "bonusExp": [
+        "brawl"
+      ]
     },
     {
       "id": "class_soldier",
@@ -299,9 +386,18 @@
       "movementType": "infantry",
       "proficiencies": [
         "infantry",
-        "reason"
+        "reason",
+        "faith",
+        "sword",
+        "brawl",
+        "authority"
       ],
-      "portrait": null
+      "portrait": null,
+      "bonusExp": [
+        "reason",
+        "faith",
+        "sword"
+      ]
     },
     {
       "id": "class_priest",
@@ -317,7 +413,12 @@
         "authority",
         "infantry"
       ],
-      "portrait": null
+      "portrait": null,
+      "bonusExp": [
+        "brawl",
+        "reason",
+        "faith"
+      ]
     },
     {
       "id": "class_ms4aypejltz4f",
@@ -329,7 +430,11 @@
         "lance",
         "flying"
       ],
-      "portrait": null
+      "portrait": null,
+      "bonusExp": [
+        "lance",
+        "flying"
+      ]
     },
     {
       "id": "class_msesr7wkkfq1k",
@@ -339,7 +444,8 @@
       "movementType": "cavalry",
       "proficiencies": [
         "lance",
-        "riding"
+        "riding",
+        "bow"
       ],
       "portrait": null
     },
@@ -350,11 +456,18 @@
       "description": "",
       "movementType": "flying",
       "proficiencies": [
-        "infantry",
+        "riding",
+        "flying",
+        "sword",
+        "lance",
+        "axe"
+      ],
+      "portrait": null,
+      "bonusExp": [
+        "lance",
         "riding",
         "flying"
-      ],
-      "portrait": null
+      ]
     },
     {
       "id": "class_msesiwe2poyjo",
@@ -383,7 +496,12 @@
           "description": "",
           "icon": null
         }
-      ]
+      ],
+      "masteredAbility": {
+        "name": "Relaxed Alertness?",
+        "description": "",
+        "icon": null
+      }
     },
     {
       "id": "class_msetrpdjsxewf",
@@ -402,7 +520,7 @@
           "icon": null
         },
         {
-          "name": "Magic Heal +10?",
+          "name": "Magic Heal +10",
           "description": "",
           "icon": null
         },
@@ -493,7 +611,12 @@
         "faith",
         "infantry"
       ],
-      "portrait": null
+      "portrait": null,
+      "bonusExp": [
+        "lance",
+        "faith",
+        "infantry"
+      ]
     },
     {
       "id": "class_msestmmmbo13w",
@@ -514,7 +637,8 @@
       "movementType": "flying",
       "proficiencies": [
         "lance",
-        "flying"
+        "flying",
+        "axe"
       ],
       "portrait": null
     },
@@ -610,7 +734,11 @@
       "description": "",
       "movementType": "infantry",
       "proficiencies": [
-        "reason"
+        "reason",
+        "sword",
+        "brawl",
+        "faith",
+        "infantry"
       ],
       "portrait": null,
       "classAbilities": [
@@ -640,6 +768,13 @@
           "skillTypeId": "reason",
           "grade": "B"
         }
+      ],
+      "bonusExp": [
+        "sword",
+        "brawl",
+        "reason",
+        "faith",
+        "infantry"
       ]
     },
     {
@@ -649,9 +784,16 @@
       "description": "",
       "movementType": "infantry",
       "proficiencies": [
-        "brawl"
+        "brawl",
+        "faith",
+        "infantry"
       ],
-      "portrait": null
+      "portrait": null,
+      "bonusExp": [
+        "brawl",
+        "faith",
+        "infantry"
+      ]
     },
     {
       "id": "class_msu3e3ohulo8g",
@@ -661,44 +803,64 @@
       "movementType": "cavalry",
       "proficiencies": [
         "reason",
-        "riding"
+        "riding",
+        "sword"
       ],
       "portrait": null
     },
     {
       "id": "class_msu3eg9fgd3kr",
       "name": "Orichaldia",
-      "tier": "Master",
+      "tier": "Advanced",
       "description": "",
-      "movementType": "",
+      "movementType": "cavalry",
       "proficiencies": [],
       "portrait": null
     },
     {
       "id": "class_msu3fed8hm3kb",
       "name": "Swordmaster",
-      "tier": "Master",
+      "tier": "Advanced",
       "description": "",
-      "movementType": "",
-      "proficiencies": [],
+      "movementType": "infantry",
+      "proficiencies": [
+        "sword",
+        "infantry"
+      ],
       "portrait": null
     },
     {
       "id": "class_msu3fkxu6tsm1",
       "name": "Sentinel",
-      "tier": "Master",
+      "tier": "Advanced",
       "description": "",
-      "movementType": "",
-      "proficiencies": [],
+      "movementType": "infantry",
+      "proficiencies": [
+        "lance",
+        "infantry"
+      ],
       "portrait": null
     },
     {
       "id": "class_msu3frkcvmepo",
       "name": "Dancer",
-      "tier": "Master",
+      "tier": "Advanced",
       "description": "",
-      "movementType": "",
+      "movementType": "infantry",
       "proficiencies": [],
+      "portrait": null
+    },
+    {
+      "id": "class_mt5q5rsvrljkv",
+      "name": "Fortress Knight",
+      "tier": "Advanced",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "lance",
+        "armor"
+      ],
+      "bonusExp": [],
       "portrait": null
     }
   ],
@@ -1963,6 +2125,40 @@
       "possiblyEnemyOnly": true
     },
     {
+      "id": "unit_mt4v6olgdd4up",
+      "name": "Simon",
+      "portrait": "/images/mt4v6unq0yuo30.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
+      "id": "unit_mt4v2r1q22a0b",
+      "name": "Majide",
+      "portrait": "/images/mt4v2y7e7s2sto.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {}
+    },
+    {
       "id": "unit_ms3oeprflm40x",
       "name": "Eshmel",
       "portrait": "/images/msmwmvcuiquzr1.png",
@@ -2024,40 +2220,6 @@
         "faction": "Promised One's Army"
       },
       "postTimeskip": true
-    },
-    {
-      "id": "unit_mt4v2r1q22a0b",
-      "name": "Majide",
-      "portrait": "/images/mt4v2y7e7s2sto.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": null,
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {}
-    },
-    {
-      "id": "unit_mt4v6olgdd4up",
-      "name": "Simon",
-      "portrait": "/images/mt4v6unq0yuo30.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": null,
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {}
     }
   ],
   "map": {
@@ -5489,6 +5651,9 @@
     "Advanced": {
       "idealLv": 35,
       "renownLv": 8
+    },
+    "Specialty": {
+      "renownLv": 4
     }
   }
 }
