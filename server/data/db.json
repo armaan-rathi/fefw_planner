@@ -95,8 +95,9 @@
         "Mane of Flame",
         "Palma Fighters",
         "Promised One's Army",
-        "Aurora's Temple",
-        "Brigid Army"
+        "Temple Army",
+        "Brigid Army",
+        "Order of Mithras"
       ]
     },
     {
@@ -938,7 +939,11 @@
         "theodora"
       ],
       "classId": "class_ms3os2delbjxu",
-      "boons": [],
+      "boons": [
+        "lance",
+        "faith",
+        "authority"
+      ],
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
@@ -1333,13 +1338,13 @@
       }
     },
     {
-      "id": "unit_ms7k4uf6l9u72",
-      "name": "Nathan",
-      "portrait": "/images/msebw5dvivv5jv.jpg",
+      "id": "unit_mt4vbrsx1692p",
+      "name": "Bertrand",
+      "portrait": "/images/mt4v0q2mvfqpj5.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": "class_ms3o5tbsmr10n",
+      "classId": null,
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -1348,18 +1353,58 @@
         "description": ""
       },
       "fields": {
-        "backstory": "A valiant general of the Arago Kingdom, boasting overwhelming attack power.\n\nTogether with the Green Knight Creek, he is known as the \"Twin Pillars of Arago,\" his fame resounding throughout Dagda.\n\nDeeply loyal, with a personality so straightforward it's almost stubbornly honest.\n\nLikes: The red armor bestowed by the king, upholding loyalty, training in all martial arts",
-        "faction": "Arago Elites"
+        "backstory": "A gladiator who continues to fight in the Dagsion arena.\n\nKnown by the moniker \"White-Maned Demon\" for his demonic strength. It is said that five years ago, he committed a great sin and was imprisoned in the underground dungeon of the arena.\n\nLikes: Training, salted meat, well-crafted weapons, reading, board games",
+        "faction": "Mane of Flame"
+      },
+      "possiblyEnemyOnly": true
+    },
+    {
+      "id": "unit_mt4v8155tinj7",
+      "name": "Gaitz",
+      "portrait": "/images/mt4v86j5qvjq4z.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Mane of Flame"
+      },
+      "possiblyEnemyOnly": true
+    },
+    {
+      "id": "unit_msu42ne4imvnh",
+      "name": "Jester",
+      "portrait": "/images/mt4v5a0sifaggt.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Mane of Flame"
       }
     },
     {
-      "id": "unit_ms7k892bd498m",
-      "name": "Creek",
-      "portrait": "/images/mset655oi745t4.jpg",
+      "id": "unit_msesn64bv1fun",
+      "name": "Goliath",
+      "portrait": "/images/msu471katvul0k.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": "class_ms3o5tbsmr10n",
+      "classId": "class_armored",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -1368,8 +1413,26 @@
         "description": ""
       },
       "fields": {
-        "faction": "Arago Elites",
-        "backstory": "A general of the Arago Kingdom, possessing exceptional intellect and shrewdness.\nTogether with the Red Knight Nathan, he is known as one of the \"Twin Pillars of Arago,\" renowned throughout Dagza.\nA sarcastic man with a cynical outlook on everything.\n\nLikes: The green armor bestowed by the king, beautiful women, research on military strategy"
+        "faction": "Mane of Flame"
+      }
+    },
+    {
+      "id": "unit_msesm42zaq9do",
+      "name": "Dante",
+      "portrait": "/images/msu54ltb9ctk4n.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_diviner",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Mane of Flame"
       }
     },
     {
@@ -1453,7 +1516,7 @@
     {
       "id": "unit_ms4b1m5a0pltt",
       "name": "Orchel",
-      "portrait": "/images/msft5g3otqjpvq.png",
+      "portrait": "/images/mt7t7eld01vklu.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1466,7 +1529,8 @@
         "description": ""
       },
       "fields": {
-        "faction": "Linaria's Morning Dew"
+        "faction": "Linaria's Morning Dew",
+        "backstory": "A mysterious girl serving at Credna’s Temple at the upper levels of Dagsion. Always conceals her face behind a distinctive cat mask. Although she’s innocent and treats everyone with kindness, she’s somewhat naïve and oblivious.\n\nLikes: Animals, cleaning, doing laundry, cooking"
       },
       "postTimeskip": false,
       "possiblyEnemyOnly": true
@@ -1550,7 +1614,7 @@
     {
       "id": "unit_ms4azwjmprdkp",
       "name": "Anatolia",
-      "portrait": "/images/msftcwl7tmnydh.jpg",
+      "portrait": "/images/mt7t87haj5yrfv.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1563,7 +1627,8 @@
         "description": ""
       },
       "fields": {
-        "faction": "Brides of the Pale Raven"
+        "faction": "Brides of the Pale Raven",
+        "backstory": "A girl in white who fights to save her people. Known as the “Mystical Bride” due to her appearance. Has a cool or perhaps emotionless personality, which can accidentally infuriate others.\n\nLikes: Hexagram divination, round objects, martial-arts training"
       },
       "possiblyEnemyOnly": true
     },
@@ -1665,13 +1730,13 @@
       "possiblyEnemyOnly": false
     },
     {
-      "id": "unit_msesdf1q9njym",
-      "name": "Benditz",
-      "portrait": "/images/msf7qqhh21v2ri.png",
+      "id": "unit_ms7k4uf6l9u72",
+      "name": "Nathan",
+      "portrait": "/images/msebw5dvivv5jv.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": "class_msesr7wkkfq1k",
+      "classId": "class_ms3o5tbsmr10n",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -1680,7 +1745,28 @@
         "description": ""
       },
       "fields": {
-        "faction": "Thundercloud Knights"
+        "backstory": "A valiant general of the Arago Kingdom, boasting overwhelming attack power.\n\nTogether with the Green Knight Creek, he is known as the \"Twin Pillars of Arago,\" his fame resounding throughout Dagda.\n\nDeeply loyal, with a personality so straightforward it's almost stubbornly honest.\n\nLikes: The red armor bestowed by the king, upholding loyalty, training in all martial arts",
+        "faction": "Arago Elites"
+      }
+    },
+    {
+      "id": "unit_ms7k892bd498m",
+      "name": "Creek",
+      "portrait": "/images/mset655oi745t4.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_ms3o5tbsmr10n",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Arago Elites",
+        "backstory": "A general of the Arago Kingdom, possessing exceptional intellect and shrewdness.\nTogether with the Red Knight Nathan, he is known as one of the \"Twin Pillars of Arago,\" renowned throughout Dagza.\nA sarcastic man with a cynical outlook on everything.\n\nLikes: The green armor bestowed by the king, beautiful women, research on military strategy"
       }
     },
     {
@@ -1700,6 +1786,25 @@
       },
       "fields": {
         "faction": "Silver Knights"
+      }
+    },
+    {
+      "id": "unit_msesdf1q9njym",
+      "name": "Benditz",
+      "portrait": "/images/msf7qqhh21v2ri.png",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_msesr7wkkfq1k",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Thundercloud Knights"
       }
     },
     {
@@ -1742,104 +1847,6 @@
       "possiblyEnemyOnly": true
     },
     {
-      "id": "unit_mt4vbrsx1692p",
-      "name": "Bertrand",
-      "portrait": "/images/mt4v0q2mvfqpj5.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": null,
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {
-        "backstory": "A gladiator who continues to fight in the Dagsion arena.\n\nKnown by the moniker \"White-Maned Demon\" for his demonic strength. It is said that five years ago, he committed a great sin and was imprisoned in the underground dungeon of the arena.\n\nLikes: Training, salted meat, well-crafted weapons, reading, board games",
-        "faction": "Mane of Flame"
-      },
-      "possiblyEnemyOnly": true
-    },
-    {
-      "id": "unit_mt4v8155tinj7",
-      "name": "Gaitz",
-      "portrait": "/images/mt4v86j5qvjq4z.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": null,
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {
-        "faction": "Mane of Flame"
-      },
-      "possiblyEnemyOnly": true
-    },
-    {
-      "id": "unit_msu42ne4imvnh",
-      "name": "Jester",
-      "portrait": "/images/mt4v5a0sifaggt.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": null,
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {
-        "faction": "Mane of Flame"
-      }
-    },
-    {
-      "id": "unit_msesn64bv1fun",
-      "name": "Goliath",
-      "portrait": "/images/msu471katvul0k.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": "class_armored",
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {
-        "faction": "Mane of Flame"
-      }
-    },
-    {
-      "id": "unit_msesm42zaq9do",
-      "name": "Dante",
-      "portrait": "/images/msu54ltb9ctk4n.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": "class_diviner",
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {
-        "faction": "Mane of Flame"
-      }
-    },
-    {
       "id": "unit_msesemmywrm9d",
       "name": "Peppe",
       "portrait": "/images/msf7u20bfwo6wp.png",
@@ -1873,7 +1880,73 @@
         "name": "",
         "description": ""
       },
-      "fields": {}
+      "fields": {
+        "faction": "Temple Army"
+      }
+    },
+    {
+      "id": "unit_ms4b759ma7nnn",
+      "name": "Sofia",
+      "portrait": "/images/msf7meyzk26x82.png",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_diviner",
+      "boons": [
+        "faith",
+        "bow"
+      ],
+      "banes": [
+        "axe"
+      ],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Temple Army"
+      }
+    },
+    {
+      "id": "unit_msu448hnym292",
+      "name": "Centurio",
+      "portrait": "/images/mt0es67fwdiblf.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_armored",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "backstory": "A knight serving at Aurora’s Temple. Known as “Corundum”, he’s a “Vulcan”, member of an elite squadron chosen from the temple priests. An old friend of Cai’s father, Castor, and the two share a deep mutual trust.\n\nLikes: Serving Aurora’s temple, patrolling",
+        "faction": "Temple Army"
+      }
+    },
+    {
+      "id": "unit_msu434ibp8q8s",
+      "name": "Maria",
+      "portrait": "/images/msu43dhios42g3.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Order of Mithras"
+      },
+      "possiblyEnemyOnly": true
     },
     {
       "id": "unit_ms4b0v3updg6t",
@@ -1925,28 +1998,6 @@
       "classId": "class_ms4godtdiwiu4",
       "boons": [],
       "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {}
-    },
-    {
-      "id": "unit_ms4b759ma7nnn",
-      "name": "Sofia",
-      "portrait": "/images/msf7meyzk26x82.png",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": "class_diviner",
-      "boons": [
-        "faith",
-        "bow"
-      ],
-      "banes": [
-        "axe"
-      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "",
@@ -2072,44 +2123,6 @@
       "id": "unit_msu41p5eli1ai",
       "name": "Aswan",
       "portrait": "/images/msu6112ylub3ua.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": null,
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {},
-      "possiblyEnemyOnly": true
-    },
-    {
-      "id": "unit_msu448hnym292",
-      "name": "Centurio",
-      "portrait": "/images/mt0es67fwdiblf.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": null,
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {
-        "backstory": "A knight serving at Aurora’s Temple. Known as “Corundum”, he’s a “Vulcan”, member of an elite squadron chosen from the temple priests. An old friend of Cai’s father, Castor, and the two share a deep mutual trust.\n\nLikes: Serving Aurora’s temple, patrolling",
-        "faction": "Aurora's Temple"
-      }
-    },
-    {
-      "id": "unit_msu434ibp8q8s",
-      "name": "Maria",
-      "portrait": "/images/msu43dhios42g3.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],

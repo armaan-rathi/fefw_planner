@@ -70,7 +70,8 @@ export function CharAttr({ id, unit, compact }: { id: string; unit: Unit; compac
 
   if (id === "proficiencies") {
     if (unit.boons.length === 0 && unit.banes.length === 0 && Object.keys(unit.skillLevels).length === 0) return null;
-    const cls = db.classes.find((c) => c.id === unit.classId);
+    // Character page shows only the character's own boons/banes — class
+    // proficiencies (which skills the class affects) are a team-planning concern.
     return (
       <div className="char-attr block">
         <div className="k">Boons &amp; Banes</div>
@@ -78,7 +79,6 @@ export function CharAttr({ id, unit, compact }: { id: string; unit: Unit; compac
           skillTypes={db.skillTypes}
           boons={unit.boons}
           banes={unit.banes}
-          proficiencies={cls?.proficiencies ?? []}
           skillLevels={unit.skillLevels}
           compact
         />
