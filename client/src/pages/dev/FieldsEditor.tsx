@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useDB } from "../../data/DataContext";
 import { uid } from "../../api";
 import { OPTION_SOURCES, sourceLabel } from "../../data/fields";
+import { ImageDrop } from "../../components/ImageDrop";
 import type { FieldDef, FieldType, OptionsSource } from "../../types";
 
 const TYPES: { value: FieldType; label: string }[] = [
@@ -56,6 +57,10 @@ export function FieldsEditor() {
       const idx = f.options.indexOf(oldVal);
       if (idx < 0 || f.options.includes(nv)) return; // gone, or would duplicate
       f.options[idx] = nv;
+      if (f.optionImages && f.optionImages[oldVal] !== undefined) {
+        f.optionImages[nv] = f.optionImages[oldVal];
+        delete f.optionImages[oldVal];
+      }
       for (const u of d.units) {
         const cur = u.fields?.[f.key];
         if (cur === undefined) continue;
@@ -90,6 +95,32 @@ export function FieldsEditor() {
     if (!confirm("Remove this field? Existing values stay stored but are hidden.")) return;
     update((d) => {
       d.fieldDefs = d.fieldDefs.filter((f) => f.id !== id);
+    });
+  }
+  // Remove one dropdown/multiselect option, cleaning up any image for it.
+  function removeOption(def: FieldDef, value: string) {
+    update((d) => {
+      const f = d.fieldDefs.find((x) => x.id === def.id);
+      if (!f || !f.options) return;
+      f.options = f.options.filter((o) => o !== value);
+      if (f.optionImages) {
+        delete f.optionImages[value];
+        if (Object.keys(f.optionImages).length === 0) delete f.optionImages;
+      }
+    });
+  }
+  // Attach (or clear) an uploaded image for one option value.
+  function setOptionImage(def: FieldDef, value: string, url: string | null) {
+    update((d) => {
+      const f = d.fieldDefs.find((x) => x.id === def.id);
+      if (!f) return;
+      if (url) {
+        if (!f.optionImages) f.optionImages = {};
+        f.optionImages[value] = url;
+      } else if (f.optionImages) {
+        delete f.optionImages[value];
+        if (Object.keys(f.optionImages).length === 0) delete f.optionImages;
+      }
     });
   }
   function move(id: string, dir: -1 | 1) {
@@ -156,6 +187,8 @@ export function FieldsEditor() {
                           def={f}
                           onChange={(options) => patch(f.id, { options })}
                           onRename={(oldVal, newVal) => renameOption(f, oldVal, newVal)}
+                          onRemove={(value) => removeOption(f, value)}
+                          onSetImage={(value, url) => setOptionImage(f, value, url)}
                         />
                       )}
                     </div>
@@ -178,12 +211,17 @@ function OptionsEditor({
   def,
   onChange,
   onRename,
+  onRemove,
+  onSetImage,
 }: {
   def: FieldDef;
   onChange: (options: string[]) => void;
   onRename: (oldVal: string, newVal: string) => void;
+  onRemove: (value: string) => void;
+  onSetImage: (value: string, url: string | null) => void;
 }) {
   const options = def.options ?? [];
+  const images = def.optionImages ?? {};
   const [draft, setDraft] = useState("");
   function addOpt() {
     const v = draft.trim();
@@ -201,7 +239,7 @@ function OptionsEditor({
   return (
     <div style={{ marginTop: 8 }}>
       <div className="muted" style={{ fontSize: 11, marginBottom: 4 }}>
-        Options — edit the text to rename one (units keep their value automatically). Use ▲▼ to reorder; this order is used by “By Faction” sorting on the Character Database.
+        Options — edit the text to rename one (units keep their value automatically). Use ▲▼ to reorder. Add an optional image to show instead of the text (the name appears on hover).
       </div>
       <div className="stack" style={{ gap: 6, marginBottom: 8 }}>
         {options.length === 0 && <span className="muted" style={{ fontSize: 12 }}>No options yet.</span>}
@@ -209,9 +247,11 @@ function OptionsEditor({
           <OptionRow
             key={o}
             value={o}
+            image={images[o] ?? null}
             exists={(v) => options.includes(v)}
             onRename={(newVal) => onRename(o, newVal)}
-            onRemove={() => onChange(options.filter((x) => x !== o))}
+            onRemove={() => onRemove(o)}
+            onImage={(url) => onSetImage(o, url)}
             onMove={(dir) => move(i, dir)}
             canUp={i > 0}
             canDown={i < options.length - 1}
@@ -228,17 +268,21 @@ function OptionsEditor({
 
 function OptionRow({
   value,
+  image,
   exists,
   onRename,
   onRemove,
+  onImage,
   onMove,
   canUp,
   canDown,
 }: {
   value: string;
+  image: string | null;
   exists: (v: string) => boolean;
   onRename: (newVal: string) => void;
   onRemove: () => void;
+  onImage: (url: string | null) => void;
   onMove: (dir: -1 | 1) => void;
   canUp: boolean;
   canDown: boolean;
@@ -255,7 +299,7 @@ function OptionRow({
     onRename(v);
   }
   return (
-    <div className="row" style={{ gap: 6 }}>
+    <div className="row" style={{ gap: 6, alignItems: "center" }}>
       <span className="row" style={{ gap: 2 }}>
         <button className="icon-btn" title="Move up" disabled={!canUp} onClick={() => onMove(-1)}>▲</button>
         <button className="icon-btn" title="Move down" disabled={!canDown} onClick={() => onMove(1)}>▼</button>
@@ -271,6 +315,9 @@ function OptionRow({
         }}
         style={{ maxWidth: 220 }}
       />
+      <div style={{ width: 64 }}>
+        <ImageDrop value={image} onChange={onImage} height={44} label="Image" />
+      </div>
       <button className="btn tiny danger" title="Remove option" onClick={onRemove}>✕</button>
     </div>
   );

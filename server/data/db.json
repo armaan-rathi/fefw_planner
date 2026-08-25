@@ -76,6 +76,60 @@
   ],
   "fieldDefs": [
     {
+      "id": "f_mt935xjczc423",
+      "key": "crest",
+      "label": "Crest",
+      "type": "multiselect",
+      "options": [
+        "Ernest",
+        "Macuil",
+        "Seiros",
+        "Dominic",
+        "Fraldarius",
+        "Noa",
+        "Cethleann",
+        "Daphnel",
+        "Blaiddyd",
+        "Gloucester",
+        "Goneril",
+        "Cichol",
+        "Aubin",
+        "Gautier",
+        "Indech",
+        "The Beast",
+        "Charon",
+        "Timotheos",
+        "Riegan",
+        "Chevalier",
+        "Lamine",
+        "Flames"
+      ],
+      "optionImages": {
+        "Ernest": "/images/mt93ijh1mo8xf9.png",
+        "Macuil": "/images/mt93iomqlsaj20.png",
+        "Seiros": "/images/mt93isnrx639sr.png",
+        "Dominic": "/images/mt93iwabx6gzwx.png",
+        "Fraldarius": "/images/mt93j0pe6jo6iv.png",
+        "Noa": "/images/mt93j6q9210poz.png",
+        "Cethleann": "/images/mt93j9kozof21k.png",
+        "Daphnel": "/images/mt93jd4snxsayu.png",
+        "Blaiddyd": "/images/mt93jfvaq4j86w.png",
+        "Gloucester": "/images/mt93jj8g5rts16.png",
+        "Goneril": "/images/mt93jn1fkuwlf8.png",
+        "Cichol": "/images/mt93jqt1yd88ck.png",
+        "Aubin": "/images/mt93ju6uoxdja7.png",
+        "Gautier": "/images/mt93jx86gy1p66.png",
+        "Indech": "/images/mt93k0e92u4o24.png",
+        "The Beast": "/images/mt93k3jbtg46r0.png",
+        "Charon": "/images/mt93k706dc2afz.png",
+        "Timotheos": "/images/mt93kb1tczxeck.png",
+        "Riegan": "/images/mt93kfe8lqwyj1.png",
+        "Chevalier": "/images/mt93kj88qhyg4d.png",
+        "Lamine": "/images/mt93km5quhtl46.png",
+        "Flames": "/images/mt93kpfwz0oqi6.png"
+      }
+    },
+    {
       "id": "faction",
       "key": "faction",
       "label": "Faction",
@@ -1109,6 +1163,13 @@
       "fields": {
         "faction": "Ribeira Winds",
         "backstory": "A 15 year old boy who grew up with Cai like brothers. Has amazing eyesight, enough to see the stars during the day. His archery skills are outstanding, but his kind and timid nature holds back his full potential.\n\nLikes: Mother’s cooking, Ginji fruit, cloud watching"
+      },
+      "recruitment": {
+        "leda": {
+          "support": 3,
+          "renown": 10,
+          "negotiation": "Difficult"
+        }
       }
     },
     {
@@ -1217,6 +1278,13 @@
       "fields": {
         "faction": "Ribeira Winds",
         "backstory": "A young priestess serving at the Aurora Temple at the upper levels of Dagsion. Kind and caring, she watches over Cai–who’s competing in the gruelling Heroic Games with his childhood friends–like a younger brother, always ready to help him out.\n\nLikes: Taking care of others, family, all types of housework, romance stories"
+      },
+      "recruitment": {
+        "leda": {
+          "support": 3,
+          "renown": 8,
+          "negotiation": "Difficult"
+        }
       }
     },
     {
@@ -1467,7 +1535,7 @@
     {
       "id": "unit_mt4v8155tinj7",
       "name": "Gaitz",
-      "portrait": "/images/mt8mih9bv264gd.jpg",
+      "portrait": "/images/mt923ttbb6bftv.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1488,7 +1556,7 @@
     {
       "id": "unit_ms4awma1bic3w",
       "name": "Ursula",
-      "portrait": "/images/mt8mheb2gcdekm.jpg",
+      "portrait": "/images/mt923og72kebtj.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1522,6 +1590,13 @@
       },
       "fields": {
         "faction": "Linaria's Morning Dew"
+      },
+      "recruitment": {
+        "leda": {
+          "support": 3,
+          "renown": 8,
+          "extra": "Complete ???"
+        }
       }
     },
     {
@@ -1560,6 +1635,12 @@
       },
       "fields": {
         "faction": "Mane of Flame"
+      },
+      "recruitment": {
+        "dietrich": {
+          "support": 3,
+          "renown": 6
+        }
       }
     },
     {
@@ -1598,6 +1679,13 @@
       },
       "fields": {
         "faction": "Linaria's Morning Dew"
+      },
+      "recruitment": {
+        "cai": {
+          "support": 3,
+          "renown": 10,
+          "negotiation": "Difficult"
+        }
       }
     },
     {
@@ -1674,6 +1762,13 @@
       },
       "fields": {
         "faction": "Linaria's Morning Dew"
+      },
+      "recruitment": {
+        "leda": {
+          "support": 3,
+          "renown": 5,
+          "negotiation": "Medium"
+        }
       }
     },
     {
@@ -1751,6 +1846,13 @@
       },
       "fields": {
         "faction": "Linaria's Morning Dew"
+      },
+      "recruitment": {
+        "leda": {
+          "support": 3,
+          "renown": 8,
+          "negotiation": "Difficult"
+        }
       }
     },
     {
@@ -1771,7 +1873,14 @@
       "fields": {
         "faction": "Brides of the Pale Raven"
       },
-      "possiblyEnemyOnly": false
+      "possiblyEnemyOnly": false,
+      "recruitment": {
+        "leda": {
+          "support": 2,
+          "renown": 5,
+          "negotiation": "Medium"
+        }
+      }
     },
     {
       "id": "unit_ms4axuyt3lodb",
@@ -1990,7 +2099,14 @@
         "name": "",
         "description": ""
       },
-      "fields": {}
+      "fields": {},
+      "recruitment": {
+        "cai": {
+          "support": 2,
+          "renown": 3,
+          "negotiation": "Easy"
+        }
+      }
     },
     {
       "id": "unit_ms4b3v4raamqa",
@@ -2007,7 +2123,13 @@
         "name": "",
         "description": ""
       },
-      "fields": {}
+      "fields": {},
+      "recruitment": {
+        "leda": {
+          "support": 1,
+          "renown": 2
+        }
+      }
     },
     {
       "id": "unit_ms3o4850pz0sq",
@@ -2026,6 +2148,12 @@
       },
       "fields": {
         "faction": ""
+      },
+      "recruitment": {
+        "cai": {
+          "support": 1,
+          "renown": 4
+        }
       }
     },
     {
@@ -2173,7 +2301,14 @@
         "name": "",
         "description": ""
       },
-      "fields": {}
+      "fields": {},
+      "recruitment": {
+        "leda": {
+          "support": 3,
+          "renown": 9,
+          "negotiation": "Easy"
+        }
+      }
     },
     {
       "id": "unit_ms3oeprflm40x",
@@ -5637,7 +5772,7 @@
     },
     {
       "id": "cast_mt1ynps0c2hij",
-      "name": "The Mad Dog*",
+      "name": "Lechner?",
       "portrait": "/images/mt1yoxpe7nelpw.jpg",
       "subtitle": "",
       "description": ""

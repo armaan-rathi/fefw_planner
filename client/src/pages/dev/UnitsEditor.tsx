@@ -189,6 +189,7 @@ function UnitModal({ unit, onClose, onSave }: { unit: Unit; onClose: () => void;
       if (cur.support === undefined) delete cur.support;
       if (cur.renown === undefined) delete cur.renown;
       if (!cur.negotiation) delete cur.negotiation;
+      if (!cur.extra) delete cur.extra;
       if (Object.keys(cur).length === 0) delete rec[routeId];
       else rec[routeId] = cur;
       return { ...d, recruitment: rec };
@@ -317,17 +318,15 @@ function UnitModal({ unit, onClose, onSave }: { unit: Unit; onClose: () => void;
 
       <div className="divider" />
       <h3 className="section-title">Recruitment Conditions</h3>
-      <p className="muted" style={{ marginTop: 0, fontSize: 12.5 }}>
-        Per-lord conditions to recruit this unit. Leave anything blank to hide it — the character page shows only the lords and requirements you fill in.
-      </p>
       <div style={{ overflowX: "auto" }}>
         <table className="rate-table">
           <thead>
             <tr>
               <th>Lord</th>
-              <th style={{ width: 120 }}>Support Lv.</th>
-              <th style={{ width: 120 }}>Renown Lv.</th>
-              <th style={{ width: 150 }}>Negotiation</th>
+              <th style={{ width: 132 }}>Support Lv.</th>
+              <th style={{ width: 132 }}>Renown Lv.</th>
+              <th style={{ width: 140 }}>Negotiation</th>
+              <th style={{ width: 150 }}>Miscellaneous</th>
             </tr>
           </thead>
           <tbody>
@@ -348,10 +347,13 @@ function UnitModal({ unit, onClose, onSave }: { unit: Unit; onClose: () => void;
                       {NEGOTIATIONS.map((n) => <option key={n} value={n}>{n}</option>)}
                     </select>
                   </td>
+                  <td>
+                    <input type="text" value={cond.extra ?? ""} style={{ maxWidth: 150 }} onChange={(e) => setRecruit(r.id, { extra: e.target.value || undefined })} />
+                  </td>
                 </tr>
               );
             })}
-            {db.routes.length === 0 && <tr><td colSpan={4}><span className="muted">No routes / lords defined.</span></td></tr>}
+            {db.routes.length === 0 && <tr><td colSpan={5}><span className="muted">No routes / lords defined.</span></td></tr>}
           </tbody>
         </table>
       </div>
@@ -382,12 +384,14 @@ function UnitModal({ unit, onClose, onSave }: { unit: Unit; onClose: () => void;
                     <div className="chip-wrap">
                       {opts.map((o) => {
                         const on = arr.includes(o.value);
+                        const img = f.optionImages?.[o.value];
                         return (
                           <span
                             key={o.value}
                             className={"chip-toggle" + (on ? " on" : "")}
                             onClick={() => setField(f.key, on ? arr.filter((x) => x !== o.value) : [...arr, o.value])}
                           >
+                            {img && <img className="opt-chip-img" src={img} alt="" />}
                             {o.label}
                           </span>
                         );

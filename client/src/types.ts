@@ -36,6 +36,7 @@ export interface FieldDef {
   type: FieldType;
   options?: string[]; // static options for `dropdown`
   optionsSource?: OptionsSource; // when set, options come from this entity list
+  optionImages?: Record<string, string>; // per-option image (keyed by option value) — displayed instead of the text, name on hover
 }
 
 export type FieldValue = string | boolean | string[];
@@ -93,6 +94,7 @@ export interface RecruitCondition {
   support?: number; // Support Level
   renown?: number; // Renown Level
   negotiation?: Negotiation;
+  extra?: string; // Extra objectives (free text)
 }
 
 export interface Unit {

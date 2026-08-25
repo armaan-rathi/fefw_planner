@@ -406,6 +406,31 @@ label.field > span {
   pointer-events: none;
 }
 
+/* ---- Option images (e.g. Crests) ---- */
+.crest-list {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  vertical-align: middle;
+}
+.crest-img {
+  height: 30px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+.char-attr.compact .crest-img {
+  height: 22px;
+}
+.opt-chip-img {
+  height: 18px;
+  width: auto;
+  object-fit: contain;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
 /* ---- Recruitment conditions ---- */
 .recruit-list {
   display: flex;
@@ -423,6 +448,15 @@ label.field > span {
   font-weight: 700;
   color: var(--gold-bright);
   min-width: 90px;
+}
+.recruit-extra {
+  flex-basis: 100%;
+  font-size: 13px;
+}
+.recruit-extra b {
+  color: var(--ink-faint);
+  font-weight: 600;
+  margin-right: 4px;
 }
 
 /* ---- Proficiency grid ---- */

@@ -18,7 +18,7 @@ function RecruitmentSection({ unit, routes }: { unit: Unit; routes: DB["routes"]
   const rec = unit.recruitment ?? {};
   const lines = routes
     .map((r) => ({ route: r, cond: rec[r.id] }))
-    .filter(({ cond }) => cond && (isNum(cond.support) || isNum(cond.renown) || !!cond.negotiation));
+    .filter(({ cond }) => cond && (isNum(cond.support) || isNum(cond.renown) || !!cond.negotiation || !!cond.extra));
   if (lines.length === 0) return null;
   return (
     <div className="char-attr block">
@@ -32,6 +32,9 @@ function RecruitmentSection({ unit, routes }: { unit: Unit; routes: DB["routes"]
               {isNum(cond!.renown) && <span className="tag">Renown Lv. {cond!.renown}</span>}
               {cond!.negotiation && <span className="tag">Negotiation: {cond!.negotiation}</span>}
             </span>
+            {cond!.extra && (
+              <span className="recruit-extra"><b>Miscellaneous:</b> {cond!.extra}</span>
+            )}
           </div>
         ))}
       </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import { useDB } from "../data/DataContext";
-import { fieldDisplay } from "../data/fields";
+import { fieldDisplay, fieldOptions } from "../data/fields";
 import { ProficiencyGrid } from "./ProficiencyGrid";
 import type { Unit } from "../types";
 
@@ -103,6 +103,30 @@ export function CharAttr({ id, unit, compact }: { id: string; unit: Unit; compac
     const f = db.fieldDefs.find((x) => x.key === key);
     if (!f) return null;
     const raw = unit.fields[key];
+
+    // Dropdown/multiselect with per-option images (e.g. Crests): show the
+    // images, each with its option name on hover; fall back to text otherwise.
+    if ((f.type === "dropdown" || f.type === "multiselect") && f.optionImages) {
+      const values = Array.isArray(raw) ? raw : typeof raw === "string" && raw ? [raw] : [];
+      if (values.length === 0) return null;
+      const opts = fieldOptions(db, f);
+      return (
+        <Field label={f.label} compact={compact} block={!compact}>
+          <span className="crest-list">
+            {values.map((v) => {
+              const name = opts.find((o) => o.value === v)?.label ?? String(v);
+              const img = f.optionImages?.[v];
+              return img ? (
+                <img key={v} className="crest-img" src={img} alt={name} title={name} />
+              ) : (
+                <span key={v} className="tag" title={name}>{name}</span>
+              );
+            })}
+          </span>
+        </Field>
+      );
+    }
+
     const val = fieldDisplay(db, f, raw);
     if (!val) return null;
     if (f.type === "longtext") {
