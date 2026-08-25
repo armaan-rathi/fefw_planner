@@ -133,7 +133,8 @@
         "Riegan",
         "Chevalier",
         "Lamine",
-        "Flames"
+        "Flames",
+        "Duality"
       ],
       "optionImages": {
         "Ernest": "/images/mt93ijh1mo8xf9.png",
@@ -157,7 +158,8 @@
         "Riegan": "/images/mt93kfe8lqwyj1.png",
         "Chevalier": "/images/mt93kj88qhyg4d.png",
         "Lamine": "/images/mt93km5quhtl46.png",
-        "Flames": "/images/mt93kpfwz0oqi6.png"
+        "Flames": "/images/mt93kpfwz0oqi6.png",
+        "Duality": "/images/mt94nu3y8z5hil.png"
       }
     }
   ],
@@ -951,7 +953,8 @@
         "faction": "Ribeira Winds",
         "backstory": "A cheerful, earnest and family-loving boy who lives in the tranquil Ribeira Village. He was living peacefully with his childhood friends, but on his 15th birthday, the cogs of fate began to turn.\n\nLikes: Moving around, catching animals",
         "crest": [
-          "Aubin"
+          "Aubin",
+          "Duality"
         ]
       }
     },
@@ -983,7 +986,8 @@
         "faction": "House Lamine",
         "backstory": "An elegant swordsman who’s always seeking to fight powerful opponents to satisfy his thirst. A foreigner who travelled across the seas from the land of “Fódlan”.\n\nLikes: Things he finds “beautiful”, sweets, his little sister",
         "crest": [
-          "Lamine"
+          "Lamine",
+          "Duality"
         ]
       }
     },
@@ -1014,7 +1018,10 @@
       },
       "fields": {
         "faction": "Megaira's Beacon",
-        "backstory": "The young queen of the Kingdom of Saramis, which serves the Dagdan Empire. Possesses an unwavering resolve to face any obstacle and has the qualities of a queen who guides her people.\n\nLikes: Fighting, the well-being of her people"
+        "backstory": "The young queen of the Kingdom of Saramis, which serves the Dagdan Empire. Possesses an unwavering resolve to face any obstacle and has the qualities of a queen who guides her people.\n\nLikes: Fighting, the well-being of her people",
+        "crest": [
+          "Duality"
+        ]
       }
     },
     {
@@ -1047,7 +1054,8 @@
         "faction": "Rose Tempest",
         "backstory": "A highly skilled vihuela player who performs enchanting music. Following a “certain incident” 5 years ago, she started walking a path of vengeance and hatred.\n\nLikes: Memories of her parents, performing music from her homeland, jewels, applause",
         "crest": [
-          "Dominic"
+          "Dominic",
+          "Duality"
         ]
       }
     },
@@ -1497,7 +1505,10 @@
       },
       "fields": {
         "faction": "Moon's Lie",
-        "backstory": "The leader of the “Vandahl Merchants”, one of Dagda’s top merchant guilds. He seems carefree and elusive, but has big ambitions. Apparently collecting items known as “Drake’s Treasures”.\n\nLikes: Money, adventure, cinnamon"
+        "backstory": "The leader of the “Vandahl Merchants”, one of Dagda’s top merchant guilds. He seems carefree and elusive, but has big ambitions. Apparently collecting items known as “Drake’s Treasures”.\n\nLikes: Money, adventure, cinnamon",
+        "crest": [
+          "Duality"
+        ]
       },
       "possiblyEnemyOnly": true
     },
@@ -1520,7 +1531,8 @@
         "faction": "Linaria's Morning Dew",
         "backstory": "A mysterious girl serving at Credna’s Temple at the upper levels of Dagsion. Always conceals her face behind a distinctive cat mask. Although she’s innocent and treats everyone with kindness, she’s somewhat naïve and oblivious.\n\nLikes: Animals, cleaning, doing laundry, cooking",
         "crest": [
-          "Noa"
+          "Noa",
+          "Duality"
         ]
       },
       "postTimeskip": false,
