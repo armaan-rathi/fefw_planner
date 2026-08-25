@@ -84,6 +84,17 @@ export interface PersonalSkill {
   description: string;
 }
 
+export type Negotiation = "Easy" | "Medium" | "Difficult";
+export const NEGOTIATIONS: Negotiation[] = ["Easy", "Medium", "Difficult"];
+
+// Conditions to recruit a unit under a given lord's route. Every field is
+// optional — only the ones filled in are shown.
+export interface RecruitCondition {
+  support?: number; // Support Level
+  renown?: number; // Renown Level
+  negotiation?: Negotiation;
+}
+
 export interface Unit {
   id: string;
   name: string;
@@ -99,6 +110,7 @@ export interface Unit {
   fields: Record<string, FieldValue>; // custom field values keyed by FieldDef.key (e.g. faction)
   postTimeskip?: boolean; // only recruitable/available after the timeskip
   possiblyEnemyOnly?: boolean; // may turn out to be enemy-only (shows a "?" on the portrait)
+  recruitment?: Record<string, RecruitCondition>; // recruitment conditions keyed by lord's route id
 }
 
 export type IconShape = "circle" | "square" | "triangle" | "invtriangle" | "star4" | "star8";

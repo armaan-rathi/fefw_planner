@@ -7,7 +7,7 @@ import { ImageDrop } from "../../components/ImageDrop";
 import { SkillMark } from "../../components/icons";
 import { unitFaction } from "../../data/units";
 import { fieldOptions } from "../../data/fields";
-import { GRADES, type FieldValue, type Grade, type Unit } from "../../types";
+import { GRADES, NEGOTIATIONS, type FieldValue, type Grade, type Negotiation, type RecruitCondition, type Unit } from "../../types";
 
 function blankUnit(): Unit {
   return {
@@ -180,6 +180,20 @@ function UnitModal({ unit, onClose, onSave }: { unit: Unit; onClose: () => void;
   function setField(key: string, value: FieldValue) {
     setDraft((d) => ({ ...d, fields: { ...d.fields, [key]: value } }));
   }
+  // Merge a patch into one lord's recruitment condition, dropping empty entries
+  // so the display's "only show what's filled" logic stays trivial.
+  function setRecruit(routeId: string, patch: Partial<RecruitCondition>) {
+    setDraft((d) => {
+      const rec = { ...(d.recruitment ?? {}) };
+      const cur: RecruitCondition = { ...(rec[routeId] ?? {}), ...patch };
+      if (cur.support === undefined) delete cur.support;
+      if (cur.renown === undefined) delete cur.renown;
+      if (!cur.negotiation) delete cur.negotiation;
+      if (Object.keys(cur).length === 0) delete rec[routeId];
+      else rec[routeId] = cur;
+      return { ...d, recruitment: rec };
+    });
+  }
 
   return (
     <Modal
@@ -299,6 +313,47 @@ function UnitModal({ unit, onClose, onSave }: { unit: Unit; onClose: () => void;
         <label className="field"><span>Effect</span>
           <input type="text" value={draft.personalSkill.description} onChange={(e) => set({ personalSkill: { ...draft.personalSkill, description: e.target.value } })} />
         </label>
+      </div>
+
+      <div className="divider" />
+      <h3 className="section-title">Recruitment Conditions</h3>
+      <p className="muted" style={{ marginTop: 0, fontSize: 12.5 }}>
+        Per-lord conditions to recruit this unit. Leave anything blank to hide it — the character page shows only the lords and requirements you fill in.
+      </p>
+      <div style={{ overflowX: "auto" }}>
+        <table className="rate-table">
+          <thead>
+            <tr>
+              <th>Lord</th>
+              <th style={{ width: 120 }}>Support Lv.</th>
+              <th style={{ width: 120 }}>Renown Lv.</th>
+              <th style={{ width: 150 }}>Negotiation</th>
+            </tr>
+          </thead>
+          <tbody>
+            {db.routes.map((r) => {
+              const cond = draft.recruitment?.[r.id] ?? {};
+              return (
+                <tr key={r.id}>
+                  <td style={{ fontWeight: 600 }}>{r.name || r.id}</td>
+                  <td>
+                    <input type="number" value={cond.support ?? ""} onChange={(e) => setRecruit(r.id, { support: e.target.value === "" ? undefined : Number(e.target.value) })} />
+                  </td>
+                  <td>
+                    <input type="number" value={cond.renown ?? ""} onChange={(e) => setRecruit(r.id, { renown: e.target.value === "" ? undefined : Number(e.target.value) })} />
+                  </td>
+                  <td>
+                    <select value={cond.negotiation ?? ""} onChange={(e) => setRecruit(r.id, { negotiation: (e.target.value || undefined) as Negotiation | undefined })}>
+                      <option value="">—</option>
+                      {NEGOTIATIONS.map((n) => <option key={n} value={n}>{n}</option>)}
+                    </select>
+                  </td>
+                </tr>
+              );
+            })}
+            {db.routes.length === 0 && <tr><td colSpan={4}><span className="muted">No routes / lords defined.</span></td></tr>}
+          </tbody>
+        </table>
       </div>
 
       {db.fieldDefs.length > 0 && (

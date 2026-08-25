@@ -406,6 +406,25 @@ label.field > span {
   pointer-events: none;
 }
 
+/* ---- Recruitment conditions ---- */
+.recruit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 6px;
+}
+.recruit-line {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.recruit-lord {
+  font-weight: 700;
+  color: var(--gold-bright);
+  min-width: 90px;
+}
+
 /* ---- Proficiency grid ---- */
 .prof-grid {
   display: grid;
@@ -414,6 +433,12 @@ label.field > span {
 }
 .prof-grid.compact {
   gap: 4px;
+}
+/* Icon fills its cell (sized as a % of the box) so it scales with the cell
+   instead of sitting small inside a large box. */
+.prof-icon {
+  width: 76%;
+  height: 76%;
 }
 .prof-cell {
   position: relative;
@@ -441,6 +466,11 @@ label.field > span {
 .prof-cell.is-bane {
   box-shadow: 0 0 0 1px var(--bane), 0 0 10px rgba(95, 168, 232, 0.35);
   color: var(--bane);
+}
+/* Character detail: cap the grid width so the boxes stay compact on desktop.
+   On narrow / mobile widths it still fills the available space. */
+.char-detail .prof-grid {
+  max-width: 384px;
 }
 .prof-grade {
   position: absolute;

@@ -85,19 +85,19 @@
         "House Lamine",
         "Megaira's Beacon",
         "Rose Tempest",
-        "Arago Elites",
+        "Mane of Flame",
         "Moon's Lie",
         "Linaria's Morning Dew",
         "Brides of the Pale Raven",
+        "Arago Elites",
+        "Silver Knights",
         "Thundercloud Knights",
         "Gaia Brigadiers",
-        "Silver Knights",
-        "Mane of Flame",
         "Palma Fighters",
-        "Promised One's Army",
-        "Temple Army",
         "Brigid Army",
-        "Order of Mithras"
+        "Temple Army",
+        "Order of Mithras",
+        "Promised One's Army"
       ]
     },
     {
@@ -1848,7 +1848,7 @@
       "fields": {
         "faction": "Palma Fighters"
       },
-      "possiblyEnemyOnly": true
+      "possiblyEnemyOnly": false
     },
     {
       "id": "unit_msesemmywrm9d",

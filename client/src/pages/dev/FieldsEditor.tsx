@@ -191,20 +191,30 @@ function OptionsEditor({
     onChange([...options, v]);
     setDraft("");
   }
+  function move(i: number, dir: -1 | 1) {
+    const j = i + dir;
+    if (j < 0 || j >= options.length) return;
+    const next = [...options];
+    [next[i], next[j]] = [next[j], next[i]];
+    onChange(next);
+  }
   return (
     <div style={{ marginTop: 8 }}>
       <div className="muted" style={{ fontSize: 11, marginBottom: 4 }}>
-        Options — edit the text to rename one (units keep their value automatically).
+        Options — edit the text to rename one (units keep their value automatically). Use ▲▼ to reorder; this order is used by “By Faction” sorting on the Character Database.
       </div>
       <div className="stack" style={{ gap: 6, marginBottom: 8 }}>
         {options.length === 0 && <span className="muted" style={{ fontSize: 12 }}>No options yet.</span>}
-        {options.map((o) => (
+        {options.map((o, i) => (
           <OptionRow
             key={o}
             value={o}
             exists={(v) => options.includes(v)}
             onRename={(newVal) => onRename(o, newVal)}
             onRemove={() => onChange(options.filter((x) => x !== o))}
+            onMove={(dir) => move(i, dir)}
+            canUp={i > 0}
+            canDown={i < options.length - 1}
           />
         ))}
       </div>
@@ -221,11 +231,17 @@ function OptionRow({
   exists,
   onRename,
   onRemove,
+  onMove,
+  canUp,
+  canDown,
 }: {
   value: string;
   exists: (v: string) => boolean;
   onRename: (newVal: string) => void;
   onRemove: () => void;
+  onMove: (dir: -1 | 1) => void;
+  canUp: boolean;
+  canDown: boolean;
 }) {
   const [text, setText] = useState(value);
   // Keep the field in sync if the value changes elsewhere.
@@ -240,6 +256,10 @@ function OptionRow({
   }
   return (
     <div className="row" style={{ gap: 6 }}>
+      <span className="row" style={{ gap: 2 }}>
+        <button className="icon-btn" title="Move up" disabled={!canUp} onClick={() => onMove(-1)}>▲</button>
+        <button className="icon-btn" title="Move down" disabled={!canDown} onClick={() => onMove(1)}>▼</button>
+      </span>
       <input
         type="text"
         value={text}
