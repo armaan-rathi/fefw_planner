@@ -20,6 +20,7 @@ export function CastPage({ kind, title, blurb }: { kind: CastKind; title: string
   const list = db[kind] ?? [];
   const [openId, setOpenId] = useState<string | null>(null);
   const [query, setQuery] = useState("");
+  const crestImages = db.fieldDefs.find((f) => f.key === "crest")?.optionImages ?? {};
 
   const filtered = useMemo(() => {
     const q = query.toLowerCase().trim();
@@ -69,14 +70,18 @@ export function CastPage({ kind, title, blurb }: { kind: CastKind; title: string
               </div>
             </div>
             <div className="char-detail-attrs">
+              {open.crest && (
+                <div className="cast-detail-block">
+                  <div className="cast-detail-label">Crest</div>
+                  {crestImages[open.crest] ? (
+                    <img className="cast-crest-img" src={crestImages[open.crest]} alt={open.crest} title={open.crest} />
+                  ) : (
+                    <p style={{ margin: 0 }}>{open.crest}</p>
+                  )}
+                </div>
+              )}
               {kind === "gods" ? (
                 <>
-                  {open.crest && (
-                    <div className="cast-detail-block">
-                      <div className="cast-detail-label">Crest</div>
-                      <p style={{ margin: 0 }}>{open.crest}</p>
-                    </div>
-                  )}
                   {[0, 1, 2].map((i) =>
                     open.blessings?.[i] ? (
                       <div className="cast-detail-block" key={i}>

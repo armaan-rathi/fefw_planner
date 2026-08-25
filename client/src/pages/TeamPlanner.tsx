@@ -110,15 +110,19 @@ export function TeamPlanner() {
           <p>Pick a route to start with its lord &amp; retainers, then drag in more units and choose classes.</p>
         </div>
         <div className="row" style={{ alignItems: "flex-end", gap: 12 }}>
-          {!isFree && (
-            <button
-              className="btn ghost"
-              title="Reset this route's team to its starting units"
-              onClick={() => setSlots(defaultSlots(route))}
-            >
-              Reset to default
-            </button>
-          )}
+          <button
+            className="btn ghost"
+            title={isFree ? "Clear all units from this team" : "Reset this route's team to its starting units"}
+            onClick={() => {
+              if (isFree) {
+                if (window.confirm("Clear all units from this team?")) setSlots(emptyTeam());
+              } else {
+                setSlots(defaultSlots(route));
+              }
+            }}
+          >
+            {isFree ? "Reset" : "Reset to default"}
+          </button>
           <label className="field" style={{ margin: 0, minWidth: 240 }}>
             <span>Route</span>
             <select value={route} onChange={(e) => setRoute(e.target.value)}>

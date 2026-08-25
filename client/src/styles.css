@@ -423,6 +423,13 @@ label.field > span {
 .char-attr.compact .crest-img {
   height: 22px;
 }
+.cast-crest-img {
+  height: 56px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  margin-top: 4px;
+}
 .opt-chip-img {
   height: 18px;
   width: auto;
@@ -500,6 +507,18 @@ label.field > span {
 .prof-cell.is-bane {
   box-shadow: 0 0 0 1px var(--bane), 0 0 10px rgba(95, 168, 232, 0.35);
   color: var(--bane);
+}
+/* Team Planner only: weapon/skill types this class CAN'T use (not a class
+   proficiency) are shown extra-dull with a red tint, so the usable ones stand
+   out. Scoped to the team grid — the Character Database grid has no class
+   context, so nothing there turns red. */
+.team-grid .prof-cell:not(.is-prof) {
+  background: linear-gradient(180deg, rgba(186, 58, 58, 0.2), rgba(186, 58, 58, 0.06));
+  border-color: rgba(160, 62, 62, 0.62);
+  color: #b26a6a;
+}
+.team-grid .prof-cell:not(.is-prof) .prof-icon {
+  opacity: 0.32;
 }
 /* Character detail: cap the grid width so the boxes stay compact on desktop.
    On narrow / mobile widths it still fills the available space. */

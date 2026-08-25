@@ -76,6 +76,37 @@
   ],
   "fieldDefs": [
     {
+      "id": "faction",
+      "key": "faction",
+      "label": "Faction",
+      "type": "dropdown",
+      "options": [
+        "Ribeira Winds",
+        "House Lamine",
+        "Megaira's Beacon",
+        "Rose Tempest",
+        "Mane of Flame",
+        "Moon's Lie",
+        "Linaria's Morning Dew",
+        "Brides of the Pale Raven",
+        "Arago Elites",
+        "Silver Knights",
+        "Thundercloud Knights",
+        "Gaia Brigadiers",
+        "Palma Fighters",
+        "Brigid Army",
+        "Temple Army",
+        "Order of Mithras",
+        "Promised One's Army"
+      ]
+    },
+    {
+      "id": "backstory",
+      "key": "backstory",
+      "label": "Backstory",
+      "type": "longtext"
+    },
+    {
       "id": "f_mt935xjczc423",
       "key": "crest",
       "label": "Crest",
@@ -128,37 +159,6 @@
         "Lamine": "/images/mt93km5quhtl46.png",
         "Flames": "/images/mt93kpfwz0oqi6.png"
       }
-    },
-    {
-      "id": "faction",
-      "key": "faction",
-      "label": "Faction",
-      "type": "dropdown",
-      "options": [
-        "Ribeira Winds",
-        "House Lamine",
-        "Megaira's Beacon",
-        "Rose Tempest",
-        "Mane of Flame",
-        "Moon's Lie",
-        "Linaria's Morning Dew",
-        "Brides of the Pale Raven",
-        "Arago Elites",
-        "Silver Knights",
-        "Thundercloud Knights",
-        "Gaia Brigadiers",
-        "Palma Fighters",
-        "Brigid Army",
-        "Temple Army",
-        "Order of Mithras",
-        "Promised One's Army"
-      ]
-    },
-    {
-      "id": "backstory",
-      "key": "backstory",
-      "label": "Backstory",
-      "type": "longtext"
     }
   ],
   "classes": [
@@ -949,7 +949,10 @@
       },
       "fields": {
         "faction": "Ribeira Winds",
-        "backstory": "A cheerful, earnest and family-loving boy who lives in the tranquil Ribeira Village. He was living peacefully with his childhood friends, but on his 15th birthday, the cogs of fate began to turn.\n\nLikes: Moving around, catching animals"
+        "backstory": "A cheerful, earnest and family-loving boy who lives in the tranquil Ribeira Village. He was living peacefully with his childhood friends, but on his 15th birthday, the cogs of fate began to turn.\n\nLikes: Moving around, catching animals",
+        "crest": [
+          "Aubin"
+        ]
       }
     },
     {
@@ -978,7 +981,10 @@
       },
       "fields": {
         "faction": "House Lamine",
-        "backstory": "An elegant swordsman who’s always seeking to fight powerful opponents to satisfy his thirst. A foreigner who travelled across the seas from the land of “Fódlan”.\n\nLikes: Things he finds “beautiful”, sweets, his little sister"
+        "backstory": "An elegant swordsman who’s always seeking to fight powerful opponents to satisfy his thirst. A foreigner who travelled across the seas from the land of “Fódlan”.\n\nLikes: Things he finds “beautiful”, sweets, his little sister",
+        "crest": [
+          "Lamine"
+        ]
       }
     },
     {
@@ -1039,7 +1045,10 @@
       },
       "fields": {
         "faction": "Rose Tempest",
-        "backstory": "A highly skilled vihuela player who performs enchanting music. Following a “certain incident” 5 years ago, she started walking a path of vengeance and hatred.\n\nLikes: Memories of her parents, performing music from her homeland, jewels, applause"
+        "backstory": "A highly skilled vihuela player who performs enchanting music. Following a “certain incident” 5 years ago, she started walking a path of vengeance and hatred.\n\nLikes: Memories of her parents, performing music from her homeland, jewels, applause",
+        "crest": [
+          "Dominic"
+        ]
       }
     },
     {
@@ -1199,7 +1208,10 @@
       },
       "fields": {
         "faction": "House Lamine",
-        "backstory": "A fisherman’s daughter, from a fishing village on the Dagdan coast. Wild at heart, with superhuman strength despite her build. She joined Dietrich after he rescued her from being sacrificed to a sea beast.\n\nLikes: Handsome men, harpooning, fishing gear maintenance"
+        "backstory": "A fisherman’s daughter, from a fishing village on the Dagdan coast. Wild at heart, with superhuman strength despite her build. She joined Dietrich after he rescued her from being sacrificed to a sea beast.\n\nLikes: Handsome men, harpooning, fishing gear maintenance",
+        "crest": [
+          "Blaiddyd"
+        ]
       }
     },
     {
@@ -1506,7 +1518,10 @@
       },
       "fields": {
         "faction": "Linaria's Morning Dew",
-        "backstory": "A mysterious girl serving at Credna’s Temple at the upper levels of Dagsion. Always conceals her face behind a distinctive cat mask. Although she’s innocent and treats everyone with kindness, she’s somewhat naïve and oblivious.\n\nLikes: Animals, cleaning, doing laundry, cooking"
+        "backstory": "A mysterious girl serving at Credna’s Temple at the upper levels of Dagsion. Always conceals her face behind a distinctive cat mask. Although she’s innocent and treats everyone with kindness, she’s somewhat naïve and oblivious.\n\nLikes: Animals, cleaning, doing laundry, cooking",
+        "crest": [
+          "Noa"
+        ]
       },
       "postTimeskip": false,
       "possiblyEnemyOnly": true
@@ -1570,7 +1585,10 @@
       },
       "fields": {
         "faction": "Moon's Lie",
-        "backstory": "Manager of the renowned trading company \"Vandahl Trading,\" one of Dagda’s leading merchants. She holds authority second only to the chief executive, Talimun.\nShe meticulously manages the company's funds and is often seen sternly questioning Talimun’s extravagant spending.\n\nLikes: Poetry, animals, flowers in the shade, counting money"
+        "backstory": "Manager of the renowned trading company \"Vandahl Trading,\" one of Dagda’s leading merchants. She holds authority second only to the chief executive, Talimun.\nShe meticulously manages the company's funds and is often seen sternly questioning Talimun’s extravagant spending.\n\nLikes: Poetry, animals, flowers in the shade, counting money",
+        "crest": [
+          "The Beast"
+        ]
       }
     },
     {
@@ -1845,7 +1863,10 @@
         "description": ""
       },
       "fields": {
-        "faction": "Linaria's Morning Dew"
+        "faction": "Linaria's Morning Dew",
+        "crest": [
+          "Gloucester"
+        ]
       },
       "recruitment": {
         "leda": {
@@ -2327,7 +2348,10 @@
       },
       "fields": {
         "faction": "Promised One's Army",
-        "backstory": "A true hero born to shed light upon the world. Similar to the Herald of the Pale Raven mentioned in a poem long ago.\n\nTravels to the past with Fortuna, Goddess of Fate, at the behest of the progenitor god Sothis to gather allies and defeat the demon god Balor.\n\nLikes: Ambitious people, people of great talent, small and unnamed flowers\n\nInterests: Playing board games"
+        "backstory": "A true hero born to shed light upon the world. Similar to the Herald of the Pale Raven mentioned in a poem long ago.\n\nTravels to the past with Fortuna, Goddess of Fate, at the behest of the progenitor god Sothis to gather allies and defeat the demon god Balor.\n\nLikes: Ambitious people, people of great talent, small and unnamed flowers\n\nInterests: Playing board games",
+        "crest": [
+          "Noa"
+        ]
       },
       "postTimeskip": true
     },
@@ -5566,14 +5590,15 @@
       "routes",
       "personalSkill",
       "proficiencies",
-      "field:backstory"
+      "field:backstory",
+      "field:crest"
     ]
   },
   "gods": [
     {
       "id": "cast_msetp6lndpw3d",
       "name": "Fortuna",
-      "portrait": "/images/mshbsolhwdr55o.png",
+      "portrait": "/images/mt940b5yhqjqah.jpg",
       "subtitle": "Fate",
       "description": "",
       "crest": "Goneril"
@@ -5659,6 +5684,13 @@
   ],
   "npcs": [
     {
+      "id": "cast_msf8obk24tw3b",
+      "name": "Sothis",
+      "portrait": "/images/mt93udsbm8k7bl.jpg",
+      "subtitle": "The Beginning",
+      "description": ""
+    },
+    {
       "id": "cast_mseto4xteu04v",
       "name": "Solel",
       "portrait": "/images/mt0esjm266kmhw.jpg",
@@ -5670,13 +5702,6 @@
       "name": "Castor",
       "portrait": "/images/msf6d9r0h07291.jpg",
       "subtitle": "Cai's Father",
-      "description": ""
-    },
-    {
-      "id": "cast_msf8obk24tw3b",
-      "name": "Sothis",
-      "portrait": "/images/msf8og9b7tlbdj.jpg",
-      "subtitle": "The Beginning",
       "description": ""
     },
     {
@@ -5789,7 +5814,8 @@
       "name": "Dagda",
       "portrait": "/images/msu57d6ud0t1zi.jpg",
       "subtitle": "",
-      "description": ""
+      "description": "",
+      "crest": "Fraldarius"
     },
     {
       "id": "cast_msydo5etxtzgy",

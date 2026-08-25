@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDB } from "../../data/DataContext";
 import { uid } from "../../api";
 import { ImageDrop } from "../../components/ImageDrop";
+import { fieldOptions } from "../../data/fields";
 import type { CastKind, CastMember } from "../../types";
 
 // CRUD for a non-playable cast list (Gods, Important NPCs). Stored on db[kind],
@@ -10,6 +11,11 @@ export function CastEditor({ kind, label, subtitleLabel }: { kind: CastKind; lab
   const { db, update } = useDB();
   const list = db[kind] ?? [];
   const [name, setName] = useState("");
+  // Crest catalog: reuse the unit "Crest" field's options + images so crests
+  // are defined once and shared by units, gods and NPCs.
+  const crestField = db.fieldDefs.find((f) => f.key === "crest");
+  const crestOptions = crestField ? fieldOptions(db, crestField) : [];
+  const crestImages = crestField?.optionImages ?? {};
 
   function add() {
     const n = name.trim();
@@ -109,12 +115,20 @@ export function CastEditor({ kind, label, subtitleLabel }: { kind: CastKind; lab
                     <span>Name</span>
                     <input type="text" value={m.name} onChange={(e) => patch(m.id, { name: e.target.value })} />
                   </label>
-                  {isGods && (
-                    <label className="field" style={{ margin: 0 }}>
-                      <span>Crest</span>
-                      <input type="text" value={m.crest ?? ""} onChange={(e) => patch(m.id, { crest: e.target.value })} />
-                    </label>
-                  )}
+                  <label className="field" style={{ margin: 0 }}>
+                    <span>Crest</span>
+                    {crestOptions.length === 0 ? (
+                      <span className="muted" style={{ fontSize: 12 }}>Define crest options (with images) in the unit “Crest” field first.</span>
+                    ) : (
+                      <div className="row" style={{ gap: 8, alignItems: "center" }}>
+                        <select value={m.crest ?? ""} onChange={(e) => patch(m.id, { crest: e.target.value || null })} style={{ flex: 1 }}>
+                          <option value="">— None —</option>
+                          {crestOptions.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
+                        </select>
+                        {m.crest && crestImages[m.crest] && <img className="crest-img" src={crestImages[m.crest]} alt={m.crest} title={m.crest} />}
+                      </div>
+                    )}
+                  </label>
                   <label className="field" style={{ margin: 0 }}>
                     <span>{subtitleLabel}</span>
                     <input type="text" value={m.subtitle} onChange={(e) => patch(m.id, { subtitle: e.target.value })} />
