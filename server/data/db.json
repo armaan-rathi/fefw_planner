@@ -109,7 +109,7 @@
     {
       "id": "f_mt935xjczc423",
       "key": "crest",
-      "label": "Crest",
+      "label": "Crests",
       "type": "multiselect",
       "options": [
         "Ernest",
@@ -1484,7 +1484,10 @@
       },
       "fields": {
         "backstory": "A gladiator who continues to fight in the Dagsion arena.\n\nKnown by the moniker \"White-Maned Demon\" for his demonic strength. It is said that five years ago, he committed a great sin and was imprisoned in the underground dungeon of the arena.\n\nLikes: Training, salted meat, well-crafted weapons, reading, board games",
-        "faction": "Mane of Flame"
+        "faction": "Mane of Flame",
+        "crest": [
+          "Flames"
+        ]
       },
       "possiblyEnemyOnly": true
     },
@@ -1606,7 +1609,7 @@
     {
       "id": "unit_ms4b7sewbatfh",
       "name": "Diego",
-      "portrait": "/images/msu5wh8h69xgqn.jpg",
+      "portrait": "/images/mtahz95c5htrza.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1619,7 +1622,8 @@
         "description": ""
       },
       "fields": {
-        "faction": "Linaria's Morning Dew"
+        "faction": "Linaria's Morning Dew",
+        "backstory": "A young man of the combat-skilled Hal-Hari tribe, bearing the tribe's distinctive markings on his arms and upper body.\nThough taciturn and aloof, he has sworn lifelong loyalty to Orchel, the priestess of Credne Temple, and follows her devotedly.\n\nLikes: Walking in the forest, foraging medicinal herbs, Orchel"
       },
       "recruitment": {
         "leda": {
@@ -1632,7 +1636,7 @@
     {
       "id": "unit_ms4b0fg9gc03t",
       "name": "Sha Lan",
-      "portrait": "/images/msf9aclmn9q739.png",
+      "portrait": "/images/mtahzig1p21eub.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -2346,7 +2350,7 @@
     {
       "id": "unit_ms3oeprflm40x",
       "name": "Eshmel",
-      "portrait": "/images/msmwmvcuiquzr1.png",
+      "portrait": "/images/mt9qy2snjg6d2g.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -2370,7 +2374,7 @@
     {
       "id": "unit_msftrzee97kx3",
       "name": "Hong Hua",
-      "portrait": "/images/msmwjwlgz1pfna.png",
+      "portrait": "/images/mt9qy9gj7xo5c2.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -2391,7 +2395,7 @@
     {
       "id": "unit_mshblux2thfxr",
       "name": "Troy",
-      "portrait": "/images/msq4dns3b5lype.jpg",
+      "portrait": "/images/mt9qyf522j90b3.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
