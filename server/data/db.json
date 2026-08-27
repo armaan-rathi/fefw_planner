@@ -1655,7 +1655,7 @@
     {
       "id": "unit_msesm42zaq9do",
       "name": "Dante",
-      "portrait": "/images/mtb9auvuh5ih5f.png",
+      "portrait": "/images/mtbhqbap85kn6r.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1669,17 +1669,17 @@
       },
       "fields": {
         "faction": "Mane of Flame",
-        "backstory": "An advanced magic user and litterateur whose precise instructions can enhance her allies' abilities.\n\nLikes: Herself, writing quickly, searching for dramatic subjects"
+        "backstory": "A litterateur working as a playwright at Dagsion. Full of creativity, with an endless desire to incorporate anything that catches her interest into her works. Also an advanced magic user.\n\nLikes: Herself, searching for dramatic subjects, studying people for research, seeing how others act"
       }
     },
     {
-      "id": "unit_ms4b5mqtae605",
-      "name": "Fianna",
-      "portrait": "/images/msu4u4elj7zfaa.png",
+      "id": "unit_mt4v6olgdd4up",
+      "name": "Simon",
+      "portrait": "/images/mtbhsjgagncos3.jpeg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": "class_soldier",
+      "classId": null,
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -1688,7 +1688,8 @@
         "description": ""
       },
       "fields": {
-        "faction": "Moon's Lie"
+        "faction": "Moon's Lie",
+        "backstory": "A combat specialist who has made it out from the verge of death countless times. He met Talimun while travelling the land as a mercenary, and was hired to work for the Vandahl Merchant Company. He is addicted to the thrill of the battlefield, constantly chasing that high.\n\nLikes: exchanges of life and death, playing with women"
       }
     },
     {
@@ -1756,13 +1757,13 @@
       }
     },
     {
-      "id": "unit_ms4b4zib7ibpz",
-      "name": "Ludia",
-      "portrait": "/images/ms4j52g4qqvh9f.jpg",
+      "id": "unit_ms4b5mqtae605",
+      "name": "Fianna",
+      "portrait": "/images/msu4u4elj7zfaa.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": "class_ms4axgsyshgov",
+      "classId": "class_soldier",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -1845,13 +1846,13 @@
       }
     },
     {
-      "id": "unit_msu45xa66phts",
-      "name": "Long",
-      "portrait": "/images/msu4660pt8tw54.jpg",
+      "id": "unit_ms4b4zib7ibpz",
+      "name": "Ludia",
+      "portrait": "/images/ms4j52g4qqvh9f.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": null,
+      "classId": "class_ms4axgsyshgov",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -1860,9 +1861,8 @@
         "description": ""
       },
       "fields": {
-        "faction": "Brides of the Pale Raven"
-      },
-      "possiblyEnemyOnly": true
+        "faction": "Moon's Lie"
+      }
     },
     {
       "id": "unit_ms4b1qq82fg7g",
@@ -1919,6 +1919,26 @@
           "negotiation": "Medium"
         }
       }
+    },
+    {
+      "id": "unit_msu45xa66phts",
+      "name": "Long",
+      "portrait": "/images/msu4660pt8tw54.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Brides of the Pale Raven"
+      },
+      "possiblyEnemyOnly": true
     },
     {
       "id": "unit_ms4axuyt3lodb",
@@ -2306,23 +2326,6 @@
       },
       "fields": {},
       "possiblyEnemyOnly": true
-    },
-    {
-      "id": "unit_mt4v6olgdd4up",
-      "name": "Simon",
-      "portrait": "/images/mt4v6unq0yuo30.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": null,
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {}
     },
     {
       "id": "unit_mt4v2r1q22a0b",
