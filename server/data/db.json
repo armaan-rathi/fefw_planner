@@ -1653,13 +1653,13 @@
       }
     },
     {
-      "id": "unit_msu42ne4imvnh",
-      "name": "Jester",
-      "portrait": "/images/mt4v5a0sifaggt.jpg",
+      "id": "unit_msesm42zaq9do",
+      "name": "Dante",
+      "portrait": "/images/mtb9auvuh5ih5f.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": null,
+      "classId": "class_diviner",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -1668,13 +1668,8 @@
         "description": ""
       },
       "fields": {
-        "faction": "Mane of Flame"
-      },
-      "recruitment": {
-        "dietrich": {
-          "support": 3,
-          "renown": 6
-        }
+        "faction": "Mane of Flame",
+        "backstory": "An advanced magic user and litterateur whose precise instructions can enhance her allies' abilities.\n\nLikes: Herself, writing quickly, searching for dramatic subjects"
       }
     },
     {
@@ -1825,13 +1820,13 @@
       }
     },
     {
-      "id": "unit_msesm42zaq9do",
-      "name": "Dante",
-      "portrait": "/images/msu54ltb9ctk4n.jpg",
+      "id": "unit_msu42ne4imvnh",
+      "name": "Jester",
+      "portrait": "/images/mt4v5a0sifaggt.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": "class_diviner",
+      "classId": null,
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -1841,6 +1836,12 @@
       },
       "fields": {
         "faction": "Mane of Flame"
+      },
+      "recruitment": {
+        "dietrich": {
+          "support": 3,
+          "renown": 6
+        }
       }
     },
     {
