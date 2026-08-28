@@ -1725,7 +1725,7 @@
     {
       "id": "unit_mseslad7245am",
       "name": "Nezha",
-      "portrait": "/images/msf6yoq8zuvciv.png",
+      "portrait": "/images/mtd4prfd51w8pl.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1738,7 +1738,8 @@
         "description": ""
       },
       "fields": {
-        "faction": "Brides of the Pale Raven"
+        "faction": "Brides of the Pale Raven",
+        "backstory": "An energetic young swordsman who travels with Anatolia. Trains every day, aiming to become the strongest. Bad at keeping secrets and frequently leaks information about his hometown. Self-conscious about his shortness.\n\nLikes: Physical activity, justice, fighting, good food, combat training"
       }
     },
     {
