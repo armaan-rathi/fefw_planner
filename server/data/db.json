@@ -1675,7 +1675,7 @@
     {
       "id": "unit_mt4v6olgdd4up",
       "name": "Simon",
-      "portrait": "/images/mtbhsjgagncos3.jpeg",
+      "portrait": "/images/mtc0af0tzjmf59.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1693,13 +1693,13 @@
       }
     },
     {
-      "id": "unit_ms4aycsktz7vo",
-      "name": "Seteth",
-      "portrait": "/images/mt1yq3an706y37.jpg",
+      "id": "unit_ms4b1qq82fg7g",
+      "name": "Ninae",
+      "portrait": "/images/mtcvgfjxxsfoya.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": "class_msesu5uoyogcq",
+      "classId": null,
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -1708,12 +1708,16 @@
         "description": ""
       },
       "fields": {
-        "faction": "Linaria's Morning Dew"
+        "faction": "Linaria's Morning Dew",
+        "crest": [
+          "Gloucester"
+        ],
+        "backstory": "An eerie woman who serves Credna’s temple like the cat-masked Orchel. She’s a “Vulkan”, member of an elite squadron under the gods’ direct command, and she’s known as “Black-Lace Ninae”. They say she can hear the voices of the spirits.\n\nLikes: Pitiable people, talking to spirits, skygazing"
       },
       "recruitment": {
-        "cai": {
+        "leda": {
           "support": 3,
-          "renown": 10,
+          "renown": 8,
           "negotiation": "Difficult"
         }
       }
@@ -1865,13 +1869,13 @@
       }
     },
     {
-      "id": "unit_ms4b1qq82fg7g",
-      "name": "Ninae",
-      "portrait": "/images/ms4jgxw7tv95tq.jpg",
+      "id": "unit_ms4aycsktz7vo",
+      "name": "Seteth",
+      "portrait": "/images/mt1yq3an706y37.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": null,
+      "classId": "class_msesu5uoyogcq",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -1880,15 +1884,12 @@
         "description": ""
       },
       "fields": {
-        "faction": "Linaria's Morning Dew",
-        "crest": [
-          "Gloucester"
-        ]
+        "faction": "Linaria's Morning Dew"
       },
       "recruitment": {
-        "leda": {
+        "cai": {
           "support": 3,
-          "renown": 8,
+          "renown": 10,
           "negotiation": "Difficult"
         }
       }
