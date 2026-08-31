@@ -2124,7 +2124,7 @@
     {
       "id": "unit_ms4b0v3updg6t",
       "name": "Guzran",
-      "portrait": "/images/msu5x5lcduo8ms.jpg",
+      "portrait": "/images/mthi0bkm2ghmry.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -2139,7 +2139,9 @@
         "name": "",
         "description": ""
       },
-      "fields": {}
+      "fields": {
+        "backstory": "A lively and carefree mercenary. Has survived countless battlefields and his friends call him the “Unkillable Guzran”. He’s ignored a lot because he’s always bragging, but he’s genuinely capable.\n\nLikes: Booze, women, interesting people, young greenhorns, boasting"
+      }
     },
     {
       "id": "unit_ms4b14v2stjjh",
@@ -2238,7 +2240,7 @@
     {
       "id": "unit_ms4b9764g1dhr",
       "name": "Nydine",
-      "portrait": "/images/msf7msg9erxlfr.png",
+      "portrait": "/images/mthi04x6wo1icj.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -2258,7 +2260,9 @@
         "name": "",
         "description": ""
       },
-      "fields": {}
+      "fields": {
+        "backstory": "A woman working as a mercenary at Dagsion. Originally from Saramis, she was an exemplary warrior, whose skills were recognised by Bonaventure the Mastermind. After a civil war many years ago, she wandered around Dagda, eventually leading to her current situation.\n\nLikes: Honoring her duties, caring for orniuses, improving her combat abilities, reading"
+      }
     },
     {
       "id": "unit_msesipji4v2wt",
