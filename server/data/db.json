@@ -523,7 +523,8 @@
       "bonusExp": [
         "lance",
         "riding",
-        "flying"
+        "flying",
+        "axe"
       ]
     },
     {
@@ -946,8 +947,8 @@
       ],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "???",
+        "description": "Mov +1"
       },
       "fields": {
         "faction": "Ribeira Winds",
@@ -979,7 +980,7 @@
       ],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
+        "name": "Murderous Intent",
         "description": ""
       },
       "fields": {
@@ -1013,8 +1014,8 @@
       ],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Royal Resolve",
+        "description": "Reduces damage?"
       },
       "fields": {
         "faction": "Megaira's Beacon",
@@ -1350,8 +1351,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Accelerate?",
+        "description": "Similar to apeedtaker?"
       },
       "fields": {
         "faction": "Megaira's Beacon",
@@ -1374,8 +1375,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Ardent Nosferatu?",
+        "description": "Increases Crit for Nosferatu?"
       },
       "fields": {
         "faction": "Rose Tempest"
@@ -1419,7 +1420,7 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
+        "name": "Aptitude?",
         "description": ""
       },
       "fields": {
@@ -1595,8 +1596,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "???",
+        "description": "Grants adjacent units access to the convoy"
       },
       "fields": {
         "faction": "Moon's Lie",
@@ -2102,26 +2103,6 @@
       }
     },
     {
-      "id": "unit_msu434ibp8q8s",
-      "name": "Maria",
-      "portrait": "/images/msu43dhios42g3.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": null,
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {
-        "faction": "Order of Mithras"
-      },
-      "possiblyEnemyOnly": true
-    },
-    {
       "id": "unit_ms4b0v3updg6t",
       "name": "Guzran",
       "portrait": "/images/mthi0bkm2ghmry.jpg",
@@ -2136,11 +2117,88 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Hot-Headed",
+        "description": "Increases Crit, Hit or Avo at random"
       },
       "fields": {
         "backstory": "A lively and carefree mercenary. Has survived countless battlefields and his friends call him the “Unkillable Guzran”. He’s ignored a lot because he’s always bragging, but he’s genuinely capable.\n\nLikes: Booze, women, interesting people, young greenhorns, boasting"
+      }
+    },
+    {
+      "id": "unit_ms4b9764g1dhr",
+      "name": "Nydine",
+      "portrait": "/images/mthi04x6wo1icj.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_ornius",
+      "boons": [
+        "axe",
+        "reason",
+        "riding",
+        "flying"
+      ],
+      "banes": [
+        "brawl",
+        "armor"
+      ],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "Forcing Through?",
+        "description": "Allows unit to pass through tiles with opponents on them"
+      },
+      "fields": {
+        "backstory": "A woman working as a mercenary at Dagsion. Originally from Saramis, she was an exemplary warrior, whose skills were recognised by Bonaventure the Mastermind. After a civil war many years ago, she wandered around Dagda, eventually leading to her current situation.\n\nLikes: Honoring her duties, caring for orniuses, improving her combat abilities, reading"
+      }
+    },
+    {
+      "id": "unit_msesipji4v2wt",
+      "name": "Io",
+      "portrait": "/images/mtislfi6z73y3h.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_msesj7wz0j31a",
+      "boons": [
+        "lance",
+        "riding"
+      ],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "With My Steed",
+        "description": ""
+      },
+      "fields": {
+        "backstory": "A high-spirited young man who makes a living as a mercenary in Dagsion.\nHe once served as a knight in the Kingdom of Arago to protect the people's happiness, but he fled Arago out of disgust for the king's self-righteous actions.\n\nLikes: Chivalry, self-discipline, his beloved horse Rocinan"
+      }
+    },
+    {
+      "id": "unit_ms4b3v4raamqa",
+      "name": "Catania",
+      "portrait": "/images/mtisl1kbb3g3is.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_ms4godtdiwiu4",
+      "boons": [
+        "lance",
+        "flying"
+      ],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "Punishing Squall",
+        "description": "Increases Hit if Attack Speed is a certain amount higher than foe's"
+      },
+      "fields": {
+        "backstory": "A proud knight searching for a well-paying employer in Dagsion.\nShe once served a certain noble, but lost everything due to an incident five years ago.\nThough her life lacks financial leeway, she behaves in a way that doesn't let it show.\n\nLikes: Sterling wares, sterling people, sterling meals"
+      },
+      "recruitment": {
+        "leda": {
+          "support": 1,
+          "renown": 2
+        }
       }
     },
     {
@@ -2167,29 +2225,6 @@
           "support": 2,
           "renown": 3,
           "negotiation": "Easy"
-        }
-      }
-    },
-    {
-      "id": "unit_ms4b3v4raamqa",
-      "name": "Catania",
-      "portrait": "/images/msu4448iole60m.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": "class_ms4godtdiwiu4",
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {},
-      "recruitment": {
-        "leda": {
-          "support": 1,
-          "renown": 2
         }
       }
     },
@@ -2238,40 +2273,13 @@
       "fields": {}
     },
     {
-      "id": "unit_ms4b9764g1dhr",
-      "name": "Nydine",
-      "portrait": "/images/mthi04x6wo1icj.jpg",
+      "id": "unit_ms4b44v3k39y1",
+      "name": "Nuzzo",
+      "portrait": "/images/ms4j4uuiviueqn.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": "class_ornius",
-      "boons": [
-        "axe",
-        "reason",
-        "riding",
-        "flying"
-      ],
-      "banes": [
-        "brawl",
-        "armor"
-      ],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {
-        "backstory": "A woman working as a mercenary at Dagsion. Originally from Saramis, she was an exemplary warrior, whose skills were recognised by Bonaventure the Mastermind. After a civil war many years ago, she wandered around Dagda, eventually leading to her current situation.\n\nLikes: Honoring her duties, caring for orniuses, improving her combat abilities, reading"
-      }
-    },
-    {
-      "id": "unit_msesipji4v2wt",
-      "name": "Io",
-      "portrait": "/images/mt4v35hs4pdmcc.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": "class_msesj7wz0j31a",
+      "classId": "class_ms4czk6qlyp89",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -2299,41 +2307,6 @@
       "fields": {}
     },
     {
-      "id": "unit_ms4b44v3k39y1",
-      "name": "Nuzzo",
-      "portrait": "/images/ms4j4uuiviueqn.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": "class_ms4czk6qlyp89",
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {}
-    },
-    {
-      "id": "unit_msu41p5eli1ai",
-      "name": "Aswan",
-      "portrait": "/images/msu6112ylub3ua.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": null,
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {},
-      "possiblyEnemyOnly": true
-    },
-    {
       "id": "unit_mt4v2r1q22a0b",
       "name": "Majide",
       "portrait": "/images/mt4v2y7e7s2sto.jpg",
@@ -2356,6 +2329,44 @@
           "negotiation": "Easy"
         }
       }
+    },
+    {
+      "id": "unit_msu434ibp8q8s",
+      "name": "Maria",
+      "portrait": "/images/msu43dhios42g3.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Order of Mithras"
+      },
+      "possiblyEnemyOnly": true
+    },
+    {
+      "id": "unit_msu41p5eli1ai",
+      "name": "Aswan",
+      "portrait": "/images/msu6112ylub3ua.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {},
+      "possiblyEnemyOnly": true
     },
     {
       "id": "unit_ms3oeprflm40x",
