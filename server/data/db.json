@@ -504,7 +504,7 @@
         "riding",
         "bow"
       ],
-      "portrait": null
+      "portrait": "/images/mtk9u1s0xwojjh.png"
     },
     {
       "id": "class_ms4gsshgfxh2m",
@@ -537,7 +537,7 @@
         "sword",
         "infantry"
       ],
-      "portrait": null,
+      "portrait": "/images/mtk9vmup19uu87.jpg",
       "classAbilities": [
         {
           "name": "Combat Arts +2",
@@ -570,7 +570,7 @@
       "proficiencies": [
         "faith"
       ],
-      "portrait": null,
+      "portrait": "/images/mtk9wbtt3q3rln.jpg",
       "classAbilities": [
         {
           "name": "White-Magic Seeker",
@@ -605,7 +605,7 @@
         "lance",
         "riding"
       ],
-      "portrait": null,
+      "portrait": "/images/mtka5gsfbk4gf1.jpg",
       "classAbilities": [
         {
           "name": "Mount/Dismount",
@@ -656,7 +656,7 @@
         "armor",
         "riding"
       ],
-      "portrait": null
+      "portrait": "/images/mtkahj3xv82msy.png"
     },
     {
       "id": "class_msessr8yloah4",
@@ -669,7 +669,7 @@
         "faith",
         "infantry"
       ],
-      "portrait": null,
+      "portrait": "/images/mtkadjzkl153xl.jpg",
       "bonusExp": [
         "lance",
         "faith",
@@ -709,7 +709,7 @@
       "proficiencies": [
         "axe"
       ],
-      "portrait": null
+      "portrait": "/images/mtk9wjjpwxnfal.jpg"
     },
     {
       "id": "class_msetr0h42u767",
@@ -720,7 +720,7 @@
       "proficiencies": [
         "bow"
       ],
-      "portrait": null
+      "portrait": "/images/mtk9wozi9bb2v9.jpg"
     },
     {
       "id": "class_msetr4gmgpksi",
@@ -733,7 +733,7 @@
         "axe",
         "armor"
       ],
-      "portrait": null,
+      "portrait": "/images/mtka61zjuncg1c.jpg",
       "primarySkills": [
         {
           "skillTypeId": "armor",
@@ -783,7 +783,7 @@
         "bow",
         "riding"
       ],
-      "portrait": null
+      "portrait": "/images/mtk9x3urumdn9m.jpg"
     },
     {
       "id": "class_msetrmdx8vazf",
@@ -798,7 +798,7 @@
         "faith",
         "infantry"
       ],
-      "portrait": null,
+      "portrait": "/images/mtka5pdgoxroc8.png",
       "classAbilities": [
         {
           "name": "Black-Magic Seeker",
@@ -852,6 +852,36 @@
         "faith",
         "infantry"
       ]
+    },
+    {
+      "id": "class_mtkahoxeqwsgg",
+      "name": "??? (War Master?)",
+      "tier": "Advanced",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [],
+      "bonusExp": [],
+      "portrait": "/images/mtkahxtafnvmgr.png"
+    },
+    {
+      "id": "class_mtkai70xjhe5w",
+      "name": "??? (Assassin?)",
+      "tier": "Advanced",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [],
+      "bonusExp": [],
+      "portrait": "/images/mtkaiaotiqbepi.png"
+    },
+    {
+      "id": "class_mtkaif9kfay5s",
+      "name": "??? (Mage Knight?)",
+      "tier": "Advanced",
+      "description": "",
+      "movementType": "cavalry",
+      "proficiencies": [],
+      "bonusExp": [],
+      "portrait": "/images/mtkaim2op8umrh.png"
     },
     {
       "id": "class_msu3e3ohulo8g",
