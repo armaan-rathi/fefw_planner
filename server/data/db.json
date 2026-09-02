@@ -181,7 +181,7 @@
         "authority",
         "infantry"
       ],
-      "portrait": null,
+      "portrait": "/images/mtitc1gh1rd448.jpg",
       "masteredAbility": {
         "name": "HP +5?",
         "description": "",
@@ -205,7 +205,7 @@
         "authority",
         "infantry"
       ],
-      "portrait": null,
+      "portrait": "/images/mtitw7ut9unk27.jpg",
       "masteredAbility": {
         "name": "HP +5?",
         "description": "",
@@ -224,7 +224,7 @@
         "brawl",
         "infantry"
       ],
-      "portrait": null,
+      "portrait": "/images/mtitcpoiwr2s95.jpg",
       "masteredAbility": {
         "name": "Attack Basics",
         "description": "",
@@ -248,7 +248,7 @@
         "infantry",
         "armor"
       ],
-      "portrait": null,
+      "portrait": "/images/mtitcvj0xqkwx4.jpg",
       "bonusExp": [
         "lance",
         "axe",
@@ -267,10 +267,30 @@
         "infantry",
         "authority"
       ],
-      "portrait": null,
+      "portrait": "/images/mtitd1g4rtx4or.jpg",
       "bonusExp": [
         "sword",
         "bow"
+      ]
+    },
+    {
+      "id": "class_ornius",
+      "name": "Ornius Rider",
+      "tier": "Beginner",
+      "description": "",
+      "movementType": "flying",
+      "proficiencies": [
+        "lance",
+        "flying",
+        "riding",
+        "sword",
+        "axe"
+      ],
+      "portrait": "/images/mtitdd7jaouyzw.jpg",
+      "bonusExp": [
+        "lance",
+        "riding",
+        "flying"
       ]
     },
     {
@@ -287,7 +307,7 @@
         "faith",
         "authority"
       ],
-      "portrait": null,
+      "portrait": "/images/mtitd713n3xi61.jpg",
       "masteredAbility": {
         "name": "Magic Basics",
         "description": "Grants Mag/Res +1",
@@ -296,26 +316,6 @@
       "bonusExp": [
         "reason",
         "faith"
-      ]
-    },
-    {
-      "id": "class_ornius",
-      "name": "Ornius Rider",
-      "tier": "Beginner",
-      "description": "",
-      "movementType": "flying",
-      "proficiencies": [
-        "lance",
-        "flying",
-        "riding",
-        "sword",
-        "axe"
-      ],
-      "portrait": null,
-      "bonusExp": [
-        "lance",
-        "riding",
-        "flying"
       ]
     },
     {
@@ -328,9 +328,55 @@
         "sword",
         "infantry"
       ],
-      "portrait": null,
+      "portrait": "/images/mtitij2szqbk2h.jpg",
       "bonusExp": [
         "sword",
+        "infantry"
+      ]
+    },
+    {
+      "id": "class_brigand",
+      "name": "Brigand",
+      "tier": "Specialty",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "axe",
+        "infantry"
+      ],
+      "portrait": "/images/mtitqs6mh4v48w.jpg",
+      "bonusExp": [
+        "axe"
+      ]
+    },
+    {
+      "id": "class_ms3pz9lcrqj1y",
+      "name": "Pugilist",
+      "tier": "Specialty",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "brawl",
+        "infantry"
+      ],
+      "portrait": "/images/mtitqynun8q53c.jpg",
+      "bonusExp": [
+        "brawl"
+      ]
+    },
+    {
+      "id": "class_archer",
+      "name": "Archer",
+      "tier": "Specialty",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "bow",
+        "infantry"
+      ],
+      "portrait": "/images/mtitrbggre6be7.jpg",
+      "bonusExp": [
+        "bow",
         "infantry"
       ]
     },
@@ -345,7 +391,7 @@
         "bow",
         "authority"
       ],
-      "portrait": null,
+      "portrait": "/images/mtitrigacw0psn.jpg",
       "bonusExp": [
         "sword",
         "bow"
@@ -364,7 +410,7 @@
         "sword",
         "infantry"
       ],
-      "portrait": null,
+      "portrait": "/images/mtitr52v82x382.jpg",
       "bonusExp": [
         "lance",
         "axe",
@@ -383,56 +429,10 @@
         "axe",
         "riding"
       ],
-      "portrait": null,
+      "portrait": "/images/mtitroh1clgfkw.jpg",
       "bonusExp": [
         "lance",
         "riding"
-      ]
-    },
-    {
-      "id": "class_brigand",
-      "name": "Brigand",
-      "tier": "Specialty",
-      "description": "",
-      "movementType": "infantry",
-      "proficiencies": [
-        "axe",
-        "infantry"
-      ],
-      "portrait": null,
-      "bonusExp": [
-        "axe"
-      ]
-    },
-    {
-      "id": "class_archer",
-      "name": "Archer",
-      "tier": "Specialty",
-      "description": "",
-      "movementType": "infantry",
-      "proficiencies": [
-        "bow",
-        "infantry"
-      ],
-      "portrait": null,
-      "bonusExp": [
-        "bow",
-        "infantry"
-      ]
-    },
-    {
-      "id": "class_ms3pz9lcrqj1y",
-      "name": "Pugilist",
-      "tier": "Specialty",
-      "description": "",
-      "movementType": "infantry",
-      "proficiencies": [
-        "brawl",
-        "infantry"
-      ],
-      "portrait": null,
-      "bonusExp": [
-        "brawl"
       ]
     },
     {
@@ -449,7 +449,7 @@
         "brawl",
         "authority"
       ],
-      "portrait": null,
+      "portrait": "/images/mtiu7ucdgatj83.jpg",
       "bonusExp": [
         "reason",
         "faith",
@@ -470,7 +470,7 @@
         "authority",
         "infantry"
       ],
-      "portrait": null,
+      "portrait": "/images/mtiualx7y342ok.jpg",
       "bonusExp": [
         "brawl",
         "reason",
@@ -487,7 +487,7 @@
         "lance",
         "flying"
       ],
-      "portrait": null,
+      "portrait": "/images/mtiu7mtdgngkxj.png",
       "bonusExp": [
         "lance",
         "flying"
@@ -519,7 +519,7 @@
         "lance",
         "axe"
       ],
-      "portrait": null,
+      "portrait": "/images/mtiu817xdmy8ps.png",
       "bonusExp": [
         "lance",
         "riding",
@@ -685,7 +685,7 @@
       "proficiencies": [
         "riding"
       ],
-      "portrait": null
+      "portrait": "/images/mtiucexoe643u9.jpg"
     },
     {
       "id": "class_msesu5uoyogcq",
@@ -698,7 +698,7 @@
         "flying",
         "axe"
       ],
-      "portrait": null
+      "portrait": "/images/mtiueyzdp0qun5.jpg"
     },
     {
       "id": "class_msetqo1fy8nq2",
@@ -846,7 +846,7 @@
         "faith",
         "infantry"
       ],
-      "portrait": null,
+      "portrait": "/images/mtiuer1f5n5zit.jpg",
       "bonusExp": [
         "brawl",
         "faith",
@@ -1596,8 +1596,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "???",
-        "description": "Grants adjacent units access to the convoy"
+        "name": "Merchants’ Manager",
+        "description": "Grants her and nearby units access to the convoy"
       },
       "fields": {
         "faction": "Moon's Lie",
@@ -1946,7 +1946,7 @@
     {
       "id": "unit_ms4axuyt3lodb",
       "name": "Alexandra",
-      "portrait": "/images/ms4jh7q4yheefx.jpg",
+      "portrait": "/images/mtk9ndn2qe57a2.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1959,13 +1959,14 @@
         "description": ""
       },
       "fields": {
-        "faction": "Silver Knights"
+        "faction": "Silver Knights",
+        "backstory": "A lovely pegasus knight who serves at Jurah’s Temple at the upper levels of Dagsion. She’s known as the “Silver Maiden” and has many fans. Since she’s from a renowned family, there are also many who envy her privileged lifestyle.\n\nLikes: Her parents, virtuous men, caring for her beloved steed"
       }
     },
     {
       "id": "unit_msesdf1q9njym",
       "name": "Benditz",
-      "portrait": "/images/msf7qqhh21v2ri.png",
+      "portrait": "/images/mtk9o0oqzg0dz1.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1978,7 +1979,8 @@
         "description": ""
       },
       "fields": {
-        "faction": "Thundercloud Knights"
+        "faction": "Thundercloud Knights",
+        "backstory": "A one-eyed veteran knight who proudly calls himself a “General”. Once served as a temple centurion, but lost his position due to a scandal many years ago and now lives as a mercenary.\n\nLikes: The Great August’s tactics, up-and-coming young people, lecturing young people, reading"
       }
     },
     {
