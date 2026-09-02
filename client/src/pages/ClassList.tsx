@@ -128,7 +128,10 @@ export function ClassList() {
 
   const tiers = useMemo(() => CLASS_TIERS.filter((t) => db.classes.some((c) => c.tier === t)), [db.classes]);
   const [tier, setTier] = useState<string>("");
-  const activeTier = tiers.includes(tier) ? tier : tiers[0] ?? "";
+  // Most planning is around Advanced classes, so default to that tier when it
+  // exists (until the user picks another).
+  const defaultTier = tiers.includes("Advanced") ? "Advanced" : tiers[0] ?? "";
+  const activeTier = tiers.includes(tier) ? tier : defaultTier;
 
   const inTier = useMemo(() => db.classes.filter((c) => c.tier === activeTier), [db.classes, activeTier]);
   const [selId, setSelId] = useState<string | null>(null);

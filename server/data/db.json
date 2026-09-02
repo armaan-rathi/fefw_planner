@@ -181,7 +181,7 @@
         "authority",
         "infantry"
       ],
-      "portrait": "/images/mtitc1gh1rd448.jpg",
+      "portrait": "/images/mtkape7ufqjids.jpg",
       "masteredAbility": {
         "name": "HP +5?",
         "description": "",
@@ -205,7 +205,7 @@
         "authority",
         "infantry"
       ],
-      "portrait": "/images/mtitw7ut9unk27.jpg",
+      "portrait": "/images/mtkapn701jlipa.jpg",
       "masteredAbility": {
         "name": "HP +5?",
         "description": "",
@@ -224,7 +224,7 @@
         "brawl",
         "infantry"
       ],
-      "portrait": "/images/mtitcpoiwr2s95.jpg",
+      "portrait": "/images/mtkapt47g941oy.jpg",
       "masteredAbility": {
         "name": "Attack Basics",
         "description": "",
@@ -248,7 +248,7 @@
         "infantry",
         "armor"
       ],
-      "portrait": "/images/mtitcvj0xqkwx4.jpg",
+      "portrait": "/images/mtkaq47i1mgqy7.jpg",
       "bonusExp": [
         "lance",
         "axe",
@@ -267,7 +267,7 @@
         "infantry",
         "authority"
       ],
-      "portrait": "/images/mtitd1g4rtx4or.jpg",
+      "portrait": "/images/mtkaqrz5lytdnm.jpg",
       "bonusExp": [
         "sword",
         "bow"
@@ -286,7 +286,7 @@
         "sword",
         "axe"
       ],
-      "portrait": "/images/mtitdd7jaouyzw.jpg",
+      "portrait": "/images/mtkar4tvxpbbk9.jpg",
       "bonusExp": [
         "lance",
         "riding",
@@ -307,7 +307,7 @@
         "faith",
         "authority"
       ],
-      "portrait": "/images/mtitd713n3xi61.jpg",
+      "portrait": "/images/mtkara2rdzjlth.jpg",
       "masteredAbility": {
         "name": "Magic Basics",
         "description": "Grants Mag/Res +1",
@@ -328,7 +328,7 @@
         "sword",
         "infantry"
       ],
-      "portrait": "/images/mtitij2szqbk2h.jpg",
+      "portrait": "/images/mtkari702k0yfw.jpg",
       "bonusExp": [
         "sword",
         "infantry"
@@ -344,7 +344,7 @@
         "axe",
         "infantry"
       ],
-      "portrait": "/images/mtitqs6mh4v48w.jpg",
+      "portrait": "/images/mtkaro0atlkcw7.jpg",
       "bonusExp": [
         "axe"
       ]
@@ -359,7 +359,7 @@
         "brawl",
         "infantry"
       ],
-      "portrait": "/images/mtitqynun8q53c.jpg",
+      "portrait": "/images/mtkaqyqpbedgoo.jpg",
       "bonusExp": [
         "brawl"
       ]
@@ -374,7 +374,7 @@
         "bow",
         "infantry"
       ],
-      "portrait": "/images/mtitrbggre6be7.jpg",
+      "portrait": "/images/mtkarsls0ur6pk.jpg",
       "bonusExp": [
         "bow",
         "infantry"
@@ -391,7 +391,7 @@
         "bow",
         "authority"
       ],
-      "portrait": "/images/mtitrigacw0psn.jpg",
+      "portrait": "/images/mtkarz7alm6o5m.jpg",
       "bonusExp": [
         "sword",
         "bow"
@@ -410,7 +410,7 @@
         "sword",
         "infantry"
       ],
-      "portrait": "/images/mtitr52v82x382.jpg",
+      "portrait": "/images/mtkas483flqfah.jpg",
       "bonusExp": [
         "lance",
         "axe",
@@ -429,7 +429,7 @@
         "axe",
         "riding"
       ],
-      "portrait": "/images/mtitroh1clgfkw.jpg",
+      "portrait": "/images/mtkasafo08x9fq.jpg",
       "bonusExp": [
         "lance",
         "riding"
@@ -449,7 +449,7 @@
         "brawl",
         "authority"
       ],
-      "portrait": "/images/mtiu7ucdgatj83.jpg",
+      "portrait": "/images/mtkasfjo3ohtyo.jpg",
       "bonusExp": [
         "reason",
         "faith",
@@ -470,7 +470,7 @@
         "authority",
         "infantry"
       ],
-      "portrait": "/images/mtiualx7y342ok.jpg",
+      "portrait": "/images/mtkaskqbn7wgt6.jpg",
       "bonusExp": [
         "brawl",
         "reason",
@@ -487,7 +487,7 @@
         "lance",
         "flying"
       ],
-      "portrait": "/images/mtiu7mtdgngkxj.png",
+      "portrait": "/images/mtkasry0sh6m15.png",
       "bonusExp": [
         "lance",
         "flying"
@@ -504,7 +504,7 @@
         "riding",
         "bow"
       ],
-      "portrait": "/images/mtk9u1s0xwojjh.png"
+      "portrait": "/images/mtkat0wxlpu50x.png"
     },
     {
       "id": "class_ms4gsshgfxh2m",
@@ -519,7 +519,7 @@
         "lance",
         "axe"
       ],
-      "portrait": "/images/mtiu817xdmy8ps.png",
+      "portrait": "/images/mtkat6otnxzued.png",
       "bonusExp": [
         "lance",
         "riding",
@@ -685,7 +685,7 @@
       "proficiencies": [
         "riding"
       ],
-      "portrait": "/images/mtiucexoe643u9.jpg"
+      "portrait": "/images/mtkathpldqbv8m.jpg"
     },
     {
       "id": "class_msesu5uoyogcq",
@@ -698,7 +698,7 @@
         "flying",
         "axe"
       ],
-      "portrait": "/images/mtiueyzdp0qun5.jpg"
+      "portrait": "/images/mtkatofl5mi4ze.jpg"
     },
     {
       "id": "class_msetqo1fy8nq2",
@@ -846,7 +846,7 @@
         "faith",
         "infantry"
       ],
-      "portrait": "/images/mtiuer1f5n5zit.jpg",
+      "portrait": "/images/mtkau7qc8pqls8.jpg",
       "bonusExp": [
         "brawl",
         "faith",
@@ -931,12 +931,12 @@
     },
     {
       "id": "class_msu3frkcvmepo",
-      "name": "Dancer",
+      "name": "Dancer?",
       "tier": "Advanced",
       "description": "",
       "movementType": "infantry",
       "proficiencies": [],
-      "portrait": null
+      "portrait": "/images/mtkatx8vzzkrq2.jpg"
     },
     {
       "id": "class_mt5q5rsvrljkv",
@@ -1974,26 +1974,6 @@
       "possiblyEnemyOnly": true
     },
     {
-      "id": "unit_ms4axuyt3lodb",
-      "name": "Alexandra",
-      "portrait": "/images/mtk9ndn2qe57a2.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": "class_ms4aypejltz4f",
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {
-        "faction": "Silver Knights",
-        "backstory": "A lovely pegasus knight who serves at Jurah’s Temple at the upper levels of Dagsion. She’s known as the “Silver Maiden” and has many fans. Since she’s from a renowned family, there are also many who envy her privileged lifestyle.\n\nLikes: Her parents, virtuous men, caring for her beloved steed"
-      }
-    },
-    {
       "id": "unit_msesdf1q9njym",
       "name": "Benditz",
       "portrait": "/images/mtk9o0oqzg0dz1.jpg",
@@ -2001,7 +1981,10 @@
       "routeIds": [],
       "starterFor": [],
       "classId": "class_msesr7wkkfq1k",
-      "boons": [],
+      "boons": [
+        "bow",
+        "riding"
+      ],
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
@@ -2011,6 +1994,29 @@
       "fields": {
         "faction": "Thundercloud Knights",
         "backstory": "A one-eyed veteran knight who proudly calls himself a “General”. Once served as a temple centurion, but lost his position due to a scandal many years ago and now lives as a mercenary.\n\nLikes: The Great August’s tactics, up-and-coming young people, lecturing young people, reading"
+      }
+    },
+    {
+      "id": "unit_ms4axuyt3lodb",
+      "name": "Alexandra",
+      "portrait": "/images/mtk9ndn2qe57a2.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_ms4aypejltz4f",
+      "boons": [
+        "lance",
+        "flying"
+      ],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Silver Knights",
+        "backstory": "A lovely pegasus knight who serves at Jurah’s Temple at the upper levels of Dagsion. She’s known as the “Silver Maiden” and has many fans. Since she’s from a renowned family, there are also many who envy her privileged lifestyle.\n\nLikes: Her parents, virtuous men, caring for her beloved steed"
       }
     },
     {
