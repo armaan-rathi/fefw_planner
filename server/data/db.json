@@ -1153,8 +1153,17 @@
         "theodora"
       ],
       "classId": "class_diviner",
-      "boons": [],
-      "banes": [],
+      "boons": [
+        "sword",
+        "reason",
+        "faith",
+        "authority",
+        "riding"
+      ],
+      "banes": [
+        "armor",
+        "flying"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "",
@@ -1201,12 +1210,17 @@
         "cai"
       ],
       "classId": "class_archer",
-      "boons": [],
-      "banes": [],
+      "boons": [
+        "bow",
+        "infantry"
+      ],
+      "banes": [
+        "armor"
+      ],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Sharpshooter",
+        "description": "Increases the range of bow combat arts"
       },
       "fields": {
         "faction": "Ribeira Winds",
@@ -1352,13 +1366,20 @@
       "classId": "class_brigand",
       "boons": [
         "axe",
-        "infantry"
+        "infantry",
+        "bow"
       ],
-      "banes": [],
+      "banes": [
+        "reason",
+        "faith",
+        "sword",
+        "authority",
+        "riding"
+      ],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Veteran’s Mettle",
+        "description": "Increases Hit of melee attacks"
       },
       "fields": {
         "faction": "House Lamine",
@@ -1428,8 +1449,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Safety First",
+        "description": "Increases Hit when the enemy cannot counterattack"
       },
       "fields": {
         "faction": "Megaira's Beacon",
@@ -2011,8 +2032,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Silver Maiden",
+        "description": "Increases Hit and Avo based on the number of adjacent allies"
       },
       "fields": {
         "faction": "Silver Knights",
@@ -2150,7 +2171,8 @@
       "classId": "class_ms3o7io5clmwu",
       "boons": [
         "sword",
-        "infantry"
+        "infantry",
+        "brawl"
       ],
       "banes": [],
       "skillLevels": {},
@@ -2282,7 +2304,8 @@
         "description": ""
       },
       "fields": {
-        "faction": ""
+        "faction": "",
+        "backstory": "A female gladiator who takes pride in her finely honed physique.\nBorn into a warlike tribe, she grew weary of rural life and the men of her village, leading her to travel to the Imperial Capital of Dagsion, a place she had long dreamed of visiting since childhood.\n\nLikes: The city and its people, brawling"
       },
       "recruitment": {
         "cai": {
