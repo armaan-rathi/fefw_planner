@@ -2319,7 +2319,7 @@
       "skillLevels": {},
       "personalSkill": {
         "name": "Monkly Havov",
-        "description": "Has a chance to fully restore HP after combat"
+        "description": "Has a chance to fully restore HP after defeating an enemy"
       },
       "fields": {
         "backstory": "A wayward monk who wanders from land to land.\nHe once served a temple but became a wanderer over a decade ago & is currently passing through Dagsion on his travels.\nIt is said that in his youth, he journeyed as far as the eastern land of Sai.\n\nLikes: Alcohol, tales of old, distant journeys, saving the weak"
