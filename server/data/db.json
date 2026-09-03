@@ -1646,7 +1646,7 @@
         "faction": "Mane of Flame",
         "backstory": "A top-tier martial artist possessing both wisdom and valor who operates as a gladiator in the Dagsion arena.\nHaving trained in the eastern land of Sai, he boasts an immense wealth of combat experience.\n\nLikes: Tea from Sai, Ferghanan horses, dueling, calligraphy"
       },
-      "possiblyEnemyOnly": true
+      "possiblyEnemyOnly": false
     },
     {
       "id": "unit_ms4awma1bic3w",
@@ -2277,7 +2277,7 @@
     {
       "id": "unit_ms3o4850pz0sq",
       "name": "Noctula",
-      "portrait": "/images/mtllrh01np1xvh.png",
+      "portrait": "/images/mtlqxb4veuj5eg.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -2306,7 +2306,7 @@
     {
       "id": "unit_ms4b14v2stjjh",
       "name": "Yang Jie",
-      "portrait": "/images/mtllrmdxm78339.png",
+      "portrait": "/images/mtlqxgdooa5d7j.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -5584,7 +5584,7 @@
       "id": "theodora",
       "name": "Theodora",
       "title": "Megaira's Beacon",
-      "description": "Theodora sets out to establish herself as Queen or Saramis",
+      "description": "Theodora sets out to establish herself as Queen of Saramis",
       "color": "#b8932f",
       "portrait": "/images/ms4k08psgjbn1y.jpg",
       "banner": "/images/msfzhtve5okary.png"
@@ -5956,5 +5956,6 @@
     "Specialty": {
       "renownLv": 4
     }
-  }
+  },
+  "polls": []
 }

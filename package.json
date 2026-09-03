@@ -13,6 +13,9 @@
     "start": "npm run start -w server",
     "preview": "npm run preview -w client"
   },
+  "dependencies": {
+    "@upstash/redis": "^1.38.3"
+  },
   "devDependencies": {
     "concurrently": "^8.2.2"
   }

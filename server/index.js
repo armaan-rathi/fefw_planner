@@ -144,6 +144,7 @@ function defaultDB() {
     gods: [],
     npcs: [],
     tierRequirements: {},
+    polls: [],
   };
 }
 
@@ -190,6 +191,84 @@ app.put("/api/data", (req, res) => {
   fs.writeFileSync(tmp, JSON.stringify(body, null, 2));
   fs.renameSync(tmp, DB_PATH);
   res.json({ ok: true });
+});
+
+// ---- Polls: local vote store (dev only) -------------------------------------
+// Production tracks votes in Vercel KV via api/polls.js; locally we just use a
+// JSON file so the whole flow is testable offline.
+const VOTES_PATH = path.join(DATA_DIR, "votes.json");
+function loadVotes() {
+  try {
+    return JSON.parse(fs.readFileSync(VOTES_PATH, "utf-8"));
+  } catch {
+    return {};
+  }
+}
+function saveVotes(v) {
+  const tmp = VOTES_PATH + ".tmp";
+  fs.writeFileSync(tmp, JSON.stringify(v, null, 2));
+  fs.renameSync(tmp, VOTES_PATH);
+}
+// A poll's actual options — its custom list, or a live view of an entity list
+// (units / gods / npcs / all characters) so the poll auto-updates as they grow.
+function resolvePollOptions(db, poll) {
+  if (!poll.optionsSource) return poll.options || [];
+  const out = [];
+  const seen = new Set();
+  const push = (list) => {
+    for (const e of list || []) {
+      if (seen.has(e.id)) continue;
+      seen.add(e.id);
+      out.push({ id: e.id });
+    }
+  };
+  const src = poll.optionsSource;
+  if (src === "routes") push(db.routes);
+  if (src === "units" || src === "characters") push(db.units);
+  if (src === "gods" || src === "characters") push(db.gods);
+  if (src === "npcs" || src === "characters") push(db.npcs);
+  return out;
+}
+function pollResults(votes, poll, db) {
+  const rec = votes[poll.id] ?? { counts: {}, voters: [] };
+  const counts = {};
+  for (const o of resolvePollOptions(db, poll)) counts[o.id] = Number(rec.counts?.[o.id] ?? 0);
+  return { counts, voters: (rec.voters ?? []).length };
+}
+
+// GET /api/polls?ids=a,b,c  -> { results: { pollId: { counts, voters } } }
+app.get("/api/polls", (req, res) => {
+  const db = loadDB();
+  const votes = loadVotes();
+  const ids = String(req.query.ids ?? "").split(",").map((s) => s.trim()).filter(Boolean);
+  const polls = (db.polls ?? []).filter((p) => ids.length === 0 || ids.includes(p.id));
+  const results = {};
+  for (const p of polls) results[p.id] = pollResults(votes, p, db);
+  res.json({ results });
+});
+
+// POST /api/polls  { pollId, optionIds, voterId } -> validate + increment
+app.post("/api/polls", (req, res) => {
+  const { pollId, optionIds, voterId } = req.body ?? {};
+  const db = loadDB();
+  const poll = (db.polls ?? []).find((p) => p.id === pollId);
+  if (!poll) return res.status(404).json({ error: "Poll not found" });
+  if (poll.closed) return res.status(403).json({ error: "This poll is closed." });
+  const valid = new Set(resolvePollOptions(db, poll).map((o) => o.id));
+  const picks = Array.isArray(optionIds) ? [...new Set(optionIds)].filter((id) => valid.has(id)) : [];
+  if (picks.length === 0) return res.status(400).json({ error: "No valid options selected." });
+  if (picks.length > Math.max(1, poll.maxSelections)) return res.status(400).json({ error: "Too many options selected." });
+
+  const votes = loadVotes();
+  const rec = votes[pollId] ?? { counts: {}, voters: [] };
+  const alreadyVoted = voterId && rec.voters.includes(voterId);
+  if (!alreadyVoted) {
+    for (const id of picks) rec.counts[id] = Number(rec.counts[id] ?? 0) + 1;
+    if (voterId) rec.voters.push(voterId);
+    votes[pollId] = rec;
+    saveVotes(votes);
+  }
+  res.json({ ok: true, alreadyVoted: !!alreadyVoted, result: pollResults(votes, poll, db) });
 });
 
 const storage = multer.diskStorage({

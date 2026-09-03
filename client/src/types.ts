@@ -180,6 +180,54 @@ export interface CastMember {
 
 export type CastKind = "gods" | "npcs";
 
+// ---- Polls (pre-release fun) ----------------------------------------------
+export type PollGraph = "pie" | "donut" | "hbar" | "vbar";
+
+export interface PollOption {
+  id: string;
+  label: string;
+  color: string;
+  image?: string | null; // shown as an icon (auto-filled from an entity portrait for sourced polls)
+}
+
+// When set, a poll's options are pulled live from an entity list (auto-updating
+// as you add characters) instead of being typed in by hand.
+export type PollOptionsSource = "units" | "gods" | "npcs" | "characters" | "routes";
+
+export interface Poll {
+  id: string;
+  question: string;
+  description?: string;
+  options: PollOption[]; // custom options (used when optionsSource is unset)
+  optionsSource?: PollOptionsSource; // pull options from a live list instead
+  palette?: string[]; // colours cycled across sourced options, in order (defaults to POLL_PALETTE)
+  maxSelections: number; // how many options a voter may pick (>=1)
+  graph: PollGraph;
+  showValues?: boolean; // show raw vote counts on the chart
+  showPercent?: boolean; // show percentages on the chart
+  showRank?: boolean; // show rank (#1, #2 …) on horizontal bars (default on)
+  closed?: boolean; // stop accepting new votes
+}
+
+// A cohesive 12-colour palette, cycled for poll options. The first four match
+// the four lords' route colours (Blue, Purple, Gold, Pink); slots 9–12 are
+// Red, Green, Cyan, Silver. For entity-sourced polls the live route colours
+// replace the first four (see data/polls.ts) so routes stay exact.
+export const POLL_PALETTE = [
+  "#3f72c7", // 1 blue   (Cai)
+  "#7d5fb0", // 2 purple (Dietrich)
+  "#b8932f", // 3 gold   (Theodora)
+  "#c13a6a", // 4 pink   (Leda)
+  "#dd8a3c", // 5 orange
+  "#35a8a0", // 6 teal
+  "#b45bb0", // 7 magenta
+  "#97b23f", // 8 lime
+  "#cf4b45", // 9 red
+  "#57a95d", // 10 green
+  "#4bb2c9", // 11 cyan
+  "#aab6bd", // 12 silver
+];
+
 export interface DB {
   schemaVersion: number;
   routes: Route[];
@@ -194,4 +242,5 @@ export interface DB {
   gods?: CastMember[]; // worshipped at temples
   npcs?: CastMember[]; // important non-playable characters
   tierRequirements?: Record<string, TierRequirement>; // keyed by tier name
+  polls?: Poll[]; // pre-release community polls
 }

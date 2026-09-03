@@ -4,6 +4,8 @@ dist/
 *.log
 .env
 server/.env
+# Local dev vote tallies — production votes live in Vercel KV, not in the repo.
+server/data/votes.json
 # NOTE: server/data/db.json and server/data/images/ ARE committed on purpose —
 # they are the app's content, edited locally and pushed to publish (Vercel
 # serves the images statically and bundles db.json into the read-only API).

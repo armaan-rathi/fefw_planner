@@ -41,3 +41,39 @@ export async function uploadImage(file: File): Promise<string> {
 export function uid(prefix = ""): string {
   return prefix + Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
 }
+
+// ---- Polls ----------------------------------------------------------------
+export type PollResult = { counts: Record<string, number>; voters: number };
+
+// A stable, anonymous per-device id used for soft one-vote-per-person dedup.
+export function voterId(): string {
+  try {
+    let v = localStorage.getItem("fw.voterId");
+    if (!v) {
+      v = uid("v_");
+      localStorage.setItem("fw.voterId", v);
+    }
+    return v;
+  } catch {
+    return uid("v_");
+  }
+}
+
+export async function fetchPollResults(ids: string[]): Promise<Record<string, PollResult>> {
+  const q = ids.length ? "?ids=" + encodeURIComponent(ids.join(",")) : "";
+  const res = await fetch("/api/polls" + q);
+  if (!res.ok) throw new Error((await res.json().catch(() => ({}))).error || "Failed to load poll results");
+  const json = await res.json();
+  return json.results ?? {};
+}
+
+export async function castVote(pollId: string, optionIds: string[]): Promise<{ alreadyVoted: boolean; result: PollResult }> {
+  const res = await fetch("/api/polls", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ pollId, optionIds, voterId: voterId() }),
+  });
+  const json = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(json.error || "Vote failed");
+  return { alreadyVoted: !!json.alreadyVoted, result: json.result };
+}

@@ -9,6 +9,7 @@ import { CastPage } from "./pages/CastPage";
 import { ClassList } from "./pages/ClassList";
 import { TierList } from "./pages/TierList";
 import { RouteSplit } from "./pages/RouteSplit";
+import { Polls } from "./pages/Polls";
 import { DevMode } from "./pages/dev/DevMode";
 
 function SaveBadge() {
@@ -38,7 +39,8 @@ function EditorControls() {
 
 function Shell() {
   const { devMode, editable, ready } = useDevMode();
-  const { loading, error } = useData();
+  const { loading, error, db } = useData();
+  const hasPolls = (db?.polls?.length ?? 0) > 0;
 
   return (
     <div className="app-root">
@@ -57,6 +59,7 @@ function Shell() {
           <NavLink to="/tiers">Tier List</NavLink>
           <NavLink to="/team">Team Planner</NavLink>
           <NavLink to="/map">Overworld Map</NavLink>
+          {hasPolls && <NavLink to="/polls">Polls</NavLink>}
           {devMode && <NavLink to="/dev">Dev Mode</NavLink>}
         </nav>
         <div className="topbar-right">
@@ -83,6 +86,7 @@ function Shell() {
             <Route path="/npcs" element={<CastPage kind="npcs" title="Important NPCs" blurb="Key non-playable characters in the story." />} />
             <Route path="/team" element={<TeamPlanner />} />
             <Route path="/split" element={<RouteSplit />} />
+            <Route path="/polls" element={<Polls />} />
             <Route path="/map" element={<OverworldMap />} />
             {(!ready || editable) && <Route path="/dev/*" element={<DevMode />} />}
             <Route path="*" element={<Navigate to="/routes" replace />} />

@@ -3,7 +3,8 @@
   "buildCommand": "npm run build",
   "outputDirectory": "client/dist",
   "functions": {
-    "api/data.js": { "includeFiles": "server/data/db.json" }
+    "api/data.js": { "includeFiles": "server/data/db.json" },
+    "api/polls.js": { "includeFiles": "server/data/db.json" }
   },
   "rewrites": [
     { "source": "/((?!api/|images/).*)", "destination": "/index.html" }
