@@ -1011,7 +1011,7 @@
       "skillLevels": {},
       "personalSkill": {
         "name": "Murderous Intent",
-        "description": ""
+        "description": "Increases Hit when initiating combat"
       },
       "fields": {
         "faction": "House Lamine",
@@ -1848,7 +1848,7 @@
     {
       "id": "unit_msu4rfw7l4959",
       "name": "Loretta",
-      "portrait": "/images/msu4rnk79qthxy.png",
+      "portrait": "/images/mtlm6vsbdme0nm.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -1990,7 +1990,7 @@
     {
       "id": "unit_msu45xa66phts",
       "name": "Long",
-      "portrait": "/images/msu4660pt8tw54.jpg",
+      "portrait": "/images/mtlm8xskh5gb7m.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
