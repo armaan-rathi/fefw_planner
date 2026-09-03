@@ -1279,8 +1279,14 @@
         "theodora"
       ],
       "classId": "class_armored",
-      "boons": [],
-      "banes": [],
+      "boons": [
+        "axe",
+        "armor",
+        "riding"
+      ],
+      "banes": [
+        "sword"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "",
@@ -1372,9 +1378,8 @@
       "banes": [
         "reason",
         "faith",
-        "sword",
-        "authority",
-        "riding"
+        "riding",
+        "flying"
       ],
       "skillLevels": {},
       "personalSkill": {
@@ -1398,7 +1403,10 @@
         "theodora"
       ],
       "classId": "class_ornius",
-      "boons": [],
+      "boons": [
+        "lance",
+        "riding"
+      ],
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
@@ -1445,8 +1453,13 @@
         "theodora"
       ],
       "classId": "class_archer",
-      "boons": [],
-      "banes": [],
+      "boons": [
+        "bow",
+        "infantry"
+      ],
+      "banes": [
+        "brawl"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "Safety First",
@@ -2262,9 +2275,38 @@
       }
     },
     {
+      "id": "unit_ms3o4850pz0sq",
+      "name": "Noctula",
+      "portrait": "/images/mtllrh01np1xvh.png",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_ms3pz9lcrqj1y",
+      "boons": [
+        "brawl",
+        "infantry"
+      ],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "Warrior's Clarity",
+        "description": "Increases Avo after attacking"
+      },
+      "fields": {
+        "faction": "",
+        "backstory": "A female gladiator who takes pride in her finely honed physique.\nBorn into a warlike tribe, she grew weary of rural life and the men of her village, leading her to travel to the Imperial Capital of Dagsion, a place she had long dreamed of visiting since childhood.\n\nLikes: The city and its people, brawling"
+      },
+      "recruitment": {
+        "cai": {
+          "support": 1,
+          "renown": 4
+        }
+      }
+    },
+    {
       "id": "unit_ms4b14v2stjjh",
       "name": "Yang Jie",
-      "portrait": "/images/msu5wwqfrkivt4.jpg",
+      "portrait": "/images/mtllrmdxm78339.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -2276,41 +2318,17 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Monkly Havov",
+        "description": "Has a chance to fully restore HP after combat"
       },
-      "fields": {},
+      "fields": {
+        "backstory": "A wayward monk who wanders from land to land.\nHe once served a temple but became a wanderer over a decade ago & is currently passing through Dagsion on his travels.\nIt is said that in his youth, he journeyed as far as the eastern land of Sai.\n\nLikes: Alcohol, tales of old, distant journeys, saving the weak"
+      },
       "recruitment": {
         "cai": {
           "support": 2,
           "renown": 3,
           "negotiation": "Easy"
-        }
-      }
-    },
-    {
-      "id": "unit_ms3o4850pz0sq",
-      "name": "Noctula",
-      "portrait": "/images/msf7gdmcl9zxzx.png",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": "class_ms3pz9lcrqj1y",
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {
-        "faction": "",
-        "backstory": "A female gladiator who takes pride in her finely honed physique.\nBorn into a warlike tribe, she grew weary of rural life and the men of her village, leading her to travel to the Imperial Capital of Dagsion, a place she had long dreamed of visiting since childhood.\n\nLikes: The city and its people, brawling"
-      },
-      "recruitment": {
-        "cai": {
-          "support": 1,
-          "renown": 4
         }
       }
     },
