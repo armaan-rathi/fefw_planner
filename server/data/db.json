@@ -674,6 +674,23 @@
         "lance",
         "faith",
         "infantry"
+      ],
+      "classAbilities": [
+        {
+          "name": "Combat Arts +2",
+          "description": "",
+          "icon": null
+        },
+        {
+          "name": "Magic Heal +10",
+          "description": "",
+          "icon": null
+        },
+        {
+          "name": "",
+          "description": "",
+          "icon": null
+        }
       ]
     },
     {
@@ -2370,7 +2387,7 @@
     },
     {
       "id": "unit_ms4b9qphimjk7",
-      "name": "Red V*",
+      "name": "Inioni",
       "portrait": "/images/ms76nwpsryu10z.jpg",
       "isLord": false,
       "routeIds": [],
@@ -2455,7 +2472,10 @@
       "routeIds": [],
       "starterFor": [],
       "classId": "class_msessr8yloah4",
-      "boons": [],
+      "boons": [
+        "lance",
+        "authority"
+      ],
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
