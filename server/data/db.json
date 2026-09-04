@@ -2148,30 +2148,6 @@
       }
     },
     {
-      "id": "unit_ms4b759ma7nnn",
-      "name": "Sofia",
-      "portrait": "/images/msf7meyzk26x82.png",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": "class_diviner",
-      "boons": [
-        "faith",
-        "bow"
-      ],
-      "banes": [
-        "axe"
-      ],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {
-        "faction": "Temple Army"
-      }
-    },
-    {
       "id": "unit_msu448hnym292",
       "name": "Centurio",
       "portrait": "/images/mt0es67fwdiblf.jpg",
@@ -2189,6 +2165,31 @@
       "fields": {
         "backstory": "A knight serving at Aurora’s Temple. Known as “Corundum”, he’s a “Vulcan”, member of an elite squadron chosen from the temple priests. An old friend of Cai’s father, Castor, and the two share a deep mutual trust.\n\nLikes: Serving Aurora’s temple, patrolling",
         "faction": "Temple Army"
+      }
+    },
+    {
+      "id": "unit_ms4b759ma7nnn",
+      "name": "Sofia",
+      "portrait": "/images/mtn0zmr2wumsfd.png",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_diviner",
+      "boons": [
+        "faith",
+        "bow"
+      ],
+      "banes": [
+        "axe"
+      ],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "Long-Range Healing?",
+        "description": "Increases the range of healing magic"
+      },
+      "fields": {
+        "faction": "Temple Army",
+        "backstory": "A priestess serving at the Solel Temple in the upper levels of Dagsion.\nShe's an extreme glutton, and it seems all her salary goes toward food expenses.\nShe has a gentle personality, but spent her childhood surrounded by roughnecks.\n\nLikes: Delicious food, the moment when food is served (and soon vanishes)"
       }
     },
     {
@@ -2350,6 +2351,25 @@
       }
     },
     {
+      "id": "unit_ms4b44v3k39y1",
+      "name": "Nuzzo",
+      "portrait": "/images/mtn0zrq4ge2hhe.png",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_ms4czk6qlyp89",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "Tribal Secret Art?",
+        "description": "Increases Attack when targeting a weakness"
+      },
+      "fields": {
+        "backstory": "A proud warrior of the \"Har Hali tribe,\" a people who revere strength.\nFollowing the disappearance of their chieftain, this warrior is leading the tribe as a proxy.\nIt appears he holds the Demon God Balor in special reverence.\n\nLikes: Tradition, honor, great power"
+      }
+    },
+    {
       "id": "unit_ms4b6sy674873",
       "name": "Kiroc",
       "portrait": "/images/msf7ml0dm0w7s4.png",
@@ -2360,23 +2380,6 @@
       "boons": [
         "bow"
       ],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {}
-    },
-    {
-      "id": "unit_ms4b44v3k39y1",
-      "name": "Nuzzo",
-      "portrait": "/images/ms4j4uuiviueqn.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": "class_ms4czk6qlyp89",
-      "boons": [],
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
