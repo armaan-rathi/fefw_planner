@@ -97,7 +97,8 @@
         "Brigid Army",
         "Temple Army",
         "Order of Mithras",
-        "Promised One's Army"
+        "Promised One's Army",
+        "Har Hali Tribe"
       ]
     },
     {
@@ -2170,7 +2171,7 @@
     {
       "id": "unit_ms4b759ma7nnn",
       "name": "Sofia",
-      "portrait": "/images/mtn0zmr2wumsfd.png",
+      "portrait": "/images/mtn5ezua6gsugu.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -2190,6 +2191,26 @@
       "fields": {
         "faction": "Temple Army",
         "backstory": "A priestess serving at the Solel Temple in the upper levels of Dagsion.\nShe's an extreme glutton, and it seems all her salary goes toward food expenses.\nShe has a gentle personality, but spent her childhood surrounded by roughnecks.\n\nLikes: Delicious food, the moment when food is served (and soon vanishes)"
+      }
+    },
+    {
+      "id": "unit_ms4b44v3k39y1",
+      "name": "Nuzzo",
+      "portrait": "/images/mtn5eiywlgea77.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_ms4czk6qlyp89",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "Tribal Secret Art?",
+        "description": "Increases Attack when targeting a weakness"
+      },
+      "fields": {
+        "backstory": "A proud warrior of the \"Har Hali tribe,\" a people who revere strength.\nFollowing the disappearance of their chieftain, this warrior is leading the tribe as a proxy.\nIt appears he holds the Demon God Balor in special reverence.\n\nLikes: Tradition, honor, great power",
+        "faction": "Har Hali Tribe"
       }
     },
     {
@@ -2348,25 +2369,6 @@
           "renown": 3,
           "negotiation": "Easy"
         }
-      }
-    },
-    {
-      "id": "unit_ms4b44v3k39y1",
-      "name": "Nuzzo",
-      "portrait": "/images/mtn0zrq4ge2hhe.png",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": "class_ms4czk6qlyp89",
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "Tribal Secret Art?",
-        "description": "Increases Attack when targeting a weakness"
-      },
-      "fields": {
-        "backstory": "A proud warrior of the \"Har Hali tribe,\" a people who revere strength.\nFollowing the disappearance of their chieftain, this warrior is leading the tribe as a proxy.\nIt appears he holds the Demon God Balor in special reverence.\n\nLikes: Tradition, honor, great power"
       }
     },
     {
