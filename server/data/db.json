@@ -2079,7 +2079,9 @@
       "routeIds": [],
       "starterFor": [],
       "classId": null,
-      "boons": [],
+      "boons": [
+        "axe"
+      ],
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
@@ -2380,7 +2382,9 @@
       "routeIds": [],
       "starterFor": [],
       "classId": null,
-      "boons": [],
+      "boons": [
+        "axe"
+      ],
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
