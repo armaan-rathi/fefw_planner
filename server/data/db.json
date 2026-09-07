@@ -5985,5 +5985,52 @@
       "renownLv": 4
     }
   },
-  "polls": []
+  "polls": [
+    {
+      "id": "poll_mtrdzfnz4nl4b",
+      "question": "Whose route will you start with?",
+      "description": "",
+      "options": [
+        {
+          "id": "opt_mtrdzfnz7q8xf",
+          "label": "Option 1",
+          "color": "#3f72c7"
+        },
+        {
+          "id": "opt_mtrdzfnz8s4to",
+          "label": "Option 2",
+          "color": "#7d5fb0"
+        }
+      ],
+      "maxSelections": 1,
+      "graph": "pie",
+      "showValues": true,
+      "showPercent": true,
+      "showRank": true,
+      "optionsSource": "routes"
+    },
+    {
+      "id": "poll_mtre0a5w2bhqk",
+      "question": "Who is your favorite character?",
+      "description": "You can vote for up to 3 characters!",
+      "options": [
+        {
+          "id": "opt_mtre0a5wiono6",
+          "label": "Option 1",
+          "color": "#3f72c7"
+        },
+        {
+          "id": "opt_mtre0a5wvrjhg",
+          "label": "Option 2",
+          "color": "#7d5fb0"
+        }
+      ],
+      "maxSelections": 3,
+      "graph": "hbar",
+      "showValues": true,
+      "showPercent": true,
+      "showRank": true,
+      "optionsSource": "characters"
+    }
+  ]
 }
