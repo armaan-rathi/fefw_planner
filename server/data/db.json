@@ -2073,8 +2073,8 @@
     },
     {
       "id": "unit_ms4b8a7pr2e4u",
-      "name": "Zarconne",
-      "portrait": "/images/msu4tzj18am2xc.png",
+      "name": "Zarcone",
+      "portrait": "/images/mtrdwewv0uokh6.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -2083,11 +2083,12 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Vile",
+        "description": "Increases Hit when foe's HP is below half"
       },
       "fields": {
-        "faction": "Gaia Brigadiers"
+        "faction": "Gaia Brigadiers",
+        "backstory": "The leader of the \"Gaia Brigade,\" a band of ruthless, villainous bandits.\nUpon hearing rumors of the Heroic Games, he traveled to Dagsion with his henchmen.\nHe possesses a cowardly nature, always targeting the weak first in battle.\n\nLikes: Money, violence, good women, vegetables, drinking with friends"
       }
     },
     {
@@ -2372,6 +2373,32 @@
       }
     },
     {
+      "id": "unit_mt4v2r1q22a0b",
+      "name": "Majide",
+      "portrait": "/images/mtrduxixuuevaa.png",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "Fear Nothing",
+        "description": "Increases Attack at the cost of Avo when initiating combat"
+      },
+      "fields": {
+        "backstory": "A notorious thug who roams Dagsion.\nHe had a bad reputation since childhood, spending his days in jail for violent incidents.\nHe aims to win the Heroic Games in order to become the ruler of the city.\n\nLikes: Booze, women, fighting, being strong"
+      },
+      "recruitment": {
+        "leda": {
+          "support": 3,
+          "renown": 9,
+          "negotiation": "Easy"
+        }
+      }
+    },
+    {
       "id": "unit_ms4b6sy674873",
       "name": "Kiroc",
       "portrait": "/images/msf7ml0dm0w7s4.png",
@@ -2406,30 +2433,6 @@
         "description": ""
       },
       "fields": {}
-    },
-    {
-      "id": "unit_mt4v2r1q22a0b",
-      "name": "Majide",
-      "portrait": "/images/mt4v2y7e7s2sto.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": null,
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {},
-      "recruitment": {
-        "leda": {
-          "support": 3,
-          "renown": 9,
-          "negotiation": "Easy"
-        }
-      }
     },
     {
       "id": "unit_msu434ibp8q8s",
