@@ -1828,12 +1828,14 @@
     {
       "id": "unit_msesn64bv1fun",
       "name": "Goliath",
-      "portrait": "/images/msu471katvul0k.jpg",
+      "portrait": "/images/mtsu5n1kpwepsm.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
       "classId": "class_armored",
-      "boons": [],
+      "boons": [
+        "axe"
+      ],
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
@@ -1841,7 +1843,8 @@
         "description": ""
       },
       "fields": {
-        "faction": "Mane of Flame"
+        "faction": "Mane of Flame",
+        "backstory": "A hulking gladiator known as the “Ox-Killer.” He’s over 8 feet tall and boasts overwhelming strength and a rock-hard body. He often portrays the villain at the Arena and, despite his skills, he’s not very popular.\n\nLikes: Rampaging, food, animals, smoking meat"
       }
     },
     {
@@ -1911,20 +1914,24 @@
     {
       "id": "unit_msu42ne4imvnh",
       "name": "Jester",
-      "portrait": "/images/mt4v5a0sifaggt.jpg",
+      "portrait": "/images/mtsu5rw8g3hnsz.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
       "classId": null,
-      "boons": [],
+      "boons": [
+        "sword",
+        "infantry"
+      ],
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Flickering Edge",
+        "description": "Increases Attack after dodging"
       },
       "fields": {
-        "faction": "Mane of Flame"
+        "faction": "Mane of Flame",
+        "backstory": "A mysterious gladiator who hides his face behind clown makeup. He constantly behaves like he’s mad, and he’s feared by others as the “Jester from Hell.”\n\nLikes: The White-Maned Demon, seeing fear in his opponents’ faces"
       },
       "recruitment": {
         "dietrich": {
