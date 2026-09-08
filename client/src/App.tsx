@@ -10,6 +10,7 @@ import { ClassList } from "./pages/ClassList";
 import { TierList } from "./pages/TierList";
 import { RouteSplit } from "./pages/RouteSplit";
 import { Polls } from "./pages/Polls";
+import { Gacha } from "./pages/Gacha";
 import { DevMode } from "./pages/dev/DevMode";
 
 function SaveBadge() {
@@ -41,6 +42,8 @@ function Shell() {
   const { devMode, editable, ready } = useDevMode();
   const { loading, error, db } = useData();
   const hasPolls = (db?.polls?.length ?? 0) > 0;
+  // Public sees Gacha only when enabled; devs see it whenever the Editor is on.
+  const gachaVisible = (db?.gacha?.enabled ?? false) || devMode;
 
   return (
     <div className="app-root">
@@ -60,6 +63,7 @@ function Shell() {
           <NavLink to="/team">Team Planner</NavLink>
           <NavLink to="/map">Overworld Map</NavLink>
           {hasPolls && <NavLink to="/polls">Polls</NavLink>}
+          {gachaVisible && <NavLink to="/gacha">Gacha</NavLink>}
           {devMode && <NavLink to="/dev">Dev Mode</NavLink>}
         </nav>
         <div className="topbar-right">
@@ -87,6 +91,7 @@ function Shell() {
             <Route path="/team" element={<TeamPlanner />} />
             <Route path="/split" element={<RouteSplit />} />
             <Route path="/polls" element={<Polls />} />
+            <Route path="/gacha" element={<Gacha />} />
             <Route path="/map" element={<OverworldMap />} />
             {(!ready || editable) && <Route path="/dev/*" element={<DevMode />} />}
             <Route path="*" element={<Navigate to="/routes" replace />} />

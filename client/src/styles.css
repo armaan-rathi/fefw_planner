@@ -2282,3 +2282,219 @@ input[type="range"]::-moz-range-thumb {
   color: var(--gold-bright, var(--gold));
   font-weight: 700;
 }
+
+/* ============================================================
+   Gacha
+   ============================================================ */
+/* ---- Card ---- */
+.gcard { position: relative; perspective: 900px; flex: none; }
+.gcard.sz-sm { width: 116px; height: 168px; }
+.gcard.sz-md { width: 150px; height: 216px; }
+.gcard.sz-lg { width: 216px; height: 312px; }
+.gcard-flip {
+  position: relative; width: 100%; height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.55s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transform: rotateY(180deg); /* front showing by default */
+}
+.gcard.down .gcard-flip { transform: rotateY(0deg); }
+.gcard-face { position: absolute; inset: 0; backface-visibility: hidden; border-radius: 13px; overflow: hidden; }
+.gcard-back {
+  transform: rotateY(0deg);
+  background: radial-gradient(circle at 50% 40%, #1c3a44, #0b1a20);
+  border: 2px solid var(--gold-deep);
+  display: flex; align-items: center; justify-content: center;
+}
+.gcard-back-mark { font-size: 46px; color: var(--gold); text-shadow: 0 0 16px rgba(216, 182, 106, 0.6); }
+.gcard-front {
+  transform: rotateY(180deg);
+  background: #0c1a1f;
+  border: 2px solid var(--rc, #c8d0d3);
+  box-shadow: 0 0 0 1px var(--rc, #c8d0d3), 0 0 18px -4px var(--rc, #c8d0d3);
+  display: flex;
+  flex-direction: column;
+}
+.gcard-art { position: relative; flex: 1; min-height: 0; overflow: hidden; }
+.gcard-art img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+.gcard-initial { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 40px; color: var(--rc); font-family: Georgia, serif; }
+.gcard-glow { position: absolute; inset: 0; pointer-events: none; }
+.gcard-info {
+  flex: none;
+  padding: 6px 7px 8px;
+  background: linear-gradient(180deg, #14282f, #0b191f);
+  border-top: 1px solid var(--rc, #c8d0d3);
+  text-align: center;
+}
+.gcard-class { font-size: 10.5px; color: var(--ink-dim); }
+.gcard.sz-lg .gcard-class { font-size: 12.5px; }
+.gcard-stars { display: block; color: var(--rc); font-size: 11px; letter-spacing: 1px; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8); }
+.gcard.sz-lg .gcard-stars { font-size: 15px; }
+.gcard-name { font-weight: 700; font-size: 13px; color: #fff; text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9); }
+.gcard.sz-lg .gcard-name { font-size: 17px; }
+.gcard.sz-sm .gcard-name { font-size: 11.5px; }
+.gcard-title { font-size: 10.5px; color: #d8c79a; font-style: italic; }
+/* Rarity shine on the higher tiers */
+.gcard.r-epic .gcard-front, .gcard.r-legendary .gcard-front { box-shadow: 0 0 0 2px var(--rc), 0 0 26px -2px var(--rc); }
+.gcard.r-legendary .gcard-glow, .gcard.r-epic .gcard-glow {
+  background: linear-gradient(115deg, transparent 38%, rgba(255, 255, 255, 0.32) 50%, transparent 62%);
+  background-size: 260% 260%;
+  animation: gShine 2.6s linear infinite;
+}
+.gcard.r-epic .gcard-glow { opacity: 0.7; }
+@keyframes gShine { from { background-position: 130% 0; } to { background-position: -130% 0; } }
+
+/* ---- Idle stage ---- */
+.gacha-stage { position: relative; overflow: hidden; padding: 26px; text-align: center; }
+.gacha-stage-glow { position: absolute; inset: -40% 0 auto 0; height: 70%; background: radial-gradient(ellipse at 50% 0%, rgba(216, 182, 106, 0.16), transparent 70%); pointer-events: none; }
+.gacha-banner-art { position: relative; max-width: 640px; margin: 0 auto 14px; border-radius: 12px; overflow: hidden; border: 1px solid var(--panel-edge); box-shadow: 0 6px 22px rgba(0, 0, 0, 0.4); }
+.gacha-banner-art img { display: block; width: 100%; max-height: 240px; object-fit: cover; }
+.gacha-banner-name { position: relative; font-family: Georgia, serif; font-size: 26px; font-weight: 700; color: var(--gold-bright); margin-bottom: 16px; }
+.gacha-featured { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 18px; }
+.gacha-featured-portrait { width: 76px; height: 76px; border-radius: 50%; overflow: hidden; border: 2px solid var(--rc, var(--panel-edge)); box-shadow: 0 0 14px -4px var(--rc, transparent); background: #0d2026; }
+.gacha-featured-portrait img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+.gacha-rates { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; font-size: 12px; margin-bottom: 20px; }
+.gacha-rate { font-weight: 600; }
+.gacha-summon-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.gacha-btn { padding: 13px 26px; font-size: 15px; }
+.gacha-btn.big { font-size: 17px; padding: 15px 34px; }
+
+/* ---- Overlays (shared) ---- */
+.gacha-overlay {
+  position: fixed; inset: 0; z-index: 120;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px;
+  background: radial-gradient(circle at center, rgba(9, 18, 22, 0.93), rgba(3, 7, 9, 0.98));
+  backdrop-filter: blur(3px);
+  animation: gFadeIn 0.25s ease;
+  overflow: hidden; /* clip the huge rays so they don't cause overflow / shift layout */
+}
+@keyframes gFadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* ---- Charging (summon animation) ----
+   Every moving piece is anchored at the stage centre (top/left:50%) and offset
+   with translate, so nothing can drift off-centre. Timeline ≈ 2.8s:
+   stars swirl in (0–55%) → converge into a bright light (55–78%) → burst +
+   white flash (78–88%) → crest floats in the blackout (86–100%) → reveal. */
+.gacha-overlay.charging { --hint: #7fd0ff; }
+.gacha-overlay.charging.hint-rare { --hint: #5fa8e8; }
+.gacha-overlay.charging.hint-epic { --hint: #c58ff0; }
+.gacha-overlay.charging.hint-legendary { --hint: #f4d987; }
+
+.gsummon-stage { position: absolute; top: 50%; left: 50%; width: 0; height: 0; }
+
+/* Four-pointed star shape shared by the swirling and bursting stars */
+.gsummon-star, .gsummon-burststar {
+  position: absolute; top: 0; left: 0;
+  background: radial-gradient(circle at 50% 50%, #fff 0%, var(--hint) 55%, transparent 78%);
+  clip-path: polygon(50% 0%, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0% 50%, 40% 40%);
+  filter: drop-shadow(0 0 5px var(--hint));
+}
+
+/* Each star spirals into the centre at its own natural speed (~1.4s); the
+   staggered per-star delays (set inline) keep a steady vortex streaming in. */
+.gsummon-star { will-change: transform, opacity; animation: gVortex 1.4s ease-in both; }
+@keyframes gVortex {
+  0%   { opacity: 0; transform: translate(-50%, -50%) translate(var(--sx), var(--sy)) rotate(0deg) scale(0.4); }
+  18%  { opacity: 1; }
+  70%  { opacity: 1; transform: translate(-50%, -50%) translate(calc(var(--sx) * 0.32), calc(var(--sy) * 0.32)) rotate(250deg) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -50%) rotate(430deg) scale(0.12); }
+}
+
+/* Stars flung outward when the explosion blows (delay set inline ≈ 3.05s).
+   Transform + opacity only, so it composites on the GPU (no repaint). */
+.gsummon-burststar { will-change: transform, opacity; animation: gBurstStar 1.6s cubic-bezier(0.12, 0.75, 0.3, 1) both; }
+@keyframes gBurstStar {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.2); }
+  8% { opacity: 1; transform: translate(-50%, -50%) translate(calc(var(--bx) * 0.1), calc(var(--by) * 0.1)) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -50%) translate(var(--bx), var(--by)) rotate(220deg) scale(0.3); }
+}
+
+/* The explosion: a pre-sized glowing sphere (radial gradient) that only scales +
+   fades — NO box-shadow — so it stays buttery on the GPU while covering the
+   screen (delay 3.0s). */
+.gsummon-light {
+  position: absolute; top: 0; left: 0; width: 420px; height: 420px; border-radius: 50%;
+  background: radial-gradient(circle, #fff 0%, #fff 14%, var(--hint) 40%, transparent 70%);
+  will-change: transform, opacity;
+  animation: gExplode 1.9s cubic-bezier(0.15, 0.75, 0.3, 1) 3s both;
+}
+@keyframes gExplode {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.04); }
+  14% { opacity: 1; transform: translate(-50%, -50%) scale(0.7); }
+  40% { opacity: 1; transform: translate(-50%, -50%) scale(3); }
+  72% { opacity: 0.4; transform: translate(-50%, -50%) scale(6.5); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(9); } /* past the edges */
+}
+
+/* White flash at the blast, quickly clearing to the blackout (delay 3.0s) */
+.gsummon-flash { position: absolute; inset: 0; background: #fff; opacity: 0; pointer-events: none; animation: gFlash 1.3s ease-out 3s both; }
+@keyframes gFlash { 0% { opacity: 0; } 12% { opacity: 0.9; } 45% { opacity: 0.12; } 100% { opacity: 0; } }
+
+/* The crest left burning in the darkness: forms big→small, holds, then fades
+   before the reveal. Static glow (baked into its layer) + transform/opacity
+   animation only — no per-frame filter recompute (delay 3.5s → ends ~5.4s). */
+.gsummon-crest {
+  position: absolute; top: 0; left: 0; width: 80px; height: 80px; object-fit: contain; pointer-events: none; z-index: 4;
+  filter: drop-shadow(0 0 10px var(--hint)) drop-shadow(0 0 24px #e0842c) brightness(1.12);
+  will-change: transform, opacity;
+  animation: gCrestReveal 1.9s ease-out 3.5s both;
+}
+@keyframes gCrestReveal {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(2.2); }
+  16% { opacity: 0.6; transform: translate(-50%, -50%) scale(1.4); }
+  28% { opacity: 1; transform: translate(-50%, -50%) scale(1.05); }
+  34% { opacity: 1; transform: translate(-50%, -50%) scale(1); } /* fully formed — stops shrinking */
+  80% { opacity: 1; transform: translate(-50%, -50%) scale(1); } /* burning hold */
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(0.97); } /* fades before the summon shows */
+}
+
+.gacha-charging-text { position: absolute; top: 66%; left: 0; right: 0; text-align: center; color: #cfe6f0; letter-spacing: 3px; text-transform: uppercase; font-size: 13px; animation: gPulse 1.4s ease-in-out infinite; }
+@keyframes gPulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
+
+/* ---- Reveal ---- */
+.gacha-reveal-card { animation: gRise 0.4s ease; }
+@keyframes gRise { from { transform: translateY(20px); opacity: 0; } to { transform: none; opacity: 1; } }
+.gacha-reveal-burst {
+  position: absolute; width: 380px; height: 380px; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(circle, var(--rc, #fff) 0%, transparent 62%);
+  animation: gBurst 0.7s ease-out forwards; opacity: 0;
+}
+.gacha-overlay.reveal.r-common .gacha-reveal-burst { --rc: #c8d0d3; }
+.gacha-overlay.reveal.r-uncommon .gacha-reveal-burst { --rc: #5cc08a; }
+.gacha-overlay.reveal.r-rare .gacha-reveal-burst { --rc: #5fa8e8; }
+.gacha-overlay.reveal.r-epic .gacha-reveal-burst { --rc: #b784e0; }
+.gacha-overlay.reveal.r-legendary .gacha-reveal-burst { --rc: #eac04a; }
+@keyframes gBurst { 0% { opacity: 0; transform: scale(0.2); } 40% { opacity: 0.85; } 100% { opacity: 0; transform: scale(1.6); } }
+.gacha-reveal-ctrls { display: flex; align-items: center; gap: 14px; }
+.gacha-progress { color: var(--ink-dim); font-size: 13px; font-variant-numeric: tabular-nums; }
+
+/* ---- Summary ---- */
+.gacha-overlay.summary { justify-content: flex-start; padding: 40px 20px; overflow-y: auto; }
+.gacha-summary-title { color: var(--gold-bright); font-size: 22px; margin: 0; }
+.gacha-summary-grid { display: grid; gap: 14px; justify-content: center; }
+.gacha-summary-grid .gcard { animation: gPop 0.4s cubic-bezier(0.2, 0.9, 0.3, 1.3) backwards; }
+.gacha-summary-grid .gcard:nth-child(n) { animation-delay: calc(var(--n, 0) * 40ms); }
+@keyframes gPop { from { transform: scale(0.6); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+/* ---- Dev editor ---- */
+.dev-subnav .as-link { background: transparent; border: 1px solid transparent; color: var(--ink-dim); padding: 8px 14px; border-radius: 8px; font-weight: 600; font-size: 14px; cursor: pointer; }
+.dev-subnav .as-link:hover { color: var(--ink); background: rgba(216, 182, 106, 0.08); }
+.dev-subnav .as-link.active { color: var(--gold-bright); border-color: var(--gold-deep); background: linear-gradient(180deg, rgba(216, 182, 106, 0.16), rgba(216, 182, 106, 0.05)); }
+.gcard-row { display: flex; align-items: center; gap: 12px; padding: 10px 12px; }
+.gcard-row-thumb { width: 46px; height: 62px; border-radius: 7px; overflow: hidden; border: 2px solid var(--rc, var(--panel-edge)); background: #0d2026; flex: none; display: flex; align-items: center; justify-content: center; color: var(--rc); font-weight: 700; }
+.gcard-row-thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+.gacha-pick-list { display: flex; flex-direction: column; gap: 5px; max-height: 320px; overflow-y: auto; padding-right: 6px; }
+.gacha-pick { display: flex; align-items: center; gap: 9px; padding: 6px 9px; border-radius: 8px; border: 1px solid var(--panel-edge); background: #0d2026; color: var(--ink); cursor: pointer; text-align: left; }
+.gacha-pick:hover { background: #12272e; }
+.gacha-pick.on { border-color: var(--gold-deep); background: #14302f; }
+.gacha-pick-thumb { width: 30px; height: 30px; border-radius: 6px; overflow: hidden; background: #16323a; display: flex; align-items: center; justify-content: center; flex: none; font-size: 12px; }
+.gacha-pick-thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+.gacha-pick .gcard-stars { font-size: 10px; }
+.gacha-pick-check { width: 18px; color: var(--gold-bright); font-weight: 800; text-align: center; }
+
+@media (prefers-reduced-motion: reduce) {
+  .gcard-flip, .gsummon-star, .gsummon-burststar, .gsummon-light, .gsummon-flash, .gsummon-crest, .gacha-reveal-burst, .gcard-glow, .gacha-summary-grid .gcard { animation-duration: 0.01ms !important; animation-delay: 0s !important; transition-duration: 0.15s !important; }
+}
+@media (max-width: 720px) {
+  .gcard.sz-lg { width: 180px; height: 260px; }
+  .gacha-summon-btns { flex-direction: column; }
+}

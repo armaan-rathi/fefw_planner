@@ -1452,8 +1452,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "Ardent Nosferatu?",
-        "description": "Increases Crit for Nosferatu?"
+        "name": "Rivalry",
+        "description": "Increases Crit for magic attacks"
       },
       "fields": {
         "faction": "Rose Tempest"
@@ -1701,8 +1701,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Bodyguard",
+        "description": "Chance to prevent follow-up attacks on adjacent allies"
       },
       "fields": {
         "faction": "Linaria's Morning Dew",
@@ -1817,8 +1817,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "???",
+        "description": "Increases Attack when striking first"
       },
       "fields": {
         "faction": "Brides of the Pale Raven",
@@ -2085,7 +2085,7 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "Vile",
+        "name": "Despicable",
         "description": "Increases Hit when foe's HP is below half"
       },
       "fields": {
@@ -2163,7 +2163,7 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
+        "name": "Sturdy Conundrum",
         "description": ""
       },
       "fields": {
@@ -2515,8 +2515,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Crimson Magic",
+        "description": "Increase Hit for magic attacks"
       },
       "fields": {
         "backstory": "A woman who assisted in the birth of the \"Savior\", guiding them to the Goddess of Fate Fortuna in the \"Forbidden Lands.\" She is aware of the great sin she committed in the past and is determined to fight, even at the cost of her own life. All to atone for her actions.\n\nLikes: Memories of Happier times",
@@ -6016,7 +6016,7 @@
     {
       "id": "poll_mtre0a5w2bhqk",
       "question": "Who is your favorite character?",
-      "description": "You can vote for up to 3 characters!",
+      "description": "",
       "options": [
         {
           "id": "opt_mtre0a5wiono6",
@@ -6036,5 +6036,474 @@
       "showRank": true,
       "optionsSource": "characters"
     }
-  ]
+  ],
+  "gacha": {
+    "enabled": false,
+    "cards": [
+      {
+        "id": "card_unit_cai",
+        "subjectKind": "unit",
+        "subjectId": "unit_cai",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_dietrich",
+        "subjectKind": "unit",
+        "subjectId": "unit_dietrich",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_theodora",
+        "subjectKind": "unit",
+        "subjectId": "unit_theodora",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_leda",
+        "subjectKind": "unit",
+        "subjectId": "unit_leda",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_pieter",
+        "subjectKind": "unit",
+        "subjectId": "unit_pieter",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_tobias",
+        "subjectKind": "unit",
+        "subjectId": "unit_tobias",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_bonaparte",
+        "subjectKind": "unit",
+        "subjectId": "unit_bonaparte",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_buccar",
+        "subjectKind": "unit",
+        "subjectId": "unit_buccar",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_esmeralda",
+        "subjectKind": "unit",
+        "subjectId": "unit_esmeralda",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_mikaela",
+        "subjectKind": "unit",
+        "subjectId": "unit_mikaela",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_ms3o1lfxavq3i",
+        "subjectKind": "unit",
+        "subjectId": "unit_ms3o1lfxavq3i",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_ms3o1yebdwa31",
+        "subjectKind": "unit",
+        "subjectId": "unit_ms3o1yebdwa31",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_ms3o2dq8x88ne",
+        "subjectKind": "unit",
+        "subjectId": "unit_ms3o2dq8x88ne",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_ms3o2srrysuum",
+        "subjectKind": "unit",
+        "subjectId": "unit_ms3o2srrysuum",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_ms3o3ayav4czo",
+        "subjectKind": "unit",
+        "subjectId": "unit_ms3o3ayav4czo",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_ms3o3pm7kkagj",
+        "subjectKind": "unit",
+        "subjectId": "unit_ms3o3pm7kkagj",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_ms3of3twtvl0z",
+        "subjectKind": "unit",
+        "subjectId": "unit_ms3of3twtvl0z",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_ms3ofr4f95yg3",
+        "subjectKind": "unit",
+        "subjectId": "unit_ms3ofr4f95yg3",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_ms7k4uf6l9u72",
+        "subjectKind": "unit",
+        "subjectId": "unit_ms7k4uf6l9u72",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_ms7k892bd498m",
+        "subjectKind": "unit",
+        "subjectId": "unit_ms7k892bd498m",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_mt4vbrsx1692p",
+        "subjectKind": "unit",
+        "subjectId": "unit_mt4vbrsx1692p",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_ms4ax1urookeq",
+        "subjectKind": "unit",
+        "subjectId": "unit_ms4ax1urookeq",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_ms4b1m5a0pltt",
+        "subjectKind": "unit",
+        "subjectId": "unit_ms4b1m5a0pltt",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_ms4azwjmprdkp",
+        "subjectKind": "unit",
+        "subjectId": "unit_ms4azwjmprdkp",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_mt4v8155tinj7",
+        "subjectKind": "unit",
+        "subjectId": "unit_mt4v8155tinj7",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_ms4awma1bic3w",
+        "subjectKind": "unit",
+        "subjectId": "unit_ms4awma1bic3w",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_ms4b7sewbatfh",
+        "subjectKind": "unit",
+        "subjectId": "unit_ms4b7sewbatfh",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_ms4b0fg9gc03t",
+        "subjectKind": "unit",
+        "subjectId": "unit_ms4b0fg9gc03t",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_msesm42zaq9do",
+        "subjectKind": "unit",
+        "subjectId": "unit_msesm42zaq9do",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_mt4v6olgdd4up",
+        "subjectKind": "unit",
+        "subjectId": "unit_mt4v6olgdd4up",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_ms4b1qq82fg7g",
+        "subjectKind": "unit",
+        "subjectId": "unit_ms4b1qq82fg7g",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_mseslad7245am",
+        "subjectKind": "unit",
+        "subjectId": "unit_mseslad7245am",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_msesn64bv1fun",
+        "subjectKind": "unit",
+        "subjectId": "unit_msesn64bv1fun",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_ms4b5mqtae605",
+        "subjectKind": "unit",
+        "subjectId": "unit_ms4b5mqtae605",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_msu4rfw7l4959",
+        "subjectKind": "unit",
+        "subjectId": "unit_msu4rfw7l4959",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_msu425y5cxugz",
+        "subjectKind": "unit",
+        "subjectId": "unit_msu425y5cxugz",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_msu42ne4imvnh",
+        "subjectKind": "unit",
+        "subjectId": "unit_msu42ne4imvnh",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_ms4b4zib7ibpz",
+        "subjectKind": "unit",
+        "subjectId": "unit_ms4b4zib7ibpz",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_ms4aycsktz7vo",
+        "subjectKind": "unit",
+        "subjectId": "unit_ms4aycsktz7vo",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_msu4iccnmpc6w",
+        "subjectKind": "unit",
+        "subjectId": "unit_msu4iccnmpc6w",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_msu45xa66phts",
+        "subjectKind": "unit",
+        "subjectId": "unit_msu45xa66phts",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_msesdf1q9njym",
+        "subjectKind": "unit",
+        "subjectId": "unit_msesdf1q9njym",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_ms4axuyt3lodb",
+        "subjectKind": "unit",
+        "subjectId": "unit_ms4axuyt3lodb",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_ms4b8a7pr2e4u",
+        "subjectKind": "unit",
+        "subjectId": "unit_ms4b8a7pr2e4u",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_msu4dr4u0h6sh",
+        "subjectKind": "unit",
+        "subjectId": "unit_msu4dr4u0h6sh",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_msesemmywrm9d",
+        "subjectKind": "unit",
+        "subjectId": "unit_msesemmywrm9d",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_msestcd1erzsr",
+        "subjectKind": "unit",
+        "subjectId": "unit_msestcd1erzsr",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_msu448hnym292",
+        "subjectKind": "unit",
+        "subjectId": "unit_msu448hnym292",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_ms4b759ma7nnn",
+        "subjectKind": "unit",
+        "subjectId": "unit_ms4b759ma7nnn",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_ms4b44v3k39y1",
+        "subjectKind": "unit",
+        "subjectId": "unit_ms4b44v3k39y1",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_ms4b0v3updg6t",
+        "subjectKind": "unit",
+        "subjectId": "unit_ms4b0v3updg6t",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_ms4b9764g1dhr",
+        "subjectKind": "unit",
+        "subjectId": "unit_ms4b9764g1dhr",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_msesipji4v2wt",
+        "subjectKind": "unit",
+        "subjectId": "unit_msesipji4v2wt",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_ms4b3v4raamqa",
+        "subjectKind": "unit",
+        "subjectId": "unit_ms4b3v4raamqa",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_ms3o4850pz0sq",
+        "subjectKind": "unit",
+        "subjectId": "unit_ms3o4850pz0sq",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_ms4b14v2stjjh",
+        "subjectKind": "unit",
+        "subjectId": "unit_ms4b14v2stjjh",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_mt4v2r1q22a0b",
+        "subjectKind": "unit",
+        "subjectId": "unit_mt4v2r1q22a0b",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_ms4b6sy674873",
+        "subjectKind": "unit",
+        "subjectId": "unit_ms4b6sy674873",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_ms4b9qphimjk7",
+        "subjectKind": "unit",
+        "subjectId": "unit_ms4b9qphimjk7",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_msu434ibp8q8s",
+        "subjectKind": "unit",
+        "subjectId": "unit_msu434ibp8q8s",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_msu41p5eli1ai",
+        "subjectKind": "unit",
+        "subjectId": "unit_msu41p5eli1ai",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_ms3oeprflm40x",
+        "subjectKind": "unit",
+        "subjectId": "unit_ms3oeprflm40x",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_msftrzee97kx3",
+        "subjectKind": "unit",
+        "subjectId": "unit_msftrzee97kx3",
+        "rarity": "common"
+      },
+      {
+        "id": "card_unit_mshblux2thfxr",
+        "subjectKind": "unit",
+        "subjectId": "unit_mshblux2thfxr",
+        "rarity": "common"
+      }
+    ],
+    "banners": [
+      {
+        "id": "banner_mtrg0m8t1f3sx",
+        "name": "Fortune's Gamble",
+        "cardIds": [
+          "card_unit_cai",
+          "card_unit_dietrich",
+          "card_unit_theodora",
+          "card_unit_leda",
+          "card_unit_pieter",
+          "card_unit_tobias",
+          "card_unit_bonaparte",
+          "card_unit_buccar",
+          "card_unit_esmeralda",
+          "card_unit_mikaela",
+          "card_unit_ms3o1lfxavq3i",
+          "card_unit_ms3o1yebdwa31",
+          "card_unit_ms3o2dq8x88ne",
+          "card_unit_ms3o2srrysuum",
+          "card_unit_ms3o3ayav4czo",
+          "card_unit_ms3o3pm7kkagj",
+          "card_unit_ms3of3twtvl0z",
+          "card_unit_ms3ofr4f95yg3",
+          "card_unit_ms7k4uf6l9u72",
+          "card_unit_ms7k892bd498m",
+          "card_unit_mt4vbrsx1692p",
+          "card_unit_ms4ax1urookeq",
+          "card_unit_ms4b1m5a0pltt",
+          "card_unit_ms4azwjmprdkp",
+          "card_unit_mt4v8155tinj7",
+          "card_unit_ms4awma1bic3w",
+          "card_unit_ms4b7sewbatfh",
+          "card_unit_ms4b0fg9gc03t",
+          "card_unit_msesm42zaq9do",
+          "card_unit_mt4v6olgdd4up",
+          "card_unit_ms4b1qq82fg7g",
+          "card_unit_mseslad7245am",
+          "card_unit_msesn64bv1fun",
+          "card_unit_ms4b5mqtae605",
+          "card_unit_msu4rfw7l4959",
+          "card_unit_msu425y5cxugz",
+          "card_unit_msu42ne4imvnh",
+          "card_unit_ms4b4zib7ibpz",
+          "card_unit_ms4aycsktz7vo",
+          "card_unit_msu4iccnmpc6w",
+          "card_unit_msu45xa66phts",
+          "card_unit_msesdf1q9njym",
+          "card_unit_ms4axuyt3lodb",
+          "card_unit_ms4b8a7pr2e4u",
+          "card_unit_msu4dr4u0h6sh",
+          "card_unit_msesemmywrm9d",
+          "card_unit_msestcd1erzsr",
+          "card_unit_msu448hnym292",
+          "card_unit_ms4b759ma7nnn",
+          "card_unit_ms4b44v3k39y1",
+          "card_unit_ms4b0v3updg6t",
+          "card_unit_ms4b9764g1dhr",
+          "card_unit_msesipji4v2wt",
+          "card_unit_ms4b3v4raamqa",
+          "card_unit_ms3o4850pz0sq",
+          "card_unit_ms4b14v2stjjh",
+          "card_unit_mt4v2r1q22a0b",
+          "card_unit_ms4b6sy674873",
+          "card_unit_ms4b9qphimjk7",
+          "card_unit_msu434ibp8q8s",
+          "card_unit_msu41p5eli1ai",
+          "card_unit_ms3oeprflm40x",
+          "card_unit_msftrzee97kx3",
+          "card_unit_mshblux2thfxr"
+        ],
+        "rates": {
+          "common": 50,
+          "uncommon": 30,
+          "rare": 15,
+          "epic": 4,
+          "legendary": 1
+        },
+        "image": "/images/mtrga25tpwv1bb.png"
+      }
+    ]
+  }
 }

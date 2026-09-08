@@ -228,6 +228,55 @@ export const POLL_PALETTE = [
   "#aab6bd", // 12 silver
 ];
 
+// ---- Gacha (summon minigame) ----------------------------------------------
+export type Rarity = "common" | "uncommon" | "rare" | "epic" | "legendary";
+
+export interface RarityDef {
+  id: Rarity;
+  label: string;
+  stars: number;
+  color: string;
+}
+export const RARITIES: RarityDef[] = [
+  { id: "common", label: "Common", stars: 1, color: "#c8d0d3" },
+  { id: "uncommon", label: "Uncommon", stars: 2, color: "#5cc08a" },
+  { id: "rare", label: "Rare", stars: 3, color: "#5fa8e8" },
+  { id: "epic", label: "Epic", stars: 4, color: "#b784e0" },
+  { id: "legendary", label: "Legendary", stars: 5, color: "#eac04a" },
+];
+export const rarityDef = (r: Rarity): RarityDef => RARITIES.find((x) => x.id === r) ?? RARITIES[0];
+export const rarityRank = (r: Rarity): number => rarityDef(r).stars;
+
+export const DEFAULT_RATES: Record<Rarity, number> = {
+  common: 50, uncommon: 30, rare: 15, epic: 4, legendary: 1,
+};
+
+export type CardSubjectKind = "unit" | "god" | "npc";
+
+export interface GachaCard {
+  id: string;
+  subjectKind: CardSubjectKind;
+  subjectId: string; // the unit/god/npc this card depicts
+  title?: string; // optional card title (e.g. an alt/costume name)
+  art?: string | null; // optional override art; when empty, uses the subject's LIVE portrait
+  rarity: Rarity;
+  classId?: string | null; // optional class shown on the card
+}
+
+export interface Banner {
+  id: string;
+  name: string;
+  image?: string | null; // banner art
+  cardIds: string[];
+  rates: Record<Rarity, number>; // percentages per rarity
+}
+
+export interface GachaConfig {
+  enabled?: boolean; // whether the public Gacha tab is shown
+  cards: GachaCard[];
+  banners: Banner[];
+}
+
 export interface DB {
   schemaVersion: number;
   routes: Route[];
@@ -243,4 +292,5 @@ export interface DB {
   npcs?: CastMember[]; // important non-playable characters
   tierRequirements?: Record<string, TierRequirement>; // keyed by tier name
   polls?: Poll[]; // pre-release community polls
+  gacha?: GachaConfig; // summon minigame (cards + banners)
 }
