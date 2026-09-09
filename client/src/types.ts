@@ -85,8 +85,8 @@ export interface PersonalSkill {
   description: string;
 }
 
-export type Negotiation = "Easy" | "Medium" | "Difficult";
-export const NEGOTIATIONS: Negotiation[] = ["Easy", "Medium", "Difficult"];
+export type Negotiation = "Easy" | "Moderate" | "Difficult";
+export const NEGOTIATIONS: Negotiation[] = ["Easy", "Moderate", "Difficult"];
 
 // Conditions to recruit a unit under a given lord's route. Every field is
 // optional — only the ones filled in are shown.

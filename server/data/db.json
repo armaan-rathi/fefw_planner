@@ -272,6 +272,23 @@
       "bonusExp": [
         "sword",
         "bow"
+      ],
+      "classAbilities": [
+        {
+          "name": "Hunting Basics",
+          "description": "",
+          "icon": null
+        },
+        {
+          "name": "",
+          "description": "",
+          "icon": null
+        },
+        {
+          "name": "",
+          "description": "",
+          "icon": null
+        }
       ]
     },
     {
@@ -292,7 +309,29 @@
         "lance",
         "riding",
         "flying"
-      ]
+      ],
+      "classAbilities": [
+        {
+          "name": "Mount/Dismount",
+          "description": "",
+          "icon": null
+        },
+        {
+          "name": "",
+          "description": "",
+          "icon": null
+        },
+        {
+          "name": "",
+          "description": "",
+          "icon": null
+        }
+      ],
+      "masteredAbility": {
+        "name": "Offense Basics",
+        "description": "",
+        "icon": null
+      }
     },
     {
       "id": "class_diviner",
@@ -363,7 +402,29 @@
       "portrait": "/images/mtkaqyqpbedgoo.jpg",
       "bonusExp": [
         "brawl"
-      ]
+      ],
+      "classAbilities": [
+        {
+          "name": "Combat Arts +1",
+          "description": "",
+          "icon": null
+        },
+        {
+          "name": "Brawl Avo +3",
+          "description": "",
+          "icon": null
+        },
+        {
+          "name": "",
+          "description": "",
+          "icon": null
+        }
+      ],
+      "masteredAbility": {
+        "name": "Attack, Get Back",
+        "description": "",
+        "icon": null
+      }
     },
     {
       "id": "class_archer",
@@ -379,7 +440,29 @@
       "bonusExp": [
         "bow",
         "infantry"
-      ]
+      ],
+      "classAbilities": [
+        {
+          "name": "Combat Arts +1",
+          "description": "",
+          "icon": null
+        },
+        {
+          "name": "Bow Hit +5",
+          "description": "",
+          "icon": null
+        },
+        {
+          "name": "",
+          "description": "",
+          "icon": null
+        }
+      ],
+      "masteredAbility": {
+        "name": "Crescendo",
+        "description": "",
+        "icon": null
+      }
     },
     {
       "id": "class_ms4czk6qlyp89",
@@ -1029,7 +1112,7 @@
       "skillLevels": {},
       "personalSkill": {
         "name": "Murderous Intent",
-        "description": "Increases Hit when initiating combat"
+        "description": "Increases Crit when initiating combat?"
       },
       "fields": {
         "faction": "House Lamine",
@@ -1204,7 +1287,10 @@
         "leda"
       ],
       "classId": "class_ms4godtdiwiu4",
-      "boons": [],
+      "boons": [
+        "axe",
+        "armor"
+      ],
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
@@ -1270,7 +1356,8 @@
         "armor"
       ],
       "banes": [
-        "sword"
+        "sword",
+        "reason"
       ],
       "skillLevels": {},
       "personalSkill": {
@@ -1327,12 +1414,14 @@
         "leda"
       ],
       "classId": "class_diviner",
-      "boons": [],
+      "boons": [
+        "sword"
+      ],
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Goddess' Favor?",
+        "description": "Heals a little after combat"
       },
       "fields": {
         "faction": "Rose Tempest",
@@ -1423,9 +1512,13 @@
       "classId": "class_ornius",
       "boons": [
         "lance",
-        "riding"
+        "riding",
+        "axe",
+        "flying"
       ],
-      "banes": [],
+      "banes": [
+        "sword"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "Accelerate?",
@@ -1498,7 +1591,9 @@
         "leda"
       ],
       "classId": "class_ms3o7io5clmwu",
-      "boons": [],
+      "boons": [
+        "brawl"
+      ],
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
@@ -1889,7 +1984,7 @@
         "leda": {
           "support": 3,
           "renown": 5,
-          "negotiation": "Medium"
+          "negotiation": "Moderate"
         }
       }
     },
@@ -1957,7 +2052,8 @@
         "description": ""
       },
       "fields": {
-        "faction": "Moon's Lie"
+        "faction": "Moon's Lie",
+        "backstory": "A beautiful yet somewhat mysterious cleric.\nShe was found collapsed by the river several years ago and taken in by the temple. She is currently affiliated with Vandahl Trading, led by Talimun.\nShe loves spicy food so much that it can make even the burliest of men faint.\n\nLikes: Books of poetry, spicy foods, coffee, trustworthy people"
       }
     },
     {
@@ -2009,7 +2105,7 @@
         "leda": {
           "support": 2,
           "renown": 5,
-          "negotiation": "Medium"
+          "negotiation": "Moderate"
         }
       }
     },
@@ -2267,11 +2363,18 @@
       ],
       "skillLevels": {},
       "personalSkill": {
-        "name": "Forcing Through?",
+        "name": "Barge Through",
         "description": "Allows unit to pass through tiles with opponents on them"
       },
       "fields": {
         "backstory": "A woman working as a mercenary at Dagsion. Originally from Saramis, she was an exemplary warrior, whose skills were recognised by Bonaventure the Mastermind. After a civil war many years ago, she wandered around Dagda, eventually leading to her current situation.\n\nLikes: Honoring her duties, caring for orniuses, improving her combat abilities, reading"
+      },
+      "recruitment": {
+        "dietrich": {
+          "support": 2,
+          "renown": 5,
+          "negotiation": "Moderate"
+        }
       }
     },
     {
