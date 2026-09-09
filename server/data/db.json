@@ -1848,22 +1848,23 @@
       }
     },
     {
-      "id": "unit_ms4b5mqtae605",
-      "name": "Fianna",
-      "portrait": "/images/msu4u4elj7zfaa.png",
+      "id": "unit_ms4b4zib7ibpz",
+      "name": "Ludia",
+      "portrait": "/images/mttwcf8wqm4eoq.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": "class_soldier",
+      "classId": "class_ms4axgsyshgov",
       "boons": [],
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Falcon",
+        "description": "Increases Speed when initiating combat"
       },
       "fields": {
-        "faction": "Moon's Lie"
+        "faction": "Moon's Lie",
+        "backstory": "The daughter of a distinguished military officer, she works for Vandahl Trading led by Talimun.\nHaving received an elite education from a young age, she possesses top-tier swordsmanship skills and a refined upbringing.\nTrue to her age, she is keenly interested in matters of romance.\n\nLikes: Writing stories, appreciating art, talking about love and romance"
       }
     },
     {
@@ -1941,13 +1942,13 @@
       }
     },
     {
-      "id": "unit_ms4b4zib7ibpz",
-      "name": "Ludia",
-      "portrait": "/images/ms4j52g4qqvh9f.jpg",
+      "id": "unit_ms4b5mqtae605",
+      "name": "Fianna",
+      "portrait": "/images/msu4u4elj7zfaa.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": "class_ms4axgsyshgov",
+      "classId": "class_soldier",
       "boons": [],
       "banes": [],
       "skillLevels": {},
