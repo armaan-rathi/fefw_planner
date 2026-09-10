@@ -1294,7 +1294,7 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
+        "name": "Guardian's Duty?",
         "description": ""
       },
       "fields": {
@@ -1420,7 +1420,7 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "Goddess' Favor?",
+        "name": "Goddess' Favor",
         "description": "Heals a little after combat"
       },
       "fields": {
@@ -1963,13 +1963,13 @@
       }
     },
     {
-      "id": "unit_msu4rfw7l4959",
-      "name": "Loretta",
-      "portrait": "/images/mtlm6vsbdme0nm.png",
+      "id": "unit_ms4aycsktz7vo",
+      "name": "Seteth",
+      "portrait": "/images/mtv8lijgbmicx6.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": "class_ms3o7io5clmwu",
+      "classId": "class_msesu5uoyogcq",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -1978,13 +1978,17 @@
         "description": ""
       },
       "fields": {
-        "faction": "Linaria's Morning Dew"
+        "faction": "Linaria's Morning Dew",
+        "backstory": "An eccentric traveler who came from the distant land of Fódlan for the purpose of investigation.\nHe met the cat-masked priestess Orchel on his journey and has been traveling with her ever since.\nHe has a meddlesome side.\n\nLikes: The teachings of the Church of Seiros, fishing, his own daughter, diligent people, writing fables, preaching",
+        "crest": [
+          "Cichol"
+        ]
       },
       "recruitment": {
-        "leda": {
+        "cai": {
           "support": 3,
-          "renown": 5,
-          "negotiation": "Moderate"
+          "renown": 10,
+          "negotiation": "Difficult"
         }
       }
     },
@@ -2039,7 +2043,7 @@
     {
       "id": "unit_ms4b5mqtae605",
       "name": "Fianna",
-      "portrait": "/images/msu4u4elj7zfaa.png",
+      "portrait": "/images/mtv8m5eam5bnmq.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -2053,17 +2057,20 @@
       },
       "fields": {
         "faction": "Moon's Lie",
-        "backstory": "A beautiful yet somewhat mysterious cleric.\nShe was found collapsed by the river several years ago and taken in by the temple. She is currently affiliated with Vandahl Trading, led by Talimun.\nShe loves spicy food so much that it can make even the burliest of men faint.\n\nLikes: Books of poetry, spicy foods, coffee, trustworthy people"
+        "backstory": "A beautiful yet somewhat mysterious cleric.\nShe was found collapsed by the river several years ago and taken in by the temple. She is currently affiliated with Vandahl Trading, led by Talimun.\nShe loves spicy food so much that it can make even the burliest of men faint.\n\nLikes: Books of poetry, spicy foods, coffee, trustworthy people",
+        "crest": [
+          "Fraldarius"
+        ]
       }
     },
     {
-      "id": "unit_ms4aycsktz7vo",
-      "name": "Seteth",
-      "portrait": "/images/mt1yq3an706y37.jpg",
+      "id": "unit_msu4rfw7l4959",
+      "name": "Loretta",
+      "portrait": "/images/mtlm6vsbdme0nm.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": "class_msesu5uoyogcq",
+      "classId": "class_ms3o7io5clmwu",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -2075,10 +2082,10 @@
         "faction": "Linaria's Morning Dew"
       },
       "recruitment": {
-        "cai": {
+        "leda": {
           "support": 3,
-          "renown": 10,
-          "negotiation": "Difficult"
+          "renown": 5,
+          "negotiation": "Moderate"
         }
       }
     },
@@ -2520,7 +2527,7 @@
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": "class_archer",
+      "classId": "class_ms3o7vuixzpwd",
       "boons": [
         "bow"
       ],
@@ -2530,7 +2537,9 @@
         "name": "",
         "description": ""
       },
-      "fields": {}
+      "fields": {
+        "backstory": "Likes: Thievery, the open sea, ships, obedient underlings"
+      }
     },
     {
       "id": "unit_ms4b9qphimjk7",
