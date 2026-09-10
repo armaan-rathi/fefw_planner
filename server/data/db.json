@@ -1126,7 +1126,7 @@
     {
       "id": "unit_theodora",
       "name": "Theodora",
-      "portrait": "/images/ms3oq8dm5l055n.jpg",
+      "portrait": "/images/mtv8xjvxcp533f.jpg",
       "isLord": true,
       "routeIds": [
         "theodora"
@@ -1245,7 +1245,7 @@
     {
       "id": "unit_bonaparte",
       "name": "Bonaventure",
-      "portrait": "/images/ms4gxznsuj1l08.jpg",
+      "portrait": "/images/mtv8xci5m6qtb2.jpg",
       "isLord": false,
       "routeIds": [
         "theodora"
@@ -1375,7 +1375,7 @@
     {
       "id": "unit_ms3o1lfxavq3i",
       "name": "Tobias",
-      "portrait": "/images/ms4h1xr4v4m5et.jpg",
+      "portrait": "/images/mtv8x3tgmwgza7.jpg",
       "isLord": false,
       "routeIds": [
         "theodora"
@@ -1501,7 +1501,7 @@
     {
       "id": "unit_ms3o3ayav4czo",
       "name": "Lysander",
-      "portrait": "/images/ms4h56f9jyog0d.jpg",
+      "portrait": "/images/mtv8wyjvyf86lq.jpg",
       "isLord": false,
       "routeIds": [
         "theodora"
@@ -1555,7 +1555,7 @@
     {
       "id": "unit_ms3of3twtvl0z",
       "name": "Lilian",
-      "portrait": "/images/ms4o8t0pfday9q.jpg",
+      "portrait": "/images/mtv8ws3ixsca23.jpg",
       "isLord": false,
       "routeIds": [
         "theodora"
@@ -6164,25 +6164,29 @@
         "id": "card_unit_cai",
         "subjectKind": "unit",
         "subjectId": "unit_cai",
-        "rarity": "common"
+        "rarity": "legendary",
+        "title": "Hell's-Eye"
       },
       {
         "id": "card_unit_dietrich",
         "subjectKind": "unit",
         "subjectId": "unit_dietrich",
-        "rarity": "common"
+        "rarity": "legendary",
+        "title": "Ravishing Shadow"
       },
       {
         "id": "card_unit_theodora",
         "subjectKind": "unit",
         "subjectId": "unit_theodora",
-        "rarity": "common"
+        "rarity": "legendary",
+        "title": "Breaker of Armies"
       },
       {
         "id": "card_unit_leda",
         "subjectKind": "unit",
         "subjectId": "unit_leda",
-        "rarity": "common"
+        "rarity": "legendary",
+        "title": "Siren of the Six String"
       },
       {
         "id": "card_unit_pieter",
