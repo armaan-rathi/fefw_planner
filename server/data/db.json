@@ -235,6 +235,20 @@
         "sword",
         "axe",
         "brawl"
+      ],
+      "secondarySkills": [
+        {
+          "skillTypeId": "brawl",
+          "grade": "D"
+        },
+        {
+          "skillTypeId": "axe",
+          "grade": "D"
+        },
+        {
+          "skillTypeId": "sword",
+          "grade": "D"
+        }
       ]
     },
     {
@@ -289,6 +303,16 @@
           "description": "",
           "icon": null
         }
+      ],
+      "secondarySkills": [
+        {
+          "skillTypeId": "bow",
+          "grade": "D"
+        },
+        {
+          "skillTypeId": "sword",
+          "grade": "D"
+        }
       ]
     },
     {
@@ -331,7 +355,23 @@
         "name": "Offense Basics",
         "description": "",
         "icon": null
-      }
+      },
+      "secondarySkills": [
+        {
+          "skillTypeId": "axe",
+          "grade": "D"
+        },
+        {
+          "skillTypeId": "lance",
+          "grade": "D"
+        }
+      ],
+      "primarySkills": [
+        {
+          "skillTypeId": "riding",
+          "grade": "E+"
+        }
+      ]
     },
     {
       "id": "class_diviner",
@@ -356,6 +396,16 @@
       "bonusExp": [
         "reason",
         "faith"
+      ],
+      "secondarySkills": [
+        {
+          "skillTypeId": "faith",
+          "grade": "D"
+        },
+        {
+          "skillTypeId": "reason",
+          "grade": "D"
+        }
       ]
     },
     {
@@ -424,7 +474,13 @@
         "name": "Attack, Get Back",
         "description": "",
         "icon": null
-      }
+      },
+      "primarySkills": [
+        {
+          "skillTypeId": "brawl",
+          "grade": "C"
+        }
+      ]
     },
     {
       "id": "class_archer",
@@ -462,7 +518,13 @@
         "name": "Crescendo",
         "description": "",
         "icon": null
-      }
+      },
+      "primarySkills": [
+        {
+          "skillTypeId": "bow",
+          "grade": "C"
+        }
+      ]
     },
     {
       "id": "class_ms4czk6qlyp89",
@@ -1112,7 +1174,7 @@
       "skillLevels": {},
       "personalSkill": {
         "name": "Murderous Intent",
-        "description": "Increases Crit when initiating combat?"
+        "description": "If unit attacks first, Crit +5 during combat"
       },
       "fields": {
         "faction": "House Lamine",
@@ -1231,7 +1293,9 @@
         "reason",
         "authority"
       ],
-      "banes": [],
+      "banes": [
+        "bow"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "",
@@ -2066,7 +2130,7 @@
     {
       "id": "unit_msu4rfw7l4959",
       "name": "Loretta",
-      "portrait": "/images/mtlm6vsbdme0nm.png",
+      "portrait": "/images/mtvih8tb0nej5i.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -2079,7 +2143,8 @@
         "description": ""
       },
       "fields": {
-        "faction": "Linaria's Morning Dew"
+        "faction": "Linaria's Morning Dew",
+        "backstory": "An energetic girl who serves at Credna Temple.\nShe follows the cat-masked priestess, Orchel, whom she addresses as \"Lady Priest.\"\nWhile she is stubborn and fiercely competitive, she is terrified of ghosts.\n\nLikes: Reliable people, sweets, her friends"
       },
       "recruitment": {
         "leda": {
@@ -6106,7 +6171,12 @@
       "renownLv": 8
     },
     "Specialty": {
-      "renownLv": 4
+      "renownLv": 4,
+      "idealLv": 20
+    },
+    "Beginner": {
+      "renownLv": 1,
+      "idealLv": 5
     }
   },
   "polls": [
@@ -6164,53 +6234,57 @@
         "id": "card_unit_cai",
         "subjectKind": "unit",
         "subjectId": "unit_cai",
-        "rarity": "legendary",
+        "rarity": "epic",
         "title": "Hell's-Eye"
       },
       {
         "id": "card_unit_dietrich",
         "subjectKind": "unit",
         "subjectId": "unit_dietrich",
-        "rarity": "legendary",
+        "rarity": "epic",
         "title": "Ravishing Shadow"
       },
       {
         "id": "card_unit_theodora",
         "subjectKind": "unit",
         "subjectId": "unit_theodora",
-        "rarity": "legendary",
+        "rarity": "epic",
         "title": "Breaker of Armies"
       },
       {
         "id": "card_unit_leda",
         "subjectKind": "unit",
         "subjectId": "unit_leda",
-        "rarity": "legendary",
+        "rarity": "epic",
         "title": "Siren of the Six String"
       },
       {
         "id": "card_unit_pieter",
         "subjectKind": "unit",
         "subjectId": "unit_pieter",
-        "rarity": "common"
+        "rarity": "uncommon",
+        "title": "Glasses Girl"
       },
       {
         "id": "card_unit_tobias",
         "subjectKind": "unit",
         "subjectId": "unit_tobias",
-        "rarity": "common"
+        "rarity": "uncommon",
+        "title": "Definitely Not Agarthan"
       },
       {
         "id": "card_unit_bonaparte",
         "subjectKind": "unit",
         "subjectId": "unit_bonaparte",
-        "rarity": "common"
+        "rarity": "uncommon",
+        "title": "Pirate Waluigi"
       },
       {
         "id": "card_unit_buccar",
         "subjectKind": "unit",
         "subjectId": "unit_buccar",
-        "rarity": "common"
+        "rarity": "uncommon",
+        "title": "Demon Bear"
       },
       {
         "id": "card_unit_esmeralda",
@@ -6222,7 +6296,8 @@
         "id": "card_unit_mikaela",
         "subjectKind": "unit",
         "subjectId": "unit_mikaela",
-        "rarity": "common"
+        "rarity": "uncommon",
+        "title": "Brazilian Miku"
       },
       {
         "id": "card_unit_ms3o1lfxavq3i",
@@ -6246,19 +6321,22 @@
         "id": "card_unit_ms3o2srrysuum",
         "subjectKind": "unit",
         "subjectId": "unit_ms3o2srrysuum",
-        "rarity": "common"
+        "rarity": "uncommon",
+        "title": "Redblade"
       },
       {
         "id": "card_unit_ms3o3ayav4czo",
         "subjectKind": "unit",
         "subjectId": "unit_ms3o3ayav4czo",
-        "rarity": "common"
+        "rarity": "uncommon",
+        "title": "Son of Klytos"
       },
       {
         "id": "card_unit_ms3o3pm7kkagj",
         "subjectKind": "unit",
         "subjectId": "unit_ms3o3pm7kkagj",
-        "rarity": "common"
+        "rarity": "uncommon",
+        "title": "Blue Rose of Caelus"
       },
       {
         "id": "card_unit_ms3of3twtvl0z",
@@ -6288,25 +6366,29 @@
         "id": "card_unit_mt4vbrsx1692p",
         "subjectKind": "unit",
         "subjectId": "unit_mt4vbrsx1692p",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "White-Maned Demon"
       },
       {
         "id": "card_unit_ms4ax1urookeq",
         "subjectKind": "unit",
         "subjectId": "unit_ms4ax1urookeq",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "Toothpick-kun"
       },
       {
         "id": "card_unit_ms4b1m5a0pltt",
         "subjectKind": "unit",
         "subjectId": "unit_ms4b1m5a0pltt",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "Cat Mask"
       },
       {
         "id": "card_unit_ms4azwjmprdkp",
         "subjectKind": "unit",
         "subjectId": "unit_ms4azwjmprdkp",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "Nun with a Gun"
       },
       {
         "id": "card_unit_mt4v8155tinj7",
@@ -6318,7 +6400,8 @@
         "id": "card_unit_ms4awma1bic3w",
         "subjectKind": "unit",
         "subjectId": "unit_ms4awma1bic3w",
-        "rarity": "common"
+        "rarity": "uncommon",
+        "title": "Marianne on Prozac"
       },
       {
         "id": "card_unit_ms4b7sewbatfh",
@@ -6336,19 +6419,22 @@
         "id": "card_unit_msesm42zaq9do",
         "subjectKind": "unit",
         "subjectId": "unit_msesm42zaq9do",
-        "rarity": "common"
+        "rarity": "uncommon",
+        "title": "Infernal Playwright"
       },
       {
         "id": "card_unit_mt4v6olgdd4up",
         "subjectKind": "unit",
         "subjectId": "unit_mt4v6olgdd4up",
-        "rarity": "common"
+        "rarity": "uncommon",
+        "title": "Sky-Drum"
       },
       {
         "id": "card_unit_ms4b1qq82fg7g",
         "subjectKind": "unit",
         "subjectId": "unit_ms4b1qq82fg7g",
-        "rarity": "common"
+        "rarity": "uncommon",
+        "title": "Black-Lace"
       },
       {
         "id": "card_unit_mseslad7245am",
@@ -6360,7 +6446,8 @@
         "id": "card_unit_msesn64bv1fun",
         "subjectKind": "unit",
         "subjectId": "unit_msesn64bv1fun",
-        "rarity": "common"
+        "rarity": "uncommon",
+        "title": "The Butcher"
       },
       {
         "id": "card_unit_ms4b5mqtae605",
@@ -6396,7 +6483,8 @@
         "id": "card_unit_ms4aycsktz7vo",
         "subjectKind": "unit",
         "subjectId": "unit_ms4aycsktz7vo",
-        "rarity": "common"
+        "rarity": "rare",
+        "title": "Hammer of Justice"
       },
       {
         "id": "card_unit_msu4iccnmpc6w",
@@ -6420,7 +6508,8 @@
         "id": "card_unit_ms4axuyt3lodb",
         "subjectKind": "unit",
         "subjectId": "unit_ms4axuyt3lodb",
-        "rarity": "common"
+        "rarity": "uncommon",
+        "title": "Silver Maiden"
       },
       {
         "id": "card_unit_ms4b8a7pr2e4u",
@@ -6468,7 +6557,8 @@
         "id": "card_unit_ms4b0v3updg6t",
         "subjectKind": "unit",
         "subjectId": "unit_ms4b0v3updg6t",
-        "rarity": "common"
+        "rarity": "uncommon",
+        "title": "Unkillable"
       },
       {
         "id": "card_unit_ms4b9764g1dhr",
@@ -6486,7 +6576,8 @@
         "id": "card_unit_ms4b3v4raamqa",
         "subjectKind": "unit",
         "subjectId": "unit_ms4b3v4raamqa",
-        "rarity": "common"
+        "rarity": "uncommon",
+        "title": "Sterling Knight"
       },
       {
         "id": "card_unit_ms3o4850pz0sq",
@@ -6534,19 +6625,188 @@
         "id": "card_unit_ms3oeprflm40x",
         "subjectKind": "unit",
         "subjectId": "unit_ms3oeprflm40x",
-        "rarity": "common"
+        "rarity": "legendary",
+        "title": "Herald of the Pale Raven"
       },
       {
         "id": "card_unit_msftrzee97kx3",
         "subjectKind": "unit",
         "subjectId": "unit_msftrzee97kx3",
-        "rarity": "common"
+        "rarity": "uncommon",
+        "title": "Crimson Flower"
       },
       {
         "id": "card_unit_mshblux2thfxr",
         "subjectKind": "unit",
         "subjectId": "unit_mshblux2thfxr",
         "rarity": "common"
+      },
+      {
+        "id": "card_cast_msetp6lndpw3d",
+        "subjectKind": "god",
+        "subjectId": "cast_msetp6lndpw3d",
+        "rarity": "rare",
+        "title": "Goddess of Fate"
+      },
+      {
+        "id": "card_cast_msetmnaxter8p",
+        "subjectKind": "god",
+        "subjectId": "cast_msetmnaxter8p",
+        "rarity": "common"
+      },
+      {
+        "id": "card_cast_msetp3tw9ohgz",
+        "subjectKind": "god",
+        "subjectId": "cast_msetp3tw9ohgz",
+        "rarity": "common"
+      },
+      {
+        "id": "card_cast_msetoyu3483vr",
+        "subjectKind": "god",
+        "subjectId": "cast_msetoyu3483vr",
+        "rarity": "common"
+      },
+      {
+        "id": "card_cast_msu3g6v7nvzvh",
+        "subjectKind": "god",
+        "subjectId": "cast_msu3g6v7nvzvh",
+        "rarity": "common"
+      },
+      {
+        "id": "card_cast_msetp859txc1o",
+        "subjectKind": "god",
+        "subjectId": "cast_msetp859txc1o",
+        "rarity": "rare",
+        "title": "Goddess of Hunting and Art"
+      },
+      {
+        "id": "card_cast_msu3j0g5oyvkc",
+        "subjectKind": "god",
+        "subjectId": "cast_msu3j0g5oyvkc",
+        "rarity": "common"
+      },
+      {
+        "id": "card_cast_msf8obk24tw3b",
+        "subjectKind": "npc",
+        "subjectId": "cast_msf8obk24tw3b",
+        "rarity": "legendary",
+        "title": "The Beginning"
+      },
+      {
+        "id": "card_cast_mseto4xteu04v",
+        "subjectKind": "npc",
+        "subjectId": "cast_mseto4xteu04v",
+        "rarity": "rare",
+        "title": "Divine Sovereign"
+      },
+      {
+        "id": "card_cast_msf6d3kjkn3gs",
+        "subjectKind": "npc",
+        "subjectId": "cast_msf6d3kjkn3gs",
+        "rarity": "common"
+      },
+      {
+        "id": "card_cast_msf8ix5msm98z",
+        "subjectKind": "npc",
+        "subjectId": "cast_msf8ix5msm98z",
+        "rarity": "common"
+      },
+      {
+        "id": "card_cast_msu3kjg7so7hn",
+        "subjectKind": "npc",
+        "subjectId": "cast_msu3kjg7so7hn",
+        "rarity": "common"
+      },
+      {
+        "id": "card_cast_msu4qvpg99aw7",
+        "subjectKind": "npc",
+        "subjectId": "cast_msu4qvpg99aw7",
+        "rarity": "common"
+      },
+      {
+        "id": "card_cast_msu3kukss85rn",
+        "subjectKind": "npc",
+        "subjectId": "cast_msu3kukss85rn",
+        "rarity": "common"
+      },
+      {
+        "id": "card_cast_mt4v43625na6d",
+        "subjectKind": "npc",
+        "subjectId": "cast_mt4v43625na6d",
+        "rarity": "common"
+      },
+      {
+        "id": "card_cast_msu3met13cv6z",
+        "subjectKind": "npc",
+        "subjectId": "cast_msu3met13cv6z",
+        "rarity": "common"
+      },
+      {
+        "id": "card_cast_msu3mmxprxizg",
+        "subjectKind": "npc",
+        "subjectId": "cast_msu3mmxprxizg",
+        "rarity": "common"
+      },
+      {
+        "id": "card_cast_msu3l7zix7uae",
+        "subjectKind": "npc",
+        "subjectId": "cast_msu3l7zix7uae",
+        "rarity": "common"
+      },
+      {
+        "id": "card_cast_msu3lgh8ush3e",
+        "subjectKind": "npc",
+        "subjectId": "cast_msu3lgh8ush3e",
+        "rarity": "common"
+      },
+      {
+        "id": "card_cast_msu3m38dkik8j",
+        "subjectKind": "npc",
+        "subjectId": "cast_msu3m38dkik8j",
+        "rarity": "common"
+      },
+      {
+        "id": "card_cast_msu49mcvnv3fp",
+        "subjectKind": "npc",
+        "subjectId": "cast_msu49mcvnv3fp",
+        "rarity": "common"
+      },
+      {
+        "id": "card_cast_msu41a5e6pr1l",
+        "subjectKind": "npc",
+        "subjectId": "cast_msu41a5e6pr1l",
+        "rarity": "common"
+      },
+      {
+        "id": "card_cast_mt1ynps0c2hij",
+        "subjectKind": "npc",
+        "subjectId": "cast_mt1ynps0c2hij",
+        "rarity": "common"
+      },
+      {
+        "id": "card_cast_msu3n6a76jn95",
+        "subjectKind": "npc",
+        "subjectId": "cast_msu3n6a76jn95",
+        "rarity": "common"
+      },
+      {
+        "id": "card_cast_mt94tfiw9l9dd",
+        "subjectKind": "npc",
+        "subjectId": "cast_mt94tfiw9l9dd",
+        "rarity": "common"
+      },
+      {
+        "id": "card_cast_msu577owew623",
+        "subjectKind": "npc",
+        "subjectId": "cast_msu577owew623",
+        "rarity": "common"
+      },
+      {
+        "id": "card_cast_msydo5etxtzgy",
+        "subjectKind": "npc",
+        "subjectId": "cast_msydo5etxtzgy",
+        "rarity": "rare",
+        "title": "Lady of Lillies"
       }
     ],
     "banners": [
@@ -6617,7 +6877,34 @@
           "card_unit_msu41p5eli1ai",
           "card_unit_ms3oeprflm40x",
           "card_unit_msftrzee97kx3",
-          "card_unit_mshblux2thfxr"
+          "card_unit_mshblux2thfxr",
+          "card_cast_msetp6lndpw3d",
+          "card_cast_msetmnaxter8p",
+          "card_cast_msetp3tw9ohgz",
+          "card_cast_msetoyu3483vr",
+          "card_cast_msu3g6v7nvzvh",
+          "card_cast_msetp859txc1o",
+          "card_cast_msu3j0g5oyvkc",
+          "card_cast_msf8obk24tw3b",
+          "card_cast_mseto4xteu04v",
+          "card_cast_msf6d3kjkn3gs",
+          "card_cast_msf8ix5msm98z",
+          "card_cast_msu3kjg7so7hn",
+          "card_cast_msu4qvpg99aw7",
+          "card_cast_msu3kukss85rn",
+          "card_cast_mt4v43625na6d",
+          "card_cast_msu3met13cv6z",
+          "card_cast_msu3mmxprxizg",
+          "card_cast_msu3l7zix7uae",
+          "card_cast_msu3lgh8ush3e",
+          "card_cast_msu3m38dkik8j",
+          "card_cast_msu49mcvnv3fp",
+          "card_cast_msu41a5e6pr1l",
+          "card_cast_mt1ynps0c2hij",
+          "card_cast_msu3n6a76jn95",
+          "card_cast_mt94tfiw9l9dd",
+          "card_cast_msu577owew623",
+          "card_cast_msydo5etxtzgy"
         ],
         "rates": {
           "common": 50,

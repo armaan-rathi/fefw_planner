@@ -54,9 +54,11 @@ export function CastEditor({ kind, label, subtitleLabel }: { kind: CastKind; lab
   function convertToUnit(m: CastMember) {
     if (!confirm(`Convert "${m.name || "this NPC"}" into a playable unit?\n\nThe NPC entry will be deleted and re-created as a unit.`)) return;
     update((d) => {
+      const newId = uid("unit_");
+      const fromKind = kind === "gods" ? "god" : "npc";
       d[kind] = (d[kind] ?? []).filter((x) => x.id !== m.id);
       d.units.push({
-        id: uid("unit_"),
+        id: newId,
         name: m.name,
         portrait: m.portrait,
         isLord: false,
@@ -69,6 +71,10 @@ export function CastEditor({ kind, label, subtitleLabel }: { kind: CastKind; lab
         personalSkill: { name: "", description: "" },
         fields: {},
       });
+      // Keep any gacha cards of this character pointing at the new unit entry.
+      for (const c of d.gacha?.cards ?? []) {
+        if (c.subjectKind === fromKind && c.subjectId === m.id) { c.subjectKind = "unit"; c.subjectId = newId; }
+      }
     });
   }
   function setBlessing(id: string, idx: number, val: string) {

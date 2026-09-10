@@ -64,16 +64,21 @@ export function UnitsEditor() {
   function convertToNpc(u: Unit) {
     if (!confirm(`Convert "${u.name || "this unit"}" into an Important NPC?\n\nThe unit will be deleted and re-created as an NPC.`)) return;
     update((d) => {
+      const newId = uid("cast_");
       d.units = d.units.filter((x) => x.id !== u.id);
       const arr = d.npcs ?? [];
       arr.push({
-        id: uid("cast_"),
+        id: newId,
         name: u.name,
         portrait: u.portrait,
         subtitle: unitFaction(u),
         description: u.personalSkill.description || "",
       });
       d.npcs = arr;
+      // Keep any gacha cards of this character pointing at the new NPC entry.
+      for (const c of d.gacha?.cards ?? []) {
+        if (c.subjectKind === "unit" && c.subjectId === u.id) { c.subjectKind = "npc"; c.subjectId = newId; }
+      }
     });
   }
 

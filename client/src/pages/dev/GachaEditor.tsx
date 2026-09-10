@@ -16,6 +16,22 @@ function ensureGacha(d: DB) {
 
 const KIND_LABEL: Record<CardSubjectKind, string> = { unit: "Units", god: "Gods", npc: "NPCs" };
 
+// A little row of per-rarity counts (plus a total).
+function RarityTally({ cards }: { cards: GachaCard[] }) {
+  const counts: Record<Rarity, number> = { common: 0, uncommon: 0, rare: 0, epic: 0, legendary: 0 };
+  for (const c of cards) counts[c.rarity] = (counts[c.rarity] ?? 0) + 1;
+  return (
+    <div className="rarity-tally">
+      {RARITIES.map((r) => (
+        <span key={r.id} className="rarity-chip" style={{ color: r.color, borderColor: r.color }}>
+          {r.label} <b>{counts[r.id]}</b>
+        </span>
+      ))}
+      <span className="rarity-chip total">Total <b>{cards.length}</b></span>
+    </div>
+  );
+}
+
 export function GachaEditor() {
   const { db, update } = useDB();
   const [tab, setTab] = useState<"cards" | "banners">("cards");
@@ -79,9 +95,10 @@ function CardsEditor() {
           <input type="text" placeholder="Search cards…" value={query} onChange={(e) => setQuery(e.target.value)} style={{ maxWidth: 260 }} />
           <button className="btn primary" onClick={addCard}>+ New Card</button>
         </div>
-        <p className="muted" style={{ fontSize: 12, marginTop: 10, marginBottom: 0 }}>
+        <p className="muted" style={{ fontSize: 12, marginTop: 10, marginBottom: 10 }}>
           Card art follows the unit/god/npc portrait automatically — upload override art only if you want something unique.
         </p>
+        <RarityTally cards={cards} />
       </div>
 
       {filtered.length === 0 ? (
@@ -228,6 +245,8 @@ function BannerCard({ banner, db, onName, onImage, onRate, onCards, onRemove }: 
               <button className="btn tiny ghost" onClick={clear}>Clear</button>
             </div>
           </div>
+          <RarityTally cards={cards.filter((c) => selected.has(c.id))} />
+          <div style={{ height: 8 }} />
           <div className="row" style={{ gap: 10, marginBottom: 8, flexWrap: "wrap" }}>
             <label className="dev-toggle"><input type="checkbox" checked={incGods} onChange={(e) => setIncGods(e.target.checked)} /><span>Include Gods</span></label>
             <label className="dev-toggle"><input type="checkbox" checked={incNpcs} onChange={(e) => setIncNpcs(e.target.checked)} /><span>Include NPCs</span></label>

@@ -1,7 +1,7 @@
 // ---- Shared data model (mirrors server/data/db.json) -----------------------
 
-export type Grade = "S+" | "S" | "A" | "B" | "C" | "D" | "E";
-export const GRADES: Grade[] = ["S+", "S", "A", "B", "C", "D", "E"];
+export type Grade = "S+" | "S" | "A+" | "A" | "B+" | "B" | "C+" | "C" | "D+" | "D" | "E+" | "E";
+export const GRADES: Grade[] = ["S+", "S", "A+", "A", "B+", "B", "C+", "C", "D+", "D", "E+", "E"];
 
 export interface SkillType {
   id: string;
