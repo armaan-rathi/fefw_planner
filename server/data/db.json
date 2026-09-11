@@ -2029,7 +2029,7 @@
     {
       "id": "unit_ms4aycsktz7vo",
       "name": "Seteth",
-      "portrait": "/images/mtv8lijgbmicx6.png",
+      "portrait": "/images/mtwvwj9kigendl.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -2057,22 +2057,31 @@
       }
     },
     {
-      "id": "unit_msu425y5cxugz",
-      "name": "Halvin",
-      "portrait": "/images/msu42jj8q0ckd2.png",
+      "id": "unit_msu4iccnmpc6w",
+      "name": "Dadao",
+      "portrait": "/images/mtwvxbnfsnyvpo.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": "class_archer",
+      "classId": null,
       "boons": [],
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "One Chance",
+        "description": "Increases Attack when both unit and foe cannot make follow-up attacks"
       },
       "fields": {
-        "faction": "Brides of the Pale Raven"
+        "faction": "Brides of the Pale Raven",
+        "backstory": "A young man who accompanies Anatolia, the \"Mysterious Bride.\"\nHe is rowdy and was something of a troublemaker back in his home village.\nHe loves women and indiscriminately hits on them, but meets with rejection every time.\n\nLikes: Women (especially Anatolia), machines, good food, fighting"
+      },
+      "possiblyEnemyOnly": false,
+      "recruitment": {
+        "leda": {
+          "support": 2,
+          "renown": 5,
+          "negotiation": "Moderate"
+        }
       }
     },
     {
@@ -2130,7 +2139,7 @@
     {
       "id": "unit_msu4rfw7l4959",
       "name": "Loretta",
-      "portrait": "/images/mtvih8tb0nej5i.png",
+      "portrait": "/images/mtwvwp9t21b6yf.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -2155,13 +2164,13 @@
       }
     },
     {
-      "id": "unit_msu4iccnmpc6w",
-      "name": "Dadao",
-      "portrait": "/images/mt4v9cy7zjl3v0.jpg",
+      "id": "unit_msu425y5cxugz",
+      "name": "Halvin",
+      "portrait": "/images/msu42jj8q0ckd2.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": null,
+      "classId": "class_archer",
       "boons": [],
       "banes": [],
       "skillLevels": {},
@@ -2171,14 +2180,6 @@
       },
       "fields": {
         "faction": "Brides of the Pale Raven"
-      },
-      "possiblyEnemyOnly": false,
-      "recruitment": {
-        "leda": {
-          "support": 2,
-          "renown": 5,
-          "negotiation": "Moderate"
-        }
       }
     },
     {
