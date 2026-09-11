@@ -2,10 +2,10 @@ import { useMemo, useState } from "react";
 import { useDB } from "../../data/DataContext";
 import { uid } from "../../api";
 import { ImageDrop } from "../../components/ImageDrop";
-import { Stars } from "../../components/GachaCardView";
-import { cardArt, cardName } from "../../data/gacha";
+import { Stars, CardView } from "../../components/GachaCardView";
+import { activeRarities, cardArt, cardClass, cardDisplay, cardName } from "../../data/gacha";
 import { RARITIES, DEFAULT_RATES } from "../../types";
-import type { Banner, CardSubjectKind, DB, GachaCard, Rarity } from "../../types";
+import type { Banner, CardDisplay, CardSubjectKind, DB, GachaCard, Rarity } from "../../types";
 
 function ensureGacha(d: DB) {
   d.gacha ??= { enabled: false, cards: [], banners: [] };
@@ -38,6 +38,22 @@ export function GachaEditor() {
   const gacha = db.gacha;
 
   function setEnabled(v: boolean) { update((d) => { ensureGacha(d).enabled = v; }); }
+  function setFehMode(v: boolean) { update((d) => { ensureGacha(d).fehMode = v; }); }
+  function setDisplay(key: keyof CardDisplay, v: boolean) {
+    update((d) => { const g = ensureGacha(d); g.cardDisplay = { ...(g.cardDisplay ?? {}), [key]: v }; });
+  }
+
+  const disp = cardDisplay(db);
+  // A representative card for the preview — real art/name from the first card if
+  // there is one, but always with a sample title & class so those toggles show.
+  const sample = (gacha?.cards ?? [])[0];
+  const previewCard = {
+    art: sample ? cardArt(db, sample) : null,
+    name: sample ? cardName(db, sample) : "Sample Unit",
+    title: sample?.title || "Sample Title",
+    rarity: sample?.rarity ?? ("epic" as Rarity),
+    cls: (sample && cardClass(db, sample)) || "Sample Class",
+  };
 
   return (
     <div className="stack">
@@ -46,6 +62,28 @@ export function GachaEditor() {
           <input type="checkbox" checked={!!gacha?.enabled} onChange={(e) => setEnabled(e.target.checked)} />
           <span>Show the <b>Gacha</b> tab to everyone (off = only visible while Editor is on)</span>
         </label>
+        <label className="dev-toggle" style={{ marginTop: 8 }}>
+          <input type="checkbox" checked={!!gacha?.fehMode} onChange={(e) => setFehMode(e.target.checked)} />
+          <span><b>Heroes-style rarities</b> — only 3–5★ show in rates &amp; can be pulled (1–2★ cards stay but are never summoned)</span>
+        </label>
+      </div>
+
+      <div className="ornate card">
+        <h3 className="section-title" style={{ marginTop: 0 }}>Card display</h3>
+        <div className="two-col" style={{ alignItems: "center" }}>
+          <div>
+            <p className="muted" style={{ marginTop: 0, fontSize: 12.5 }}>Choose what shows on every gacha card (the art always shows).</p>
+            <div className="row" style={{ gap: 16, flexWrap: "wrap" }}>
+              <label className="dev-toggle"><input type="checkbox" checked={disp.stars} onChange={(e) => setDisplay("stars", e.target.checked)} /><span>Rarity stars</span></label>
+              <label className="dev-toggle"><input type="checkbox" checked={disp.name} onChange={(e) => setDisplay("name", e.target.checked)} /><span>Name</span></label>
+              <label className="dev-toggle"><input type="checkbox" checked={disp.title} onChange={(e) => setDisplay("title", e.target.checked)} /><span>Title</span></label>
+              <label className="dev-toggle"><input type="checkbox" checked={disp.class} onChange={(e) => setDisplay("class", e.target.checked)} /><span>Class</span></label>
+            </div>
+          </div>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <CardView art={previewCard.art} name={previewCard.name} title={previewCard.title} rarity={previewCard.rarity} cls={previewCard.cls} size="md" show={disp} />
+          </div>
+        </div>
       </div>
 
       <div className="dev-subnav" style={{ marginBottom: 0 }}>
@@ -203,7 +241,9 @@ function BannerCard({ banner, db, onName, onImage, onRate, onCards, onRemove }: 
   const cards = db.gacha?.cards ?? [];
   const selectable = cards.filter((c) => c.subjectKind === "unit" || (incGods && c.subjectKind === "god") || (incNpcs && c.subjectKind === "npc"));
   const selected = new Set(banner.cardIds);
-  const rateTotal = RARITIES.reduce((s, r) => s + (banner.rates[r.id] ?? 0), 0);
+  const ars = activeRarities(db);
+  const feh = !!db.gacha?.fehMode;
+  const rateTotal = ars.reduce((s, r) => s + (banner.rates[r.id] ?? 0), 0);
 
   const toggle = (id: string) => onCards(selected.has(id) ? banner.cardIds.filter((x) => x !== id) : [...banner.cardIds, id]);
   const addAll = () => onCards(Array.from(new Set([...banner.cardIds, ...selectable.map((c) => c.id)])));
@@ -226,9 +266,13 @@ function BannerCard({ banner, db, onName, onImage, onRate, onCards, onRemove }: 
           <h4 className="section-title" style={{ marginTop: 0 }}>Rates {rateTotal !== 100 && <span className="muted" style={{ fontSize: 11 }}>(sum {rateTotal}% — normalized when rolling)</span>}</h4>
           <table className="rate-table">
             <tbody>
-              {RARITIES.map((r) => (
+              {ars.map((r) => (
                 <tr key={r.id}>
-                  <td><span style={{ color: r.color, fontWeight: 600 }}>{r.label}</span> <span className="muted">{"★".repeat(r.stars)}</span></td>
+                  <td>
+                    {feh
+                      ? <span style={{ color: r.color, fontWeight: 600 }}>{"★".repeat(r.stars)}</span>
+                      : <><span style={{ color: r.color, fontWeight: 600 }}>{r.label}</span> <span className="muted">{"★".repeat(r.stars)}</span></>}
+                  </td>
                   <td style={{ width: 110 }}>
                     <input type="number" min={0} step={0.1} value={banner.rates[r.id] ?? 0} onChange={(e) => onRate(r.id, Math.max(0, Number(e.target.value) || 0))} /> %
                   </td>

@@ -271,10 +271,20 @@ export interface Banner {
   rates: Record<Rarity, number>; // percentages per rarity
 }
 
+// Which elements a gacha card shows (art is always shown).
+export interface CardDisplay {
+  stars?: boolean;
+  name?: boolean;
+  title?: boolean;
+  class?: boolean;
+}
+
 export interface GachaConfig {
   enabled?: boolean; // whether the public Gacha tab is shown
   cards: GachaCard[];
   banners: Banner[];
+  cardDisplay?: CardDisplay;
+  fehMode?: boolean; // FEH-style: only 3–5★ rarities are shown in rates & pullable
 }
 
 export interface DB {

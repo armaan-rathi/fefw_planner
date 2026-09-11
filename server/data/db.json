@@ -2059,12 +2059,14 @@
     {
       "id": "unit_msu4iccnmpc6w",
       "name": "Dadao",
-      "portrait": "/images/mtwvxbnfsnyvpo.png",
+      "portrait": "/images/mtx31iadd2ejeo.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
       "classId": null,
-      "boons": [],
+      "boons": [
+        "axe"
+      ],
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
@@ -2166,7 +2168,7 @@
     {
       "id": "unit_msu425y5cxugz",
       "name": "Halvin",
-      "portrait": "/images/msu42jj8q0ckd2.png",
+      "portrait": "/images/mtx31p4kqwgso0.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -2179,7 +2181,8 @@
         "description": ""
       },
       "fields": {
-        "faction": "Brides of the Pale Raven"
+        "faction": "Brides of the Pale Raven",
+        "backstory": "An archer girl who has come to travel alongside Anatolia and the others.\nBefore arriving in Dagsion, she was a traveling performer in a circus troupe.\nHaving grown up in an ordinary farming family, she dislikes conflict.\n\nLikes: Growing vegetables, shopping, street performing, cheering crowds"
       }
     },
     {
@@ -2251,7 +2254,7 @@
     {
       "id": "unit_ms4b8a7pr2e4u",
       "name": "Zarcone",
-      "portrait": "/images/mtrdwewv0uokh6.png",
+      "portrait": "/images/mtx342qn922qzk.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -2561,11 +2564,11 @@
     {
       "id": "unit_mt4v2r1q22a0b",
       "name": "Majide",
-      "portrait": "/images/mtrduxixuuevaa.png",
+      "portrait": "/images/mtx33jgi8i9o21.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": null,
+      "classId": "class_brigand",
       "boons": [
         "axe"
       ],
@@ -6235,392 +6238,420 @@
         "id": "card_unit_cai",
         "subjectKind": "unit",
         "subjectId": "unit_cai",
-        "rarity": "epic",
+        "rarity": "legendary",
         "title": "Hell's-Eye"
       },
       {
         "id": "card_unit_dietrich",
         "subjectKind": "unit",
         "subjectId": "unit_dietrich",
-        "rarity": "epic",
+        "rarity": "legendary",
         "title": "Ravishing Shadow"
       },
       {
         "id": "card_unit_theodora",
         "subjectKind": "unit",
         "subjectId": "unit_theodora",
-        "rarity": "epic",
+        "rarity": "legendary",
         "title": "Breaker of Armies"
       },
       {
         "id": "card_unit_leda",
         "subjectKind": "unit",
         "subjectId": "unit_leda",
-        "rarity": "epic",
+        "rarity": "legendary",
         "title": "Siren of the Six String"
       },
       {
         "id": "card_unit_pieter",
         "subjectKind": "unit",
         "subjectId": "unit_pieter",
-        "rarity": "uncommon",
+        "rarity": "epic",
         "title": "Glasses Girl"
       },
       {
         "id": "card_unit_tobias",
         "subjectKind": "unit",
         "subjectId": "unit_tobias",
-        "rarity": "uncommon",
+        "rarity": "epic",
         "title": "Definitely Not Agarthan"
       },
       {
         "id": "card_unit_bonaparte",
         "subjectKind": "unit",
         "subjectId": "unit_bonaparte",
-        "rarity": "uncommon",
+        "rarity": "epic",
         "title": "Pirate Waluigi"
       },
       {
         "id": "card_unit_buccar",
         "subjectKind": "unit",
         "subjectId": "unit_buccar",
-        "rarity": "uncommon",
+        "rarity": "epic",
         "title": "Demon Bear"
       },
       {
         "id": "card_unit_esmeralda",
         "subjectKind": "unit",
         "subjectId": "unit_esmeralda",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "Gentle Archer"
       },
       {
         "id": "card_unit_mikaela",
         "subjectKind": "unit",
         "subjectId": "unit_mikaela",
-        "rarity": "uncommon",
+        "rarity": "epic",
         "title": "Brazilian Miku"
       },
       {
         "id": "card_unit_ms3o1lfxavq3i",
         "subjectKind": "unit",
         "subjectId": "unit_ms3o1lfxavq3i",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "Cheerful Drunkard"
       },
       {
         "id": "card_unit_ms3o1yebdwa31",
         "subjectKind": "unit",
         "subjectId": "unit_ms3o1yebdwa31",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "Scorching Wind"
       },
       {
         "id": "card_unit_ms3o2dq8x88ne",
         "subjectKind": "unit",
         "subjectId": "unit_ms3o2dq8x88ne",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "Priestess of Aurora"
       },
       {
         "id": "card_unit_ms3o2srrysuum",
         "subjectKind": "unit",
         "subjectId": "unit_ms3o2srrysuum",
-        "rarity": "uncommon",
+        "rarity": "epic",
         "title": "Redblade"
       },
       {
         "id": "card_unit_ms3o3ayav4czo",
         "subjectKind": "unit",
         "subjectId": "unit_ms3o3ayav4czo",
-        "rarity": "uncommon",
+        "rarity": "epic",
         "title": "Son of Klytos"
       },
       {
         "id": "card_unit_ms3o3pm7kkagj",
         "subjectKind": "unit",
         "subjectId": "unit_ms3o3pm7kkagj",
-        "rarity": "uncommon",
+        "rarity": "epic",
         "title": "Blue Rose of Caelus"
       },
       {
         "id": "card_unit_ms3of3twtvl0z",
         "subjectKind": "unit",
         "subjectId": "unit_ms3of3twtvl0z",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "In for a Penny"
       },
       {
         "id": "card_unit_ms3ofr4f95yg3",
         "subjectKind": "unit",
         "subjectId": "unit_ms3ofr4f95yg3",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "Warrior in Training"
       },
       {
         "id": "card_unit_ms7k4uf6l9u72",
         "subjectKind": "unit",
         "subjectId": "unit_ms7k4uf6l9u72",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "Ruby of Arago"
       },
       {
         "id": "card_unit_ms7k892bd498m",
         "subjectKind": "unit",
         "subjectId": "unit_ms7k892bd498m",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "Emerald of Arago"
       },
       {
         "id": "card_unit_mt4vbrsx1692p",
         "subjectKind": "unit",
         "subjectId": "unit_mt4vbrsx1692p",
-        "rarity": "epic",
+        "rarity": "legendary",
         "title": "White-Maned Demon"
       },
       {
         "id": "card_unit_ms4ax1urookeq",
         "subjectKind": "unit",
         "subjectId": "unit_ms4ax1urookeq",
-        "rarity": "epic",
+        "rarity": "legendary",
         "title": "Toothpick-kun"
       },
       {
         "id": "card_unit_ms4b1m5a0pltt",
         "subjectKind": "unit",
         "subjectId": "unit_ms4b1m5a0pltt",
-        "rarity": "epic",
+        "rarity": "legendary",
         "title": "Cat Mask"
       },
       {
         "id": "card_unit_ms4azwjmprdkp",
         "subjectKind": "unit",
         "subjectId": "unit_ms4azwjmprdkp",
-        "rarity": "epic",
+        "rarity": "legendary",
         "title": "Nun with a Gun"
       },
       {
         "id": "card_unit_mt4v8155tinj7",
         "subjectKind": "unit",
         "subjectId": "unit_mt4v8155tinj7",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "Bertrand's Right Hand"
       },
       {
         "id": "card_unit_ms4awma1bic3w",
         "subjectKind": "unit",
         "subjectId": "unit_ms4awma1bic3w",
-        "rarity": "uncommon",
+        "rarity": "epic",
         "title": "Marianne on Prozac"
       },
       {
         "id": "card_unit_ms4b7sewbatfh",
         "subjectKind": "unit",
         "subjectId": "unit_ms4b7sewbatfh",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "Faithful Bodyguard"
       },
       {
         "id": "card_unit_ms4b0fg9gc03t",
         "subjectKind": "unit",
         "subjectId": "unit_ms4b0fg9gc03t",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "Medical Gunslinger"
       },
       {
         "id": "card_unit_msesm42zaq9do",
         "subjectKind": "unit",
         "subjectId": "unit_msesm42zaq9do",
-        "rarity": "uncommon",
+        "rarity": "epic",
         "title": "Infernal Playwright"
       },
       {
         "id": "card_unit_mt4v6olgdd4up",
         "subjectKind": "unit",
         "subjectId": "unit_mt4v6olgdd4up",
-        "rarity": "uncommon",
+        "rarity": "epic",
         "title": "Sky-Drum"
       },
       {
         "id": "card_unit_ms4b1qq82fg7g",
         "subjectKind": "unit",
         "subjectId": "unit_ms4b1qq82fg7g",
-        "rarity": "uncommon",
+        "rarity": "epic",
         "title": "Black-Lace"
       },
       {
         "id": "card_unit_mseslad7245am",
         "subjectKind": "unit",
         "subjectId": "unit_mseslad7245am",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "Starving for Battle"
       },
       {
         "id": "card_unit_msesn64bv1fun",
         "subjectKind": "unit",
         "subjectId": "unit_msesn64bv1fun",
-        "rarity": "uncommon",
+        "rarity": "epic",
         "title": "The Butcher"
       },
       {
         "id": "card_unit_ms4b5mqtae605",
         "subjectKind": "unit",
         "subjectId": "unit_ms4b5mqtae605",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "Eyebrows are Overrated"
       },
       {
         "id": "card_unit_msu4rfw7l4959",
         "subjectKind": "unit",
         "subjectId": "unit_msu4rfw7l4959",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "Alear Cosplayer"
       },
       {
         "id": "card_unit_msu425y5cxugz",
         "subjectKind": "unit",
         "subjectId": "unit_msu425y5cxugz",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "Traveling Entertainer"
       },
       {
         "id": "card_unit_msu42ne4imvnh",
         "subjectKind": "unit",
         "subjectId": "unit_msu42ne4imvnh",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "Jester from Hell"
       },
       {
         "id": "card_unit_ms4b4zib7ibpz",
         "subjectKind": "unit",
         "subjectId": "unit_ms4b4zib7ibpz",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "Pink-haired Leia"
       },
       {
         "id": "card_unit_ms4aycsktz7vo",
         "subjectKind": "unit",
         "subjectId": "unit_ms4aycsktz7vo",
-        "rarity": "rare",
+        "rarity": "epic",
         "title": "Hammer of Justice"
       },
       {
         "id": "card_unit_msu4iccnmpc6w",
         "subjectKind": "unit",
         "subjectId": "unit_msu4iccnmpc6w",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "Mohawks are the New Neckbeards"
       },
       {
         "id": "card_unit_msu45xa66phts",
         "subjectKind": "unit",
         "subjectId": "unit_msu45xa66phts",
-        "rarity": "common"
+        "rarity": "rare"
       },
       {
         "id": "card_unit_msesdf1q9njym",
         "subjectKind": "unit",
         "subjectId": "unit_msesdf1q9njym",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "General in the Making"
       },
       {
         "id": "card_unit_ms4axuyt3lodb",
         "subjectKind": "unit",
         "subjectId": "unit_ms4axuyt3lodb",
-        "rarity": "uncommon",
+        "rarity": "epic",
         "title": "Silver Maiden"
       },
       {
         "id": "card_unit_ms4b8a7pr2e4u",
         "subjectKind": "unit",
         "subjectId": "unit_ms4b8a7pr2e4u",
-        "rarity": "common"
+        "rarity": "rare"
       },
       {
         "id": "card_unit_msu4dr4u0h6sh",
         "subjectKind": "unit",
         "subjectId": "unit_msu4dr4u0h6sh",
-        "rarity": "common"
+        "rarity": "rare"
       },
       {
         "id": "card_unit_msesemmywrm9d",
         "subjectKind": "unit",
         "subjectId": "unit_msesemmywrm9d",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "Prince of Brigid"
       },
       {
         "id": "card_unit_msestcd1erzsr",
         "subjectKind": "unit",
         "subjectId": "unit_msestcd1erzsr",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "Ever-Present Merchant"
       },
       {
         "id": "card_unit_msu448hnym292",
         "subjectKind": "unit",
         "subjectId": "unit_msu448hnym292",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "Temple Vulcan"
       },
       {
         "id": "card_unit_ms4b759ma7nnn",
         "subjectKind": "unit",
         "subjectId": "unit_ms4b759ma7nnn",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "Hungry for Prayer"
       },
       {
         "id": "card_unit_ms4b44v3k39y1",
         "subjectKind": "unit",
         "subjectId": "unit_ms4b44v3k39y1",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "Demon Worshipper"
       },
       {
         "id": "card_unit_ms4b0v3updg6t",
         "subjectKind": "unit",
         "subjectId": "unit_ms4b0v3updg6t",
-        "rarity": "uncommon",
+        "rarity": "epic",
         "title": "Unkillable"
       },
       {
         "id": "card_unit_ms4b9764g1dhr",
         "subjectKind": "unit",
         "subjectId": "unit_ms4b9764g1dhr",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "Swift Rider"
       },
       {
         "id": "card_unit_msesipji4v2wt",
         "subjectKind": "unit",
         "subjectId": "unit_msesipji4v2wt",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "Shamir's Twin Brother"
       },
       {
         "id": "card_unit_ms4b3v4raamqa",
         "subjectKind": "unit",
         "subjectId": "unit_ms4b3v4raamqa",
-        "rarity": "uncommon",
+        "rarity": "epic",
         "title": "Sterling Knight"
       },
       {
         "id": "card_unit_ms3o4850pz0sq",
         "subjectKind": "unit",
         "subjectId": "unit_ms3o4850pz0sq",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "Caspartan"
       },
       {
         "id": "card_unit_ms4b14v2stjjh",
         "subjectKind": "unit",
         "subjectId": "unit_ms4b14v2stjjh",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "Drunken Fist"
       },
       {
         "id": "card_unit_mt4v2r1q22a0b",
         "subjectKind": "unit",
         "subjectId": "unit_mt4v2r1q22a0b",
-        "rarity": "common"
+        "rarity": "rare"
       },
       {
         "id": "card_unit_ms4b6sy674873",
         "subjectKind": "unit",
         "subjectId": "unit_ms4b6sy674873",
-        "rarity": "common"
+        "rarity": "rare"
       },
       {
         "id": "card_unit_ms4b9qphimjk7",
         "subjectKind": "unit",
         "subjectId": "unit_ms4b9qphimjk7",
-        "rarity": "common"
+        "rarity": "rare"
       },
       {
         "id": "card_unit_msu434ibp8q8s",
         "subjectKind": "unit",
         "subjectId": "unit_msu434ibp8q8s",
-        "rarity": "common"
+        "rarity": "rare"
       },
       {
         "id": "card_unit_msu41p5eli1ai",
         "subjectKind": "unit",
         "subjectId": "unit_msu41p5eli1ai",
-        "rarity": "common"
+        "rarity": "rare"
       },
       {
         "id": "card_unit_ms3oeprflm40x",
@@ -6633,58 +6664,64 @@
         "id": "card_unit_msftrzee97kx3",
         "subjectKind": "unit",
         "subjectId": "unit_msftrzee97kx3",
-        "rarity": "uncommon",
+        "rarity": "epic",
         "title": "Crimson Flower"
       },
       {
         "id": "card_unit_mshblux2thfxr",
         "subjectKind": "unit",
         "subjectId": "unit_mshblux2thfxr",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "Ageless Granny"
       },
       {
         "id": "card_cast_msetp6lndpw3d",
         "subjectKind": "god",
         "subjectId": "cast_msetp6lndpw3d",
-        "rarity": "rare",
+        "rarity": "epic",
         "title": "Goddess of Fate"
       },
       {
         "id": "card_cast_msetmnaxter8p",
         "subjectKind": "god",
         "subjectId": "cast_msetmnaxter8p",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "Navigator’s Clarion"
       },
       {
         "id": "card_cast_msetp3tw9ohgz",
         "subjectKind": "god",
         "subjectId": "cast_msetp3tw9ohgz",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "God of War?"
       },
       {
         "id": "card_cast_msetoyu3483vr",
         "subjectKind": "god",
         "subjectId": "cast_msetoyu3483vr",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "God of Magic?"
       },
       {
         "id": "card_cast_msu3g6v7nvzvh",
         "subjectKind": "god",
         "subjectId": "cast_msu3g6v7nvzvh",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "Goddess of Wisdom?"
       },
       {
         "id": "card_cast_msetp859txc1o",
         "subjectKind": "god",
         "subjectId": "cast_msetp859txc1o",
-        "rarity": "rare",
+        "rarity": "epic",
         "title": "Goddess of Hunting and Art"
       },
       {
         "id": "card_cast_msu3j0g5oyvkc",
         "subjectKind": "god",
         "subjectId": "cast_msu3j0g5oyvkc",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "God of Automata?"
       },
       {
         "id": "card_cast_msf8obk24tw3b",
@@ -6697,14 +6734,14 @@
         "id": "card_cast_mseto4xteu04v",
         "subjectKind": "npc",
         "subjectId": "cast_mseto4xteu04v",
-        "rarity": "rare",
+        "rarity": "epic",
         "title": "Divine Sovereign"
       },
       {
         "id": "card_cast_msf6d3kjkn3gs",
         "subjectKind": "npc",
         "subjectId": "cast_msf6d3kjkn3gs",
-        "rarity": "common"
+        "rarity": "rare"
       },
       {
         "id": "card_cast_msf8ix5msm98z",
@@ -6716,97 +6753,99 @@
         "id": "card_cast_msu3kjg7so7hn",
         "subjectKind": "npc",
         "subjectId": "cast_msu3kjg7so7hn",
-        "rarity": "common"
+        "rarity": "rare"
       },
       {
         "id": "card_cast_msu4qvpg99aw7",
         "subjectKind": "npc",
         "subjectId": "cast_msu4qvpg99aw7",
-        "rarity": "common"
+        "rarity": "rare"
       },
       {
         "id": "card_cast_msu3kukss85rn",
         "subjectKind": "npc",
         "subjectId": "cast_msu3kukss85rn",
-        "rarity": "common"
+        "rarity": "rare"
       },
       {
         "id": "card_cast_mt4v43625na6d",
         "subjectKind": "npc",
         "subjectId": "cast_mt4v43625na6d",
-        "rarity": "common"
+        "rarity": "rare"
       },
       {
         "id": "card_cast_msu3met13cv6z",
         "subjectKind": "npc",
         "subjectId": "cast_msu3met13cv6z",
-        "rarity": "common"
+        "rarity": "rare"
       },
       {
         "id": "card_cast_msu3mmxprxizg",
         "subjectKind": "npc",
         "subjectId": "cast_msu3mmxprxizg",
-        "rarity": "common"
+        "rarity": "rare"
       },
       {
         "id": "card_cast_msu3l7zix7uae",
         "subjectKind": "npc",
         "subjectId": "cast_msu3l7zix7uae",
-        "rarity": "common"
+        "rarity": "rare"
       },
       {
         "id": "card_cast_msu3lgh8ush3e",
         "subjectKind": "npc",
         "subjectId": "cast_msu3lgh8ush3e",
-        "rarity": "common"
+        "rarity": "rare"
       },
       {
         "id": "card_cast_msu3m38dkik8j",
         "subjectKind": "npc",
         "subjectId": "cast_msu3m38dkik8j",
-        "rarity": "common"
+        "rarity": "rare"
       },
       {
         "id": "card_cast_msu49mcvnv3fp",
         "subjectKind": "npc",
         "subjectId": "cast_msu49mcvnv3fp",
-        "rarity": "common"
+        "rarity": "rare"
       },
       {
         "id": "card_cast_msu41a5e6pr1l",
         "subjectKind": "npc",
         "subjectId": "cast_msu41a5e6pr1l",
-        "rarity": "common"
+        "rarity": "rare"
       },
       {
         "id": "card_cast_mt1ynps0c2hij",
         "subjectKind": "npc",
         "subjectId": "cast_mt1ynps0c2hij",
-        "rarity": "common"
+        "rarity": "rare"
       },
       {
         "id": "card_cast_msu3n6a76jn95",
         "subjectKind": "npc",
         "subjectId": "cast_msu3n6a76jn95",
-        "rarity": "common"
+        "rarity": "rare"
       },
       {
         "id": "card_cast_mt94tfiw9l9dd",
         "subjectKind": "npc",
         "subjectId": "cast_mt94tfiw9l9dd",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "Goddess of the Night"
       },
       {
         "id": "card_cast_msu577owew623",
         "subjectKind": "npc",
         "subjectId": "cast_msu577owew623",
-        "rarity": "common"
+        "rarity": "epic",
+        "title": "God Emperor"
       },
       {
         "id": "card_cast_msydo5etxtzgy",
         "subjectKind": "npc",
         "subjectId": "cast_msydo5etxtzgy",
-        "rarity": "rare",
+        "rarity": "epic",
         "title": "Lady of Lillies"
       }
     ],
@@ -6908,14 +6947,19 @@
           "card_cast_msydo5etxtzgy"
         ],
         "rates": {
-          "common": 50,
+          "common": 45,
           "uncommon": 30,
-          "rare": 15,
-          "epic": 4,
-          "legendary": 1
+          "rare": 35,
+          "epic": 60,
+          "legendary": 5
         },
         "image": "/images/mtrga25tpwv1bb.png"
       }
-    ]
+    ],
+    "cardDisplay": {
+      "stars": true,
+      "class": false
+    },
+    "fehMode": true
   }
 }

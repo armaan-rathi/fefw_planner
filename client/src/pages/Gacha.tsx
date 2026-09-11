@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useState, type CSSProperties } from "react";
 import { useDB } from "../data/DataContext";
 import { CardView } from "../components/GachaCardView";
-import { allBanners, bannerCards, cardArt, cardClass, cardName, rollPull } from "../data/gacha";
-import { RARITIES, rarityRank } from "../types";
-import type { GachaCard, Rarity } from "../types";
+import { activeRarities, allBanners, bannerCards, cardArt, cardClass, cardDisplay, cardName, rollPull } from "../data/gacha";
+import { rarityRank } from "../types";
+import type { CardDisplay, GachaCard, Rarity } from "../types";
 
 type Pulled = { name: string; title?: string; art: string | null; rarity: Rarity; cls?: string | null };
 type Phase = "idle" | "charging" | "reveal" | "summary";
@@ -61,6 +61,7 @@ export function Gacha() {
   const banners = allBanners(db);
   const [bannerId, setBannerId] = useState<string>("");
   const banner = banners.find((b) => b.id === bannerId) ?? banners[0] ?? null;
+  const disp = cardDisplay(db);
 
   const [pull, setPull] = useState<Pulled[] | null>(null);
   const [phase, setPhase] = useState<Phase>("idle");
@@ -120,7 +121,8 @@ export function Gacha() {
     if (idx < pull.length - 1) setIdx((i) => i + 1);
     else setPhase("summary");
   }
-  function close() { setPhase("idle"); setPull(null); setIdx(0); }
+  // Return to idle but keep the last pull so it stays shown below the banner.
+  function close() { setPhase("idle"); setIdx(0); }
 
   if (banners.length === 0) {
     return (
@@ -157,9 +159,9 @@ export function Gacha() {
         <div className="gacha-banner-name">{banner?.name || "Banner"}</div>
         {rates && (
           <div className="gacha-rates">
-            {RARITIES.map((rd) => (
+            {activeRarities(db).map((rd) => (
               <span key={rd.id} className="gacha-rate" style={{ color: rd.color }}>
-                {rd.label} {rates[rd.id] ?? 0}%
+                {db.gacha?.fehMode ? "★".repeat(rd.stars) : rd.label} {rates[rd.id] ?? 0}%
               </span>
             ))}
           </div>
@@ -169,6 +171,16 @@ export function Gacha() {
           <button className="btn primary gacha-btn big" onClick={() => summon(10)}>Summon ×10</button>
         </div>
       </div>
+
+      {/* Most recent pull, shown below the banner */}
+      {pull && phase === "idle" && (
+        <div className="gacha-last">
+          <div className="gacha-last-title">Most recent pull</div>
+          <div className="gacha-summary-grid" style={{ gridTemplateColumns: `repeat(${Math.min(5, pull.length)}, 1fr)` }}>
+            {pull.map((p, i) => <CardView key={i} art={p.art} name={p.name} title={p.title} rarity={p.rarity} cls={p.cls} size="sm" show={disp} />)}
+          </div>
+        </div>
+      )}
 
       {/* Charging overlay */}
       {phase === "charging" && (
@@ -188,7 +200,8 @@ export function Gacha() {
       {phase === "reveal" && pull && (
         <div className={"gacha-overlay reveal r-" + pull[idx].rarity}>
           <div className="gacha-reveal-burst" key={idx} />
-          <RevealCard key={"c" + idx} p={pull[idx]} />
+          {pull[idx].rarity === "legendary" && <RevealStars key={"s" + idx} />}
+          <RevealCard key={"c" + idx} p={pull[idx]} show={disp} />
           <div className="gacha-reveal-ctrls">
             <span className="gacha-progress">{idx + 1} / {pull.length}</span>
             {pull.length > 1 && idx < pull.length - 1 && (
@@ -203,8 +216,8 @@ export function Gacha() {
       {phase === "summary" && pull && (
         <div className="gacha-overlay summary">
           <h3 className="gacha-summary-title">Your {pull.length === 1 ? "pull" : "pulls"}</h3>
-          <div className="gacha-summary-grid" style={{ gridTemplateColumns: `repeat(${Math.min(5, pull.length)}, auto)` }}>
-            {pull.map((p, i) => <CardView key={i} art={p.art} name={p.name} title={p.title} rarity={p.rarity} cls={p.cls} size="sm" />)}
+          <div className="gacha-summary-grid" style={{ gridTemplateColumns: `repeat(${Math.min(5, pull.length)}, 1fr)` }}>
+            {pull.map((p, i) => <CardView key={i} art={p.art} name={p.name} title={p.title} rarity={p.rarity} cls={p.cls} size="sm" show={disp} />)}
           </div>
           <div className="row" style={{ gap: 12, marginTop: 6 }}>
             <button className="btn" onClick={close}>Close</button>
@@ -216,8 +229,33 @@ export function Gacha() {
   );
 }
 
+// A gold star burst behind a 5★ reveal — stars fly out from the card and fade.
+function RevealStars() {
+  const stars = useMemo(
+    () =>
+      Array.from({ length: 20 }, () => {
+        const ang = Math.random() * Math.PI * 2;
+        const dist = 200 + Math.random() * 260;
+        const size = 8 + Math.random() * 22;
+        return {
+          width: size + "px",
+          height: size + "px",
+          ["--bx" as any]: (Math.cos(ang) * dist).toFixed(0) + "px",
+          ["--by" as any]: (Math.sin(ang) * dist).toFixed(0) + "px",
+          animationDelay: (Math.random() * 0.12).toFixed(2) + "s",
+        } as CSSProperties;
+      }),
+    []
+  );
+  return (
+    <div className="gacha-reveal-stars">
+      {stars.map((st, i) => <span key={i} className="gsummon-burststar" style={st} />)}
+    </div>
+  );
+}
+
 // Reveal a single card: mounts face-down, then flips up (remounted per index).
-function RevealCard({ p }: { p: Pulled }) {
+function RevealCard({ p, show }: { p: Pulled; show?: CardDisplay }) {
   const [down, setDown] = useState(true);
   useEffect(() => {
     const t = setTimeout(() => setDown(false), 140);
@@ -225,7 +263,7 @@ function RevealCard({ p }: { p: Pulled }) {
   }, []);
   return (
     <div className="gacha-reveal-card">
-      <CardView art={p.art} name={p.name} title={p.title} rarity={p.rarity} cls={p.cls} size="lg" faceDown={down} />
+      <CardView art={p.art} name={p.name} title={p.title} rarity={p.rarity} cls={p.cls} size="lg" faceDown={down} show={show} />
     </div>
   );
 }

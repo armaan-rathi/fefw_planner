@@ -1,5 +1,16 @@
 import { RARITIES, DEFAULT_RATES } from "../types";
-import type { Banner, DB, GachaCard, Rarity } from "../types";
+import type { Banner, CardDisplay, DB, GachaCard, Rarity, RarityDef } from "../types";
+
+// The rarities in play — all five normally, or just 3–5★ in FEH mode.
+export function activeRarities(db: DB): RarityDef[] {
+  return db.gacha?.fehMode ? RARITIES.filter((r) => r.stars >= 3) : RARITIES;
+}
+
+// Which card elements to show — stars are off by default; the rest on.
+export function cardDisplay(db: DB): Required<CardDisplay> {
+  const d = db.gacha?.cardDisplay ?? {};
+  return { stars: d.stars ?? false, name: d.name ?? true, title: d.title ?? true, class: d.class ?? true };
+}
 
 type Subject = { name: string; portrait: string | null };
 
@@ -51,7 +62,9 @@ export function rollPull(db: DB, banner: Banner, count: number): GachaCard[] {
   const cards = bannerCards(db, banner);
   const byRarity: Partial<Record<Rarity, GachaCard[]>> = {};
   for (const c of cards) (byRarity[c.rarity] ??= []).push(c);
-  const available = RARITIES.map((r) => r.id).filter((r) => byRarity[r]?.length);
+  // Only rarities allowed by the mode (FEH mode blocks 1–2★) that have cards.
+  const allowed = new Set(activeRarities(db).map((r) => r.id));
+  const available = RARITIES.map((r) => r.id).filter((r) => allowed.has(r) && byRarity[r]?.length);
   const out: GachaCard[] = [];
   if (available.length === 0) return out;
   for (let i = 0; i < count; i++) {

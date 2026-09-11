@@ -2335,13 +2335,22 @@ input[type="range"]::-moz-range-thumb {
 .gcard-title { font-size: 10.5px; color: #d8c79a; font-style: italic; }
 /* Rarity shine on the higher tiers */
 .gcard.r-epic .gcard-front, .gcard.r-legendary .gcard-front { box-shadow: 0 0 0 2px var(--rc), 0 0 26px -2px var(--rc); }
-.gcard.r-legendary .gcard-glow, .gcard.r-epic .gcard-glow {
-  background: linear-gradient(115deg, transparent 38%, rgba(255, 255, 255, 0.32) 50%, transparent 62%);
-  background-size: 260% 260%;
-  animation: gShine 2.6s linear infinite;
+/* Shine sweeps a diagonal band fully across the card, then waits (band parked
+   off-screen) before the next pass — so it's less frequent and never resets
+   mid-slide. */
+.gcard.r-legendary .gcard-glow::after, .gcard.r-epic .gcard-glow::after {
+  content: ""; position: absolute; top: -20%; bottom: -20%; left: -60%; width: 45%;
+  background: linear-gradient(115deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transform: translateX(0) skewX(-14deg);
+  animation: gShine 5.5s ease-out infinite;
+  pointer-events: none;
 }
-.gcard.r-epic .gcard-glow { opacity: 0.7; }
-@keyframes gShine { from { background-position: 130% 0; } to { background-position: -130% 0; } }
+.gcard.r-epic .gcard-glow::after { opacity: 0.6; }
+@keyframes gShine {
+  0% { transform: translateX(0) skewX(-14deg); }        /* parked off the left */
+  20% { transform: translateX(420%) skewX(-14deg); }    /* swept fully off the right */
+  100% { transform: translateX(420%) skewX(-14deg); }   /* stays parked until the next pass */
+}
 
 /* ---- Idle stage ---- */
 .gacha-stage { position: relative; overflow: hidden; padding: 26px; text-align: center; }
@@ -2451,7 +2460,9 @@ input[type="range"]::-moz-range-thumb {
 @keyframes gPulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
 
 /* ---- Reveal ---- */
-.gacha-reveal-card { animation: gRise 0.4s ease; }
+.gacha-reveal-card { position: relative; z-index: 1; animation: gRise 0.4s ease; }
+/* 5★ fanfare: gold stars burst from behind the card and fade */
+.gacha-reveal-stars { position: absolute; top: 50%; left: 50%; width: 0; height: 0; z-index: 0; --hint: #eac04a; pointer-events: none; }
 @keyframes gRise { from { transform: translateY(20px); opacity: 0; } to { transform: none; opacity: 1; } }
 .gacha-reveal-burst {
   position: absolute; width: 380px; height: 380px; border-radius: 50%; pointer-events: none;
@@ -2470,7 +2481,17 @@ input[type="range"]::-moz-range-thumb {
 /* ---- Summary ---- */
 .gacha-overlay.summary { justify-content: flex-start; padding: 40px 20px; overflow-y: auto; }
 .gacha-summary-title { color: var(--gold-bright); font-size: 22px; margin: 0; }
-.gacha-summary-grid { display: grid; gap: 14px; justify-content: center; }
+.gacha-summary-grid { display: grid; gap: 14px; justify-content: center; width: 100%; max-width: 640px; margin: 0 auto; }
+/* Cards in these grids flex to their cell so 5 always fit a row (2 rows of 5),
+   shrinking on mobile; the max-width above keeps the desktop size unchanged. */
+.gacha-summary-grid .gcard.sz-sm { width: 100%; height: auto; aspect-ratio: 116 / 168; }
+.gacha-summary-grid .gcard-name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+@media (max-width: 720px) {
+  .gacha-summary-grid { gap: 6px; }
+  .gacha-summary-grid .gcard-name { font-size: 9.5px; }
+  .gacha-summary-grid .gcard-title, .gacha-summary-grid .gcard-class { font-size: 8.5px; }
+  .gacha-summary-grid .gcard-info { padding: 4px 4px 5px; }
+}
 .gacha-summary-grid .gcard { animation: gPop 0.4s cubic-bezier(0.2, 0.9, 0.3, 1.3) backwards; }
 .gacha-summary-grid .gcard:nth-child(n) { animation-delay: calc(var(--n, 0) * 40ms); }
 @keyframes gPop { from { transform: scale(0.6); opacity: 0; } to { transform: scale(1); opacity: 1; } }
@@ -2508,3 +2529,7 @@ input[type="range"]::-moz-range-thumb {
 }
 .rarity-chip b { font-weight: 800; }
 .rarity-chip.total { color: var(--ink-dim); border-color: var(--panel-edge); }
+
+/* Most-recent pull shown below the banner */
+.gacha-last { margin-top: 22px; text-align: center; }
+.gacha-last-title { font-size: 13px; color: var(--ink-dim); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 12px; }
