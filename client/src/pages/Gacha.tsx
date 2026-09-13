@@ -2,9 +2,9 @@ import { useEffect, useMemo, useState, type CSSProperties } from "react";
 import { track } from "@vercel/analytics";
 import { useDB } from "../data/DataContext";
 import { CardView } from "../components/GachaCardView";
-import { activeRarities, allBanners, bannerCards, cardArt, cardClass, cardDisplay, cardName, rollPull } from "../data/gacha";
+import { activeRarities, allBanners, allCards, bannerCards, cardArt, cardClass, cardDisplay, cardName, rollPull } from "../data/gacha";
 import { rarityRank } from "../types";
-import type { CardDisplay, GachaCard, Rarity } from "../types";
+import type { CardDisplay, DB, GachaCard, Rarity } from "../types";
 
 type Pulled = { name: string; title?: string; art: string | null; rarity: Rarity; cls?: string | null };
 type Phase = "idle" | "charging" | "reveal" | "summary";
@@ -67,6 +67,7 @@ export function Gacha() {
   const [pull, setPull] = useState<Pulled[] | null>(null);
   const [phase, setPhase] = useState<Phase>("idle");
   const [idx, setIdx] = useState(0);
+  const [showGallery, setShowGallery] = useState(false);
   const [crest, setCrest] = useState<string | null>(null); // crest flashed during the charge
   const [stars, setStars] = useState<CSSProperties[]>([]);
   const [burstStars, setBurstStars] = useState<CSSProperties[]>([]);
@@ -146,14 +147,19 @@ export function Gacha() {
           <h2>Summon</h2>
           <p>Try your luck! Pulls are just for fun — nothing is spent or saved.</p>
         </div>
-        {banners.length > 1 && (
-          <label className="field" style={{ margin: 0, minWidth: 220 }}>
-            <span>Banner</span>
-            <select value={banner?.id} onChange={(e) => setBannerId(e.target.value)}>
-              {banners.map((b) => <option key={b.id} value={b.id}>{b.name || "Untitled banner"}</option>)}
-            </select>
-          </label>
-        )}
+        <div className="row" style={{ gap: 12, alignItems: "flex-end", flexWrap: "wrap" }}>
+          {banners.length > 1 && (
+            <label className="field" style={{ margin: 0, minWidth: 220 }}>
+              <span>Banner</span>
+              <select value={banner?.id} onChange={(e) => setBannerId(e.target.value)}>
+                {banners.map((b) => <option key={b.id} value={b.id}>{b.name || "Untitled banner"}</option>)}
+              </select>
+            </label>
+          )}
+          {allCards(db).length > 0 && (
+            <button className="btn ghost" onClick={() => setShowGallery(true)}>✦ Gallery</button>
+          )}
+        </div>
       </div>
 
       {/* Idle stage */}
@@ -227,6 +233,55 @@ export function Gacha() {
             <button className="btn" onClick={close}>Close</button>
             <button className="btn primary" onClick={() => summon(pull.length)}>Summon Again ×{pull.length}</button>
           </div>
+        </div>
+      )}
+
+      {/* Card gallery */}
+      {showGallery && <Gallery db={db} onClose={() => setShowGallery(false)} />}
+    </div>
+  );
+}
+
+// Browse every card (and its title) — searchable, filterable by rarity.
+function Gallery({ db, onClose }: { db: DB; onClose: () => void }) {
+  const [q, setQ] = useState("");
+  const [rar, setRar] = useState<Rarity | "all">("all");
+
+  const cards = useMemo(() => {
+    return allCards(db)
+      .map((c) => ({ id: c.id, art: cardArt(db, c), name: cardName(db, c), title: c.title, rarity: c.rarity, cls: cardClass(db, c) }))
+      .sort((a, b) => rarityRank(b.rarity) - rarityRank(a.rarity) || a.name.localeCompare(b.name));
+  }, [db]);
+
+  const feh = !!db.gacha?.fehMode;
+  const rarChips = activeRarities(db);
+  const query = q.toLowerCase().trim();
+  const shown = cards.filter((c) => (rar === "all" || c.rarity === rar) && (c.name + " " + (c.title ?? "")).toLowerCase().includes(query));
+
+  return (
+    <div className="gacha-overlay gallery">
+      <div className="gacha-gallery-head">
+        <h3 className="gacha-summary-title" style={{ margin: 0 }}>Card Gallery <span className="muted" style={{ fontSize: 14 }}>({shown.length})</span></h3>
+        <button className="btn" onClick={onClose}>Close</button>
+      </div>
+      <div className="gacha-gallery-controls">
+        <input type="text" placeholder="Search name or title…" value={q} onChange={(e) => setQ(e.target.value)} style={{ maxWidth: 260 }} />
+        <div className="chip-wrap">
+          <span className={"chip-toggle" + (rar === "all" ? " on" : "")} onClick={() => setRar("all")}>All</span>
+          {rarChips.map((rd) => (
+            <span key={rd.id} className={"chip-toggle" + (rar === rd.id ? " on" : "")} style={rar === rd.id ? { borderColor: rd.color, color: rd.color } : undefined} onClick={() => setRar(rd.id)}>
+              {feh ? "★".repeat(rd.stars) : rd.label}
+            </span>
+          ))}
+        </div>
+      </div>
+      {shown.length === 0 ? (
+        <div className="poll-empty">No cards match.</div>
+      ) : (
+        <div className="gacha-gallery-grid">
+          {shown.map((c) => (
+            <CardView key={c.id} art={c.art} name={c.name} title={c.title} rarity={c.rarity} cls={c.cls} size="sm" show={{ stars: true, name: true, title: true, class: true }} />
+          ))}
         </div>
       )}
     </div>
