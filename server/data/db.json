@@ -6232,7 +6232,7 @@
     }
   ],
   "gacha": {
-    "enabled": false,
+    "enabled": true,
     "cards": [
       {
         "id": "card_unit_cai",

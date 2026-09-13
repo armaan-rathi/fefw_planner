@@ -60,7 +60,7 @@ function Shell() {
           <NavLink to="/characters">Character Database</NavLink>
           <NavLink to="/classes">Class List</NavLink>
           <NavLink to="/tiers">Tier List</NavLink>
-          <NavLink to="/team">Team Planner</NavLink>
+          <NavLink to="/split">Team Planner</NavLink>
           <NavLink to="/map">Overworld Map</NavLink>
           {hasPolls && <NavLink to="/polls">Polls</NavLink>}
           {gachaVisible && <NavLink to="/gacha">Gacha</NavLink>}

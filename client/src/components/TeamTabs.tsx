@@ -4,8 +4,8 @@ import { NavLink } from "react-router-dom";
 export function TeamTabs() {
   return (
     <div className="cast-tabs">
-      <NavLink to="/team" end>Team Builder</NavLink>
       <NavLink to="/split">Route Split</NavLink>
+      <NavLink to="/team" end>Team Builder</NavLink>
     </div>
   );
 }

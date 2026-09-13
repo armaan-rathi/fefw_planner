@@ -2332,7 +2332,7 @@ input[type="range"]::-moz-range-thumb {
 .gcard-name { font-weight: 700; font-size: 13px; color: #fff; text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9); }
 .gcard.sz-lg .gcard-name { font-size: 17px; }
 .gcard.sz-sm .gcard-name { font-size: 11.5px; }
-.gcard-title { font-size: 10.5px; color: #d8c79a; font-style: italic; }
+.gcard-title { font-size: 10.5px; color: #d8c79a; font-style: italic; white-space: nowrap; overflow: hidden; }
 /* Rarity shine on the higher tiers */
 .gcard.r-epic .gcard-front, .gcard.r-legendary .gcard-front { box-shadow: 0 0 0 2px var(--rc), 0 0 26px -2px var(--rc); }
 /* Shine sweeps a diagonal band fully across the card, then waits (band parked

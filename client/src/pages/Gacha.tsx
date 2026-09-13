@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState, type CSSProperties } from "react";
+import { track } from "@vercel/analytics";
 import { useDB } from "../data/DataContext";
 import { CardView } from "../components/GachaCardView";
 import { activeRarities, allBanners, bannerCards, cardArt, cardClass, cardDisplay, cardName, rollPull } from "../data/gacha";
@@ -106,6 +107,9 @@ export function Gacha() {
       window.alert("This banner has no cards yet — add some in Dev Mode → Gacha.");
       return;
     }
+    // Anonymous aggregate analytics: one event per summon (size = 1 or 10).
+    // No-op locally; Vercel reports event counts + unique visitors in production.
+    track("gacha_pull", { size: count });
     const pulled: Pulled[] = rolled.map((c: GachaCard) => ({ name: cardName(db, c), title: c.title, art: cardArt(db, c), rarity: c.rarity, cls: cardClass(db, c) }));
     preload(pulled.map((p) => p.art));
     setCrest(crestImages.length ? crestImages[Math.floor(Math.random() * crestImages.length)] : null);
