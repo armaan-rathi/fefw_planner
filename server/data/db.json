@@ -2596,7 +2596,7 @@
     {
       "id": "unit_ms4b6sy674873",
       "name": "Kiroc",
-      "portrait": "/images/msf7ml0dm0w7s4.png",
+      "portrait": "/images/mu1cjtwtw236yp.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -2607,11 +2607,11 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Tyranny",
+        "description": "Increases Attack and Crit against enemies suffering from status conditions"
       },
       "fields": {
-        "backstory": "Likes: Thievery, the open sea, ships, obedient underlings"
+        "backstory": "The former leader of the brutal and infamous Black Bird Pirates, known by the nickname \"The Monstrous Bird.\"\nBefore visiting Dagsion, he apparently had a falling out with Talimun, the head of Vandahl Trading, and harbors a grudge against him.\n\nLikes: Thievery, the open sea, ships, obedient underlings"
       }
     },
     {
