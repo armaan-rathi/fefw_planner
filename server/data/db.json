@@ -2276,20 +2276,24 @@
     {
       "id": "unit_msu4dr4u0h6sh",
       "name": "Jasmine",
-      "portrait": "/images/msu4dxy7cls1ab.png",
+      "portrait": "/images/mu0xq12a7fondv.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": null,
-      "boons": [],
+      "classId": "class_armored",
+      "boons": [
+        "axe",
+        "armor"
+      ],
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Expert Counter",
+        "description": "Increases Hit when counterattacking"
       },
       "fields": {
-        "faction": "Palma Fighters"
+        "faction": "Palma Fighters",
+        "backstory": "A female warrior who leads the mercenary group known as \"Palma Rain.\"\nShe originally served a provincial noble of the Kingdom of Arago, but turned to mercenary work after the family fell into ruin several years ago.\n\nLikes: Memories of her spouse, mercenary friends, trying to get rich"
       },
       "possiblyEnemyOnly": false
     },
