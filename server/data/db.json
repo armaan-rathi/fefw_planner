@@ -98,7 +98,8 @@
         "Temple Army",
         "Order of Mithras",
         "Promised One's Army",
-        "Har Hali Tribe"
+        "Har Hali Tribe",
+        "Black Bird Pirates"
       ]
     },
     {
@@ -2276,7 +2277,7 @@
     {
       "id": "unit_msu4dr4u0h6sh",
       "name": "Jasmine",
-      "portrait": "/images/mu0xq12a7fondv.png",
+      "portrait": "/images/mu1nyh658h1ur4.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -2596,7 +2597,7 @@
     {
       "id": "unit_ms4b6sy674873",
       "name": "Kiroc",
-      "portrait": "/images/mu1cjtwtw236yp.png",
+      "portrait": "/images/mu1nyrqvksurz8.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -2611,25 +2612,30 @@
         "description": "Increases Attack and Crit against enemies suffering from status conditions"
       },
       "fields": {
-        "backstory": "The former leader of the brutal and infamous Black Bird Pirates, known by the nickname \"The Monstrous Bird.\"\nBefore visiting Dagsion, he apparently had a falling out with Talimun, the head of Vandahl Trading, and harbors a grudge against him.\n\nLikes: Thievery, the open sea, ships, obedient underlings"
+        "backstory": "The former leader of the brutal and infamous Black Bird Pirates, known by the nickname \"The Monstrous Bird.\"\nBefore visiting Dagsion, he apparently had a falling out with Talimun, the head of Vandahl Trading, and harbors a grudge against him.\n\nLikes: Thievery, the open sea, ships, obedient underlings",
+        "faction": "Black Bird Pirates"
       }
     },
     {
       "id": "unit_ms4b9qphimjk7",
       "name": "Inioni",
-      "portrait": "/images/ms76nwpsryu10z.jpg",
+      "portrait": "/images/mu21d2e760qo4c.jpeg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": null,
-      "boons": [],
+      "classId": "class_archer",
+      "boons": [
+        "bow"
+      ],
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Pierce",
+        "description": "Increases Attack and Crit for bow combat arts"
       },
-      "fields": {}
+      "fields": {
+        "backstory": "A master archer known as \"Inyoni of the Demon Bow\" who has become the talk of the town.\nShe had shown talent for archery since childhood, but recently she has been performing at a completely different level, and her name has rapidly become widely known.\n\nLikes: Her family and hometown, hunting, farm work, bow maintenance"
+      }
     },
     {
       "id": "unit_msu434ibp8q8s",
