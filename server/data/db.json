@@ -99,7 +99,8 @@
         "Order of Mithras",
         "Promised One's Army",
         "Har Hali Tribe",
-        "Black Bird Pirates"
+        "Black Bird Pirates",
+        "Sisters of Bragança"
       ]
     },
     {
@@ -2301,20 +2302,24 @@
     {
       "id": "unit_msesemmywrm9d",
       "name": "Peppe",
-      "portrait": "/images/msf7u20bfwo6wp.png",
+      "portrait": "/images/mu2nxrrolvxrpi.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": "class_ms4axgsyshgov",
-      "boons": [],
+      "classId": "class_ms4czk6qlyp89",
+      "boons": [
+        "sword",
+        "infantry"
+      ],
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Hunter's Snare",
+        "description": "Chance to strike first if enemy is injured when they attack"
       },
       "fields": {
-        "faction": "Brigid Army"
+        "faction": "Brigid Army",
+        "backstory": "A boy who speaks in a somewhat otherworldly manner, using the archaic first-person pronoun \"we.\"\nHe was rescued by the priestess Ultand when he was in trouble and unfamiliar with the ways of Dagsion, and he appears to feel a sense of indebtedness ever since.\n\nLikes: The spirits, the sun, his hometown"
       }
     },
     {
@@ -2619,7 +2624,7 @@
     {
       "id": "unit_ms4b9qphimjk7",
       "name": "Inioni",
-      "portrait": "/images/mu21d2e760qo4c.jpeg",
+      "portrait": "/images/mu2nwaqj32ctv0.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -2634,7 +2639,8 @@
         "description": "Increases Attack and Crit for bow combat arts"
       },
       "fields": {
-        "backstory": "A master archer known as \"Inyoni of the Demon Bow\" who has become the talk of the town.\nShe had shown talent for archery since childhood, but recently she has been performing at a completely different level, and her name has rapidly become widely known.\n\nLikes: Her family and hometown, hunting, farm work, bow maintenance"
+        "backstory": "A master archer known as \"Inyoni of the Demon Bow\" who has become the talk of the town.\nShe had shown talent for archery since childhood, but recently she has been performing at a completely different level, and her name has rapidly become widely known.\n\nLikes: Her family and hometown, hunting, farm work, bow maintenance",
+        "faction": "Sisters of Bragança"
       }
     },
     {
