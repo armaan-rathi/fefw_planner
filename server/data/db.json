@@ -2208,121 +2208,6 @@
       "possiblyEnemyOnly": true
     },
     {
-      "id": "unit_msesdf1q9njym",
-      "name": "Benditz",
-      "portrait": "/images/mtk9o0oqzg0dz1.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": "class_msesr7wkkfq1k",
-      "boons": [
-        "bow",
-        "riding"
-      ],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {
-        "faction": "Thundercloud Knights",
-        "backstory": "A one-eyed veteran knight who proudly calls himself a “General”. Once served as a temple centurion, but lost his position due to a scandal many years ago and now lives as a mercenary.\n\nLikes: The Great August’s tactics, up-and-coming young people, lecturing young people, reading"
-      }
-    },
-    {
-      "id": "unit_ms4axuyt3lodb",
-      "name": "Alexandra",
-      "portrait": "/images/mtk9ndn2qe57a2.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": "class_ms4aypejltz4f",
-      "boons": [
-        "lance",
-        "flying"
-      ],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "Silver Maiden",
-        "description": "Increases Hit and Avo based on the number of adjacent allies"
-      },
-      "fields": {
-        "faction": "Silver Knights",
-        "backstory": "A lovely pegasus knight who serves at Jurah’s Temple at the upper levels of Dagsion. She’s known as the “Silver Maiden” and has many fans. Since she’s from a renowned family, there are also many who envy her privileged lifestyle.\n\nLikes: Her parents, virtuous men, caring for her beloved steed"
-      }
-    },
-    {
-      "id": "unit_ms4b8a7pr2e4u",
-      "name": "Zarcone",
-      "portrait": "/images/mtx342qn922qzk.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": null,
-      "boons": [
-        "axe"
-      ],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "Despicable",
-        "description": "Increases Hit when foe's HP is below half"
-      },
-      "fields": {
-        "faction": "Gaia Brigadiers",
-        "backstory": "The leader of the \"Gaia Brigade,\" a band of ruthless, villainous bandits.\nUpon hearing rumors of the Heroic Games, he traveled to Dagsion with his henchmen.\nHe possesses a cowardly nature, always targeting the weak first in battle.\n\nLikes: Money, violence, good women, vegetables, drinking with friends"
-      }
-    },
-    {
-      "id": "unit_msu4dr4u0h6sh",
-      "name": "Jasmine",
-      "portrait": "/images/mu1nyh658h1ur4.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": "class_armored",
-      "boons": [
-        "axe",
-        "armor"
-      ],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "Expert Counter",
-        "description": "Increases Hit when counterattacking"
-      },
-      "fields": {
-        "faction": "Palma Fighters",
-        "backstory": "A female warrior who leads the mercenary group known as \"Palma Rain.\"\nShe originally served a provincial noble of the Kingdom of Arago, but turned to mercenary work after the family fell into ruin several years ago.\n\nLikes: Memories of her spouse, mercenary friends, trying to get rich"
-      },
-      "possiblyEnemyOnly": false
-    },
-    {
-      "id": "unit_msesemmywrm9d",
-      "name": "Peppe",
-      "portrait": "/images/mu2nxrrolvxrpi.png",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": "class_ms4czk6qlyp89",
-      "boons": [
-        "sword",
-        "infantry"
-      ],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "Hunter's Snare",
-        "description": "Chance to strike first if enemy is injured when they attack"
-      },
-      "fields": {
-        "faction": "Brigid Army",
-        "backstory": "A boy who speaks in a somewhat otherworldly manner, using the archaic first-person pronoun \"we.\"\nHe was rescued by the priestess Ultand when he was in trouble and unfamiliar with the ways of Dagsion, and he appears to feel a sense of indebtedness ever since.\n\nLikes: The spirits, the sun, his hometown"
-      }
-    },
-    {
       "id": "unit_msestcd1erzsr",
       "name": "Anna",
       "portrait": "/images/mset8fiesk527h.png",
@@ -2384,6 +2269,165 @@
       "fields": {
         "faction": "Temple Army",
         "backstory": "A priestess serving at the Solel Temple in the upper levels of Dagsion.\nShe's an extreme glutton, and it seems all her salary goes toward food expenses.\nShe has a gentle personality, but spent her childhood surrounded by roughnecks.\n\nLikes: Delicious food, the moment when food is served (and soon vanishes)"
+      }
+    },
+    {
+      "id": "unit_msesdf1q9njym",
+      "name": "Benditz",
+      "portrait": "/images/mtk9o0oqzg0dz1.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_msesr7wkkfq1k",
+      "boons": [
+        "bow",
+        "riding"
+      ],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "",
+        "description": ""
+      },
+      "fields": {
+        "faction": "Thundercloud Knights",
+        "backstory": "A one-eyed veteran knight who proudly calls himself a “General”. Once served as a temple centurion, but lost his position due to a scandal many years ago and now lives as a mercenary.\n\nLikes: The Great August’s tactics, up-and-coming young people, lecturing young people, reading"
+      }
+    },
+    {
+      "id": "unit_ms4axuyt3lodb",
+      "name": "Alexandra",
+      "portrait": "/images/mtk9ndn2qe57a2.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_ms4aypejltz4f",
+      "boons": [
+        "lance",
+        "flying"
+      ],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "Silver Maiden",
+        "description": "Increases Hit and Avo based on the number of adjacent allies"
+      },
+      "fields": {
+        "faction": "Silver Knights",
+        "backstory": "A lovely pegasus knight who serves at Jurah’s Temple at the upper levels of Dagsion. She’s known as the “Silver Maiden” and has many fans. Since she’s from a renowned family, there are also many who envy her privileged lifestyle.\n\nLikes: Her parents, virtuous men, caring for her beloved steed"
+      }
+    },
+    {
+      "id": "unit_ms4b8a7pr2e4u",
+      "name": "Zarcone",
+      "portrait": "/images/mtx342qn922qzk.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_brigand",
+      "boons": [
+        "axe"
+      ],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "Despicable",
+        "description": "Increases Hit when foe's HP is below half"
+      },
+      "fields": {
+        "faction": "Gaia Brigadiers",
+        "backstory": "The leader of the \"Gaia Brigade,\" a band of ruthless, villainous bandits.\nUpon hearing rumors of the Heroic Games, he traveled to Dagsion with his henchmen.\nHe possesses a cowardly nature, always targeting the weak first in battle.\n\nLikes: Money, violence, good women, vegetables, drinking with friends"
+      }
+    },
+    {
+      "id": "unit_ms4b6sy674873",
+      "name": "Kiroc",
+      "portrait": "/images/mu1nyrqvksurz8.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_ms3o7vuixzpwd",
+      "boons": [
+        "bow"
+      ],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "Tyranny",
+        "description": "Increases Attack and Crit against enemies suffering from status conditions"
+      },
+      "fields": {
+        "backstory": "The former leader of the brutal and infamous Black Bird Pirates, known by the nickname \"The Monstrous Bird.\"\nBefore visiting Dagsion, he apparently had a falling out with Talimun, the head of Vandahl Trading, and harbors a grudge against him.\n\nLikes: Thievery, the open sea, ships, obedient underlings",
+        "faction": "Black Bird Pirates"
+      }
+    },
+    {
+      "id": "unit_msu4dr4u0h6sh",
+      "name": "Jasmine",
+      "portrait": "/images/mu1nyh658h1ur4.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_armored",
+      "boons": [
+        "axe",
+        "armor"
+      ],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "Expert Counter",
+        "description": "Increases Hit when counterattacking"
+      },
+      "fields": {
+        "faction": "Palma Fighters",
+        "backstory": "A female warrior who leads the mercenary group known as \"Palma Rain.\"\nShe originally served a provincial noble of the Kingdom of Arago, but turned to mercenary work after the family fell into ruin several years ago.\n\nLikes: Memories of her spouse, mercenary friends, trying to get rich"
+      },
+      "possiblyEnemyOnly": false
+    },
+    {
+      "id": "unit_ms4b9qphimjk7",
+      "name": "Inyoni",
+      "portrait": "/images/mu2nwaqj32ctv0.png",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_archer",
+      "boons": [
+        "bow"
+      ],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "Pierce",
+        "description": "Increases Attack and Crit for bow combat arts"
+      },
+      "fields": {
+        "backstory": "A master archer known as \"Inyoni of the Demon Bow\" who has become the talk of the town.\nShe had shown talent for archery since childhood, but recently she has been performing at a completely different level, and her name has rapidly become widely known.\n\nLikes: Her family and hometown, hunting, farm work, bow maintenance",
+        "faction": "Sisters of Bragança"
+      }
+    },
+    {
+      "id": "unit_msesemmywrm9d",
+      "name": "Peppe",
+      "portrait": "/images/mu2nxrrolvxrpi.png",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_ms4czk6qlyp89",
+      "boons": [
+        "sword",
+        "infantry"
+      ],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "Hunter's Snare",
+        "description": "Chance to strike first if enemy is injured when they attack"
+      },
+      "fields": {
+        "faction": "Brigid Army",
+        "backstory": "A boy who speaks in a somewhat otherworldly manner, using the archaic first-person pronoun \"we.\"\nHe was rescued by the priestess Ultand when he was in trouble and unfamiliar with the ways of Dagsion, and he appears to feel a sense of indebtedness ever since.\n\nLikes: The spirits, the sun, his hometown"
       }
     },
     {
@@ -2597,50 +2641,6 @@
           "renown": 9,
           "negotiation": "Easy"
         }
-      }
-    },
-    {
-      "id": "unit_ms4b6sy674873",
-      "name": "Kiroc",
-      "portrait": "/images/mu1nyrqvksurz8.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": "class_ms3o7vuixzpwd",
-      "boons": [
-        "bow"
-      ],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "Tyranny",
-        "description": "Increases Attack and Crit against enemies suffering from status conditions"
-      },
-      "fields": {
-        "backstory": "The former leader of the brutal and infamous Black Bird Pirates, known by the nickname \"The Monstrous Bird.\"\nBefore visiting Dagsion, he apparently had a falling out with Talimun, the head of Vandahl Trading, and harbors a grudge against him.\n\nLikes: Thievery, the open sea, ships, obedient underlings",
-        "faction": "Black Bird Pirates"
-      }
-    },
-    {
-      "id": "unit_ms4b9qphimjk7",
-      "name": "Inioni",
-      "portrait": "/images/mu2nwaqj32ctv0.png",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": "class_archer",
-      "boons": [
-        "bow"
-      ],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "Pierce",
-        "description": "Increases Attack and Crit for bow combat arts"
-      },
-      "fields": {
-        "backstory": "A master archer known as \"Inyoni of the Demon Bow\" who has become the talk of the town.\nShe had shown talent for archery since childhood, but recently she has been performing at a completely different level, and her name has rapidly become widely known.\n\nLikes: Her family and hometown, hunting, farm work, bow maintenance",
-        "faction": "Sisters of Bragança"
       }
     },
     {
