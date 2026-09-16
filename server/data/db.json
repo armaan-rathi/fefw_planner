@@ -1507,7 +1507,7 @@
       },
       "fields": {
         "faction": "Rose Tempest",
-        "backstory": "A mysterious bard who appears during Leda’s path of vengeance. Calls himself the “Whimsical Wind”. He’s flirtatious, hitting on every beautiful woman he sees, but also has keen perception and is well-educated.\n\nLikes: Goddess Karla, all women, poetry"
+        "backstory": "A mysterious bard who appears during Leda’s path of vengeance. Calls himself the “Whimsical Wind.” He’s flirtatious, hitting on every beautiful woman he sees, but also has keen perception and is well-educated.\n\nLikes: Goddess Karla, all women, poetry"
       }
     },
     {
@@ -2670,7 +2670,7 @@
     {
       "id": "unit_msu434ibp8q8s",
       "name": "Maria",
-      "portrait": "/images/msu43dhios42g3.jpg",
+      "portrait": "/images/mu42si6qufg48i.png",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -2683,7 +2683,8 @@
         "description": ""
       },
       "fields": {
-        "faction": "Order of Mithras"
+        "faction": "Order of Mithras",
+        "backstory": "A bewitching bard who travels freely through various countries.\nWhile under attack by bandits, she was rescued by Leda and her group who happened to pass by, and for a time, she travels with them.\nThe vihuela \"Moonlit White\" that Maria possesses emits a white glow, as if forming a pair with Leda's \"Obsidian.\"\n\nLikes: People who are easily dealt with, improvising new songs"
       },
       "possiblyEnemyOnly": true
     },
