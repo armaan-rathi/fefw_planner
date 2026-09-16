@@ -1267,8 +1267,14 @@
         "cai"
       ],
       "classId": "class_diviner",
-      "boons": [],
-      "banes": [],
+      "boons": [
+        "reason",
+        "faith",
+        "authority"
+      ],
+      "banes": [
+        "sword"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "",
@@ -1355,9 +1361,14 @@
       "classId": "class_ms4godtdiwiu4",
       "boons": [
         "axe",
-        "armor"
+        "armor",
+        "lance",
+        "riding"
       ],
-      "banes": [],
+      "banes": [
+        "reason",
+        "faith"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "Guardian's Duty?",
@@ -1481,9 +1492,14 @@
       ],
       "classId": "class_diviner",
       "boons": [
-        "sword"
+        "sword",
+        "reason",
+        "faith",
+        "authority"
       ],
-      "banes": [],
+      "banes": [
+        "armor"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "Goddess' Favor",
@@ -1607,8 +1623,13 @@
         "leda"
       ],
       "classId": "class_priest",
-      "boons": [],
-      "banes": [],
+      "boons": [
+        "axe",
+        "faith"
+      ],
+      "banes": [
+        "lance"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "Rivalry",
@@ -1658,7 +1679,10 @@
       ],
       "classId": "class_ms3o7io5clmwu",
       "boons": [
-        "brawl"
+        "brawl",
+        "sword",
+        "axe",
+        "faith"
       ],
       "banes": [],
       "skillLevels": {},
@@ -2011,7 +2035,7 @@
     {
       "id": "unit_ms4b4zib7ibpz",
       "name": "Ludia",
-      "portrait": "/images/mttwcf8wqm4eoq.png",
+      "portrait": "/images/mu2phmecu6a41b.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -2388,7 +2412,7 @@
     {
       "id": "unit_ms4b9qphimjk7",
       "name": "Inyoni",
-      "portrait": "/images/mu2nwaqj32ctv0.png",
+      "portrait": "/images/mu3vmoy0e09hnc.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -2410,7 +2434,7 @@
     {
       "id": "unit_msesemmywrm9d",
       "name": "Peppe",
-      "portrait": "/images/mu2nxrrolvxrpi.png",
+      "portrait": "/images/mu3vmv20rycjhx.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -6060,7 +6084,7 @@
     {
       "id": "cast_msf8ix5msm98z",
       "name": "Raksha",
-      "portrait": "/images/msu3jo1dvfgaa8.jpg",
+      "portrait": "/images/mu3vna185413pb.png",
       "subtitle": "",
       "description": ""
     },
