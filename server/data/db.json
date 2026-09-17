@@ -2247,7 +2247,8 @@
         "description": ""
       },
       "fields": {
-        "faction": "Temple Army"
+        "faction": "Temple Army",
+        "backstory": "A priest in Solel's Temple who helps manage the Heroic Games.\nShe makes her announcements to the participants with brightness and enthusiasm.\n\nLikes: Gossip, making sales, getting good deals"
       }
     },
     {
