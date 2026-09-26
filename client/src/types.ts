@@ -322,4 +322,5 @@ export interface DB {
   gacha?: GachaConfig; // summon minigame (cards + banners)
   recruitmentOrder?: string[]; // unit ids, display order on the Recruitment page
   growthsOnCharPage?: boolean; // show growth rates on the Character Database page
+  hiddenPages?: string[]; // NavPage keys hidden from the top navigation
 }

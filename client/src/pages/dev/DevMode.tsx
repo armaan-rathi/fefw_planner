@@ -11,6 +11,7 @@ import { PollsEditor } from "./PollsEditor";
 import { GachaEditor } from "./GachaEditor";
 import { RecruitmentEditor } from "./RecruitmentEditor";
 import { GrowthsEditor } from "./GrowthsEditor";
+import { PagesEditor } from "./PagesEditor";
 
 export function DevMode() {
   return (
@@ -36,6 +37,7 @@ export function DevMode() {
         <NavLink to="npcs">Important NPCs</NavLink>
         <NavLink to="polls">Polls</NavLink>
         <NavLink to="gacha">Gacha</NavLink>
+        <NavLink to="pages">Pages</NavLink>
       </div>
 
       <Routes>
@@ -53,6 +55,7 @@ export function DevMode() {
         <Route path="npcs" element={<CastEditor kind="npcs" label="Important NPCs" subtitleLabel="Affiliation / role" />} />
         <Route path="polls" element={<PollsEditor />} />
         <Route path="gacha" element={<GachaEditor />} />
+        <Route path="pages" element={<PagesEditor />} />
       </Routes>
     </div>
   );

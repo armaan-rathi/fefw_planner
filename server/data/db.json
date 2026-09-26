@@ -9207,5 +9207,8 @@
       "class": false
     },
     "fehMode": true
-  }
+  },
+  "hiddenPages": [
+    "map"
+  ]
 }

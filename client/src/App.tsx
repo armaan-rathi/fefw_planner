@@ -14,6 +14,7 @@ import { RouteSplit } from "./pages/RouteSplit";
 import { Polls } from "./pages/Polls";
 import { Gacha } from "./pages/Gacha";
 import { DevMode } from "./pages/dev/DevMode";
+import { NAV_PAGES } from "./data/navPages";
 
 function SaveBadge() {
   const { saveState } = useData();
@@ -46,6 +47,7 @@ function Shell() {
   const hasPolls = (db?.polls?.length ?? 0) > 0;
   // Public sees Gacha only when enabled; devs see it whenever the Editor is on.
   const gachaVisible = (db?.gacha?.enabled ?? false) || devMode;
+  const hidden = new Set(db?.hiddenPages ?? []);
 
   return (
     <div className="app-root">
@@ -60,23 +62,23 @@ function Shell() {
         <nav className="mainnav">
           <div className="navrow">
             <div className="navrow-links">
-              <NavLink to="/routes">Route Selection</NavLink>
-              <NavLink to="/characters">Character Database</NavLink>
-              <NavLink to="/classes">Class List</NavLink>
-              <NavLink to="/tiers">Tier List</NavLink>
-              <NavLink to="/split">Team Planner</NavLink>
-              <NavLink to="/map">Overworld Map</NavLink>
+              {NAV_PAGES.filter((p) => p.row === 1 && !hidden.has(p.key)).map((p) => (
+                <NavLink key={p.key} to={p.to}>{p.label}</NavLink>
+              ))}
               {hasPolls && <NavLink to="/polls">Polls</NavLink>}
               {gachaVisible && <NavLink to="/gacha">Gacha</NavLink>}
               {devMode && <NavLink to="/dev">Dev Mode</NavLink>}
             </div>
           </div>
-          <div className="navrow">
-            <div className="navrow-links">
-              <NavLink to="/recruitment">Recruitment</NavLink>
-              <NavLink to="/growths">Growth Rates</NavLink>
+          {NAV_PAGES.some((p) => p.row === 2 && !hidden.has(p.key)) && (
+            <div className="navrow">
+              <div className="navrow-links">
+                {NAV_PAGES.filter((p) => p.row === 2 && !hidden.has(p.key)).map((p) => (
+                  <NavLink key={p.key} to={p.to}>{p.label}</NavLink>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
         </nav>
         <div className="topbar-right">
           <SaveBadge />
