@@ -7,7 +7,7 @@ import { ImageDrop } from "../../components/ImageDrop";
 import { SkillMark } from "../../components/icons";
 import { unitFaction } from "../../data/units";
 import { fieldOptions } from "../../data/fields";
-import { GRADES, NEGOTIATIONS, type FieldValue, type Grade, type Negotiation, type RecruitCondition, type Unit } from "../../types";
+import { GRADES, PARALOGUE_LORDS, type FieldValue, type Grade, type RecruitCondition, type Unit } from "../../types";
 
 function blankUnit(): Unit {
   return {
@@ -194,6 +194,8 @@ function UnitModal({ unit, onClose, onSave }: { unit: Unit; onClose: () => void;
       if (cur.support === undefined) delete cur.support;
       if (cur.renown === undefined) delete cur.renown;
       if (!cur.negotiation) delete cur.negotiation;
+      if (!cur.paralogue) delete cur.paralogue;
+      if (!cur.requirement) delete cur.requirement;
       if (!cur.extra) delete cur.extra;
       if (Object.keys(cur).length === 0) delete rec[routeId];
       else rec[routeId] = cur;
@@ -330,8 +332,8 @@ function UnitModal({ unit, onClose, onSave }: { unit: Unit; onClose: () => void;
               <th>Lord</th>
               <th style={{ width: 132 }}>Support Lv.</th>
               <th style={{ width: 132 }}>Renown Lv.</th>
-              <th style={{ width: 140 }}>Negotiation</th>
-              <th style={{ width: 150 }}>Miscellaneous</th>
+              <th style={{ minWidth: 180 }}>Requirement</th>
+              <th style={{ width: 140 }}>Paralogue</th>
             </tr>
           </thead>
           <tbody>
@@ -347,13 +349,13 @@ function UnitModal({ unit, onClose, onSave }: { unit: Unit; onClose: () => void;
                     <input type="number" value={cond.renown ?? ""} onChange={(e) => setRecruit(r.id, { renown: e.target.value === "" ? undefined : Number(e.target.value) })} />
                   </td>
                   <td>
-                    <select value={cond.negotiation ?? ""} onChange={(e) => setRecruit(r.id, { negotiation: (e.target.value || undefined) as Negotiation | undefined })}>
-                      <option value="">—</option>
-                      {NEGOTIATIONS.map((n) => <option key={n} value={n}>{n}</option>)}
-                    </select>
+                    <input type="text" value={cond.requirement ?? ""} style={{ maxWidth: 180 }} onChange={(e) => setRecruit(r.id, { requirement: e.target.value || undefined })} />
                   </td>
                   <td>
-                    <input type="text" value={cond.extra ?? ""} style={{ maxWidth: 150 }} onChange={(e) => setRecruit(r.id, { extra: e.target.value || undefined })} />
+                    <select value={cond.paralogue ?? ""} onChange={(e) => setRecruit(r.id, { paralogue: e.target.value || undefined })}>
+                      <option value="">—</option>
+                      {PARALOGUE_LORDS.map((n) => <option key={n} value={n}>{n}</option>)}
+                    </select>
                   </td>
                 </tr>
               );

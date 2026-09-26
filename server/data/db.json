@@ -1780,7 +1780,7 @@
           "support": 3,
           "renown": 9,
           "paralogue": "Dietrich",
-          "requirement": "They Have Lost"
+          "requirement": "Dietrich's team has lost"
         }
       },
       "growths": {
@@ -2621,7 +2621,7 @@
           "support": 3,
           "renown": 10,
           "paralogue": "Bertrand",
-          "requirement": "They Have Lost"
+          "requirement": "Bertrand's team has lost"
         }
       },
       "growths": {
@@ -2767,13 +2767,13 @@
           "support": 3,
           "renown": 10,
           "paralogue": "Anatolia",
-          "requirement": "Saramis, Da Mina, Grounded Ship"
+          "requirement": "Answer: Saramis, Da Mina, Grounded Ship"
         },
         "leda": {
           "support": 3,
           "renown": 8,
           "paralogue": "Anatolia",
-          "requirement": "Saramis, Da Mina, Grounded Ship"
+          "requirement": "Answer: Saramis, Da Mina, Grounded Ship"
         }
       },
       "growths": {
@@ -2864,22 +2864,22 @@
         "cai": {
           "support": 3,
           "renown": 8,
-          "requirement": "500G?, Tails"
+          "requirement": "500G, Answer: Tails"
         },
         "dietrich": {
           "support": 3,
           "renown": 7,
-          "requirement": "500G?, Tails"
+          "requirement": "500G, Answer: Tails"
         },
         "theodora": {
           "support": 3,
           "renown": 7,
-          "requirement": "500G?, Tails"
+          "requirement": "500G, Answer: Tails"
         },
         "leda": {
           "support": 3,
           "renown": 6,
-          "requirement": "500G, Tails"
+          "requirement": "500G, Answer: Tails"
         }
       },
       "growths": {
@@ -4217,7 +4217,7 @@
         "cai": {
           "support": 2,
           "renown": 3,
-          "requirement": "Cheese, Moon, Potatoes",
+          "requirement": "Answer: Cheese, Moon, Potatoes",
           "negotiation": "Easy"
         },
         "dietrich": {
@@ -4226,12 +4226,12 @@
         "theodora": {
           "support": 3,
           "renown": 9,
-          "requirement": "Cheese, Moon, Potatoes"
+          "requirement": "Answer: Cheese, Moon, Potatoes"
         },
         "leda": {
           "support": 3,
           "renown": 8,
-          "requirement": "Cheese, Moon, Potatoes"
+          "requirement": "Answer: Cheese, Moon, Potatoes"
         }
       },
       "growths": {
@@ -4270,23 +4270,23 @@
         "leda": {
           "support": 3,
           "renown": 9,
-          "requirement": "3 Question",
+          "requirement": "Ask him 3 times",
           "negotiation": "Easy"
         },
         "cai": {
           "support": 2,
           "renown": 5,
-          "requirement": "3 Question"
+          "requirement": "Ask him 3 times"
         },
         "dietrich": {
           "support": 3,
           "renown": 8,
-          "requirement": "3 Question"
+          "requirement": "Ask him 3 times"
         },
         "theodora": {
           "support": 3,
           "renown": 8,
-          "requirement": "3 Question"
+          "requirement": "Ask him 3 times"
         }
       },
       "growths": {
