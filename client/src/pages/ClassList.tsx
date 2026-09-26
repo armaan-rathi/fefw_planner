@@ -3,7 +3,7 @@ import { useDB } from "../data/DataContext";
 import { UnitPortrait } from "../components/UnitPortrait";
 import { SkillMark, ProficiencyMark } from "../components/icons";
 import { sortBySkillOrder } from "../data/skills";
-import { CLASS_TIERS } from "../types";
+import { CLASS_TIERS, GROWTH_LABELS, GROWTH_STATS } from "../types";
 import type { ClassAbility, GameClass, SkillReq, SkillType, TierRequirement } from "../types";
 
 const MOVE_LABEL: Record<string, string> = {
@@ -55,6 +55,29 @@ function AbilityRow({ ability, master }: { ability?: ClassAbility; master?: bool
   );
 }
 
+// Growth-rate modifiers a class applies to a unit's growths (can be negative).
+function GrowthModsSection({ cls }: { cls: GameClass }) {
+  const g = cls.growthMods;
+  if (!g || !GROWTH_STATS.some((k) => typeof g[k] === "number" && g[k] !== 0)) return null;
+  return (
+    <div>
+      <div className="cast-detail-label">Growth Modifiers</div>
+      <div className="growth-chips" style={{ marginTop: 5 }}>
+        {GROWTH_STATS.map((k) => {
+          const v = g[k];
+          const has = typeof v === "number" && v !== 0;
+          return (
+            <span className="growth-chip" key={k}>
+              <span className="gc-k">{GROWTH_LABELS[k]}</span>
+              <span className={"gc-v" + (has ? (v! > 0 ? " pos" : " neg") : "")}>{has ? `${v! > 0 ? "+" : ""}${v}%` : "—"}</span>
+            </span>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 function ClassDetail({
   cls,
   skillById,
@@ -94,6 +117,8 @@ function ClassDetail({
           </div>
         )}
       </div>
+
+      <GrowthModsSection cls={cls} />
 
       <div className="class-lv-row">
         <div className="class-lv"><span className="cast-detail-label">Ideal Lv.</span><b>{tierReq?.idealLv ?? "—"}</b></div>

@@ -9,6 +9,8 @@ import { MapEditor } from "./MapEditor";
 import { CastEditor } from "./CastEditor";
 import { PollsEditor } from "./PollsEditor";
 import { GachaEditor } from "./GachaEditor";
+import { RecruitmentEditor } from "./RecruitmentEditor";
+import { GrowthsEditor } from "./GrowthsEditor";
 
 export function DevMode() {
   return (
@@ -28,6 +30,8 @@ export function DevMode() {
         <NavLink to="skills">Skill Types</NavLink>
         <NavLink to="map">Map</NavLink>
         <NavLink to="characters">Characters Page</NavLink>
+        <NavLink to="recruitment">Recruitment</NavLink>
+        <NavLink to="growths">Growth Rates</NavLink>
         <NavLink to="gods">Gods</NavLink>
         <NavLink to="npcs">Important NPCs</NavLink>
         <NavLink to="polls">Polls</NavLink>
@@ -43,6 +47,8 @@ export function DevMode() {
         <Route path="skills" element={<SkillTypesEditor />} />
         <Route path="map" element={<MapEditor />} />
         <Route path="characters" element={<CharacterPageEditor />} />
+        <Route path="recruitment" element={<RecruitmentEditor />} />
+        <Route path="growths" element={<GrowthsEditor />} />
         <Route path="gods" element={<CastEditor kind="gods" label="Gods" subtitleLabel="Domain" />} />
         <Route path="npcs" element={<CastEditor kind="npcs" label="Important NPCs" subtitleLabel="Affiliation / role" />} />
         <Route path="polls" element={<PollsEditor />} />

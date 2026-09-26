@@ -6,6 +6,7 @@ import { CastTabs } from "../components/CastTabs";
 import { CharAttr } from "../components/CharAttr";
 import { availableAttrs, charPageConfig } from "../data/characterAttrs";
 import { unitFaction } from "../data/units";
+import { GROWTH_LABELS, GROWTH_STATS } from "../types";
 import type { DB, Unit } from "../types";
 
 type SortMode = "default" | "faction";
@@ -18,24 +19,52 @@ function RecruitmentSection({ unit, routes }: { unit: Unit; routes: DB["routes"]
   const rec = unit.recruitment ?? {};
   const lines = routes
     .map((r) => ({ route: r, cond: rec[r.id] }))
-    .filter(({ cond }) => cond && (isNum(cond.support) || isNum(cond.renown) || !!cond.negotiation || !!cond.extra));
+    .filter(({ cond }) => cond && (isNum(cond.support) || isNum(cond.renown) || !!cond.negotiation || !!cond.paralogue || !!cond.requirement || !!cond.extra));
   if (lines.length === 0) return null;
   return (
     <div className="char-attr block">
       <div className="k">Recruitment Conditions</div>
       <div className="recruit-list">
-        {lines.map(({ route, cond }) => (
-          <div className="recruit-line" key={route.id}>
-            <span className="recruit-lord">{route.name || "Lord"}</span>
-            <span className="chip-wrap" style={{ display: "inline-flex" }}>
-              {isNum(cond!.support) && <span className="tag">Support Lv. {cond!.support}</span>}
-              {isNum(cond!.renown) && <span className="tag">Renown Lv. {cond!.renown}</span>}
-              {cond!.negotiation && <span className="tag">Negotiation: {cond!.negotiation}</span>}
-            </span>
-            {cond!.extra && (
-              <span className="recruit-extra"><b>Miscellaneous:</b> {cond!.extra}</span>
-            )}
-          </div>
+        {lines.map(({ route, cond }) => {
+          const starting = cond!.extra === "Starting unit";
+          return (
+            <div className="recruit-line" key={route.id}>
+              <span className="recruit-lord">{route.name || "Lord"}</span>
+              {starting ? (
+                <span className="recruit-ok">Starting</span>
+              ) : (
+                <span className="chip-wrap" style={{ display: "inline-flex" }}>
+                  {isNum(cond!.support) && <span className="tag">Support Lv. {cond!.support}</span>}
+                  {isNum(cond!.renown) && <span className="tag">Renown Lv. {cond!.renown}</span>}
+                </span>
+              )}
+              {!starting && cond!.paralogue && (
+                <span className="recruit-extra"><b>Paralogue:</b> {cond!.paralogue}</span>
+              )}
+              {!starting && cond!.requirement && (
+                <span className="recruit-extra"><b>Requirement:</b> {cond!.requirement}</span>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+// Growth rates grid, shown only when enabled in Dev Mode → Growth Rates.
+function GrowthsSection({ unit }: { unit: Unit }) {
+  const g = unit.growths;
+  if (!g || !GROWTH_STATS.some((k) => typeof g[k] === "number")) return null;
+  return (
+    <div className="char-attr block">
+      <div className="k">Growth Rates</div>
+      <div className="growth-chips">
+        {GROWTH_STATS.map((k) => (
+          <span className="growth-chip" key={k}>
+            <span className="gc-k">{GROWTH_LABELS[k]}</span>
+            <span className="gc-v">{typeof g[k] === "number" ? `${g[k]}%` : "—"}</span>
+          </span>
         ))}
       </div>
     </div>
@@ -156,6 +185,7 @@ export function CharacterList() {
                 <p className="muted">No detail fields configured. Choose them in Dev Mode → Characters.</p>
               )}
               <RecruitmentSection unit={openUnit} routes={db.routes} />
+              {db.growthsOnCharPage && <GrowthsSection unit={openUnit} />}
             </div>
           </div>
         </Modal>

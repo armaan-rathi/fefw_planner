@@ -6,8 +6,8 @@ import { SkillMark, ProficiencyMark } from "../../components/icons";
 import { UnitPortrait } from "../../components/UnitPortrait";
 import { ImageDrop } from "../../components/ImageDrop";
 import { sortBySkillOrder } from "../../data/skills";
-import { GRADES } from "../../types";
-import type { ClassAbility, GameClass, Grade, MovementType, SkillReq, SkillType } from "../../types";
+import { GRADES, GROWTH_LABELS, GROWTH_STATS } from "../../types";
+import type { ClassAbility, GameClass, Grade, GrowthStat, MovementType, SkillReq, SkillType } from "../../types";
 
 const MOVES: { value: MovementType; label: string }[] = [
   { value: "", label: "—" },
@@ -159,6 +159,14 @@ function ClassModal({ cls, onClose, onSave }: { cls: GameClass; onClose: () => v
       return { ...d, bonusExp: cur.includes(id) ? cur.filter((x) => x !== id) : [...cur, id] };
     });
   }
+  function setGrowthMod(stat: GrowthStat, val: number | undefined) {
+    setDraft((d) => {
+      const g = { ...(d.growthMods ?? {}) };
+      if (val === undefined) delete g[stat];
+      else g[stat] = val;
+      return { ...d, growthMods: Object.keys(g).length ? g : undefined };
+    });
+  }
 
   return (
     <Modal
@@ -231,6 +239,24 @@ function ClassModal({ cls, onClose, onSave }: { cls: GameClass; onClose: () => v
           >
             <ProficiencyMark type={st} size={14} bonus /> {st.label}
           </span>
+        ))}
+      </div>
+
+      <div className="divider" />
+      <h3 className="section-title">Growth Modifiers</h3>
+      <p className="muted" style={{ marginTop: 0, fontSize: 12 }}>
+        Percent added to a unit&apos;s growths while in this class. May be negative; leave blank for no change.
+      </p>
+      <div className="chip-wrap">
+        {GROWTH_STATS.map((k) => (
+          <label key={k} className="field" style={{ width: 70 }}>
+            <span>{GROWTH_LABELS[k]}</span>
+            <input
+              type="number"
+              value={draft.growthMods?.[k] ?? ""}
+              onChange={(e) => setGrowthMod(k, e.target.value === "" ? undefined : Number(e.target.value))}
+            />
+          </label>
         ))}
       </div>
 

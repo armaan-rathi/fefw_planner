@@ -66,6 +66,7 @@ export interface GameClass {
   movementType: MovementType;
   proficiencies: string[]; // skillType ids available to this class
   bonusExp?: string[]; // skillType ids this class earns bonus EXP in (shown with a ▲ on the icon)
+  growthMods?: Growths; // growth-rate modifiers (percent, may be negative) applied while in this class
   portrait: string | null;
   // Certification / class-list info
   primarySkills?: SkillReq[];
@@ -88,14 +89,28 @@ export interface PersonalSkill {
 export type Negotiation = "Easy" | "Moderate" | "Difficult";
 export const NEGOTIATIONS: Negotiation[] = ["Easy", "Moderate", "Difficult"];
 
+// Lords / sublords whose paralogue can gate a recruitment.
+export const PARALOGUE_LORDS = ["Cai", "Dietrich", "Theodora", "Leda", "Bertrand", "Talimun", "Orchel", "Anatolia", "Anna"] as const;
+export type ParalogueLord = (typeof PARALOGUE_LORDS)[number];
+
 // Conditions to recruit a unit under a given lord's route. Every field is
 // optional — only the ones filled in are shown.
 export interface RecruitCondition {
   support?: number; // Support Level
   renown?: number; // Renown Level
   negotiation?: Negotiation;
+  paralogue?: string; // a lord/sublord's paralogue must be cleared (ParalogueLord)
+  requirement?: string; // Exact recruitment requirement (free text)
   extra?: string; // Extra objectives (free text)
 }
+
+// Growth rates (percent chance per level-up), one entry per stat.
+export const GROWTH_STATS = ["hp", "str", "mag", "spd", "dex", "def", "res", "lck", "cha"] as const;
+export type GrowthStat = (typeof GROWTH_STATS)[number];
+export const GROWTH_LABELS: Record<GrowthStat, string> = {
+  hp: "HP", str: "STR", mag: "MAG", spd: "SPD", dex: "DEX", def: "DEF", res: "RES", lck: "LCK", cha: "CHA",
+};
+export type Growths = Partial<Record<GrowthStat, number>>;
 
 export interface Unit {
   id: string;
@@ -113,6 +128,7 @@ export interface Unit {
   postTimeskip?: boolean; // only recruitable/available after the timeskip
   possiblyEnemyOnly?: boolean; // may turn out to be enemy-only (shows a "?" on the portrait)
   recruitment?: Record<string, RecruitCondition>; // recruitment conditions keyed by lord's route id
+  growths?: Growths; // growth rates (percent) per stat
 }
 
 export type IconShape = "circle" | "square" | "triangle" | "invtriangle" | "star4" | "star8";
@@ -303,4 +319,6 @@ export interface DB {
   tierRequirements?: Record<string, TierRequirement>; // keyed by tier name
   polls?: Poll[]; // pre-release community polls
   gacha?: GachaConfig; // summon minigame (cards + banners)
+  recruitmentOrder?: string[]; // unit ids, display order on the Recruitment page
+  growthsOnCharPage?: boolean; // show growth rates on the Character Database page
 }

@@ -5,6 +5,8 @@ import { RouteSelection } from "./pages/RouteSelection";
 import { TeamPlanner } from "./pages/TeamPlanner";
 import { OverworldMap } from "./pages/OverworldMap";
 import { CharacterList } from "./pages/CharacterList";
+import { Recruitment } from "./pages/Recruitment";
+import { GrowthRates } from "./pages/GrowthRates";
 import { CastPage } from "./pages/CastPage";
 import { ClassList } from "./pages/ClassList";
 import { TierList } from "./pages/TierList";
@@ -56,15 +58,25 @@ function Shell() {
           </div>
         </div>
         <nav className="mainnav">
-          <NavLink to="/routes">Route Selection</NavLink>
-          <NavLink to="/characters">Character Database</NavLink>
-          <NavLink to="/classes">Class List</NavLink>
-          <NavLink to="/tiers">Tier List</NavLink>
-          <NavLink to="/split">Team Planner</NavLink>
-          <NavLink to="/map">Overworld Map</NavLink>
-          {hasPolls && <NavLink to="/polls">Polls</NavLink>}
-          {gachaVisible && <NavLink to="/gacha">Gacha</NavLink>}
-          {devMode && <NavLink to="/dev">Dev Mode</NavLink>}
+          <div className="navrow">
+            <div className="navrow-links">
+              <NavLink to="/routes">Route Selection</NavLink>
+              <NavLink to="/characters">Character Database</NavLink>
+              <NavLink to="/classes">Class List</NavLink>
+              <NavLink to="/tiers">Tier List</NavLink>
+              <NavLink to="/split">Team Planner</NavLink>
+              <NavLink to="/map">Overworld Map</NavLink>
+              {hasPolls && <NavLink to="/polls">Polls</NavLink>}
+              {gachaVisible && <NavLink to="/gacha">Gacha</NavLink>}
+              {devMode && <NavLink to="/dev">Dev Mode</NavLink>}
+            </div>
+          </div>
+          <div className="navrow">
+            <div className="navrow-links">
+              <NavLink to="/recruitment">Recruitment</NavLink>
+              <NavLink to="/growths">Growth Rates</NavLink>
+            </div>
+          </div>
         </nav>
         <div className="topbar-right">
           <SaveBadge />
@@ -84,6 +96,8 @@ function Shell() {
             <Route path="/" element={<Navigate to="/routes" replace />} />
             <Route path="/routes" element={<RouteSelection />} />
             <Route path="/characters" element={<CharacterList />} />
+            <Route path="/recruitment" element={<Recruitment />} />
+            <Route path="/growths" element={<GrowthRates />} />
             <Route path="/classes" element={<ClassList />} />
             <Route path="/tiers" element={<TierList />} />
             <Route path="/gods" element={<CastPage kind="gods" title="Gods" blurb="Deities you can worship at temples." />} />

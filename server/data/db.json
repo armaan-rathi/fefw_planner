@@ -227,7 +227,7 @@
         "brawl",
         "infantry"
       ],
-      "portrait": "/images/mtkapt47g941oy.jpg",
+      "portrait": "/images/mui7ya2eu337sa.png",
       "masteredAbility": {
         "name": "Attack Basics",
         "description": "",
@@ -251,7 +251,11 @@
           "skillTypeId": "sword",
           "grade": "D"
         }
-      ]
+      ],
+      "growthMods": {
+        "hp": 10,
+        "str": 10
+      }
     },
     {
       "id": "class_ms4godtdiwiu4",
@@ -265,12 +269,19 @@
         "infantry",
         "armor"
       ],
-      "portrait": "/images/mtkaq47i1mgqy7.jpg",
+      "portrait": "/images/mui7y4h048f1qu.png",
       "bonusExp": [
         "lance",
         "axe",
         "armor"
-      ]
+      ],
+      "growthMods": {
+        "hp": 10,
+        "str": 5,
+        "spd": -5,
+        "dex": 5,
+        "def": 10
+      }
     },
     {
       "id": "class_ms3o7vuixzpwd",
@@ -284,7 +295,7 @@
         "infantry",
         "authority"
       ],
-      "portrait": "/images/mtkaqrz5lytdnm.jpg",
+      "portrait": "/images/mui7xv4jt5fqot.png",
       "bonusExp": [
         "sword",
         "bow"
@@ -315,7 +326,12 @@
           "skillTypeId": "sword",
           "grade": "D"
         }
-      ]
+      ],
+      "growthMods": {
+        "hp": 10,
+        "spd": 10,
+        "dex": 10
+      }
     },
     {
       "id": "class_ornius",
@@ -330,7 +346,7 @@
         "sword",
         "axe"
       ],
-      "portrait": "/images/mtkaysgnzwv7sl.jpg",
+      "portrait": "/images/mui7xiae2t8ihl.png",
       "bonusExp": [
         "lance",
         "riding",
@@ -373,7 +389,13 @@
           "skillTypeId": "riding",
           "grade": "E+"
         }
-      ]
+      ],
+      "growthMods": {
+        "hp": 10,
+        "spd": 10,
+        "res": 5,
+        "lck": 5
+      }
     },
     {
       "id": "class_diviner",
@@ -389,7 +411,7 @@
         "faith",
         "authority"
       ],
-      "portrait": "/images/mtkara2rdzjlth.jpg",
+      "portrait": "/images/mui7xcb4mklp5p.png",
       "masteredAbility": {
         "name": "Magic Basics",
         "description": "Grants Mag/Res +1",
@@ -408,7 +430,15 @@
           "skillTypeId": "reason",
           "grade": "D"
         }
-      ]
+      ],
+      "growthMods": {
+        "hp": 5,
+        "str": -5,
+        "mag": 15,
+        "dex": 5,
+        "def": -5,
+        "res": 10
+      }
     },
     {
       "id": "class_ms4axgsyshgov",
@@ -420,11 +450,18 @@
         "sword",
         "infantry"
       ],
-      "portrait": "/images/mtkari702k0yfw.jpg",
+      "portrait": "/images/mui7x6dy84x26t.png",
       "bonusExp": [
         "sword",
         "infantry"
-      ]
+      ],
+      "growthMods": {
+        "hp": 10,
+        "spd": 15,
+        "dex": 10,
+        "lck": 5,
+        "cha": 5
+      }
     },
     {
       "id": "class_brigand",
@@ -436,10 +473,18 @@
         "axe",
         "infantry"
       ],
-      "portrait": "/images/mtkaro0atlkcw7.jpg",
+      "portrait": "/images/mui7wzq0d6ebts.png",
       "bonusExp": [
         "axe"
-      ]
+      ],
+      "growthMods": {
+        "hp": 15,
+        "str": 15,
+        "mag": -5,
+        "spd": 5,
+        "def": 5,
+        "cha": 5
+      }
     },
     {
       "id": "class_ms3pz9lcrqj1y",
@@ -451,7 +496,7 @@
         "brawl",
         "infantry"
       ],
-      "portrait": "/images/mtkaqyqpbedgoo.jpg",
+      "portrait": "/images/mui7wt3ggz75c8.png",
       "bonusExp": [
         "brawl"
       ],
@@ -482,7 +527,16 @@
           "skillTypeId": "brawl",
           "grade": "C"
         }
-      ]
+      ],
+      "growthMods": {
+        "hp": 15,
+        "str": 10,
+        "mag": -5,
+        "spd": 10,
+        "dex": 5,
+        "def": 10,
+        "cha": 5
+      }
     },
     {
       "id": "class_archer",
@@ -494,7 +548,7 @@
         "bow",
         "infantry"
       ],
-      "portrait": "/images/mtkarsls0ur6pk.jpg",
+      "portrait": "/images/mui7wie6slul05.png",
       "bonusExp": [
         "bow",
         "infantry"
@@ -526,7 +580,15 @@
           "skillTypeId": "bow",
           "grade": "C"
         }
-      ]
+      ],
+      "growthMods": {
+        "hp": 10,
+        "spd": 10,
+        "dex": 15,
+        "def": 5,
+        "lck": 5,
+        "cha": 5
+      }
     },
     {
       "id": "class_ms4czk6qlyp89",
@@ -539,11 +601,18 @@
         "bow",
         "authority"
       ],
-      "portrait": "/images/mtkarz7alm6o5m.jpg",
+      "portrait": "/images/mui7wck93ieruo.png",
       "bonusExp": [
         "sword",
         "bow"
-      ]
+      ],
+      "growthMods": {
+        "hp": 10,
+        "spd": 15,
+        "dex": 10,
+        "res": 5,
+        "lck": 5
+      }
     },
     {
       "id": "class_armored",
@@ -558,12 +627,22 @@
         "sword",
         "infantry"
       ],
-      "portrait": "/images/mtkas483flqfah.jpg",
+      "portrait": "/images/mui7w6fkw4gknj.png",
       "bonusExp": [
         "lance",
         "axe",
         "armor"
-      ]
+      ],
+      "growthMods": {
+        "hp": 10,
+        "str": 10,
+        "mag": -5,
+        "spd": -5,
+        "dex": 5,
+        "def": 25,
+        "res": -5,
+        "cha": 5
+      }
     },
     {
       "id": "class_ms3o5tbsmr10n",
@@ -577,11 +656,98 @@
         "axe",
         "riding"
       ],
-      "portrait": "/images/mtkasafo08x9fq.jpg",
+      "portrait": "/images/mui7w06pmz6dnh.png",
       "bonusExp": [
         "lance",
         "riding"
-      ]
+      ],
+      "growthMods": {
+        "hp": 10,
+        "str": 5,
+        "mag": -5,
+        "spd": 5,
+        "def": 5,
+        "lck": 5,
+        "cha": 10
+      }
+    },
+    {
+      "id": "class_msesr7wkkfq1k",
+      "name": "Charioteer",
+      "tier": "Specialty",
+      "description": "",
+      "movementType": "cavalry",
+      "proficiencies": [
+        "lance",
+        "riding",
+        "bow"
+      ],
+      "portrait": "/images/mui8ax26ea8ptg.png",
+      "growthMods": {
+        "hp": 10,
+        "str": 5,
+        "mag": -5,
+        "spd": -5,
+        "dex": 15,
+        "def": 10,
+        "lck": 5,
+        "cha": 10
+      }
+    },
+    {
+      "id": "class_ms4gsshgfxh2m",
+      "name": "Armored Ornius Rider",
+      "tier": "Specialty",
+      "description": "",
+      "movementType": "flying",
+      "proficiencies": [
+        "riding",
+        "flying",
+        "sword",
+        "lance",
+        "axe"
+      ],
+      "portrait": "/images/mui8b1lnzcyol2.png",
+      "bonusExp": [
+        "lance",
+        "riding",
+        "flying",
+        "axe"
+      ],
+      "growthMods": {
+        "hp": 10,
+        "mag": -5,
+        "spd": 10,
+        "dex": 5,
+        "def": 10,
+        "lck": 5,
+        "cha": 5
+      }
+    },
+    {
+      "id": "class_ms4aypejltz4f",
+      "name": "Wing Soldier",
+      "tier": "Specialty",
+      "description": "",
+      "movementType": "flying",
+      "proficiencies": [
+        "lance",
+        "flying"
+      ],
+      "portrait": "/images/mui7vsiccxft8i.png",
+      "bonusExp": [
+        "lance",
+        "flying"
+      ],
+      "growthMods": {
+        "hp": 10,
+        "mag": 5,
+        "dex": 5,
+        "def": 5,
+        "res": 5,
+        "lck": 5,
+        "cha": 10
+      }
     },
     {
       "id": "class_soldier",
@@ -597,12 +763,22 @@
         "brawl",
         "authority"
       ],
-      "portrait": "/images/mtkayz0ppzwf66.jpg",
+      "portrait": "/images/mui7v4svenzern.png",
       "bonusExp": [
         "reason",
         "faith",
         "sword"
-      ]
+      ],
+      "growthMods": {
+        "hp": 5,
+        "str": -5,
+        "mag": 15,
+        "spd": 10,
+        "dex": 10,
+        "def": -10,
+        "res": 10,
+        "lck": 10
+      }
     },
     {
       "id": "class_priest",
@@ -618,62 +794,23 @@
         "authority",
         "infantry"
       ],
-      "portrait": "/images/mtkaskqbn7wgt6.jpg",
+      "portrait": "/images/mui7vfub908djz.png",
       "bonusExp": [
         "brawl",
         "reason",
         "faith"
-      ]
-    },
-    {
-      "id": "class_ms4aypejltz4f",
-      "name": "Wing Soldier",
-      "tier": "Specialty",
-      "description": "",
-      "movementType": "flying",
-      "proficiencies": [
-        "lance",
-        "flying"
       ],
-      "portrait": "/images/mtkasry0sh6m15.png",
-      "bonusExp": [
-        "lance",
-        "flying"
-      ]
-    },
-    {
-      "id": "class_msesr7wkkfq1k",
-      "name": "Charioteer",
-      "tier": "Specialty",
-      "description": "",
-      "movementType": "cavalry",
-      "proficiencies": [
-        "lance",
-        "riding",
-        "bow"
-      ],
-      "portrait": "/images/mtkat0wxlpu50x.png"
-    },
-    {
-      "id": "class_ms4gsshgfxh2m",
-      "name": "Armored Ornius Rider",
-      "tier": "Specialty",
-      "description": "",
-      "movementType": "flying",
-      "proficiencies": [
-        "riding",
-        "flying",
-        "sword",
-        "lance",
-        "axe"
-      ],
-      "portrait": "/images/mtkat6otnxzued.png",
-      "bonusExp": [
-        "lance",
-        "riding",
-        "flying",
-        "axe"
-      ]
+      "growthMods": {
+        "hp": 5,
+        "str": -5,
+        "mag": 10,
+        "spd": 5,
+        "dex": 5,
+        "def": -10,
+        "res": 15,
+        "lck": 15,
+        "cha": 10
+      }
     },
     {
       "id": "class_msesiwe2poyjo",
@@ -685,7 +822,7 @@
         "sword",
         "infantry"
       ],
-      "portrait": "/images/mtk9vmup19uu87.jpg",
+      "portrait": "/images/mui9gaoqliy7cg.png",
       "classAbilities": [
         {
           "name": "Combat Arts +2",
@@ -707,39 +844,174 @@
         "name": "Relaxed Alertness?",
         "description": "",
         "icon": null
+      },
+      "growthMods": {
+        "hp": 10,
+        "str": 5,
+        "spd": 15,
+        "dex": 10,
+        "res": -5,
+        "lck": 5,
+        "cha": 5
       }
     },
     {
-      "id": "class_msetrpdjsxewf",
-      "name": "Bishop",
+      "id": "class_msu3frkcvmepo",
+      "name": "Dancer",
       "tier": "Advanced",
       "description": "",
       "movementType": "infantry",
       "proficiencies": [
-        "faith"
+        "sword",
+        "bow",
+        "infantry"
       ],
-      "portrait": "/images/mtk9wbtt3q3rln.jpg",
-      "classAbilities": [
+      "portrait": "/images/mui9gg8infbm37.png",
+      "growthMods": {
+        "hp": 15,
+        "str": 5,
+        "spd": 25,
+        "dex": 10,
+        "res": 5,
+        "lck": 10,
+        "cha": 20
+      },
+      "secondarySkills": [
         {
-          "name": "White-Magic Seeker",
-          "description": "",
-          "icon": null
+          "skillTypeId": "bow",
+          "grade": "B"
         },
         {
-          "name": "Magic Heal +10",
-          "description": "",
-          "icon": null
-        },
-        {
-          "name": "",
-          "description": "",
-          "icon": null
+          "skillTypeId": "sword",
+          "grade": "B"
         }
+      ]
+    },
+    {
+      "id": "class_msetqo1fy8nq2",
+      "name": "Warrior",
+      "tier": "Advanced",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "axe"
       ],
-      "masteredAbility": {
-        "name": "Forcefield",
-        "description": "",
-        "icon": null
+      "portrait": "/images/mui9glk1rm8iat.png",
+      "growthMods": {
+        "hp": 20,
+        "str": 20,
+        "mag": -5,
+        "def": 5,
+        "res": -5,
+        "cha": 5
+      }
+    },
+    {
+      "id": "class_mtkahoxeqwsgg",
+      "name": "Blacksmith",
+      "tier": "Advanced",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "axe",
+        "reason",
+        "infantry"
+      ],
+      "bonusExp": [],
+      "portrait": "/images/mui9gqj7u84e2u.png",
+      "growthMods": {
+        "hp": 15,
+        "str": 10,
+        "mag": 10,
+        "dex": 5,
+        "def": 10,
+        "res": 10,
+        "cha": 5
+      },
+      "primarySkills": [
+        {
+          "skillTypeId": "reason",
+          "grade": "D"
+        },
+        {
+          "skillTypeId": "axe",
+          "grade": "C"
+        }
+      ]
+    },
+    {
+      "id": "class_msetr0h42u767",
+      "name": "Sniper",
+      "tier": "Advanced",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "bow"
+      ],
+      "portrait": "/images/mui9gw77cyrgji.png",
+      "growthMods": {
+        "hp": 10,
+        "str": 5,
+        "spd": 10,
+        "dex": 20,
+        "def": 5,
+        "res": 5,
+        "lck": 5,
+        "cha": 5
+      }
+    },
+    {
+      "id": "class_mtkai70xjhe5w",
+      "name": "Ranger",
+      "tier": "Advanced",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "sword",
+        "bow",
+        "infantry"
+      ],
+      "bonusExp": [],
+      "portrait": "/images/mui8c28g3f8cwk.png",
+      "growthMods": {
+        "hp": 10,
+        "str": 5,
+        "spd": 15,
+        "dex": 15,
+        "res": 10,
+        "lck": 15
+      },
+      "secondarySkills": [
+        {
+          "skillTypeId": "bow",
+          "grade": "B"
+        },
+        {
+          "skillTypeId": "sword",
+          "grade": "B"
+        }
+      ]
+    },
+    {
+      "id": "class_msetrbyatzubm",
+      "name": "Forest Knight",
+      "tier": "Advanced",
+      "description": "",
+      "movementType": "cavalry",
+      "proficiencies": [
+        "bow",
+        "riding"
+      ],
+      "portrait": "/images/mui9h45wfolo9v.png",
+      "growthMods": {
+        "hp": 10,
+        "str": 5,
+        "spd": 10,
+        "dex": 10,
+        "def": 5,
+        "res": 5,
+        "lck": 5,
+        "cha": 5
       }
     },
     {
@@ -753,7 +1025,7 @@
         "lance",
         "riding"
       ],
-      "portrait": "/images/mtka5gsfbk4gf1.jpg",
+      "portrait": "/images/mui9h8vfe1tynh.png",
       "classAbilities": [
         {
           "name": "Mount/Dismount",
@@ -791,20 +1063,16 @@
           "skillTypeId": "sword",
           "grade": "B"
         }
-      ]
-    },
-    {
-      "id": "class_msess55qlmn68",
-      "name": "Cataphract",
-      "tier": "Advanced",
-      "description": "",
-      "movementType": "cavalry",
-      "proficiencies": [
-        "lance",
-        "armor",
-        "riding"
       ],
-      "portrait": "/images/mtkahj3xv82msy.png"
+      "growthMods": {
+        "hp": 10,
+        "str": 10,
+        "mag": -5,
+        "def": 5,
+        "res": 10,
+        "lck": 5,
+        "cha": 10
+      }
     },
     {
       "id": "class_msessr8yloah4",
@@ -817,7 +1085,7 @@
         "faith",
         "infantry"
       ],
-      "portrait": "/images/mtkadjzkl153xl.jpg",
+      "portrait": "/images/mui9hfjzj3fnco.png",
       "bonusExp": [
         "lance",
         "faith",
@@ -839,53 +1107,22 @@
           "description": "",
           "icon": null
         }
+      ],
+      "growthMods": {
+        "hp": 10,
+        "str": 10,
+        "dex": 5,
+        "def": 10,
+        "res": 15,
+        "lck": 5,
+        "cha": 5
+      },
+      "primarySkills": [
+        {
+          "skillTypeId": "lance",
+          "grade": "B"
+        }
       ]
-    },
-    {
-      "id": "class_msestmmmbo13w",
-      "name": "Elephant Rider",
-      "tier": "Advanced",
-      "description": "",
-      "movementType": "cavalry",
-      "proficiencies": [
-        "riding"
-      ],
-      "portrait": "/images/mtkathpldqbv8m.jpg"
-    },
-    {
-      "id": "class_msesu5uoyogcq",
-      "name": "Dragoon",
-      "tier": "Advanced",
-      "description": "",
-      "movementType": "flying",
-      "proficiencies": [
-        "lance",
-        "flying",
-        "axe"
-      ],
-      "portrait": "/images/mtkatofl5mi4ze.jpg"
-    },
-    {
-      "id": "class_msetqo1fy8nq2",
-      "name": "Warrior",
-      "tier": "Advanced",
-      "description": "",
-      "movementType": "infantry",
-      "proficiencies": [
-        "axe"
-      ],
-      "portrait": "/images/mtk9wjjpwxnfal.jpg"
-    },
-    {
-      "id": "class_msetr0h42u767",
-      "name": "Sniper",
-      "tier": "Advanced",
-      "description": "",
-      "movementType": "infantry",
-      "proficiencies": [
-        "bow"
-      ],
-      "portrait": "/images/mtk9wozi9bb2v9.jpg"
     },
     {
       "id": "class_msetr4gmgpksi",
@@ -898,7 +1135,7 @@
         "axe",
         "armor"
       ],
-      "portrait": "/images/mtka61zjuncg1c.jpg",
+      "portrait": "/images/mui9hlg9t7d68u.png",
       "primarySkills": [
         {
           "skillTypeId": "armor",
@@ -936,19 +1173,210 @@
         "name": "Focused Counter",
         "description": "",
         "icon": null
+      },
+      "growthMods": {
+        "hp": 15,
+        "str": 15,
+        "mag": -5,
+        "spd": -10,
+        "dex": 5,
+        "def": 30,
+        "res": -10,
+        "cha": 5
       }
     },
     {
-      "id": "class_msetrbyatzubm",
-      "name": "Forest Knight",
+      "id": "class_msess55qlmn68",
+      "name": "Cataphract",
       "tier": "Advanced",
       "description": "",
       "movementType": "cavalry",
       "proficiencies": [
-        "bow",
+        "lance",
+        "armor",
         "riding"
       ],
-      "portrait": "/images/mtk9x3urumdn9m.jpg"
+      "portrait": "/images/mui9hql5t0iqpk.png",
+      "growthMods": {
+        "hp": 15,
+        "str": 15,
+        "mag": -5,
+        "spd": -10,
+        "def": 10,
+        "res": -5,
+        "cha": 5
+      },
+      "primarySkills": [
+        {
+          "skillTypeId": "armor",
+          "grade": "E+"
+        },
+        {
+          "skillTypeId": "riding",
+          "grade": "D"
+        }
+      ],
+      "secondarySkills": [
+        {
+          "skillTypeId": "axe",
+          "grade": "B"
+        },
+        {
+          "skillTypeId": "lance",
+          "grade": "B"
+        }
+      ]
+    },
+    {
+      "id": "class_msestmmmbo13w",
+      "name": "Elephant Rider",
+      "tier": "Advanced",
+      "description": "",
+      "movementType": "cavalry",
+      "proficiencies": [
+        "riding"
+      ],
+      "portrait": "/images/mui9hveujzqxzl.png",
+      "growthMods": {
+        "hp": 20,
+        "str": 10,
+        "mag": -5,
+        "spd": 20,
+        "dex": -10,
+        "def": 15,
+        "res": -5,
+        "lck": 5,
+        "cha": 10
+      },
+      "primarySkills": [
+        {
+          "skillTypeId": "riding",
+          "grade": "C"
+        }
+      ]
+    },
+    {
+      "id": "class_msesu5uoyogcq",
+      "name": "Dragoon",
+      "tier": "Advanced",
+      "description": "",
+      "movementType": "flying",
+      "proficiencies": [
+        "lance",
+        "flying",
+        "axe",
+        "sword"
+      ],
+      "portrait": "/images/mui9i450fnakma.png",
+      "growthMods": {
+        "hp": 15,
+        "str": 5,
+        "dex": 5,
+        "def": 10,
+        "res": 10,
+        "lck": 10,
+        "cha": 5
+      },
+      "primarySkills": [
+        {
+          "skillTypeId": "flying",
+          "grade": "C"
+        }
+      ],
+      "secondarySkills": [
+        {
+          "skillTypeId": "axe",
+          "grade": "B"
+        },
+        {
+          "skillTypeId": "lance",
+          "grade": "B"
+        }
+      ]
+    },
+    {
+      "id": "class_mui94guwf2y78",
+      "name": "Caladrius",
+      "tier": "Advanced",
+      "description": "",
+      "movementType": "cavalry",
+      "proficiencies": [
+        "sword",
+        "reason",
+        "riding",
+        "flying",
+        "lance",
+        "axe"
+      ],
+      "bonusExp": [],
+      "portrait": "/images/mui94myiuhcpws.png",
+      "growthMods": {
+        "hp": 15,
+        "mag": 10,
+        "spd": 5,
+        "dex": 10,
+        "def": 10,
+        "res": 10,
+        "lck": 5,
+        "cha": 5
+      },
+      "primarySkills": [
+        {
+          "skillTypeId": "riding",
+          "grade": "D"
+        },
+        {
+          "skillTypeId": "reason",
+          "grade": "B"
+        }
+      ]
+    },
+    {
+      "id": "class_msetrpdjsxewf",
+      "name": "Bishop",
+      "tier": "Advanced",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "faith",
+        "reason",
+        "infantry",
+        "axe",
+        "brawl"
+      ],
+      "portrait": "/images/mui9icjvyaycs5.png",
+      "classAbilities": [
+        {
+          "name": "White-Magic Seeker",
+          "description": "",
+          "icon": null
+        },
+        {
+          "name": "Magic Heal +10",
+          "description": "",
+          "icon": null
+        },
+        {
+          "name": "",
+          "description": "",
+          "icon": null
+        }
+      ],
+      "masteredAbility": {
+        "name": "Forcefield",
+        "description": "",
+        "icon": null
+      },
+      "growthMods": {
+        "hp": 10,
+        "str": -5,
+        "mag": 15,
+        "dex": 5,
+        "def": -10,
+        "res": 20,
+        "lck": 20,
+        "cha": 10
+      }
     },
     {
       "id": "class_msetrmdx8vazf",
@@ -963,7 +1391,7 @@
         "faith",
         "infantry"
       ],
-      "portrait": "/images/mtka5pdgoxroc8.png",
+      "portrait": "/images/mui9ij877rpdzj.png",
       "classAbilities": [
         {
           "name": "Black-Magic Seeker",
@@ -998,123 +1426,56 @@
         "reason",
         "faith",
         "infantry"
-      ]
-    },
-    {
-      "id": "class_msq4e4acse4cv",
-      "name": "War Monk",
-      "tier": "Advanced",
-      "description": "",
-      "movementType": "infantry",
-      "proficiencies": [
-        "brawl",
-        "faith",
-        "infantry"
       ],
-      "portrait": "/images/mtkau7qc8pqls8.jpg",
-      "bonusExp": [
-        "brawl",
-        "faith",
-        "infantry"
-      ]
-    },
-    {
-      "id": "class_mtkahoxeqwsgg",
-      "name": "??? (War Master?)",
-      "tier": "Advanced",
-      "description": "",
-      "movementType": "infantry",
-      "proficiencies": [],
-      "bonusExp": [],
-      "portrait": "/images/mtkahxtafnvmgr.png"
-    },
-    {
-      "id": "class_mtkai70xjhe5w",
-      "name": "??? (Assassin?)",
-      "tier": "Advanced",
-      "description": "",
-      "movementType": "infantry",
-      "proficiencies": [],
-      "bonusExp": [],
-      "portrait": "/images/mtkaiaotiqbepi.png"
+      "growthMods": {
+        "hp": 10,
+        "str": -5,
+        "mag": 20,
+        "spd": 5,
+        "dex": 15,
+        "def": -10,
+        "res": 15,
+        "lck": 10
+      }
     },
     {
       "id": "class_mtkaif9kfay5s",
-      "name": "??? (Mage Knight?)",
-      "tier": "Advanced",
-      "description": "",
-      "movementType": "cavalry",
-      "proficiencies": [],
-      "bonusExp": [],
-      "portrait": "/images/mtkaim2op8umrh.png"
-    },
-    {
-      "id": "class_msu3e3ohulo8g",
-      "name": "High Savant",
+      "name": "Troubadour",
       "tier": "Advanced",
       "description": "",
       "movementType": "cavalry",
       "proficiencies": [
         "reason",
-        "riding",
-        "sword"
-      ],
-      "portrait": null
-    },
-    {
-      "id": "class_msu3eg9fgd3kr",
-      "name": "Orichaldia",
-      "tier": "Advanced",
-      "description": "",
-      "movementType": "cavalry",
-      "proficiencies": [],
-      "portrait": null
-    },
-    {
-      "id": "class_msu3fed8hm3kb",
-      "name": "Swordmaster",
-      "tier": "Advanced",
-      "description": "",
-      "movementType": "infantry",
-      "proficiencies": [
-        "sword",
-        "infantry"
-      ],
-      "portrait": null
-    },
-    {
-      "id": "class_msu3fkxu6tsm1",
-      "name": "Sentinel",
-      "tier": "Advanced",
-      "description": "",
-      "movementType": "infantry",
-      "proficiencies": [
-        "lance",
-        "infantry"
-      ],
-      "portrait": null
-    },
-    {
-      "id": "class_msu3frkcvmepo",
-      "name": "Dancer?",
-      "tier": "Advanced",
-      "description": "",
-      "movementType": "infantry",
-      "proficiencies": [],
-      "portrait": "/images/mtkatx8vzzkrq2.jpg"
-    },
-    {
-      "id": "class_mt5q5rsvrljkv",
-      "name": "Fortress Knight",
-      "tier": "Advanced",
-      "description": "",
-      "movementType": "infantry",
-      "proficiencies": [
-        "lance",
-        "armor"
+        "faith",
+        "riding"
       ],
       "bonusExp": [],
-      "portrait": null
+      "portrait": "/images/mui8cbbdn325hg.png",
+      "growthMods": {
+        "hp": 10,
+        "mag": 15,
+        "spd": 5,
+        "def": 5,
+        "res": 15,
+        "lck": 15,
+        "cha": 10
+      },
+      "primarySkills": [
+        {
+          "skillTypeId": "riding",
+          "grade": "D"
+        }
+      ],
+      "secondarySkills": [
+        {
+          "skillTypeId": "reason",
+          "grade": "B"
+        },
+        {
+          "skillTypeId": "faith",
+          "grade": "B"
+        }
+      ]
     }
   ],
   "units": [
@@ -1152,6 +1513,22 @@
           "Aubin",
           "Duality"
         ]
+      },
+      "recruitment": {
+        "cai": {
+          "extra": "Starting unit"
+        }
+      },
+      "growths": {
+        "hp": 45,
+        "str": 45,
+        "mag": 40,
+        "spd": 45,
+        "dex": 45,
+        "def": 35,
+        "res": 35,
+        "lck": 40,
+        "cha": 40
       }
     },
     {
@@ -1185,6 +1562,22 @@
           "Lamine",
           "Duality"
         ]
+      },
+      "recruitment": {
+        "dietrich": {
+          "extra": "Starting unit"
+        }
+      },
+      "growths": {
+        "hp": 50,
+        "str": 45,
+        "mag": 30,
+        "spd": 50,
+        "dex": 60,
+        "def": 40,
+        "res": 30,
+        "lck": 50,
+        "cha": 60
       }
     },
     {
@@ -1218,6 +1611,22 @@
         "crest": [
           "Duality"
         ]
+      },
+      "recruitment": {
+        "theodora": {
+          "extra": "Starting unit"
+        }
+      },
+      "growths": {
+        "hp": 70,
+        "str": 50,
+        "mag": 30,
+        "spd": 40,
+        "dex": 40,
+        "def": 40,
+        "res": 30,
+        "lck": 30,
+        "cha": 50
       }
     },
     {
@@ -1253,6 +1662,22 @@
           "Dominic",
           "Duality"
         ]
+      },
+      "recruitment": {
+        "leda": {
+          "extra": "Starting unit"
+        }
+      },
+      "growths": {
+        "hp": 40,
+        "str": 35,
+        "mag": 35,
+        "spd": 65,
+        "dex": 50,
+        "def": 30,
+        "res": 35,
+        "lck": 25,
+        "cha": 55
       }
     },
     {
@@ -1283,6 +1708,40 @@
       "fields": {
         "faction": "Ribeira Winds",
         "backstory": "Cai’s childhood friend. An avid reader, who has a wide range of knowledge despite being only 15 years old. She lives with her grandfather, who’s a former tactician, and as his granddaughter, she’s inherited his keen talent for strategy.\n\nLikes: Libraries, discussing love, grandfather, board games"
+      },
+      "recruitment": {
+        "cai": {
+          "extra": "Starting unit"
+        },
+        "dietrich": {
+          "support": 3,
+          "renown": 9,
+          "paralogue": "Cai",
+          "requirement": "3000G"
+        },
+        "theodora": {
+          "support": 3,
+          "renown": 10,
+          "paralogue": "Cai",
+          "requirement": "3000G"
+        },
+        "leda": {
+          "support": 3,
+          "renown": 8,
+          "paralogue": "Cai",
+          "requirement": "3000G"
+        }
+      },
+      "growths": {
+        "hp": 30,
+        "str": 25,
+        "mag": 45,
+        "spd": 35,
+        "dex": 40,
+        "def": 20,
+        "res": 40,
+        "lck": 50,
+        "cha": 45
       }
     },
     {
@@ -1312,6 +1771,28 @@
       "fields": {
         "faction": "House Lamine",
         "backstory": "An enigmatic missionary of the Church of Seiros, from the distant land of Fódlan. While rational, he often looks down on others, calling them “beasts”. He and Dietrich share the same hometown, but didn’t know each other.\n\nLikes: Various types of pain, talking to intelligent people"
+      },
+      "recruitment": {
+        "dietrich": {
+          "extra": "Starting unit"
+        },
+        "leda": {
+          "support": 3,
+          "renown": 9,
+          "paralogue": "Dietrich",
+          "requirement": "They Have Lost"
+        }
+      },
+      "growths": {
+        "hp": 40,
+        "str": 25,
+        "mag": 50,
+        "spd": 35,
+        "dex": 40,
+        "def": 30,
+        "res": 45,
+        "lck": 35,
+        "cha": 30
       }
     },
     {
@@ -1345,6 +1826,22 @@
       "fields": {
         "faction": "Megaira's Beacon",
         "backstory": "Theodora’s right hand man; a wise general from the Kingdom of Saramis who continues to serve on the front-lines. In a kingdom where writing is forbidden, he records all of Saramis’s history and wisdom in his memory.\n\nLikes: Memorising knowledge, philosophical debates, reciting poetry"
+      },
+      "recruitment": {
+        "theodora": {
+          "extra": "Starting unit"
+        }
+      },
+      "growths": {
+        "hp": 35,
+        "str": 35,
+        "mag": 45,
+        "spd": 40,
+        "dex": 50,
+        "def": 30,
+        "res": 40,
+        "lck": 35,
+        "cha": 40
       }
     },
     {
@@ -1377,6 +1874,32 @@
       "fields": {
         "faction": "Rose Tempest",
         "backstory": "A veteran warrior nicknamed the “Demon Bear”. He served Leda’s father for many years and sometimes calls Leda “m’lady” out of habit. He follows Leda on her quest for revenge, but has complicated feelings about it.\n\nLikes: Loyalty, mentoring promising young people, imagining Leda’s happiness"
+      },
+      "recruitment": {
+        "dietrich": {
+          "support": 3,
+          "renown": 8,
+          "paralogue": "Leda"
+        },
+        "theodora": {
+          "support": 3,
+          "renown": 8,
+          "paralogue": "Leda"
+        },
+        "leda": {
+          "extra": "Starting unit"
+        }
+      },
+      "growths": {
+        "hp": 50,
+        "str": 50,
+        "mag": 20,
+        "spd": 25,
+        "dex": 40,
+        "def": 45,
+        "res": 20,
+        "lck": 30,
+        "cha": 35
       }
     },
     {
@@ -1411,8 +1934,33 @@
         "leda": {
           "support": 3,
           "renown": 10,
+          "requirement": "Quest",
           "negotiation": "Difficult"
+        },
+        "cai": {
+          "extra": "Starting unit"
+        },
+        "dietrich": {
+          "support": 3,
+          "renown": 8,
+          "requirement": "Quest"
+        },
+        "theodora": {
+          "support": 3,
+          "renown": 7,
+          "requirement": "Quest"
         }
+      },
+      "growths": {
+        "hp": 40,
+        "str": 35,
+        "mag": 20,
+        "spd": 45,
+        "dex": 60,
+        "def": 30,
+        "res": 25,
+        "lck": 35,
+        "cha": 30
       }
     },
     {
@@ -1447,6 +1995,37 @@
         "crest": [
           "Blaiddyd"
         ]
+      },
+      "recruitment": {
+        "cai": {
+          "support": 3,
+          "renown": 7,
+          "requirement": "Quest"
+        },
+        "dietrich": {
+          "extra": "Starting unit"
+        },
+        "theodora": {
+          "support": 3,
+          "renown": 9,
+          "requirement": "Quest"
+        },
+        "leda": {
+          "support": 3,
+          "renown": 6,
+          "requirement": "Quest"
+        }
+      },
+      "growths": {
+        "hp": 55,
+        "str": 55,
+        "mag": 20,
+        "spd": 35,
+        "dex": 35,
+        "def": 45,
+        "res": 25,
+        "lck": 35,
+        "cha": 30
       }
     },
     {
@@ -1477,6 +2056,22 @@
       "fields": {
         "faction": "Megaira's Beacon",
         "backstory": "A tough general of Saramis, known for his strength and defences; he refers to Queen Theodora as “young lady”.\nLike Bonaparte, he served the kingdom since the previous king and has achieved many military feats on the battlefield.\nBad at thinking and remembering names.\n\nLikes: alcohol, fighting, singing, socialising"
+      },
+      "recruitment": {
+        "theodora": {
+          "extra": "Starting unit"
+        }
+      },
+      "growths": {
+        "hp": 55,
+        "str": 60,
+        "mag": 15,
+        "spd": 25,
+        "dex": 30,
+        "def": 45,
+        "res": 20,
+        "lck": 40,
+        "cha": 35
       }
     },
     {
@@ -1508,6 +2103,37 @@
       "fields": {
         "faction": "Rose Tempest",
         "backstory": "A mysterious bard who appears during Leda’s path of vengeance. Calls himself the “Whimsical Wind.” He’s flirtatious, hitting on every beautiful woman he sees, but also has keen perception and is well-educated.\n\nLikes: Goddess Karla, all women, poetry"
+      },
+      "recruitment": {
+        "cai": {
+          "support": 3,
+          "renown": 9,
+          "requirement": "Quest"
+        },
+        "dietrich": {
+          "support": 3,
+          "renown": 9,
+          "requirement": "Quest"
+        },
+        "theodora": {
+          "support": 1,
+          "renown": 5,
+          "requirement": "Quest"
+        },
+        "leda": {
+          "extra": "Starting unit"
+        }
+      },
+      "growths": {
+        "hp": 40,
+        "str": 40,
+        "mag": 40,
+        "spd": 45,
+        "dex": 50,
+        "def": 35,
+        "res": 35,
+        "lck": 50,
+        "cha": 45
       }
     },
     {
@@ -1543,8 +2169,33 @@
         "leda": {
           "support": 3,
           "renown": 8,
+          "requirement": "Quest",
           "negotiation": "Difficult"
+        },
+        "cai": {
+          "extra": "Starting unit"
+        },
+        "dietrich": {
+          "support": 3,
+          "renown": 5,
+          "requirement": "Quest"
+        },
+        "theodora": {
+          "support": 3,
+          "renown": 6,
+          "requirement": "Quest"
         }
+      },
+      "growths": {
+        "hp": 45,
+        "str": 40,
+        "mag": 40,
+        "spd": 35,
+        "dex": 40,
+        "def": 35,
+        "res": 45,
+        "lck": 55,
+        "cha": 50
       }
     },
     {
@@ -1578,6 +2229,37 @@
       "fields": {
         "faction": "House Lamine",
         "backstory": "An ex-mercenary who came to Dagsion to fund her only daughter’s education. She was once a formidable warrior known as “Mikaela the Ironblood”, her name even reaching Buccar, the “Demon Bear of Baphos”.\n\nLikes: Taking care of others, brewing tasty coffee"
+      },
+      "recruitment": {
+        "cai": {
+          "support": 3,
+          "renown": 5,
+          "requirement": "3000G"
+        },
+        "dietrich": {
+          "extra": "Starting unit"
+        },
+        "theodora": {
+          "support": 3,
+          "renown": 8,
+          "requirement": "3000G"
+        },
+        "leda": {
+          "support": 3,
+          "renown": 6,
+          "requirement": "3000G"
+        }
+      },
+      "growths": {
+        "hp": 40,
+        "str": 45,
+        "mag": 30,
+        "spd": 40,
+        "dex": 35,
+        "def": 40,
+        "res": 30,
+        "lck": 35,
+        "cha": 40
       }
     },
     {
@@ -1609,6 +2291,37 @@
       "fields": {
         "faction": "Megaira's Beacon",
         "backstory": "A genius Saraminian knight. Hails from a renowned family; his uncle serves as chancellor, and his father is a great warrior whose name is etched in the kingdom’s history. He’s loyal and capable, but his desire to succeed without relying on his family can cause him to act rashly.\n\nLikes: Gazing at the sky"
+      },
+      "recruitment": {
+        "cai": {
+          "support": 3,
+          "renown": 8,
+          "requirement": "5 Iron Spear"
+        },
+        "dietrich": {
+          "support": 3,
+          "renown": 6,
+          "requirement": "5 Iron Spear"
+        },
+        "theodora": {
+          "extra": "Starting unit"
+        },
+        "leda": {
+          "support": 3,
+          "renown": 7,
+          "requirement": "5 Iron Spear"
+        }
+      },
+      "growths": {
+        "hp": 45,
+        "str": 40,
+        "mag": 25,
+        "spd": 50,
+        "dex": 35,
+        "def": 40,
+        "res": 25,
+        "lck": 30,
+        "cha": 30
       }
     },
     {
@@ -1637,6 +2350,37 @@
       },
       "fields": {
         "faction": "Rose Tempest"
+      },
+      "recruitment": {
+        "cai": {
+          "support": 3,
+          "renown": 8,
+          "requirement": "3 Quests"
+        },
+        "dietrich": {
+          "support": 3,
+          "renown": 6,
+          "requirement": "3 Quests"
+        },
+        "theodora": {
+          "support": 3,
+          "renown": 9,
+          "requirement": "3 Quests"
+        },
+        "leda": {
+          "extra": "Starting unit"
+        }
+      },
+      "growths": {
+        "hp": 35,
+        "str": 35,
+        "mag": 50,
+        "spd": 35,
+        "dex": 35,
+        "def": 30,
+        "res": 40,
+        "lck": 40,
+        "cha": 40
       }
     },
     {
@@ -1666,6 +2410,37 @@
       "fields": {
         "faction": "Megaira's Beacon",
         "backstory": "A young Saraminian archer. Values money above all else and often lacks manners, even towards her liege, Theodora. Yet her archery skill is undeniable. Her background is slightly complicated; she hails from a renowned family, but her father lost his title after the civil war.\n\nLikes: Gold coins, jewels, older men"
+      },
+      "recruitment": {
+        "cai": {
+          "support": 2,
+          "renown": 8,
+          "requirement": "5000G"
+        },
+        "dietrich": {
+          "support": 2,
+          "renown": 8,
+          "requirement": "5000G"
+        },
+        "theodora": {
+          "extra": "Starting unit"
+        },
+        "leda": {
+          "support": 2,
+          "renown": 7,
+          "requirement": "5000G"
+        }
+      },
+      "growths": {
+        "hp": 35,
+        "str": 35,
+        "mag": 30,
+        "spd": 40,
+        "dex": 55,
+        "def": 30,
+        "res": 35,
+        "lck": 50,
+        "cha": 25
       }
     },
     {
@@ -1693,46 +2468,37 @@
       "fields": {
         "faction": "Rose Tempest",
         "backstory": "A young, innocent girl who ran away from home to search for her missing mother. While tracking her mother’s whereabouts, she runs into Leda during her path of vengeance. She dresses and speaks like a boy to protect herself from danger.\n\nLikes: Father, mother, sweets"
-      }
-    },
-    {
-      "id": "unit_ms7k4uf6l9u72",
-      "name": "Nathan",
-      "portrait": "/images/msebw5dvivv5jv.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": "class_ms3o5tbsmr10n",
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
       },
-      "fields": {
-        "backstory": "A valiant general of the Arago Kingdom, boasting overwhelming attack power.\n\nTogether with the Green Knight Creek, he is known as the \"Twin Pillars of Arago,\" his fame resounding throughout Dagda.\n\nDeeply loyal, with a personality so straightforward it's almost stubbornly honest.\n\nLikes: The red armor bestowed by the king, upholding loyalty, training in all martial arts",
-        "faction": "Arago Elites"
-      }
-    },
-    {
-      "id": "unit_ms7k892bd498m",
-      "name": "Creek",
-      "portrait": "/images/mset655oi745t4.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": "class_ms3o5tbsmr10n",
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
+      "recruitment": {
+        "cai": {
+          "support": 3,
+          "renown": 9,
+          "requirement": "3 Glirmosa"
+        },
+        "dietrich": {
+          "support": 3,
+          "renown": 7,
+          "requirement": "3 Glirmosa"
+        },
+        "theodora": {
+          "support": 3,
+          "renown": 9,
+          "requirement": "3 Glirmosa"
+        },
+        "leda": {
+          "extra": "Starting unit"
+        }
       },
-      "fields": {
-        "faction": "Arago Elites",
-        "backstory": "A general of the Arago Kingdom, possessing exceptional intellect and shrewdness.\nTogether with the Red Knight Nathan, he is known as one of the \"Twin Pillars of Arago,\" renowned throughout Dagza.\nA sarcastic man with a cynical outlook on everything.\n\nLikes: The green armor bestowed by the king, beautiful women, research on military strategy"
+      "growths": {
+        "hp": 50,
+        "str": 50,
+        "mag": 25,
+        "spd": 50,
+        "dex": 50,
+        "def": 40,
+        "res": 30,
+        "lck": 30,
+        "cha": 40
       }
     },
     {
@@ -1849,7 +2615,26 @@
         "faction": "Mane of Flame",
         "backstory": "A top-tier martial artist possessing both wisdom and valor who operates as a gladiator in the Dagsion arena.\nHaving trained in the eastern land of Sai, he boasts an immense wealth of combat experience.\n\nLikes: Tea from Sai, Ferghanan horses, dueling, calligraphy"
       },
-      "possiblyEnemyOnly": false
+      "possiblyEnemyOnly": false,
+      "recruitment": {
+        "dietrich": {
+          "support": 3,
+          "renown": 10,
+          "paralogue": "Bertrand",
+          "requirement": "They Have Lost"
+        }
+      },
+      "growths": {
+        "hp": 50,
+        "str": 50,
+        "mag": 20,
+        "spd": 40,
+        "dex": 45,
+        "def": 45,
+        "res": 25,
+        "lck": 40,
+        "cha": 45
+      }
     },
     {
       "id": "unit_ms4awma1bic3w",
@@ -1872,6 +2657,37 @@
         "crest": [
           "The Beast"
         ]
+      },
+      "recruitment": {
+        "cai": {
+          "support": 3,
+          "renown": 10,
+          "paralogue": "Talimun",
+          "requirement": "Yes x3"
+        },
+        "dietrich": {
+          "support": 3,
+          "renown": 7,
+          "paralogue": "Talimun",
+          "requirement": "Yes x3"
+        },
+        "theodora": {
+          "support": 3,
+          "renown": 9,
+          "paralogue": "Talimun",
+          "requirement": "Yes x3"
+        }
+      },
+      "growths": {
+        "hp": 40,
+        "str": 35,
+        "mag": 35,
+        "spd": 50,
+        "dex": 50,
+        "def": 35,
+        "res": 30,
+        "lck": 40,
+        "cha": 45
       }
     },
     {
@@ -1897,8 +2713,35 @@
         "leda": {
           "support": 3,
           "renown": 8,
+          "paralogue": "Orchel",
           "extra": "Complete ???"
+        },
+        "cai": {
+          "support": 3,
+          "renown": 10,
+          "paralogue": "Orchel"
+        },
+        "dietrich": {
+          "support": 3,
+          "renown": 9,
+          "paralogue": "Orchel"
+        },
+        "theodora": {
+          "support": 2,
+          "renown": 8,
+          "paralogue": "Orchel"
         }
+      },
+      "growths": {
+        "hp": 45,
+        "str": 40,
+        "mag": 20,
+        "spd": 45,
+        "dex": 60,
+        "def": 35,
+        "res": 20,
+        "lck": 35,
+        "cha": 30
       }
     },
     {
@@ -1918,6 +2761,31 @@
       },
       "fields": {
         "faction": "Brides of the Pale Raven"
+      },
+      "recruitment": {
+        "dietrich": {
+          "support": 3,
+          "renown": 10,
+          "paralogue": "Anatolia",
+          "requirement": "Saramis, Da Mina, Grounded Ship"
+        },
+        "leda": {
+          "support": 3,
+          "renown": 8,
+          "paralogue": "Anatolia",
+          "requirement": "Saramis, Da Mina, Grounded Ship"
+        }
+      },
+      "growths": {
+        "hp": 35,
+        "str": 30,
+        "mag": 45,
+        "spd": 35,
+        "dex": 50,
+        "def": 30,
+        "res": 45,
+        "lck": 35,
+        "cha": 40
       }
     },
     {
@@ -1938,6 +2806,39 @@
       "fields": {
         "faction": "Mane of Flame",
         "backstory": "A litterateur working as a playwright at Dagsion. Full of creativity, with an endless desire to incorporate anything that catches her interest into her works. Also an advanced magic user.\n\nLikes: Herself, searching for dramatic subjects, studying people for research, seeing how others act"
+      },
+      "recruitment": {
+        "cai": {
+          "support": 3,
+          "renown": 10,
+          "requirement": "8000G"
+        },
+        "dietrich": {
+          "support": 2,
+          "renown": 8,
+          "requirement": "8000G"
+        },
+        "theodora": {
+          "support": 3,
+          "renown": 6,
+          "requirement": "8000G"
+        },
+        "leda": {
+          "support": 3,
+          "renown": 10,
+          "requirement": "8000G"
+        }
+      },
+      "growths": {
+        "hp": 30,
+        "str": 30,
+        "mag": 45,
+        "spd": 40,
+        "dex": 40,
+        "def": 20,
+        "res": 40,
+        "lck": 45,
+        "cha": 30
       }
     },
     {
@@ -1958,6 +2859,39 @@
       "fields": {
         "faction": "Moon's Lie",
         "backstory": "A combat specialist who has made it out from the verge of death countless times. He met Talimun while travelling the land as a mercenary, and was hired to work for the Vandahl Merchant Company. He is addicted to the thrill of the battlefield, constantly chasing that high.\n\nLikes: exchanges of life and death, playing with women"
+      },
+      "recruitment": {
+        "cai": {
+          "support": 3,
+          "renown": 8,
+          "requirement": "500G?, Tails"
+        },
+        "dietrich": {
+          "support": 3,
+          "renown": 7,
+          "requirement": "500G?, Tails"
+        },
+        "theodora": {
+          "support": 3,
+          "renown": 7,
+          "requirement": "500G?, Tails"
+        },
+        "leda": {
+          "support": 3,
+          "renown": 6,
+          "requirement": "500G, Tails"
+        }
+      },
+      "growths": {
+        "hp": 50,
+        "str": 50,
+        "mag": 20,
+        "spd": 35,
+        "dex": 40,
+        "def": 40,
+        "res": 25,
+        "lck": 50,
+        "cha": 35
       }
     },
     {
@@ -1986,8 +2920,35 @@
         "leda": {
           "support": 3,
           "renown": 8,
+          "requirement": "1 Paradise Fish",
           "negotiation": "Difficult"
+        },
+        "cai": {
+          "support": 3,
+          "renown": 6,
+          "requirement": "1 Paradise Fish"
+        },
+        "dietrich": {
+          "support": 3,
+          "renown": 8,
+          "requirement": "1 Paradise Fish"
+        },
+        "theodora": {
+          "support": 3,
+          "renown": 6,
+          "requirement": "1 Paradise Fish"
         }
+      },
+      "growths": {
+        "hp": 45,
+        "str": 45,
+        "mag": 35,
+        "spd": 35,
+        "dex": 50,
+        "def": 30,
+        "res": 45,
+        "lck": 50,
+        "cha": 40
       }
     },
     {
@@ -2008,6 +2969,39 @@
       "fields": {
         "faction": "Brides of the Pale Raven",
         "backstory": "An energetic young swordsman who travels with Anatolia. Trains every day, aiming to become the strongest. Bad at keeping secrets and frequently leaks information about his hometown. Self-conscious about his shortness.\n\nLikes: Physical activity, justice, fighting, good food, combat training"
+      },
+      "recruitment": {
+        "cai": {
+          "support": 3,
+          "renown": 6,
+          "requirement": "3 Sandworm Meat"
+        },
+        "dietrich": {
+          "support": 3,
+          "renown": 10,
+          "requirement": "3 Sandworm Meat"
+        },
+        "theodora": {
+          "support": 2,
+          "renown": 6,
+          "requirement": "3 Sandworm Meat"
+        },
+        "leda": {
+          "support": 3,
+          "renown": 9,
+          "requirement": "3 Sandworm Meat"
+        }
+      },
+      "growths": {
+        "hp": 45,
+        "str": 55,
+        "mag": 25,
+        "spd": 45,
+        "dex": 50,
+        "def": 35,
+        "res": 25,
+        "lck": 30,
+        "cha": 25
       }
     },
     {
@@ -2030,6 +3024,39 @@
       "fields": {
         "faction": "Mane of Flame",
         "backstory": "A hulking gladiator known as the “Butcher.” He’s over 2.5 meters tall and boasts overwhelming strength and a rock-hard body. He often portrays the villain at the Arena and, despite his skills, he’s not very popular.\n\nLikes: Rampaging, food, animals, smoking meat"
+      },
+      "recruitment": {
+        "cai": {
+          "support": 3,
+          "renown": 7,
+          "requirement": "3 Giant's Meat"
+        },
+        "dietrich": {
+          "support": 3,
+          "renown": 6,
+          "requirement": "3 Giant's Meat"
+        },
+        "theodora": {
+          "support": 3,
+          "renown": 9,
+          "requirement": "3 Giant's Meat"
+        },
+        "leda": {
+          "support": 3,
+          "renown": 10,
+          "requirement": "3 Giant's Meat"
+        }
+      },
+      "growths": {
+        "hp": 55,
+        "str": 60,
+        "mag": 5,
+        "spd": 15,
+        "dex": 30,
+        "def": 50,
+        "res": 20,
+        "lck": 35,
+        "cha": 20
       }
     },
     {
@@ -2050,6 +3077,39 @@
       "fields": {
         "faction": "Moon's Lie",
         "backstory": "The daughter of a distinguished military officer, she works for Vandahl Trading led by Talimun.\nHaving received an elite education from a young age, she possesses top-tier swordsmanship skills and a refined upbringing.\nTrue to her age, she is keenly interested in matters of romance.\n\nLikes: Writing stories, appreciating art, talking about love and romance"
+      },
+      "recruitment": {
+        "cai": {
+          "support": 3,
+          "renown": 9,
+          "requirement": "Quest"
+        },
+        "dietrich": {
+          "support": 3,
+          "renown": 9,
+          "requirement": "Quest"
+        },
+        "theodora": {
+          "support": 3,
+          "renown": 7,
+          "requirement": "Quest"
+        },
+        "leda": {
+          "support": 3,
+          "renown": 7,
+          "requirement": "Quest"
+        }
+      },
+      "growths": {
+        "hp": 40,
+        "str": 35,
+        "mag": 20,
+        "spd": 55,
+        "dex": 45,
+        "def": 30,
+        "res": 20,
+        "lck": 30,
+        "cha": 30
       }
     },
     {
@@ -2077,9 +3137,31 @@
       "recruitment": {
         "cai": {
           "support": 3,
-          "renown": 10,
+          "renown": 6,
+          "requirement": "Quest",
           "negotiation": "Difficult"
+        },
+        "theodora": {
+          "support": 3,
+          "renown": 6,
+          "requirement": "Quest"
+        },
+        "leda": {
+          "support": 3,
+          "renown": 10,
+          "requirement": "Quest"
         }
+      },
+      "growths": {
+        "hp": 45,
+        "str": 45,
+        "mag": 30,
+        "spd": 40,
+        "dex": 45,
+        "def": 40,
+        "res": 35,
+        "lck": 30,
+        "cha": 50
       }
     },
     {
@@ -2108,8 +3190,35 @@
         "leda": {
           "support": 2,
           "renown": 5,
+          "requirement": "2 Kothar Gar",
           "negotiation": "Moderate"
+        },
+        "cai": {
+          "support": 3,
+          "renown": 7,
+          "requirement": "2 Kothar Gar"
+        },
+        "dietrich": {
+          "support": 3,
+          "renown": 10,
+          "requirement": "2 Kothar Gar"
+        },
+        "theodora": {
+          "support": 2,
+          "renown": 5,
+          "requirement": "2 Kothar Gar"
         }
+      },
+      "growths": {
+        "hp": 50,
+        "str": 55,
+        "mag": 20,
+        "spd": 30,
+        "dex": 35,
+        "def": 45,
+        "res": 20,
+        "lck": 25,
+        "cha": 30
       }
     },
     {
@@ -2137,8 +3246,35 @@
       "recruitment": {
         "dietrich": {
           "support": 3,
-          "renown": 6
+          "renown": 6,
+          "requirement": "Quest"
+        },
+        "cai": {
+          "support": 3,
+          "renown": 10,
+          "requirement": "Quest"
+        },
+        "theodora": {
+          "support": 3,
+          "renown": 9,
+          "requirement": "Quest"
+        },
+        "leda": {
+          "support": 3,
+          "renown": 10,
+          "requirement": "Quest"
         }
+      },
+      "growths": {
+        "hp": 40,
+        "str": 35,
+        "mag": 15,
+        "spd": 60,
+        "dex": 45,
+        "def": 35,
+        "res": 25,
+        "lck": 40,
+        "cha": 40
       }
     },
     {
@@ -2162,6 +3298,39 @@
         "crest": [
           "Fraldarius"
         ]
+      },
+      "recruitment": {
+        "cai": {
+          "support": 3,
+          "renown": 8,
+          "requirement": "3000G"
+        },
+        "dietrich": {
+          "support": 3,
+          "renown": 7,
+          "requirement": "3000G"
+        },
+        "theodora": {
+          "support": 3,
+          "renown": 9,
+          "requirement": "3000G"
+        },
+        "leda": {
+          "support": 3,
+          "renown": 5,
+          "requirement": "3000G"
+        }
+      },
+      "growths": {
+        "hp": 30,
+        "str": 35,
+        "mag": 55,
+        "spd": 30,
+        "dex": 40,
+        "def": 20,
+        "res": 45,
+        "lck": 25,
+        "cha": 40
       }
     },
     {
@@ -2187,8 +3356,35 @@
         "leda": {
           "support": 3,
           "renown": 5,
+          "requirement": "3 Iron Sword",
           "negotiation": "Moderate"
+        },
+        "cai": {
+          "support": 3,
+          "renown": 7,
+          "requirement": "3 Iron Sword"
+        },
+        "dietrich": {
+          "support": 3,
+          "renown": 9,
+          "requirement": "3 Iron Sword"
+        },
+        "theodora": {
+          "support": 3,
+          "renown": 5,
+          "requirement": "3 Iron Sword"
         }
+      },
+      "growths": {
+        "hp": 35,
+        "str": 35,
+        "mag": 35,
+        "spd": 55,
+        "dex": 40,
+        "def": 40,
+        "res": 30,
+        "lck": 30,
+        "cha": 30
       }
     },
     {
@@ -2209,66 +3405,39 @@
       "fields": {
         "faction": "Brides of the Pale Raven",
         "backstory": "An archer girl who has come to travel alongside Anatolia and the others.\nBefore arriving in Dagsion, she was a traveling performer in a circus troupe.\nHaving grown up in an ordinary farming family, she dislikes conflict.\n\nLikes: Growing vegetables, shopping, street performing, cheering crowds"
-      }
-    },
-    {
-      "id": "unit_msu45xa66phts",
-      "name": "Long",
-      "portrait": "/images/mtlm8xskh5gb7m.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": null,
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
       },
-      "fields": {
-        "faction": "Brides of the Pale Raven"
+      "recruitment": {
+        "cai": {
+          "support": 3,
+          "renown": 5,
+          "requirement": "10 Dates"
+        },
+        "dietrich": {
+          "support": 3,
+          "renown": 9,
+          "requirement": "10 Dates"
+        },
+        "theodora": {
+          "support": 3,
+          "renown": 7,
+          "requirement": "10 Dates"
+        },
+        "leda": {
+          "support": 3,
+          "renown": 7,
+          "requirement": "10 Dates"
+        }
       },
-      "possiblyEnemyOnly": true
-    },
-    {
-      "id": "unit_msestcd1erzsr",
-      "name": "Anna",
-      "portrait": "/images/mu6zed5lmt8u7s.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": "class_msestmmmbo13w",
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {
-        "faction": "Temple Army",
-        "backstory": "A priest in Solel's Temple who helps manage the Heroic Games.\nShe makes her announcements to the participants with brightness and enthusiasm.\n\nLikes: Gossip, making sales, getting good deals"
-      }
-    },
-    {
-      "id": "unit_msu448hnym292",
-      "name": "Centurio",
-      "portrait": "/images/mt0es67fwdiblf.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": "class_armored",
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "Sturdy Conundrum",
-        "description": ""
-      },
-      "fields": {
-        "backstory": "A knight serving at Aurora’s Temple. Known as “Corundum”, he’s a “Vulcan”, member of an elite squadron chosen from the temple priests. An old friend of Cai’s father, Castor, and the two share a deep mutual trust.\n\nLikes: Serving Aurora’s temple, patrolling",
-        "faction": "Temple Army"
+      "growths": {
+        "hp": 35,
+        "str": 35,
+        "mag": 30,
+        "spd": 45,
+        "dex": 60,
+        "def": 30,
+        "res": 25,
+        "lck": 40,
+        "cha": 35
       }
     },
     {
@@ -2294,6 +3463,34 @@
       "fields": {
         "faction": "Temple Army",
         "backstory": "A priestess serving at the Solel Temple in the upper levels of Dagsion.\nShe's an extreme glutton, and it seems all her salary goes toward food expenses.\nShe has a gentle personality, but spent her childhood surrounded by roughnecks.\n\nLikes: Delicious food, the moment when food is served (and soon vanishes)"
+      },
+      "recruitment": {
+        "cai": {
+          "support": 3,
+          "renown": 9
+        },
+        "dietrich": {
+          "support": 3,
+          "renown": 9
+        },
+        "theodora": {
+          "renown": 2
+        },
+        "leda": {
+          "support": 3,
+          "renown": 7
+        }
+      },
+      "growths": {
+        "hp": 35,
+        "str": 30,
+        "mag": 45,
+        "spd": 40,
+        "dex": 30,
+        "def": 25,
+        "res": 40,
+        "lck": 40,
+        "cha": 30
       }
     },
     {
@@ -2317,6 +3514,35 @@
       "fields": {
         "faction": "Thundercloud Knights",
         "backstory": "A one-eyed veteran knight who proudly calls himself a “General”. Once served as a temple centurion, but lost his position due to a scandal many years ago and now lives as a mercenary.\n\nLikes: The Great August’s tactics, up-and-coming young people, lecturing young people, reading"
+      },
+      "recruitment": {
+        "cai": {
+          "support": 3,
+          "renown": 9
+        },
+        "dietrich": {
+          "support": 2,
+          "renown": 7
+        },
+        "theodora": {
+          "support": 1,
+          "renown": 8
+        },
+        "leda": {
+          "support": 3,
+          "renown": 7
+        }
+      },
+      "growths": {
+        "hp": 50,
+        "str": 35,
+        "mag": 20,
+        "spd": 35,
+        "dex": 50,
+        "def": 35,
+        "res": 25,
+        "lck": 30,
+        "cha": 35
       }
     },
     {
@@ -2340,6 +3566,35 @@
       "fields": {
         "faction": "Silver Knights",
         "backstory": "A lovely pegasus knight who serves at Jurah’s Temple at the upper levels of Dagsion. She’s known as the “Silver Maiden” and has many fans. Since she’s from a renowned family, there are also many who envy her privileged lifestyle.\n\nLikes: Her parents, virtuous men, caring for her beloved steed"
+      },
+      "recruitment": {
+        "cai": {
+          "support": 2,
+          "renown": 7
+        },
+        "dietrich": {
+          "support": 3,
+          "renown": 8
+        },
+        "theodora": {
+          "support": 1,
+          "renown": 6
+        },
+        "leda": {
+          "support": 3,
+          "renown": 10
+        }
+      },
+      "growths": {
+        "hp": 30,
+        "str": 35,
+        "mag": 35,
+        "spd": 55,
+        "dex": 45,
+        "def": 40,
+        "res": 50,
+        "lck": 50,
+        "cha": 30
       }
     },
     {
@@ -2362,6 +3617,39 @@
       "fields": {
         "faction": "Gaia Brigadiers",
         "backstory": "The leader of the \"Gaia Brigade,\" a band of ruthless, villainous bandits.\nUpon hearing rumors of the Heroic Games, he traveled to Dagsion with his henchmen.\nHe possesses a cowardly nature, always targeting the weak first in battle.\n\nLikes: Money, violence, good women, vegetables, drinking with friends"
+      },
+      "recruitment": {
+        "cai": {
+          "support": 3,
+          "renown": 8,
+          "requirement": "10G"
+        },
+        "dietrich": {
+          "support": 3,
+          "renown": 7,
+          "requirement": "10G"
+        },
+        "theodora": {
+          "support": 1,
+          "renown": 4,
+          "requirement": "10G"
+        },
+        "leda": {
+          "support": 2,
+          "renown": 5,
+          "requirement": "10G"
+        }
+      },
+      "growths": {
+        "hp": 40,
+        "str": 30,
+        "mag": 20,
+        "spd": 35,
+        "dex": 60,
+        "def": 30,
+        "res": 25,
+        "lck": 30,
+        "cha": 15
       }
     },
     {
@@ -2384,6 +3672,39 @@
       "fields": {
         "backstory": "The former leader of the brutal and infamous Black Bird Pirates, known by the nickname \"The Monstrous Bird.\"\nBefore visiting Dagsion, he apparently had a falling out with Talimun, the head of Vandahl Trading, and harbors a grudge against him.\n\nLikes: Thievery, the open sea, ships, obedient underlings",
         "faction": "Black Bird Pirates"
+      },
+      "recruitment": {
+        "cai": {
+          "support": 3,
+          "renown": 8,
+          "requirement": "8 Pure Water"
+        },
+        "dietrich": {
+          "support": 1,
+          "renown": 4,
+          "requirement": "3 Pure Water"
+        },
+        "theodora": {
+          "support": 3,
+          "renown": 10,
+          "requirement": "8 Pure Water"
+        },
+        "leda": {
+          "support": 1,
+          "renown": 4,
+          "requirement": "3 Pure Water"
+        }
+      },
+      "growths": {
+        "hp": 55,
+        "str": 40,
+        "mag": 15,
+        "spd": 55,
+        "dex": 50,
+        "def": 30,
+        "res": 15,
+        "lck": 30,
+        "cha": 25
       }
     },
     {
@@ -2408,7 +3729,40 @@
         "faction": "Palma Fighters",
         "backstory": "A female warrior who leads the mercenary group known as \"Palma Rain.\"\nShe originally served a provincial noble of the Kingdom of Arago, but turned to mercenary work after the family fell into ruin several years ago.\n\nLikes: Memories of her spouse, mercenary friends, trying to get rich"
       },
-      "possiblyEnemyOnly": false
+      "possiblyEnemyOnly": false,
+      "recruitment": {
+        "cai": {
+          "support": 1,
+          "renown": 8,
+          "requirement": "2000G"
+        },
+        "dietrich": {
+          "support": 3,
+          "renown": 9,
+          "requirement": "5000G"
+        },
+        "theodora": {
+          "support": 3,
+          "renown": 8,
+          "requirement": "5000G"
+        },
+        "leda": {
+          "support": 2,
+          "renown": 4,
+          "requirement": "500G"
+        }
+      },
+      "growths": {
+        "hp": 50,
+        "str": 40,
+        "mag": 20,
+        "spd": 30,
+        "dex": 45,
+        "def": 45,
+        "res": 25,
+        "lck": 40,
+        "cha": 45
+      }
     },
     {
       "id": "unit_ms4b9qphimjk7",
@@ -2430,6 +3784,39 @@
       "fields": {
         "backstory": "A master archer known as \"Inyoni of the Demon Bow\" who has become the talk of the town.\nShe had shown talent for archery since childhood, but recently she has been performing at a completely different level, and her name has rapidly become widely known.\n\nLikes: Her family and hometown, hunting, farm work, bow maintenance",
         "faction": "Sisters of Bragança"
+      },
+      "recruitment": {
+        "cai": {
+          "support": 3,
+          "renown": 8,
+          "requirement": "6000G"
+        },
+        "dietrich": {
+          "support": 3,
+          "renown": 8,
+          "requirement": "6000G"
+        },
+        "theodora": {
+          "support": 1,
+          "renown": 9,
+          "requirement": "4000G"
+        },
+        "leda": {
+          "support": 1,
+          "renown": 7,
+          "requirement": "3000G"
+        }
+      },
+      "growths": {
+        "hp": 40,
+        "str": 50,
+        "mag": 20,
+        "spd": 35,
+        "dex": 40,
+        "def": 40,
+        "res": 30,
+        "lck": 40,
+        "cha": 30
       }
     },
     {
@@ -2453,6 +3840,34 @@
       "fields": {
         "faction": "Brigid Army",
         "backstory": "A boy who speaks in a somewhat otherworldly manner, using the archaic first-person pronoun \"we.\"\nHe was rescued by the priestess Ultand when he was in trouble and unfamiliar with the ways of Dagsion, and he appears to feel a sense of indebtedness ever since.\n\nLikes: The spirits, the sun, his hometown"
+      },
+      "recruitment": {
+        "cai": {
+          "support": 1,
+          "renown": 9,
+          "paralogue": "Bertrand"
+        },
+        "dietrich": {
+          "support": 3,
+          "renown": 8,
+          "paralogue": "Bertrand"
+        },
+        "theodora": {
+          "support": 2,
+          "renown": 7,
+          "paralogue": "Bertrand"
+        }
+      },
+      "growths": {
+        "hp": 30,
+        "str": 30,
+        "mag": 25,
+        "spd": 60,
+        "dex": 45,
+        "def": 30,
+        "res": 30,
+        "lck": 45,
+        "cha": 30
       }
     },
     {
@@ -2473,6 +3888,39 @@
       "fields": {
         "backstory": "A proud warrior of the \"Har Hali tribe,\" a people who revere strength.\nFollowing the disappearance of their chieftain, this warrior is leading the tribe as a proxy.\nIt appears he holds the Demon God Balor in special reverence.\n\nLikes: Tradition, honor, great power",
         "faction": "Har Hali Tribe"
+      },
+      "recruitment": {
+        "cai": {
+          "support": 2,
+          "renown": 6,
+          "requirement": "3 Iron Bow"
+        },
+        "dietrich": {
+          "support": 1,
+          "renown": 9,
+          "requirement": "2 Iron Bow"
+        },
+        "theodora": {
+          "support": 1,
+          "renown": 6,
+          "requirement": "3 Iron Bow"
+        },
+        "leda": {
+          "support": 3,
+          "renown": 9,
+          "requirement": "3 Iron Bow"
+        }
+      },
+      "growths": {
+        "hp": 50,
+        "str": 50,
+        "mag": 15,
+        "spd": 55,
+        "dex": 45,
+        "def": 20,
+        "res": 15,
+        "lck": 25,
+        "cha": 35
       }
     },
     {
@@ -2496,6 +3944,34 @@
       },
       "fields": {
         "backstory": "A lively and carefree mercenary. Has survived countless battlefields and his friends call him the “Unkillable Guzran”. He’s ignored a lot because he’s always bragging, but he’s genuinely capable.\n\nLikes: Booze, women, interesting people, young greenhorns, boasting"
+      },
+      "recruitment": {
+        "cai": {
+          "renown": 2
+        },
+        "dietrich": {
+          "support": 3,
+          "renown": 8
+        },
+        "theodora": {
+          "support": 3,
+          "renown": 8
+        },
+        "leda": {
+          "support": 1,
+          "renown": 3
+        }
+      },
+      "growths": {
+        "hp": 45,
+        "str": 45,
+        "mag": 20,
+        "spd": 50,
+        "dex": 45,
+        "def": 35,
+        "res": 20,
+        "lck": 45,
+        "cha": 30
       }
     },
     {
@@ -2528,8 +4004,35 @@
         "dietrich": {
           "support": 2,
           "renown": 5,
+          "requirement": "2 Bronze Axe",
           "negotiation": "Moderate"
+        },
+        "cai": {
+          "support": 1,
+          "renown": 6,
+          "requirement": "2 Bronze Axe"
+        },
+        "theodora": {
+          "support": 3,
+          "renown": 5,
+          "requirement": "3 Iron Axe"
+        },
+        "leda": {
+          "support": 3,
+          "renown": 10,
+          "requirement": "3 Iron Axe"
         }
+      },
+      "growths": {
+        "hp": 45,
+        "str": 40,
+        "mag": 30,
+        "spd": 45,
+        "dex": 40,
+        "def": 30,
+        "res": 25,
+        "lck": 35,
+        "cha": 35
       }
     },
     {
@@ -2552,6 +4055,39 @@
       },
       "fields": {
         "backstory": "A high-spirited young man who makes a living as a mercenary in Dagsion.\nHe once served as a knight in the Kingdom of Arago to protect the people's happiness, but he fled Arago out of disgust for the king's self-righteous actions.\n\nLikes: Chivalry, self-discipline, his beloved horse Rocinan"
+      },
+      "recruitment": {
+        "cai": {
+          "support": 3,
+          "renown": 10,
+          "requirement": "4000G"
+        },
+        "dietrich": {
+          "support": 2,
+          "renown": 3,
+          "requirement": "800G"
+        },
+        "theodora": {
+          "support": 3,
+          "renown": 10,
+          "requirement": "4000G"
+        },
+        "leda": {
+          "support": 1,
+          "renown": 6,
+          "requirement": "1500G"
+        }
+      },
+      "growths": {
+        "hp": 45,
+        "str": 40,
+        "mag": 25,
+        "spd": 35,
+        "dex": 45,
+        "def": 40,
+        "res": 25,
+        "lck": 35,
+        "cha": 35
       }
     },
     {
@@ -2577,9 +4113,31 @@
       },
       "recruitment": {
         "leda": {
-          "support": 1,
           "renown": 2
+        },
+        "cai": {
+          "support": 3,
+          "renown": 10
+        },
+        "dietrich": {
+          "support": 1,
+          "renown": 8
+        },
+        "theodora": {
+          "support": 3,
+          "renown": 7
         }
+      },
+      "growths": {
+        "hp": 35,
+        "str": 35,
+        "mag": 35,
+        "spd": 55,
+        "dex": 50,
+        "def": 30,
+        "res": 35,
+        "lck": 40,
+        "cha": 45
       }
     },
     {
@@ -2608,7 +4166,30 @@
         "cai": {
           "support": 1,
           "renown": 4
+        },
+        "dietrich": {
+          "support": 1,
+          "renown": 6
+        },
+        "theodora": {
+          "support": 1,
+          "renown": 3
+        },
+        "leda": {
+          "support": 3,
+          "renown": 8
         }
+      },
+      "growths": {
+        "hp": 50,
+        "str": 45,
+        "mag": 20,
+        "spd": 45,
+        "dex": 40,
+        "def": 40,
+        "res": 20,
+        "lck": 35,
+        "cha": 30
       }
     },
     {
@@ -2636,8 +4217,33 @@
         "cai": {
           "support": 2,
           "renown": 3,
+          "requirement": "Cheese, Moon, Potatoes",
           "negotiation": "Easy"
+        },
+        "dietrich": {
+          "renown": 2
+        },
+        "theodora": {
+          "support": 3,
+          "renown": 9,
+          "requirement": "Cheese, Moon, Potatoes"
+        },
+        "leda": {
+          "support": 3,
+          "renown": 8,
+          "requirement": "Cheese, Moon, Potatoes"
         }
+      },
+      "growths": {
+        "hp": 50,
+        "str": 35,
+        "mag": 40,
+        "spd": 35,
+        "dex": 35,
+        "def": 30,
+        "res": 40,
+        "lck": 40,
+        "cha": 25
       }
     },
     {
@@ -2664,14 +4270,73 @@
         "leda": {
           "support": 3,
           "renown": 9,
+          "requirement": "3 Question",
           "negotiation": "Easy"
+        },
+        "cai": {
+          "support": 2,
+          "renown": 5,
+          "requirement": "3 Question"
+        },
+        "dietrich": {
+          "support": 3,
+          "renown": 8,
+          "requirement": "3 Question"
+        },
+        "theodora": {
+          "support": 3,
+          "renown": 8,
+          "requirement": "3 Question"
         }
+      },
+      "growths": {
+        "hp": 65,
+        "str": 50,
+        "mag": 15,
+        "spd": 20,
+        "dex": 30,
+        "def": 40,
+        "res": 10,
+        "lck": 25,
+        "cha": 5
       }
     },
     {
-      "id": "unit_msu434ibp8q8s",
-      "name": "Maria",
-      "portrait": "/images/mu4gifzt0bw15f.jpg",
+      "id": "unit_msftrzee97kx3",
+      "name": "Hong Hua",
+      "portrait": "/images/mt9qy9gj7xo5c2.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": "class_msetrmdx8vazf",
+      "boons": [],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "Crimson Magic",
+        "description": "Increase Hit for magic attacks"
+      },
+      "fields": {
+        "backstory": "A woman who assisted in the birth of the \"Savior\", guiding them to the Goddess of Fate Fortuna in the \"Forbidden Lands.\" She is aware of the great sin she committed in the past and is determined to fight, even at the cost of her own life. All to atone for her actions.\n\nLikes: Memories of Happier times",
+        "faction": "Promised One's Army"
+      },
+      "postTimeskip": true,
+      "growths": {
+        "hp": 40,
+        "str": 30,
+        "mag": 45,
+        "spd": 45,
+        "dex": 45,
+        "def": 30,
+        "res": 45,
+        "lck": 30,
+        "cha": 40
+      }
+    },
+    {
+      "id": "unit_mshblux2thfxr",
+      "name": "Troy",
+      "portrait": "/images/mt9qyf522j90b3.jpg",
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
@@ -2684,28 +4349,21 @@
         "description": ""
       },
       "fields": {
-        "faction": "Order of Mithras",
-        "backstory": "A bewitching bard who travels freely through various countries.\nWhile under attack by bandits, she was rescued by Leda and her group who happened to pass by, and for a time, she travels with them.\nThe vihuela \"Moonlit White\" that Maria possesses emits a white glow, as if forming a pair with Leda's \"Obsidian.\"\n\nLikes: People who are easily dealt with, improvising new songs"
+        "backstory": "A reliable old warrior who joined the Savior Army after receiving contact from the person who prepared Eshmel's body.\nShe has known the kings of Saramis throughout history and was called \"Grandma\" by Theodora when she was a child.\n\nLikes: Her comrades, abundant nature, weapon maintenance",
+        "faction": "Promised One's Army"
       },
-      "possiblyEnemyOnly": true
-    },
-    {
-      "id": "unit_msu41p5eli1ai",
-      "name": "Aswan",
-      "portrait": "/images/msu6112ylub3ua.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": null,
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {},
-      "possiblyEnemyOnly": true
+      "postTimeskip": true,
+      "growths": {
+        "hp": 40,
+        "str": 45,
+        "mag": 45,
+        "spd": 50,
+        "dex": 40,
+        "def": 30,
+        "res": 30,
+        "lck": 30,
+        "cha": 30
+      }
     },
     {
       "id": "unit_ms3oeprflm40x",
@@ -2732,49 +4390,18 @@
           "Noa"
         ]
       },
-      "postTimeskip": true
-    },
-    {
-      "id": "unit_msftrzee97kx3",
-      "name": "Hong Hua",
-      "portrait": "/images/mt9qy9gj7xo5c2.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": "class_msetrmdx8vazf",
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "Crimson Magic",
-        "description": "Increase Hit for magic attacks"
-      },
-      "fields": {
-        "backstory": "A woman who assisted in the birth of the \"Savior\", guiding them to the Goddess of Fate Fortuna in the \"Forbidden Lands.\" She is aware of the great sin she committed in the past and is determined to fight, even at the cost of her own life. All to atone for her actions.\n\nLikes: Memories of Happier times",
-        "faction": "Promised One's Army"
-      },
-      "postTimeskip": true
-    },
-    {
-      "id": "unit_mshblux2thfxr",
-      "name": "Troy",
-      "portrait": "/images/mt9qyf522j90b3.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
-      "classId": "class_msq4e4acse4cv",
-      "boons": [],
-      "banes": [],
-      "skillLevels": {},
-      "personalSkill": {
-        "name": "",
-        "description": ""
-      },
-      "fields": {
-        "backstory": "A reliable old warrior who joined the Savior Army after receiving contact from the person who prepared Eshmel's body.\nShe has known the kings of Saramis throughout history and was called \"Grandma\" by Theodora when she was a child.\n\nLikes: Her comrades, abundant nature, weapon maintenance",
-        "faction": "Promised One's Army"
-      },
-      "postTimeskip": true
+      "postTimeskip": true,
+      "growths": {
+        "hp": 50,
+        "str": 45,
+        "mag": 45,
+        "spd": 45,
+        "dex": 45,
+        "def": 35,
+        "res": 40,
+        "lck": 50,
+        "cha": 35
+      }
     }
   ],
   "map": {
@@ -6209,6 +7836,55 @@
       "portrait": "/images/mt0esvw483gff5.jpg",
       "subtitle": "",
       "description": "A beautiful woman who hides half her face behind a veil. Seems to love watching fierce battles and is eagerly spectating the Heroic Games next to Divine Sovereign Solel. Always keeps her plush doll, Babbu, close at hand.\n\nLikes: Blood, rare flowers"
+    },
+    {
+      "id": "cast_mui7h7vxu3mt6",
+      "name": "Maria",
+      "portrait": "/images/mu4gifzt0bw15f.jpg",
+      "subtitle": "Order of Mithras",
+      "description": ""
+    },
+    {
+      "id": "cast_mui7h9sthlank",
+      "name": "Aswan",
+      "portrait": "/images/msu6112ylub3ua.jpg",
+      "subtitle": "",
+      "description": ""
+    },
+    {
+      "id": "cast_mui7hixn6nt22",
+      "name": "Centurio",
+      "portrait": "/images/mt0es67fwdiblf.jpg",
+      "subtitle": "Temple Army",
+      "description": ""
+    },
+    {
+      "id": "cast_mui7hn1nudu9o",
+      "name": "Nathan",
+      "portrait": "/images/msebw5dvivv5jv.jpg",
+      "subtitle": "Arago Elites",
+      "description": ""
+    },
+    {
+      "id": "cast_mui7horsf6mf1",
+      "name": "Creek",
+      "portrait": "/images/mset655oi745t4.jpg",
+      "subtitle": "Arago Elites",
+      "description": ""
+    },
+    {
+      "id": "cast_mui7hvah48e0g",
+      "name": "Long",
+      "portrait": "/images/mtlm8xskh5gb7m.jpg",
+      "subtitle": "Brides of the Pale Raven",
+      "description": ""
+    },
+    {
+      "id": "cast_mui7hxhxetpg9",
+      "name": "Anna",
+      "portrait": "/images/mu6zed5lmt8u7s.jpg",
+      "subtitle": "Temple Army",
+      "description": ""
     }
   ],
   "tierRequirements": {
@@ -6223,6 +7899,9 @@
     "Beginner": {
       "renownLv": 1,
       "idealLv": 5
+    },
+    "Master": {
+      "idealLv": 45
     }
   },
   "polls": [
@@ -6404,15 +8083,15 @@
       },
       {
         "id": "card_unit_ms7k4uf6l9u72",
-        "subjectKind": "unit",
-        "subjectId": "unit_ms7k4uf6l9u72",
+        "subjectKind": "npc",
+        "subjectId": "cast_mui7hn1nudu9o",
         "rarity": "epic",
         "title": "Ruby of Arago"
       },
       {
         "id": "card_unit_ms7k892bd498m",
-        "subjectKind": "unit",
-        "subjectId": "unit_ms7k892bd498m",
+        "subjectKind": "npc",
+        "subjectId": "cast_mui7horsf6mf1",
         "rarity": "epic",
         "title": "Emerald of Arago"
       },
@@ -6558,8 +8237,8 @@
       },
       {
         "id": "card_unit_msu45xa66phts",
-        "subjectKind": "unit",
-        "subjectId": "unit_msu45xa66phts",
+        "subjectKind": "npc",
+        "subjectId": "cast_mui7hvah48e0g",
         "rarity": "rare"
       },
       {
@@ -6597,15 +8276,15 @@
       },
       {
         "id": "card_unit_msestcd1erzsr",
-        "subjectKind": "unit",
-        "subjectId": "unit_msestcd1erzsr",
+        "subjectKind": "npc",
+        "subjectId": "cast_mui7hxhxetpg9",
         "rarity": "epic",
         "title": "Ever-Present Merchant"
       },
       {
         "id": "card_unit_msu448hnym292",
-        "subjectKind": "unit",
-        "subjectId": "unit_msu448hnym292",
+        "subjectKind": "npc",
+        "subjectId": "cast_mui7hixn6nt22",
         "rarity": "epic",
         "title": "Temple Vulcan"
       },
@@ -6685,14 +8364,14 @@
       },
       {
         "id": "card_unit_msu434ibp8q8s",
-        "subjectKind": "unit",
-        "subjectId": "unit_msu434ibp8q8s",
+        "subjectKind": "npc",
+        "subjectId": "cast_mui7h7vxu3mt6",
         "rarity": "rare"
       },
       {
         "id": "card_unit_msu41p5eli1ai",
-        "subjectKind": "unit",
-        "subjectId": "unit_msu41p5eli1ai",
+        "subjectKind": "npc",
+        "subjectId": "cast_mui7h9sthlank",
         "rarity": "rare"
       },
       {
