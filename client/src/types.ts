@@ -124,6 +124,7 @@ export interface Unit {
   banes: string[]; // skillType ids
   skillLevels: Record<string, Grade>; // skillTypeId -> grade
   personalSkill: PersonalSkill;
+  uniqueSkills?: PersonalSkill[]; // up to 2 character-unique skills (one often an upgrade of the other)
   fields: Record<string, FieldValue>; // custom field values keyed by FieldDef.key (e.g. faction)
   postTimeskip?: boolean; // only recruitable/available after the timeskip
   possiblyEnemyOnly?: boolean; // may turn out to be enemy-only (shows a "?" on the portrait)

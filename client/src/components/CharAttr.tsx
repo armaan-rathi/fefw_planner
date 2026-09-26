@@ -98,6 +98,22 @@ export function CharAttr({ id, unit, compact }: { id: string; unit: Unit; compac
     );
   }
 
+  if (id === "uniqueSkills") {
+    const list = (unit.uniqueSkills ?? []).filter((s) => s?.name || s?.description);
+    if (list.length === 0) return null;
+    return (
+      <Field label="Unique Skills" compact={compact} block={!compact}>
+        {list.map((s, i) => (
+          <div key={i} className="unique-skill">
+            {s.name && <b>{s.name}</b>}
+            {s.name && s.description ? " — " : ""}
+            {s.description}
+          </div>
+        ))}
+      </Field>
+    );
+  }
+
   if (id.startsWith("field:")) {
     const key = id.slice(6);
     const f = db.fieldDefs.find((x) => x.key === key);

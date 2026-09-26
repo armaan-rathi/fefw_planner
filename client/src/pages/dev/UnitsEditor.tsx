@@ -7,7 +7,7 @@ import { ImageDrop } from "../../components/ImageDrop";
 import { SkillMark } from "../../components/icons";
 import { unitFaction } from "../../data/units";
 import { fieldOptions } from "../../data/fields";
-import { GRADES, PARALOGUE_LORDS, type FieldValue, type Grade, type RecruitCondition, type Unit } from "../../types";
+import { GRADES, PARALOGUE_LORDS, type FieldValue, type Grade, type PersonalSkill, type RecruitCondition, type Unit } from "../../types";
 
 function blankUnit(): Unit {
   return {
@@ -149,6 +149,18 @@ function UnitModal({ unit, onClose, onSave }: { unit: Unit; onClose: () => void;
   const { db } = useDB();
   const [draft, setDraft] = useState<Unit>(() => JSON.parse(JSON.stringify(unit)));
   const set = (p: Partial<Unit>) => setDraft((d) => ({ ...d, ...p }));
+  const uniqueAt = (i: number) => draft.uniqueSkills?.[i] ?? { name: "", description: "" };
+  function setUnique(i: number, patch: Partial<PersonalSkill>) {
+    setDraft((d) => {
+      const arr = [d.uniqueSkills?.[0] ?? { name: "", description: "" }, d.uniqueSkills?.[1] ?? { name: "", description: "" }];
+      arr[i] = { ...arr[i], ...patch };
+      return { ...d, uniqueSkills: arr };
+    });
+  }
+  function handleSave() {
+    const cleaned = (draft.uniqueSkills ?? []).filter((s) => s.name || s.description);
+    onSave({ ...draft, uniqueSkills: cleaned.length ? cleaned : undefined });
+  }
 
   function toggleRoute(id: string) {
     setDraft((d) => ({
@@ -212,7 +224,7 @@ function UnitModal({ unit, onClose, onSave }: { unit: Unit; onClose: () => void;
       footer={
         <>
           <button className="btn ghost" onClick={onClose}>Cancel</button>
-          <button className="btn primary" onClick={() => onSave(draft)}>Save Unit</button>
+          <button className="btn primary" onClick={handleSave}>Save Unit</button>
         </>
       }
     >
@@ -322,6 +334,20 @@ function UnitModal({ unit, onClose, onSave }: { unit: Unit; onClose: () => void;
           <input type="text" value={draft.personalSkill.description} onChange={(e) => set({ personalSkill: { ...draft.personalSkill, description: e.target.value } })} />
         </label>
       </div>
+
+      <div className="divider" />
+      <h3 className="section-title">Unique skills</h3>
+      <p className="muted" style={{ marginTop: 0, fontSize: 12 }}>Up to two character-unique skills (the second is often an upgrade of the first).</p>
+      {[0, 1].map((i) => (
+        <div className="two-col" key={i} style={{ marginBottom: 6 }}>
+          <label className="field"><span>{`Unique ${i + 1} name`}</span>
+            <input type="text" value={uniqueAt(i).name} onChange={(e) => setUnique(i, { name: e.target.value })} />
+          </label>
+          <label className="field"><span>Effect</span>
+            <input type="text" value={uniqueAt(i).description} onChange={(e) => setUnique(i, { description: e.target.value })} />
+          </label>
+        </div>
+      ))}
 
       <div className="divider" />
       <h3 className="section-title">Recruitment Conditions</h3>

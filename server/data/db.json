@@ -1503,8 +1503,8 @@
       ],
       "skillLevels": {},
       "personalSkill": {
-        "name": "???",
-        "description": "Mov +1"
+        "name": "Brio",
+        "description": "Grants Mov+1."
       },
       "fields": {
         "faction": "Ribeira Winds",
@@ -1529,7 +1529,13 @@
         "res": 35,
         "lck": 40,
         "cha": 40
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Flamekeeper",
+          "description": "Unit and allies are unaffected by Underworld Flames and take half damage from attacks while in Underworld Flames."
+        }
+      ]
     },
     {
       "id": "unit_dietrich",
@@ -1553,7 +1559,7 @@
       "skillLevels": {},
       "personalSkill": {
         "name": "Murderous Intent",
-        "description": "If unit attacks first, Crit +5 during combat"
+        "description": "If unit attacks first, grants Crit+5 during combat."
       },
       "fields": {
         "faction": "House Lamine",
@@ -1578,7 +1584,13 @@
         "res": 30,
         "lck": 50,
         "cha": 60
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Bestial Impulse",
+          "description": "After combat, grants Crit+2 until a unit makes a critical."
+        }
+      ]
     },
     {
       "id": "unit_theodora",
@@ -1603,7 +1615,7 @@
       "skillLevels": {},
       "personalSkill": {
         "name": "Royal Resolve",
-        "description": "Reduces damage?"
+        "description": "Unit takes half damage when attacked. Trigger % = 30."
       },
       "fields": {
         "faction": "Megaira's Beacon",
@@ -1627,7 +1639,17 @@
         "res": 30,
         "lck": 30,
         "cha": 50
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Unstoppable Force",
+          "description": "Multiplies damage by 3 when attacking obstacles."
+        },
+        {
+          "name": "Direct Hit",
+          "description": "Deals +10 damage when attacking with Blaze Arts. Trigger % = 30."
+        }
+      ]
     },
     {
       "id": "unit_leda",
@@ -1652,8 +1674,8 @@
       ],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Blindside",
+        "description": "If unit attacks first, cannot be countered during combat. Trigger % = 5."
       },
       "fields": {
         "faction": "Rose Tempest",
@@ -1678,7 +1700,13 @@
         "res": 35,
         "lck": 25,
         "cha": 55
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Improviso",
+          "description": "After using Blaze Arts during Overblaze, unit can attack."
+        }
+      ]
     },
     {
       "id": "unit_pieter",
@@ -1702,8 +1730,8 @@
       ],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Tactician’s Wit",
+        "description": "Grants Rng+1 to combat arts usable on allies."
       },
       "fields": {
         "faction": "Ribeira Winds",
@@ -1742,7 +1770,17 @@
         "res": 40,
         "lck": 50,
         "cha": 45
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Tactician’s Insight",
+          "description": "After combat, If unit attacked first, inflicts Avo-5 on foe throughout their next combat."
+        },
+        {
+          "name": "Tactician’s Insight+",
+          "description": "After combat, If unit attacked first, inflicts Avo-10 on foe throughout their next combat."
+        }
+      ]
     },
     {
       "id": "unit_tobias",
@@ -1765,8 +1803,8 @@
       ],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Dark Calling",
+        "description": "Inflicts Ddg-5 on adjacent foes."
       },
       "fields": {
         "faction": "House Lamine",
@@ -1793,7 +1831,17 @@
         "res": 45,
         "lck": 35,
         "cha": 30
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Dark Secrets",
+          "description": "Extends range of Dark Calling to 2 spaces."
+        },
+        {
+          "name": "Dark Secrets+",
+          "description": "Extends range of Dark Calling to 3 spaces."
+        }
+      ]
     },
     {
       "id": "unit_bonaparte",
@@ -1820,8 +1868,8 @@
       ],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Sage Advice",
+        "description": "Grants Def+3 to adjacent allies."
       },
       "fields": {
         "faction": "Megaira's Beacon",
@@ -1842,7 +1890,17 @@
         "res": 40,
         "lck": 35,
         "cha": 40
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Additional Intel",
+          "description": "Grants Hit+10 to adjacent allies during their combats. Trigger % = 30."
+        },
+        {
+          "name": "Additional Intel+",
+          "description": "Grants Hit+20 to adjacent allies during their combats. Trigger % = 30."
+        }
+      ]
     },
     {
       "id": "unit_buccar",
@@ -1868,8 +1926,8 @@
       ],
       "skillLevels": {},
       "personalSkill": {
-        "name": "Guardian's Duty?",
-        "description": ""
+        "name": "Guardian’s Duty",
+        "description": "Reduces damage to 90% when attacked."
       },
       "fields": {
         "faction": "Rose Tempest",
@@ -1900,7 +1958,17 @@
         "res": 20,
         "lck": 30,
         "cha": 35
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Retaliatory Blow",
+          "description": "If foe attacks first, multiples damage by 1.3 when attacking. Trigger % = 5."
+        },
+        {
+          "name": "Retaliatory Blow+",
+          "description": "If foe attacks first, multiples damage by 1.3 when attacking. Trigger % = 10."
+        }
+      ]
     },
     {
       "id": "unit_esmeralda",
@@ -1923,8 +1991,8 @@
       ],
       "skillLevels": {},
       "personalSkill": {
-        "name": "Sharpshooter",
-        "description": "Increases the range of bow combat arts"
+        "name": "Steady Aim",
+        "description": "Grants Rng+1 when attacking with a bow combat art."
       },
       "fields": {
         "faction": "Ribeira Winds",
@@ -1961,7 +2029,17 @@
         "res": 25,
         "lck": 35,
         "cha": 30
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Correct for Drift",
+          "description": "If unit’s hit % ≥ 90, grants Hit+10 during combat."
+        },
+        {
+          "name": "Correct for Drift+",
+          "description": "If unit’s hit % ≥ 75, grants Hit+20 during combat."
+        }
+      ]
     },
     {
       "id": "unit_mikaela",
@@ -1986,8 +2064,8 @@
       ],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Brawn",
+        "description": "Reduces Wt of unit’s equipment to 80%."
       },
       "fields": {
         "faction": "House Lamine",
@@ -2026,7 +2104,17 @@
         "res": 25,
         "lck": 35,
         "cha": 30
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Throwing Arm",
+          "description": "If throwing a spear, grants Hit+10, Atk+2 during combat."
+        },
+        {
+          "name": "Throwing Arm+",
+          "description": "If throwing a spear, grants Hit+20, Atk+4 during combat."
+        }
+      ]
     },
     {
       "id": "unit_ms3o1lfxavq3i",
@@ -2050,8 +2138,8 @@
       ],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Power Arts",
+        "description": "Grants Atk+3 when attacking with a combat art."
       },
       "fields": {
         "faction": "Megaira's Beacon",
@@ -2072,7 +2160,17 @@
         "res": 20,
         "lck": 40,
         "cha": 35
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "All-Out Attack",
+          "description": "Multiplies damage by 1.3 when attacking with a combat art. Trigger % = 30."
+        },
+        {
+          "name": "All-Out Attack+",
+          "description": "Multiplies damage by 1.5 when attacking with a combat art. Trigger % = 30."
+        }
+      ]
     },
     {
       "id": "unit_ms3o1yebdwa31",
@@ -2097,8 +2195,8 @@
       ],
       "skillLevels": {},
       "personalSkill": {
-        "name": "Goddess' Favor",
-        "description": "Heals a little after combat"
+        "name": "Goddess’s Favor",
+        "description": "After combat, restores 5 HP to unit."
       },
       "fields": {
         "faction": "Rose Tempest",
@@ -2134,7 +2232,17 @@
         "res": 35,
         "lck": 50,
         "cha": 45
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Wind’s Caprice",
+          "description": "Grants one of Avo+1, Avo+5, or Avo+20 during combat."
+        },
+        {
+          "name": "Wind’s Caprice+",
+          "description": "Grants one of Avo+1, Avo+5, Avo+20, or Avo+30 during combat."
+        }
+      ]
     },
     {
       "id": "unit_ms3o2dq8x88ne",
@@ -2158,8 +2266,8 @@
       ],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Patch Up",
+        "description": "After an adjacent ally’s combat, restores a little HP to that ally."
       },
       "fields": {
         "faction": "Ribeira Winds",
@@ -2196,7 +2304,17 @@
         "res": 45,
         "lck": 55,
         "cha": 50
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Pray for Safety",
+          "description": "Grants Ddg+10 to adjacent allies."
+        },
+        {
+          "name": "Pray for Safety+",
+          "description": "Grants Ddg+20 to adjacent allies."
+        }
+      ]
     },
     {
       "id": "unit_ms3o2srrysuum",
@@ -2224,7 +2342,7 @@
       "skillLevels": {},
       "personalSkill": {
         "name": "Veteran’s Mettle",
-        "description": "Increases Hit of melee attacks"
+        "description": "Grants Hit+10 during combat against an adjacent foe."
       },
       "fields": {
         "faction": "House Lamine",
@@ -2260,7 +2378,17 @@
         "res": 30,
         "lck": 35,
         "cha": 40
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Redblade’s Will",
+          "description": "Grants Atk+3 during combat against an adjacent foe."
+        },
+        {
+          "name": "Redblade’s Will+",
+          "description": "Grants Atk+3 during combat against an adjacent foe. Also grants Atk+3 when attacking an adjacent foe (trigger % =30)."
+        }
+      ]
     },
     {
       "id": "unit_ms3o3ayav4czo",
@@ -2285,8 +2413,8 @@
       ],
       "skillLevels": {},
       "personalSkill": {
-        "name": "Accelerate?",
-        "description": "Similar to apeedtaker?"
+        "name": "Racing Attack",
+        "description": "If unit attacks first, grants Avo+15 during combat."
       },
       "fields": {
         "faction": "Megaira's Beacon",
@@ -2322,7 +2450,17 @@
         "res": 25,
         "lck": 30,
         "cha": 30
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Accelerate",
+          "description": "After defeating a foe, grants Spd+1 until the end of the map. (Max +10)"
+        },
+        {
+          "name": "Accelerate+",
+          "description": "After defeating a foe, grants Spd+2 until the end of the map. (Max +10)"
+        }
+      ]
     },
     {
       "id": "unit_ms3o3pm7kkagj",
@@ -2345,8 +2483,8 @@
       ],
       "skillLevels": {},
       "personalSkill": {
-        "name": "Rivalry",
-        "description": "Increases Crit for magic attacks"
+        "name": "Competitive Zeal",
+        "description": "When equipped with magic, grants Crit +10."
       },
       "fields": {
         "faction": "Rose Tempest"
@@ -2381,7 +2519,17 @@
         "res": 40,
         "lck": 40,
         "cha": 40
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Ardent Nosferatu",
+          "description": "When using Nosferatu, grants Atk+3, Crit+5 during combat."
+        },
+        {
+          "name": "Ardent Nosferatu+",
+          "description": "When using Nosferatu, grants Atk+5, Crit+10 during combat."
+        }
+      ]
     },
     {
       "id": "unit_ms3of3twtvl0z",
@@ -2405,7 +2553,7 @@
       "skillLevels": {},
       "personalSkill": {
         "name": "Safety First",
-        "description": "Increases Hit when the enemy cannot counterattack"
+        "description": "If foe cannot counter, grants Hit+10 to unit during combat."
       },
       "fields": {
         "faction": "Megaira's Beacon",
@@ -2441,7 +2589,17 @@
         "res": 35,
         "lck": 50,
         "cha": 25
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Upper Hand",
+          "description": "If unit’s hit % = 100, grants Atk +3 when attacking."
+        },
+        {
+          "name": "Upper Hand+",
+          "description": "If unit’s hit % = 100, grants Atk +5 when attacking."
+        }
+      ]
     },
     {
       "id": "unit_ms3ofr4f95yg3",
@@ -2462,8 +2620,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "Aptitude?",
-        "description": ""
+        "name": "Signs of Growth",
+        "description": "When unit levels up, gains enhanced basic stat growth."
       },
       "fields": {
         "faction": "Rose Tempest",
@@ -2499,7 +2657,17 @@
         "res": 30,
         "lck": 30,
         "cha": 40
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Warrior’s Blood",
+          "description": "Grants stat increase based on equipped weapon type."
+        },
+        {
+          "name": "Warrior’s Blood+",
+          "description": "Grants a large stat increase based on equipped weapon type."
+        }
+      ]
     },
     {
       "id": "unit_mt4vbrsx1692p",
@@ -2513,8 +2681,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Requiem Style",
+        "description": "Unit makes a follow-up regardless of AS during combat. Trigger % = 5."
       },
       "fields": {
         "backstory": "A gladiator who continues to fight in the Dagsion arena.\n\nKnown by the moniker \"White-Maned Demon\" for his demonic strength. It is said that five years ago, he committed a great sin and was imprisoned in the underground dungeon of the arena.\n\nLikes: Training, salted meat, well-crafted weapons, reading, board games",
@@ -2523,7 +2691,17 @@
           "Flames"
         ]
       },
-      "possiblyEnemyOnly": true
+      "possiblyEnemyOnly": true,
+      "uniqueSkills": [
+        {
+          "name": "Go No Sen",
+          "description": "In enemy’s phase, unit attacks first during combat. Trigger % = 25."
+        },
+        {
+          "name": "Sen No Sen",
+          "description": "If unit attacks first, unit’s follow-up occurs before foe’s counter during combat. Trigger % = 25."
+        }
+      ]
     },
     {
       "id": "unit_ms4ax1urookeq",
@@ -2537,8 +2715,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Swashbuckler’s Luck",
+        "description": "Grants Lck+3."
       },
       "fields": {
         "faction": "Moon's Lie",
@@ -2547,7 +2725,17 @@
           "Duality"
         ]
       },
-      "possiblyEnemyOnly": true
+      "possiblyEnemyOnly": true,
+      "uniqueSkills": [
+        {
+          "name": "Cannoning Flair",
+          "description": "When using artillery, grants Hit+30 during combat."
+        },
+        {
+          "name": "Swashbuckler’s Luck+",
+          "description": "Grants Lck+5 to unit and all allies."
+        }
+      ]
     },
     {
       "id": "unit_ms4b1m5a0pltt",
@@ -2561,8 +2749,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Solid and Sturdy",
+        "description": "Grants Def+5. Unit is armored. Cannot change class to cavalry or flying."
       },
       "fields": {
         "faction": "Linaria's Morning Dew",
@@ -2573,7 +2761,13 @@
         ]
       },
       "postTimeskip": false,
-      "possiblyEnemyOnly": true
+      "possiblyEnemyOnly": true,
+      "uniqueSkills": [
+        {
+          "name": "Predictive Sense",
+          "description": "If unit attacks first, grants Hit+20 to magic during combat."
+        }
+      ]
     },
     {
       "id": "unit_ms4azwjmprdkp",
@@ -2587,14 +2781,24 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Celestial Flow",
+        "description": "Grants Avo+3."
       },
       "fields": {
         "faction": "Brides of the Pale Raven",
         "backstory": "A girl in white who fights to save her people. Known as the “Mystical Bride” due to her appearance. Has a cool or perhaps emotionless personality, which can accidentally infuriate others.\n\nLikes: Hexagram divination, round objects, martial-arts training"
       },
-      "possiblyEnemyOnly": true
+      "possiblyEnemyOnly": true,
+      "uniqueSkills": [
+        {
+          "name": "Continuum",
+          "description": "When unit avoids an attack, restores 5 HP to unit."
+        },
+        {
+          "name": "Continuum+",
+          "description": "When unit avoids an attack, restores 10 HP to unit."
+        }
+      ]
     },
     {
       "id": "unit_mt4v8155tinj7",
@@ -2608,8 +2812,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Brave Assist",
+        "description": "Grants Def+3 to adjacent allies."
       },
       "fields": {
         "faction": "Mane of Flame",
@@ -2634,7 +2838,17 @@
         "res": 25,
         "lck": 40,
         "cha": 45
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Flashing Fang",
+          "description": "Grants Atk+4, Hit+50 when attacking. Trigger % = 20."
+        },
+        {
+          "name": "Flashing Fang+",
+          "description": "Grants Atk+7, Hit+100 when attacking. Trigger % = 20."
+        }
+      ]
     },
     {
       "id": "unit_ms4awma1bic3w",
@@ -2648,8 +2862,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "Merchants’ Manager",
-        "description": "Grants her and nearby units access to the convoy"
+        "name": "Management Skills",
+        "description": "Allows storage access to unit and allies within 2 spaces."
       },
       "fields": {
         "faction": "Moon's Lie",
@@ -2688,7 +2902,17 @@
         "res": 30,
         "lck": 40,
         "cha": 45
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Seize the Chance",
+          "description": "Multiplies damage by 1.3 when attacking. Trigger % = Lck ÷ 2."
+        },
+        {
+          "name": "Seize the Chance+",
+          "description": "Multiplies damage by 1.5 when attacking. Trigger % = Lck ÷ 2."
+        }
+      ]
     },
     {
       "id": "unit_ms4b7sewbatfh",
@@ -2702,8 +2926,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "Bodyguard",
-        "description": "Chance to prevent follow-up attacks on adjacent allies"
+        "name": "Caretaker",
+        "description": "Adjacent allies cannot suffer a follow-up during combat. Trigger % = 5."
       },
       "fields": {
         "faction": "Linaria's Morning Dew",
@@ -2742,7 +2966,17 @@
         "res": 20,
         "lck": 35,
         "cha": 30
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "No Mercy",
+          "description": "Grants Hit/Crit+5 when making a follow-up."
+        },
+        {
+          "name": "No Mercy+",
+          "description": "Grants Hit/Crit+10 when making a follow-up."
+        }
+      ]
     },
     {
       "id": "unit_ms4b0fg9gc03t",
@@ -2756,8 +2990,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Cooler Heads",
+        "description": "After using Draw Back, unit can use assist magic."
       },
       "fields": {
         "faction": "Brides of the Pale Raven"
@@ -2786,7 +3020,17 @@
         "res": 45,
         "lck": 35,
         "cha": 40
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Watchfulness",
+          "description": "Grants Spd+2 to adjacent allies."
+        },
+        {
+          "name": "Watchfulness+",
+          "description": "Grants Spd+4 to adjacent allies."
+        }
+      ]
     },
     {
       "id": "unit_msesm42zaq9do",
@@ -2800,8 +3044,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Stage Direction",
+        "description": "Grants Ddg+10 to allies within 2 spaces during their combats. Trigger % = ally’s Cha ÷ 2."
       },
       "fields": {
         "faction": "Mane of Flame",
@@ -2839,7 +3083,17 @@
         "res": 40,
         "lck": 45,
         "cha": 30
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Dramatic Effect",
+          "description": "When Stage Direction triggers, grants Hit+10 to target allies."
+        },
+        {
+          "name": "Dramatic Effect+",
+          "description": "When Stage Direction triggers, grants Hit/Crit+10 to target allies."
+        }
+      ]
     },
     {
       "id": "unit_mt4v6olgdd4up",
@@ -2853,8 +3107,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Close Call",
+        "description": "If unit’s HP ≥ 2 and damage would reduce it to 0, leaves unit with 1 HP. Trigger % = Lck."
       },
       "fields": {
         "faction": "Moon's Lie",
@@ -2892,7 +3146,17 @@
         "res": 25,
         "lck": 50,
         "cha": 35
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Devil’s Luck",
+          "description": "After defeating a foe, grants Lck+1 until the end of the map. (Max +10)"
+        },
+        {
+          "name": "Devil’s Luck+",
+          "description": "After defeating a foe, grants Lck+2 until the end of the map. (Max +10)"
+        }
+      ]
     },
     {
       "id": "unit_ms4b1qq82fg7g",
@@ -2906,8 +3170,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Spirits’ Voice",
+        "description": "If foe uses magic, grants Hit/Avo+10 to unit during combat."
       },
       "fields": {
         "faction": "Linaria's Morning Dew",
@@ -2949,7 +3213,17 @@
         "res": 45,
         "lck": 50,
         "cha": 40
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Spirits’ Guidance",
+          "description": "Grants Spirits’ Voice to adjacent allies."
+        },
+        {
+          "name": "Spirits’ Guidance+",
+          "description": "Grants Spirits’ Voice to allies within 2 spaces."
+        }
+      ]
     },
     {
       "id": "unit_mseslad7245am",
@@ -2963,8 +3237,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "???",
-        "description": "Increases Attack when striking first"
+        "name": "Quick Draw",
+        "description": "If unit attacks first, grants Atk+3 during combat. Trigger % = 50."
       },
       "fields": {
         "faction": "Brides of the Pale Raven",
@@ -3002,7 +3276,17 @@
         "res": 25,
         "lck": 30,
         "cha": 25
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Never Stop",
+          "description": "Grants Atk+5 when attacking after Quick Draw. Trigger % = 30."
+        },
+        {
+          "name": "Never Stop+",
+          "description": "Grants Atk+5 when attacking after Quick Draw. Trigger % = 50."
+        }
+      ]
     },
     {
       "id": "unit_msesn64bv1fun",
@@ -3018,8 +3302,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Heavyweight Class",
+        "description": "Unit cannot change to cavalry or flying. Grants Bld+5."
       },
       "fields": {
         "faction": "Mane of Flame",
@@ -3057,7 +3341,17 @@
         "res": 20,
         "lck": 35,
         "cha": 20
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Pin Down",
+          "description": "Inflicts Mov-3 on adjacent foes."
+        },
+        {
+          "name": "Pin Down+",
+          "description": "Inflicts Mov-5 on adjacent foes."
+        }
+      ]
     },
     {
       "id": "unit_ms4b4zib7ibpz",
@@ -3072,7 +3366,7 @@
       "skillLevels": {},
       "personalSkill": {
         "name": "Falcon",
-        "description": "Increases Speed when initiating combat"
+        "description": "If unit attacks first, grants AS+3 during combat."
       },
       "fields": {
         "faction": "Moon's Lie",
@@ -3110,7 +3404,17 @@
         "res": 20,
         "lck": 30,
         "cha": 30
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Perception",
+          "description": "If unit can make a follow-up, grants Avo+10 during combat."
+        },
+        {
+          "name": "Perception+",
+          "description": "If unit can make a follow-up, grants Avo+20 during combat."
+        }
+      ]
     },
     {
       "id": "unit_ms4aycsktz7vo",
@@ -3124,8 +3428,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Ready for Battle",
+        "description": "For the first combat in enemy’s phase, unit attacks first. Trigger % = 50."
       },
       "fields": {
         "faction": "Linaria's Morning Dew",
@@ -3162,7 +3466,17 @@
         "res": 35,
         "lck": 30,
         "cha": 50
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Pass Judgement",
+          "description": "When Diadem of Balance triggers, grants Atk+4."
+        },
+        {
+          "name": "Pass Judgement+",
+          "description": "When Diadem of Balance triggers, grants Atk+7."
+        }
+      ]
     },
     {
       "id": "unit_msu4iccnmpc6w",
@@ -3179,7 +3493,7 @@
       "skillLevels": {},
       "personalSkill": {
         "name": "One Chance",
-        "description": "Increases Attack when both unit and foe cannot make follow-up attacks"
+        "description": "If unit and foe cannot make a follow-up, grants Atk+5 to unit during combat."
       },
       "fields": {
         "faction": "Brides of the Pale Raven",
@@ -3219,7 +3533,17 @@
         "res": 20,
         "lck": 25,
         "cha": 30
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Full Strength",
+          "description": "Multiplies damage by 1.3 when attacking. Trigger % = Str ÷ 2."
+        },
+        {
+          "name": "Full Strength+",
+          "description": "Multiplies damage by 1.5 when attacking. Trigger % = Str ÷ 2."
+        }
+      ]
     },
     {
       "id": "unit_msu42ne4imvnh",
@@ -3236,8 +3560,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "Flickering Edge",
-        "description": "Increases Attack after dodging"
+        "name": "Blink of an Eye",
+        "description": "After using Swap, grants Def+3 until unit’s next phase."
       },
       "fields": {
         "faction": "Mane of Flame",
@@ -3275,7 +3599,17 @@
         "res": 25,
         "lck": 40,
         "cha": 40
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Flickering Edge",
+          "description": "When unit evades an attack, grants Atk+3 during combat."
+        },
+        {
+          "name": "Flickering Edge+",
+          "description": "When unit evades an attack, grants Atk+5 during combat."
+        }
+      ]
     },
     {
       "id": "unit_ms4b5mqtae605",
@@ -3289,8 +3623,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Graceful Light",
+        "description": "When healing an ally with magic, reduces magic cost to 0. Trigger % = Lck."
       },
       "fields": {
         "faction": "Moon's Lie",
@@ -3331,7 +3665,17 @@
         "res": 45,
         "lck": 25,
         "cha": 40
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Gift of Faith",
+          "description": "When healing an ally with magic, restores +20 HP. Trigger % = Lck."
+        },
+        {
+          "name": "Gift of Faith+",
+          "description": "When healing an ally with magic, restores +30 HP. Trigger % = Lck."
+        }
+      ]
     },
     {
       "id": "unit_msu4rfw7l4959",
@@ -3345,8 +3689,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Steadfast",
+        "description": "If unit’s HP ≥ 50%, grants Avo+10 during combat."
       },
       "fields": {
         "faction": "Linaria's Morning Dew",
@@ -3385,7 +3729,17 @@
         "res": 30,
         "lck": 30,
         "cha": 30
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Peak Form",
+          "description": "If unit’s HP = 100%, grants Atk+3 during combat."
+        },
+        {
+          "name": "Peak Form+",
+          "description": "If unit’s HP = 100%, grants Atk+3, Avo+10 during combat."
+        }
+      ]
     },
     {
       "id": "unit_msu425y5cxugz",
@@ -3399,8 +3753,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Adaptability",
+        "description": "After combat, grants Hit+2 until the end of the map. (Max +30)"
       },
       "fields": {
         "faction": "Brides of the Pale Raven",
@@ -3438,7 +3792,17 @@
         "res": 25,
         "lck": 40,
         "cha": 35
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Halt Advance",
+          "description": "After combat, if unit attacked first, inflicts Spd-2 on foe throughout their next combat."
+        },
+        {
+          "name": "Halt Advance+",
+          "description": "After combat, if unit attacked first, inflicts Spd-3 on foe throughout their next combat."
+        }
+      ]
     },
     {
       "id": "unit_ms4b759ma7nnn",
@@ -3457,8 +3821,8 @@
       ],
       "skillLevels": {},
       "personalSkill": {
-        "name": "Long-Range Healing?",
-        "description": "Increases the range of healing magic"
+        "name": "Healing Knowledge",
+        "description": "When healing an ally with magic, restores +10 HP."
       },
       "fields": {
         "faction": "Temple Army",
@@ -3491,7 +3855,17 @@
         "res": 40,
         "lck": 40,
         "cha": 30
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Distant Healing",
+          "description": "Grants Rng+1 to healing magic."
+        },
+        {
+          "name": "Distant Healing+",
+          "description": "Grants Rng+2 to healing magic."
+        }
+      ]
     },
     {
       "id": "unit_msesdf1q9njym",
@@ -3508,8 +3882,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "",
-        "description": ""
+        "name": "Wheeled Warrior",
+        "description": "[Cavalry] If unit is a charioteer, grants Hit+20."
       },
       "fields": {
         "faction": "Thundercloud Knights",
@@ -3543,7 +3917,17 @@
         "res": 25,
         "lck": 30,
         "cha": 35
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Chariot Stagger",
+          "description": "If unit is charioteer, grants +1 uses to staggering blows."
+        },
+        {
+          "name": "Chariot Stagger+",
+          "description": "If unit is charioteer, grants +2 uses to staggering blows."
+        }
+      ]
     },
     {
       "id": "unit_ms4axuyt3lodb",
@@ -3561,7 +3945,7 @@
       "skillLevels": {},
       "personalSkill": {
         "name": "Silver Maiden",
-        "description": "Increases Hit and Avo based on the number of adjacent allies"
+        "description": "Grants Hit/Avo+5 to unit for each adjacent ally."
       },
       "fields": {
         "faction": "Silver Knights",
@@ -3595,7 +3979,17 @@
         "res": 50,
         "lck": 50,
         "cha": 30
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Soar",
+          "description": "If unit is on inaccessible terrain, grants AS+3."
+        },
+        {
+          "name": "Soar+",
+          "description": "If unit is on inaccessible terrain, grants AS+5."
+        }
+      ]
     },
     {
       "id": "unit_ms4b8a7pr2e4u",
@@ -3611,8 +4005,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "Despicable",
-        "description": "Increases Hit when foe's HP is below half"
+        "name": "Hatchet Man",
+        "description": "When equipped with an axe, grants Hit+10."
       },
       "fields": {
         "faction": "Gaia Brigadiers",
@@ -3650,7 +4044,17 @@
         "res": 25,
         "lck": 30,
         "cha": 15
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Vulgar Conduct",
+          "description": "If foe’s HP ≤ 50%, grants Hit+20 during combat."
+        },
+        {
+          "name": "Vulgar Conduct+",
+          "description": "If foe’s HP ≤ 50%, grants Hit+20, Atk+3 during combat."
+        }
+      ]
     },
     {
       "id": "unit_ms4b6sy674873",
@@ -3667,7 +4071,7 @@
       "skillLevels": {},
       "personalSkill": {
         "name": "Tyranny",
-        "description": "Increases Attack and Crit against enemies suffering from status conditions"
+        "description": "If foe has a status effect, grants Atk+3, Crit+10 to unit during combat."
       },
       "fields": {
         "backstory": "The former leader of the brutal and infamous Black Bird Pirates, known by the nickname \"The Monstrous Bird.\"\nBefore visiting Dagsion, he apparently had a falling out with Talimun, the head of Vandahl Trading, and harbors a grudge against him.\n\nLikes: Thievery, the open sea, ships, obedient underlings",
@@ -3705,7 +4109,17 @@
         "res": 15,
         "lck": 30,
         "cha": 25
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Menace",
+          "description": "Halves foe’s Ddg during combat. Trigger % = 10."
+        },
+        {
+          "name": "Menace+",
+          "description": "Halves foe’s Ddg during combat. Trigger % = 20."
+        }
+      ]
     },
     {
       "id": "unit_msu4dr4u0h6sh",
@@ -3723,7 +4137,7 @@
       "skillLevels": {},
       "personalSkill": {
         "name": "Expert Counter",
-        "description": "Increases Hit when counterattacking"
+        "description": "If foe attacks first, grants Hit+20 to unit during combat."
       },
       "fields": {
         "faction": "Palma Fighters",
@@ -3762,7 +4176,17 @@
         "res": 25,
         "lck": 40,
         "cha": 45
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Raging Counter",
+          "description": "If foe attacks first, grants Atk+3 to unit during combat."
+        },
+        {
+          "name": "Raging Counter+",
+          "description": "If foe attacks first, grants Atk+3, Crit+10 to unit during combat."
+        }
+      ]
     },
     {
       "id": "unit_ms4b9qphimjk7",
@@ -3778,8 +4202,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "Pierce",
-        "description": "Increases Attack and Crit for bow combat arts"
+        "name": "Heavy-Bow User",
+        "description": "When equipped with a bow, grants Str +3."
       },
       "fields": {
         "backstory": "A master archer known as \"Inyoni of the Demon Bow\" who has become the talk of the town.\nShe had shown talent for archery since childhood, but recently she has been performing at a completely different level, and her name has rapidly become widely known.\n\nLikes: Her family and hometown, hunting, farm work, bow maintenance",
@@ -3817,7 +4241,17 @@
         "res": 30,
         "lck": 40,
         "cha": 30
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Pierce",
+          "description": "Grants Atk+2, Crit+5 when attacking with a bow combat art."
+        },
+        {
+          "name": "Pierce+",
+          "description": "Grants Atk+4, Crit+10 when attacking with a bow combat art."
+        }
+      ]
     },
     {
       "id": "unit_msesemmywrm9d",
@@ -3834,8 +4268,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "Hunter's Snare",
-        "description": "Chance to strike first if enemy is injured when they attack"
+        "name": "Hunter’s Snare",
+        "description": "In enemy’s phase, if foe is damaged, unit attacks first during combat. Trigger % = 30."
       },
       "fields": {
         "faction": "Brigid Army",
@@ -3868,7 +4302,17 @@
         "res": 30,
         "lck": 45,
         "cha": 30
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "King’s Majesty",
+          "description": "If foe is damaged, grants Atk +2, Crit+5 during combat."
+        },
+        {
+          "name": "King’s Majesty+",
+          "description": "If foe is damaged, grants Atk +4, Crit+10 during combat."
+        }
+      ]
     },
     {
       "id": "unit_ms4b44v3k39y1",
@@ -3882,8 +4326,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "Tribal Secret Art?",
-        "description": "Increases Attack when targeting a weakness"
+        "name": "Har Hali Wisdom",
+        "description": "If unit is effective against foe, grants Atk+3 during combat."
       },
       "fields": {
         "backstory": "A proud warrior of the \"Har Hali tribe,\" a people who revere strength.\nFollowing the disappearance of their chieftain, this warrior is leading the tribe as a proxy.\nIt appears he holds the Demon God Balor in special reverence.\n\nLikes: Tradition, honor, great power",
@@ -3921,7 +4365,17 @@
         "res": 15,
         "lck": 25,
         "cha": 35
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Precision Strike",
+          "description": "If unit is effective against foe, grants Hit+10 during combat."
+        },
+        {
+          "name": "Precision Strike+",
+          "description": "If unit is effective against foe, grants Hit+20 during combat."
+        }
+      ]
     },
     {
       "id": "unit_ms4b0v3updg6t",
@@ -3940,7 +4394,7 @@
       "skillLevels": {},
       "personalSkill": {
         "name": "Hot-Headed",
-        "description": "Increases Crit, Hit or Avo at random"
+        "description": "Grants one of Hit+10, Avo+10 or Crit+10 during combat."
       },
       "fields": {
         "backstory": "A lively and carefree mercenary. Has survived countless battlefields and his friends call him the “Unkillable Guzran”. He’s ignored a lot because he’s always bragging, but he’s genuinely capable.\n\nLikes: Booze, women, interesting people, young greenhorns, boasting"
@@ -3972,7 +4426,17 @@
         "res": 20,
         "lck": 45,
         "cha": 30
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Top Form",
+          "description": "Changes the effect of Hot-Headed to grant +15."
+        },
+        {
+          "name": "Top Form+",
+          "description": "Changes the effect of Hot-Headed to grant +20."
+        }
+      ]
     },
     {
       "id": "unit_ms4b9764g1dhr",
@@ -3995,7 +4459,7 @@
       "skillLevels": {},
       "personalSkill": {
         "name": "Barge Through",
-        "description": "Allows unit to pass through tiles with opponents on them"
+        "description": "[Cavalry] Can move through foe’s space. (Cannot move through large-scale foes.)"
       },
       "fields": {
         "backstory": "A woman working as a mercenary at Dagsion. Originally from Saramis, she was an exemplary warrior, whose skills were recognised by Bonaventure the Mastermind. After a civil war many years ago, she wandered around Dagda, eventually leading to her current situation.\n\nLikes: Honoring her duties, caring for orniuses, improving her combat abilities, reading"
@@ -4033,7 +4497,17 @@
         "res": 25,
         "lck": 35,
         "cha": 35
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "At a Gallop",
+          "description": "[Cavalry] Applies -1 to movement cost for terrain (cannot be reduced below 1)."
+        },
+        {
+          "name": "At a Gallop+",
+          "description": "[Cavalry] Applies -2 to movement cost for terrain (cannot be reduced below 1)."
+        }
+      ]
     },
     {
       "id": "unit_msesipji4v2wt",
@@ -4051,7 +4525,7 @@
       "skillLevels": {},
       "personalSkill": {
         "name": "With My Steed",
-        "description": ""
+        "description": "[Cavalry] If unit attacks first, grants Shld+3, Ddg+30 during combat."
       },
       "fields": {
         "backstory": "A high-spirited young man who makes a living as a mercenary in Dagsion.\nHe once served as a knight in the Kingdom of Arago to protect the people's happiness, but he fled Arago out of disgust for the king's self-righteous actions.\n\nLikes: Chivalry, self-discipline, his beloved horse Rocinan"
@@ -4088,7 +4562,17 @@
         "res": 25,
         "lck": 35,
         "cha": 35
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Mounted Push",
+          "description": "[Cavalry] If unit attacks first, grants Hit+10 during combat."
+        },
+        {
+          "name": "Mounted Push+",
+          "description": "[Cavalry] If unit attacks first, grants Hit+10, Atk+3 during combat."
+        }
+      ]
     },
     {
       "id": "unit_ms4b3v4raamqa",
@@ -4106,7 +4590,7 @@
       "skillLevels": {},
       "personalSkill": {
         "name": "Punishing Squall",
-        "description": "Increases Hit if Attack Speed is a certain amount higher than foe's"
+        "description": "If AS ≥ foe’s AS+3, grants Hit+20 during combat."
       },
       "fields": {
         "backstory": "A proud knight searching for a well-paying employer in Dagsion.\nShe once served a certain noble, but lost everything due to an incident five years ago.\nThough her life lacks financial leeway, she behaves in a way that doesn't let it show.\n\nLikes: Sterling wares, sterling people, sterling meals"
@@ -4138,7 +4622,17 @@
         "res": 35,
         "lck": 40,
         "cha": 45
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Wind My Friend",
+          "description": "If AS ≥ foe’s AS+5, grants Atk+3 during combat."
+        },
+        {
+          "name": "Wind My Friend+",
+          "description": "If AS ≥ foe’s AS+5, grants Atk+3, and if AS ≥ foe’s AS+8, grants Avo+20 during combat."
+        }
+      ]
     },
     {
       "id": "unit_ms3o4850pz0sq",
@@ -4155,8 +4649,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "Warrior's Clarity",
-        "description": "Increases Avo after attacking"
+        "name": "Warrior’s Clarity",
+        "description": "After combat, grants Avo+3 until unit’s next phase."
       },
       "fields": {
         "faction": "",
@@ -4190,7 +4684,17 @@
         "res": 20,
         "lck": 35,
         "cha": 30
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Attuned",
+          "description": "When Warrior’s Clarity triggers, grants Avo+10 until unit’s next phase. Trigger % = 10."
+        },
+        {
+          "name": "Attuned+",
+          "description": "When Warrior’s Clarity triggers, grants Avo+10 until unit’s next phase. Trigger % = 20."
+        }
+      ]
     },
     {
       "id": "unit_ms4b14v2stjjh",
@@ -4207,8 +4711,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "Monkly Havov",
-        "description": "Has a chance to fully restore HP after defeating an enemy"
+        "name": "Monkly Havoc",
+        "description": "After defeating a foe, recovers HP equal to max HP. Trigger % = Lck ÷ 2."
       },
       "fields": {
         "backstory": "A wayward monk who wanders from land to land.\nHe once served a temple but became a wanderer over a decade ago & is currently passing through Dagsion on his travels.\nIt is said that in his youth, he journeyed as far as the eastern land of Sai.\n\nLikes: Alcohol, tales of old, distant journeys, saving the weak"
@@ -4244,7 +4748,17 @@
         "res": 40,
         "lck": 40,
         "cha": 25
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Robust Health",
+          "description": "Grants Shld+3 when attacked. Trigger % = unit’s remaining HP."
+        },
+        {
+          "name": "Robust Health+",
+          "description": "Grants Shld+5 when attacked. Trigger % = unit’s remaining HP."
+        }
+      ]
     },
     {
       "id": "unit_mt4v2r1q22a0b",
@@ -4260,8 +4774,8 @@
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
-        "name": "Fear Nothing",
-        "description": "Increases Attack at the cost of Avo when initiating combat"
+        "name": "Hellbent Axe",
+        "description": "When equipped with an axe, grants Str+3."
       },
       "fields": {
         "backstory": "A notorious thug who roams Dagsion.\nHe had a bad reputation since childhood, spending his days in jail for violent incidents.\nHe aims to win the Heroic Games in order to become the ruler of the city.\n\nLikes: Booze, women, fighting, being strong"
@@ -4299,7 +4813,17 @@
         "res": 10,
         "lck": 25,
         "cha": 5
-      }
+      },
+      "uniqueSkills": [
+        {
+          "name": "Fear Nothing",
+          "description": "If unit attacks first, grants Atk+3 at cost of Avo-30 to unit during combat."
+        },
+        {
+          "name": "Fear Nothing+",
+          "description": "If unit attacks first, grants Atk+6 at cost of Avo-30 to unit during combat."
+        }
+      ]
     },
     {
       "id": "unit_msftrzee97kx3",
@@ -7595,6 +8119,7 @@
       "field:faction",
       "routes",
       "personalSkill",
+      "uniqueSkills",
       "proficiencies",
       "field:backstory",
       "field:crest"

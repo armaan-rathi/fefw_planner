@@ -6,6 +6,7 @@ export const BUILTIN_ATTRS: { id: string; label: string }[] = [
   { id: "routes", label: "Routes" },
   { id: "proficiencies", label: "Boons / Banes / Skills" },
   { id: "personalSkill", label: "Personal Skill" },
+  { id: "uniqueSkills", label: "Unique Skills" },
 ];
 
 // Every attribute the Characters page can display, in a sensible display order.
@@ -15,7 +16,7 @@ export function availableAttrs(db: DB): { id: string; label: string }[] {
 
 export const DEFAULT_CHAR_PAGE: CharacterPageConfig = {
   preview: ["field:faction", "class"],
-  detail: ["field:faction", "class", "routes", "personalSkill", "proficiencies", "field:backstory"],
+  detail: ["field:faction", "class", "routes", "personalSkill", "uniqueSkills", "proficiencies", "field:backstory"],
 };
 
 export function charPageConfig(db: DB): CharacterPageConfig {

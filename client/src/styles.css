@@ -1783,6 +1783,12 @@ input[type="range"]::-moz-range-thumb {
 .char-attr {
   margin-bottom: 12px;
 }
+.unique-skill + .unique-skill {
+  margin-top: 5px;
+}
+.char-attr.compact .unique-skill {
+  display: inline;
+}
 .char-attr .k {
   font-size: 12px;
   text-transform: uppercase;
