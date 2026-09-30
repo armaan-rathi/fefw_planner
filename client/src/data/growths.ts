@@ -17,12 +17,13 @@ export function growthUnits(db: DB): Unit[] {
   return db.units.filter(hasGrowths);
 }
 
-// Diverging blue → cream → red heat color for a normalized value t in [0, 1].
+// Dark-mode diverging heat: deep blue → dark neutral → deep red, for t in [0,1].
+// Tuned to sit on the site's dark panels with light text on top.
 export function heatColor(t: number): string {
   const c = Math.max(0, Math.min(1, Number.isFinite(t) ? t : 0.5));
-  const low = [70, 108, 176];
-  const mid = [232, 224, 203];
-  const high = [178, 58, 46];
+  const low = [34, 66, 102];   // deep slate blue (low)
+  const mid = [44, 52, 60];    // dark neutral (mid, near panel)
+  const high = [120, 44, 40];  // deep red (high)
   const lerp = (a: number[], b: number[], k: number) => a.map((v, i) => Math.round(v + (b[i] - v) * k));
   const rgb = c < 0.5 ? lerp(low, mid, c / 0.5) : lerp(mid, high, (c - 0.5) / 0.5);
   return `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;

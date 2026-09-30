@@ -50,7 +50,7 @@ export function GrowthRates() {
     }
   }
   const arrow = (k: SortKey) => (sortKey === k ? (dir === -1 ? " ▼" : " ▲") : "");
-  const cell = (v: number, r: { min: number; max: number }) => ({ background: heatColor(norm(v, r)), color: "#1a1512" });
+  const cell = (v: number, r: { min: number; max: number }) => ({ background: heatColor(norm(v, r)), color: "#ece6d6" });
 
   return (
     <div>

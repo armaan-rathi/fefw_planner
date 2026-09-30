@@ -304,6 +304,13 @@ export interface GachaConfig {
   fehMode?: boolean; // FEH-style: only 3–5★ rarities are shown in rates & pullable
 }
 
+// A support link between two units (symmetric). rank is the max rank reached.
+export interface SupportEdge {
+  a: string; // unit id
+  b: string; // unit id
+  rank: string; // "A" | "B" | "C"
+}
+
 // A paralogue's availability windows per route (dates as "M/D" strings).
 export interface ParalogueWindow {
   start: string;
@@ -354,4 +361,5 @@ export interface DB {
   mountTypeColors?: Record<string, string>; // optional per-type accent color
   paralogues?: Paralogue[]; // paralogue availability by route
   paralogueColors?: Record<string, string>; // optional per-paralogue accent color (by name)
+  supports?: SupportEdge[]; // symmetric support links between units
 }

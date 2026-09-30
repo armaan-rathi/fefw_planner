@@ -13,6 +13,7 @@ import { RecruitmentEditor } from "./RecruitmentEditor";
 import { GrowthsEditor } from "./GrowthsEditor";
 import { PagesEditor } from "./PagesEditor";
 import { MountsEditor } from "./MountsEditor";
+import { SupportsEditor } from "./SupportsEditor";
 
 export function DevMode() {
   return (
@@ -35,6 +36,7 @@ export function DevMode() {
         <NavLink to="recruitment">Recruitment</NavLink>
         <NavLink to="growths">Growth Rates</NavLink>
         <NavLink to="mounts">Mounts</NavLink>
+        <NavLink to="supports">Supports</NavLink>
         <NavLink to="gods">Gods</NavLink>
         <NavLink to="npcs">Important NPCs</NavLink>
         <NavLink to="polls">Polls</NavLink>
@@ -54,6 +56,7 @@ export function DevMode() {
         <Route path="recruitment" element={<RecruitmentEditor />} />
         <Route path="growths" element={<GrowthsEditor />} />
         <Route path="mounts" element={<MountsEditor />} />
+        <Route path="supports" element={<SupportsEditor />} />
         <Route path="gods" element={<CastEditor kind="gods" label="Gods" subtitleLabel="Domain" />} />
         <Route path="npcs" element={<CastEditor kind="npcs" label="Important NPCs" subtitleLabel="Affiliation / role" />} />
         <Route path="polls" element={<PollsEditor />} />
