@@ -2600,8 +2600,28 @@ input[type="range"]::-moz-range-thumb {
 .growths-table .gr-unit { text-align: left; background: #0f2027; color: var(--ink); font-weight: 700; white-space: nowrap; }
 .growths-table .gr-num { font-weight: 800; }
 .gr-legend { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-size: 12px; color: var(--ink-dim); }
-.gr-legend-bar { width: 180px; height: 12px; border-radius: 3px; border: 1px solid var(--panel-edge); background: linear-gradient(90deg, rgb(34, 66, 102), rgb(44, 52, 60), rgb(120, 44, 40)); }
+.gr-legend-bar { width: 180px; height: 12px; border-radius: 3px; border: 1px solid var(--panel-edge); background: linear-gradient(90deg, rgb(34, 66, 102), rgb(46, 52, 56), rgb(132, 100, 36)); }
 .growths-edit input { text-align: center; }
+
+/* Proficiencies table */
+.prof-scroll { overflow-x: auto; border: 1px solid var(--panel-edge); border-radius: 10px; }
+.prof-table { border-collapse: collapse; width: 100%; min-width: 940px; font-size: 13px; }
+.prof-table th { background: #12242b; border: 1px solid #0a1a1f; padding: 6px 4px; vertical-align: bottom; }
+.prof-table td { border: 1px solid var(--panel-edge); padding: 6px 8px; text-align: center; }
+.prof-unit-h, .prof-unit { width: var(--prof-name-w, 130px); min-width: var(--prof-name-w, 130px); max-width: var(--prof-name-w, 130px); }
+.prof-unit-h { text-align: left !important; color: var(--ink-dim); font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; }
+.prof-unit { text-align: left !important; background: #0f2027; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.prof-head { display: flex; flex-direction: column; align-items: center; gap: 3px; }
+.prof-head-icon { display: flex; }
+.prof-head-label { font-size: 10px; color: var(--ink-dim); text-transform: uppercase; letter-spacing: 0.02em; }
+.prof-head-filters { display: inline-flex; gap: 3px; margin-top: 1px; }
+.prof-fbtn { width: 18px; height: 18px; border-radius: 4px; border: 1px solid var(--panel-edge); background: transparent; color: var(--ink-faint); font-size: 9px; cursor: pointer; line-height: 1; padding: 0; }
+.prof-fbtn:hover { color: var(--ink); }
+.prof-fbtn.boon.on { background: rgba(232, 196, 95, 0.2); color: var(--boon); border-color: var(--boon-deep); }
+.prof-fbtn.bane.on { background: rgba(95, 168, 232, 0.2); color: var(--bane); border-color: var(--bane-deep); }
+.prof-c { font-size: 11px; }
+.prof-c.boon { background: rgba(232, 196, 95, 0.16); color: var(--boon); }
+.prof-c.bane { background: rgba(95, 168, 232, 0.16); color: var(--bane); }
 
 /* Growth rates on the Character Database page */
 .growth-chips { display: flex; flex-wrap: wrap; gap: 6px; }

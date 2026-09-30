@@ -22,8 +22,8 @@ export function growthUnits(db: DB): Unit[] {
 export function heatColor(t: number): string {
   const c = Math.max(0, Math.min(1, Number.isFinite(t) ? t : 0.5));
   const low = [34, 66, 102];   // deep slate blue (low)
-  const mid = [44, 52, 60];    // dark neutral (mid, near panel)
-  const high = [120, 44, 40];  // deep red (high)
+  const mid = [46, 52, 56];    // dark neutral (mid, near panel)
+  const high = [132, 100, 36]; // deep gold (high)
   const lerp = (a: number[], b: number[], k: number) => a.map((v, i) => Math.round(v + (b[i] - v) * k));
   const rgb = c < 0.5 ? lerp(low, mid, c / 0.5) : lerp(mid, high, (c - 0.5) / 0.5);
   return `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;

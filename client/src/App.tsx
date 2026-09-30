@@ -7,6 +7,7 @@ import { OverworldMap } from "./pages/OverworldMap";
 import { CharacterList } from "./pages/CharacterList";
 import { Recruitment } from "./pages/Recruitment";
 import { GrowthRates } from "./pages/GrowthRates";
+import { Proficiencies } from "./pages/Proficiencies";
 import { Mounts } from "./pages/Mounts";
 import { Paralogues } from "./pages/Paralogues";
 import { Supports } from "./pages/Supports";
@@ -103,6 +104,7 @@ function Shell() {
             <Route path="/characters" element={<CharacterList />} />
             <Route path="/recruitment" element={<Recruitment />} />
             <Route path="/growths" element={<GrowthRates />} />
+            <Route path="/proficiencies" element={<Proficiencies />} />
             <Route path="/mounts" element={<Mounts />} />
             <Route path="/paralogues" element={<Paralogues />} />
             <Route path="/supports" element={<Supports />} />
