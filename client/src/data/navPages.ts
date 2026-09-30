@@ -17,4 +17,5 @@ export const NAV_PAGES: NavPage[] = [
   { key: "recruitment", to: "/recruitment", label: "Recruitment", row: 2 },
   { key: "growths", to: "/growths", label: "Growth Rates", row: 2 },
   { key: "mounts", to: "/mounts", label: "Mounts", row: 2 },
+  { key: "paralogues", to: "/paralogues", label: "Paralogues", row: 2 },
 ];

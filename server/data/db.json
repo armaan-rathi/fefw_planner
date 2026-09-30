@@ -230,8 +230,7 @@
       "portrait": "/images/mui7ya2eu337sa.png",
       "masteredAbility": {
         "name": "Attack Basics",
-        "description": "",
-        "icon": null
+        "description": "Grants Str+1."
       },
       "bonusExp": [
         "sword",
@@ -255,7 +254,8 @@
       "growthMods": {
         "hp": 10,
         "str": 10
-      }
+      },
+      "classAbilities": []
     },
     {
       "id": "class_ms4godtdiwiu4",
@@ -281,6 +281,11 @@
         "spd": -5,
         "dex": 5,
         "def": 10
+      },
+      "classAbilities": [],
+      "masteredAbility": {
+        "name": "Defense Basics",
+        "description": "Grants Def+1."
       }
     },
     {
@@ -300,23 +305,7 @@
         "sword",
         "bow"
       ],
-      "classAbilities": [
-        {
-          "name": "Hunting Basics",
-          "description": "",
-          "icon": null
-        },
-        {
-          "name": "",
-          "description": "",
-          "icon": null
-        },
-        {
-          "name": "",
-          "description": "",
-          "icon": null
-        }
-      ],
+      "classAbilities": [],
       "secondarySkills": [
         {
           "skillTypeId": "bow",
@@ -331,6 +320,10 @@
         "hp": 10,
         "spd": 10,
         "dex": 10
+      },
+      "masteredAbility": {
+        "name": "Hunting Basics",
+        "description": "Grants Dex/Spd +1."
       }
     },
     {
@@ -355,24 +348,12 @@
       "classAbilities": [
         {
           "name": "Mount/Dismount",
-          "description": "",
-          "icon": null
-        },
-        {
-          "name": "",
-          "description": "",
-          "icon": null
-        },
-        {
-          "name": "",
-          "description": "",
-          "icon": null
+          "description": "Allows use of Mount and Dismount commands."
         }
       ],
       "masteredAbility": {
-        "name": "Offense Basics",
-        "description": "",
-        "icon": null
+        "name": "Offensive Basics",
+        "description": "Grants Str/Mag+1."
       },
       "secondarySkills": [
         {
@@ -414,8 +395,7 @@
       "portrait": "/images/mui7xcb4mklp5p.png",
       "masteredAbility": {
         "name": "Magic Basics",
-        "description": "Grants Mag/Res +1",
-        "icon": null
+        "description": "Grants Mag/Res+1."
       },
       "bonusExp": [
         "reason",
@@ -438,7 +418,8 @@
         "dex": 5,
         "def": -5,
         "res": 10
-      }
+      },
+      "classAbilities": []
     },
     {
       "id": "class_ms4axgsyshgov",
@@ -461,6 +442,20 @@
         "dex": 10,
         "lck": 5,
         "cha": 5
+      },
+      "classAbilities": [
+        {
+          "name": "Combat Arts +1",
+          "description": "Unit can equip +1 combat arts."
+        },
+        {
+          "name": "Sword Crit +3",
+          "description": "When equipped with a sword, grants Crit+3."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Ravaging Arts",
+        "description": "If unit makes a critical, deals +6 damage."
       }
     },
     {
@@ -484,6 +479,20 @@
         "spd": 5,
         "def": 5,
         "cha": 5
+      },
+      "classAbilities": [
+        {
+          "name": "Combat Arts +1",
+          "description": "Unit can equip +1 combat arts."
+        },
+        {
+          "name": "Axe Hit +3",
+          "description": "When equipped with an axe, grants Hit+3."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Regroup",
+        "description": "When foe avoids an attack, grants Avo+20 to unit during combat."
       }
     },
     {
@@ -503,24 +512,16 @@
       "classAbilities": [
         {
           "name": "Combat Arts +1",
-          "description": "",
-          "icon": null
+          "description": "Unit can equip +1 combat arts."
         },
         {
           "name": "Brawl Avo +3",
-          "description": "",
-          "icon": null
-        },
-        {
-          "name": "",
-          "description": "",
-          "icon": null
+          "description": "When equipped with gauntlets, grants Avo+3."
         }
       ],
       "masteredAbility": {
         "name": "Attack, Get Back",
-        "description": "",
-        "icon": null
+        "description": "When using a combat art, grants Avo+10 during combat."
       },
       "primarySkills": [
         {
@@ -556,24 +557,16 @@
       "classAbilities": [
         {
           "name": "Combat Arts +1",
-          "description": "",
-          "icon": null
+          "description": "Unit can equip +1 combat arts."
         },
         {
           "name": "Bow Hit +5",
-          "description": "",
-          "icon": null
-        },
-        {
-          "name": "",
-          "description": "",
-          "icon": null
+          "description": "When equipped with a bow, grants Hit+5."
         }
       ],
       "masteredAbility": {
         "name": "Crescendo",
-        "description": "",
-        "icon": null
+        "description": "After defeating a foe, grants Hit+3 until the end of the map. (Max +30)"
       },
       "primarySkills": [
         {
@@ -612,6 +605,24 @@
         "dex": 10,
         "res": 5,
         "lck": 5
+      },
+      "classAbilities": [
+        {
+          "name": "Combat Arts +1",
+          "description": "Unit can equip +1 combat arts."
+        },
+        {
+          "name": "Locktouch",
+          "description": "Allows the opening of chests even without keys."
+        },
+        {
+          "name": "Search",
+          "description": "Search results are slightly more likely to be perfect."
+        }
+      ],
+      "masteredAbility": {
+        "name": "In Shadow",
+        "description": "After defeating a foe, grants Avo+10 through unit's next combat."
       }
     },
     {
@@ -642,6 +653,20 @@
         "def": 25,
         "res": -5,
         "cha": 5
+      },
+      "classAbilities": [
+        {
+          "name": "Combat Arts +1",
+          "description": "Unit can equip +1 combat arts."
+        },
+        {
+          "name": "Strike-Last Def +3",
+          "description": "If foe attacks first, grants Prt+3 to unit during combat."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Great Counter",
+        "description": "If foe attacks first, grants Atk+3 to unit during combat."
       }
     },
     {
@@ -669,6 +694,16 @@
         "def": 5,
         "lck": 5,
         "cha": 10
+      },
+      "classAbilities": [
+        {
+          "name": "Mount/Dismount",
+          "description": "Allows use of Mount and Dismount commands."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Bolster Health",
+        "description": "Grants max HP+3."
       }
     },
     {
@@ -692,6 +727,24 @@
         "def": 10,
         "lck": 5,
         "cha": 10
+      },
+      "classAbilities": [
+        {
+          "name": "Chariot Armor",
+          "description": "[Cavalry] Grants Shield+5. Unit cannot avoid attacks."
+        },
+        {
+          "name": "Charioteer Tactics",
+          "description": "Allows use of the Mount and Dismount commands. [Cavalry] Allows use of the Charge command."
+        },
+        {
+          "name": "Charioteer's Path",
+          "description": "Unit's growth rate increases with level."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Charger",
+        "description": "When using Charge, grants Prt+10 until unit's next phase."
       }
     },
     {
@@ -722,6 +775,16 @@
         "def": 10,
         "lck": 5,
         "cha": 5
+      },
+      "classAbilities": [
+        {
+          "name": "Mount/Dismount",
+          "description": "Allows use of Mount and Dismount commands."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Sense Threat",
+        "description": "If foe is effective against unit, grants Avo+20 to unit during combat."
       }
     },
     {
@@ -747,6 +810,16 @@
         "res": 5,
         "lck": 5,
         "cha": 10
+      },
+      "classAbilities": [
+        {
+          "name": "Mount/Dismount",
+          "description": "Allows use of Mount and Dismount commands."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Protective Wings",
+        "description": "Grants Res+3."
       }
     },
     {
@@ -778,6 +851,20 @@
         "def": -10,
         "res": 10,
         "lck": 10
+      },
+      "classAbilities": [
+        {
+          "name": "Black-Magic Seeker",
+          "description": "Multiplies black magic uses by 2."
+        },
+        {
+          "name": "Magic Hit +3",
+          "description": "When equipped with magic, grants Hit+3."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Bind Dexterity",
+        "description": "Inflicts Dex-3 on adjacent foes."
       }
     },
     {
@@ -810,6 +897,20 @@
         "res": 15,
         "lck": 15,
         "cha": 10
+      },
+      "classAbilities": [
+        {
+          "name": "White-Magic Seeker",
+          "description": "Multiplies white magic uses by 2."
+        },
+        {
+          "name": "Magic Heal +5",
+          "description": "When healing an ally with magic, restores +5 HP."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Piety",
+        "description": "Grants Lck+3."
       }
     },
     {
@@ -826,24 +927,16 @@
       "classAbilities": [
         {
           "name": "Combat Arts +2",
-          "description": "",
-          "icon": null
+          "description": "Unit can equip +2 combat arts."
         },
         {
           "name": "Sword Crit +5",
-          "description": "",
-          "icon": null
-        },
-        {
-          "name": "",
-          "description": "",
-          "icon": null
+          "description": "When equipped with a sword, grants Crit+5."
         }
       ],
       "masteredAbility": {
-        "name": "Relaxed Alertness?",
-        "description": "",
-        "icon": null
+        "name": "Ever Vigilant",
+        "description": "After defeating a foe with a critical attack, restores a little HP to unit."
       },
       "growthMods": {
         "hp": 10,
@@ -885,7 +978,21 @@
           "skillTypeId": "sword",
           "grade": "B"
         }
-      ]
+      ],
+      "classAbilities": [
+        {
+          "name": "Combat Arts +2",
+          "description": "Unit can equip +2 combat arts."
+        },
+        {
+          "name": "[CA] Dance",
+          "description": "Allows the use of the Dance combat art."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Special Dance",
+        "description": "When using Dance, grants Dex/Spd+3 to target ally for the current phase."
+      }
     },
     {
       "id": "class_msetqo1fy8nq2",
@@ -904,6 +1011,24 @@
         "def": 5,
         "res": -5,
         "cha": 5
+      },
+      "classAbilities": [
+        {
+          "name": "Combat Arts +2",
+          "description": "Unit can equip +2 combat arts."
+        },
+        {
+          "name": "Axe Hit +5",
+          "description": "When equipped with an axe, grants Hit+5."
+        },
+        {
+          "name": "Brawl Hit +5",
+          "description": "When equipped with gauntlets, grants Hit+5."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Practiced Art",
+        "description": "Grants Hit+10 when attacking with a combat art."
       }
     },
     {
@@ -937,7 +1062,21 @@
           "skillTypeId": "axe",
           "grade": "C"
         }
-      ]
+      ],
+      "classAbilities": [
+        {
+          "name": "Black-Magic Seeker",
+          "description": "Multiplies black magic uses by 2."
+        },
+        {
+          "name": "Axe Hit +5",
+          "description": "When equipped with an axe, grants Hit+5."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Makeshift",
+        "description": "When using a combat art, reduces weapon durability cost to 0 during combat. Trigger % = 10."
+      }
     },
     {
       "id": "class_msetr0h42u767",
@@ -958,6 +1097,20 @@
         "res": 5,
         "lck": 5,
         "cha": 5
+      },
+      "classAbilities": [
+        {
+          "name": "Combat Arts +2",
+          "description": "Unit can equip +2 combat arts."
+        },
+        {
+          "name": "Bow Hit +10",
+          "description": "When equipped with a bow, grants Hit+10."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Marksmanship",
+        "description": "When equipped with a bow, grants Hit+15."
       }
     },
     {
@@ -990,7 +1143,25 @@
           "skillTypeId": "sword",
           "grade": "B"
         }
-      ]
+      ],
+      "classAbilities": [
+        {
+          "name": "Combat Arts +2",
+          "description": "Unit can equip +2 combat arts."
+        },
+        {
+          "name": "Locktouch",
+          "description": "Allows the opening of chests even without keys."
+        },
+        {
+          "name": "Advanced Search",
+          "description": "Search results are more likely to be perfect."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Countershot",
+        "description": "When equipped with a bow, unit can counter adjacent foes during combat. Trigger % = 50."
+      }
     },
     {
       "id": "class_msetrbyatzubm",
@@ -1012,6 +1183,24 @@
         "res": 5,
         "lck": 5,
         "cha": 5
+      },
+      "classAbilities": [
+        {
+          "name": "Mount/Dismount",
+          "description": "Allows use of Mount and Dismount commands."
+        },
+        {
+          "name": "Combat Arts +1",
+          "description": "Unit can equip +1 combat arts."
+        },
+        {
+          "name": "Bow Hit +5",
+          "description": "When equipped with a bow, grants Hit+5."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Hunter's Eye",
+        "description": "When equipped with a bow, grants Atk+3 when making a follow-up."
       }
     },
     {
@@ -1029,24 +1218,16 @@
       "classAbilities": [
         {
           "name": "Mount/Dismount",
-          "description": "",
-          "icon": null
+          "description": "Allows use of Mount and Dismount commands."
         },
         {
           "name": "Combat Arts +2",
-          "description": "",
-          "icon": null
-        },
-        {
-          "name": "",
-          "description": "",
-          "icon": null
+          "description": "Unit can equip +2 combat arts."
         }
       ],
       "masteredAbility": {
         "name": "Aegis",
-        "description": "",
-        "icon": null
+        "description": "Unit takes half damage when attacked with a magical attack. Trigger % = 20."
       },
       "primarySkills": [
         {
@@ -1094,18 +1275,11 @@
       "classAbilities": [
         {
           "name": "Combat Arts +2",
-          "description": "",
-          "icon": null
+          "description": "Unit can equip +2 combat arts."
         },
         {
           "name": "Magic Heal +10",
-          "description": "",
-          "icon": null
-        },
-        {
-          "name": "",
-          "description": "",
-          "icon": null
+          "description": "When healing an ally with magic, restores +10 HP."
         }
       ],
       "growthMods": {
@@ -1122,7 +1296,11 @@
           "skillTypeId": "lance",
           "grade": "B"
         }
-      ]
+      ],
+      "masteredAbility": {
+        "name": "Brace",
+        "description": "After defeating a foe, grants Prt +3 until unit's next phase."
+      }
     },
     {
       "id": "class_msetr4gmgpksi",
@@ -1155,24 +1333,16 @@
       "classAbilities": [
         {
           "name": "Combat Arts +2",
-          "description": "",
-          "icon": null
+          "description": "Unit can equip +2 combat arts."
         },
         {
           "name": "Strike-Last Def +5",
-          "description": "",
-          "icon": null
-        },
-        {
-          "name": "",
-          "description": "",
-          "icon": null
+          "description": "If foe attacks first, grants Prt+5 to unit during combat."
         }
       ],
       "masteredAbility": {
         "name": "Focused Counter",
-        "description": "",
-        "icon": null
+        "description": "If foe attacks first, grants Hit+10 to unit during combat."
       },
       "growthMods": {
         "hp": 15,
@@ -1225,7 +1395,25 @@
           "skillTypeId": "lance",
           "grade": "B"
         }
-      ]
+      ],
+      "classAbilities": [
+        {
+          "name": "Mount/Dismount",
+          "description": "Allows use of Mount and Dismount commands."
+        },
+        {
+          "name": "Strike-Last Def +3",
+          "description": "If foe attacks first, grants Prt+3 to unit during combat."
+        },
+        {
+          "name": "Combat Arts +1",
+          "description": "Unit can equip +1 combat arts."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Pavise",
+        "description": "Unit takes half damage when attacked with a physical attack. Trigger % = 20."
+      }
     },
     {
       "id": "class_msestmmmbo13w",
@@ -1253,7 +1441,25 @@
           "skillTypeId": "riding",
           "grade": "C"
         }
-      ]
+      ],
+      "classAbilities": [
+        {
+          "name": "War-Elephant Boots",
+          "description": "Unit takes half damage when attacked. Unit cannot avoid attacks."
+        },
+        {
+          "name": "Elephant Tactics",
+          "description": "Allows use of the Mount and Dismount commands. Allows use of the Heavy Charge Commands."
+        },
+        {
+          "name": "Elephant Rider's Path",
+          "description": "Unit's growth rate increases with level."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Elephant Vanguard",
+        "description": "If unit is an elephant rider, grants Hit +10."
+      }
     },
     {
       "id": "class_msesu5uoyogcq",
@@ -1292,7 +1498,21 @@
           "skillTypeId": "lance",
           "grade": "B"
         }
-      ]
+      ],
+      "classAbilities": [
+        {
+          "name": "Mount/Dismount",
+          "description": "Allows use of Mount and Dismount commands."
+        },
+        {
+          "name": "Combat Arts +1",
+          "description": "Unit can equip +1 combat arts."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Besieger",
+        "description": "If foe is on favorable terrain, grants Hit +20 to unit during combat."
+      }
     },
     {
       "id": "class_mui94guwf2y78",
@@ -1329,7 +1549,25 @@
           "skillTypeId": "reason",
           "grade": "B"
         }
-      ]
+      ],
+      "classAbilities": [
+        {
+          "name": "Mount/Dismount",
+          "description": "Allows use of Mount and Dismount commands."
+        },
+        {
+          "name": "Black-Magic Seeker",
+          "description": "Multiplies black magic uses by 2."
+        },
+        {
+          "name": "Combat Arts +1",
+          "description": "Unit can equip +1 combat arts."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Overtake",
+        "description": "After defeating a foe, grant Mov +1 through the end of the next turn. (Max +3)"
+      }
     },
     {
       "id": "class_msetrpdjsxewf",
@@ -1348,24 +1586,16 @@
       "classAbilities": [
         {
           "name": "White-Magic Seeker",
-          "description": "",
-          "icon": null
+          "description": "Multiplies white magic uses by 2."
         },
         {
           "name": "Magic Heal +10",
-          "description": "",
-          "icon": null
-        },
-        {
-          "name": "",
-          "description": "",
-          "icon": null
+          "description": "When healing an ally with magic, restores +10 HP."
         }
       ],
       "masteredAbility": {
-        "name": "Forcefield",
-        "description": "",
-        "icon": null
+        "name": "Barrier",
+        "description": "Grants Res+3 to adjacent allies."
       },
       "growthMods": {
         "hp": 10,
@@ -1395,24 +1625,16 @@
       "classAbilities": [
         {
           "name": "Black-Magic Seeker",
-          "description": "",
-          "icon": null
+          "description": "Multiplies black magic uses by 2."
         },
         {
           "name": "Magic Hit +5",
-          "description": "",
-          "icon": null
-        },
-        {
-          "name": "",
-          "description": "",
-          "icon": null
+          "description": "When equipped with magic, grants Hit+5."
         }
       ],
       "masteredAbility": {
         "name": "Bind Speed",
-        "description": "",
-        "icon": null
+        "description": "Inflicts Spd-3 on adjacent foes."
       },
       "primarySkills": [
         {
@@ -1475,7 +1697,25 @@
           "skillTypeId": "faith",
           "grade": "B"
         }
-      ]
+      ],
+      "classAbilities": [
+        {
+          "name": "Mount/Dismount",
+          "description": "Allows use of Mount and Dismount commands."
+        },
+        {
+          "name": "Magic Hit +3",
+          "description": "When equipped with magic, grants Hit+3."
+        },
+        {
+          "name": "Magic Heal +5",
+          "description": "When healing an ally with magic, restores +5 HP."
+        }
+      ],
+      "masteredAbility": {
+        "name": "[CA] Song of Courage",
+        "description": "Grants Dex/Spd +2 to allies in range until unit's next phase."
+      }
     }
   ],
   "units": [
@@ -9791,6 +10031,212 @@
         }
       ],
       "location": "Not Available"
+    }
+  ],
+  "paralogues": [
+    {
+      "id": "para_leda",
+      "name": "Leda",
+      "windows": {
+        "dietrich": [
+          {
+            "start": "9/2",
+            "end": "9/8"
+          }
+        ],
+        "theodora": [
+          {
+            "start": "9/2",
+            "end": "9/8"
+          }
+        ]
+      }
+    },
+    {
+      "id": "para_theodora",
+      "name": "Theodora",
+      "windows": {
+        "dietrich": [
+          {
+            "start": "9/3",
+            "end": "9/15"
+          }
+        ]
+      }
+    },
+    {
+      "id": "para_talimun",
+      "name": "Talimun",
+      "windows": {
+        "cai": [
+          {
+            "start": "9/17",
+            "end": "9/22"
+          },
+          {
+            "start": "10/1",
+            "end": "10/12"
+          }
+        ],
+        "dietrich": [
+          {
+            "start": "9/17",
+            "end": "9/19"
+          },
+          {
+            "start": "10/1",
+            "end": "10/12"
+          }
+        ],
+        "theodora": [
+          {
+            "start": "9/17",
+            "end": "9/22"
+          },
+          {
+            "start": "10/1",
+            "end": "10/12"
+          }
+        ]
+      }
+    },
+    {
+      "id": "para_bertrand",
+      "name": "Bertrand",
+      "windows": {
+        "cai": [
+          {
+            "start": "9/17",
+            "end": "9/25"
+          }
+        ],
+        "dietrich": [
+          {
+            "start": "9/17",
+            "end": "9/17"
+          }
+        ],
+        "theodora": [
+          {
+            "start": "9/17",
+            "end": "9/25"
+          }
+        ]
+      }
+    },
+    {
+      "id": "para_anna",
+      "name": "Anna",
+      "windows": {
+        "cai": [
+          {
+            "start": "9/24",
+            "end": "10/5"
+          }
+        ],
+        "dietrich": [
+          {
+            "start": "9/29",
+            "end": "10/5"
+          }
+        ],
+        "theodora": [
+          {
+            "start": "9/24",
+            "end": "10/5"
+          }
+        ]
+      }
+    },
+    {
+      "id": "para_anatolia",
+      "name": "Anatolia",
+      "windows": {
+        "dietrich": [
+          {
+            "start": "10/5",
+            "end": "10/17"
+          }
+        ],
+        "leda": [
+          {
+            "start": "10/5",
+            "end": "10/17"
+          }
+        ]
+      }
+    },
+    {
+      "id": "para_dietrich",
+      "name": "Dietrich",
+      "windows": {
+        "theodora": [
+          {
+            "start": "10/16",
+            "end": "10/24"
+          }
+        ],
+        "leda": [
+          {
+            "start": "10/16",
+            "end": "11/1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "para_cai",
+      "name": "Cai",
+      "windows": {
+        "dietrich": [
+          {
+            "start": "10/16",
+            "end": "10/22"
+          }
+        ],
+        "theodora": [
+          {
+            "start": "10/16",
+            "end": "10/22"
+          }
+        ],
+        "leda": [
+          {
+            "start": "10/16",
+            "end": "10/22"
+          }
+        ]
+      }
+    },
+    {
+      "id": "para_orchel",
+      "name": "Orchel",
+      "windows": {
+        "cai": [
+          {
+            "start": "10/18",
+            "end": "10/21"
+          }
+        ],
+        "dietrich": [
+          {
+            "start": "10/18",
+            "end": "10/27"
+          }
+        ],
+        "theodora": [
+          {
+            "start": "10/18",
+            "end": "10/24"
+          }
+        ],
+        "leda": [
+          {
+            "start": "10/18",
+            "end": "10/27"
+          }
+        ]
+      }
     }
   ]
 }

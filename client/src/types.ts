@@ -304,6 +304,18 @@ export interface GachaConfig {
   fehMode?: boolean; // FEH-style: only 3–5★ rarities are shown in rates & pullable
 }
 
+// A paralogue's availability windows per route (dates as "M/D" strings).
+export interface ParalogueWindow {
+  start: string;
+  end: string;
+}
+export interface Paralogue {
+  id: string;
+  name: string; // lord/sublord name (Cai, Bertrand, Anna, …)
+  color?: string; // optional accent override
+  windows: Record<string, ParalogueWindow[]>; // route id -> availability windows
+}
+
 // A rideable mount. Stats/growths are the bonuses granted at Bond Lv. 5.
 export interface MountAbility {
   name: string;
@@ -340,4 +352,6 @@ export interface DB {
   hiddenPages?: string[]; // NavPage keys hidden from the top navigation
   mounts?: Mount[]; // rideable mounts
   mountTypeColors?: Record<string, string>; // optional per-type accent color
+  paralogues?: Paralogue[]; // paralogue availability by route
+  paralogueColors?: Record<string, string>; // optional per-paralogue accent color (by name)
 }
