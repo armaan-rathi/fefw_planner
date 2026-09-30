@@ -745,7 +745,35 @@
       "masteredAbility": {
         "name": "Charger",
         "description": "When using Charge, grants Prt+10 until unit's next phase."
-      }
+      },
+      "growthTiers": [
+        {
+          "level": 35,
+          "growths": {
+            "hp": 20,
+            "def": 20,
+            "lck": 5,
+            "cha": 15,
+            "str": 10,
+            "dex": 20,
+            "res": 5
+          }
+        },
+        {
+          "level": 45,
+          "growths": {
+            "hp": 30,
+            "str": 25,
+            "dex": 25,
+            "def": 30,
+            "lck": 10,
+            "cha": 25,
+            "mag": 5,
+            "spd": 5,
+            "res": 10
+          }
+        }
+      ]
     },
     {
       "id": "class_ms4gsshgfxh2m",

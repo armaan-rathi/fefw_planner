@@ -6,7 +6,7 @@ import { SkillMark, ProficiencyMark } from "../../components/icons";
 import { UnitPortrait } from "../../components/UnitPortrait";
 import { ImageDrop } from "../../components/ImageDrop";
 import { sortBySkillOrder } from "../../data/skills";
-import { GRADES, GROWTH_LABELS, GROWTH_STATS } from "../../types";
+import { CLASS_TIERS, GRADES, GROWTH_LABELS, GROWTH_STATS } from "../../types";
 import type { ClassAbility, GameClass, Grade, GrowthStat, MovementType, SkillReq, SkillType } from "../../types";
 
 const MOVES: { value: MovementType; label: string }[] = [
@@ -18,7 +18,7 @@ const MOVES: { value: MovementType; label: string }[] = [
   { value: "monster", label: "Monster" },
 ];
 
-const TIERS = ["Base", "Beginner", "Specialty", "Advanced", "Master"];
+const TIERS = CLASS_TIERS;
 
 function blankClass(): GameClass {
   return { id: uid("class_"), name: "", tier: "", description: "", movementType: "", proficiencies: [], bonusExp: [], portrait: null };
@@ -167,6 +167,24 @@ function ClassModal({ cls, onClose, onSave }: { cls: GameClass; onClose: () => v
       return { ...d, growthMods: Object.keys(g).length ? g : undefined };
     });
   }
+  function addTier() {
+    setDraft((d) => ({ ...d, growthTiers: [...(d.growthTiers ?? []), { level: 35, growths: {} }] }));
+  }
+  function removeTier(i: number) {
+    setDraft((d) => { const t = (d.growthTiers ?? []).filter((_, k) => k !== i); return { ...d, growthTiers: t.length ? t : undefined }; });
+  }
+  function setTierLevel(i: number, level: number) {
+    setDraft((d) => { const t = [...(d.growthTiers ?? [])]; t[i] = { ...t[i], level }; return { ...d, growthTiers: t }; });
+  }
+  function setTierGrowth(i: number, stat: GrowthStat, val: number | undefined) {
+    setDraft((d) => {
+      const t = [...(d.growthTiers ?? [])];
+      const g = { ...(t[i]?.growths ?? {}) };
+      if (val === undefined) delete g[stat]; else g[stat] = val;
+      t[i] = { ...t[i], growths: g };
+      return { ...d, growthTiers: t };
+    });
+  }
 
   return (
     <Modal
@@ -259,6 +277,33 @@ function ClassModal({ cls, onClose, onSave }: { cls: GameClass; onClose: () => v
           </label>
         ))}
       </div>
+
+      <div className="spread" style={{ marginTop: 14 }}>
+        <h4 className="section-title" style={{ margin: 0 }}>Level-based overrides</h4>
+        <button className="btn" onClick={addTier}>+ Add level tier</button>
+      </div>
+      <p className="muted" style={{ marginTop: 2, fontSize: 12 }}>
+        Optional. Growth mods that replace the base set once the unit reaches a level (e.g. Charioteer at Lv. 35 / 45).
+      </p>
+      {(draft.growthTiers ?? []).map((t, i) => (
+        <div key={i} style={{ border: "1px solid var(--panel-edge)", borderRadius: 8, padding: 8, marginBottom: 8 }}>
+          <div className="row" style={{ gap: 8, marginBottom: 6 }}>
+            <label className="field" style={{ width: 90, margin: 0 }}>
+              <span>At Lv.</span>
+              <input type="number" value={t.level} onChange={(e) => setTierLevel(i, Number(e.target.value) || 0)} />
+            </label>
+            <button className="btn danger" style={{ alignSelf: "flex-end" }} onClick={() => removeTier(i)}>Remove</button>
+          </div>
+          <div className="chip-wrap">
+            {GROWTH_STATS.map((k) => (
+              <label key={k} className="field" style={{ width: 70 }}>
+                <span>{GROWTH_LABELS[k]}</span>
+                <input type="number" value={t.growths?.[k] ?? ""} onChange={(e) => setTierGrowth(i, k, e.target.value === "" ? undefined : Number(e.target.value))} />
+              </label>
+            ))}
+          </div>
+        </div>
+      ))}
 
       <div className="divider" />
       <h3 className="section-title">Certification skills</h3>

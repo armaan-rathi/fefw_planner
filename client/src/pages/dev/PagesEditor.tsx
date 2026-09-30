@@ -28,6 +28,20 @@ export function PagesEditor() {
           </label>
         ))}
       </div>
+
+      <div className="divider" />
+      <h3 className="section-title">Spoilers</h3>
+      <p className="muted" style={{ fontSize: 12.5, marginTop: 0 }}>
+        Shows the navbar “Allow Part 3 Spoilers” toggle. Leave off until Part 3 data (Part-3 characters, Master/Divine classes) is in — while off, that content stays hidden and the toggle isn’t shown.
+      </p>
+      <label className="dev-toggle" style={{ marginLeft: 0 }}>
+        <input
+          type="checkbox"
+          checked={!!db.showSpoilerToggle}
+          onChange={(e) => update((d) => { d.showSpoilerToggle = e.target.checked; })}
+        />
+        <span>Show the “Allow Part 3 Spoilers” toggle in the navbar</span>
+      </label>
     </div>
   );
 }

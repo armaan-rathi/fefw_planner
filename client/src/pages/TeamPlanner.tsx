@@ -7,6 +7,7 @@ import { ProficiencyGrid } from "../components/ProficiencyGrid";
 import { ProficiencyMark } from "../components/icons";
 import { lordFirst, unitFaction, unitsForRoute } from "../data/units";
 import { sortBySkillOrder } from "../data/skills";
+import { filterSpoilerUnits, isSpoilerTier, useSpoilers } from "../data/spoilers";
 import type { Unit } from "../types";
 
 const SLOT_COUNT = 20;
@@ -24,6 +25,7 @@ export function TeamPlanner() {
   const [teams, setTeams] = useLocalStorage<Teams>("fw.teams", {});
   const [dragOver, setDragOver] = useState<number | null>(null);
   const [picked, setPicked] = useState<string | null>(null); // tap-to-add (mobile-friendly)
+  const [allowSpoilers] = useSpoilers();
 
   const isFree = route === "free";
   const routeObj = isFree ? null : db.routes.find((r) => r.id === route) ?? null;
@@ -61,8 +63,8 @@ export function TeamPlanner() {
 
   // Palette: eligible units for the route, lord first.
   const available: Unit[] = useMemo(() => {
-    return lordFirst(isFree ? db.units : unitsForRoute(db.units, route));
-  }, [db.units, route, isFree]);
+    return lordFirst(filterSpoilerUnits(isFree ? db.units : unitsForRoute(db.units, route), allowSpoilers));
+  }, [db.units, route, isFree, allowSpoilers]);
 
   const assignedIds = new Set(slots.filter(Boolean).map((s) => (s as any).unitId));
 
@@ -229,9 +231,11 @@ export function TeamPlanner() {
 
                     <select value={slot!.classId ?? ""} onChange={(e) => setSlotClass(i, e.target.value || null)}>
                       <option value="">— Select class —</option>
-                      {db.classes.map((c) => (
-                        <option key={c.id} value={c.id}>{c.name}</option>
-                      ))}
+                      {db.classes
+                        .filter((c) => allowSpoilers || !isSpoilerTier(c.tier) || c.id === slot!.classId)
+                        .map((c) => (
+                          <option key={c.id} value={c.id}>{c.name}</option>
+                        ))}
                     </select>
 
                     {cls && cls.proficiencies.length > 0 && (

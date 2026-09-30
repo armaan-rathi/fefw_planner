@@ -8,6 +8,7 @@ import { availableAttrs, charPageConfig } from "../data/characterAttrs";
 import { unitFaction } from "../data/units";
 import { GROWTH_LABELS, GROWTH_STATS } from "../types";
 import type { DB, Unit } from "../types";
+import { filterSpoilerUnits, useSpoilers } from "../data/spoilers";
 
 type SortMode = "default" | "faction";
 
@@ -92,11 +93,13 @@ export function CharacterList() {
   const previewAttrs = cfg.preview.filter((id) => attrs.some((a) => a.id === id));
   const detailAttrs = cfg.detail.filter((id) => attrs.some((a) => a.id === id));
 
+  const [allowSpoilers] = useSpoilers();
   const filtered = useMemo(() => {
+    const base = filterSpoilerUnits(db.units, allowSpoilers);
     const q = query.toLowerCase().trim();
-    if (!q) return db.units;
-    return db.units.filter((u) => (u.name + " " + unitFaction(u)).toLowerCase().includes(q));
-  }, [db.units, query]);
+    if (!q) return base;
+    return base.filter((u) => (u.name + " " + unitFaction(u)).toLowerCase().includes(q));
+  }, [db.units, query, allowSpoilers]);
 
   // Faction order = the faction field's option order (dev-configurable). Units
   // are grouped by faction in that order; unaffiliated units go last. Order

@@ -3,6 +3,7 @@ import { useDB } from "../data/DataContext";
 import { Modal } from "../components/Modal";
 import { UnitPortrait } from "../components/UnitPortrait";
 import { condFilled, isNum, recruitableUnits } from "../data/recruitment";
+import { filterSpoilerUnits, useSpoilers } from "../data/spoilers";
 import type { DB, RecruitCondition, Unit } from "../types";
 
 type Route = DB["routes"][number];
@@ -19,7 +20,8 @@ const StarIcon = () => (
 export function Recruitment() {
   const { db } = useDB();
   const [view, setView] = useState<View>("character");
-  const units = useMemo(() => recruitableUnits(db), [db]);
+  const [allowSpoilers] = useSpoilers();
+  const units = useMemo(() => filterSpoilerUnits(recruitableUnits(db), allowSpoilers), [db, allowSpoilers]);
   const routes = db.routes;
   const [detail, setDetail] = useState<{ unit: Unit; route: Route } | null>(null);
 

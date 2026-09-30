@@ -1,13 +1,15 @@
 import { useMemo, useState } from "react";
 import { useDB } from "../data/DataContext";
 import { SkillMark } from "../components/icons";
+import { filterSpoilerUnits, useSpoilers } from "../data/spoilers";
 
 type Mode = "boon" | "bane";
 
 export function Proficiencies() {
   const { db } = useDB();
+  const [allowSpoilers] = useSpoilers();
   const skills = db.skillTypes;
-  const units = useMemo(() => db.units.filter((u) => (u.boons?.length ?? 0) > 0 || (u.banes?.length ?? 0) > 0), [db.units]);
+  const units = useMemo(() => filterSpoilerUnits(db.units.filter((u) => (u.boons?.length ?? 0) > 0 || (u.banes?.length ?? 0) > 0), allowSpoilers), [db.units, allowSpoilers]);
   const [filters, setFilters] = useState<Record<string, Mode>>({});
 
   function toggle(skillId: string, mode: Mode) {
@@ -45,8 +47,7 @@ export function Proficiencies() {
               {skills.map((st) => (
                 <th key={st.id}>
                   <div className="prof-head">
-                    <span className="prof-head-icon" title={st.label}><SkillMark type={st} size={20} /></span>
-                    <span className="prof-head-label">{st.label}</span>
+                    <span className="prof-head-icon" title={st.label}><SkillMark type={st} size={22} /></span>
                     <span className="prof-head-filters">
                       <button
                         className={"prof-fbtn boon" + (filters[st.id] === "boon" ? " on" : "")}

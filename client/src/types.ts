@@ -43,7 +43,7 @@ export type FieldValue = string | boolean | string[];
 
 export type MovementType = "infantry" | "cavalry" | "flying" | "armored" | "monster" | "";
 
-export const CLASS_TIERS = ["Base", "Beginner", "Specialty", "Advanced", "Master"];
+export const CLASS_TIERS = ["Base", "Beginner", "Specialty", "Advanced", "Master", "Divine"];
 
 // A required skill proficiency (skill type + minimum grade) for certification.
 export interface SkillReq {
@@ -67,6 +67,7 @@ export interface GameClass {
   proficiencies: string[]; // skillType ids available to this class
   bonusExp?: string[]; // skillType ids this class earns bonus EXP in (shown with a ▲ on the icon)
   growthMods?: Growths; // growth-rate modifiers (percent, may be negative) applied while in this class
+  growthTiers?: { level: number; growths: Growths }[]; // level-gated growth-mod overrides (e.g. Charioteer Lv.35/45)
   portrait: string | null;
   // Certification / class-list info
   primarySkills?: SkillReq[];
@@ -128,6 +129,7 @@ export interface Unit {
   fields: Record<string, FieldValue>; // custom field values keyed by FieldDef.key (e.g. faction)
   postTimeskip?: boolean; // only recruitable/available after the timeskip
   possiblyEnemyOnly?: boolean; // may turn out to be enemy-only (shows a "?" on the portrait)
+  part3?: boolean; // Part 3 (late-game) character — hidden unless spoilers are enabled
   recruitment?: Record<string, RecruitCondition>; // recruitment conditions keyed by lord's route id
   growths?: Growths; // growth rates (percent) per stat
 }
@@ -362,4 +364,5 @@ export interface DB {
   paralogues?: Paralogue[]; // paralogue availability by route
   paralogueColors?: Record<string, string>; // optional per-paralogue accent color (by name)
   supports?: SupportEdge[]; // symmetric support links between units
+  showSpoilerToggle?: boolean; // show the navbar "Allow Part 3 Spoilers" toggle
 }

@@ -19,6 +19,8 @@ import { Polls } from "./pages/Polls";
 import { Gacha } from "./pages/Gacha";
 import { DevMode } from "./pages/dev/DevMode";
 import { NAV_PAGES } from "./data/navPages";
+import { SpoilerProvider, useSpoilers } from "./data/spoilers";
+import { SpoilerToggle } from "./components/SpoilerToggle";
 
 function SaveBadge() {
   const { saveState } = useData();
@@ -52,6 +54,7 @@ function Shell() {
   // Public sees Gacha only when enabled; devs see it whenever the Editor is on.
   const gachaVisible = (db?.gacha?.enabled ?? false) || devMode;
   const hidden = new Set(db?.hiddenPages ?? []);
+  const [allowSpoilers, setAllowSpoilers] = useSpoilers();
 
   return (
     <div className="app-root">
@@ -86,6 +89,7 @@ function Shell() {
         </nav>
         <div className="topbar-right">
           <SaveBadge />
+          {db?.showSpoilerToggle && <SpoilerToggle allow={allowSpoilers} onChange={setAllowSpoilers} />}
           <EditorControls />
         </div>
       </header>
@@ -129,7 +133,9 @@ function Shell() {
 export function App() {
   return (
     <DevModeProvider>
-      <Shell />
+      <SpoilerProvider>
+        <Shell />
+      </SpoilerProvider>
     </DevModeProvider>
   );
 }

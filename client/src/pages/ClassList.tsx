@@ -1,10 +1,12 @@
 import { useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import { useDB } from "../data/DataContext";
 import { UnitPortrait } from "../components/UnitPortrait";
 import { SkillMark, ProficiencyMark } from "../components/icons";
 import { sortBySkillOrder } from "../data/skills";
 import { CLASS_TIERS, GROWTH_LABELS, GROWTH_STATS } from "../types";
 import type { ClassAbility, GameClass, SkillReq, SkillType, TierRequirement } from "../types";
+import { isSpoilerTier, useSpoilers } from "../data/spoilers";
 
 const MOVE_LABEL: Record<string, string> = {
   infantry: "Infantry",
@@ -56,24 +58,38 @@ function AbilityRow({ ability, master }: { ability?: ClassAbility; master?: bool
 }
 
 // Growth-rate modifiers a class applies to a unit's growths (can be negative).
+function GrowthChips({ g }: { g: import("../types").Growths }) {
+  return (
+    <div className="growth-chips" style={{ marginTop: 5 }}>
+      {GROWTH_STATS.map((k) => {
+        const v = g[k];
+        const has = typeof v === "number" && v !== 0;
+        return (
+          <span className="growth-chip" key={k}>
+            <span className="gc-k">{GROWTH_LABELS[k]}</span>
+            <span className={"gc-v" + (has ? (v! > 0 ? " pos" : " neg") : "")}>{has ? `${v! > 0 ? "+" : ""}${v}%` : "—"}</span>
+          </span>
+        );
+      })}
+    </div>
+  );
+}
+
 function GrowthModsSection({ cls }: { cls: GameClass }) {
   const g = cls.growthMods;
-  if (!g || !GROWTH_STATS.some((k) => typeof g[k] === "number" && g[k] !== 0)) return null;
+  const hasG = (x?: import("../types").Growths) => x && GROWTH_STATS.some((k) => typeof x[k] === "number" && x[k] !== 0);
+  const tiers = (cls.growthTiers ?? []).filter((t) => hasG(t.growths));
+  if (!hasG(g) && tiers.length === 0) return null;
   return (
     <div>
-      <div className="cast-detail-label">Growth Modifiers</div>
-      <div className="growth-chips" style={{ marginTop: 5 }}>
-        {GROWTH_STATS.map((k) => {
-          const v = g[k];
-          const has = typeof v === "number" && v !== 0;
-          return (
-            <span className="growth-chip" key={k}>
-              <span className="gc-k">{GROWTH_LABELS[k]}</span>
-              <span className={"gc-v" + (has ? (v! > 0 ? " pos" : " neg") : "")}>{has ? `${v! > 0 ? "+" : ""}${v}%` : "—"}</span>
-            </span>
-          );
-        })}
-      </div>
+      <div className="cast-detail-label">Growth Modifiers{tiers.length > 0 ? " (base)" : ""}</div>
+      {hasG(g) && <GrowthChips g={g!} />}
+      {tiers.map((t) => (
+        <div key={t.level} style={{ marginTop: 8 }}>
+          <div className="cast-detail-label">At Lv. {t.level}</div>
+          <GrowthChips g={t.growths} />
+        </div>
+      ))}
     </div>
   );
 }
@@ -151,7 +167,11 @@ export function ClassList() {
   const { db } = useDB();
   const skillById = (id: string) => db.skillTypes.find((s) => s.id === id);
 
-  const tiers = useMemo(() => CLASS_TIERS.filter((t) => db.classes.some((c) => c.tier === t)), [db.classes]);
+  const [allowSpoilers] = useSpoilers();
+  const tiers = useMemo(
+    () => CLASS_TIERS.filter((t) => db.classes.some((c) => c.tier === t) && (allowSpoilers || !isSpoilerTier(t))),
+    [db.classes, allowSpoilers],
+  );
   const [tier, setTier] = useState<string>("");
   // Most planning is around Advanced classes, so default to that tier when it
   // exists (until the user picks another).
@@ -169,6 +189,7 @@ export function ClassList() {
           <h2>Class List</h2>
           <p>Browse classes by tier — pick one to see its certification requirements and abilities.</p>
         </div>
+        <Link className="btn" to="/growths?view=classes">Growth rates table →</Link>
       </div>
 
       {db.classes.length === 0 ? (

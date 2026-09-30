@@ -251,6 +251,10 @@ function UnitModal({ unit, onClose, onSave }: { unit: Unit; onClose: () => void;
             <input type="checkbox" checked={!!draft.possiblyEnemyOnly} onChange={(e) => set({ possiblyEnemyOnly: e.target.checked })} />
             <span>Possibly Enemy Only</span>
           </label>
+          <label className="dev-toggle" style={{ marginTop: 4 }}>
+            <input type="checkbox" checked={!!draft.part3} onChange={(e) => set({ part3: e.target.checked })} />
+            <span>Part 3 (spoiler — hidden unless spoilers on)</span>
+          </label>
         </div>
         <div>
           <label className="field"><span>Portrait</span></label>

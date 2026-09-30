@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { useDB } from "../data/DataContext";
 import { RANK_COLOR, RANK_ORDER, supportAdjacency, unitsWithSupports } from "../data/supports";
+import { filterSpoilerUnits, useSpoilers } from "../data/spoilers";
 import type { Unit } from "../types";
 
 const VB = 700;
@@ -8,20 +9,22 @@ const CENTER = VB / 2;
 
 export function Supports() {
   const { db } = useDB();
+  const [allowSpoilers] = useSpoilers();
   const adj = useMemo(() => supportAdjacency(db), [db]);
   const withSupports = useMemo(() => unitsWithSupports(db), [db]);
   const unitById = useMemo(() => new Map(db.units.map((u) => [u.id, u])), [db.units]);
 
   // Units that have at least one support, in unit order, for the picker.
-  const selectable = useMemo(() => db.units.filter((u) => withSupports.has(u.id)), [db.units, withSupports]);
+  const selectable = useMemo(() => filterSpoilerUnits(db.units.filter((u) => withSupports.has(u.id)), allowSpoilers), [db.units, withSupports, allowSpoilers]);
   const [centerId, setCenterId] = useState<string>(selectable[0]?.id ?? "");
-  const center = unitById.get(centerId) ?? selectable[0];
+  const picked = unitById.get(centerId);
+  const center = picked && (allowSpoilers || !picked.part3) ? picked : selectable[0];
 
   const neighbors = useMemo(() => {
     const list = (adj.get(center?.id ?? "") ?? []).slice();
     list.sort((a, b) => (RANK_ORDER[a.rank] ?? 9) - (RANK_ORDER[b.rank] ?? 9) || (unitById.get(a.id)?.name ?? "").localeCompare(unitById.get(b.id)?.name ?? ""));
-    return list.map((x) => ({ ...x, unit: unitById.get(x.id) })).filter((x) => x.unit) as { id: string; rank: string; unit: Unit }[];
-  }, [adj, center, unitById]);
+    return list.map((x) => ({ ...x, unit: unitById.get(x.id) })).filter((x) => x.unit && (allowSpoilers || !x.unit.part3)) as { id: string; rank: string; unit: Unit }[];
+  }, [adj, center, unitById, allowSpoilers]);
 
   if (selectable.length === 0 || !center) return (
     <div>
