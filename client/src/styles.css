@@ -2611,6 +2611,39 @@ input[type="range"]::-moz-range-thumb {
 .growth-chip .gc-v.pos { color: #6bd88f; }
 .growth-chip .gc-v.neg { color: #f07a5f; }
 
+/* Mounts page — table */
+.mount-table-scroll { overflow-x: auto; border: 1px solid var(--panel-edge); border-radius: 10px; }
+.mount-table { width: 100%; min-width: 940px; border-collapse: collapse; font-size: 13px; }
+.mount-table th { background: #12242b; color: var(--ink-dim); font-size: 11px; text-transform: uppercase; letter-spacing: 0.03em; padding: 9px 10px; text-align: left; border: 1px solid #0a1a1f; }
+.mount-table td { padding: 8px 10px; border: 1px solid var(--panel-edge); vertical-align: top; }
+.mount-type-cell { font-weight: 800; font-family: Georgia, serif; font-size: 15px; text-align: center; vertical-align: middle; background: rgba(0, 0, 0, 0.15); white-space: nowrap; }
+.mount-name-cell { font-weight: 700; white-space: nowrap; }
+.mount-stats { display: flex; flex-direction: column; gap: 2px; }
+.mount-stat { white-space: nowrap; font-size: 12.5px; }
+.mount-stat b { color: var(--gold-bright); }
+.mount-abilities { display: flex; flex-direction: column; gap: 4px; }
+.mount-ability { font-size: 12.5px; line-height: 1.3; }
+.mount-ability-eff { color: var(--ink-dim); }
+.mount-loc { font-size: 12.5px; color: var(--ink-dim); }
+
+/* Mounts page — detail (type-grouped list + panel) */
+.mount-detail-layout { display: grid; grid-template-columns: 220px 1fr; gap: 16px; align-items: start; }
+.mount-list { display: flex; flex-direction: column; gap: 10px; max-height: 72vh; overflow-y: auto; }
+.mount-list-group { display: flex; flex-direction: column; gap: 3px; }
+.mount-list-head { font-weight: 800; font-family: Georgia, serif; font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; padding: 4px 2px; border-bottom: 2px solid; margin-bottom: 2px; }
+.mount-list-item { text-align: left; padding: 7px 10px; border-radius: 8px; border: 1px solid var(--panel-edge); background: #0d2026; color: var(--ink); cursor: pointer; font-weight: 600; font-size: 13px; }
+.mount-list-item:hover { border-color: var(--gold-deep); background: #12272e; }
+.mount-list-item.active { border-color: var(--gold); background: rgba(216, 182, 106, 0.12); color: var(--gold-bright); }
+.mount-detail { display: flex; flex-direction: column; gap: 14px; }
+.mount-detail-name { margin: 0; font-family: Georgia, serif; color: var(--gold-bright); font-size: 20px; }
+.mount-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 720px) {
+  .mount-detail-layout { grid-template-columns: 1fr; }
+  .mount-list { flex-direction: row; flex-wrap: wrap; max-height: none; }
+  .mount-list-group { flex: 1 1 140px; }
+  .mount-detail-grid { grid-template-columns: 1fr; }
+}
+
 /* By Route: renown-level rows × route columns */
 .recruit-grid-scroll { overflow-x: auto; }
 .recruit-grid { display: grid; min-width: 560px; border: 1px solid var(--panel-edge); border-radius: 12px; overflow: hidden; background: rgba(0, 0, 0, 0.15); }

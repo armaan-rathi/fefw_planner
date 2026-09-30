@@ -304,6 +304,21 @@ export interface GachaConfig {
   fehMode?: boolean; // FEH-style: only 3–5★ rarities are shown in rates & pullable
 }
 
+// A rideable mount. Stats/growths are the bonuses granted at Bond Lv. 5.
+export interface MountAbility {
+  name: string;
+  effect: string;
+}
+export interface Mount {
+  id: string;
+  type: string; // Horse, Ornius, Pegasus, Bau, Elephant
+  name: string;
+  stats: Growths; // flat Bond Lv. 5 stat bonuses
+  growths: Growths; // Bond Lv. 5 growth-rate bonuses (percent)
+  abilities: MountAbility[];
+  location: string;
+}
+
 export interface DB {
   schemaVersion: number;
   routes: Route[];
@@ -323,4 +338,6 @@ export interface DB {
   recruitmentOrder?: string[]; // unit ids, display order on the Recruitment page
   growthsOnCharPage?: boolean; // show growth rates on the Character Database page
   hiddenPages?: string[]; // NavPage keys hidden from the top navigation
+  mounts?: Mount[]; // rideable mounts
+  mountTypeColors?: Record<string, string>; // optional per-type accent color
 }

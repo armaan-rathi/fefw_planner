@@ -16,4 +16,5 @@ export const NAV_PAGES: NavPage[] = [
   { key: "map", to: "/map", label: "Overworld Map", row: 1 },
   { key: "recruitment", to: "/recruitment", label: "Recruitment", row: 2 },
   { key: "growths", to: "/growths", label: "Growth Rates", row: 2 },
+  { key: "mounts", to: "/mounts", label: "Mounts", row: 2 },
 ];

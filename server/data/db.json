@@ -9210,5 +9210,420 @@
   },
   "hiddenPages": [
     "map"
+  ],
+  "mounts": [
+    {
+      "id": "mount_wild_horse",
+      "type": "Horse",
+      "name": "Wild Horse",
+      "stats": {
+        "dex": 3,
+        "spd": 1,
+        "def": 1
+      },
+      "growths": {
+        "hp": 5,
+        "spd": 5,
+        "dex": 5,
+        "def": 5,
+        "res": 5
+      },
+      "abilities": [
+        {
+          "name": "Paired Run",
+          "effect": "+2 Movement"
+        },
+        {
+          "name": "Paired Alertness",
+          "effect": "Dodge +10 (critical avoid)"
+        }
+      ],
+      "location": "Sunfall Pass, Sunlit Path, Oleance Plains"
+    },
+    {
+      "id": "mount_monoceros",
+      "type": "Horse",
+      "name": "Monoceros",
+      "stats": {
+        "spd": 1,
+        "dex": 1,
+        "lck": 3
+      },
+      "growths": {
+        "hp": 5,
+        "spd": 5,
+        "dex": 5,
+        "res": 10
+      },
+      "abilities": [
+        {
+          "name": "Paired Healing",
+          "effect": "Restores health after combat"
+        },
+        {
+          "name": "Paired Miracle",
+          "effect": "Grants Luck +5"
+        }
+      ],
+      "location": "Oleance Plains (Rare)"
+    },
+    {
+      "id": "mount_ferghanan_horse",
+      "type": "Horse",
+      "name": "Ferghanan Horse",
+      "stats": {
+        "str": 2,
+        "dex": 1,
+        "def": 2
+      },
+      "growths": {
+        "hp": 5,
+        "str": 5,
+        "dex": 5,
+        "def": 10
+      },
+      "abilities": [
+        {
+          "name": "Paired Arts Focus",
+          "effect": "Hit +15 with combat arts"
+        },
+        {
+          "name": "Canto",
+          "effect": "+2 Movement after combat"
+        },
+        {
+          "name": "Paired Fierce Arts",
+          "effect": "Atk+4 with combat arts"
+        }
+      ],
+      "location": "Sunfall Pass (Rare)"
+    },
+    {
+      "id": "mount_rocinan",
+      "type": "Horse",
+      "name": "Rocinan",
+      "stats": {
+        "spd": 1,
+        "dex": 3,
+        "def": 2
+      },
+      "growths": {
+        "hp": 5,
+        "spd": 5,
+        "dex": 5,
+        "def": 10,
+        "res": 5
+      },
+      "abilities": [
+        {
+          "name": "Paired Run",
+          "effect": "+2 Movement"
+        }
+      ],
+      "location": "Unique Mount: Comes with Io (No wild spawn)"
+    },
+    {
+      "id": "mount_wild_ornius",
+      "type": "Ornius",
+      "name": "Wild Ornius",
+      "stats": {
+        "spd": 2,
+        "dex": 3
+      },
+      "growths": {
+        "spd": 10,
+        "dex": 15
+      },
+      "abilities": [
+        {
+          "name": "Paired Run",
+          "effect": "+2 Movement"
+        },
+        {
+          "name": "Paired Stealth",
+          "effect": "Avoid+10, Shld+3 on terrain"
+        }
+      ],
+      "location": "Elissa Pass, Mount Ouranos, Faro Forest, Sparrow's Thoroughfare"
+    },
+    {
+      "id": "mount_white_ornius",
+      "type": "Ornius",
+      "name": "White Ornius",
+      "stats": {
+        "spd": 1,
+        "dex": 1,
+        "res": 3
+      },
+      "growths": {
+        "spd": 5,
+        "dex": 5,
+        "res": 15
+      },
+      "abilities": [
+        {
+          "name": "Paired Purify",
+          "effect": "Remove Poison Status after EP"
+        },
+        {
+          "name": "Paired Healing",
+          "effect": "Heals unit after combat"
+        }
+      ],
+      "location": "Faro Forest (Rare)"
+    },
+    {
+      "id": "mount_meganius",
+      "type": "Ornius",
+      "name": "Meganius",
+      "stats": {
+        "str": 1,
+        "def": 3,
+        "dex": 1
+      },
+      "growths": {
+        "str": 5,
+        "dex": 5,
+        "def": 15
+      },
+      "abilities": [
+        {
+          "name": "Paired Run",
+          "effect": "+2 Movement"
+        },
+        {
+          "name": "Paired Bulk",
+          "effect": "+4 Build"
+        }
+      ],
+      "location": "Axion Gorge, Sparrow's Thoroughfare, Mount Ouranos (Rare)"
+    },
+    {
+      "id": "mount_red_meganius",
+      "type": "Ornius",
+      "name": "Red Meganius",
+      "stats": {
+        "str": 3,
+        "def": 1,
+        "dex": 1
+      },
+      "growths": {
+        "str": 15,
+        "def": 5,
+        "dex": 5
+      },
+      "abilities": [
+        {
+          "name": "Paired Run",
+          "effect": "+2 Movement"
+        },
+        {
+          "name": "Paired Protection",
+          "effect": "Reduces Crit damage by 50%"
+        }
+      ],
+      "location": "Axion Gorge (Rare)"
+    },
+    {
+      "id": "mount_magonius",
+      "type": "Ornius",
+      "name": "Magonius",
+      "stats": {
+        "mag": 3,
+        "dex": 2
+      },
+      "growths": {
+        "mag": 15,
+        "dex": 10
+      },
+      "abilities": [
+        {
+          "name": "Paired Run",
+          "effect": "+2 Movement"
+        },
+        {
+          "name": "Paired Magic Focus",
+          "effect": "Hit +15 with magic"
+        }
+      ],
+      "location": "Headsman's Rock"
+    },
+    {
+      "id": "mount_black_magonius",
+      "type": "Ornius",
+      "name": "Black Magonius",
+      "stats": {
+        "mag": 2,
+        "spd": 2,
+        "dex": 1
+      },
+      "growths": {
+        "mag": 10,
+        "spd": 10,
+        "dex": 5
+      },
+      "abilities": [
+        {
+          "name": "Paired Magic Sight",
+          "effect": "Crit +10 with magic"
+        },
+        {
+          "name": "Canto",
+          "effect": "+2 Movement after Combat"
+        }
+      ],
+      "location": "Headsman's Rock (Rare)"
+    },
+    {
+      "id": "mount_wild_pegasus",
+      "type": "Pegasus",
+      "name": "Wild Pegasus",
+      "stats": {
+        "spd": 3,
+        "res": 2
+      },
+      "growths": {
+        "spd": 15,
+        "res": 10
+      },
+      "abilities": [
+        {
+          "name": "Paired Streak",
+          "effect": "+2 Movement"
+        },
+        {
+          "name": "Paired Mage Kill",
+          "effect": "+5 Atk against Mages"
+        }
+      ],
+      "location": "Raptor's Throat, Valley of Black Wings, Pegasi's Peak"
+    },
+    {
+      "id": "mount_dark_pegasus",
+      "type": "Pegasus",
+      "name": "Dark Pegasus",
+      "stats": {
+        "mag": 3,
+        "spd": 2
+      },
+      "growths": {
+        "mag": 15,
+        "spd": 10
+      },
+      "abilities": [
+        {
+          "name": "Paired Streak",
+          "effect": "+2 Movement"
+        },
+        {
+          "name": "Paired Magic Speed",
+          "effect": "Avoid +20% Trigger% = Mag"
+        }
+      ],
+      "location": "Valley of Black Wings (Rare)"
+    },
+    {
+      "id": "mount_falicorn",
+      "type": "Pegasus",
+      "name": "Falicorn",
+      "stats": {
+        "str": 1,
+        "spd": 3,
+        "dex": 1
+      },
+      "growths": {
+        "str": 5,
+        "dex": 5,
+        "spd": 15
+      },
+      "abilities": [
+        {
+          "name": "Paired Streak",
+          "effect": "+2 Movement"
+        },
+        {
+          "name": "Paired Tempest",
+          "effect": "Avoid +15 against bows"
+        },
+        {
+          "name": "Canto",
+          "effect": "+2 Movement after combat"
+        }
+      ],
+      "location": "Raptor's Throat, Pegasi's Peak (Rare)"
+    },
+    {
+      "id": "mount_bucephalus",
+      "type": "Pegasus",
+      "name": "Bucephalus",
+      "stats": {
+        "str": 1,
+        "spd": 3,
+        "res": 2
+      },
+      "growths": {
+        "str": 5,
+        "spd": 15,
+        "res": 10
+      },
+      "abilities": [
+        {
+          "name": "Paired Streak",
+          "effect": "+2 Movement"
+        }
+      ],
+      "location": "Unique Mount: Comes with Alexandra (No wild spawn)"
+    },
+    {
+      "id": "mount_wild_bau",
+      "type": "Bau",
+      "name": "Wild Bau",
+      "stats": {
+        "str": 2,
+        "spd": 1,
+        "dex": 2
+      },
+      "growths": {
+        "str": 10,
+        "spd": 5,
+        "dex": 10
+      },
+      "abilities": [
+        {
+          "name": "Paired Streak",
+          "effect": "+2 Movement"
+        },
+        {
+          "name": "Paired Fierce Arts",
+          "effect": "+4 Atk with combat arts"
+        }
+      ],
+      "location": "Bau Caller's Cape"
+    },
+    {
+      "id": "mount_war_elephant",
+      "type": "Elephant",
+      "name": "War Elephant",
+      "stats": {
+        "str": 5,
+        "dex": 5,
+        "def": 5,
+        "lck": 5
+      },
+      "growths": {
+        "hp": 5,
+        "str": 5,
+        "dex": 5,
+        "def": 5,
+        "lck": 5
+      },
+      "abilities": [
+        {
+          "name": "Paired Dash",
+          "effect": "+2 Movement"
+        }
+      ],
+      "location": "Not Available"
+    }
   ]
 }

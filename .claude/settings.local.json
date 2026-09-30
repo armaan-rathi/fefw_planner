@@ -3,7 +3,8 @@
     "allow": [
       "WebFetch(domain:serenesforest.net)",
       "Bash(npm run *)",
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "Bash(echo \"exit: $?\")"
     ]
   }
 }

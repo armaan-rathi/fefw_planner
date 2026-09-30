@@ -7,6 +7,7 @@ import { OverworldMap } from "./pages/OverworldMap";
 import { CharacterList } from "./pages/CharacterList";
 import { Recruitment } from "./pages/Recruitment";
 import { GrowthRates } from "./pages/GrowthRates";
+import { Mounts } from "./pages/Mounts";
 import { CastPage } from "./pages/CastPage";
 import { ClassList } from "./pages/ClassList";
 import { TierList } from "./pages/TierList";
@@ -100,6 +101,7 @@ function Shell() {
             <Route path="/characters" element={<CharacterList />} />
             <Route path="/recruitment" element={<Recruitment />} />
             <Route path="/growths" element={<GrowthRates />} />
+            <Route path="/mounts" element={<Mounts />} />
             <Route path="/classes" element={<ClassList />} />
             <Route path="/tiers" element={<TierList />} />
             <Route path="/gods" element={<CastPage kind="gods" title="Gods" blurb="Deities you can worship at temples." />} />
