@@ -1863,7 +1863,6 @@
         "riding"
       ],
       "banes": [
-        "armor",
         "flying"
       ],
       "skillLevels": {},
@@ -1915,9 +1914,9 @@
       ],
       "classId": "class_ms4godtdiwiu4",
       "boons": [
+        "lance",
         "axe",
         "armor",
-        "lance",
         "riding"
       ],
       "banes": [
@@ -2330,8 +2329,8 @@
       "classId": "class_brigand",
       "boons": [
         "axe",
-        "infantry",
-        "bow"
+        "bow",
+        "infantry"
       ],
       "banes": [
         "reason",
@@ -2404,12 +2403,14 @@
       "classId": "class_ornius",
       "boons": [
         "lance",
-        "riding",
         "axe",
+        "riding",
         "flying"
       ],
       "banes": [
-        "sword"
+        "sword",
+        "brawl",
+        "armor"
       ],
       "skillLevels": {},
       "personalSkill": {
@@ -2612,9 +2613,9 @@
       ],
       "classId": "class_ms3o7io5clmwu",
       "boons": [
-        "brawl",
         "sword",
         "axe",
+        "brawl",
         "faith"
       ],
       "banes": [],
@@ -2688,7 +2689,8 @@
         "backstory": "A gladiator who continues to fight in the Dagsion arena.\n\nKnown by the moniker \"White-Maned Demon\" for his demonic strength. It is said that five years ago, he committed a great sin and was imprisoned in the underground dungeon of the arena.\n\nLikes: Training, salted meat, well-crafted weapons, reading, board games",
         "faction": "Mane of Flame",
         "crest": [
-          "Flames"
+          "Flames",
+          "Duality"
         ]
       },
       "possiblyEnemyOnly": true,
@@ -2711,8 +2713,14 @@
       "routeIds": [],
       "starterFor": [],
       "classId": "class_soldier",
-      "boons": [],
-      "banes": [],
+      "boons": [
+        "sword",
+        "reason",
+        "authority"
+      ],
+      "banes": [
+        "armor"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "Swashbuckler’s Luck",
@@ -2745,8 +2753,14 @@
       "routeIds": [],
       "starterFor": [],
       "classId": "class_soldier",
-      "boons": [],
-      "banes": [],
+      "boons": [
+        "axe",
+        "reason",
+        "faith"
+      ],
+      "banes": [
+        "sword"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "Solid and Sturdy",
@@ -2756,8 +2770,8 @@
         "faction": "Linaria's Morning Dew",
         "backstory": "A mysterious girl serving at Credna’s Temple at the upper levels of Dagsion. Always conceals her face behind a distinctive cat mask. Although she’s innocent and treats everyone with kindness, she’s somewhat naïve and oblivious.\n\nLikes: Animals, cleaning, doing laundry, cooking",
         "crest": [
-          "Noa",
-          "Duality"
+          "Duality",
+          "Aubin"
         ]
       },
       "postTimeskip": false,
@@ -2777,8 +2791,14 @@
       "routeIds": [],
       "starterFor": [],
       "classId": "class_priest",
-      "boons": [],
-      "banes": [],
+      "boons": [
+        "brawl",
+        "reason",
+        "infantry"
+      ],
+      "banes": [
+        "armor"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "Celestial Flow",
@@ -2808,8 +2828,15 @@
       "routeIds": [],
       "starterFor": [],
       "classId": null,
-      "boons": [],
-      "banes": [],
+      "boons": [
+        "lance",
+        "axe",
+        "riding"
+      ],
+      "banes": [
+        "reason",
+        "faith"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "Brave Assist",
@@ -2858,7 +2885,11 @@
       "routeIds": [],
       "starterFor": [],
       "classId": "class_archer",
-      "boons": [],
+      "boons": [
+        "sword",
+        "bow",
+        "brawl"
+      ],
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
@@ -2922,8 +2953,14 @@
       "routeIds": [],
       "starterFor": [],
       "classId": "class_ms4czk6qlyp89",
-      "boons": [],
-      "banes": [],
+      "boons": [
+        "sword",
+        "bow",
+        "infantry"
+      ],
+      "banes": [
+        "reason"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "Caretaker",
@@ -2986,8 +3023,14 @@
       "routeIds": [],
       "starterFor": [],
       "classId": "class_priest",
-      "boons": [],
-      "banes": [],
+      "boons": [
+        "lance",
+        "faith",
+        "authority"
+      ],
+      "banes": [
+        "sword"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "Cooler Heads",
@@ -3040,8 +3083,14 @@
       "routeIds": [],
       "starterFor": [],
       "classId": "class_diviner",
-      "boons": [],
-      "banes": [],
+      "boons": [
+        "reason",
+        "faith",
+        "authority"
+      ],
+      "banes": [
+        "brawl"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "Stage Direction",
@@ -3103,8 +3152,14 @@
       "routeIds": [],
       "starterFor": [],
       "classId": null,
-      "boons": [],
-      "banes": [],
+      "boons": [
+        "sword",
+        "axe",
+        "infantry"
+      ],
+      "banes": [
+        "faith"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "Close Call",
@@ -3166,8 +3221,14 @@
       "routeIds": [],
       "starterFor": [],
       "classId": null,
-      "boons": [],
-      "banes": [],
+      "boons": [
+        "lance",
+        "faith",
+        "riding"
+      ],
+      "banes": [
+        "bow"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "Spirits’ Voice",
@@ -3233,8 +3294,14 @@
       "routeIds": [],
       "starterFor": [],
       "classId": "class_ms3o7io5clmwu",
-      "boons": [],
-      "banes": [],
+      "boons": [
+        "sword",
+        "brawl",
+        "infantry"
+      ],
+      "banes": [
+        "lance"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "Quick Draw",
@@ -3297,9 +3364,13 @@
       "starterFor": [],
       "classId": "class_armored",
       "boons": [
-        "axe"
+        "axe",
+        "armor"
       ],
-      "banes": [],
+      "banes": [
+        "reason",
+        "faith"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "Heavyweight Class",
@@ -3361,8 +3432,15 @@
       "routeIds": [],
       "starterFor": [],
       "classId": "class_ms4axgsyshgov",
-      "boons": [],
-      "banes": [],
+      "boons": [
+        "sword",
+        "lance",
+        "infantry"
+      ],
+      "banes": [
+        "axe",
+        "reason"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "Falcon",
@@ -3424,7 +3502,12 @@
       "routeIds": [],
       "starterFor": [],
       "classId": "class_msesu5uoyogcq",
-      "boons": [],
+      "boons": [
+        "lance",
+        "axe",
+        "authority",
+        "flying"
+      ],
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
@@ -3487,9 +3570,14 @@
       "starterFor": [],
       "classId": null,
       "boons": [
-        "axe"
+        "axe",
+        "armor"
       ],
-      "banes": [],
+      "banes": [
+        "lance",
+        "reason",
+        "faith"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "One Chance",
@@ -3555,9 +3643,12 @@
       "classId": null,
       "boons": [
         "sword",
+        "bow",
         "infantry"
       ],
-      "banes": [],
+      "banes": [
+        "axe"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "Blink of an Eye",
@@ -3619,8 +3710,15 @@
       "routeIds": [],
       "starterFor": [],
       "classId": "class_soldier",
-      "boons": [],
-      "banes": [],
+      "boons": [
+        "reason",
+        "faith",
+        "riding"
+      ],
+      "banes": [
+        "sword",
+        "brawl"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "Graceful Light",
@@ -3685,8 +3783,14 @@
       "routeIds": [],
       "starterFor": [],
       "classId": "class_ms3o7io5clmwu",
-      "boons": [],
-      "banes": [],
+      "boons": [
+        "sword",
+        "lance",
+        "flying"
+      ],
+      "banes": [
+        "armor"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "Steadfast",
@@ -3749,8 +3853,13 @@
       "routeIds": [],
       "starterFor": [],
       "classId": "class_archer",
-      "boons": [],
-      "banes": [],
+      "boons": [
+        "bow",
+        "riding"
+      ],
+      "banes": [
+        "axe"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "Adaptability",
@@ -3813,8 +3922,8 @@
       "starterFor": [],
       "classId": "class_diviner",
       "boons": [
-        "faith",
-        "bow"
+        "bow",
+        "faith"
       ],
       "banes": [
         "axe"
@@ -3877,9 +3986,12 @@
       "classId": "class_msesr7wkkfq1k",
       "boons": [
         "bow",
+        "authority",
         "riding"
       ],
-      "banes": [],
+      "banes": [
+        "infantry"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "Wheeled Warrior",
@@ -3938,10 +4050,14 @@
       "starterFor": [],
       "classId": "class_ms4aypejltz4f",
       "boons": [
+        "sword",
         "lance",
         "flying"
       ],
-      "banes": [],
+      "banes": [
+        "axe",
+        "reason"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "Silver Maiden",
@@ -4000,9 +4116,13 @@
       "starterFor": [],
       "classId": "class_brigand",
       "boons": [
+        "sword",
         "axe"
       ],
-      "banes": [],
+      "banes": [
+        "reason",
+        "faith"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "Hatchet Man",
@@ -4130,10 +4250,14 @@
       "starterFor": [],
       "classId": "class_armored",
       "boons": [
+        "lance",
         "axe",
         "armor"
       ],
-      "banes": [],
+      "banes": [
+        "sword",
+        "flying"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "Expert Counter",
@@ -4197,9 +4321,13 @@
       "starterFor": [],
       "classId": "class_archer",
       "boons": [
+        "axe",
         "bow"
       ],
-      "banes": [],
+      "banes": [
+        "reason",
+        "faith"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "Heavy-Bow User",
@@ -4263,9 +4391,12 @@
       "classId": "class_ms4czk6qlyp89",
       "boons": [
         "sword",
+        "bow",
         "infantry"
       ],
-      "banes": [],
+      "banes": [
+        "faith"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "Hunter’s Snare",
@@ -4322,7 +4453,11 @@
       "routeIds": [],
       "starterFor": [],
       "classId": "class_ms4czk6qlyp89",
-      "boons": [],
+      "boons": [
+        "sword",
+        "bow",
+        "brawl"
+      ],
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
@@ -4387,10 +4522,13 @@
       "classId": "class_ms3o7io5clmwu",
       "boons": [
         "sword",
-        "infantry",
-        "brawl"
+        "brawl",
+        "infantry"
       ],
-      "banes": [],
+      "banes": [
+        "reason",
+        "faith"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "Hot-Headed",
@@ -4519,9 +4657,13 @@
       "classId": "class_msesj7wz0j31a",
       "boons": [
         "lance",
+        "axe",
         "riding"
       ],
-      "banes": [],
+      "banes": [
+        "faith",
+        "flying"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "With My Steed",
@@ -4583,10 +4725,13 @@
       "starterFor": [],
       "classId": "class_ms4godtdiwiu4",
       "boons": [
+        "sword",
         "lance",
         "flying"
       ],
-      "banes": [],
+      "banes": [
+        "armor"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "Punishing Squall",
@@ -4643,10 +4788,15 @@
       "starterFor": [],
       "classId": "class_ms3pz9lcrqj1y",
       "boons": [
+        "axe",
         "brawl",
         "infantry"
       ],
-      "banes": [],
+      "banes": [
+        "sword",
+        "reason",
+        "faith"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "Warrior’s Clarity",
@@ -4708,7 +4858,10 @@
         "axe",
         "faith"
       ],
-      "banes": [],
+      "banes": [
+        "sword",
+        "riding"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "Monkly Havoc",
@@ -4769,9 +4922,13 @@
       "starterFor": [],
       "classId": "class_brigand",
       "boons": [
-        "axe"
+        "axe",
+        "brawl"
       ],
-      "banes": [],
+      "banes": [
+        "faith",
+        "flying"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "Hellbent Axe",
@@ -4833,8 +4990,14 @@
       "routeIds": [],
       "starterFor": [],
       "classId": "class_msetrmdx8vazf",
-      "boons": [],
-      "banes": [],
+      "boons": [
+        "reason",
+        "faith"
+      ],
+      "banes": [
+        "axe",
+        "armor"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "Crimson Magic",
@@ -4865,7 +5028,11 @@
       "routeIds": [],
       "starterFor": [],
       "classId": null,
-      "boons": [],
+      "boons": [
+        "brawl",
+        "reason",
+        "faith"
+      ],
       "banes": [],
       "skillLevels": {},
       "personalSkill": {
