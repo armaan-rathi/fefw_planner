@@ -229,7 +229,9 @@ function ConsolidatedTable() {
       const { cls, growths } = resolveClass(build.classId);
       const mount = mountById.get(build.mountId);
       const isCharioteer = cls?.name === "Charioteer";
-      const allowedMounts = cls?.mountType ? (db.mounts ?? []).filter((m) => m.type === cls.mountType) : [];
+      const allowedMounts = cls?.mountType
+        ? (db.mounts ?? []).filter((m) => m.type === cls.mountType && (allowSpoilers || !m.part3))
+        : [];
       const g = consolidatedGrowths(u.growths, growths, mount?.growths, isCharioteer);
       return { u, build, cls, isCharioteer, allowedMounts, g, total: growthTotal(g) };
     }), [effectiveRoster, builds, unitById, mountById, classById, allowSpoilers, db.mounts]);

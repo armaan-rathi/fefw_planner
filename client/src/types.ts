@@ -339,6 +339,7 @@ export interface Mount {
   growths: Growths; // Bond Lv. 5 growth-rate bonuses (percent)
   abilities: MountAbility[];
   location: string;
+  part3?: boolean; // hidden unless the Part 3 spoiler toggle is on
 }
 
 export interface DB {

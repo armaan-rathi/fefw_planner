@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /dev
+
+Sitemap: https://fefw-planner.vercel.app/sitemap.xml

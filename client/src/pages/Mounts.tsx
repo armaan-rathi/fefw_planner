@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { useDB } from "../data/DataContext";
+import { filterSpoilerUnits, useSpoilers } from "../data/spoilers";
 import { mountColor, mountsByType, statPairs } from "../data/mounts";
 import type { Growths, Mount } from "../types";
 
@@ -7,8 +8,15 @@ type View = "table" | "detail";
 
 export function Mounts() {
   const { db } = useDB();
+  const [allowSpoilers] = useSpoilers();
   const [view, setView] = useState<View>("table");
-  const groups = useMemo(() => mountsByType(db), [db]);
+  const groups = useMemo(
+    () =>
+      mountsByType(db)
+        .map((g) => ({ ...g, mounts: filterSpoilerUnits(g.mounts, allowSpoilers) }))
+        .filter((g) => g.mounts.length > 0),
+    [db, allowSpoilers],
+  );
 
   return (
     <div>

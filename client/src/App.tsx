@@ -21,6 +21,7 @@ import { DevMode } from "./pages/dev/DevMode";
 import { NAV_PAGES } from "./data/navPages";
 import { SpoilerProvider, useSpoilers } from "./data/spoilers";
 import { SpoilerToggle } from "./components/SpoilerToggle";
+import { usePageSeo } from "./data/seo";
 
 function SaveBadge() {
   const { saveState } = useData();
@@ -55,6 +56,7 @@ function Shell() {
   const gachaVisible = (db?.gacha?.enabled ?? false) || devMode;
   const hidden = new Set(db?.hiddenPages ?? []);
   const [allowSpoilers, setAllowSpoilers] = useSpoilers();
+  usePageSeo();
 
   return (
     <div className="app-root">

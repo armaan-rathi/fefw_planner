@@ -126,6 +126,11 @@ function MountModal({ mount, types, onClose, onSave }: { mount: Mount; types: st
         </label>
       </div>
 
+      <label className="row" style={{ gap: 8, marginTop: 8, alignItems: "center" }}>
+        <input type="checkbox" checked={!!draft.part3} onChange={(e) => set({ part3: e.target.checked })} />
+        <span>Part 3 exclusive (hidden unless the spoiler toggle is on)</span>
+      </label>
+
       <div className="divider" />
       <h3 className="section-title">Bond Lv. 5 stat bonuses</h3>
       {statGrid("stats", false)}

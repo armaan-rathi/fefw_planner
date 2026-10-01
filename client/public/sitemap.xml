@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://fefw-planner.vercel.app/routes</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://fefw-planner.vercel.app/characters</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://fefw-planner.vercel.app/classes</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://fefw-planner.vercel.app/tiers</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://fefw-planner.vercel.app/split</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fefw-planner.vercel.app/map</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://fefw-planner.vercel.app/recruitment</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://fefw-planner.vercel.app/growths</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://fefw-planner.vercel.app/proficiencies</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fefw-planner.vercel.app/mounts</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fefw-planner.vercel.app/paralogues</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://fefw-planner.vercel.app/supports</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://fefw-planner.vercel.app/gods</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://fefw-planner.vercel.app/npcs</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+</urlset>

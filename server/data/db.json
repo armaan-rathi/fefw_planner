@@ -181,7 +181,6 @@
         "brawl",
         "reason",
         "faith",
-        "authority",
         "infantry"
       ],
       "portrait": "/images/mtkape7ufqjids.jpg",
@@ -205,7 +204,6 @@
         "brawl",
         "reason",
         "faith",
-        "authority",
         "infantry"
       ],
       "portrait": "/images/mtkapn701jlipa.jpg",
@@ -267,7 +265,8 @@
         "lance",
         "axe",
         "infantry",
-        "armor"
+        "armor",
+        "sword"
       ],
       "portrait": "/images/mui7y4h048f1qu.png",
       "bonusExp": [
@@ -286,7 +285,18 @@
       "masteredAbility": {
         "name": "Defense Basics",
         "description": "Grants Def+1."
-      }
+      },
+      "secondarySkills": [
+        {
+          "skillTypeId": "sword",
+          "grade": "D"
+        },
+        {
+          "skillTypeId": "lance",
+          "grade": "D"
+        }
+      ],
+      "primarySkills": []
     },
     {
       "id": "class_ms3o7vuixzpwd",
@@ -297,8 +307,7 @@
       "proficiencies": [
         "sword",
         "bow",
-        "infantry",
-        "authority"
+        "infantry"
       ],
       "portrait": "/images/mui7xv4jt5fqot.png",
       "bonusExp": [
@@ -391,7 +400,7 @@
         "brawl",
         "reason",
         "faith",
-        "authority"
+        "infantry"
       ],
       "portrait": "/images/mui7xcb4mklp5p.png",
       "masteredAbility": {
@@ -430,7 +439,8 @@
       "movementType": "infantry",
       "proficiencies": [
         "sword",
-        "infantry"
+        "infantry",
+        "lance"
       ],
       "portrait": "/images/mui7x6dy84x26t.png",
       "bonusExp": [
@@ -457,7 +467,14 @@
       "masteredAbility": {
         "name": "Ravaging Arts",
         "description": "If unit makes a critical, deals +6 damage."
-      }
+      },
+      "primarySkills": [
+        {
+          "skillTypeId": "sword",
+          "grade": "C"
+        }
+      ],
+      "secondarySkills": []
     },
     {
       "id": "class_brigand",
@@ -467,7 +484,9 @@
       "movementType": "infantry",
       "proficiencies": [
         "axe",
-        "infantry"
+        "infantry",
+        "sword",
+        "brawl"
       ],
       "portrait": "/images/mui7wzq0d6ebts.png",
       "bonusExp": [
@@ -494,7 +513,18 @@
       "masteredAbility": {
         "name": "Regroup",
         "description": "When foe avoids an attack, grants Avo+20 to unit during combat."
-      }
+      },
+      "primarySkills": [],
+      "secondarySkills": [
+        {
+          "skillTypeId": "sword",
+          "grade": "C"
+        },
+        {
+          "skillTypeId": "axe",
+          "grade": "C"
+        }
+      ]
     },
     {
       "id": "class_ms3pz9lcrqj1y",
@@ -593,7 +623,7 @@
       "proficiencies": [
         "sword",
         "bow",
-        "authority"
+        "infantry"
       ],
       "portrait": "/images/mui7wck93ieruo.png",
       "bonusExp": [
@@ -624,7 +654,18 @@
       "masteredAbility": {
         "name": "In Shadow",
         "description": "After defeating a foe, grants Avo+10 through unit's next combat."
-      }
+      },
+      "primarySkills": [],
+      "secondarySkills": [
+        {
+          "skillTypeId": "sword",
+          "grade": "C"
+        },
+        {
+          "skillTypeId": "bow",
+          "grade": "C"
+        }
+      ]
     },
     {
       "id": "class_armored",
@@ -668,7 +709,23 @@
       "masteredAbility": {
         "name": "Great Counter",
         "description": "If foe attacks first, grants Atk+3 to unit during combat."
-      }
+      },
+      "primarySkills": [
+        {
+          "skillTypeId": "armor",
+          "grade": "E+"
+        }
+      ],
+      "secondarySkills": [
+        {
+          "skillTypeId": "lance",
+          "grade": "C"
+        },
+        {
+          "skillTypeId": "axe",
+          "grade": "C"
+        }
+      ]
     },
     {
       "id": "class_ms3o5tbsmr10n",
@@ -706,7 +763,23 @@
         "name": "Bolster Health",
         "description": "Grants max HP+3."
       },
-      "mountType": "Horse"
+      "mountType": "Horse",
+      "primarySkills": [
+        {
+          "skillTypeId": "riding",
+          "grade": "D"
+        }
+      ],
+      "secondarySkills": [
+        {
+          "skillTypeId": "sword",
+          "grade": "C"
+        },
+        {
+          "skillTypeId": "lance",
+          "grade": "C"
+        }
+      ]
     },
     {
       "id": "class_msesr7wkkfq1k",
@@ -715,7 +788,6 @@
       "description": "",
       "movementType": "cavalry",
       "proficiencies": [
-        "lance",
         "riding",
         "bow"
       ],
@@ -776,7 +848,18 @@
           }
         }
       ],
-      "mountType": "Horse"
+      "mountType": "Horse",
+      "primarySkills": [
+        {
+          "skillTypeId": "bow",
+          "grade": "C"
+        },
+        {
+          "skillTypeId": "riding",
+          "grade": "D"
+        }
+      ],
+      "secondarySkills": []
     },
     {
       "id": "class_ms4gsshgfxh2m",
@@ -817,7 +900,23 @@
         "name": "Sense Threat",
         "description": "If foe is effective against unit, grants Avo+20 to unit during combat."
       },
-      "mountType": "Ornius"
+      "mountType": "Ornius",
+      "primarySkills": [
+        {
+          "skillTypeId": "riding",
+          "grade": "D"
+        }
+      ],
+      "secondarySkills": [
+        {
+          "skillTypeId": "lance",
+          "grade": "C"
+        },
+        {
+          "skillTypeId": "axe",
+          "grade": "C"
+        }
+      ]
     },
     {
       "id": "class_ms4aypejltz4f",
@@ -827,7 +926,8 @@
       "movementType": "flying",
       "proficiencies": [
         "lance",
-        "flying"
+        "flying",
+        "sword"
       ],
       "portrait": "/images/mui7vsiccxft8i.png",
       "bonusExp": [
@@ -853,7 +953,23 @@
         "name": "Protective Wings",
         "description": "Grants Res+3."
       },
-      "mountType": "Pegasus"
+      "mountType": "Pegasus",
+      "primarySkills": [
+        {
+          "skillTypeId": "flying",
+          "grade": "D"
+        }
+      ],
+      "secondarySkills": [
+        {
+          "skillTypeId": "sword",
+          "grade": "C"
+        },
+        {
+          "skillTypeId": "lance",
+          "grade": "C"
+        }
+      ]
     },
     {
       "id": "class_soldier",
@@ -866,8 +982,7 @@
         "reason",
         "faith",
         "sword",
-        "brawl",
-        "authority"
+        "brawl"
       ],
       "portrait": "/images/mui7v4svenzern.png",
       "bonusExp": [
@@ -898,7 +1013,14 @@
       "masteredAbility": {
         "name": "Bind Dexterity",
         "description": "Inflicts Dex-3 on adjacent foes."
-      }
+      },
+      "primarySkills": [
+        {
+          "skillTypeId": "reason",
+          "grade": "C"
+        }
+      ],
+      "secondarySkills": []
     },
     {
       "id": "class_priest",
@@ -911,7 +1033,6 @@
         "axe",
         "brawl",
         "reason",
-        "authority",
         "infantry"
       ],
       "portrait": "/images/mui7vfub908djz.png",
@@ -944,7 +1065,14 @@
       "masteredAbility": {
         "name": "Piety",
         "description": "Grants Lck+3."
-      }
+      },
+      "primarySkills": [
+        {
+          "skillTypeId": "faith",
+          "grade": "C"
+        }
+      ],
+      "secondarySkills": []
     },
     {
       "id": "class_msesiwe2poyjo",
@@ -954,7 +1082,8 @@
       "movementType": "infantry",
       "proficiencies": [
         "sword",
-        "infantry"
+        "infantry",
+        "lance"
       ],
       "portrait": "/images/mui9gaoqliy7cg.png",
       "classAbilities": [
@@ -979,7 +1108,14 @@
         "res": -5,
         "lck": 5,
         "cha": 5
-      }
+      },
+      "primarySkills": [
+        {
+          "skillTypeId": "sword",
+          "grade": "B"
+        }
+      ],
+      "secondarySkills": []
     },
     {
       "id": "class_msu3frkcvmepo",
@@ -1034,7 +1170,10 @@
       "description": "",
       "movementType": "infantry",
       "proficiencies": [
-        "axe"
+        "axe",
+        "sword",
+        "brawl",
+        "infantry"
       ],
       "portrait": "/images/mui9glk1rm8iat.png",
       "growthMods": {
@@ -1062,7 +1201,22 @@
       "masteredAbility": {
         "name": "Practiced Art",
         "description": "Grants Hit+10 when attacking with a combat art."
-      }
+      },
+      "primarySkills": [],
+      "secondarySkills": [
+        {
+          "skillTypeId": "sword",
+          "grade": "B"
+        },
+        {
+          "skillTypeId": "axe",
+          "grade": "B"
+        },
+        {
+          "skillTypeId": "brawl",
+          "grade": "B"
+        }
+      ]
     },
     {
       "id": "class_mtkahoxeqwsgg",
@@ -1118,7 +1272,8 @@
       "description": "",
       "movementType": "infantry",
       "proficiencies": [
-        "bow"
+        "bow",
+        "infantry"
       ],
       "portrait": "/images/mui9gw77cyrgji.png",
       "growthMods": {
@@ -1144,7 +1299,14 @@
       "masteredAbility": {
         "name": "Marksmanship",
         "description": "When equipped with a bow, grants Hit+15."
-      }
+      },
+      "primarySkills": [
+        {
+          "skillTypeId": "bow",
+          "grade": "B"
+        }
+      ],
+      "secondarySkills": []
     },
     {
       "id": "class_mtkai70xjhe5w",
@@ -1204,7 +1366,8 @@
       "movementType": "cavalry",
       "proficiencies": [
         "bow",
-        "riding"
+        "riding",
+        "sword"
       ],
       "portrait": "/images/mui9h45wfolo9v.png",
       "growthMods": {
@@ -1234,7 +1397,18 @@
       "masteredAbility": {
         "name": "Hunter's Eye",
         "description": "When equipped with a bow, grants Atk+3 when making a follow-up."
-      }
+      },
+      "primarySkills": [
+        {
+          "skillTypeId": "bow",
+          "grade": "B"
+        },
+        {
+          "skillTypeId": "riding",
+          "grade": "D"
+        }
+      ],
+      "secondarySkills": []
     },
     {
       "id": "class_msesj7wz0j31a",
@@ -1245,7 +1419,8 @@
       "proficiencies": [
         "sword",
         "lance",
-        "riding"
+        "riding",
+        "axe"
       ],
       "portrait": "/images/mui9h8vfe1tynh.png",
       "classAbilities": [
@@ -1345,7 +1520,8 @@
       "proficiencies": [
         "lance",
         "axe",
-        "armor"
+        "armor",
+        "infantry"
       ],
       "portrait": "/images/mui9hlg9t7d68u.png",
       "primarySkills": [
@@ -1398,7 +1574,9 @@
       "proficiencies": [
         "lance",
         "armor",
-        "riding"
+        "riding",
+        "sword",
+        "axe"
       ],
       "portrait": "/images/mui9hql5t0iqpk.png",
       "growthMods": {
@@ -1644,7 +1822,14 @@
         "res": 20,
         "lck": 20,
         "cha": 10
-      }
+      },
+      "primarySkills": [
+        {
+          "skillTypeId": "faith",
+          "grade": "B"
+        }
+      ],
+      "secondarySkills": []
     },
     {
       "id": "class_msetrmdx8vazf",
@@ -2630,8 +2815,7 @@
         "name": "Divine Dexterity",
         "description": "Grants Dex +10."
       },
-      "secondarySkills": [],
-      "primarySkills": [
+      "secondarySkills": [
         {
           "skillTypeId": "sword",
           "grade": "S"
@@ -2643,7 +2827,9 @@
         {
           "skillTypeId": "axe",
           "grade": "S"
-        },
+        }
+      ],
+      "primarySkills": [
         {
           "skillTypeId": "riding",
           "grade": "A"
@@ -2739,8 +2925,7 @@
         "name": "Divine Will",
         "description": "Grants Lck +10."
       },
-      "secondarySkills": [],
-      "primarySkills": [
+      "secondarySkills": [
         {
           "skillTypeId": "sword",
           "grade": "S"
@@ -2750,6 +2935,7 @@
           "grade": "S"
         }
       ],
+      "primarySkills": [],
       "growthMods": {
         "hp": 15,
         "str": 5,
@@ -2900,8 +3086,7 @@
         "name": "Divine Law",
         "description": "Grants Mag +10."
       },
-      "secondarySkills": [],
-      "primarySkills": [
+      "secondarySkills": [
         {
           "skillTypeId": "reason",
           "grade": "S"
@@ -2911,6 +3096,7 @@
           "grade": "S"
         }
       ],
+      "primarySkills": [],
       "growthMods": {
         "hp": 10,
         "str": -5,
@@ -2955,8 +3141,7 @@
         "name": "Divine Might",
         "description": "Grants Str +10."
       },
-      "secondarySkills": [],
-      "primarySkills": [
+      "secondarySkills": [
         {
           "skillTypeId": "sword",
           "grade": "S"
@@ -2970,6 +3155,7 @@
           "grade": "S"
         }
       ],
+      "primarySkills": [],
       "growthMods": {
         "hp": 30,
         "str": 30,
@@ -11340,7 +11526,113 @@
           "effect": "+2 Movement"
         }
       ],
-      "location": "Not Available"
+      "location": "Quest in Part 3",
+      "part3": true
+    },
+    {
+      "id": "mount_black_horse",
+      "type": "Horse",
+      "name": "Black Horse",
+      "stats": {
+        "str": 1,
+        "spd": 3,
+        "dex": 1
+      },
+      "growths": {
+        "hp": 5,
+        "str": 5,
+        "spd": 10,
+        "dex": 5
+      },
+      "abilities": [
+        {
+          "name": "Paired Run",
+          "effect": "+2 Movement"
+        },
+        {
+          "name": "Canto",
+          "effect": "+2 Movement after combat"
+        }
+      ],
+      "location": "Daimos Plateau (Part III exclusive)",
+      "part3": true
+    },
+    {
+      "id": "mount_red_falicorn",
+      "type": "Pegasus",
+      "name": "Red Falicorn",
+      "stats": {
+        "str": 2,
+        "spd": 2,
+        "dex": 1
+      },
+      "growths": {
+        "str": 10,
+        "spd": 10,
+        "dex": 5
+      },
+      "abilities": [
+        {
+          "name": "Paired Streak",
+          "effect": "+2 Movement"
+        },
+        {
+          "name": "Paired Stormwind",
+          "effect": ""
+        }
+      ],
+      "location": "Shore of Ceaseless Wind (Part III exclusive)",
+      "part3": true
+    },
+    {
+      "id": "mount_red_bau",
+      "type": "Bau",
+      "name": "Red Bau",
+      "stats": {
+        "str": 3,
+        "dex": 2
+      },
+      "growths": {
+        "str": 15,
+        "dex": 10
+      },
+      "abilities": [
+        {
+          "name": "Paired Streak",
+          "effect": "+2 Movement"
+        },
+        {
+          "name": "Paired Arts Focus",
+          "effect": "Hit +15 with combat arts"
+        }
+      ],
+      "location": "Yashiro Fort (Part III exclusive)",
+      "part3": true
+    },
+    {
+      "id": "mount_black_bau",
+      "type": "Bau",
+      "name": "Black Bau",
+      "stats": {
+        "str": 2,
+        "spd": 3
+      },
+      "growths": {
+        "str": 10,
+        "spd": 15
+      },
+      "abilities": [
+        {
+          "name": "Paired Resilience",
+          "effect": ""
+        },
+        {
+          "name": "Canto",
+          "effect": "+2 Movement after combat"
+        }
+      ],
+      "location": "Warrior's Road (Part III exclusive)",
+      "part3": true
     }
   ],
   "paralogues": [
