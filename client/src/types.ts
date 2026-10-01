@@ -68,6 +68,7 @@ export interface GameClass {
   bonusExp?: string[]; // skillType ids this class earns bonus EXP in (shown with a ▲ on the icon)
   growthMods?: Growths; // growth-rate modifiers (percent, may be negative) applied while in this class
   growthTiers?: { level: number; growths: Growths }[]; // level-gated growth-mod overrides (e.g. Charioteer Lv.35/45)
+  mountType?: string; // allowed mount type (a Mount.type) or undefined/"" = None
   portrait: string | null;
   // Certification / class-list info
   primarySkills?: SkillReq[];

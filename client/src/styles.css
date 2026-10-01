@@ -2615,6 +2615,12 @@ input[type="range"]::-moz-range-thumb {
 .growths-table .gr-unit { text-align: left; background: #0f2027; color: var(--ink); font-weight: 700; white-space: nowrap; }
 .growths-table .gr-num { font-weight: 800; }
 .growths-table .gr-tier { text-align: center; color: var(--ink-dim); white-space: nowrap; font-size: 12px; }
+.growths-table.consolidated { min-width: 1120px; }
+.growths-table .gr-pick { background: #0f2027; text-align: left; padding: 4px 6px; }
+.growths-table .gr-pick select { width: 100%; min-width: 118px; font-size: 12px; padding: 4px 6px; }
+.gr-note { font-size: 10px; font-weight: 700; color: var(--gold-bright); }
+.growths-table .gr-rowx { width: 30px; text-align: center; background: #0f2027; }
+.growths-table .gr-rowx .icon-btn { padding: 2px 6px; }
 .gr-legend { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-size: 12px; color: var(--ink-dim); }
 .gr-legend-bar { width: 180px; height: 12px; border-radius: 3px; border: 1px solid var(--panel-edge); background: linear-gradient(90deg, rgb(34, 66, 102), rgb(46, 52, 56), rgb(132, 100, 36)); }
 .growths-edit input { text-align: center; }

@@ -9,6 +9,20 @@ export function growthAvg(g: Growths): number {
   return growthTotal(g) / GROWTH_STATS.length;
 }
 
+// Unit growths + class mods + mount bonuses (mount doubled for Charioteer).
+export function consolidatedGrowths(
+  unitG: Growths | undefined,
+  classG: Growths | undefined,
+  mountG: Growths | undefined,
+  doubleMount: boolean,
+): Growths {
+  const out: Growths = {};
+  for (const k of GROWTH_STATS) {
+    out[k] = (unitG?.[k] ?? 0) + (classG?.[k] ?? 0) + (mountG?.[k] ?? 0) * (doubleMount ? 2 : 1);
+  }
+  return out;
+}
+
 export function hasGrowths(u: Unit): boolean {
   return !!u.growths && GROWTH_STATS.some((k) => typeof u.growths![k] === "number");
 }

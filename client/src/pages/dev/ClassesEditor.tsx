@@ -6,6 +6,7 @@ import { SkillMark, ProficiencyMark } from "../../components/icons";
 import { UnitPortrait } from "../../components/UnitPortrait";
 import { ImageDrop } from "../../components/ImageDrop";
 import { sortBySkillOrder } from "../../data/skills";
+import { mountTypeOrder } from "../../data/mounts";
 import { CLASS_TIERS, GRADES, GROWTH_LABELS, GROWTH_STATS } from "../../types";
 import type { ClassAbility, GameClass, Grade, GrowthStat, MovementType, SkillReq, SkillType } from "../../types";
 
@@ -145,6 +146,7 @@ export function ClassesEditor() {
 
 function ClassModal({ cls, onClose, onSave }: { cls: GameClass; onClose: () => void; onSave: (c: GameClass) => void }) {
   const { db } = useDB();
+  const mountTypes = mountTypeOrder(db);
   const [draft, setDraft] = useState<GameClass>(cls);
   const set = (p: Partial<GameClass>) => setDraft((d) => ({ ...d, ...p }));
   function toggleProf(id: string) {
@@ -219,6 +221,12 @@ function ClassModal({ cls, onClose, onSave }: { cls: GameClass; onClose: () => v
               </select>
             </label>
           </div>
+          <label className="field"><span>Allowed mount type</span>
+            <select value={draft.mountType ?? ""} onChange={(e) => set({ mountType: e.target.value || undefined })}>
+              <option value="">None</option>
+              {mountTypes.map((t) => <option key={t} value={t}>{t}</option>)}
+            </select>
+          </label>
           <label className="field"><span>Description</span>
             <textarea value={draft.description} onChange={(e) => set({ description: e.target.value })} />
           </label>

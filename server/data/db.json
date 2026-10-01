@@ -376,7 +376,8 @@
         "spd": 10,
         "res": 5,
         "lck": 5
-      }
+      },
+      "mountType": "Ornius"
     },
     {
       "id": "class_diviner",
@@ -704,7 +705,8 @@
       "masteredAbility": {
         "name": "Bolster Health",
         "description": "Grants max HP+3."
-      }
+      },
+      "mountType": "Horse"
     },
     {
       "id": "class_msesr7wkkfq1k",
@@ -756,24 +758,25 @@
             "cha": 15,
             "str": 10,
             "dex": 20,
-            "res": 5
+            "res": 0
           }
         },
         {
           "level": 45,
           "growths": {
-            "hp": 30,
-            "str": 25,
+            "hp": 20,
+            "str": 20,
             "dex": 25,
             "def": 30,
             "lck": 10,
-            "cha": 25,
-            "mag": 5,
-            "spd": 5,
-            "res": 10
+            "cha": 20,
+            "mag": 0,
+            "spd": 0,
+            "res": 5
           }
         }
-      ]
+      ],
+      "mountType": "Horse"
     },
     {
       "id": "class_ms4gsshgfxh2m",
@@ -813,7 +816,8 @@
       "masteredAbility": {
         "name": "Sense Threat",
         "description": "If foe is effective against unit, grants Avo+20 to unit during combat."
-      }
+      },
+      "mountType": "Ornius"
     },
     {
       "id": "class_ms4aypejltz4f",
@@ -848,7 +852,8 @@
       "masteredAbility": {
         "name": "Protective Wings",
         "description": "Grants Res+3."
-      }
+      },
+      "mountType": "Pegasus"
     },
     {
       "id": "class_soldier",
@@ -1281,7 +1286,8 @@
         "res": 10,
         "lck": 5,
         "cha": 10
-      }
+      },
+      "mountType": "Horse"
     },
     {
       "id": "class_msessr8yloah4",
@@ -1441,7 +1447,8 @@
       "masteredAbility": {
         "name": "Pavise",
         "description": "Unit takes half damage when attacked with a physical attack. Trigger % = 20."
-      }
+      },
+      "mountType": "Horse"
     },
     {
       "id": "class_msestmmmbo13w",
@@ -1487,7 +1494,8 @@
       "masteredAbility": {
         "name": "Elephant Vanguard",
         "description": "If unit is an elephant rider, grants Hit +10."
-      }
+      },
+      "mountType": "Elephant"
     },
     {
       "id": "class_msesu5uoyogcq",
@@ -1540,7 +1548,8 @@
       "masteredAbility": {
         "name": "Besieger",
         "description": "If foe is on favorable terrain, grants Hit +20 to unit during combat."
-      }
+      },
+      "mountType": "Bau"
     },
     {
       "id": "class_mui94guwf2y78",
@@ -1595,7 +1604,8 @@
       "masteredAbility": {
         "name": "Overtake",
         "description": "After defeating a foe, grant Mov +1 through the end of the next turn. (Max +3)"
-      }
+      },
+      "mountType": "Ornius"
     },
     {
       "id": "class_msetrpdjsxewf",
@@ -1743,6 +1753,1278 @@
       "masteredAbility": {
         "name": "[CA] Song of Courage",
         "description": "Grants Dex/Spd +2 to allies in range until unit's next phase."
+      }
+    },
+    {
+      "id": "class_battlemaster",
+      "name": "Battlemaster",
+      "tier": "Master",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "sword",
+        "axe",
+        "brawl",
+        "infantry"
+      ],
+      "portrait": null,
+      "bonusExp": [],
+      "classAbilities": [
+        {
+          "name": "Combat Arts +3",
+          "description": "Unit can equip +3 combat arts."
+        },
+        {
+          "name": "Axe Hit +7",
+          "description": "When equipped with an axe, grants Hit+7."
+        },
+        {
+          "name": "Brawl Hit +7",
+          "description": "When equipped with gauntlets, grants Hit+7."
+        }
+      ],
+      "masteredAbility": {
+        "name": "War Master's Strike",
+        "description": "Multiplies damage dealt by 1.5."
+      },
+      "secondarySkills": [
+        {
+          "skillTypeId": "sword",
+          "grade": "A"
+        },
+        {
+          "skillTypeId": "axe",
+          "grade": "A"
+        },
+        {
+          "skillTypeId": "brawl",
+          "grade": "A"
+        }
+      ],
+      "primarySkills": [],
+      "growthMods": {
+        "hp": 25,
+        "str": 25,
+        "mag": -5,
+        "spd": -5,
+        "dex": 5,
+        "def": 10,
+        "res": -5,
+        "lck": -5,
+        "cha": 5
+      }
+    },
+    {
+      "id": "class_bow_adept",
+      "name": "Bow Adept",
+      "tier": "Master",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "bow",
+        "infantry"
+      ],
+      "portrait": null,
+      "bonusExp": [],
+      "classAbilities": [
+        {
+          "name": "Combat Arts +3",
+          "description": "Unit can equip +3 combat arts."
+        },
+        {
+          "name": "Bow Hit +15",
+          "description": "When equipped with a bow, grants Hit+10."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Sky Hunter",
+        "description": "If foe is flying, grants Hit+50."
+      },
+      "secondarySkills": [],
+      "primarySkills": [
+        {
+          "skillTypeId": "bow",
+          "grade": "A"
+        }
+      ],
+      "growthMods": {
+        "hp": 15,
+        "str": 5,
+        "spd": 15,
+        "dex": 20,
+        "def": 5,
+        "res": 5,
+        "lck": 5,
+        "cha": 5
+      }
+    },
+    {
+      "id": "class_shadow_seeker",
+      "name": "Shadow Seeker",
+      "tier": "Master",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "sword",
+        "bow",
+        "infantry"
+      ],
+      "portrait": null,
+      "bonusExp": [],
+      "classAbilities": [
+        {
+          "name": "Locktouch",
+          "description": "Allows the opening of chests even without keys."
+        },
+        {
+          "name": "Combat Arts +3",
+          "description": "Unit can equip +3 combat arts."
+        },
+        {
+          "name": "Master Search",
+          "description": "Search results are considerably more likely to be perfect."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Dropshadow Blade",
+        "description": "If foe is on favorable terrain, ignores those terrain effects."
+      },
+      "secondarySkills": [
+        {
+          "skillTypeId": "sword",
+          "grade": "A"
+        },
+        {
+          "skillTypeId": "bow",
+          "grade": "A"
+        }
+      ],
+      "primarySkills": [],
+      "growthMods": {
+        "hp": 15,
+        "str": 5,
+        "spd": 15,
+        "dex": 25,
+        "res": 10,
+        "lck": 15
+      }
+    },
+    {
+      "id": "class_sentinel",
+      "name": "Sentinel",
+      "tier": "Master",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "lance",
+        "faith",
+        "infantry"
+      ],
+      "portrait": null,
+      "bonusExp": [],
+      "classAbilities": [
+        {
+          "name": "White-Magic Seeker",
+          "description": "Multiplies white magic uses by 2."
+        },
+        {
+          "name": "Magic Heal +10",
+          "description": "When healing an ally with magic, restores +10 HP."
+        },
+        {
+          "name": "Combat Arts +3",
+          "description": "Unit can equip +3 combat arts."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Resolute Stance",
+        "description": "If unit's HP = 100%, grants Shld +5 during combat."
+      },
+      "secondarySkills": [],
+      "primarySkills": [
+        {
+          "skillTypeId": "lance",
+          "grade": "A"
+        }
+      ],
+      "growthMods": {
+        "hp": 15,
+        "str": 15,
+        "spd": 5,
+        "dex": 5,
+        "def": 10,
+        "res": 15,
+        "lck": 5,
+        "cha": 5
+      }
+    },
+    {
+      "id": "class_castle_knight",
+      "name": "Castle Knight",
+      "tier": "Master",
+      "description": "",
+      "movementType": "armored",
+      "proficiencies": [
+        "lance",
+        "axe",
+        "infantry",
+        "armor"
+      ],
+      "portrait": null,
+      "bonusExp": [],
+      "classAbilities": [
+        {
+          "name": "Combat Arts +3",
+          "description": "Unit can equip +3 combat arts."
+        },
+        {
+          "name": "Strike-Last Def +7",
+          "description": "If foe attacks first, grants Prt+7 to unit during combat."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Intercept",
+        "description": "Reduces damage taken by 5 when attacked."
+      },
+      "secondarySkills": [
+        {
+          "skillTypeId": "lance",
+          "grade": "A"
+        },
+        {
+          "skillTypeId": "axe",
+          "grade": "A"
+        }
+      ],
+      "primarySkills": [
+        {
+          "skillTypeId": "armor",
+          "grade": "C"
+        }
+      ],
+      "growthMods": {
+        "hp": 25,
+        "str": 20,
+        "mag": -5,
+        "spd": -15,
+        "dex": 5,
+        "def": 30,
+        "res": -10,
+        "cha": 5
+      }
+    },
+    {
+      "id": "class_orichaldia",
+      "name": "Orichaldia",
+      "tier": "Master",
+      "description": "",
+      "movementType": "cavalry",
+      "proficiencies": [
+        "sword",
+        "lance",
+        "axe",
+        "riding"
+      ],
+      "portrait": null,
+      "bonusExp": [],
+      "classAbilities": [
+        {
+          "name": "Combat Arts +3",
+          "description": "Unit can equip +3 combat arts."
+        },
+        {
+          "name": "Mount/Dismount",
+          "description": "Allows use of Mount and Dismount commands."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Fierce Spear",
+        "description": "Unit cannot suffer a follow-up during combat."
+      },
+      "secondarySkills": [
+        {
+          "skillTypeId": "sword",
+          "grade": "A"
+        },
+        {
+          "skillTypeId": "lance",
+          "grade": "A"
+        }
+      ],
+      "primarySkills": [
+        {
+          "skillTypeId": "riding",
+          "grade": "B"
+        }
+      ],
+      "growthMods": {
+        "hp": 15,
+        "str": 15,
+        "mag": -5,
+        "dex": 5,
+        "def": 5,
+        "res": 5,
+        "lck": 5,
+        "cha": 10
+      },
+      "mountType": "Horse"
+    },
+    {
+      "id": "class_celestial_trooper",
+      "name": "Celestial Trooper",
+      "tier": "Master",
+      "description": "",
+      "movementType": "flying",
+      "proficiencies": [
+        "sword",
+        "lance",
+        "flying"
+      ],
+      "portrait": null,
+      "bonusExp": [],
+      "classAbilities": [
+        {
+          "name": "Mount/Dismount",
+          "description": "Allows use of Mount and Dismount commands."
+        },
+        {
+          "name": "Combat Arts +1",
+          "description": "Unit can equip +1 combat arts."
+        },
+        {
+          "name": "Flying Avo +7",
+          "description": "Grants Avo +7."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Lightning Reflexes",
+        "description": "If unit attacks first, and AS >= foe's AS +10, unit's follow-up occurs before foe's counter during combat."
+      },
+      "secondarySkills": [
+        {
+          "skillTypeId": "sword",
+          "grade": "A"
+        },
+        {
+          "skillTypeId": "lance",
+          "grade": "A"
+        }
+      ],
+      "primarySkills": [
+        {
+          "skillTypeId": "flying",
+          "grade": "C"
+        }
+      ],
+      "growthMods": {
+        "hp": 15,
+        "str": 5,
+        "mag": -5,
+        "spd": 10,
+        "dex": 5,
+        "def": 5,
+        "res": 15,
+        "lck": 15,
+        "cha": 10
+      },
+      "mountType": "Pegasus"
+    },
+    {
+      "id": "class_bau_lord",
+      "name": "Bau Lord",
+      "tier": "Master",
+      "description": "",
+      "movementType": "cavalry",
+      "proficiencies": [
+        "sword",
+        "lance",
+        "axe",
+        "flying"
+      ],
+      "portrait": null,
+      "bonusExp": [],
+      "classAbilities": [
+        {
+          "name": "Combat Arts +2",
+          "description": "Unit can equip +2 combat arts."
+        },
+        {
+          "name": "Mount/Dismount",
+          "description": "Allows use of Mount and Dismount commands."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Ambush",
+        "description": "If unit is on inaccessible terrain, grants Atk +4."
+      },
+      "secondarySkills": [
+        {
+          "skillTypeId": "lance",
+          "grade": "A"
+        },
+        {
+          "skillTypeId": "axe",
+          "grade": "A"
+        }
+      ],
+      "primarySkills": [
+        {
+          "skillTypeId": "flying",
+          "grade": "C"
+        }
+      ],
+      "growthMods": {
+        "hp": 15,
+        "str": 5,
+        "spd": 5,
+        "def": 10,
+        "res": 10,
+        "lck": 10,
+        "cha": 5
+      },
+      "mountType": "Bau"
+    },
+    {
+      "id": "class_druid",
+      "name": "Druid",
+      "tier": "Master",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "sword",
+        "brawl",
+        "reason",
+        "infantry"
+      ],
+      "portrait": null,
+      "bonusExp": [],
+      "classAbilities": [
+        {
+          "name": "Black-Magic Seeker",
+          "description": "Multiplies black magic uses by 2."
+        },
+        {
+          "name": "Magic Hit +7",
+          "description": "When equipped with magic, grants Hit+7."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Bind Resistance",
+        "description": "Inflict Res -3 on adjacent foes."
+      },
+      "secondarySkills": [],
+      "primarySkills": [
+        {
+          "skillTypeId": "reason",
+          "grade": "A"
+        }
+      ],
+      "growthMods": {
+        "hp": 10,
+        "str": -5,
+        "mag": 30,
+        "spd": 15,
+        "dex": 10,
+        "def": -10,
+        "res": 20,
+        "lck": 10
+      }
+    },
+    {
+      "id": "class_wiseman",
+      "name": "Wiseman",
+      "tier": "Master",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "axe",
+        "brawl",
+        "faith",
+        "infantry"
+      ],
+      "portrait": null,
+      "bonusExp": [],
+      "classAbilities": [
+        {
+          "name": "White-Magic Seeker",
+          "description": "Multiplies white magic uses by 2."
+        },
+        {
+          "name": "Magic Heal +15",
+          "description": "When healing an ally with magic, restores +15 HP."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Dominate Magic",
+        "description": "If foe uses magic, unit cannot be countered during combat. Trigger % = 10."
+      },
+      "secondarySkills": [],
+      "primarySkills": [
+        {
+          "skillTypeId": "faith",
+          "grade": "A"
+        }
+      ],
+      "growthMods": {
+        "hp": 10,
+        "str": -5,
+        "mag": 20,
+        "dex": 5,
+        "def": -10,
+        "res": 25,
+        "lck": 20,
+        "cha": 10
+      }
+    },
+    {
+      "id": "class_swordmaster",
+      "name": "Swordmaster",
+      "tier": "Master",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "sword",
+        "lance",
+        "infantry"
+      ],
+      "portrait": null,
+      "bonusExp": [],
+      "classAbilities": [
+        {
+          "name": "Combat Arts +3",
+          "description": "Unit can equip +3 combat arts."
+        },
+        {
+          "name": "Sword Crit +7",
+          "description": "When equipped with a sword, grants Crit+7."
+        }
+      ],
+      "masteredAbility": {
+        "name": "[CA]Astra",
+        "description": "Strikes 5 times at 50% damage."
+      },
+      "secondarySkills": [],
+      "primarySkills": [
+        {
+          "skillTypeId": "sword",
+          "grade": "A"
+        }
+      ],
+      "growthMods": {
+        "hp": 15,
+        "str": 10,
+        "spd": 20,
+        "dex": 15,
+        "lck": 5,
+        "cha": 5
+      }
+    },
+    {
+      "id": "class_high_savant",
+      "name": "High Savant",
+      "tier": "Master",
+      "description": "",
+      "movementType": "cavalry",
+      "proficiencies": [
+        "sword",
+        "reason",
+        "riding"
+      ],
+      "portrait": null,
+      "bonusExp": [],
+      "classAbilities": [
+        {
+          "name": "Combat Arts +2",
+          "description": "Unit can equip +2 combat arts."
+        },
+        {
+          "name": "Mount/Dismount",
+          "description": "Allows use of Mount and Dismount commands."
+        },
+        {
+          "name": "Black-Magic Seeker",
+          "description": "Multiplies black magic uses by 2."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Dark Moon",
+        "description": "Halves foe's Shld when attacking. Trigger % = 10."
+      },
+      "secondarySkills": [],
+      "primarySkills": [
+        {
+          "skillTypeId": "sword",
+          "grade": "B"
+        },
+        {
+          "skillTypeId": "reason",
+          "grade": "D"
+        },
+        {
+          "skillTypeId": "riding",
+          "grade": "D"
+        }
+      ],
+      "growthMods": {
+        "hp": 10,
+        "str": 15,
+        "mag": 15,
+        "spd": 10,
+        "dex": 5,
+        "def": 5,
+        "res": 5,
+        "lck": 5,
+        "cha": 5
+      },
+      "mountType": "Horse"
+    },
+    {
+      "id": "class_war_monk",
+      "name": "War Monk",
+      "tier": "Master",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "brawl",
+        "faith",
+        "infantry"
+      ],
+      "portrait": null,
+      "bonusExp": [],
+      "classAbilities": [
+        {
+          "name": "White-Magic Seeker",
+          "description": "Multiplies white magic uses by 2."
+        },
+        {
+          "name": "Combat Arts +3",
+          "description": "Unit can equip +3 combat arts."
+        },
+        {
+          "name": "Brawl Avo +7",
+          "description": "When equipped with gauntlets, grants Avo+7."
+        }
+      ],
+      "masteredAbility": {
+        "name": "[CA]Strike and Heal",
+        "description": "After combat, unit can use assist magic."
+      },
+      "secondarySkills": [],
+      "primarySkills": [
+        {
+          "skillTypeId": "brawl",
+          "grade": "B"
+        },
+        {
+          "skillTypeId": "faith",
+          "grade": "D"
+        }
+      ],
+      "growthMods": {
+        "hp": 15,
+        "str": 10,
+        "spd": 15,
+        "def": 5,
+        "res": 15,
+        "lck": 5,
+        "cha": 5
+      }
+    },
+    {
+      "id": "class_bow_knight",
+      "name": "Bow Knight",
+      "tier": "Master",
+      "description": "",
+      "movementType": "cavalry",
+      "proficiencies": [
+        "sword",
+        "bow",
+        "riding"
+      ],
+      "portrait": null,
+      "bonusExp": [],
+      "classAbilities": [
+        {
+          "name": "Combat Arts +2",
+          "description": "Unit can equip +2 combat arts."
+        },
+        {
+          "name": "Mount/Dismount",
+          "description": "Allows use of Mount and Dismount commands."
+        },
+        {
+          "name": "Bow Hit +10",
+          "description": "When equipped with a bow, grants Hit+5."
+        }
+      ],
+      "masteredAbility": {
+        "name": "[CA]Hunter's Cross",
+        "description": "High Hit/Crit"
+      },
+      "secondarySkills": [],
+      "primarySkills": [
+        {
+          "skillTypeId": "riding",
+          "grade": "D"
+        },
+        {
+          "skillTypeId": "bow",
+          "grade": "A"
+        }
+      ],
+      "growthMods": {
+        "hp": 10,
+        "str": 10,
+        "spd": 15,
+        "dex": 10,
+        "def": 5,
+        "lck": 5,
+        "cha": 5
+      },
+      "mountType": "Horse"
+    },
+    {
+      "id": "class_great_knight",
+      "name": "Great Knight",
+      "tier": "Master",
+      "description": "",
+      "movementType": "cavalry",
+      "proficiencies": [
+        "sword",
+        "lance",
+        "axe",
+        "armor",
+        "riding"
+      ],
+      "portrait": null,
+      "bonusExp": [],
+      "classAbilities": [
+        {
+          "name": "Combat Arts +2",
+          "description": "Unit can equip +2 combat arts."
+        },
+        {
+          "name": "Mount/Dismount",
+          "description": "Allows use of Mount and Dismount commands."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Fierce Shield",
+        "description": "If unit attacks first, unit takes half damage during combat. Trigger % = 50."
+      },
+      "secondarySkills": [
+        {
+          "skillTypeId": "lance",
+          "grade": "A"
+        },
+        {
+          "skillTypeId": "axe",
+          "grade": "A"
+        }
+      ],
+      "primarySkills": [
+        {
+          "skillTypeId": "armor",
+          "grade": "D"
+        },
+        {
+          "skillTypeId": "riding",
+          "grade": "D"
+        }
+      ],
+      "growthMods": {
+        "hp": 20,
+        "str": 20,
+        "mag": -5,
+        "spd": -10,
+        "def": 15,
+        "res": -10,
+        "cha": 5
+      },
+      "mountType": "Horse"
+    },
+    {
+      "id": "class_valkyrium",
+      "name": "Valkyrium",
+      "tier": "Master",
+      "description": "",
+      "movementType": "cavalry",
+      "proficiencies": [
+        "reason",
+        "faith",
+        "riding"
+      ],
+      "portrait": null,
+      "bonusExp": [],
+      "classAbilities": [
+        {
+          "name": "Mount/Dismount",
+          "description": "Allows use of Mount and Dismount commands."
+        },
+        {
+          "name": "Magic Heal +10",
+          "description": "When healing an ally with magic, restores +10 HP."
+        }
+      ],
+      "masteredAbility": {
+        "name": "[CA]Song of Calm",
+        "description": "Grants Res +2 to allies in range until unit's next phase."
+      },
+      "secondarySkills": [
+        {
+          "skillTypeId": "reason",
+          "grade": "A"
+        },
+        {
+          "skillTypeId": "faith",
+          "grade": "A"
+        }
+      ],
+      "primarySkills": [
+        {
+          "skillTypeId": "riding",
+          "grade": "D"
+        }
+      ],
+      "growthMods": {
+        "hp": 10,
+        "mag": 15,
+        "spd": 5,
+        "dex": 5,
+        "def": 5,
+        "res": 10,
+        "lck": 15,
+        "cha": 10
+      },
+      "mountType": "Horse"
+    },
+    {
+      "id": "class_the_cavalier",
+      "name": "The Cavalier",
+      "tier": "Divine",
+      "description": "",
+      "movementType": "cavalry",
+      "proficiencies": [
+        "sword",
+        "lance",
+        "axe",
+        "riding"
+      ],
+      "portrait": null,
+      "bonusExp": [],
+      "classAbilities": [
+        {
+          "name": "Mount/Dismount",
+          "description": "Allows use of Mount and Dismount commands."
+        },
+        {
+          "name": "Combat Arts +3",
+          "description": "Unit can equip +3 combat arts."
+        },
+        {
+          "name": "Golden Ride",
+          "description": "Neutralize effective vs. cavalry."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Divine Dexterity",
+        "description": "Grants Dex +10."
+      },
+      "secondarySkills": [],
+      "primarySkills": [
+        {
+          "skillTypeId": "sword",
+          "grade": "S"
+        },
+        {
+          "skillTypeId": "lance",
+          "grade": "S"
+        },
+        {
+          "skillTypeId": "axe",
+          "grade": "S"
+        },
+        {
+          "skillTypeId": "riding",
+          "grade": "A"
+        }
+      ],
+      "growthMods": {
+        "hp": 20,
+        "str": 15,
+        "mag": 5,
+        "spd": 10,
+        "dex": 10,
+        "def": 15,
+        "res": 10,
+        "lck": 5,
+        "cha": 15
+      },
+      "mountType": "Horse"
+    },
+    {
+      "id": "class_the_blade",
+      "name": "The Blade",
+      "tier": "Divine",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "sword",
+        "lance",
+        "infantry"
+      ],
+      "portrait": null,
+      "bonusExp": [],
+      "classAbilities": [
+        {
+          "name": "Combat Arts +3",
+          "description": "Unit can equip +3 combat arts."
+        },
+        {
+          "name": "Sword Crit +10",
+          "description": "When equipped with a sword, grants Crit+10."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Divine Insight",
+        "description": "Grants Spd +10."
+      },
+      "secondarySkills": [],
+      "primarySkills": [
+        {
+          "skillTypeId": "sword",
+          "grade": "S"
+        }
+      ],
+      "growthMods": {
+        "hp": 15,
+        "str": 10,
+        "mag": 10,
+        "spd": 20,
+        "dex": 20,
+        "def": 5,
+        "res": 5,
+        "lck": 5,
+        "cha": 10
+      }
+    },
+    {
+      "id": "class_the_calamity",
+      "name": "The Calamity",
+      "tier": "Divine",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "sword",
+        "bow",
+        "infantry"
+      ],
+      "portrait": null,
+      "bonusExp": [],
+      "classAbilities": [
+        {
+          "name": "Locktouch",
+          "description": "Allows the opening of chests even without keys."
+        },
+        {
+          "name": "Combat Arts +3",
+          "description": "Unit can equip +3 combat arts."
+        },
+        {
+          "name": "Ultimate Search",
+          "description": "Search results are exceedingly more likely to be perfect."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Divine Will",
+        "description": "Grants Lck +10."
+      },
+      "secondarySkills": [],
+      "primarySkills": [
+        {
+          "skillTypeId": "sword",
+          "grade": "S"
+        },
+        {
+          "skillTypeId": "bow",
+          "grade": "S"
+        }
+      ],
+      "growthMods": {
+        "hp": 15,
+        "str": 5,
+        "mag": 15,
+        "spd": 25,
+        "dex": 20,
+        "def": 5,
+        "res": 15,
+        "lck": 15,
+        "cha": 5
+      }
+    },
+    {
+      "id": "class_the_godhand",
+      "name": "The Godhand",
+      "tier": "Divine",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "brawl",
+        "faith",
+        "infantry"
+      ],
+      "portrait": null,
+      "bonusExp": [],
+      "classAbilities": [
+        {
+          "name": "Combat Arts +3",
+          "description": "Unit can equip +3 combat arts."
+        },
+        {
+          "name": "Brawl Avo +10",
+          "description": "When equipped with gauntlets, grants Avo+10."
+        },
+        {
+          "name": "White-Magic Zenith",
+          "description": "Multiplies white magic uses by 3."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Divine Adornment",
+        "description": "Grants Res +10."
+      },
+      "secondarySkills": [],
+      "primarySkills": [
+        {
+          "skillTypeId": "brawl",
+          "grade": "S"
+        },
+        {
+          "skillTypeId": "faith",
+          "grade": "C"
+        }
+      ],
+      "growthMods": {
+        "hp": 15,
+        "str": 10,
+        "mag": 10,
+        "spd": 15,
+        "dex": 5,
+        "def": 10,
+        "res": 15,
+        "lck": 5,
+        "cha": 10
+      }
+    },
+    {
+      "id": "class_the_trident",
+      "name": "The Trident",
+      "tier": "Divine",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "lance",
+        "faith",
+        "infantry"
+      ],
+      "portrait": null,
+      "bonusExp": [],
+      "classAbilities": [
+        {
+          "name": "Magic Heal +10",
+          "description": "When healing an ally with magic, restores +10 HP."
+        },
+        {
+          "name": "Combat Arts +3",
+          "description": "Unit can equip +3 combat arts."
+        },
+        {
+          "name": "White-Magic Zenith",
+          "description": "Multiplies white magic uses by 3."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Divine Wall",
+        "description": "Grants Def +10."
+      },
+      "secondarySkills": [],
+      "primarySkills": [
+        {
+          "skillTypeId": "lance",
+          "grade": "S"
+        }
+      ],
+      "growthMods": {
+        "hp": 15,
+        "str": 15,
+        "mag": 5,
+        "spd": 10,
+        "dex": 10,
+        "def": 15,
+        "res": 15,
+        "lck": 5,
+        "cha": 10
+      }
+    },
+    {
+      "id": "class_the_avatar",
+      "name": "The Avatar",
+      "tier": "Divine",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "sword",
+        "axe",
+        "brawl",
+        "reason",
+        "faith",
+        "infantry"
+      ],
+      "portrait": null,
+      "bonusExp": [],
+      "classAbilities": [
+        {
+          "name": "Magic Hit +10",
+          "description": "When equipped with magic, grants Hit+10."
+        },
+        {
+          "name": "Magic Heal +20",
+          "description": "When healing an ally with magic, restores +20 HP."
+        },
+        {
+          "name": "All-Magic Zenith",
+          "description": "Multiplies black magic and white magic uses by 3."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Divine Law",
+        "description": "Grants Mag +10."
+      },
+      "secondarySkills": [],
+      "primarySkills": [
+        {
+          "skillTypeId": "reason",
+          "grade": "S"
+        },
+        {
+          "skillTypeId": "faith",
+          "grade": "S"
+        }
+      ],
+      "growthMods": {
+        "hp": 10,
+        "str": -5,
+        "mag": 30,
+        "spd": 10,
+        "dex": 5,
+        "def": -5,
+        "res": 30,
+        "lck": 20,
+        "cha": 10
+      }
+    },
+    {
+      "id": "class_the_eternal",
+      "name": "The Eternal",
+      "tier": "Divine",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "sword",
+        "axe",
+        "brawl",
+        "infantry"
+      ],
+      "portrait": null,
+      "bonusExp": [],
+      "classAbilities": [
+        {
+          "name": "Combat Arts +3",
+          "description": "Unit can equip +3 combat arts."
+        },
+        {
+          "name": "Axe Hit +10",
+          "description": "When equipped with an axe, grants Hit+10."
+        },
+        {
+          "name": "Brawl Hit +10",
+          "description": "When equipped with gauntlets, grants Hit+10."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Divine Might",
+        "description": "Grants Str +10."
+      },
+      "secondarySkills": [],
+      "primarySkills": [
+        {
+          "skillTypeId": "sword",
+          "grade": "S"
+        },
+        {
+          "skillTypeId": "axe",
+          "grade": "S"
+        },
+        {
+          "skillTypeId": "brawl",
+          "grade": "S"
+        }
+      ],
+      "growthMods": {
+        "hp": 30,
+        "str": 30,
+        "spd": 10,
+        "def": 15
+      }
+    },
+    {
+      "id": "class_the_aspara",
+      "name": "The Aspara",
+      "tier": "Divine",
+      "description": "",
+      "movementType": "infantry",
+      "proficiencies": [
+        "sword",
+        "bow",
+        "infantry"
+      ],
+      "portrait": null,
+      "bonusExp": [],
+      "classAbilities": [
+        {
+          "name": "Combat Arts +3",
+          "description": "Unit can equip +3 combat arts."
+        },
+        {
+          "name": "[CA]Dance",
+          "description": "Allows the use of the Dance combat art."
+        }
+      ],
+      "masteredAbility": {
+        "name": "Divine Dance",
+        "description": "Grants Cha +10."
+      },
+      "secondarySkills": [],
+      "primarySkills": [
+        {
+          "skillTypeId": "bow",
+          "grade": "C"
+        },
+        {
+          "skillTypeId": "sword",
+          "grade": "A"
+        }
+      ],
+      "growthMods": {
+        "hp": 15,
+        "str": 5,
+        "mag": 10,
+        "spd": 25,
+        "dex": 15,
+        "def": 5,
+        "res": 5,
+        "lck": 10,
+        "cha": 30
       }
     }
   ],
@@ -11398,5 +12680,6 @@
       "b": "unit_ms3oeprflm40x",
       "rank": "A"
     }
-  ]
+  ],
+  "showSpoilerToggle": true
 }
