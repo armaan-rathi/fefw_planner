@@ -5683,7 +5683,8 @@
           "renown": 9
         },
         "theodora": {
-          "renown": 2
+          "renown": 2,
+          "support": 1
         },
         "leda": {
           "support": 3,
@@ -6275,7 +6276,8 @@
       },
       "recruitment": {
         "cai": {
-          "renown": 2
+          "renown": 2,
+          "support": 1
         },
         "dietrich": {
           "support": 3,
@@ -6478,7 +6480,8 @@
       },
       "recruitment": {
         "leda": {
-          "renown": 2
+          "renown": 2,
+          "support": 1
         },
         "cai": {
           "support": 3,
@@ -6614,7 +6617,8 @@
           "negotiation": "Easy"
         },
         "dietrich": {
-          "renown": 2
+          "renown": 2,
+          "support": 1
         },
         "theodora": {
           "support": 3,

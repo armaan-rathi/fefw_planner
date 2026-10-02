@@ -19,7 +19,7 @@ const StarIcon = () => (
 
 export function Recruitment() {
   const { db } = useDB();
-  const [view, setView] = useState<View>("character");
+  const [view, setView] = useState<View>("route");
   const [allowSpoilers] = useSpoilers();
   const units = useMemo(() => filterSpoilerUnits(recruitableUnits(db), allowSpoilers), [db, allowSpoilers]);
   const routes = db.routes;
@@ -35,8 +35,8 @@ export function Recruitment() {
       </div>
 
       <div className="cast-tabs">
-        <button className={view === "character" ? "active" : ""} onClick={() => setView("character")}>By Character</button>
         <button className={view === "route" ? "active" : ""} onClick={() => setView("route")}>By Route</button>
+        <button className={view === "character" ? "active" : ""} onClick={() => setView("character")}>By Character</button>
       </div>
 
       {units.length === 0 ? (

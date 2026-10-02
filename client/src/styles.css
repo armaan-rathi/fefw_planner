@@ -33,6 +33,11 @@ body,
 #root {
   height: 100%;
   margin: 0;
+  /* Stop mobile browsers from auto-inflating text, which otherwise renders
+     larger than JS-measured widths (e.g. the By Route card names) and breaks
+     fit-to-width + centering on real devices. */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {

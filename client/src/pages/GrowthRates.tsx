@@ -5,14 +5,15 @@ import { useLocalStorage } from "../hooks/useLocalStorage";
 import { CLASS_TIERS, GROWTH_LABELS, GROWTH_STATS } from "../types";
 import type { Growths, GrowthStat } from "../types";
 import { consolidatedGrowths, growthAvg, growthTotal, growthUnits, heatColor } from "../data/growths";
+import { mountColor, mountTypeOrder } from "../data/mounts";
 import { filterSpoilerUnits, isSpoilerTier, useSpoilers } from "../data/spoilers";
 
-type View = "units" | "classes" | "consolidated";
+type View = "units" | "classes" | "mounts" | "consolidated";
 
 export function GrowthRates() {
   const [params, setParams] = useSearchParams();
   const raw = params.get("view");
-  const view: View = raw === "classes" || raw === "consolidated" ? raw : "units";
+  const view: View = raw === "classes" || raw === "mounts" || raw === "consolidated" ? raw : "units";
   const setView = (v: View) => setParams(v === "units" ? {} : { view: v }, { replace: true });
 
   return (
@@ -27,10 +28,11 @@ export function GrowthRates() {
       <div className="cast-tabs">
         <button className={view === "units" ? "active" : ""} onClick={() => setView("units")}>Units</button>
         <button className={view === "classes" ? "active" : ""} onClick={() => setView("classes")}>Classes</button>
+        <button className={view === "mounts" ? "active" : ""} onClick={() => setView("mounts")}>Mounts</button>
         <button className={view === "consolidated" ? "active" : ""} onClick={() => setView("consolidated")}>Unit + Class + Mount</button>
       </div>
 
-      {view === "units" ? <UnitTable /> : view === "classes" ? <ClassTable /> : <ConsolidatedTable />}
+      {view === "units" ? <UnitTable /> : view === "classes" ? <ClassTable /> : view === "mounts" ? <MountTable /> : <ConsolidatedTable />}
 
       <div className="gr-legend">
         <span>Low</span>
@@ -167,6 +169,71 @@ function ClassTable() {
         </div>
       )}
     </>
+  );
+}
+
+
+// ---- Mounts ---------------------------------------------------------------
+type MSortKey = GrowthStat | "name" | "type" | "total";
+
+function MountTable() {
+  const { db } = useDB();
+  const [allowSpoilers] = useSpoilers();
+  const [sortKey, setSortKey] = useState<MSortKey>("total");
+  const [dir, setDir] = useState<1 | -1>(-1);
+
+  const typeIndex = useMemo(() => {
+    const order = mountTypeOrder(db);
+    return (t: string) => { const i = order.indexOf(t); return i < 0 ? 99 : i; };
+  }, [db]);
+
+  const rows = useMemo(() => {
+    const has = (g?: Growths) => g && GROWTH_STATS.some((k) => typeof g[k] === "number");
+    return filterSpoilerUnits(db.mounts ?? [], allowSpoilers)
+      .filter((m) => has(m.growths))
+      .map((m) => ({ m, g: m.growths, total: growthTotal(m.growths) }));
+  }, [db.mounts, allowSpoilers]);
+
+  const scales = useMemo(() => {
+    const statVals = rows.flatMap((r) => GROWTH_STATS.map((k) => r.g[k]).filter((v): v is number => typeof v === "number"));
+    return { stat: range(statVals.length ? statVals : [0, 1]), total: range(rows.length ? rows.map((r) => r.total) : [0, 1]) };
+  }, [rows]);
+
+  const sorted = useMemo(() => {
+    const num = (r: (typeof rows)[number]) => (sortKey === "total" ? r.total : sortKey === "type" ? typeIndex(r.m.type) : sortKey === "name" ? 0 : (r.g[sortKey] ?? -Infinity));
+    return [...rows].sort((a, b) => (sortKey === "name" ? (a.m.name || "").localeCompare(b.m.name || "") * dir : (num(a) - num(b)) * dir || (a.m.name || "").localeCompare(b.m.name || "")));
+  }, [rows, sortKey, dir, typeIndex]);
+
+  function onHead(k: MSortKey) { if (sortKey === k) setDir((d) => (d === 1 ? -1 : 1)); else { setSortKey(k); setDir(k === "name" || k === "type" ? 1 : -1); } }
+  const arrow = (k: MSortKey) => (sortKey === k ? (dir === -1 ? " ▼" : " ▲") : "");
+  const fmt = (v: number) => `${v > 0 ? "+" : ""}${v}%`;
+
+  if (rows.length === 0) return <div className="empty-hint">No mount growth bonuses yet. Add them in Dev Mode → Mounts.</div>;
+  return (
+    <div className="growths-scroll">
+      <table className="growths-table">
+        <thead>
+          <tr>
+            <th className="gr-rank">#</th>
+            <th className="gr-unit" onClick={() => onHead("name")}>MOUNT{arrow("name")}</th>
+            <th onClick={() => onHead("type")}>TYPE{arrow("type")}</th>
+            {GROWTH_STATS.map((k) => <th key={k} onClick={() => onHead(k)}>{GROWTH_LABELS[k]}{arrow(k)}</th>)}
+            <th onClick={() => onHead("total")}>TOTAL{arrow("total")}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {sorted.map((r, i) => (
+            <tr key={r.m.id}>
+              <td className="gr-rank">{i + 1}</td>
+              <td className="gr-unit">{r.m.name || "Unnamed"}</td>
+              <td className="gr-tier" style={{ color: mountColor(db, r.m.type) }}>{r.m.type || "—"}</td>
+              {GROWTH_STATS.map((k) => { const v = r.g[k]; return <td key={k} style={typeof v === "number" && v !== 0 ? cellStyle(v, scales.stat) : undefined}>{typeof v === "number" && v !== 0 ? fmt(v) : "—"}</td>; })}
+              <td className="gr-num" style={cellStyle(r.total, scales.total)}>{fmt(r.total)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
 
