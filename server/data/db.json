@@ -1938,7 +1938,8 @@
       "masteredAbility": {
         "name": "[CA] Song of Courage",
         "description": "Grants Dex/Spd +2 to allies in range until unit's next phase."
-      }
+      },
+      "mountType": "Horse"
     },
     {
       "id": "class_battlemaster",

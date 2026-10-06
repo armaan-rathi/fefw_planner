@@ -3,7 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import { useDB } from "../data/DataContext";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import { CLASS_TIERS, GROWTH_LABELS, GROWTH_STATS } from "../types";
-import type { Growths, GrowthStat } from "../types";
+import type { DB, Growths, GrowthStat } from "../types";
 import { consolidatedGrowths, growthAvg, growthTotal, growthUnits, heatColor } from "../data/growths";
 import { mountColor, mountTypeOrder } from "../data/mounts";
 import { filterSpoilerUnits, isSpoilerTier, useSpoilers } from "../data/spoilers";
@@ -240,6 +240,8 @@ function MountTable() {
 
 // ---- Consolidated: unit + class + mount ------------------------------------
 type Build = { classId: string; mountId: string }; // classId may be "id" or "id@level"
+type Row = { rid: string; unitId: string }; // rid = unique row instance (duplicates allowed)
+const makeRid = () => Math.random().toString(36).slice(2, 9);
 
 function ConsolidatedTable() {
   const { db } = useDB();
@@ -259,12 +261,18 @@ function ConsolidatedTable() {
     return opts;
   }, [db.classes, allowSpoilers]);
 
-  const lordIds = useMemo(() => db.units.filter((u) => u.isLord).map((u) => u.id), [db.units]);
-  const [roster, setRoster] = useLocalStorage<string[] | null>("fw.growthRoster", null);
-  const effectiveRoster = roster ?? lordIds;
+  // Each table row is an instance (rid) of a unit, so the same unit can appear
+  // multiple times — e.g. five Mu rows to compare her growth in five classes.
+  const lordRows = useMemo<Row[]>(() => db.units.filter((u) => u.isLord).map((u) => ({ rid: u.id, unitId: u.id })), [db.units]);
+  const [roster, setRoster] = useLocalStorage<(Row | string)[] | null>("fw.growthRoster", null);
+  // Migrate any legacy string[] roster (plain unit ids) into row instances.
+  const effectiveRoster = useMemo<Row[]>(
+    () => (roster ? roster.map((x) => (typeof x === "string" ? { rid: x, unitId: x } : x)) : lordRows),
+    [roster, lordRows],
+  );
 
   const [builds, setBuilds] = useState<Record<string, Build>>({});
-  const buildFor = (uId: string): Build => builds[uId] ?? { classId: unitById.get(uId)?.classId ?? "", mountId: "" };
+  const buildFor = (row: Row): Build => builds[row.rid] ?? { classId: unitById.get(row.unitId)?.classId ?? "", mountId: "" };
 
   const resolveClass = (value: string) => {
     const [baseId, lvl] = value.split("@");
@@ -273,26 +281,27 @@ function ConsolidatedTable() {
     return { cls, growths };
   };
 
-  function setClassFor(uId: string, value: string) {
+  function setClassFor(row: Row, value: string) {
     setBuilds((b) => {
-      const cur = b[uId] ?? { classId: "", mountId: "" };
+      const cur = b[row.rid] ?? { classId: "", mountId: "" };
       const { cls } = resolveClass(value);
       const mount = mountById.get(cur.mountId);
       const keepMount = mount && cls?.mountType && mount.type === cls.mountType ? cur.mountId : "";
-      return { ...b, [uId]: { classId: value, mountId: keepMount } };
+      return { ...b, [row.rid]: { classId: value, mountId: keepMount } };
     });
   }
-  function setMountFor(uId: string, mountId: string) {
-    setBuilds((b) => ({ ...b, [uId]: { classId: b[uId]?.classId ?? (unitById.get(uId)?.classId ?? ""), mountId } }));
+  function setMountFor(row: Row, mountId: string) {
+    setBuilds((b) => ({ ...b, [row.rid]: { classId: b[row.rid]?.classId ?? (unitById.get(row.unitId)?.classId ?? ""), mountId } }));
   }
-  function addUnit(uId: string) { if (uId) setRoster([...effectiveRoster.filter((x) => x !== uId), uId]); }
-  function removeUnit(uId: string) { setRoster(effectiveRoster.filter((x) => x !== uId)); }
+  function addUnit(uId: string) { if (uId) setRoster([...effectiveRoster, { rid: makeRid(), unitId: uId }]); }
+  function removeUnit(rid: string) { setRoster(effectiveRoster.filter((r) => r.rid !== rid)); }
 
-  const rows = useMemo(() => effectiveRoster
-    .map((id) => unitById.get(id))
-    .filter((u): u is NonNullable<typeof u> => !!u && (allowSpoilers || !u.part3))
-    .map((u) => {
-      const build = buildFor(u.id);
+  const rows = useMemo(() => {
+    const out: { row: Row; u: NonNullable<ReturnType<typeof unitById.get>>; build: Build; cls: ReturnType<typeof resolveClass>["cls"]; isCharioteer: boolean; allowedMounts: NonNullable<DB["mounts"]>; g: Growths; total: number }[] = [];
+    for (const row of effectiveRoster) {
+      const u = unitById.get(row.unitId);
+      if (!u || (!allowSpoilers && u.part3)) continue;
+      const build = buildFor(row);
       const { cls, growths } = resolveClass(build.classId);
       const mount = mountById.get(build.mountId);
       const isCharioteer = cls?.name === "Charioteer";
@@ -300,18 +309,18 @@ function ConsolidatedTable() {
         ? (db.mounts ?? []).filter((m) => m.type === cls.mountType && (allowSpoilers || !m.part3))
         : [];
       const g = consolidatedGrowths(u.growths, growths, mount?.growths, isCharioteer);
-      return { u, build, cls, isCharioteer, allowedMounts, g, total: growthTotal(g) };
-    }), [effectiveRoster, builds, unitById, mountById, classById, allowSpoilers, db.mounts]);
+      out.push({ row, u, build, cls, isCharioteer, allowedMounts, g, total: growthTotal(g) });
+    }
+    return out;
+  }, [effectiveRoster, builds, unitById, mountById, classById, allowSpoilers, db.mounts]);
 
   const scales = useMemo(() => {
     const statVals = rows.flatMap((r) => GROWTH_STATS.map((k) => r.g[k] ?? 0));
     return { stat: range(statVals.length ? statVals : [0, 1]), total: range(rows.length ? rows.map((r) => r.total) : [0, 1]) };
   }, [rows]);
 
-  const addable = useMemo(() => {
-    const inRoster = new Set(effectiveRoster);
-    return db.units.filter((u) => !inRoster.has(u.id) && (allowSpoilers || !u.part3));
-  }, [db.units, effectiveRoster, allowSpoilers]);
+  // Duplicates are allowed now, so offer every (spoiler-permitted) unit.
+  const addable = useMemo(() => db.units.filter((u) => allowSpoilers || !u.part3), [db.units, allowSpoilers]);
 
   return (
     <>
@@ -343,17 +352,17 @@ function ConsolidatedTable() {
             </thead>
             <tbody>
               {rows.map((r) => (
-                <tr key={r.u.id}>
-                  <td className="gr-rowx"><button className="icon-btn" title="Remove from table" onClick={() => removeUnit(r.u.id)}>✕</button></td>
+                <tr key={r.row.rid}>
+                  <td className="gr-rowx"><button className="icon-btn" title="Remove from table" onClick={() => removeUnit(r.row.rid)}>✕</button></td>
                   <td className="gr-unit">{r.u.name || "Unnamed"}{r.isCharioteer ? <span className="gr-note" title="Charioteer doubles mount bonuses"> ×2 mount</span> : null}</td>
                   <td className="gr-pick">
-                    <select value={r.build.classId} onChange={(e) => setClassFor(r.u.id, e.target.value)}>
+                    <select value={r.build.classId} onChange={(e) => setClassFor(r.row, e.target.value)}>
                       <option value="">— None —</option>
                       {classOptions.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
                     </select>
                   </td>
                   <td className="gr-pick">
-                    <select value={r.build.mountId} onChange={(e) => setMountFor(r.u.id, e.target.value)} disabled={r.allowedMounts.length === 0} title={r.cls?.mountType ? "" : "This class can't use a mount"}>
+                    <select value={r.build.mountId} onChange={(e) => setMountFor(r.row, e.target.value)} disabled={r.allowedMounts.length === 0} title={r.cls?.mountType ? "" : "This class can't use a mount"}>
                       <option value="">{r.allowedMounts.length ? "— None —" : "—"}</option>
                       {r.allowedMounts.map((m) => <option key={m.id} value={m.id}>{m.name}</option>)}
                     </select>
