@@ -4,7 +4,16 @@
       "WebFetch(domain:serenesforest.net)",
       "Bash(npm run *)",
       "Bash(npx tsc *)",
-      "Bash(echo \"exit: $?\")"
+      "Bash(echo \"exit: $?\")",
+      "Bash(node -e ' *)",
+      "Bash(cp server/data/db.json __TRACKED_VAR__/db.backup.factions.__CMDSUB_OUTPUT__.json)",
+      "Bash(node \"/private/tmp/claude-501/-Users-armaanrathi-Projects-fefw-planner/aa6ef07f-3af3-4612-a372-ff79a44c14dc/scratchpad/rename-factions.js\")",
+      "Bash(node -e 'require\\(\"./server/data/db.json\"\\);console.log\\(\"JSON OK\"\\)')",
+      "WebFetch(domain:www.nintendolife.com)",
+      "WebSearch",
+      "WebFetch(domain:www.rpgsite.net)",
+      "Bash(cp server/data/db.json __TRACKED_VAR__/db.backup.p3growths.__CMDSUB_OUTPUT__.json)",
+      "Bash(node __TRACKED_VAR__/add-p3-growths.js)"
     ]
   }
 }

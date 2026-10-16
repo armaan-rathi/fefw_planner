@@ -7,7 +7,8 @@ import { ImageDrop } from "../../components/ImageDrop";
 import { SkillMark } from "../../components/icons";
 import { unitFaction } from "../../data/units";
 import { fieldOptions } from "../../data/fields";
-import { GRADES, PARALOGUE_LORDS, type FieldValue, type Grade, type PersonalSkill, type RecruitCondition, type Unit } from "../../types";
+import { GRADES, GROWTH_LABELS, GROWTH_STATS, PARALOGUE_LORDS, type FieldValue, type Grade, type GrowthStat, type PersonalSkill, type RecruitCondition, type Unit } from "../../types";
+import { growthTotal } from "../../data/growths";
 
 function blankUnit(): Unit {
   return {
@@ -197,6 +198,14 @@ function UnitModal({ unit, onClose, onSave }: { unit: Unit; onClose: () => void;
   function setField(key: string, value: FieldValue) {
     setDraft((d) => ({ ...d, fields: { ...d.fields, [key]: value } }));
   }
+  function setGrowth(stat: GrowthStat, val: number | undefined) {
+    setDraft((d) => {
+      const g = { ...(d.growths ?? {}) };
+      if (val === undefined) delete g[stat];
+      else g[stat] = val;
+      return { ...d, growths: Object.keys(g).length ? g : undefined };
+    });
+  }
   // Merge a patch into one lord's recruitment condition, dropping empty entries
   // so the display's "only show what's filled" logic stays trivial.
   function setRecruit(routeId: string, patch: Partial<RecruitCondition>) {
@@ -352,6 +361,27 @@ function UnitModal({ unit, onClose, onSave }: { unit: Unit; onClose: () => void;
           </label>
         </div>
       ))}
+
+      <div className="divider" />
+      <div className="spread">
+        <h3 className="section-title" style={{ margin: 0 }}>Growth rates</h3>
+        <span className="muted" style={{ fontSize: 12 }}>
+          Total: {draft.growths && GROWTH_STATS.some((k) => typeof draft.growths![k] === "number") ? growthTotal(draft.growths) : "—"}
+        </span>
+      </div>
+      <p className="muted" style={{ marginTop: 4, fontSize: 12 }}>Per-level growth %. Leave a cell blank to omit it. Any value entered lists this unit on the Growth Rates page.</p>
+      <div className="chip-wrap">
+        {GROWTH_STATS.map((k) => (
+          <label key={k} className="field" style={{ width: 70 }}>
+            <span>{GROWTH_LABELS[k]} %</span>
+            <input
+              type="number"
+              value={draft.growths?.[k] ?? ""}
+              onChange={(e) => setGrowth(k, e.target.value === "" ? undefined : Number(e.target.value))}
+            />
+          </label>
+        ))}
+      </div>
 
       <div className="divider" />
       <h3 className="section-title">Recruitment Conditions</h3>

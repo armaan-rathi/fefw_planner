@@ -85,10 +85,10 @@
         "House Lamine",
         "Megaira's Beacon",
         "Rose Tempest",
-        "Mane of Flame",
-        "Moon's Lie",
-        "Linaria's Morning Dew",
-        "Brides of the Pale Raven",
+        "Fiery Mane",
+        "Tale of the Moon",
+        "Linaria Dewdrops",
+        "Bridal Party of the Pale Raven",
         "Arago Elites",
         "Silver Knights",
         "Thundercloud Knights",
@@ -4344,7 +4344,9 @@
       "name": "Mu",
       "portrait": "/images/ms7meqfxs69gcl.jpg",
       "isLord": false,
-      "routeIds": [],
+      "routeIds": [
+        "leda"
+      ],
       "starterFor": [
         "leda"
       ],
@@ -4415,8 +4417,16 @@
       "routeIds": [],
       "starterFor": [],
       "classId": null,
-      "boons": [],
-      "banes": [],
+      "boons": [
+        "sword",
+        "axe",
+        "brawl",
+        "authority"
+      ],
+      "banes": [
+        "reason",
+        "faith"
+      ],
       "skillLevels": {},
       "personalSkill": {
         "name": "Requiem Style",
@@ -4424,7 +4434,7 @@
       },
       "fields": {
         "backstory": "A gladiator who continues to fight in the Dagsion arena.\n\nKnown by the moniker \"White-Maned Demon\" for his demonic strength. It is said that five years ago, he committed a great sin and was imprisoned in the underground dungeon of the arena.\n\nLikes: Training, salted meat, well-crafted weapons, reading, board games",
-        "faction": "Mane of Flame",
+        "faction": "Fiery Mane",
         "crest": [
           "Flames",
           "Duality"
@@ -4440,7 +4450,18 @@
           "name": "Sen No Sen",
           "description": "If unit attacks first, unit’s follow-up occurs before foe’s counter during combat. Trigger % = 25."
         }
-      ]
+      ],
+      "growths": {
+        "hp": 50,
+        "str": 55,
+        "mag": 15,
+        "spd": 45,
+        "dex": 50,
+        "def": 45,
+        "res": 20,
+        "lck": 30,
+        "cha": 50
+      }
     },
     {
       "id": "unit_ms4ax1urookeq",
@@ -4464,7 +4485,7 @@
         "description": "Grants Lck+3."
       },
       "fields": {
-        "faction": "Moon's Lie",
+        "faction": "Tale of the Moon",
         "backstory": "The leader of the “Vandahl Merchants”, one of Dagda’s top merchant guilds. He seems carefree and elusive, but has big ambitions. Apparently collecting items known as “Drake’s Treasures”.\n\nLikes: Money, adventure, cinnamon",
         "crest": [
           "Duality"
@@ -4480,7 +4501,18 @@
           "name": "Swashbuckler’s Luck+",
           "description": "Grants Lck+5 to unit and all allies."
         }
-      ]
+      ],
+      "growths": {
+        "hp": 45,
+        "str": 40,
+        "mag": 45,
+        "spd": 40,
+        "dex": 45,
+        "def": 35,
+        "res": 40,
+        "lck": 60,
+        "cha": 50
+      }
     },
     {
       "id": "unit_ms4b1m5a0pltt",
@@ -4504,7 +4536,7 @@
         "description": "Grants Def+5. Unit is armored. Cannot change class to cavalry or flying."
       },
       "fields": {
-        "faction": "Linaria's Morning Dew",
+        "faction": "Linaria Dewdrops",
         "backstory": "A mysterious girl serving at Credna’s Temple at the upper levels of Dagsion. Always conceals her face behind a distinctive cat mask. Although she’s innocent and treats everyone with kindness, she’s somewhat naïve and oblivious.\n\nLikes: Animals, cleaning, doing laundry, cooking",
         "crest": [
           "Duality",
@@ -4518,7 +4550,18 @@
           "name": "Predictive Sense",
           "description": "If unit attacks first, grants Hit+20 to magic during combat."
         }
-      ]
+      ],
+      "growths": {
+        "hp": 30,
+        "str": 60,
+        "mag": 45,
+        "spd": 10,
+        "dex": 20,
+        "def": 60,
+        "res": 60,
+        "lck": 20,
+        "cha": 60
+      }
     },
     {
       "id": "unit_ms4azwjmprdkp",
@@ -4542,7 +4585,7 @@
         "description": "Grants Avo+3."
       },
       "fields": {
-        "faction": "Brides of the Pale Raven",
+        "faction": "Bridal Party of the Pale Raven",
         "backstory": "A girl in white who fights to save her people. Known as the “Mystical Bride” due to her appearance. Has a cool or perhaps emotionless personality, which can accidentally infuriate others.\n\nLikes: Hexagram divination, round objects, martial-arts training"
       },
       "possiblyEnemyOnly": true,
@@ -4555,7 +4598,18 @@
           "name": "Continuum+",
           "description": "When unit avoids an attack, restores 10 HP to unit."
         }
-      ]
+      ],
+      "growths": {
+        "hp": 40,
+        "str": 35,
+        "mag": 50,
+        "spd": 50,
+        "dex": 45,
+        "def": 35,
+        "res": 40,
+        "lck": 40,
+        "cha": 50
+      }
     },
     {
       "id": "unit_mt4v8155tinj7",
@@ -4580,7 +4634,7 @@
         "description": "Grants Def+3 to adjacent allies."
       },
       "fields": {
-        "faction": "Mane of Flame",
+        "faction": "Fiery Mane",
         "backstory": "A top-tier martial artist possessing both wisdom and valor who operates as a gladiator in the Dagsion arena.\nHaving trained in the eastern land of Sai, he boasts an immense wealth of combat experience.\n\nLikes: Tea from Sai, Ferghanan horses, dueling, calligraphy"
       },
       "possiblyEnemyOnly": false,
@@ -4634,7 +4688,7 @@
         "description": "Allows storage access to unit and allies within 2 spaces."
       },
       "fields": {
-        "faction": "Moon's Lie",
+        "faction": "Tale of the Moon",
         "backstory": "Manager of the renowned trading company \"Vandahl Trading,\" one of Dagda’s leading merchants. She holds authority second only to the chief executive, Talimun.\nShe meticulously manages the company's funds and is often seen sternly questioning Talimun’s extravagant spending.\n\nLikes: Poetry, animals, flowers in the shade, counting money",
         "crest": [
           "The Beast"
@@ -4704,7 +4758,7 @@
         "description": "Adjacent allies cannot suffer a follow-up during combat. Trigger % = 5."
       },
       "fields": {
-        "faction": "Linaria's Morning Dew",
+        "faction": "Linaria Dewdrops",
         "backstory": "A young man of the combat-skilled Hal-Hari tribe, bearing the tribe's distinctive markings on his arms and upper body.\nThough taciturn and aloof, he has sworn lifelong loyalty to Orchel, the priestess of Credne Temple, and follows her devotedly.\n\nLikes: Walking in the forest, foraging medicinal herbs, Orchel"
       },
       "recruitment": {
@@ -4774,7 +4828,7 @@
         "description": "After using Draw Back, unit can use assist magic."
       },
       "fields": {
-        "faction": "Brides of the Pale Raven"
+        "faction": "Bridal Party of the Pale Raven"
       },
       "recruitment": {
         "dietrich": {
@@ -4834,7 +4888,7 @@
         "description": "Grants Ddg+10 to allies within 2 spaces during their combats. Trigger % = ally’s Cha ÷ 2."
       },
       "fields": {
-        "faction": "Mane of Flame",
+        "faction": "Fiery Mane",
         "backstory": "A litterateur working as a playwright at Dagsion. Full of creativity, with an endless desire to incorporate anything that catches her interest into her works. Also an advanced magic user.\n\nLikes: Herself, searching for dramatic subjects, studying people for research, seeing how others act"
       },
       "recruitment": {
@@ -4903,7 +4957,7 @@
         "description": "If unit’s HP ≥ 2 and damage would reduce it to 0, leaves unit with 1 HP. Trigger % = Lck."
       },
       "fields": {
-        "faction": "Moon's Lie",
+        "faction": "Tale of the Moon",
         "backstory": "A combat specialist who has made it out from the verge of death countless times. He met Talimun while travelling the land as a mercenary, and was hired to work for the Vandahl Merchant Company. He is addicted to the thrill of the battlefield, constantly chasing that high.\n\nLikes: exchanges of life and death, playing with women"
       },
       "recruitment": {
@@ -4972,7 +5026,7 @@
         "description": "If foe uses magic, grants Hit/Avo+10 to unit during combat."
       },
       "fields": {
-        "faction": "Linaria's Morning Dew",
+        "faction": "Linaria Dewdrops",
         "crest": [
           "Gloucester"
         ],
@@ -5045,7 +5099,7 @@
         "description": "If unit attacks first, grants Atk+3 during combat. Trigger % = 50."
       },
       "fields": {
-        "faction": "Brides of the Pale Raven",
+        "faction": "Bridal Party of the Pale Raven",
         "backstory": "An energetic young swordsman who travels with Anatolia. Trains every day, aiming to become the strongest. Bad at keeping secrets and frequently leaks information about his hometown. Self-conscious about his shortness.\n\nLikes: Physical activity, justice, fighting, good food, combat training"
       },
       "recruitment": {
@@ -5114,7 +5168,7 @@
         "description": "Unit cannot change to cavalry or flying. Grants Bld+5."
       },
       "fields": {
-        "faction": "Mane of Flame",
+        "faction": "Fiery Mane",
         "backstory": "A hulking gladiator known as the “Butcher.” He’s over 2.5 meters tall and boasts overwhelming strength and a rock-hard body. He often portrays the villain at the Arena and, despite his skills, he’s not very popular.\n\nLikes: Rampaging, food, animals, smoking meat"
       },
       "recruitment": {
@@ -5184,7 +5238,7 @@
         "description": "If unit attacks first, grants AS+3 during combat."
       },
       "fields": {
-        "faction": "Moon's Lie",
+        "faction": "Tale of the Moon",
         "backstory": "The daughter of a distinguished military officer, she works for Vandahl Trading led by Talimun.\nHaving received an elite education from a young age, she possesses top-tier swordsmanship skills and a refined upbringing.\nTrue to her age, she is keenly interested in matters of romance.\n\nLikes: Writing stories, appreciating art, talking about love and romance"
       },
       "recruitment": {
@@ -5252,7 +5306,7 @@
         "description": "For the first combat in enemy’s phase, unit attacks first. Trigger % = 50."
       },
       "fields": {
-        "faction": "Linaria's Morning Dew",
+        "faction": "Linaria Dewdrops",
         "backstory": "An eccentric traveler who came from the distant land of Fódlan for the purpose of investigation.\nHe met the cat-masked priestess Orchel on his journey and has been traveling with her ever since.\nHe has a meddlesome side.\n\nLikes: The teachings of the Church of Seiros, fishing, his own daughter, diligent people, writing fables, preaching",
         "crest": [
           "Cichol"
@@ -5321,7 +5375,7 @@
         "description": "If unit and foe cannot make a follow-up, grants Atk+5 to unit during combat."
       },
       "fields": {
-        "faction": "Brides of the Pale Raven",
+        "faction": "Bridal Party of the Pale Raven",
         "backstory": "A young man who accompanies Anatolia, the \"Mysterious Bride.\"\nHe is rowdy and was something of a troublemaker back in his home village.\nHe loves women and indiscriminately hits on them, but meets with rejection every time.\n\nLikes: Women (especially Anatolia), machines, good food, fighting"
       },
       "possiblyEnemyOnly": false,
@@ -5392,7 +5446,7 @@
         "description": "After using Swap, grants Def+3 until unit’s next phase."
       },
       "fields": {
-        "faction": "Mane of Flame",
+        "faction": "Fiery Mane",
         "backstory": "A mysterious gladiator who hides his face behind clown makeup. He constantly behaves like he’s mad, and he’s feared by others as the “Jester from Hell.”\n\nLikes: The White-Maned Demon, seeing fear in his opponents’ faces"
       },
       "recruitment": {
@@ -5462,7 +5516,7 @@
         "description": "When healing an ally with magic, reduces magic cost to 0. Trigger % = Lck."
       },
       "fields": {
-        "faction": "Moon's Lie",
+        "faction": "Tale of the Moon",
         "backstory": "A beautiful yet somewhat mysterious cleric.\nShe was found collapsed by the river several years ago and taken in by the temple. She is currently affiliated with Vandahl Trading, led by Talimun.\nShe loves spicy food so much that it can make even the burliest of men faint.\n\nLikes: Books of poetry, spicy foods, coffee, trustworthy people",
         "crest": [
           "Fraldarius"
@@ -5534,7 +5588,7 @@
         "description": "If unit’s HP ≥ 50%, grants Avo+10 during combat."
       },
       "fields": {
-        "faction": "Linaria's Morning Dew",
+        "faction": "Linaria Dewdrops",
         "backstory": "An energetic girl who serves at Credna Temple.\nShe follows the cat-masked priestess, Orchel, whom she addresses as \"Lady Priest.\"\nWhile she is stubborn and fiercely competitive, she is terrified of ghosts.\n\nLikes: Reliable people, sweets, her friends"
       },
       "recruitment": {
@@ -5603,7 +5657,7 @@
         "description": "After combat, grants Hit+2 until the end of the map. (Max +30)"
       },
       "fields": {
-        "faction": "Brides of the Pale Raven",
+        "faction": "Bridal Party of the Pale Raven",
         "backstory": "An archer girl who has come to travel alongside Anatolia and the others.\nBefore arriving in Dagsion, she was a traveling performer in a circus troupe.\nHaving grown up in an ordinary farming family, she dislikes conflict.\n\nLikes: Growing vegetables, shopping, street performing, cheering crowds"
       },
       "recruitment": {
@@ -6832,6 +6886,213 @@
         "def": 35,
         "res": 40,
         "lck": 50,
+        "cha": 35
+      }
+    },
+    {
+      "id": "unit_mvblcz9tidk8q",
+      "name": "Aswan",
+      "portrait": "/images/mvblhiojbdi1bm.png",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [
+        "bow",
+        "authority",
+        "infantry"
+      ],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "Princess of Arrows",
+        "description": "When equipped with a bow, grants Hit+20"
+      },
+      "fields": {},
+      "part3": true,
+      "postTimeskip": true,
+      "growths": {
+        "hp": 40,
+        "str": 35,
+        "mag": 10,
+        "spd": 40,
+        "dex": 50,
+        "def": 30,
+        "res": 15,
+        "lck": 30,
+        "cha": 20
+      }
+    },
+    {
+      "id": "unit_mvbld0wznhzex",
+      "name": "Centurio",
+      "portrait": "/images/mt0es67fwdiblf.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [
+        "lance",
+        "axe",
+        "armor"
+      ],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "Sturdy Corundum",
+        "description": "For the first combat in the enemy's phase, unit takes half damage "
+      },
+      "fields": {
+        "faction": "Temple Army"
+      },
+      "part3": true,
+      "postTimeskip": true,
+      "growths": {
+        "hp": 45,
+        "str": 45,
+        "mag": 25,
+        "spd": 40,
+        "dex": 50,
+        "def": 50,
+        "res": 30,
+        "lck": 30,
+        "cha": 30
+      }
+    },
+    {
+      "id": "unit_mvbld2e1j4uvf",
+      "name": "Nathan",
+      "portrait": "/images/msebw5dvivv5jv.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [
+        "armor",
+        "riding",
+        "lance"
+      ],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "Headlong Rush",
+        "description": "If unit attacks first, grants AS+3 Hit+10 during combat"
+      },
+      "fields": {
+        "faction": "Arago Elites"
+      },
+      "part3": true,
+      "postTimeskip": true,
+      "growths": {
+        "hp": 55,
+        "str": 60,
+        "mag": 15,
+        "spd": 25,
+        "dex": 60,
+        "def": 45,
+        "res": 15,
+        "lck": 25,
+        "cha": 30
+      }
+    },
+    {
+      "id": "unit_mvbld3u69cbqn",
+      "name": "Creek",
+      "portrait": "/images/mset655oi745t4.jpg",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [
+        "sword",
+        "riding"
+      ],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "Steady Hands",
+        "description": "If foe attacks first, grants AS+3, Avo+10 to unit during combat"
+      },
+      "fields": {
+        "faction": "Arago Elites"
+      },
+      "postTimeskip": true,
+      "part3": true,
+      "growths": {
+        "hp": 45,
+        "str": 50,
+        "mag": 15,
+        "spd": 60,
+        "dex": 50,
+        "def": 35,
+        "res": 20,
+        "lck": 30,
+        "cha": 35
+      }
+    },
+    {
+      "id": "unit_mvbld81qjk97v",
+      "name": "Tahonia",
+      "portrait": "/images/mvblgkzxku38bv.png",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [
+        "brawl"
+      ],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "Python Technique",
+        "description": "When using a gauntlet combat art, unit makes a follow-up regardless of AS during combat. Trigger % = 15"
+      },
+      "fields": {},
+      "postTimeskip": true,
+      "part3": true,
+      "growths": {
+        "hp": 65,
+        "str": 50,
+        "mag": 5,
+        "spd": 20,
+        "dex": 40,
+        "def": 45,
+        "res": 35,
+        "lck": 20,
+        "cha": 40
+      }
+    },
+    {
+      "id": "unit_mvblgvxyfe1u6",
+      "name": "Klapka",
+      "portrait": "/images/mvblgzeahk9r42.png",
+      "isLord": false,
+      "routeIds": [],
+      "starterFor": [],
+      "classId": null,
+      "boons": [
+        "lance",
+        "faith",
+        "infantry"
+      ],
+      "banes": [],
+      "skillLevels": {},
+      "personalSkill": {
+        "name": "Spirit of Silver",
+        "description": "After combat, grants Def+1 to unit until the end of the map. (Max +10) Trigger % = Def"
+      },
+      "fields": {},
+      "postTimeskip": true,
+      "part3": true,
+      "growths": {
+        "hp": 40,
+        "str": 40,
+        "mag": 10,
+        "spd": 25,
+        "dex": 45,
+        "def": 50,
+        "res": 15,
+        "lck": 25,
         "cha": 35
       }
     }
@@ -10278,34 +10539,6 @@
       "description": ""
     },
     {
-      "id": "cast_mui7h9sthlank",
-      "name": "Aswan",
-      "portrait": "/images/msu6112ylub3ua.jpg",
-      "subtitle": "",
-      "description": ""
-    },
-    {
-      "id": "cast_mui7hixn6nt22",
-      "name": "Centurio",
-      "portrait": "/images/mt0es67fwdiblf.jpg",
-      "subtitle": "Temple Army",
-      "description": ""
-    },
-    {
-      "id": "cast_mui7hn1nudu9o",
-      "name": "Nathan",
-      "portrait": "/images/msebw5dvivv5jv.jpg",
-      "subtitle": "Arago Elites",
-      "description": ""
-    },
-    {
-      "id": "cast_mui7horsf6mf1",
-      "name": "Creek",
-      "portrait": "/images/mset655oi745t4.jpg",
-      "subtitle": "Arago Elites",
-      "description": ""
-    },
-    {
       "id": "cast_mui7hvah48e0g",
       "name": "Long",
       "portrait": "/images/mtlm8xskh5gb7m.jpg",
@@ -10516,15 +10749,15 @@
       },
       {
         "id": "card_unit_ms7k4uf6l9u72",
-        "subjectKind": "npc",
-        "subjectId": "cast_mui7hn1nudu9o",
+        "subjectKind": "unit",
+        "subjectId": "unit_mvbld2e1j4uvf",
         "rarity": "epic",
         "title": "Ruby of Arago"
       },
       {
         "id": "card_unit_ms7k892bd498m",
-        "subjectKind": "npc",
-        "subjectId": "cast_mui7horsf6mf1",
+        "subjectKind": "unit",
+        "subjectId": "unit_mvbld3u69cbqn",
         "rarity": "epic",
         "title": "Emerald of Arago"
       },
@@ -10716,8 +10949,8 @@
       },
       {
         "id": "card_unit_msu448hnym292",
-        "subjectKind": "npc",
-        "subjectId": "cast_mui7hixn6nt22",
+        "subjectKind": "unit",
+        "subjectId": "unit_mvbld0wznhzex",
         "rarity": "epic",
         "title": "Temple Vulcan"
       },
@@ -10803,8 +11036,8 @@
       },
       {
         "id": "card_unit_msu41p5eli1ai",
-        "subjectKind": "npc",
-        "subjectId": "cast_mui7h9sthlank",
+        "subjectKind": "unit",
+        "subjectId": "unit_mvblcz9tidk8q",
         "rarity": "rare"
       },
       {

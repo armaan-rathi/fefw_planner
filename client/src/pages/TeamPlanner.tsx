@@ -10,7 +10,7 @@ import { sortBySkillOrder } from "../data/skills";
 import { filterSpoilerUnits, isSpoilerTier, useSpoilers } from "../data/spoilers";
 import type { Unit } from "../types";
 
-const SLOT_COUNT = 20;
+const SLOT_COUNT = 25;
 const FREE_COLOR = "#e8eef0";
 type Slot = { unitId: string; classId: string | null } | null;
 type Teams = Record<string, Slot[]>; // route key -> slots
