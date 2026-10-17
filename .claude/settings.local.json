@@ -48,7 +48,19 @@
       "Bash(sed -i '' 's|<NavLink to=\"learnset\">Learnset</NavLink>|<NavLink to=\"learnset\">Learnsets</NavLink>|' src/pages/dev/DevMode.tsx)",
       "Bash(sed -i '' 's/    title: \"Learnset\",/    title: \"Learnsets\",/' src/data/seo.ts)",
       "Bash(cp server/data/db.json __TRACKED_VAR__/db.backup.authority.__CMDSUB_OUTPUT__.json)",
-      "Bash(node __TRACKED_VAR__/import-authority.js)"
+      "Bash(node __TRACKED_VAR__/import-authority.js)",
+      "Bash(cp server/data/db.json __TRACKED_VAR__/db.backup.infantry.__CMDSUB_OUTPUT__.json)",
+      "Bash(node __TRACKED_VAR__/import-infantry.js)",
+      "Bash(cp server/data/db.json __TRACKED_VAR__/db.backup.riding.__CMDSUB_OUTPUT__.json)",
+      "Bash(node __TRACKED_VAR__/import-riding.js)",
+      "Bash(cp server/data/db.json __TRACKED_VAR__/db.backup.armor.__CMDSUB_OUTPUT__.json)",
+      "Bash(node __TRACKED_VAR__/import-armor.js)",
+      "Bash(cp server/data/db.json __TRACKED_VAR__/db.backup.flying.__CMDSUB_OUTPUT__.json)",
+      "Bash(node __TRACKED_VAR__/import-flying.js)",
+      "Bash(cp server/data/db.json __TRACKED_VAR__/db.backup.elephanttier.__CMDSUB_OUTPUT__.json)",
+      "Bash(node -e 'require\\(\"./server/data/db.json\"\\);console.log\\(\"\\\\nJSON OK\"\\)')",
+      "Bash(cp server/data/db.json __TRACKED_VAR__/db.backup.elefix.__CMDSUB_OUTPUT__.json)",
+      "Bash(cp server/data/db.json __TRACKED_VAR__/db.backup.elename.__CMDSUB_OUTPUT__.json)"
     ]
   }
 }

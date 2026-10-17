@@ -1642,8 +1642,8 @@
         "hp": 20,
         "str": 10,
         "mag": -5,
-        "spd": 20,
-        "dex": -10,
+        "spd": -10,
+        "dex": 20,
         "def": 15,
         "res": -5,
         "lck": 5,
@@ -1673,7 +1673,23 @@
         "name": "Elephant Vanguard",
         "description": "If unit is an elephant rider, grants Hit +10."
       },
-      "mountType": "Elephant"
+      "mountType": "Elephant",
+      "growthTiers": [
+        {
+          "level": 45,
+          "growths": {
+            "hp": 30,
+            "str": 20,
+            "mag": -5,
+            "spd": -10,
+            "dex": 35,
+            "def": 25,
+            "res": 5,
+            "lck": 10,
+            "cha": 10
+          }
+        }
+      ]
     },
     {
       "id": "class_msesu5uoyogcq",
@@ -3385,6 +3401,62 @@
           "A": [
             "skill_authority_counter_cavalry"
           ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_dodge"
+          ],
+          "C": [
+            "skill_infantry_close_quarters"
+          ],
+          "B": [
+            "skill_infantry_dodge+"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ],
+          "C+": [
+            "skill_riding_vanguard"
+          ],
+          "A": [
+            "skill_riding_cavalry_move"
+          ],
+          "S": [
+            "skill_riding_vanguard+"
+          ],
+          "S+": [
+            "skill_riding_cavalry_move+"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_defense_stance"
+          ],
+          "C": [
+            "skill_armor_armored_move"
+          ],
+          "B": [
+            "skill_armor_armored_move+"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_counterflurry"
+          ],
+          "S+": [
+            "skill_armor_build+"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
+          ],
+          "C+": [
+            "skill_flying_flitting_flier"
+          ]
         }
       }
     },
@@ -3559,6 +3631,59 @@
           ],
           "S": [
             "skill_authority_lend_strength++"
+          ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_close_quarters"
+          ],
+          "C": [
+            "skill_infantry_evasion"
+          ],
+          "B": [
+            "skill_infantry_close_quarters+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_pass"
+          ],
+          "S+": [
+            "skill_infantry_infantry_move+"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_narrow_defense"
+          ],
+          "C": [
+            "skill_armor_armored_combat"
+          ],
+          "B": [
+            "skill_armor_armored_combat+"
+          ],
+          "A": [
+            "skill_armor_dexterity_fend"
+          ],
+          "S": [
+            "skill_armor_build+"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
+          ],
+          "C+": [
+            "skill_flying_flitting_flier"
+          ],
+          "A": [
+            "skill_flying_airfighter"
           ]
         }
       }
@@ -3748,6 +3873,62 @@
           "S+": [
             "skill_authority_gambit_mastery"
           ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_close_quarters"
+          ],
+          "C": [
+            "skill_infantry_avoid_fatality"
+          ],
+          "B": [
+            "skill_infantry_avoid_fatality+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_close_quarters+"
+          ],
+          "S+": [
+            "skill_infantry_infantry_move+"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ],
+          "C": [
+            "skill_riding_vanguard"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_armored_combat"
+          ],
+          "C": [
+            "skill_armor_heavy_break"
+          ],
+          "B": [
+            "skill_armor_heavy_break+"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_counterflurry"
+          ],
+          "S+": [
+            "skill_armor_build+"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
+          ],
+          "C+": [
+            "skill_flying_flitting_flier"
+          ]
         }
       }
     },
@@ -3924,6 +4105,68 @@
           ],
           "A": [
             "skill_authority_counter_mages"
+          ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_evasion"
+          ],
+          "C": [
+            "skill_infantry_dodge"
+          ],
+          "B": [
+            "skill_infantry_dodge+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_pass"
+          ],
+          "S+": [
+            "skill_infantry_infantry_move+"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ],
+          "C+": [
+            "skill_riding_vanguard"
+          ],
+          "A": [
+            "skill_riding_cavalry_move"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_crit_defense"
+          ],
+          "C": [
+            "skill_armor_armored_leap"
+          ],
+          "B": [
+            "skill_armor_armored_leap+"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_bowblock+"
+          ],
+          "S+": [
+            "skill_armor_build+"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
+          ],
+          "C+": [
+            "skill_flying_flitting_flier"
+          ],
+          "A": [
+            "skill_flying_airfighter"
           ]
         }
       }
@@ -4116,6 +4359,56 @@
           "S+": [
             "skill_authority_gambit_mastery"
           ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_steady_shot"
+          ],
+          "C": [
+            "skill_infantry_sniper_evasion"
+          ],
+          "B": [
+            "skill_infantry_steady_shot+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_sniper_evasion+"
+          ],
+          "S+": [
+            "skill_infantry_infantry_move+"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_narrow_defense"
+          ],
+          "C": [
+            "skill_armor_resistant_armor"
+          ],
+          "B": [
+            "skill_armor_resistant_armor+"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_magic_fend"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
+          ],
+          "C+": [
+            "skill_flying_flitting_flier"
+          ]
         }
       }
     },
@@ -4301,6 +4594,46 @@
           "S+": [
             "skill_authority_gambit_mastery"
           ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_steady_shot"
+          ],
+          "C": [
+            "skill_infantry_sniper_evasion"
+          ],
+          "B": [
+            "skill_infantry_steady_shot+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_sniper_evasion+"
+          ],
+          "S+": [
+            "skill_infantry_infantry_move+"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_narrow_defense"
+          ],
+          "C": [
+            "skill_armor_resistant_armor"
+          ],
+          "B": [
+            "skill_armor_resistant_armor+"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_magic_fend"
+          ],
+          "S+": [
+            "skill_armor_build+"
+          ]
         }
       }
     },
@@ -4452,6 +4785,41 @@
           ],
           "S": [
             "skill_authority_frontline_gambit"
+          ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_steady_shot"
+          ],
+          "C": [
+            "skill_infantry_sniper_evasion"
+          ],
+          "B": [
+            "skill_infantry_surprise_attack"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_resist_stance"
+          ],
+          "C": [
+            "skill_armor_armored_leap"
+          ],
+          "B": [
+            "skill_armor_armored_leap+"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
           ]
         }
       }
@@ -4635,6 +5003,65 @@
           "A": [
             "skill_authority_defense_formation+"
           ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_close_quarters"
+          ],
+          "C": [
+            "skill_infantry_avoid_fatality"
+          ],
+          "B": [
+            "skill_infantry_close_quarters+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_avoid_fatality+"
+          ],
+          "S+": [
+            "skill_infantry_infantry_move+"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ],
+          "C+": [
+            "skill_riding_vanguard"
+          ],
+          "A": [
+            "skill_riding_cavalry_move"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_armored_move"
+          ],
+          "C": [
+            "skill_armor_bowblock"
+          ],
+          "B": [
+            "skill_armor_armored_move+"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_defense_fend"
+          ],
+          "S+": [
+            "skill_armor_build+"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
+          ],
+          "C+": [
+            "skill_flying_flitting_flier"
+          ]
         }
       }
     },
@@ -4808,6 +5235,50 @@
           ],
           "B": [
             "skill_authority_counter_snipers"
+          ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_steady_shot"
+          ],
+          "C": [
+            "skill_infantry_positioning"
+          ],
+          "B": [
+            "skill_infantry_steady_shot+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_positioning+"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ],
+          "C+": [
+            "skill_riding_vanguard"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_narrow_defense"
+          ],
+          "C": [
+            "skill_armor_armored_combat"
+          ],
+          "B": [
+            "skill_armor_armored_combat+"
+          ],
+          "S": [
+            "skill_armor_dexterity_fend"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
           ]
         }
       }
@@ -4992,6 +5463,65 @@
           "A": [
             "skill_authority_lend_defense+"
           ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_close_quarters"
+          ],
+          "C": [
+            "skill_infantry_avoid_fatality"
+          ],
+          "B": [
+            "skill_infantry_close_quarters+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_close_call_evasion"
+          ]
+        },
+        "riding": {
+          "C+": [
+            "skill_riding_vanguard"
+          ],
+          "A": [
+            "skill_riding_cavalry_move"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_defense_stance"
+          ],
+          "C": [
+            "skill_armor_bowblock"
+          ],
+          "B": [
+            "skill_armor_heavy_break"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_bowblock+"
+          ],
+          "S+": [
+            "skill_armor_build+"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
+          ],
+          "C+": [
+            "skill_flying_flitting_flier"
+          ],
+          "A": [
+            "skill_flying_airfighter"
+          ],
+          "S": [
+            "skill_flying_flitting_flier+"
+          ]
         }
       }
     },
@@ -5159,6 +5689,47 @@
           ],
           "A": [
             "skill_authority_power_arts_order"
+          ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_close_quarters"
+          ],
+          "C": [
+            "skill_infantry_avoid_fatality"
+          ],
+          "B": [
+            "skill_infantry_close_quarters+"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ],
+          "C+": [
+            "skill_riding_vanguard"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_defense_stance"
+          ],
+          "C": [
+            "skill_armor_absolute_defense"
+          ],
+          "B": [
+            "skill_armor_absolute_defense+"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_pursuit_defense"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
           ]
         }
       }
@@ -5352,6 +5923,56 @@
           "S": [
             "skill_authority_lend_dexterity++"
           ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_dodge"
+          ],
+          "C": [
+            "skill_infantry_sniper_evasion"
+          ],
+          "B": [
+            "skill_infantry_dodge+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_infantry_canto"
+          ],
+          "S+": [
+            "skill_infantry_infantry_move+"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_resist_stance"
+          ],
+          "C": [
+            "skill_armor_armored_leap"
+          ],
+          "B": [
+            "skill_armor_armored_leap+"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_luck_fend"
+          ],
+          "S+": [
+            "skill_armor_build+"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
+          ]
         }
       }
     },
@@ -5531,6 +6152,62 @@
           ],
           "S": [
             "skill_authority_patch_up_stance"
+          ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_avoid_fatality"
+          ],
+          "C": [
+            "skill_infantry_dodge"
+          ],
+          "B": [
+            "skill_infantry_dodge+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_infantry_canto"
+          ],
+          "S+": [
+            "skill_infantry_infantry_move+"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ],
+          "C+": [
+            "skill_riding_vanguard"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_narrow_defense"
+          ],
+          "C": [
+            "skill_armor_bowblock"
+          ],
+          "B": [
+            "skill_armor_spearblock"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_luck_fend"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
+          ],
+          "C+": [
+            "skill_flying_flitting_flier"
+          ],
+          "A": [
+            "skill_flying_airfighter"
           ]
         }
       }
@@ -5720,6 +6397,53 @@
           "A": [
             "skill_authority_distraction+"
           ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_close_quarters"
+          ],
+          "C": [
+            "skill_infantry_evasion"
+          ],
+          "B": [
+            "skill_infantry_close_quarters+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_evasion+"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_crit_defense"
+          ],
+          "C": [
+            "skill_armor_absolute_defense"
+          ],
+          "B": [
+            "skill_armor_armored_move"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_absolute_defense+"
+          ],
+          "S+": [
+            "skill_armor_build+"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
+          ]
         }
       }
     },
@@ -5892,6 +6616,53 @@
           ],
           "A": [
             "skill_authority_lend_speed+"
+          ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_evasion"
+          ],
+          "C": [
+            "skill_infantry_dodge"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ],
+          "C+": [
+            "skill_riding_vanguard"
+          ],
+          "A": [
+            "skill_riding_cavalry_move"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_narrow_defense"
+          ],
+          "C": [
+            "skill_armor_armored_leap"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_armored_leap+"
+          ],
+          "S+": [
+            "skill_armor_build+"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
+          ],
+          "C+": [
+            "skill_flying_flitting_flier"
+          ],
+          "A": [
+            "skill_flying_airfighter"
           ]
         }
       }
@@ -6083,6 +6854,59 @@
           "S": [
             "skill_authority_propel"
           ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_steady_shot"
+          ],
+          "C": [
+            "skill_infantry_evasion"
+          ],
+          "B": [
+            "skill_infantry_steady_shot+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_combat_advantage"
+          ],
+          "S+": [
+            "skill_infantry_infantry_move+"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ],
+          "C": [
+            "skill_riding_vanguard"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_armored_combat"
+          ],
+          "C": [
+            "skill_armor_resistant_armor"
+          ],
+          "B": [
+            "skill_armor_magic_fend"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_healing_armor"
+          ],
+          "S+": [
+            "skill_armor_build+"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
+          ]
         }
       }
     },
@@ -6269,6 +7093,45 @@
           ],
           "S": [
             "skill_authority_frontline_gambit"
+          ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_steady_shot"
+          ],
+          "C": [
+            "skill_infantry_evasion"
+          ],
+          "B": [
+            "skill_infantry_steady_shot+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_combat_advantage"
+          ],
+          "S+": [
+            "skill_infantry_infantry_move+"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_narrow_defense"
+          ],
+          "C": [
+            "skill_armor_armored_move"
+          ],
+          "B": [
+            "skill_armor_armored_move+"
+          ],
+          "A": [
+            "skill_armor_build"
           ]
         }
       }
@@ -6457,6 +7320,56 @@
           "A": [
             "skill_authority_counter_snipers"
           ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_dodge"
+          ],
+          "C": [
+            "skill_infantry_evasion"
+          ],
+          "B": [
+            "skill_infantry_surprise_attack"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_dodge+"
+          ],
+          "S+": [
+            "skill_infantry_infantry_move+"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_narrow_defense"
+          ],
+          "C": [
+            "skill_armor_armored_move"
+          ],
+          "B": [
+            "skill_armor_heavy_break"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_counterflurry"
+          ],
+          "S+": [
+            "skill_armor_build+"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
+          ]
         }
       }
     },
@@ -6634,6 +7547,43 @@
           "S+": [
             "skill_authority_gambit_mastery"
           ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_close_quarters"
+          ],
+          "C": [
+            "skill_infantry_avoid_fatality"
+          ],
+          "B": [
+            "skill_infantry_close_call_evasion"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_close_quarters+"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_crit_defense"
+          ],
+          "C": [
+            "skill_armor_armored_move"
+          ],
+          "B": [
+            "skill_armor_armored_move+"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_strength_fend"
+          ],
+          "S+": [
+            "skill_armor_build+"
+          ]
         }
       }
     },
@@ -6803,6 +7753,40 @@
           ],
           "A": [
             "skill_authority_attack_formation+"
+          ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_steady_shot"
+          ],
+          "C": [
+            "skill_infantry_positioning"
+          ],
+          "B": [
+            "skill_infantry_steady_shot+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_positioning+"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_defense_stance"
+          ],
+          "C": [
+            "skill_armor_resistant_armor"
+          ],
+          "B": [
+            "skill_armor_armored_move"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_luck_fend"
           ]
         }
       }
@@ -6983,6 +7967,46 @@
           "S+": [
             "skill_authority_gambit_mastery"
           ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_close_quarters"
+          ],
+          "C": [
+            "skill_infantry_avoid_fatality"
+          ],
+          "B": [
+            "skill_infantry_close_quarters+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_combat_advantage"
+          ],
+          "S+": [
+            "skill_infantry_infantry_move+"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_crit_defense"
+          ],
+          "C": [
+            "skill_armor_armored_combat"
+          ],
+          "B": [
+            "skill_armor_resistant_armor"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_magic_fend"
+          ],
+          "S+": [
+            "skill_armor_build+"
+          ]
         }
       }
     },
@@ -7161,6 +8185,53 @@
           "S+": [
             "skill_authority_gambit_mastery"
           ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_dodge"
+          ],
+          "C": [
+            "skill_infantry_evasion"
+          ],
+          "B": [
+            "skill_infantry_dodge+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_pass"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_narrow_defense"
+          ],
+          "C": [
+            "skill_armor_armored_leap"
+          ],
+          "B": [
+            "skill_armor_armored_leap+"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_bowblock+"
+          ],
+          "S+": [
+            "skill_armor_build+"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
+          ]
         }
       }
     },
@@ -7337,6 +8408,48 @@
           ],
           "S+": [
             "skill_authority_gambit_mastery"
+          ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_close_quarters"
+          ],
+          "C": [
+            "skill_infantry_evasion"
+          ],
+          "B": [
+            "skill_infantry_close_quarters+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_evasion+"
+          ],
+          "S+": [
+            "skill_infantry_infantry_move+"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_bowblock"
+          ],
+          "C": [
+            "skill_armor_spearblock"
+          ],
+          "B": [
+            "skill_armor_armored_move"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_defense_fend"
           ]
         }
       }
@@ -7522,6 +8635,56 @@
           ],
           "S": [
             "skill_authority_counter_snipers+"
+          ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_dodge"
+          ],
+          "C": [
+            "skill_infantry_sniper_evasion"
+          ],
+          "B": [
+            "skill_infantry_pass"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_dodge+"
+          ],
+          "S+": [
+            "skill_infantry_infantry_move+"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_narrow_defense"
+          ],
+          "C": [
+            "skill_armor_armored_move"
+          ],
+          "B": [
+            "skill_armor_armored_move+"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_counterflurry"
+          ],
+          "S+": [
+            "skill_armor_build+"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
           ]
         }
       }
@@ -7713,6 +8876,40 @@
           "S+": [
             "skill_authority_gambit_mastery"
           ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_dodge"
+          ],
+          "C": [
+            "skill_infantry_positioning"
+          ],
+          "B": [
+            "skill_infantry_surprise_attack"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_positioning+"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_narrow_defense"
+          ],
+          "C": [
+            "skill_armor_armored_combat"
+          ],
+          "B": [
+            "skill_armor_armored_combat+"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_dexterity_fend"
+          ]
         }
       }
     },
@@ -7894,6 +9091,50 @@
           ],
           "S": [
             "skill_authority_lend_defense++"
+          ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_avoid_fatality"
+          ],
+          "C": [
+            "skill_infantry_sniper_evasion"
+          ],
+          "B": [
+            "skill_infantry_avoid_fatality+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_sniper_evasion+"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_resist_stance"
+          ],
+          "C": [
+            "skill_armor_resistant_armor"
+          ],
+          "B": [
+            "skill_armor_resistant_armor+"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_magic_fend"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
           ]
         }
       }
@@ -8088,6 +9329,54 @@
           "S+": [
             "skill_authority_gambit_mastery"
           ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_steady_shot"
+          ],
+          "C": [
+            "skill_infantry_sniper_evasion"
+          ],
+          "B": [
+            "skill_infantry_steady_shot+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_sniper_evasion+"
+          ],
+          "S+": [
+            "skill_infantry_infantry_move+"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_resist_stance"
+          ],
+          "C": [
+            "skill_armor_armored_move"
+          ],
+          "B": [
+            "skill_armor_armored_move+"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_healing_armor"
+          ],
+          "S+": [
+            "skill_armor_build+"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
+          ],
+          "C+": [
+            "skill_flying_flitting_flier"
+          ]
         }
       }
     },
@@ -8264,6 +9553,44 @@
           ],
           "B": [
             "skill_authority_threaten+"
+          ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_close_quarters"
+          ],
+          "C": [
+            "skill_infantry_avoid_fatality"
+          ],
+          "B": [
+            "skill_infantry_close_quarters+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_close_call_evasion"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_narrow_defense"
+          ],
+          "C": [
+            "skill_armor_bowblock"
+          ],
+          "B": [
+            "skill_armor_armored_move"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
           ]
         }
       }
@@ -8461,6 +9788,62 @@
           "S": [
             "skill_authority_lend_resistance"
           ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_avoid_fatality"
+          ],
+          "C": [
+            "skill_infantry_evasion"
+          ],
+          "B": [
+            "skill_infantry_close_call_evasion"
+          ],
+          "S": [
+            "skill_infantry_infantry_canto"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ],
+          "C": [
+            "skill_riding_vanguard"
+          ],
+          "A": [
+            "skill_riding_cavalry_move"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_armored_move"
+          ],
+          "C": [
+            "skill_armor_resistant_armor"
+          ],
+          "B": [
+            "skill_armor_resistant_armor+"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_bowblock+"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
+          ],
+          "C+": [
+            "skill_flying_flitting_flier"
+          ],
+          "A": [
+            "skill_flying_airfighter"
+          ],
+          "S": [
+            "skill_flying_flitting_flier+"
+          ]
         }
       }
     },
@@ -8648,6 +10031,45 @@
           "S": [
             "skill_authority_quick_draw_order"
           ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_close_quarters"
+          ],
+          "C": [
+            "skill_infantry_close_call_evasion"
+          ],
+          "B": [
+            "skill_infantry_dodge"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_dodge+"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_narrow_defense"
+          ],
+          "C": [
+            "skill_armor_armored_leap"
+          ],
+          "B": [
+            "skill_armor_armored_move"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_armored_move+"
+          ]
         }
       }
     },
@@ -8834,6 +10256,37 @@
           "S": [
             "skill_authority_propel"
           ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_close_quarters"
+          ],
+          "C": [
+            "skill_infantry_positioning"
+          ],
+          "B": [
+            "skill_infantry_close_quarters+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_crit_defense"
+          ],
+          "C": [
+            "skill_armor_absolute_defense"
+          ],
+          "B": [
+            "skill_armor_absolute_defense+"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_pursuit_defense"
+          ]
         }
       }
     },
@@ -9011,6 +10464,50 @@
           ],
           "A": [
             "skill_authority_lend_speed+"
+          ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_close_quarters"
+          ],
+          "C": [
+            "skill_infantry_evasion"
+          ],
+          "B": [
+            "skill_infantry_sniper_evasion"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_pass"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ],
+          "C": [
+            "skill_riding_vanguard"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_narrow_defense"
+          ],
+          "C": [
+            "skill_armor_armored_leap"
+          ],
+          "B": [
+            "skill_armor_armored_combat"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
+          ],
+          "C+": [
+            "skill_flying_flitting_flier"
           ]
         }
       }
@@ -9192,6 +10689,47 @@
           ],
           "S": [
             "skill_authority_counter_cavalry+"
+          ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_close_quarters"
+          ],
+          "C": [
+            "skill_infantry_avoid_fatality"
+          ],
+          "B": [
+            "skill_infantry_close_quarters+"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_crit_defense"
+          ],
+          "C": [
+            "skill_armor_spearblock"
+          ],
+          "B": [
+            "skill_armor_armored_move"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
+          ],
+          "C+": [
+            "skill_flying_flitting_flier"
+          ],
+          "A": [
+            "skill_flying_airfighter"
+          ],
+          "S": [
+            "skill_flying_flitting_flier+"
           ]
         }
       }
@@ -9379,6 +10917,40 @@
           ],
           "A": [
             "skill_authority_teach_one_chance"
+          ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_close_quarters"
+          ],
+          "C": [
+            "skill_infantry_avoid_fatality"
+          ],
+          "B": [
+            "skill_infantry_close_quarters+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_defense_stance"
+          ],
+          "C": [
+            "skill_armor_heavy_break"
+          ],
+          "B": [
+            "skill_armor_heavy_break+"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_strength_fend"
+          ],
+          "S+": [
+            "skill_armor_build+"
           ]
         }
       }
@@ -9569,6 +11141,43 @@
           "S": [
             "skill_authority_lend_speed++"
           ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_evasion"
+          ],
+          "C": [
+            "skill_infantry_positioning"
+          ],
+          "B": [
+            "skill_infantry_dodge"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_dodge+"
+          ],
+          "S+": [
+            "skill_infantry_infantry_move+"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_narrow_defense"
+          ],
+          "C": [
+            "skill_armor_armored_leap"
+          ],
+          "B": [
+            "skill_armor_bowblock"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_armored_leap+"
+          ]
         }
       }
     },
@@ -9756,6 +11365,56 @@
           "B": [
             "skill_authority_lend_magic+"
           ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_steady_shot"
+          ],
+          "C": [
+            "skill_infantry_avoid_fatality"
+          ],
+          "B": [
+            "skill_infantry_steady_shot+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_avoid_fatality+"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ],
+          "C+": [
+            "skill_riding_vanguard"
+          ],
+          "A": [
+            "skill_riding_cavalry_move"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_resist_stance"
+          ],
+          "C": [
+            "skill_armor_armored_move"
+          ],
+          "B": [
+            "skill_armor_magic_fend"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_healing_armor"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
+          ]
         }
       }
     },
@@ -9939,6 +11598,56 @@
           ],
           "A": [
             "skill_authority_counter_snipers"
+          ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_evasion"
+          ],
+          "C": [
+            "skill_infantry_dodge"
+          ],
+          "B": [
+            "skill_infantry_sniper_evasion"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_sniper_evasion+"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_narrow_defense"
+          ],
+          "C": [
+            "skill_armor_armored_leap"
+          ],
+          "B": [
+            "skill_armor_armored_move"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_armored_leap+"
+          ],
+          "S+": [
+            "skill_armor_build+"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
+          ],
+          "C+": [
+            "skill_flying_flitting_flier"
           ]
         }
       }
@@ -10128,6 +11837,56 @@
           "S+": [
             "skill_authority_gambit_mastery"
           ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_steady_shot"
+          ],
+          "C": [
+            "skill_infantry_positioning"
+          ],
+          "B": [
+            "skill_infantry_steady_shot+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_positioning+"
+          ],
+          "S+": [
+            "skill_infantry_infantry_move+"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_narrow_defense"
+          ],
+          "C": [
+            "skill_armor_bowblock"
+          ],
+          "B": [
+            "skill_armor_armored_combat"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_bowblock+"
+          ],
+          "S+": [
+            "skill_armor_build+"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
+          ]
         }
       }
     },
@@ -10300,6 +12059,48 @@
           "S": [
             "skill_authority_lend_magic++"
           ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_evasion"
+          ],
+          "C": [
+            "skill_infantry_sniper_evasion"
+          ],
+          "B": [
+            "skill_infantry_evasion+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_sniper_evasion+"
+          ],
+          "S+": [
+            "skill_infantry_infantry_move+"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_resist_stance"
+          ],
+          "C": [
+            "skill_armor_resistant_armor"
+          ],
+          "B": [
+            "skill_armor_resistant_armor+"
+          ],
+          "A": [
+            "skill_armor_build"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
+          ],
+          "C+": [
+            "skill_flying_flitting_flier"
+          ]
         }
       }
     },
@@ -10454,6 +12255,31 @@
           ],
           "A": [
             "skill_authority_lend_defense+"
+          ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_steady_shot"
+          ],
+          "C": [
+            "skill_infantry_positioning"
+          ],
+          "B": [
+            "skill_infantry_steady_shot+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_crit_defense"
+          ],
+          "C": [
+            "skill_armor_bowblock"
+          ],
+          "B": [
+            "skill_armor_absolute_defense"
           ]
         }
       }
@@ -10638,6 +12464,62 @@
           "S+": [
             "skill_authority_gambit_mastery"
           ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_evasion"
+          ],
+          "C": [
+            "skill_infantry_sniper_evasion"
+          ],
+          "B": [
+            "skill_infantry_close_call_evasion"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ],
+          "C+": [
+            "skill_riding_vanguard"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_narrow_defense"
+          ],
+          "C": [
+            "skill_armor_resistant_armor"
+          ],
+          "B": [
+            "skill_armor_resistant_armor+"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_luck_fend"
+          ],
+          "S+": [
+            "skill_armor_build+"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
+          ],
+          "C+": [
+            "skill_flying_flitting_flier"
+          ],
+          "A": [
+            "skill_flying_airfighter"
+          ],
+          "S": [
+            "skill_flying_flitting_flier+"
+          ]
         }
       }
     },
@@ -10802,6 +12684,44 @@
           ],
           "B": [
             "skill_authority_threaten+"
+          ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_close_quarters"
+          ],
+          "C": [
+            "skill_infantry_surprise_attack"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ],
+          "C+": [
+            "skill_riding_vanguard"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_narrow_defense"
+          ],
+          "C": [
+            "skill_armor_armored_combat"
+          ],
+          "B": [
+            "skill_armor_armored_combat+"
+          ],
+          "A": [
+            "skill_armor_build"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
+          ],
+          "C+": [
+            "skill_flying_flitting_flier"
           ]
         }
       }
@@ -10972,6 +12892,45 @@
           ],
           "B": [
             "skill_authority_threaten+"
+          ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_steady_shot"
+          ],
+          "C": [
+            "skill_infantry_positioning"
+          ],
+          "B": [
+            "skill_infantry_steady_shot+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_combat_advantage"
+          ],
+          "S+": [
+            "skill_infantry_infantry_move+"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_narrow_defense"
+          ],
+          "C": [
+            "skill_armor_spearblock"
+          ],
+          "B": [
+            "skill_armor_heavy_break"
+          ],
+          "A": [
+            "skill_armor_build"
           ]
         }
       }
@@ -11145,6 +13104,41 @@
           ],
           "B": [
             "skill_authority_counter_order"
+          ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_positioning"
+          ],
+          "C": [
+            "skill_infantry_avoid_fatality"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_armored_combat"
+          ],
+          "C": [
+            "skill_armor_armored_move"
+          ],
+          "B": [
+            "skill_armor_pursuit_defense"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_counterflurry"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
           ]
         }
       }
@@ -11329,6 +13323,50 @@
           "A": [
             "skill_authority_attack_formation+"
           ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_steady_shot"
+          ],
+          "C": [
+            "skill_infantry_close_call_evasion"
+          ],
+          "B": [
+            "skill_infantry_steady_shot+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_combat_advantage"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_narrow_defense"
+          ],
+          "C": [
+            "skill_armor_heavy_break"
+          ],
+          "B": [
+            "skill_armor_heavy_break+"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_strength_fend"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
+          ]
         }
       }
     },
@@ -11488,6 +13526,31 @@
           ],
           "A": [
             "skill_authority_hunter_s_order"
+          ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_evasion"
+          ],
+          "C": [
+            "skill_infantry_sniper_evasion"
+          ],
+          "B": [
+            "skill_infantry_evasion+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_pass"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_narrow_defense"
+          ],
+          "C": [
+            "skill_armor_armored_combat"
           ]
         }
       }
@@ -11663,6 +13726,38 @@
           ],
           "A": [
             "skill_authority_lend_strength+"
+          ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_evasion"
+          ],
+          "C": [
+            "skill_infantry_positioning"
+          ],
+          "B": [
+            "skill_infantry_positioning+"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_crit_defense"
+          ],
+          "C": [
+            "skill_armor_bowblock"
+          ],
+          "B": [
+            "skill_armor_armored_combat"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
           ]
         }
       }
@@ -11846,6 +13941,62 @@
           "S+": [
             "skill_authority_gambit_mastery"
           ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_close_quarters"
+          ],
+          "C": [
+            "skill_infantry_evasion"
+          ],
+          "B": [
+            "skill_infantry_close_quarters+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_evasion+"
+          ],
+          "S+": [
+            "skill_infantry_infantry_move+"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ],
+          "C+": [
+            "skill_riding_vanguard"
+          ],
+          "A": [
+            "skill_riding_cavalry_move"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_narrow_defense"
+          ],
+          "C": [
+            "skill_armor_armored_move"
+          ],
+          "B": [
+            "skill_armor_armored_move+"
+          ],
+          "S": [
+            "skill_armor_luck_fend"
+          ],
+          "S+": [
+            "skill_armor_build+"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
+          ],
+          "C+": [
+            "skill_flying_flitting_flier"
+          ]
         }
       }
     },
@@ -12025,6 +14176,47 @@
           "B": [
             "skill_authority_barging_order"
           ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_evasion"
+          ],
+          "C": [
+            "skill_infantry_positioning"
+          ],
+          "B": [
+            "skill_infantry_positioning+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ],
+          "C": [
+            "skill_riding_vanguard"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_narrow_defense"
+          ],
+          "C": [
+            "skill_armor_armored_move"
+          ],
+          "B": [
+            "skill_armor_armored_move+"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
+          ],
+          "C+": [
+            "skill_flying_flitting_flier"
+          ]
         }
       }
     },
@@ -12195,6 +14387,62 @@
           ],
           "A": [
             "skill_authority_attack_formation+"
+          ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_evasion"
+          ],
+          "C": [
+            "skill_infantry_avoid_fatality"
+          ],
+          "B": [
+            "skill_infantry_avoid_fatality+"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ],
+          "C+": [
+            "skill_riding_vanguard"
+          ],
+          "A": [
+            "skill_riding_cavalry_move"
+          ],
+          "S": [
+            "skill_riding_vanguard+"
+          ],
+          "S+": [
+            "skill_riding_cavalry_move+"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_spearblock"
+          ],
+          "C": [
+            "skill_armor_armored_move"
+          ],
+          "B": [
+            "skill_armor_armored_move+"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_pursuit_defense"
+          ],
+          "S+": [
+            "skill_armor_build+"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
+          ],
+          "C+": [
+            "skill_flying_flitting_flier"
           ]
         }
       }
@@ -12368,6 +14616,74 @@
           "A": [
             "skill_authority_threaten+"
           ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_positioning"
+          ],
+          "C": [
+            "skill_infantry_surprise_attack"
+          ],
+          "B": [
+            "skill_infantry_positioning+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_combat_advantage"
+          ],
+          "S+": [
+            "skill_infantry_infantry_move+"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ],
+          "C+": [
+            "skill_riding_vanguard"
+          ],
+          "A": [
+            "skill_riding_cavalry_move"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_narrow_defense"
+          ],
+          "C": [
+            "skill_armor_armored_move"
+          ],
+          "B": [
+            "skill_armor_armored_leap"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_armored_leap+"
+          ],
+          "S+": [
+            "skill_armor_build+"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
+          ],
+          "C+": [
+            "skill_flying_flitting_flier"
+          ],
+          "A": [
+            "skill_flying_airfighter"
+          ],
+          "S": [
+            "skill_flying_flitting_flier+"
+          ],
+          "S+": [
+            "skill_flying_airfighter+"
+          ]
         }
       }
     },
@@ -12539,6 +14855,47 @@
           ],
           "A": [
             "skill_authority_rein+"
+          ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_close_quarters"
+          ],
+          "C": [
+            "skill_infantry_dodge"
+          ],
+          "B": [
+            "skill_infantry_close_quarters+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_dodge+"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ],
+          "C+": [
+            "skill_riding_vanguard"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_narrow_defense"
+          ],
+          "C": [
+            "skill_armor_armored_leap"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
+          ],
+          "C+": [
+            "skill_flying_flitting_flier"
           ]
         }
       }
@@ -12712,6 +15069,42 @@
           ],
           "A": [
             "skill_authority_teach_monkly_havoc"
+          ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_close_quarters"
+          ],
+          "C": [
+            "skill_infantry_evasion"
+          ],
+          "B": [
+            "skill_infantry_close_quarters+"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_resist_stance"
+          ],
+          "C": [
+            "skill_armor_resistant_armor"
+          ],
+          "B": [
+            "skill_armor_heavy_break"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_healing_armor"
+          ],
+          "S+": [
+            "skill_armor_build+"
           ]
         }
       }
@@ -12896,6 +15289,47 @@
           "S": [
             "skill_authority_propel"
           ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_close_quarters"
+          ],
+          "C": [
+            "skill_infantry_positioning"
+          ],
+          "B": [
+            "skill_infantry_close_quarters+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_positioning+"
+          ],
+          "S+": [
+            "skill_infantry_infantry_move+"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_narrow_defense"
+          ],
+          "C": [
+            "skill_armor_heavy_break"
+          ],
+          "B": [
+            "skill_armor_heavy_break+"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
+          ]
         }
       }
     },
@@ -13057,6 +15491,43 @@
           "S+": [
             "skill_authority_gambit_mastery"
           ]
+        },
+        "infantry": {
+          "C": [
+            "skill_infantry_steady_shot"
+          ],
+          "B": [
+            "skill_infantry_sniper_evasion"
+          ],
+          "B+": [
+            "skill_infantry_pass"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_infantry_canto"
+          ],
+          "S+": [
+            "skill_infantry_infantry_move+"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_resist_stance"
+          ],
+          "C": [
+            "skill_armor_resistant_armor"
+          ],
+          "B": [
+            "skill_armor_resistant_armor+"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_magic_fend"
+          ]
         }
       }
     },
@@ -13200,6 +15671,37 @@
           ],
           "A": [
             "skill_authority_counter_fliers+"
+          ]
+        },
+        "infantry": {
+          "C": [
+            "skill_infantry_steady_shot"
+          ],
+          "B+": [
+            "skill_infantry_surprise_attack"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_dodge+"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_crit_defense"
+          ],
+          "C": [
+            "skill_armor_armored_leap"
+          ],
+          "B": [
+            "skill_armor_armored_combat"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_armored_leap+"
           ]
         }
       }
@@ -13351,6 +15853,50 @@
           ],
           "S+": [
             "skill_authority_gambit_mastery"
+          ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_avoid_fatality"
+          ],
+          "C": [
+            "skill_infantry_sniper_evasion"
+          ],
+          "B": [
+            "skill_infantry_close_call_evasion"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S+": [
+            "skill_infantry_infantry_move+"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_armored_move"
+          ],
+          "C": [
+            "skill_armor_armored_move+"
+          ],
+          "B": [
+            "skill_armor_healing_armor"
+          ],
+          "A": [
+            "skill_armor_bowblock+"
+          ],
+          "S+": [
+            "skill_armor_build+"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
           ]
         }
       }
@@ -13506,6 +16052,53 @@
           "S+": [
             "skill_authority_gambit_mastery"
           ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_steady_shot"
+          ],
+          "C": [
+            "skill_infantry_evasion"
+          ],
+          "B": [
+            "skill_infantry_evasion+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_infantry_canto"
+          ],
+          "S+": [
+            "skill_infantry_infantry_move+"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_resist_stance"
+          ],
+          "C": [
+            "skill_armor_bowblock"
+          ],
+          "B": [
+            "skill_armor_spearblock"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_dexterity_fend"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
+          ]
         }
       }
     },
@@ -13629,6 +16222,22 @@
           "A": [
             "skill_authority_defense_formation+"
           ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_close_quarters"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_absolute_defense"
+          ],
+          "C": [
+            "skill_armor_heavy_break"
+          ],
+          "B": [
+            "skill_armor_heavy_break+"
+          ]
         }
       }
     },
@@ -13746,6 +16355,59 @@
           ],
           "S+": [
             "skill_authority_gambit_mastery"
+          ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_evasion"
+          ],
+          "C": [
+            "skill_infantry_close_call_evasion"
+          ],
+          "B": [
+            "skill_infantry_evasion+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_infantry_canto"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ],
+          "A": [
+            "skill_riding_cavalry_move"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_narrow_defense"
+          ],
+          "C": [
+            "skill_armor_spearblock"
+          ],
+          "B": [
+            "skill_armor_strength_fend"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_counterflurry"
+          ],
+          "S+": [
+            "skill_armor_build+"
+          ]
+        },
+        "flying": {
+          "D": [
+            "skill_flying_read_the_winds"
+          ],
+          "C+": [
+            "skill_flying_flitting_flier"
           ]
         }
       }
@@ -13884,6 +16546,48 @@
           "A": [
             "skill_authority_lend_defense+"
           ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_evasion"
+          ],
+          "C": [
+            "skill_infantry_positioning"
+          ],
+          "B": [
+            "skill_infantry_surprise_attack"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_evasion+"
+          ],
+          "S+": [
+            "skill_infantry_infantry_move+"
+          ]
+        },
+        "riding": {
+          "D": [
+            "skill_riding_knightly_senses"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_armored_leap"
+          ],
+          "C": [
+            "skill_armor_armored_move"
+          ],
+          "B": [
+            "skill_armor_armored_leap+"
+          ],
+          "A": [
+            "skill_armor_build"
+          ],
+          "S": [
+            "skill_armor_armored_move+"
+          ]
         }
       }
     },
@@ -13894,7 +16598,7 @@
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": null,
+      "classId": "class_battlemaster",
       "boons": [
         "brawl"
       ],
@@ -14003,6 +16707,23 @@
           "S+": [
             "skill_authority_gambit_mastery"
           ]
+        },
+        "infantry": {
+          "D": [
+            "skill_infantry_close_quarters"
+          ],
+          "C": [
+            "skill_infantry_dodge"
+          ],
+          "B": [
+            "skill_infantry_close_quarters+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_dodge+"
+          ]
         }
       }
     },
@@ -14013,7 +16734,7 @@
       "isLord": false,
       "routeIds": [],
       "starterFor": [],
-      "classId": null,
+      "classId": "class_msessr8yloah4",
       "boons": [
         "lance",
         "faith",
@@ -14093,6 +16814,25 @@
           ],
           "A": [
             "skill_authority_defense_formation+"
+          ]
+        },
+        "infantry": {
+          "B": [
+            "skill_infantry_close_quarters+"
+          ],
+          "A": [
+            "skill_infantry_infantry_move"
+          ],
+          "S": [
+            "skill_infantry_avoid_fatality+"
+          ],
+          "S+": [
+            "skill_infantry_infantry_move+"
+          ]
+        },
+        "armor": {
+          "D": [
+            "skill_armor_crit_defense"
           ]
         }
       }
@@ -18785,7 +21525,7 @@
     {
       "id": "mount_war_elephant",
       "type": "Elephant",
-      "name": "War Elephant",
+      "name": "Saramis War Elephant",
       "stats": {
         "str": 5,
         "dex": 5,
@@ -23513,6 +26253,326 @@
       "type": "Authority",
       "name": "Teach Monkly Havoc",
       "description": ""
+    },
+    {
+      "id": "skill_infantry_evasion",
+      "type": "Infantry",
+      "name": "Evasion",
+      "description": "",
+      "plus": {
+        "name": "Evasion+",
+        "description": ""
+      }
+    },
+    {
+      "id": "skill_infantry_sniper_evasion",
+      "type": "Infantry",
+      "name": "Sniper Evasion",
+      "description": "",
+      "plus": {
+        "name": "Sniper Evasion+",
+        "description": ""
+      }
+    },
+    {
+      "id": "skill_infantry_close_call_evasion",
+      "type": "Infantry",
+      "name": "Close-Call Evasion",
+      "description": ""
+    },
+    {
+      "id": "skill_infantry_infantry_move",
+      "type": "Infantry",
+      "name": "Infantry Move",
+      "description": "",
+      "plus": {
+        "name": "Infantry Move+",
+        "description": ""
+      }
+    },
+    {
+      "id": "skill_infantry_dodge",
+      "type": "Infantry",
+      "name": "Dodge",
+      "description": "",
+      "plus": {
+        "name": "Dodge+",
+        "description": ""
+      }
+    },
+    {
+      "id": "skill_infantry_pass",
+      "type": "Infantry",
+      "name": "Pass",
+      "description": ""
+    },
+    {
+      "id": "skill_infantry_steady_shot",
+      "type": "Infantry",
+      "name": "Steady Shot",
+      "description": "",
+      "plus": {
+        "name": "Steady Shot+",
+        "description": ""
+      }
+    },
+    {
+      "id": "skill_infantry_infantry_canto",
+      "type": "Infantry",
+      "name": "Infantry Canto",
+      "description": ""
+    },
+    {
+      "id": "skill_infantry_positioning",
+      "type": "Infantry",
+      "name": "Positioning",
+      "description": "",
+      "plus": {
+        "name": "Positioning+",
+        "description": ""
+      }
+    },
+    {
+      "id": "skill_infantry_close_quarters",
+      "type": "Infantry",
+      "name": "Close Quarters",
+      "description": "",
+      "plus": {
+        "name": "Close Quarters+",
+        "description": ""
+      }
+    },
+    {
+      "id": "skill_infantry_avoid_fatality",
+      "type": "Infantry",
+      "name": "Avoid Fatality",
+      "description": "",
+      "plus": {
+        "name": "Avoid Fatality+",
+        "description": ""
+      }
+    },
+    {
+      "id": "skill_infantry_surprise_attack",
+      "type": "Infantry",
+      "name": "Surprise Attack",
+      "description": ""
+    },
+    {
+      "id": "skill_infantry_combat_advantage",
+      "type": "Infantry",
+      "name": "Combat Advantage",
+      "description": ""
+    },
+    {
+      "id": "skill_riding_knightly_senses",
+      "type": "Riding",
+      "name": "Knightly Senses",
+      "description": ""
+    },
+    {
+      "id": "skill_riding_vanguard",
+      "type": "Riding",
+      "name": "Vanguard",
+      "description": "",
+      "plus": {
+        "name": "Vanguard+",
+        "description": ""
+      }
+    },
+    {
+      "id": "skill_riding_cavalry_move",
+      "type": "Riding",
+      "name": "Cavalry Move",
+      "description": "",
+      "plus": {
+        "name": "Cavalry Move+",
+        "description": ""
+      }
+    },
+    {
+      "id": "skill_armor_narrow_defense",
+      "type": "Armor",
+      "name": "Narrow Defense",
+      "description": ""
+    },
+    {
+      "id": "skill_armor_resistant_armor",
+      "type": "Armor",
+      "name": "Resistant Armor",
+      "description": "",
+      "plus": {
+        "name": "Resistant Armor+",
+        "description": ""
+      }
+    },
+    {
+      "id": "skill_armor_build",
+      "type": "Armor",
+      "name": "Build",
+      "description": "",
+      "plus": {
+        "name": "Build+",
+        "description": ""
+      }
+    },
+    {
+      "id": "skill_armor_luck_fend",
+      "type": "Armor",
+      "name": "Luck Fend",
+      "description": ""
+    },
+    {
+      "id": "skill_armor_armored_leap",
+      "type": "Armor",
+      "name": "Armored Leap",
+      "description": "",
+      "plus": {
+        "name": "Armored Leap+",
+        "description": ""
+      }
+    },
+    {
+      "id": "skill_armor_bowblock",
+      "type": "Armor",
+      "name": "Bowblock",
+      "description": "",
+      "plus": {
+        "name": "Bowblock+",
+        "description": ""
+      }
+    },
+    {
+      "id": "skill_armor_resist_stance",
+      "type": "Armor",
+      "name": "Resist Stance",
+      "description": ""
+    },
+    {
+      "id": "skill_armor_spearblock",
+      "type": "Armor",
+      "name": "Spearblock",
+      "description": ""
+    },
+    {
+      "id": "skill_armor_dexterity_fend",
+      "type": "Armor",
+      "name": "Dexterity Fend",
+      "description": ""
+    },
+    {
+      "id": "skill_armor_crit_defense",
+      "type": "Armor",
+      "name": "Crit Defense",
+      "description": ""
+    },
+    {
+      "id": "skill_armor_absolute_defense",
+      "type": "Armor",
+      "name": "Absolute Defense",
+      "description": "",
+      "plus": {
+        "name": "Absolute Defense+",
+        "description": ""
+      }
+    },
+    {
+      "id": "skill_armor_armored_move",
+      "type": "Armor",
+      "name": "Armored Move",
+      "description": "",
+      "plus": {
+        "name": "Armored Move+",
+        "description": ""
+      }
+    },
+    {
+      "id": "skill_armor_strength_fend",
+      "type": "Armor",
+      "name": "Strength Fend",
+      "description": ""
+    },
+    {
+      "id": "skill_armor_defense_fend",
+      "type": "Armor",
+      "name": "Defense Fend",
+      "description": ""
+    },
+    {
+      "id": "skill_armor_defense_stance",
+      "type": "Armor",
+      "name": "Defense Stance",
+      "description": ""
+    },
+    {
+      "id": "skill_armor_counterflurry",
+      "type": "Armor",
+      "name": "Counterflurry",
+      "description": ""
+    },
+    {
+      "id": "skill_armor_heavy_break",
+      "type": "Armor",
+      "name": "Heavy Break",
+      "description": "",
+      "plus": {
+        "name": "Heavy Break+",
+        "description": ""
+      }
+    },
+    {
+      "id": "skill_armor_healing_armor",
+      "type": "Armor",
+      "name": "Healing Armor",
+      "description": ""
+    },
+    {
+      "id": "skill_armor_armored_combat",
+      "type": "Armor",
+      "name": "Armored Combat",
+      "description": "",
+      "plus": {
+        "name": "Armored Combat+",
+        "description": ""
+      }
+    },
+    {
+      "id": "skill_armor_magic_fend",
+      "type": "Armor",
+      "name": "Magic Fend",
+      "description": ""
+    },
+    {
+      "id": "skill_armor_pursuit_defense",
+      "type": "Armor",
+      "name": "Pursuit Defense",
+      "description": ""
+    },
+    {
+      "id": "skill_flying_read_the_winds",
+      "type": "Flying",
+      "name": "Read the Winds",
+      "description": ""
+    },
+    {
+      "id": "skill_flying_flitting_flier",
+      "type": "Flying",
+      "name": "Flitting Flier",
+      "description": "",
+      "plus": {
+        "name": "Flitting Flier+",
+        "description": ""
+      }
+    },
+    {
+      "id": "skill_flying_airfighter",
+      "type": "Flying",
+      "name": "Airfighter",
+      "description": "",
+      "plus": {
+        "name": "Airfighter+",
+        "description": ""
+      }
     }
   ]
 }
