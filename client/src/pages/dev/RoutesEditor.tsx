@@ -10,11 +10,25 @@ export function RoutesEditor() {
   const { db, update } = useDB();
   const [editing, setEditing] = useState<Route | null>(null);
 
-  function save(route: Route) {
+  function save(route: Route, lordId: string) {
     update((d) => {
       const i = d.routes.findIndex((r) => r.id === route.id);
       if (i >= 0) d.routes[i] = route;
       else d.routes.push(route);
+      // A route's lord is the unit with "Is lord?" that's locked to the route.
+      // Detach any previous lord of this route, then attach the chosen one.
+      for (const u of d.units) {
+        if (u.isLord && u.id !== lordId && u.routeIds.includes(route.id)) {
+          u.routeIds = u.routeIds.filter((x) => x !== route.id);
+          u.starterFor = u.starterFor.filter((x) => x !== route.id);
+        }
+      }
+      const lu = lordId ? d.units.find((u) => u.id === lordId) : undefined;
+      if (lu) {
+        lu.isLord = true;
+        if (!lu.routeIds.includes(route.id)) lu.routeIds.push(route.id);
+        if (!lu.starterFor.includes(route.id)) lu.starterFor.push(route.id);
+      }
     });
     setEditing(null);
   }
@@ -52,7 +66,10 @@ export function RoutesEditor() {
               <div className="row" style={{ marginBottom: 10 }}>
                 <UnitPortrait src={r.portrait} name={r.name} size={56} shape="square" />
                 <div className="grow">
-                  <div style={{ fontWeight: 700, fontSize: 17 }}>{r.name || "Unnamed route"}</div>
+                  <div className="row" style={{ gap: 6 }}>
+                    <span style={{ fontWeight: 700, fontSize: 17 }}>{r.name || "Unnamed route"}</span>
+                    {r.dlc && <span className="tag">DLC</span>}
+                  </div>
                   {r.title && <div className="muted" style={{ fontSize: 12.5 }}>{r.title}</div>}
                   <span className="dot" style={{ display: "inline-block", width: 12, height: 12, borderRadius: 6, background: r.color, marginTop: 4 }} />
                 </div>
@@ -75,9 +92,14 @@ export function RoutesEditor() {
   );
 }
 
-function RouteModal({ route, onClose, onSave }: { route: Route; onClose: () => void; onSave: (r: Route) => void }) {
+function RouteModal({ route, onClose, onSave }: { route: Route; onClose: () => void; onSave: (r: Route, lordId: string) => void }) {
+  const { db } = useDB();
   const [draft, setDraft] = useState<Route>(route);
   const set = (patch: Partial<Route>) => setDraft((d) => ({ ...d, ...patch }));
+  // Current lord = the unit flagged "Is lord?" that's locked to this route.
+  const [lordId, setLordId] = useState<string>(
+    () => db.units.find((u) => u.isLord && u.routeIds.includes(route.id))?.id ?? "",
+  );
   return (
     <Modal
       open
@@ -86,7 +108,7 @@ function RouteModal({ route, onClose, onSave }: { route: Route; onClose: () => v
       footer={
         <>
           <button className="btn ghost" onClick={onClose}>Cancel</button>
-          <button className="btn primary" onClick={() => onSave(draft)}>Save</button>
+          <button className="btn primary" onClick={() => onSave(draft, lordId)}>Save</button>
         </>
       }
     >
@@ -98,8 +120,18 @@ function RouteModal({ route, onClose, onSave }: { route: Route; onClose: () => v
           <label className="field"><span>Banner / faction</span>
             <input type="text" value={draft.title} onChange={(e) => set({ title: e.target.value })} />
           </label>
+          <label className="field"><span>Lord (route leader)</span>
+            <select value={lordId} onChange={(e) => setLordId(e.target.value)}>
+              <option value="">— None —</option>
+              {db.units.map((u) => <option key={u.id} value={u.id}>{u.name || "Unnamed"}</option>)}
+            </select>
+          </label>
           <label className="field"><span>Motif color</span>
             <input type="color" value={draft.color} onChange={(e) => set({ color: e.target.value })} style={{ height: 40, padding: 4 }} />
+          </label>
+          <label className="dev-toggle" style={{ marginTop: 4 }}>
+            <input type="checkbox" checked={!!draft.dlc} onChange={(e) => set({ dlc: e.target.checked })} />
+            <span>DLC route (sub-lord — hidden unless "Show Sub-lords" is on)</span>
           </label>
         </div>
         <div>

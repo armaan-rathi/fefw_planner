@@ -8,6 +8,7 @@ import { CharacterList } from "./pages/CharacterList";
 import { Recruitment } from "./pages/Recruitment";
 import { GrowthRates } from "./pages/GrowthRates";
 import { Proficiencies } from "./pages/Proficiencies";
+import { Learnset } from "./pages/Learnset";
 import { Mounts } from "./pages/Mounts";
 import { Paralogues } from "./pages/Paralogues";
 import { Supports } from "./pages/Supports";
@@ -21,6 +22,8 @@ import { DevMode } from "./pages/dev/DevMode";
 import { NAV_PAGES } from "./data/navPages";
 import { SpoilerProvider, useSpoilers } from "./data/spoilers";
 import { SpoilerToggle } from "./components/SpoilerToggle";
+import { SublordsProvider, useSublords } from "./data/sublords";
+import { SubLordsToggle } from "./components/SubLordsToggle";
 import { usePageSeo } from "./data/seo";
 
 function SaveBadge() {
@@ -56,6 +59,8 @@ function Shell() {
   const gachaVisible = (db?.gacha?.enabled ?? false) || devMode;
   const hidden = new Set(db?.hiddenPages ?? []);
   const [allowSpoilers, setAllowSpoilers] = useSpoilers();
+  const [showSublords, setShowSublords] = useSublords();
+  const hasSublordRoutes = (db?.routes ?? []).some((r) => r.dlc);
   usePageSeo();
 
   return (
@@ -91,6 +96,7 @@ function Shell() {
         </nav>
         <div className="topbar-right">
           <SaveBadge />
+          {hasSublordRoutes && <SubLordsToggle show={showSublords} onChange={setShowSublords} />}
           {db?.showSpoilerToggle && <SpoilerToggle allow={allowSpoilers} onChange={setAllowSpoilers} />}
           <EditorControls />
         </div>
@@ -111,6 +117,7 @@ function Shell() {
             <Route path="/recruitment" element={<Recruitment />} />
             <Route path="/growths" element={<GrowthRates />} />
             <Route path="/proficiencies" element={<Proficiencies />} />
+            <Route path="/learnset" element={<Learnset />} />
             <Route path="/mounts" element={<Mounts />} />
             <Route path="/paralogues" element={<Paralogues />} />
             <Route path="/supports" element={<Supports />} />
@@ -136,7 +143,9 @@ export function App() {
   return (
     <DevModeProvider>
       <SpoilerProvider>
-        <Shell />
+        <SublordsProvider>
+          <Shell />
+        </SublordsProvider>
       </SpoilerProvider>
     </DevModeProvider>
   );

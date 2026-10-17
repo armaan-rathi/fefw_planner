@@ -2787,3 +2787,13 @@ input[type="range"]::-moz-range-thumb {
 .cond-icon.nego { color: var(--ink-dim); }
 .ci { width: 13px; height: 13px; fill: currentColor; flex: none; }
 .cond-icons.lg .ci { width: 17px; height: 17px; }
+
+/* ---- Learnset page -------------------------------------------------------- */
+/* Auto layout + non-wrapping, stacked chips so each column grows just enough to
+   fit its longest spell name (e.g. "Sword of Judgment", "Wandering Wall"). */
+.learnset-table { table-layout: auto; }
+.learnset-table th, .learnset-table td { overflow-wrap: normal; vertical-align: top; }
+.learnset-cell { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; }
+.learnset-cell .tag { cursor: default; white-space: nowrap; }
+.learnset-disclaimer { margin: 0 0 14px; color: var(--ink-faint); font-size: 12.5px; }
+.learnset-disclaimer i { font-style: italic; color: var(--ink-dim); }

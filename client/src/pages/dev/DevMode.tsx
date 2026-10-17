@@ -11,6 +11,8 @@ import { PollsEditor } from "./PollsEditor";
 import { GachaEditor } from "./GachaEditor";
 import { RecruitmentEditor } from "./RecruitmentEditor";
 import { GrowthsEditor } from "./GrowthsEditor";
+import { MagicEditor } from "./MagicEditor";
+import { LearnsetEditor } from "./LearnsetEditor";
 import { PagesEditor } from "./PagesEditor";
 import { MountsEditor } from "./MountsEditor";
 import { SupportsEditor } from "./SupportsEditor";
@@ -35,6 +37,8 @@ export function DevMode() {
         <NavLink to="characters">Characters Page</NavLink>
         <NavLink to="recruitment">Recruitment</NavLink>
         <NavLink to="growths">Growth Rates</NavLink>
+        <NavLink to="magic">Magic</NavLink>
+        <NavLink to="learnset">Learnset</NavLink>
         <NavLink to="mounts">Mounts</NavLink>
         <NavLink to="supports">Supports</NavLink>
         <NavLink to="gods">Gods</NavLink>
@@ -55,6 +59,8 @@ export function DevMode() {
         <Route path="characters" element={<CharacterPageEditor />} />
         <Route path="recruitment" element={<RecruitmentEditor />} />
         <Route path="growths" element={<GrowthsEditor />} />
+        <Route path="magic" element={<MagicEditor />} />
+        <Route path="learnset" element={<LearnsetEditor />} />
         <Route path="mounts" element={<MountsEditor />} />
         <Route path="supports" element={<SupportsEditor />} />
         <Route path="gods" element={<CastEditor kind="gods" label="Gods" subtitleLabel="Domain" />} />

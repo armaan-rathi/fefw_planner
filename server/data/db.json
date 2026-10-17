@@ -288,11 +288,11 @@
       },
       "secondarySkills": [
         {
-          "skillTypeId": "sword",
+          "skillTypeId": "lance",
           "grade": "D"
         },
         {
-          "skillTypeId": "lance",
+          "skillTypeId": "axe",
           "grade": "D"
         }
       ],
@@ -1446,7 +1446,7 @@
       "secondarySkills": [
         {
           "skillTypeId": "lance",
-          "grade": "B"
+          "grade": "C"
         },
         {
           "skillTypeId": "sword",
@@ -3166,7 +3166,7 @@
     },
     {
       "id": "class_the_aspara",
-      "name": "The Aspara",
+      "name": "The Apsara",
       "tier": "Divine",
       "description": "",
       "movementType": "infantry",
@@ -3272,7 +3272,40 @@
           "name": "Flamekeeper",
           "description": "Unit and allies are unaffected by Underworld Flames and take half damage from attacks while in Underworld Flames."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_fire"
+          ],
+          "C": [
+            "spell_thunder"
+          ],
+          "B": [
+            "spell_bolganone"
+          ],
+          "A": [
+            "spell_thoron"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal"
+          ],
+          "C": [
+            "spell_faith_nosferatu"
+          ],
+          "B": [
+            "spell_faith_seraphim"
+          ],
+          "A": [
+            "spell_faith_recover"
+          ],
+          "S": [
+            "spell_faith_warp"
+          ]
+        }
+      }
     },
     {
       "id": "unit_dietrich",
@@ -3327,7 +3360,37 @@
           "name": "Bestial Impulse",
           "description": "After combat, grants Crit+2 until a unit makes a critical."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_blizzard"
+          ],
+          "C": [
+            "spell_thunder"
+          ],
+          "B": [
+            "spell_ice_blade"
+          ],
+          "A": [
+            "spell_thoron"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal"
+          ],
+          "C": [
+            "spell_faith_nosferatu"
+          ],
+          "B": [
+            "spell_faith_silence"
+          ],
+          "A": [
+            "spell_faith_berserk"
+          ]
+        }
+      }
     },
     {
       "id": "unit_theodora",
@@ -3386,7 +3449,40 @@
           "name": "Direct Hit",
           "description": "Deals +10 damage when attacking with Blaze Arts. Trigger % = 30."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_fire"
+          ],
+          "C": [
+            "spell_thunder"
+          ],
+          "B": [
+            "spell_bolganone"
+          ],
+          "A": [
+            "spell_thoron"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal"
+          ],
+          "C": [
+            "spell_faith_seraphim"
+          ],
+          "B": [
+            "spell_faith_physic"
+          ],
+          "A": [
+            "spell_faith_barrier"
+          ],
+          "S": [
+            "spell_faith_aura"
+          ]
+        }
+      }
     },
     {
       "id": "unit_leda",
@@ -3443,7 +3539,40 @@
           "name": "Improviso",
           "description": "After using Blaze Arts during Overblaze, unit can attack."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_fire"
+          ],
+          "C": [
+            "spell_blizzard"
+          ],
+          "B": [
+            "spell_bolganone"
+          ],
+          "A": [
+            "spell_ice_blade"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal"
+          ],
+          "C": [
+            "spell_faith_nosferatu"
+          ],
+          "B": [
+            "spell_faith_seraphim"
+          ],
+          "A": [
+            "spell_faith_recover"
+          ],
+          "S": [
+            "spell_faith_fortify"
+          ]
+        }
+      }
     },
     {
       "id": "unit_pieter",
@@ -3517,7 +3646,43 @@
           "name": "Tactician’s Insight+",
           "description": "After combat, If unit attacked first, inflicts Avo-10 on foe throughout their next combat."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_fire"
+          ],
+          "C": [
+            "spell_wind"
+          ],
+          "B": [
+            "spell_bolganone"
+          ],
+          "A": [
+            "spell_cutting_gale"
+          ],
+          "S": [
+            "spell_excalibur"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal"
+          ],
+          "C": [
+            "spell_faith_physic"
+          ],
+          "B": [
+            "spell_faith_recover"
+          ],
+          "A": [
+            "spell_faith_seraphim"
+          ],
+          "S": [
+            "spell_faith_aura"
+          ]
+        }
+      }
     },
     {
       "id": "unit_tobias",
@@ -3578,7 +3743,40 @@
           "name": "Dark Secrets+",
           "description": "Extends range of Dark Calling to 3 spaces."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_miasma"
+          ],
+          "C": [
+            "spell_mire_b"
+          ],
+          "B": [
+            "spell_death"
+          ],
+          "A": [
+            "spell_luna"
+          ],
+          "S": [
+            "spell_dark_spikes_t"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal"
+          ],
+          "C": [
+            "spell_faith_nosferatu"
+          ],
+          "B": [
+            "spell_faith_recover"
+          ],
+          "A": [
+            "spell_faith_ward"
+          ]
+        }
+      }
     },
     {
       "id": "unit_bonaparte",
@@ -3636,7 +3834,40 @@
           "name": "Additional Intel+",
           "description": "Grants Hit+20 to adjacent allies during their combats. Trigger % = 30."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_wind"
+          ],
+          "C": [
+            "spell_blizzard"
+          ],
+          "B": [
+            "spell_cutting_gale"
+          ],
+          "A": [
+            "spell_ice_blade"
+          ],
+          "S": [
+            "spell_sagittae"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal"
+          ],
+          "C": [
+            "spell_faith_torch"
+          ],
+          "B": [
+            "spell_faith_recover"
+          ],
+          "A": [
+            "spell_faith_silence"
+          ]
+        }
+      }
     },
     {
       "id": "unit_buccar",
@@ -3704,7 +3935,37 @@
           "name": "Retaliatory Blow+",
           "description": "If foe attacks first, multiples damage by 1.3 when attacking. Trigger % = 10."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_fire"
+          ],
+          "C": [
+            "spell_thunder"
+          ],
+          "B": [
+            "spell_bolganone"
+          ],
+          "A": [
+            "spell_thoron"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_laia"
+          ],
+          "C": [
+            "spell_faith_torch"
+          ],
+          "B": [
+            "spell_faith_emergis"
+          ],
+          "A": [
+            "spell_faith_rescue"
+          ]
+        }
+      }
     },
     {
       "id": "unit_esmeralda",
@@ -3775,7 +4036,37 @@
           "name": "Correct for Drift+",
           "description": "If unit’s hit % ≥ 75, grants Hit+20 during combat."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_wind"
+          ],
+          "C": [
+            "spell_blizzard"
+          ],
+          "B": [
+            "spell_cutting_gale"
+          ],
+          "A": [
+            "spell_ice_blade"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_laia"
+          ],
+          "C": [
+            "spell_faith_restore"
+          ],
+          "B": [
+            "spell_faith_freeze"
+          ],
+          "A": [
+            "spell_faith_physic"
+          ]
+        }
+      }
     },
     {
       "id": "unit_mikaela",
@@ -3850,7 +4141,37 @@
           "name": "Throwing Arm+",
           "description": "If throwing a spear, grants Hit+20, Atk+4 during combat."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_fire"
+          ],
+          "C": [
+            "spell_thunder"
+          ],
+          "B": [
+            "spell_bolganone"
+          ],
+          "A": [
+            "spell_thoron"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_laia"
+          ],
+          "C": [
+            "spell_faith_restore"
+          ],
+          "B": [
+            "spell_faith_seraphim"
+          ],
+          "A": [
+            "spell_faith_barrier"
+          ]
+        }
+      }
     },
     {
       "id": "unit_ms3o1lfxavq3i",
@@ -3906,7 +4227,37 @@
           "name": "All-Out Attack+",
           "description": "Multiplies damage by 1.5 when attacking with a combat art. Trigger % = 30."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_thunder"
+          ],
+          "C": [
+            "spell_blizzard"
+          ],
+          "B": [
+            "spell_thoron"
+          ],
+          "A": [
+            "spell_ice_blade"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_laia"
+          ],
+          "C": [
+            "spell_faith_nosferatu"
+          ],
+          "B": [
+            "spell_faith_resquia"
+          ],
+          "A": [
+            "spell_faith_regenera"
+          ]
+        }
+      }
     },
     {
       "id": "unit_ms3o1yebdwa31",
@@ -3978,7 +4329,43 @@
           "name": "Wind’s Caprice+",
           "description": "Grants one of Avo+1, Avo+5, Avo+20, or Avo+30 during combat."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_wind"
+          ],
+          "C": [
+            "spell_thunder"
+          ],
+          "B": [
+            "spell_cutting_gale"
+          ],
+          "A": [
+            "spell_thoron"
+          ],
+          "S": [
+            "spell_excalibur"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal"
+          ],
+          "C": [
+            "spell_faith_restore"
+          ],
+          "B": [
+            "spell_faith_recover"
+          ],
+          "A": [
+            "spell_faith_fortify"
+          ],
+          "S": [
+            "spell_faith_warp"
+          ]
+        }
+      }
     },
     {
       "id": "unit_ms3o2dq8x88ne",
@@ -4050,7 +4437,40 @@
           "name": "Pray for Safety+",
           "description": "Grants Ddg+20 to adjacent allies."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_fire"
+          ],
+          "C": [
+            "spell_wind"
+          ],
+          "B": [
+            "spell_bolganone"
+          ],
+          "A": [
+            "spell_cutting_gale"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal"
+          ],
+          "C": [
+            "spell_faith_seraphim"
+          ],
+          "B": [
+            "spell_faith_emergis"
+          ],
+          "A": [
+            "spell_faith_ward"
+          ],
+          "S": [
+            "spell_faith_aura"
+          ]
+        }
+      }
     },
     {
       "id": "unit_ms3o2srrysuum",
@@ -4124,7 +4544,37 @@
           "name": "Redblade’s Will+",
           "description": "Grants Atk+3 during combat against an adjacent foe. Also grants Atk+3 when attacking an adjacent foe (trigger % =30)."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_wind"
+          ],
+          "C": [
+            "spell_fire"
+          ],
+          "B": [
+            "spell_cutting_gale"
+          ],
+          "A": [
+            "spell_bolganone"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_laia"
+          ],
+          "C": [
+            "spell_faith_torch"
+          ],
+          "B": [
+            "spell_faith_resquia"
+          ],
+          "A": [
+            "spell_faith_fortify"
+          ]
+        }
+      }
     },
     {
       "id": "unit_ms3o3ayav4czo",
@@ -4198,7 +4648,37 @@
           "name": "Accelerate+",
           "description": "After defeating a foe, grants Spd+2 until the end of the map. (Max +10)"
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_thunder"
+          ],
+          "C": [
+            "spell_wind"
+          ],
+          "B": [
+            "spell_thoron"
+          ],
+          "A": [
+            "spell_cutting_gale"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal"
+          ],
+          "C": [
+            "spell_faith_laia"
+          ],
+          "B": [
+            "spell_faith_emergis"
+          ],
+          "A": [
+            "spell_faith_rescue"
+          ]
+        }
+      }
     },
     {
       "id": "unit_ms3o3pm7kkagj",
@@ -4267,7 +4747,44 @@
           "name": "Ardent Nosferatu+",
           "description": "When using Nosferatu, grants Atk+5, Crit+10 during combat."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_thunder"
+          ],
+          "C": [
+            "spell_blizzard"
+          ],
+          "B": [
+            "spell_thoron"
+          ],
+          "A": [
+            "spell_ice_blade"
+          ],
+          "S": [
+            "spell_bolting"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal",
+            "spell_faith_nosferatu"
+          ],
+          "C": [
+            "spell_faith_emergis"
+          ],
+          "B": [
+            "spell_faith_physic"
+          ],
+          "A": [
+            "spell_faith_silence"
+          ],
+          "S": [
+            "spell_faith_berserk"
+          ]
+        }
+      }
     },
     {
       "id": "unit_ms3of3twtvl0z",
@@ -4337,7 +4854,37 @@
           "name": "Upper Hand+",
           "description": "If unit’s hit % = 100, grants Atk +5 when attacking."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_fire"
+          ],
+          "C": [
+            "spell_thunder"
+          ],
+          "B": [
+            "spell_bolganone"
+          ],
+          "A": [
+            "spell_thoron"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal"
+          ],
+          "C": [
+            "spell_faith_restore"
+          ],
+          "B": [
+            "spell_faith_physic"
+          ],
+          "A": [
+            "spell_faith_ward"
+          ]
+        }
+      }
     },
     {
       "id": "unit_ms3ofr4f95yg3",
@@ -4407,15 +4954,52 @@
           "name": "Warrior’s Blood+",
           "description": "Grants a large stat increase based on equipped weapon type."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_wind"
+          ],
+          "C": [
+            "spell_fire"
+          ],
+          "B": [
+            "spell_cutting_gale"
+          ],
+          "A": [
+            "spell_bolganone"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal"
+          ],
+          "C": [
+            "spell_faith_nosferatu"
+          ],
+          "B": [
+            "spell_faith_regenera"
+          ],
+          "A": [
+            "spell_faith_warp"
+          ],
+          "S": [
+            "spell_faith_aura"
+          ]
+        }
+      }
     },
     {
       "id": "unit_mt4vbrsx1692p",
       "name": "Bertrand",
       "portrait": "/images/mt4v0q2mvfqpj5.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
+      "isLord": true,
+      "routeIds": [
+        "route_bertrand"
+      ],
+      "starterFor": [
+        "route_bertrand"
+      ],
       "classId": null,
       "boons": [
         "sword",
@@ -4436,11 +5020,10 @@
         "backstory": "A gladiator who continues to fight in the Dagsion arena.\n\nKnown by the moniker \"White-Maned Demon\" for his demonic strength. It is said that five years ago, he committed a great sin and was imprisoned in the underground dungeon of the arena.\n\nLikes: Training, salted meat, well-crafted weapons, reading, board games",
         "faction": "Fiery Mane",
         "crest": [
-          "Flames",
-          "Duality"
+          "Flames"
         ]
       },
-      "possiblyEnemyOnly": true,
+      "possiblyEnemyOnly": false,
       "uniqueSkills": [
         {
           "name": "Go No Sen",
@@ -4461,15 +5044,49 @@
         "res": 20,
         "lck": 30,
         "cha": 50
+      },
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_fire"
+          ],
+          "C": [
+            "spell_thunder"
+          ],
+          "B": [
+            "spell_bolganone"
+          ],
+          "A": [
+            "spell_thoron"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal"
+          ],
+          "C": [
+            "spell_faith_nosferatu"
+          ],
+          "B": [
+            "spell_faith_regenera"
+          ],
+          "A": [
+            "spell_faith_berserk"
+          ]
+        }
       }
     },
     {
       "id": "unit_ms4ax1urookeq",
       "name": "Talimun",
       "portrait": "/images/mt4v0idfsjig41.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
+      "isLord": true,
+      "routeIds": [
+        "route_talimun"
+      ],
+      "starterFor": [
+        "route_talimun"
+      ],
       "classId": "class_soldier",
       "boons": [
         "sword",
@@ -4487,11 +5104,9 @@
       "fields": {
         "faction": "Tale of the Moon",
         "backstory": "The leader of the “Vandahl Merchants”, one of Dagda’s top merchant guilds. He seems carefree and elusive, but has big ambitions. Apparently collecting items known as “Drake’s Treasures”.\n\nLikes: Money, adventure, cinnamon",
-        "crest": [
-          "Duality"
-        ]
+        "crest": []
       },
-      "possiblyEnemyOnly": true,
+      "possiblyEnemyOnly": false,
       "uniqueSkills": [
         {
           "name": "Cannoning Flair",
@@ -4512,15 +5127,52 @@
         "res": 40,
         "lck": 60,
         "cha": 50
+      },
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_fire"
+          ],
+          "C": [
+            "spell_thunder"
+          ],
+          "B": [
+            "spell_bolganone"
+          ],
+          "A": [
+            "spell_thoron"
+          ],
+          "S": [
+            "spell_excalibur"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal"
+          ],
+          "C": [
+            "spell_faith_seraphim"
+          ],
+          "B": [
+            "spell_faith_recover"
+          ],
+          "A": [
+            "spell_faith_physic"
+          ]
+        }
       }
     },
     {
       "id": "unit_ms4b1m5a0pltt",
       "name": "Orchel",
       "portrait": "/images/mt7t7eld01vklu.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
+      "isLord": true,
+      "routeIds": [
+        "route_orchel"
+      ],
+      "starterFor": [
+        "route_orchel"
+      ],
       "classId": "class_soldier",
       "boons": [
         "axe",
@@ -4539,12 +5191,11 @@
         "faction": "Linaria Dewdrops",
         "backstory": "A mysterious girl serving at Credna’s Temple at the upper levels of Dagsion. Always conceals her face behind a distinctive cat mask. Although she’s innocent and treats everyone with kindness, she’s somewhat naïve and oblivious.\n\nLikes: Animals, cleaning, doing laundry, cooking",
         "crest": [
-          "Duality",
           "Aubin"
         ]
       },
       "postTimeskip": false,
-      "possiblyEnemyOnly": true,
+      "possiblyEnemyOnly": false,
       "uniqueSkills": [
         {
           "name": "Predictive Sense",
@@ -4561,15 +5212,56 @@
         "res": 60,
         "lck": 20,
         "cha": 60
+      },
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_fire"
+          ],
+          "C": [
+            "spell_wind"
+          ],
+          "B": [
+            "spell_bolganone"
+          ],
+          "A": [
+            "spell_cutting_gale"
+          ],
+          "S": [
+            "spell_sagittae"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal"
+          ],
+          "C": [
+            "spell_faith_recover"
+          ],
+          "B": [
+            "spell_faith_seraphim",
+            "spell_faith_starlight"
+          ],
+          "A": [
+            "spell_faith_aura"
+          ],
+          "S": [
+            "spell_faith_fortify"
+          ]
+        }
       }
     },
     {
       "id": "unit_ms4azwjmprdkp",
       "name": "Anatolia",
       "portrait": "/images/mt7t87haj5yrfv.jpg",
-      "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
+      "isLord": true,
+      "routeIds": [
+        "route_anatolia"
+      ],
+      "starterFor": [
+        "route_anatolia"
+      ],
       "classId": "class_priest",
       "boons": [
         "brawl",
@@ -4588,7 +5280,7 @@
         "faction": "Bridal Party of the Pale Raven",
         "backstory": "A girl in white who fights to save her people. Known as the “Mystical Bride” due to her appearance. Has a cool or perhaps emotionless personality, which can accidentally infuriate others.\n\nLikes: Hexagram divination, round objects, martial-arts training"
       },
-      "possiblyEnemyOnly": true,
+      "possiblyEnemyOnly": false,
       "uniqueSkills": [
         {
           "name": "Continuum",
@@ -4609,6 +5301,42 @@
         "res": 40,
         "lck": 40,
         "cha": 50
+      },
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_fire"
+          ],
+          "C": [
+            "spell_thunder",
+            "spell_sword_of_judgment",
+            "spell_earth_s_jaws",
+            "spell_wandering_wall"
+          ],
+          "B": [
+            "spell_glass_wheel"
+          ],
+          "B+": [
+            "spell_bolganone"
+          ],
+          "A": [
+            "spell_thoron"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal"
+          ],
+          "C": [
+            "spell_faith_silence"
+          ],
+          "B": [
+            "spell_faith_ward"
+          ],
+          "A": [
+            "spell_faith_warp"
+          ]
+        }
       }
     },
     {
@@ -4666,7 +5394,37 @@
           "name": "Flashing Fang+",
           "description": "Grants Atk+7, Hit+100 when attacking. Trigger % = 20."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_fire"
+          ],
+          "C": [
+            "spell_blizzard"
+          ],
+          "B": [
+            "spell_bolganone"
+          ],
+          "A": [
+            "spell_ice_blade"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_laia"
+          ],
+          "C": [
+            "spell_faith_nosferatu"
+          ],
+          "B": [
+            "spell_faith_seraphim"
+          ],
+          "A": [
+            "spell_faith_rescue"
+          ]
+        }
+      }
     },
     {
       "id": "unit_ms4awma1bic3w",
@@ -4734,7 +5492,37 @@
           "name": "Seize the Chance+",
           "description": "Multiplies damage by 1.5 when attacking. Trigger % = Lck ÷ 2."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_wind"
+          ],
+          "C": [
+            "spell_cutting_gale"
+          ],
+          "B": [
+            "spell_blizzard"
+          ],
+          "A": [
+            "spell_ice_blade"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal"
+          ],
+          "C": [
+            "spell_faith_restore"
+          ],
+          "B": [
+            "spell_faith_ward"
+          ],
+          "A": [
+            "spell_faith_fortify"
+          ]
+        }
+      }
     },
     {
       "id": "unit_ms4b7sewbatfh",
@@ -4804,7 +5592,37 @@
           "name": "No Mercy+",
           "description": "Grants Hit/Crit+10 when making a follow-up."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_wind"
+          ],
+          "C": [
+            "spell_blizzard"
+          ],
+          "B": [
+            "spell_cutting_gale"
+          ],
+          "A": [
+            "spell_ice_blade"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_laia"
+          ],
+          "C": [
+            "spell_faith_nosferatu"
+          ],
+          "B": [
+            "spell_faith_silence"
+          ],
+          "A": [
+            "spell_faith_berserk"
+          ]
+        }
+      }
     },
     {
       "id": "unit_ms4b0fg9gc03t",
@@ -4864,7 +5682,41 @@
           "name": "Watchfulness+",
           "description": "Grants Spd+4 to adjacent allies."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_wind",
+            "spell_wandering_wall"
+          ],
+          "C": [
+            "spell_blizzard"
+          ],
+          "B": [
+            "spell_cutting_gale"
+          ],
+          "A": [
+            "spell_ice_blade"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal"
+          ],
+          "C": [
+            "spell_faith_nosferatu"
+          ],
+          "B": [
+            "spell_faith_recover"
+          ],
+          "A": [
+            "spell_faith_rescue"
+          ],
+          "S": [
+            "spell_faith_fortify"
+          ]
+        }
+      }
     },
     {
       "id": "unit_msesm42zaq9do",
@@ -4933,7 +5785,40 @@
           "name": "Dramatic Effect+",
           "description": "When Stage Direction triggers, grants Hit/Crit+10 to target allies."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_wind"
+          ],
+          "C": [
+            "spell_thunder"
+          ],
+          "B": [
+            "spell_cutting_gale"
+          ],
+          "A": [
+            "spell_thoron"
+          ],
+          "S": [
+            "spell_bolting"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal"
+          ],
+          "C": [
+            "spell_faith_nosferatu"
+          ],
+          "B": [
+            "spell_faith_recover"
+          ],
+          "A": [
+            "spell_faith_freeze"
+          ]
+        }
+      }
     },
     {
       "id": "unit_mt4v6olgdd4up",
@@ -5002,7 +5887,37 @@
           "name": "Devil’s Luck+",
           "description": "After defeating a foe, grants Lck+2 until the end of the map. (Max +10)"
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_thunder"
+          ],
+          "C": [
+            "spell_blizzard"
+          ],
+          "B": [
+            "spell_thoron"
+          ],
+          "A": [
+            "spell_ice_blade"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal"
+          ],
+          "C": [
+            "spell_faith_torch"
+          ],
+          "B": [
+            "spell_faith_emergis"
+          ],
+          "A": [
+            "spell_faith_barrier"
+          ]
+        }
+      }
     },
     {
       "id": "unit_ms4b1qq82fg7g",
@@ -5075,7 +5990,40 @@
           "name": "Spirits’ Guidance+",
           "description": "Grants Spirits’ Voice to allies within 2 spaces."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_fire"
+          ],
+          "C": [
+            "spell_blizzard"
+          ],
+          "B": [
+            "spell_bolganone"
+          ],
+          "A": [
+            "spell_ice_blade"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal"
+          ],
+          "C": [
+            "spell_faith_nosferatu"
+          ],
+          "B": [
+            "spell_faith_physic"
+          ],
+          "A": [
+            "spell_faith_ward"
+          ],
+          "S": [
+            "spell_faith_aura"
+          ]
+        }
+      }
     },
     {
       "id": "unit_mseslad7245am",
@@ -5144,7 +6092,38 @@
           "name": "Never Stop+",
           "description": "Grants Atk+5 when attacking after Quick Draw. Trigger % = 50."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_fire",
+            "spell_wandering_wall"
+          ],
+          "C": [
+            "spell_wind"
+          ],
+          "B": [
+            "spell_bolganone"
+          ],
+          "A": [
+            "spell_cutting_gale"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_laia"
+          ],
+          "C": [
+            "spell_faith_nosferatu"
+          ],
+          "B": [
+            "spell_faith_torch"
+          ],
+          "A": [
+            "spell_faith_barrier"
+          ]
+        }
+      }
     },
     {
       "id": "unit_msesn64bv1fun",
@@ -5213,7 +6192,37 @@
           "name": "Pin Down+",
           "description": "Inflicts Mov-5 on adjacent foes."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_thunder"
+          ],
+          "C": [
+            "spell_blizzard"
+          ],
+          "B": [
+            "spell_thoron"
+          ],
+          "A": [
+            "spell_ice_blade"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_laia"
+          ],
+          "C": [
+            "spell_faith_nosferatu"
+          ],
+          "B": [
+            "spell_faith_regenera"
+          ],
+          "A": [
+            "spell_faith_barrier"
+          ]
+        }
+      }
     },
     {
       "id": "unit_ms4b4zib7ibpz",
@@ -5283,7 +6292,37 @@
           "name": "Perception+",
           "description": "If unit can make a follow-up, grants Avo+20 during combat."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_wind"
+          ],
+          "C": [
+            "spell_thunder"
+          ],
+          "B": [
+            "spell_cutting_gale"
+          ],
+          "A": [
+            "spell_thoron"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_laia"
+          ],
+          "C": [
+            "spell_faith_nosferatu"
+          ],
+          "B": [
+            "spell_faith_seraphim"
+          ],
+          "A": [
+            "spell_faith_berserk"
+          ]
+        }
+      }
     },
     {
       "id": "unit_ms4aycsktz7vo",
@@ -5350,7 +6389,37 @@
           "name": "Pass Judgement+",
           "description": "When Diadem of Balance triggers, grants Atk+7."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_wind"
+          ],
+          "C": [
+            "spell_fire"
+          ],
+          "B": [
+            "spell_cutting_gale"
+          ],
+          "A": [
+            "spell_bolganone"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal"
+          ],
+          "C": [
+            "spell_faith_resquia"
+          ],
+          "B": [
+            "spell_faith_regenera"
+          ],
+          "A": [
+            "spell_faith_warp"
+          ]
+        }
+      }
     },
     {
       "id": "unit_msu4iccnmpc6w",
@@ -5422,7 +6491,38 @@
           "name": "Full Strength+",
           "description": "Multiplies damage by 1.5 when attacking. Trigger % = Str ÷ 2."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_thunder",
+            "spell_wandering_wall"
+          ],
+          "C": [
+            "spell_fire"
+          ],
+          "B": [
+            "spell_thoron"
+          ],
+          "A": [
+            "spell_bolganone"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_laia"
+          ],
+          "C": [
+            "spell_faith_nosferatu"
+          ],
+          "B": [
+            "spell_faith_freeze"
+          ],
+          "A": [
+            "spell_faith_regenera"
+          ]
+        }
+      }
     },
     {
       "id": "unit_msu42ne4imvnh",
@@ -5491,7 +6591,37 @@
           "name": "Flickering Edge+",
           "description": "When unit evades an attack, grants Atk+5 during combat."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_wind"
+          ],
+          "C": [
+            "spell_blizzard"
+          ],
+          "B": [
+            "spell_cutting_gale"
+          ],
+          "A": [
+            "spell_ice_blade"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_laia"
+          ],
+          "C": [
+            "spell_faith_restore"
+          ],
+          "B": [
+            "spell_faith_physic"
+          ],
+          "A": [
+            "spell_faith_freeze"
+          ]
+        }
+      }
     },
     {
       "id": "unit_ms4b5mqtae605",
@@ -5564,7 +6694,40 @@
           "name": "Gift of Faith+",
           "description": "When healing an ally with magic, restores +30 HP. Trigger % = Lck."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_fire"
+          ],
+          "C": [
+            "spell_thunder"
+          ],
+          "B": [
+            "spell_bolganone"
+          ],
+          "A": [
+            "spell_thoron"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal"
+          ],
+          "C": [
+            "spell_faith_seraphim"
+          ],
+          "B": [
+            "spell_faith_recover"
+          ],
+          "A": [
+            "spell_faith_regenera"
+          ],
+          "S": [
+            "spell_faith_rescue"
+          ]
+        }
+      }
     },
     {
       "id": "unit_msu4rfw7l4959",
@@ -5634,7 +6797,40 @@
           "name": "Peak Form+",
           "description": "If unit’s HP = 100%, grants Atk+3, Avo+10 during combat."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_fire"
+          ],
+          "C": [
+            "spell_thunder"
+          ],
+          "B": [
+            "spell_bolganone"
+          ],
+          "A": [
+            "spell_thoron"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal"
+          ],
+          "C": [
+            "spell_faith_restore"
+          ],
+          "B": [
+            "spell_faith_seraphim"
+          ],
+          "A": [
+            "spell_faith_recover"
+          ],
+          "S": [
+            "spell_faith_rescue"
+          ]
+        }
+      }
     },
     {
       "id": "unit_msu425y5cxugz",
@@ -5702,7 +6898,37 @@
           "name": "Halt Advance+",
           "description": "After combat, if unit attacked first, inflicts Spd-3 on foe throughout their next combat."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_fire"
+          ],
+          "C": [
+            "spell_blizzard"
+          ],
+          "B": [
+            "spell_bolganone"
+          ],
+          "A": [
+            "spell_ice_blade"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal"
+          ],
+          "C": [
+            "spell_faith_restore"
+          ],
+          "B": [
+            "spell_faith_resquia"
+          ],
+          "A": [
+            "spell_faith_berserk"
+          ]
+        }
+      }
     },
     {
       "id": "unit_ms4b759ma7nnn",
@@ -5766,7 +6992,40 @@
           "name": "Distant Healing+",
           "description": "Grants Rng+2 to healing magic."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_fire"
+          ],
+          "C": [
+            "spell_blizzard"
+          ],
+          "B": [
+            "spell_bolganone"
+          ],
+          "A": [
+            "spell_ice_blade"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal"
+          ],
+          "C": [
+            "spell_faith_nosferatu"
+          ],
+          "B": [
+            "spell_faith_physic"
+          ],
+          "A": [
+            "spell_faith_recover"
+          ],
+          "S": [
+            "spell_faith_aura"
+          ]
+        }
+      }
     },
     {
       "id": "unit_msesdf1q9njym",
@@ -5831,7 +7090,37 @@
           "name": "Chariot Stagger+",
           "description": "If unit is charioteer, grants +2 uses to staggering blows."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_wind"
+          ],
+          "C": [
+            "spell_blizzard"
+          ],
+          "B": [
+            "spell_cutting_gale"
+          ],
+          "A": [
+            "spell_ice_blade"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_laia"
+          ],
+          "C": [
+            "spell_faith_restore"
+          ],
+          "B": [
+            "spell_faith_physic"
+          ],
+          "A": [
+            "spell_faith_barrier"
+          ]
+        }
+      }
     },
     {
       "id": "unit_ms4axuyt3lodb",
@@ -5897,7 +7186,37 @@
           "name": "Soar+",
           "description": "If unit is on inaccessible terrain, grants AS+5."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_wind"
+          ],
+          "C": [
+            "spell_fire"
+          ],
+          "B": [
+            "spell_cutting_gale"
+          ],
+          "A": [
+            "spell_bolganone"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal"
+          ],
+          "C": [
+            "spell_faith_seraphim"
+          ],
+          "B": [
+            "spell_faith_ward"
+          ],
+          "A": [
+            "spell_faith_recover"
+          ]
+        }
+      }
     },
     {
       "id": "unit_ms4b8a7pr2e4u",
@@ -5966,7 +7285,37 @@
           "name": "Vulgar Conduct+",
           "description": "If foe’s HP ≤ 50%, grants Hit+20, Atk+3 during combat."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_thunder"
+          ],
+          "C": [
+            "spell_blizzard"
+          ],
+          "B": [
+            "spell_thoron"
+          ],
+          "A": [
+            "spell_ice_blade"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal"
+          ],
+          "C": [
+            "spell_faith_nosferatu"
+          ],
+          "B": [
+            "spell_faith_torch"
+          ],
+          "A": [
+            "spell_faith_fortify"
+          ]
+        }
+      }
     },
     {
       "id": "unit_ms4b6sy674873",
@@ -6031,7 +7380,37 @@
           "name": "Menace+",
           "description": "Halves foe’s Ddg during combat. Trigger % = 20."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_thunder"
+          ],
+          "C": [
+            "spell_blizzard"
+          ],
+          "B": [
+            "spell_thoron"
+          ],
+          "A": [
+            "spell_ice_blade"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_laia"
+          ],
+          "C": [
+            "spell_faith_nosferatu"
+          ],
+          "B": [
+            "spell_faith_torch"
+          ],
+          "A": [
+            "spell_faith_berserk"
+          ]
+        }
+      }
     },
     {
       "id": "unit_msu4dr4u0h6sh",
@@ -6102,7 +7481,37 @@
           "name": "Raging Counter+",
           "description": "If foe attacks first, grants Atk+3, Crit+10 to unit during combat."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_fire"
+          ],
+          "C": [
+            "spell_wind"
+          ],
+          "B": [
+            "spell_bolganone"
+          ],
+          "A": [
+            "spell_cutting_gale"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_laia"
+          ],
+          "C": [
+            "spell_faith_resquia"
+          ],
+          "B": [
+            "spell_faith_regenera"
+          ],
+          "A": [
+            "spell_faith_rescue"
+          ]
+        }
+      }
     },
     {
       "id": "unit_ms4b9qphimjk7",
@@ -6171,7 +7580,37 @@
           "name": "Pierce+",
           "description": "Grants Atk+4, Crit+10 when attacking with a bow combat art."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_blizzard"
+          ],
+          "C": [
+            "spell_thunder"
+          ],
+          "B": [
+            "spell_ice_blade"
+          ],
+          "A": [
+            "spell_thoron"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_laia"
+          ],
+          "C": [
+            "spell_faith_nosferatu"
+          ],
+          "B": [
+            "spell_faith_berserk"
+          ],
+          "A": [
+            "spell_faith_ward"
+          ]
+        }
+      }
     },
     {
       "id": "unit_msesemmywrm9d",
@@ -6235,7 +7674,37 @@
           "name": "King’s Majesty+",
           "description": "If foe is damaged, grants Atk +4, Crit+10 during combat."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_wind"
+          ],
+          "C": [
+            "spell_blizzard"
+          ],
+          "B": [
+            "spell_cutting_gale"
+          ],
+          "A": [
+            "spell_ice_blade"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_laia"
+          ],
+          "C": [
+            "spell_faith_torch"
+          ],
+          "B": [
+            "spell_faith_seraphim"
+          ],
+          "A": [
+            "spell_faith_berserk"
+          ]
+        }
+      }
     },
     {
       "id": "unit_ms4b44v3k39y1",
@@ -6302,7 +7771,37 @@
           "name": "Precision Strike+",
           "description": "If unit is effective against foe, grants Hit+20 during combat."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_thunder"
+          ],
+          "C": [
+            "spell_wind"
+          ],
+          "B": [
+            "spell_thoron"
+          ],
+          "A": [
+            "spell_cutting_gale"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_laia"
+          ],
+          "C": [
+            "spell_faith_nosferatu"
+          ],
+          "B": [
+            "spell_faith_silence"
+          ],
+          "A": [
+            "spell_faith_berserk"
+          ]
+        }
+      }
     },
     {
       "id": "unit_ms4b0v3updg6t",
@@ -6367,7 +7866,37 @@
           "name": "Top Form+",
           "description": "Changes the effect of Hot-Headed to grant +20."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_fire"
+          ],
+          "C": [
+            "spell_thunder"
+          ],
+          "B": [
+            "spell_bolganone"
+          ],
+          "A": [
+            "spell_thoron"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_laia"
+          ],
+          "C": [
+            "spell_faith_nosferatu"
+          ],
+          "B": [
+            "spell_faith_emergis"
+          ],
+          "A": [
+            "spell_faith_recover"
+          ]
+        }
+      }
     },
     {
       "id": "unit_ms4b9764g1dhr",
@@ -6438,7 +7967,37 @@
           "name": "At a Gallop+",
           "description": "[Cavalry] Applies -2 to movement cost for terrain (cannot be reduced below 1)."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_thunder"
+          ],
+          "C": [
+            "spell_wind"
+          ],
+          "B": [
+            "spell_thoron"
+          ],
+          "A": [
+            "spell_cutting_gale"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_laia"
+          ],
+          "C": [
+            "spell_faith_emergis"
+          ],
+          "B": [
+            "spell_faith_resquia"
+          ],
+          "A": [
+            "spell_faith_rescue"
+          ]
+        }
+      }
     },
     {
       "id": "unit_msesipji4v2wt",
@@ -6507,7 +8066,37 @@
           "name": "Mounted Push+",
           "description": "[Cavalry] If unit attacks first, grants Hit+10, Atk+3 during combat."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_fire"
+          ],
+          "C": [
+            "spell_thunder"
+          ],
+          "B": [
+            "spell_bolganone"
+          ],
+          "A": [
+            "spell_thoron"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_laia"
+          ],
+          "C": [
+            "spell_faith_restore"
+          ],
+          "B": [
+            "spell_faith_seraphim"
+          ],
+          "A": [
+            "spell_faith_regenera"
+          ]
+        }
+      }
     },
     {
       "id": "unit_ms4b3v4raamqa",
@@ -6571,7 +8160,40 @@
           "name": "Wind My Friend+",
           "description": "If AS ≥ foe’s AS+5, grants Atk+3, and if AS ≥ foe’s AS+8, grants Avo+20 during combat."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_wind"
+          ],
+          "C": [
+            "spell_thunder"
+          ],
+          "B": [
+            "spell_cutting_gale"
+          ],
+          "A": [
+            "spell_thoron"
+          ],
+          "S": [
+            "spell_excalibur"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal"
+          ],
+          "C": [
+            "spell_faith_seraphim"
+          ],
+          "B": [
+            "spell_faith_physic"
+          ],
+          "A": [
+            "spell_faith_warp"
+          ]
+        }
+      }
     },
     {
       "id": "unit_ms3o4850pz0sq",
@@ -6638,7 +8260,37 @@
           "name": "Attuned+",
           "description": "When Warrior’s Clarity triggers, grants Avo+10 until unit’s next phase. Trigger % = 20."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_thunder"
+          ],
+          "C": [
+            "spell_blizzard"
+          ],
+          "B": [
+            "spell_thoron"
+          ],
+          "A": [
+            "spell_ice_blade"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_laia"
+          ],
+          "C": [
+            "spell_faith_nosferatu"
+          ],
+          "B": [
+            "spell_faith_freeze"
+          ],
+          "A": [
+            "spell_faith_silence"
+          ]
+        }
+      }
     },
     {
       "id": "unit_ms4b14v2stjjh",
@@ -6706,7 +8358,40 @@
           "name": "Robust Health+",
           "description": "Grants Shld+5 when attacked. Trigger % = unit’s remaining HP."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_wind"
+          ],
+          "C": [
+            "spell_thunder"
+          ],
+          "B": [
+            "spell_cutting_gale"
+          ],
+          "A": [
+            "spell_thoron"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal"
+          ],
+          "C": [
+            "spell_faith_nosferatu"
+          ],
+          "B": [
+            "spell_faith_physic"
+          ],
+          "A": [
+            "spell_faith_recover"
+          ],
+          "S": [
+            "spell_faith_aura"
+          ]
+        }
+      }
     },
     {
       "id": "unit_mt4v2r1q22a0b",
@@ -6775,7 +8460,37 @@
           "name": "Fear Nothing+",
           "description": "If unit attacks first, grants Atk+6 at cost of Avo-30 to unit during combat."
         }
-      ]
+      ],
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_fire"
+          ],
+          "C": [
+            "spell_thunder"
+          ],
+          "B": [
+            "spell_bolganone"
+          ],
+          "A": [
+            "spell_thoron"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_laia"
+          ],
+          "C": [
+            "spell_faith_nosferatu"
+          ],
+          "B": [
+            "spell_faith_freeze"
+          ],
+          "A": [
+            "spell_faith_warp"
+          ]
+        }
+      }
     },
     {
       "id": "unit_msftrzee97kx3",
@@ -6813,6 +8528,39 @@
         "res": 45,
         "lck": 30,
         "cha": 40
+      },
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_bolganone"
+          ],
+          "C": [
+            "spell_wandering_wall"
+          ],
+          "B": [
+            "spell_glass_wheel"
+          ],
+          "A+": [
+            "spell_thoron"
+          ],
+          "S": [
+            "spell_bolting"
+          ]
+        },
+        "faith": {
+          "C+": [
+            "spell_faith_heal"
+          ],
+          "B": [
+            "spell_faith_rescue"
+          ],
+          "A": [
+            "spell_faith_ward"
+          ],
+          "S": [
+            "spell_faith_warp"
+          ]
+        }
       }
     },
     {
@@ -6849,6 +8597,35 @@
         "res": 30,
         "lck": 30,
         "cha": 30
+      },
+      "learnsets": {
+        "reason": {
+          "C": [
+            "spell_thunder"
+          ],
+          "C+": [
+            "spell_blizzard"
+          ],
+          "B": [
+            "spell_ice_blade"
+          ],
+          "A": [
+            "spell_thoron"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal"
+          ],
+          "A+": [
+            "spell_faith_physic",
+            "spell_faith_restore"
+          ],
+          "S": [
+            "spell_faith_recover",
+            "spell_faith_barrier"
+          ]
+        }
       }
     },
     {
@@ -6887,6 +8664,42 @@
         "res": 40,
         "lck": 50,
         "cha": 35
+      },
+      "learnsets": {
+        "reason": {
+          "D+": [
+            "spell_fire"
+          ],
+          "C": [
+            "spell_thunder"
+          ],
+          "B": [
+            "spell_bolganone"
+          ],
+          "A": [
+            "spell_thoron"
+          ],
+          "S": [
+            "spell_sagittae"
+          ]
+        },
+        "faith": {
+          "D+": [
+            "spell_faith_heal"
+          ],
+          "C": [
+            "spell_faith_seraphim"
+          ],
+          "B": [
+            "spell_faith_recover"
+          ],
+          "A": [
+            "spell_faith_fortify"
+          ],
+          "S": [
+            "spell_faith_aura"
+          ]
+        }
       }
     },
     {
@@ -6921,6 +8734,36 @@
         "res": 15,
         "lck": 30,
         "cha": 20
+      },
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_fire"
+          ],
+          "C": [
+            "spell_thunder"
+          ],
+          "B": [
+            "spell_bolganone"
+          ],
+          "A": [
+            "spell_thoron"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal"
+          ],
+          "C": [
+            "spell_faith_nosferatu"
+          ],
+          "B": [
+            "spell_faith_seraphim"
+          ],
+          "A": [
+            "spell_faith_warp"
+          ]
+        }
       }
     },
     {
@@ -6957,6 +8800,36 @@
         "res": 30,
         "lck": 30,
         "cha": 30
+      },
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_fire"
+          ],
+          "C": [
+            "spell_thunder"
+          ],
+          "B": [
+            "spell_bolganone"
+          ],
+          "A": [
+            "spell_thoron"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal"
+          ],
+          "C": [
+            "spell_faith_rescue"
+          ],
+          "B": [
+            "spell_faith_barrier"
+          ],
+          "A": [
+            "spell_faith_regenera"
+          ]
+        }
       }
     },
     {
@@ -6993,6 +8866,36 @@
         "res": 15,
         "lck": 25,
         "cha": 30
+      },
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_fire"
+          ],
+          "C": [
+            "spell_thunder"
+          ],
+          "B": [
+            "spell_bolganone"
+          ],
+          "A": [
+            "spell_thoron"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_laia"
+          ],
+          "C": [
+            "spell_faith_nosferatu"
+          ],
+          "B": [
+            "spell_faith_restore"
+          ],
+          "A": [
+            "spell_faith_warp"
+          ]
+        }
       }
     },
     {
@@ -7028,6 +8931,36 @@
         "res": 20,
         "lck": 30,
         "cha": 35
+      },
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_wind"
+          ],
+          "C": [
+            "spell_blizzard"
+          ],
+          "B": [
+            "spell_cutting_gale"
+          ],
+          "A": [
+            "spell_ice_blade"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_heal"
+          ],
+          "C": [
+            "spell_faith_nosferatu"
+          ],
+          "B": [
+            "spell_faith_physic"
+          ],
+          "A": [
+            "spell_faith_emergis"
+          ]
+        }
       }
     },
     {
@@ -7060,6 +8993,27 @@
         "res": 35,
         "lck": 20,
         "cha": 40
+      },
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_fire"
+          ],
+          "C": [
+            "spell_thunder"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_laia"
+          ],
+          "C": [
+            "spell_faith_resquia"
+          ],
+          "B": [
+            "spell_faith_restore"
+          ]
+        }
       }
     },
     {
@@ -7094,6 +9048,30 @@
         "res": 15,
         "lck": 25,
         "cha": 35
+      },
+      "learnsets": {
+        "reason": {
+          "D": [
+            "spell_fire"
+          ],
+          "C": [
+            "spell_wind"
+          ]
+        },
+        "faith": {
+          "D": [
+            "spell_faith_laia"
+          ],
+          "C": [
+            "spell_faith_torch"
+          ],
+          "B": [
+            "spell_faith_resquia"
+          ],
+          "A": [
+            "spell_faith_seraphim"
+          ]
+        }
       }
     }
   ],
@@ -10180,6 +12158,46 @@
       "color": "#c13a6a",
       "portrait": "/images/ms4k0gl2rd60c0.jpg",
       "banner": "/images/msfzj9i8gyaa85.png"
+    },
+    {
+      "id": "route_bertrand",
+      "name": "Bertrand",
+      "title": "Fiery Mane",
+      "description": "",
+      "color": "#cf4b45",
+      "portrait": "/images/mvbn4iqn3bekhw.png",
+      "banner": null,
+      "dlc": true
+    },
+    {
+      "id": "route_talimun",
+      "name": "Talimun",
+      "title": "Tale of the Moon",
+      "description": "",
+      "color": "#57a95d",
+      "portrait": "/images/mvbn4wnudiycp5.png",
+      "banner": null,
+      "dlc": true
+    },
+    {
+      "id": "route_orchel",
+      "name": "Orchel",
+      "title": "Linaria Dewdrops",
+      "description": "",
+      "color": "#4bb2c9",
+      "portrait": "/images/mvbn528son25ot.png",
+      "banner": null,
+      "dlc": true
+    },
+    {
+      "id": "route_anatolia",
+      "name": "Anatolia",
+      "title": "Bridal Party of the Pale Raven",
+      "description": "",
+      "color": "#aab6bd",
+      "portrait": "/images/mvbn6gmabhqnas.png",
+      "banner": null,
+      "dlc": true
     }
   ],
   "iconTypes": [
@@ -13211,5 +15229,592 @@
       "rank": "A"
     }
   ],
-  "showSpoilerToggle": true
+  "showSpoilerToggle": true,
+  "spells": [
+    {
+      "id": "spell_agnea_s_arrow",
+      "proficiency": "reason",
+      "name": "Agnea's Arrow",
+      "power": 25,
+      "hit": 90,
+      "range": "1-2",
+      "weight": 15,
+      "crit": 5,
+      "avo": 0,
+      "uses": 1,
+      "effect": ""
+    },
+    {
+      "id": "spell_banshee",
+      "proficiency": "reason",
+      "name": "Banshee θ",
+      "power": 8,
+      "hit": 50,
+      "range": "1-3",
+      "weight": 23,
+      "crit": 0,
+      "avo": 0,
+      "uses": 4,
+      "effect": "Inflicts Immobilize on foe."
+    },
+    {
+      "id": "spell_blizzard",
+      "proficiency": "reason",
+      "name": "Blizzard",
+      "power": 4,
+      "hit": 80,
+      "range": "1-2",
+      "weight": 6,
+      "crit": 5,
+      "avo": 0,
+      "uses": 7,
+      "effect": ""
+    },
+    {
+      "id": "spell_bolganone",
+      "proficiency": "reason",
+      "name": "Bolganone",
+      "power": 10,
+      "hit": 85,
+      "range": "1-2",
+      "weight": 8,
+      "crit": 0,
+      "avo": 0,
+      "uses": 5,
+      "effect": ""
+    },
+    {
+      "id": "spell_bolting",
+      "proficiency": "reason",
+      "name": "Bolting",
+      "power": 10,
+      "hit": 50,
+      "range": "3-10",
+      "weight": 30,
+      "crit": 5,
+      "avo": 0,
+      "uses": 1,
+      "effect": "Cannot make a follow-up."
+    },
+    {
+      "id": "spell_cutting_gale",
+      "proficiency": "reason",
+      "name": "Cutting Gale",
+      "power": 7,
+      "hit": 95,
+      "range": "1-2",
+      "weight": 8,
+      "crit": 5,
+      "avo": 0,
+      "uses": 8,
+      "effect": "Effective vs. Flying."
+    },
+    {
+      "id": "spell_dark_spikes_t",
+      "proficiency": "reason",
+      "name": "Dark Spikes T",
+      "power": 20,
+      "hit": 60,
+      "range": "1-2",
+      "weight": 20,
+      "crit": 0,
+      "avo": 0,
+      "uses": 2,
+      "effect": "Effective+ vs. Cavalry"
+    },
+    {
+      "id": "spell_death",
+      "proficiency": "reason",
+      "name": "Death Γ",
+      "power": 15,
+      "hit": 75,
+      "range": "1-2",
+      "weight": 13,
+      "crit": 20,
+      "avo": 0,
+      "uses": 5,
+      "effect": ""
+    },
+    {
+      "id": "spell_earth_s_jaws",
+      "proficiency": "reason",
+      "name": "Earth's Jaws",
+      "power": 17,
+      "hit": 90,
+      "range": "3-10",
+      "weight": 25,
+      "crit": 0,
+      "avo": 0,
+      "uses": 1,
+      "effect": ""
+    },
+    {
+      "id": "spell_excalibur",
+      "proficiency": "reason",
+      "name": "Excalibur",
+      "power": 15,
+      "hit": 100,
+      "range": "1-2",
+      "weight": 10,
+      "crit": 10,
+      "avo": 0,
+      "uses": 3,
+      "effect": ""
+    },
+    {
+      "id": "spell_fimbulvetr_night",
+      "proficiency": "reason",
+      "name": "Fimbulvetr Night",
+      "power": 30,
+      "hit": 80,
+      "range": "1-2",
+      "weight": 28,
+      "crit": 10,
+      "avo": 0,
+      "uses": 1,
+      "effect": ""
+    },
+    {
+      "id": "spell_fire",
+      "proficiency": "reason",
+      "name": "Fire",
+      "power": 3,
+      "hit": 90,
+      "range": "1-2",
+      "weight": 5,
+      "crit": 0,
+      "avo": 0,
+      "uses": 10,
+      "effect": "Reduced damage during Rainy Weather."
+    },
+    {
+      "id": "spell_glass_wheel",
+      "proficiency": "reason",
+      "name": "Glass Wheel",
+      "power": 12,
+      "hit": 90,
+      "range": "1-2",
+      "weight": 7,
+      "crit": 0,
+      "avo": 0,
+      "uses": 7,
+      "effect": "Calculates damage based on foe's Prt. Effective vs. Flying."
+    },
+    {
+      "id": "spell_ice_blade",
+      "proficiency": "reason",
+      "name": "Ice Blade",
+      "power": 12,
+      "hit": 75,
+      "range": "1-2",
+      "weight": 10,
+      "crit": 5,
+      "avo": 0,
+      "uses": 6,
+      "effect": ""
+    },
+    {
+      "id": "spell_luna",
+      "proficiency": "reason",
+      "name": "Luna Λ",
+      "power": 1,
+      "hit": 50,
+      "range": "1-2",
+      "weight": 20,
+      "crit": 0,
+      "avo": 0,
+      "uses": 1,
+      "effect": "Ignores foe's Res."
+    },
+    {
+      "id": "spell_miasma",
+      "proficiency": "reason",
+      "name": "Miasma Δ",
+      "power": 5,
+      "hit": 80,
+      "range": "1-2",
+      "weight": 5,
+      "crit": 0,
+      "avo": 0,
+      "uses": 10,
+      "effect": ""
+    },
+    {
+      "id": "spell_mire_b",
+      "proficiency": "reason",
+      "name": "Mire B",
+      "power": 3,
+      "hit": 70,
+      "range": "1-3",
+      "weight": 15,
+      "crit": 5,
+      "avo": 0,
+      "uses": 1,
+      "effect": ""
+    },
+    {
+      "id": "spell_sagittae",
+      "proficiency": "reason",
+      "name": "Sagittae",
+      "power": 13,
+      "hit": 100,
+      "range": "1-2",
+      "weight": 12,
+      "crit": 0,
+      "avo": 0,
+      "uses": 3,
+      "effect": ""
+    },
+    {
+      "id": "spell_swarm_z",
+      "proficiency": "reason",
+      "name": "Swarm Z",
+      "power": 4,
+      "hit": 65,
+      "range": "1-2",
+      "weight": 21,
+      "crit": 0,
+      "avo": 0,
+      "uses": 4,
+      "effect": "If unit's attack hits, inflicts Spd-3 on foe until unit's next phase."
+    },
+    {
+      "id": "spell_sword_of_judgment",
+      "proficiency": "reason",
+      "name": "Sword of Judgment",
+      "power": 6,
+      "hit": 80,
+      "range": "1-2",
+      "weight": 10,
+      "crit": 0,
+      "avo": 0,
+      "uses": 2,
+      "effect": "Calculates damage based on foe's Prt."
+    },
+    {
+      "id": "spell_thoron",
+      "proficiency": "reason",
+      "name": "Thoron",
+      "power": 20,
+      "hit": 55,
+      "range": "1-3",
+      "weight": 25,
+      "crit": 5,
+      "avo": 0,
+      "uses": 4,
+      "effect": ""
+    },
+    {
+      "id": "spell_thunder",
+      "proficiency": "reason",
+      "name": "Thunder",
+      "power": 5,
+      "hit": 75,
+      "range": "1-2",
+      "weight": 7,
+      "crit": 0,
+      "avo": 0,
+      "uses": 8,
+      "effect": "Additional damage during Rainy Weather."
+    },
+    {
+      "id": "spell_wandering_wall",
+      "proficiency": "reason",
+      "name": "Wandering Wall",
+      "power": null,
+      "hit": null,
+      "range": "1",
+      "weight": null,
+      "crit": 0,
+      "avo": 0,
+      "uses": 5,
+      "effect": "Creates a wall where needed."
+    },
+    {
+      "id": "spell_wind",
+      "proficiency": "reason",
+      "name": "Wind",
+      "power": 3,
+      "hit": 100,
+      "range": "1-2",
+      "weight": 3,
+      "crit": 0,
+      "avo": 0,
+      "uses": 10,
+      "effect": "Effective vs. Flying."
+    },
+    {
+      "id": "spell_faith_aura",
+      "proficiency": "faith",
+      "name": "Aura",
+      "power": 22,
+      "hit": 70,
+      "range": "1-2",
+      "weight": 17,
+      "crit": 0,
+      "avo": 0,
+      "uses": 3,
+      "effect": ""
+    },
+    {
+      "id": "spell_faith_barrier",
+      "proficiency": "faith",
+      "name": "Barrier",
+      "power": null,
+      "hit": null,
+      "range": "1",
+      "weight": null,
+      "crit": null,
+      "avo": 0,
+      "uses": 2,
+      "effect": "Ally takes half damage during their next combat."
+    },
+    {
+      "id": "spell_faith_berserk",
+      "proficiency": "faith",
+      "name": "Berserk",
+      "power": null,
+      "hit": 60,
+      "range": "1-10",
+      "weight": null,
+      "crit": null,
+      "avo": 0,
+      "uses": 1,
+      "effect": "Inflicts Confusion on a foe."
+    },
+    {
+      "id": "spell_faith_emergis",
+      "proficiency": "faith",
+      "name": "Emergis",
+      "power": null,
+      "hit": null,
+      "range": "1-10",
+      "weight": null,
+      "crit": null,
+      "avo": 0,
+      "uses": 1,
+      "effect": "Grants Ddg+30 to an ally until unit's next phase."
+    },
+    {
+      "id": "spell_faith_fortify",
+      "proficiency": "faith",
+      "name": "Fortify",
+      "power": 20,
+      "hit": null,
+      "range": "1-5",
+      "weight": null,
+      "crit": null,
+      "avo": 0,
+      "uses": 2,
+      "effect": "Restores HP to all allies in range."
+    },
+    {
+      "id": "spell_faith_freeze",
+      "proficiency": "faith",
+      "name": "Freeze",
+      "power": null,
+      "hit": 60,
+      "range": "1-10",
+      "weight": null,
+      "crit": null,
+      "avo": 0,
+      "uses": 1,
+      "effect": "Inflicts Immobilize."
+    },
+    {
+      "id": "spell_faith_heal",
+      "proficiency": "faith",
+      "name": "Heal",
+      "power": 10,
+      "hit": null,
+      "range": "1",
+      "weight": null,
+      "crit": null,
+      "avo": 0,
+      "uses": 10,
+      "effect": "Restores HP to an ally."
+    },
+    {
+      "id": "spell_faith_laia",
+      "proficiency": "faith",
+      "name": "Laia",
+      "power": 3,
+      "hit": null,
+      "range": "1",
+      "weight": null,
+      "crit": null,
+      "avo": 0,
+      "uses": 15,
+      "effect": "Restores HP to an ally. Sometimes restores +100 HP to an ally."
+    },
+    {
+      "id": "spell_faith_nosferatu",
+      "proficiency": "faith",
+      "name": "Nosferatu",
+      "power": 3,
+      "hit": 80,
+      "range": "1-2",
+      "weight": 7,
+      "crit": 0,
+      "avo": 0,
+      "uses": 8,
+      "effect": "Unit recovers HP equal to half the damage they deal."
+    },
+    {
+      "id": "spell_faith_physic",
+      "proficiency": "faith",
+      "name": "Physic",
+      "power": 8,
+      "hit": null,
+      "range": "1-10",
+      "weight": null,
+      "crit": 20,
+      "avo": 0,
+      "uses": 5,
+      "effect": "Restores HP to an ally at a distance."
+    },
+    {
+      "id": "spell_faith_recover",
+      "proficiency": "faith",
+      "name": "Recover",
+      "power": 30,
+      "hit": null,
+      "range": "1",
+      "weight": null,
+      "crit": null,
+      "avo": 0,
+      "uses": 5,
+      "effect": "Restores a lot of HP to an ally."
+    },
+    {
+      "id": "spell_faith_regenera",
+      "proficiency": "faith",
+      "name": "Regenera",
+      "power": null,
+      "hit": null,
+      "range": "1",
+      "weight": null,
+      "crit": null,
+      "avo": 0,
+      "uses": 5,
+      "effect": "Ally heals HP at the start of every turn for 5 turns."
+    },
+    {
+      "id": "spell_faith_rescue",
+      "proficiency": "faith",
+      "name": "Rescue",
+      "power": null,
+      "hit": null,
+      "range": "2-10",
+      "weight": null,
+      "crit": null,
+      "avo": 0,
+      "uses": 1,
+      "effect": "Teleports ally to a space adjacent to unit."
+    },
+    {
+      "id": "spell_faith_resquia",
+      "proficiency": "faith",
+      "name": "Resquia",
+      "power": null,
+      "hit": null,
+      "range": "2-3",
+      "weight": null,
+      "crit": null,
+      "avo": 0,
+      "uses": 3,
+      "effect": "Teleports ally to a space adjacent to unit."
+    },
+    {
+      "id": "spell_faith_restore",
+      "proficiency": "faith",
+      "name": "Restore",
+      "power": null,
+      "hit": null,
+      "range": "1-3",
+      "weight": null,
+      "crit": null,
+      "avo": 0,
+      "uses": 10,
+      "effect": "Removes all status effects from an ally."
+    },
+    {
+      "id": "spell_faith_seraphim",
+      "proficiency": "faith",
+      "name": "Seraphim",
+      "power": 10,
+      "hit": 75,
+      "range": "1-2",
+      "weight": 9,
+      "crit": 0,
+      "avo": 0,
+      "uses": 3,
+      "effect": "Effective vs. Undead."
+    },
+    {
+      "id": "spell_faith_silence",
+      "proficiency": "faith",
+      "name": "Silence",
+      "power": null,
+      "hit": 60,
+      "range": "1-10",
+      "weight": null,
+      "crit": null,
+      "avo": 0,
+      "uses": 2,
+      "effect": "Prevents target from using magic."
+    },
+    {
+      "id": "spell_faith_starlight",
+      "proficiency": "faith",
+      "name": "Starlight",
+      "power": 13,
+      "hit": 90,
+      "range": "1-3",
+      "weight": 29,
+      "crit": 0,
+      "avo": 0,
+      "uses": 3,
+      "effect": ""
+    },
+    {
+      "id": "spell_faith_torch",
+      "proficiency": "faith",
+      "name": "Torch",
+      "power": null,
+      "hit": null,
+      "range": "Self",
+      "weight": null,
+      "crit": null,
+      "avo": 0,
+      "uses": 5,
+      "effect": "Grants Vis+3 until unit's next phase."
+    },
+    {
+      "id": "spell_faith_ward",
+      "proficiency": "faith",
+      "name": "Ward",
+      "power": null,
+      "hit": null,
+      "range": "1",
+      "weight": null,
+      "crit": null,
+      "avo": 0,
+      "uses": 3,
+      "effect": "Grants Res+10 to ally until unit's next phase."
+    },
+    {
+      "id": "spell_faith_warp",
+      "proficiency": "faith",
+      "name": "Warp",
+      "power": null,
+      "hit": null,
+      "range": "1",
+      "weight": null,
+      "crit": null,
+      "avo": 0,
+      "uses": 1,
+      "effect": "Teleport other adjacent character up to 5 spaces away."
+    }
+  ]
 }

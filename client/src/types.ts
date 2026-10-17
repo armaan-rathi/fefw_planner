@@ -20,6 +20,7 @@ export interface Route {
   color: string; // accent color / motif
   portrait: string | null; // optional route splash art
   banner?: string | null; // optional wide banner image (used on the Route Split page)
+  dlc?: boolean; // sub-lord DLC route; hidden unless the "Show Sub-lords" toggle is on
 }
 
 export type FieldType = "text" | "longtext" | "number" | "dropdown" | "multiselect" | "checkbox";
@@ -133,7 +134,29 @@ export interface Unit {
   part3?: boolean; // Part 3 (late-game) character — hidden unless spoilers are enabled
   recruitment?: Record<string, RecruitCondition>; // recruitment conditions keyed by lord's route id
   growths?: Growths; // growth rates (percent) per stat
+  // Spells/arts learned, keyed by proficiency (skillType id) then rank -> spell ids.
+  // e.g. { reason: { "C": ["spell_thunder", "spell_sword_of_judgment"] } }
+  learnsets?: Record<string, Record<string, string[]>>;
 }
+
+// A combat art / spell in the Magic catalog, grouped by proficiency (reason, faith, …).
+export interface Spell {
+  id: string;
+  proficiency: string; // skillType id
+  name: string;
+  power: number | null; // Might/Power ("--" = null)
+  hit: number | null;
+  range: string; // e.g. "1-2", "3-10", "1"
+  weight: number | null;
+  crit: number | null;
+  avo: number | null;
+  uses: number | null;
+  effect: string;
+}
+
+// Learnset ranks, low → high (a subset of GRADES used for spell/art acquisition).
+export const LEARNSET_RANKS = ["D", "D+", "C", "C+", "B", "B+", "A", "A+", "S"] as const;
+export type LearnsetRank = (typeof LEARNSET_RANKS)[number];
 
 export type IconShape = "circle" | "square" | "triangle" | "invtriangle" | "star4" | "star8";
 
@@ -367,4 +390,5 @@ export interface DB {
   paralogueColors?: Record<string, string>; // optional per-paralogue accent color (by name)
   supports?: SupportEdge[]; // symmetric support links between units
   showSpoilerToggle?: boolean; // show the navbar "Allow Part 3 Spoilers" toggle
+  spells?: Spell[]; // Magic catalog (combat arts / spells), grouped by proficiency
 }

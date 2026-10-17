@@ -8,6 +8,7 @@ import { ProficiencyMark } from "../components/icons";
 import { lordFirst, unitFaction, unitsForRoute } from "../data/units";
 import { sortBySkillOrder } from "../data/skills";
 import { filterSpoilerUnits, isSpoilerTier, useSpoilers } from "../data/spoilers";
+import { useVisibleRoutes } from "../data/sublords";
 import type { Unit } from "../types";
 
 const SLOT_COUNT = 25;
@@ -27,8 +28,9 @@ export function TeamPlanner() {
   const [picked, setPicked] = useState<string | null>(null); // tap-to-add (mobile-friendly)
   const [allowSpoilers] = useSpoilers();
 
+  const visibleRoutes = useVisibleRoutes();
   const isFree = route === "free";
-  const routeObj = isFree ? null : db.routes.find((r) => r.id === route) ?? null;
+  const routeObj = isFree ? null : visibleRoutes.find((r) => r.id === route) ?? null;
   const routeColor = routeObj?.color ?? FREE_COLOR;
 
   function resolveUnit(id: string): Unit | null {
@@ -100,7 +102,7 @@ export function TeamPlanner() {
 
   const routeOptions = [
     { id: "free", name: "Free Choice (all units)" },
-    ...db.routes.map((r) => ({ id: r.id, name: r.name })),
+    ...visibleRoutes.map((r) => ({ id: r.id, name: r.name })),
   ];
 
   return (

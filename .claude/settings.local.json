@@ -13,7 +13,18 @@
       "WebSearch",
       "WebFetch(domain:www.rpgsite.net)",
       "Bash(cp server/data/db.json __TRACKED_VAR__/db.backup.p3growths.__CMDSUB_OUTPUT__.json)",
-      "Bash(node __TRACKED_VAR__/add-p3-growths.js)"
+      "Bash(node __TRACKED_VAR__/add-p3-growths.js)",
+      "Bash(node -e 'const db=require\\(\"./server/data/db.json\"\\);for\\(const n of [\"Bertrand\",\"Talimun\",\"Orchel\",\"Anatolia\"]\\){const u=db.units.find\\(x=>x.name===n\\);console.log\\(n,\"=>\",u?u.id:\"MISSING\",\"isLord=\"+!!\\(u&&u.isLord\\)\\);}')",
+      "Bash(perl -0pi -e 's/db\\\\.routes/routes/g' src/pages/RouteSelection.tsx)",
+      "Bash(cp server/data/db.json __TRACKED_VAR__/db.backup.dlcroutes.__CMDSUB_OUTPUT__.json)",
+      "Bash(node __TRACKED_VAR__/add-dlc-routes.js)",
+      "Bash(cp server/data/db.json __TRACKED_VAR__/db.backup.routecolors.__CMDSUB_OUTPUT__.json)",
+      "Bash(sed -n '/export interface Unit/,/^}/p' src/types.ts)",
+      "Bash(sed -n '/export interface DB/,/^}/p' src/types.ts)",
+      "Bash(cp server/data/db.json __TRACKED_VAR__/db.backup.reasonmagic.__CMDSUB_OUTPUT__.json)",
+      "Bash(node __TRACKED_VAR__/import-reason-magic.js)",
+      "Bash(awk '/\\\\.recruit-table ?\\\\{/,/\\\\}/' src/styles.css)",
+      "Bash(node \"/private/tmp/claude-501/-Users-armaanrathi-Projects-fefw-planner/aa6ef07f-3af3-4612-a372-ff79a44c14dc/scratchpad/check-class-reqs.js\")"
     ]
   }
 }

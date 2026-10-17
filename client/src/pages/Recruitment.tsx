@@ -4,6 +4,7 @@ import { Modal } from "../components/Modal";
 import { UnitPortrait } from "../components/UnitPortrait";
 import { condFilled, isNum, recruitableUnits } from "../data/recruitment";
 import { filterSpoilerUnits, useSpoilers } from "../data/spoilers";
+import { useVisibleRoutes } from "../data/sublords";
 import type { DB, RecruitCondition, Unit } from "../types";
 
 type Route = DB["routes"][number];
@@ -22,7 +23,7 @@ export function Recruitment() {
   const [view, setView] = useState<View>("route");
   const [allowSpoilers] = useSpoilers();
   const units = useMemo(() => filterSpoilerUnits(recruitableUnits(db), allowSpoilers), [db, allowSpoilers]);
-  const routes = db.routes;
+  const routes = useVisibleRoutes();
   const [detail, setDetail] = useState<{ unit: Unit; route: Route } | null>(null);
 
   return (

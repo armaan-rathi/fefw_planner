@@ -5,6 +5,7 @@ import { useLocalStorage } from "../hooks/useLocalStorage";
 import { UnitPortrait } from "../components/UnitPortrait";
 import { TeamTabs } from "../components/TeamTabs";
 import { lordFirst } from "../data/units";
+import { useVisibleRoutes } from "../data/sublords";
 import type { Unit } from "../types";
 
 const MAX_PER_ROUTE = 25; // final-deployment cap
@@ -12,6 +13,7 @@ type Split = Record<string, string[]>; // routeId -> unit ids
 
 export function RouteSplit() {
   const { db } = useDB();
+  const routes = useVisibleRoutes();
   const navigate = useNavigate();
   const [split, setSplit] = useLocalStorage<Split>("fw.routeSplit", {});
   const [showPost, setShowPost] = useState(false);
@@ -21,11 +23,11 @@ export function RouteSplit() {
 
   const defaultStarters = useMemo(() => {
     const m: Record<string, string[]> = {};
-    for (const r of db.routes) {
+    for (const r of routes) {
       m[r.id] = lordFirst(db.units.filter((u) => u.starterFor.includes(r.id))).map((u) => u.id);
     }
     return m;
-  }, [db.routes, db.units]);
+  }, [routes, db.units]);
 
   const assignedIds = (routeId: string) => split[routeId] ?? defaultStarters[routeId] ?? [];
 
@@ -33,7 +35,7 @@ export function RouteSplit() {
     const byId = new Map(db.units.map((u) => [u.id, u]));
     const routeOf: Record<string, string> = {};
     const routeUnits: Record<string, Unit[]> = {};
-    for (const r of db.routes) {
+    for (const r of routes) {
       const list: Unit[] = [];
       for (const id of assignedIds(r.id)) {
         if (routeOf[id] || !byId.has(id)) continue;
@@ -45,19 +47,19 @@ export function RouteSplit() {
     const pool = db.units.filter((u) => !routeOf[u.id]);
     return { routeUnits, pool, routeOf };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [db.routes, db.units, split, defaultStarters]);
+  }, [routes, db.units, split, defaultStarters]);
 
   const visible = (u: Unit) => showPost || !u.postTimeskip;
 
   function materialized(prev: Split): Split {
     const next: Split = {};
-    for (const r of db.routes) next[r.id] = [...(prev[r.id] ?? defaultStarters[r.id] ?? [])];
+    for (const r of routes) next[r.id] = [...(prev[r.id] ?? defaultStarters[r.id] ?? [])];
     return next;
   }
   function assignToRoute(unitId: string, routeId: string) {
     setSplit((prev) => {
       const next = materialized(prev);
-      for (const r of db.routes) next[r.id] = next[r.id].filter((id) => id !== unitId);
+      for (const r of routes) next[r.id] = next[r.id].filter((id) => id !== unitId);
       if (next[routeId].length >= MAX_PER_ROUTE) return prev;
       next[routeId].push(unitId);
       return next;
@@ -66,7 +68,7 @@ export function RouteSplit() {
   function unassign(unitId: string) {
     setSplit((prev) => {
       const next = materialized(prev);
-      for (const r of db.routes) next[r.id] = next[r.id].filter((id) => id !== unitId);
+      for (const r of routes) next[r.id] = next[r.id].filter((id) => id !== unitId);
       return next;
     });
   }
@@ -80,7 +82,7 @@ export function RouteSplit() {
     if (!window.confirm("Import this split into Route Selection? It replaces your current roster edits there.")) return;
     const extras: Record<string, string[]> = {};
     const removals: Record<string, string[]> = {};
-    for (const r of db.routes) {
+    for (const r of routes) {
       const target = new Set((routeUnits[r.id] ?? []).map((u) => u.id));
       const lockedSet = new Set(db.units.filter((u) => u.routeIds.includes(r.id)).map((u) => u.id));
       const starterIds = db.units.filter((u) => u.starterFor.includes(r.id) && !lockedSet.has(u.id)).map((u) => u.id);
@@ -149,7 +151,7 @@ export function RouteSplit() {
 
   const poolVisible = pool.filter(visible);
   const menuRouteId = menu ? routeOf[menu.unitId] : null;
-  const routeName = (r: (typeof db.routes)[number]) => r.title || r.name || "Route";
+  const routeName = (r: (typeof routes)[number]) => r.title || r.name || "Route";
 
   return (
     <div>
@@ -180,7 +182,7 @@ export function RouteSplit() {
 
       {/* Routes */}
       <div className="split-routes">
-        {db.routes.map((r) => {
+        {routes.map((r) => {
           const shown = (routeUnits[r.id] ?? []).filter(visible);
           return (
             <div key={r.id} className={"split-route" + (dropTarget === r.id ? " drop" : "")} data-drop={r.id} {...overProps(r.id)} onDrop={dropHandler((id) => assignToRoute(id, r.id))}>
@@ -204,7 +206,7 @@ export function RouteSplit() {
 
       {/* Tap menu: pick a route banner (or remove from the current one) */}
       {menu && (() => {
-        const menuW = db.routes.length * 46 + 18;
+        const menuW = routes.length * 46 + 18;
         const menuH = 62;
         const left = Math.max(12, Math.min(window.innerWidth - menuW - 12, menu.rect.left + menu.rect.width / 2 - menuW / 2));
         const below = menu.rect.bottom + 8;
@@ -213,7 +215,7 @@ export function RouteSplit() {
         <>
           <div className="split-menu-backdrop" onClick={() => setMenu(null)} />
           <div className="split-menu" style={{ left, top, width: menuW }}>
-            {db.routes.map((r) => {
+            {routes.map((r) => {
               const here = menuRouteId === r.id;
               return (
                 <button

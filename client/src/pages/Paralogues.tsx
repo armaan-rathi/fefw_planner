@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { useDB } from "../data/DataContext";
+import { useVisibleRoutes } from "../data/sublords";
 import { assignLanes, globalRange, ordToMD, paralogueColor, routeEvents, weekdayMon } from "../data/paralogues";
 
 const MONTHS = ["", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -17,7 +18,7 @@ function textOn(bg: string): string {
 
 export function Paralogues() {
   const { db } = useDB();
-  const routes = db.routes;
+  const routes = useVisibleRoutes();
   const [routeId, setRouteId] = useState<string>(routes[0]?.id ?? "");
 
   const { min, max } = useMemo(() => globalRange(db), [db]);

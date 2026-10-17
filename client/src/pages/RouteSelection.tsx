@@ -4,6 +4,7 @@ import { useLocalStorage } from "../hooks/useLocalStorage";
 import { UnitPortrait } from "../components/UnitPortrait";
 import { uid } from "../api";
 import { lordFirst } from "../data/units";
+import { useVisibleRoutes } from "../data/sublords";
 import type { RatingParam, Unit } from "../types";
 
 const DEFAULT_PARAMS: RatingParam[] = [{ id: "overall", label: "Overall Appeal" }];
@@ -24,6 +25,7 @@ const fmt = (v: number) => String(Math.round(v * 1000) / 1000);
 
 export function RouteSelection() {
   const { db } = useDB();
+  const routes = useVisibleRoutes();
   const [ratings, setRatings] = useLocalStorage<Ratings>("fw.ratings", {});
   // Ratings, params, scale and route extras are all per-visitor (personal), so
   // fans can tailor them without touching the shared, protected database.
@@ -34,7 +36,7 @@ export function RouteSelection() {
   const [routeExtras, setRouteExtras] = useLocalStorage<Record<string, string[]>>("fw.routeExtras", {});
   // Default members (starters) the visitor has removed from a route.
   const [routeRemovals, setRouteRemovals] = useLocalStorage<Record<string, string[]>>("fw.routeRemovals", {});
-  const [activeRoute, setActiveRoute] = useState(db.routes[0]?.id ?? "");
+  const [activeRoute, setActiveRoute] = useState(routes[0]?.id ?? "");
   const [adding, setAdding] = useState(false);
   const [newParam, setNewParam] = useState("");
   const [scaleOpen, setScaleOpen] = useState(false);
@@ -45,7 +47,7 @@ export function RouteSelection() {
   // Locked units can't be removed; starters and extras can.
   const unitsByRoute = useMemo(() => {
     const map: Record<string, Unit[]> = {};
-    for (const route of db.routes) {
+    for (const route of routes) {
       const locked = db.units.filter((u) => u.routeIds.includes(route.id));
       const seen = new Set(locked.map((u) => u.id));
       const starters = db.units.filter((u) => u.starterFor.includes(route.id) && !seen.has(u.id));
@@ -60,7 +62,7 @@ export function RouteSelection() {
       map[route.id] = lordFirst(members);
     }
     return map;
-  }, [db.routes, db.units, routeExtras, routeRemovals]);
+  }, [routes, db.units, routeExtras, routeRemovals]);
 
   const mid = (scale.min + scale.max) / 2;
 
@@ -99,7 +101,7 @@ export function RouteSelection() {
 
   // Per-route average score across all its units × rating params.
   const scores = useMemo(() => {
-    return db.routes.map((route) => {
+    return routes.map((route) => {
       const units = unitsByRoute[route.id] ?? [];
       let sum = 0;
       let n = 0;
@@ -111,7 +113,7 @@ export function RouteSelection() {
       }
       return { route, avg: n ? sum / n : 0, count: units.length };
     });
-  }, [db.routes, params, unitsByRoute, ratings]);
+  }, [routes, params, unitsByRoute, ratings]);
 
   const ranked = [...scores].sort((a, b) => b.avg - a.avg);
 
@@ -133,7 +135,7 @@ export function RouteSelection() {
     }
   }
 
-  const route = db.routes.find((r) => r.id === activeRoute) ?? db.routes[0];
+  const route = routes.find((r) => r.id === activeRoute) ?? routes[0];
   const roster = route ? unitsByRoute[route.id] ?? [] : [];
 
   // Provisionally add/remove a character on this route (personal, on this device).
@@ -271,7 +273,7 @@ export function RouteSelection() {
 
       {/* Route tabs */}
       <div className="lord-tabs">
-        {db.routes.map((r) => (
+        {routes.map((r) => (
           <div
             key={r.id}
             className={"lord-tab" + (r.id === activeRoute ? " active" : "")}

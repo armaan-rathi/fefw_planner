@@ -9,6 +9,7 @@ import { unitFaction } from "../data/units";
 import { GROWTH_LABELS, GROWTH_STATS } from "../types";
 import type { DB, Unit } from "../types";
 import { filterSpoilerUnits, useSpoilers } from "../data/spoilers";
+import { useVisibleRoutes } from "../data/sublords";
 
 type SortMode = "default" | "faction";
 
@@ -94,6 +95,7 @@ export function CharacterList() {
   const detailAttrs = cfg.detail.filter((id) => attrs.some((a) => a.id === id));
 
   const [allowSpoilers] = useSpoilers();
+  const visibleRoutes = useVisibleRoutes();
   const filtered = useMemo(() => {
     const base = filterSpoilerUnits(db.units, allowSpoilers);
     const q = query.toLowerCase().trim();
@@ -187,7 +189,7 @@ export function CharacterList() {
               {detailAttrs.length === 0 && (
                 <p className="muted">No detail fields configured. Choose them in Dev Mode → Characters.</p>
               )}
-              <RecruitmentSection unit={openUnit} routes={db.routes} />
+              <RecruitmentSection unit={openUnit} routes={visibleRoutes} />
               {db.growthsOnCharPage && <GrowthsSection unit={openUnit} />}
             </div>
           </div>
