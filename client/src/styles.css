@@ -2798,3 +2798,8 @@ input[type="range"]::-moz-range-thumb {
 .learnset-disclaimer { margin: 0 0 14px; color: var(--ink-faint); font-size: 12.5px; }
 .learnset-disclaimer i { font-style: italic; color: var(--ink-dim); }
 .learnset-tabs button { display: inline-flex; align-items: center; justify-content: center; min-width: 48px; }
+
+/* ---- Battalions page ------------------------------------------------------ */
+.battalion-table { min-width: 980px; }
+.battalion-table .th-sort { cursor: pointer; user-select: none; white-space: nowrap; }
+.battalion-table .th-sort:hover { color: var(--gold-bright); }

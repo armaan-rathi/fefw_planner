@@ -21025,7 +21025,7 @@
     "banners": [
       {
         "id": "banner_mtrg0m8t1f3sx",
-        "name": "Fortune's Gamble",
+        "name": "Fortune's Gamble (Pre-Release)",
         "cardIds": [
           "card_unit_cai",
           "card_unit_dietrich",
@@ -26578,6 +26578,1015 @@
         "name": "Airfighter+",
         "description": ""
       }
+    }
+  ],
+  "battalions": [
+    {
+      "id": "batt_asherah_warriors",
+      "name": "Asherah Warriors",
+      "category": "Defense",
+      "rank": "A",
+      "gatherLimit": 22,
+      "ability": "Divided Formation",
+      "stats": {
+        "dex": 3,
+        "def": 2,
+        "res": 3,
+        "cha": 8
+      },
+      "location": "Whill"
+    },
+    {
+      "id": "batt_divine_shield_guard",
+      "name": "Divine-Shield Guard",
+      "category": "Defense",
+      "rank": "A",
+      "gatherLimit": 22,
+      "ability": "Tri-Front Formation+",
+      "stats": {
+        "dex": 3,
+        "def": 3,
+        "res": 2,
+        "cha": 8
+      },
+      "location": "Messalina Orchards, Callianeira Port, Port of Pandora"
+    },
+    {
+      "id": "batt_headsmen",
+      "name": "Headsmen",
+      "category": "Defense",
+      "rank": "A",
+      "gatherLimit": 22,
+      "ability": "Fortress Formation",
+      "stats": {
+        "spd": 3,
+        "dex": 3,
+        "res": 2,
+        "cha": 8
+      },
+      "location": "Benetnasch"
+    },
+    {
+      "id": "batt_linggui_squad",
+      "name": "Linggui Squad",
+      "category": "Defense",
+      "rank": "A",
+      "gatherLimit": 22,
+      "ability": "Vertical Formation+",
+      "stats": {
+        "dex": 3,
+        "def": 2,
+        "res": 3,
+        "cha": 8
+      },
+      "location": "Mons, Megaira"
+    },
+    {
+      "id": "batt_brigid_spirit_squad",
+      "name": "Brigid Spirit Squad",
+      "category": "Magical",
+      "rank": "A",
+      "gatherLimit": 22,
+      "ability": "Lightning Domain",
+      "stats": {
+        "mag": 3,
+        "spd": 1,
+        "res": 3,
+        "lck": 1,
+        "cha": 8
+      },
+      "location": "Niiza Port"
+    },
+    {
+      "id": "batt_hundun_squad",
+      "name": "Hundun Squad",
+      "category": "Magical",
+      "rank": "A",
+      "gatherLimit": 22,
+      "ability": "Encircling Lightning",
+      "stats": {
+        "mag": 3,
+        "def": 1,
+        "res": 1,
+        "lck": 3,
+        "cha": 8
+      },
+      "location": "Fina, Twalinn"
+    },
+    {
+      "id": "batt_smyrnos_s_mages",
+      "name": "Smyrnos's Mages",
+      "category": "Magical",
+      "rank": "A",
+      "gatherLimit": 22,
+      "ability": "Magic-Ward Tactics",
+      "stats": {
+        "mag": 3,
+        "res": 3,
+        "lck": 2,
+        "cha": 8
+      },
+      "location": "Osiris"
+    },
+    {
+      "id": "batt_yin_squad",
+      "name": "Yin Squad",
+      "category": "Magical",
+      "rank": "A",
+      "gatherLimit": 22,
+      "ability": "Scattered Lightning",
+      "stats": {
+        "mag": 3,
+        "def": 3,
+        "res": 2,
+        "cha": 8
+      },
+      "location": "Barsk Post Town, Mahón Castle Town, Kassite"
+    },
+    {
+      "id": "batt_fenghuang_squad",
+      "name": "Fenghuang Squad",
+      "category": "Physical",
+      "rank": "A",
+      "gatherLimit": 22,
+      "ability": "Line of Lances+",
+      "stats": {
+        "str": 3,
+        "spd": 2,
+        "def": 3,
+        "cha": 9
+      },
+      "location": "Grand Aragon"
+    },
+    {
+      "id": "batt_fists_of_black_smoke",
+      "name": "Fists of Black Smoke",
+      "category": "Physical",
+      "rank": "A",
+      "gatherLimit": 22,
+      "ability": "Stampede",
+      "stats": {
+        "str": 3,
+        "spd": 2,
+        "def": 3,
+        "cha": 9
+      },
+      "location": "Da Mina"
+    },
+    {
+      "id": "batt_qilin_squad",
+      "name": "Qilin Squad",
+      "category": "Physical",
+      "rank": "A",
+      "gatherLimit": 22,
+      "ability": "Disturbing Volley+",
+      "stats": {
+        "str": 3,
+        "spd": 2,
+        "dex": 3,
+        "cha": 9
+      },
+      "location": "Yaaman, Orens, Alecto, Regia"
+    },
+    {
+      "id": "batt_antiquity_seekers",
+      "name": "Antiquity Seekers",
+      "category": "Support",
+      "rank": "A",
+      "gatherLimit": 22,
+      "ability": "Wave Recovery",
+      "stats": {
+        "mag": 3,
+        "def": 1,
+        "res": 3,
+        "lck": 1,
+        "cha": 8
+      },
+      "location": "Shama Port"
+    },
+    {
+      "id": "batt_bai_ze_squad",
+      "name": "Bai Ze Squad",
+      "category": "Support",
+      "rank": "A",
+      "gatherLimit": 22,
+      "ability": "Column Recovery+",
+      "stats": {
+        "mag": 3,
+        "res": 3,
+        "lck": 2,
+        "cha": 8
+      },
+      "location": "Raivo Port"
+    },
+    {
+      "id": "batt_children_of_tristan",
+      "name": "Children of Tristan",
+      "category": "Support",
+      "rank": "A",
+      "gatherLimit": 22,
+      "ability": "Joint Recovery+",
+      "stats": {
+        "mag": 2,
+        "res": 4,
+        "lck": 2,
+        "cha": 8
+      },
+      "location": "Baina Oasis"
+    },
+    {
+      "id": "batt_shen_yang_squad",
+      "name": "Shen Yang Squad",
+      "category": "Support",
+      "rank": "A",
+      "gatherLimit": 22,
+      "ability": "Resonance Recover",
+      "stats": {
+        "mag": 3,
+        "res": 2,
+        "lck": 3,
+        "cha": 8
+      },
+      "location": "Daimōn, Ribeira"
+    },
+    {
+      "id": "batt_lions_of_megaira",
+      "name": "Lions of Megaira",
+      "category": "Defense",
+      "rank": "B",
+      "gatherLimit": 18,
+      "ability": "Flank Formation+",
+      "stats": {
+        "dex": 3,
+        "def": 3,
+        "cha": 7
+      },
+      "location": "Megaira"
+    },
+    {
+      "id": "batt_noble_bodyguards",
+      "name": "Noble Bodyguards",
+      "category": "Defense",
+      "rank": "B",
+      "gatherLimit": 18,
+      "ability": "Bulwalk Formation+",
+      "stats": {
+        "dex": 2,
+        "def": 2,
+        "res": 2,
+        "cha": 7
+      },
+      "location": "Port of Pandora, Zoste, Whill, Alecto, Mahón Castle Town, Mons"
+    },
+    {
+      "id": "batt_orchard_guards",
+      "name": "Orchard Guards",
+      "category": "Defense",
+      "rank": "B",
+      "gatherLimit": 18,
+      "ability": "Wing Formation",
+      "stats": {
+        "dex": 3,
+        "def": 2,
+        "res": 1,
+        "cha": 7
+      },
+      "location": "Messalina Orchards, Callianeira Port, Port of Pandora"
+    },
+    {
+      "id": "batt_silver_shield_guard",
+      "name": "Silver-Shield Guard",
+      "category": "Defense",
+      "rank": "B",
+      "gatherLimit": 18,
+      "ability": "Tri-Front Formation+",
+      "stats": {
+        "def": 3,
+        "res": 3,
+        "cha": 7
+      },
+      "location": "Megaira, Callianera Port, Zoste, Barsk Port Town, Whill, Benetnasch, Mons"
+    },
+    {
+      "id": "batt_aegina_monks",
+      "name": "Aegina Monks",
+      "category": "Magical",
+      "rank": "B",
+      "gatherLimit": 18,
+      "ability": "Magic-Ward Tactics",
+      "stats": {
+        "mag": 3,
+        "res": 1,
+        "lck": 2,
+        "cha": 7
+      },
+      "location": "Orens"
+    },
+    {
+      "id": "batt_kalla_s_divas",
+      "name": "Kalla's Divas",
+      "category": "Magical",
+      "rank": "B",
+      "gatherLimit": 18,
+      "ability": "Ice Domain",
+      "stats": {
+        "mag": 3,
+        "res": 2,
+        "lck": 1,
+        "cha": 7
+      },
+      "location": "Barsk Port Town"
+    },
+    {
+      "id": "batt_shadow_mages",
+      "name": "Shadow Mages",
+      "category": "Magical",
+      "rank": "B",
+      "gatherLimit": 18,
+      "ability": "Scattering Ice",
+      "stats": {
+        "mag": 3,
+        "res": 3,
+        "cha": 7
+      },
+      "location": "Twalinn, Raivo Port, Shama Port, Kassite, Osiris"
+    },
+    {
+      "id": "batt_uplifted_hexers",
+      "name": "Uplifted Hexers",
+      "category": "Magical",
+      "rank": "B",
+      "gatherLimit": 18,
+      "ability": "Encircling Ice",
+      "stats": {
+        "mag": 3,
+        "res": 2,
+        "lck": 1,
+        "cha": 7
+      },
+      "location": "Benetnasch, Niiza Port, Kassite, Fina, Osiris, Port of Pandora, Twalinn"
+    },
+    {
+      "id": "batt_breza_s_bau_squad",
+      "name": "Breza's Bau Squad",
+      "category": "Physical",
+      "rank": "B",
+      "gatherLimit": 18,
+      "ability": "Disturb-Flier Tactics",
+      "stats": {
+        "str": 3,
+        "dex": 3,
+        "cha": 7
+      },
+      "location": "Breston"
+    },
+    {
+      "id": "batt_elite_hunters",
+      "name": "Elite Hunters",
+      "category": "Physical",
+      "rank": "B",
+      "gatherLimit": 18,
+      "ability": "Disturbing Volley",
+      "stats": {
+        "str": 3,
+        "spd": 2,
+        "dex": 1,
+        "cha": 7
+      },
+      "location": "Grand Aragon, Aguiño, Yaaman, Orens, Da Mina, Alecto, Regia"
+    },
+    {
+      "id": "batt_mah_n_twilighters",
+      "name": "Mahón Twilighters",
+      "category": "Physical",
+      "rank": "B",
+      "gatherLimit": 18,
+      "ability": "Disturb-Rider Tactics",
+      "stats": {
+        "str": 3,
+        "spd": 3,
+        "cha": 7
+      },
+      "location": "Mahón Castle Town"
+    },
+    {
+      "id": "batt_special_cavalry",
+      "name": "Special Cavalry",
+      "category": "Physical",
+      "rank": "B",
+      "gatherLimit": 18,
+      "ability": "Line of Lances",
+      "stats": {
+        "str": 3,
+        "spd": 1,
+        "def": 2,
+        "cha": 7
+      },
+      "location": "Grand Aragon, Aguiño, Callianeira Port, Yaaman, Da Mina, Breston, Regia"
+    },
+    {
+      "id": "batt_holy_clerics",
+      "name": "Holy Clerics",
+      "category": "Support",
+      "rank": "B",
+      "gatherLimit": 18,
+      "ability": "Column Recovery",
+      "stats": {
+        "mag": 2,
+        "res": 3,
+        "lck": 1,
+        "cha": 7
+      },
+      "location": "Fina, Daimōn, Raivo Port, Baina Oasis, Niiza Port, Bombae"
+    },
+    {
+      "id": "batt_radiant_messengers",
+      "name": "Radiant Messengers",
+      "category": "Support",
+      "rank": "B",
+      "gatherLimit": 18,
+      "ability": "Splash Recover",
+      "stats": {
+        "mag": 2,
+        "res": 2,
+        "lck": 2,
+        "cha": 7
+      },
+      "location": "Ribeira, Messalina Orchards, Daimōn, Baina Oasis, Shama Port"
+    },
+    {
+      "id": "batt_secret_art_wielders",
+      "name": "Secret-Art Wielders",
+      "category": "Support",
+      "rank": "B",
+      "gatherLimit": 18,
+      "ability": "Complete Recovery",
+      "stats": {
+        "mag": 2,
+        "res": 3,
+        "lck": 1,
+        "cha": 7
+      },
+      "location": "Bombae"
+    },
+    {
+      "id": "batt_troupe_of_aesobos",
+      "name": "Troupe of Aesobos",
+      "category": "Support",
+      "rank": "B",
+      "gatherLimit": 18,
+      "ability": "Extensive Recovery",
+      "stats": {
+        "mag": 2,
+        "res": 1,
+        "lck": 3,
+        "cha": 7
+      },
+      "location": "Ribeira"
+    },
+    {
+      "id": "batt_mons_iron_squad",
+      "name": "Mons Iron Squad",
+      "category": "Defense",
+      "rank": "C",
+      "gatherLimit": 14,
+      "ability": "Two-Wall Formation",
+      "stats": {
+        "def": 3,
+        "res": 2,
+        "cha": 5
+      },
+      "location": "Mons"
+    },
+    {
+      "id": "batt_pandora_port_guard",
+      "name": "Pandora Port Guard",
+      "category": "Defense",
+      "rank": "C",
+      "gatherLimit": 14,
+      "ability": "Palisade Formation",
+      "stats": {
+        "dex": 2,
+        "def": 3,
+        "cha": 5
+      },
+      "location": "Port of Pandora"
+    },
+    {
+      "id": "batt_steel_shield_guard",
+      "name": "Steel-Shield Guard",
+      "category": "Defense",
+      "rank": "C",
+      "gatherLimit": 14,
+      "ability": "Tri-Front Formation",
+      "stats": {
+        "str": 1,
+        "dex": 1,
+        "def": 2,
+        "res": 1,
+        "cha": 5
+      },
+      "location": "Megaira, Aguiño, Callianera Port, Zoste, Barsk Port Town, Yaaman, Shama Port, Benetnasch, Mahón Castle Town, Mons"
+    },
+    {
+      "id": "batt_veteran_sentinels",
+      "name": "Veteran Sentinels",
+      "category": "Defense",
+      "rank": "C",
+      "gatherLimit": 14,
+      "ability": "Vertical Formation",
+      "stats": {
+        "dex": 2,
+        "def": 2,
+        "res": 1,
+        "cha": 7
+      },
+      "location": "Alecto, Breston, Megaira, Mons, Ribeira, Whill, Zoste"
+    },
+    {
+      "id": "batt_aragonian_mages",
+      "name": "Aragonian Mages",
+      "category": "Magical",
+      "rank": "C",
+      "gatherLimit": 14,
+      "ability": "Iceguard",
+      "stats": {
+        "mag": 2,
+        "res": 2,
+        "lck": 1,
+        "cha": 5
+      },
+      "location": "Kassite"
+    },
+    {
+      "id": "batt_elevated_mages",
+      "name": "Elevated Mages",
+      "category": "Magical",
+      "rank": "C",
+      "gatherLimit": 14,
+      "ability": "Encircling Ice",
+      "stats": {
+        "mag": 2,
+        "res": 1,
+        "lck": 2,
+        "cha": 5
+      },
+      "location": "Messalina Orchards, Osiris, Callianera Port, Twalinn, Raivo Port, Orens, Shama Port, Mahón Castle Town, Kassite"
+    },
+    {
+      "id": "batt_mage_instructors",
+      "name": "Mage Instructors",
+      "category": "Magical",
+      "rank": "C",
+      "gatherLimit": 14,
+      "ability": "Scattering Ice",
+      "stats": {
+        "mag": 2,
+        "res": 2,
+        "lck": 1,
+        "cha": 5
+      },
+      "location": "Osiris, Daimōn, Port of Pandora, Twalinn, Baina Oasis, Barsk Port Town, Benetnasch, Niiza Port, Kassite, Fina"
+    },
+    {
+      "id": "batt_adept_archers",
+      "name": "Adept Archers",
+      "category": "Physical",
+      "rank": "C",
+      "gatherLimit": 14,
+      "ability": "Disturbing Volley",
+      "stats": {
+        "str": 1,
+        "spd": 1,
+        "dex": 2,
+        "def": 1,
+        "cha": 5
+      },
+      "location": "Aguiño, Breston, Grand Aragon, Orens, Whill, Zoste"
+    },
+    {
+      "id": "batt_advanced_warriors",
+      "name": "Advanced Warriors",
+      "category": "Physical",
+      "rank": "C",
+      "gatherLimit": 14,
+      "ability": "Line of Lances",
+      "stats": {
+        "str": 2,
+        "dex": 1,
+        "def": 2,
+        "cha": 5
+      },
+      "location": "Fina, Grand Aragon, Aguiño, Yaaman, Whill, Da Mina, Breston, Alecto, Mahón Castle Town, Regia"
+    },
+    {
+      "id": "batt_alecto_morningstars",
+      "name": "Alecto Morningstars",
+      "category": "Physical",
+      "rank": "C",
+      "gatherLimit": 14,
+      "ability": "All-Out Offensive",
+      "stats": {
+        "str": 3,
+        "def": 2,
+        "cha": 5
+      },
+      "location": "Alecto"
+    },
+    {
+      "id": "batt_twin_jewel_fans",
+      "name": "Twin Jewel Fans",
+      "category": "Physical",
+      "rank": "C",
+      "gatherLimit": 14,
+      "ability": "Blaze",
+      "stats": {
+        "str": 2,
+        "spd": 1,
+        "dex": 2,
+        "cha": 5
+      },
+      "location": "Grand Aragon"
+    },
+    {
+      "id": "batt_yaaman_alliance",
+      "name": "Yaaman Alliance",
+      "category": "Physical",
+      "rank": "C",
+      "gatherLimit": 14,
+      "ability": "Poison Tactics",
+      "stats": {
+        "str": 2,
+        "spd": 1,
+        "dex": 2,
+        "cha": 5
+      },
+      "location": "Yaaman"
+    },
+    {
+      "id": "batt_elevated_priests",
+      "name": "Elevated Priests",
+      "category": "Support",
+      "rank": "C",
+      "gatherLimit": 14,
+      "ability": "Splash Recover",
+      "stats": {
+        "mag": 2,
+        "res": 2,
+        "lck": 1,
+        "cha": 5
+      },
+      "location": "Daimōn, Raivo Port, Baina Oasis, Orens, Niiza Port, Regia, Bombae, Ribeira, Messalina Orchards"
+    },
+    {
+      "id": "batt_fina_fishing_guild",
+      "name": "Fina Fishing Guild",
+      "category": "Support",
+      "rank": "C",
+      "gatherLimit": 14,
+      "ability": "Mixed Poison Recovery",
+      "stats": {
+        "mag": 1,
+        "res": 2,
+        "lck": 2,
+        "cha": 5
+      },
+      "location": "Fina"
+    },
+    {
+      "id": "batt_holy_disciples",
+      "name": "Holy Disciples",
+      "category": "Support",
+      "rank": "C",
+      "gatherLimit": 14,
+      "ability": "Group Detoxification",
+      "stats": {
+        "mag": 1,
+        "res": 2,
+        "lck": 2,
+        "cha": 5
+      },
+      "location": "Ribeira, Osiris, Callianera Port, Daimōn, Twalinn, Raivo Port, Baina Oasis, Barsk Port Town, Shama Port, Niiza Port, Bombae"
+    },
+    {
+      "id": "batt_armored_sentinels",
+      "name": "Armored Sentinels",
+      "category": "Defense",
+      "rank": "D",
+      "gatherLimit": 10,
+      "ability": "Bulwark Formation",
+      "stats": {
+        "dex": 1,
+        "def": 2,
+        "cha": 4
+      },
+      "location": "Bombae, Kassite, Ribeira, Grand Aragon, Megaira, Zoste, Barsk Port Town, Yaaman, Shama Port, Whill, Benetnasch, Da Mina, Alecto, Mons"
+    },
+    {
+      "id": "batt_iron_shield_fighters",
+      "name": "Iron-Shield Fighters",
+      "category": "Defense",
+      "rank": "D",
+      "gatherLimit": 10,
+      "ability": "Tri-Front Formation",
+      "stats": {
+        "str": 1,
+        "def": 2,
+        "cha": 4
+      },
+      "location": "Port of Pandora, Zoste, Baina Oasis, Whill, Benetnasch, Da Mina, Breston, Alecto, Mahón Castle Town, Mons, Bombae, Grand Aragon, Megaira, Messalina Orchards, Aguiño"
+    },
+    {
+      "id": "batt_vandahl_security",
+      "name": "Vandahl Security",
+      "category": "Defense",
+      "rank": "D",
+      "gatherLimit": 10,
+      "ability": "Flank-Guard Formation",
+      "stats": {
+        "dex": 1,
+        "def": 2,
+        "cha": 4
+      },
+      "location": "Callianera Port"
+    },
+    {
+      "id": "batt_blackfire_mages",
+      "name": "Blackfire Mages",
+      "category": "Magical",
+      "rank": "D",
+      "gatherLimit": 10,
+      "ability": "Scattered Flames",
+      "stats": {
+        "mag": 2,
+        "res": 1,
+        "cha": 4
+      },
+      "location": "Orens, Shama Port, Benetnasch, Niiza Port, Breston, Regia, Kassite, Ribeira, Osiris, Daimōn, Port of Pandora, Twalinn, Baina Oasis"
+    },
+    {
+      "id": "batt_mage_cantors",
+      "name": "Mage Cantors",
+      "category": "Magical",
+      "rank": "D",
+      "gatherLimit": 10,
+      "ability": "Encircling Flames",
+      "stats": {
+        "mag": 1,
+        "def": 1,
+        "res": 1,
+        "cha": 4
+      },
+      "location": "Kassite, Fina, Messalina Orchards, Osiris, Callianera Port, Twalinn, Raivo Port, Barsk Port Town, Orens, Shama Port, Benetnasch, Niiza Port, Mahón Castle Town"
+    },
+    {
+      "id": "batt_twalinn_sun_squad",
+      "name": "Twalinn Sun Squad",
+      "category": "Magical",
+      "rank": "D",
+      "gatherLimit": 10,
+      "ability": "Fireguard",
+      "stats": {
+        "mag": 1,
+        "res": 2,
+        "cha": 4
+      },
+      "location": "Twalinn"
+    },
+    {
+      "id": "batt_hunter_drifters",
+      "name": "Hunter-Drifters",
+      "category": "Physical",
+      "rank": "D",
+      "gatherLimit": 10,
+      "ability": "Disturbing Volley",
+      "stats": {
+        "str": 1,
+        "dex": 1,
+        "cha": 4
+      },
+      "location": "Grand Aragon, Megaira, Messalina Orchards, Port of Pandora, Zoste, Barsk Port Town, Orens, Whill, Da Mina, Breston, Alecto, Mons, Regia"
+    },
+    {
+      "id": "batt_lyoshan_bandits",
+      "name": "Lyoshan Bandits",
+      "category": "Physical",
+      "rank": "D",
+      "gatherLimit": 10,
+      "ability": "Disturbing Strike",
+      "stats": {
+        "str": 1,
+        "spd": 1,
+        "dex": 1,
+        "cha": 4
+      },
+      "location": "Aguiño"
+    },
+    {
+      "id": "batt_model_soldiers",
+      "name": "Model Soldiers",
+      "category": "Physical",
+      "rank": "D",
+      "gatherLimit": 10,
+      "ability": "Line of Lances",
+      "stats": {
+        "str": 1,
+        "def": 2,
+        "cha": 4
+      },
+      "location": "Fina, Grand Aragon, Megaira, Aguiño, Callianera Port, Zoste, Yaaman, Whill, Da Mina, Breston, Alecto, Mahón Castle Town, Mons, Regia"
+    },
+    {
+      "id": "batt_aurora_s_stargazers",
+      "name": "Aurora's Stargazers",
+      "category": "Support",
+      "rank": "D",
+      "gatherLimit": 10,
+      "ability": "Distant Recovery",
+      "stats": {
+        "mag": 1,
+        "res": 2,
+        "cha": 4
+      },
+      "location": "Raivo Port"
+    },
+    {
+      "id": "batt_fighting_clergy",
+      "name": "Fighting Clergy",
+      "category": "Support",
+      "rank": "D",
+      "gatherLimit": 10,
+      "ability": "Column Recovery",
+      "stats": {
+        "res": 2,
+        "lck": 1,
+        "cha": 4
+      },
+      "location": "Niiza Port, Mahón Castle Town, Bombae, Fina, Ribeira, Messalina Orchards, Osiris, Callianera Port, Daimōn, Twalinn, Raivo Port, Baina Oasis, Barsk Post Town, Yaaman, Shama Port"
+    },
+    {
+      "id": "batt_jurah_s_librarians",
+      "name": "Jurah's Librarians",
+      "category": "Support",
+      "rank": "D",
+      "gatherLimit": 10,
+      "ability": "Joint Recovery",
+      "stats": {
+        "mag": 1,
+        "res": 1,
+        "lck": 1,
+        "cha": 4
+      },
+      "location": "Daimōn"
+    },
+    {
+      "id": "batt_pure_priests",
+      "name": "Pure Priests",
+      "category": "Support",
+      "rank": "D",
+      "gatherLimit": 10,
+      "ability": "Splash Recover",
+      "stats": {
+        "mag": 1,
+        "res": 1,
+        "lck": 1,
+        "cha": 4
+      },
+      "location": "Niiza Port, Regia, Bombae, Kassite, Ribeira, Fina, Osiris, Daimōn, Port of Pandora, Raivo Port, Baina Oasis, Yaaman, Orens"
+    },
+    {
+      "id": "batt_bronze_shield_guard",
+      "name": "Bronze-Shield Guard",
+      "category": "Defense",
+      "rank": "E",
+      "gatherLimit": 8,
+      "ability": "Tri-Front Formation",
+      "stats": {
+        "def": 2,
+        "cha": 3
+      },
+      "location": "Da Mina, Breston, Alecto, Mahón Castle Town, Mons, Bombae, Kassite, Grand Aragon, Megaira, Messalina Orchards, Aguiño, Callianera Port, Port of Pandora, Twalinn, Zoste, Barsk Post Town, Shama Port, Whill, Benetnasch"
+    },
+    {
+      "id": "batt_rookie_vanguard",
+      "name": "Rookie Vanguard",
+      "category": "Defense",
+      "rank": "E",
+      "gatherLimit": 8,
+      "ability": "Vertical Formation",
+      "stats": {
+        "def": 2,
+        "cha": 3
+      },
+      "location": "Da Mina, Breston, Alecto, Mons, Bombae, Kassite, Ribeira, Megaira, Messalina Orchards, Callianera Port, Daimōn, Port of Pandora, Zoste, Raivo Port, Baina Oasis, Yaaman, Whill, Benetnasch, Grand Aragon"
+    },
+    {
+      "id": "batt_salt_lake_protectors",
+      "name": "Salt Lake Protectors",
+      "category": "Defense",
+      "rank": "E",
+      "gatherLimit": 8,
+      "ability": "Dual-Wing Formation",
+      "stats": {
+        "def": 2,
+        "cha": 3
+      },
+      "location": "Zoste"
+    },
+    {
+      "id": "batt_lesser_mages",
+      "name": "Lesser Mages",
+      "category": "Magical",
+      "rank": "E",
+      "gatherLimit": 8,
+      "ability": "Encircling Flames",
+      "stats": {
+        "mag": 2,
+        "cha": 2
+      },
+      "location": "Niiza Port, Alecto, Mahón Castle Town, Bombae, Kassite, Fina, Grand Aragon, Messalina Orchards, Aguiño, Osiris, Callianera Port, Port of Pandora, Twalinn, Baina Oasis, Barsk Post Town, Orens, Benetnasch"
+    },
+    {
+      "id": "batt_mage_pupils",
+      "name": "Mage Pupils",
+      "category": "Magical",
+      "rank": "E",
+      "gatherLimit": 8,
+      "ability": "Scattered Flames",
+      "stats": {
+        "mag": 2,
+        "cha": 2
+      },
+      "location": "Twalinn, Raivo Port, Baina Oasis, Barsk Port Town, Yaaman, Orens, Shama Port, Benetnasch, Niiza Port, Da Mina, Breston, Regia, Kassite, Ribeira, Fina, Megaira, Osiris, Daimōn"
+    },
+    {
+      "id": "batt_novice_hunters",
+      "name": "Novice Hunters",
+      "category": "Physical",
+      "rank": "E",
+      "gatherLimit": 8,
+      "ability": "Disrupting Volley",
+      "stats": {
+        "str": 1,
+        "dex": 1,
+        "cha": 3
+      },
+      "location": "Tutorial, Raivo Port, Orens, Whill, Niiza Port, Da Mina, Breston, Alecto, Mahón Castle Town, Mons, Regia, Ribeira, Fina, Grand Aragon, Megaira, Aguiño, Osiris, Daimōn, Zoste"
+    },
+    {
+      "id": "batt_regia_breeze_co",
+      "name": "Regia Breeze Co.",
+      "category": "Physical",
+      "rank": "E",
+      "gatherLimit": 8,
+      "ability": "Disturbing Deadeye",
+      "stats": {
+        "str": 1,
+        "dex": 1,
+        "cha": 3
+      },
+      "location": "Regia"
+    },
+    {
+      "id": "batt_rookie_soldiers",
+      "name": "Rookie Soldiers",
+      "category": "Physical",
+      "rank": "E",
+      "gatherLimit": 8,
+      "ability": "Line of Lances",
+      "stats": {
+        "str": 2,
+        "cha": 3
+      },
+      "location": "Fina, Regia, Mons, Mahón Castle Town, Alecto, Breston, Da Mina, Whill, Shama Port, Yaaman, Barsk Port Town, Zoste, Port of Pandora, Callianera Port, Aguiño, Messalina Orchards, Megaira, Grand Aragon"
+    },
+    {
+      "id": "batt_holy_apprentices",
+      "name": "Holy Apprentices",
+      "category": "Support",
+      "rank": "E",
+      "gatherLimit": 8,
+      "ability": "Group Detoxification",
+      "stats": {
+        "res": 1,
+        "lck": 1,
+        "cha": 3
+      },
+      "location": "Mahón Castle Town, Mons, Bombae, Ribeira, Fina, Aguiño, Osiris, Callianera Port, Daimōn, Twalinn, Raivo Port, Baina Oasis, Yaaman, Orens, Shama Port, Benetnasch, Niiza Port"
+    },
+    {
+      "id": "batt_priest_trainees",
+      "name": "Priest Trainees",
+      "category": "Support",
+      "rank": "E",
+      "gatherLimit": 8,
+      "ability": "Splash Recover",
+      "stats": {
+        "res": 1,
+        "lck": 1,
+        "cha": 3
+      },
+      "location": "Tutorial, Raivo Port, Baina Oasis, Barsk Post Town, Yaaman, Orens, Shama Port, Whill, Niiza Port, Regia, Bombae, Kassite, Ribeira, Messalina Orchards, Osiris, Daimōn, Port of Pandora, Twalinn"
     }
   ]
 }

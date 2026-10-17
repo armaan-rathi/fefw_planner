@@ -17,6 +17,7 @@ import { SkillsEditor } from "./SkillsEditor";
 import { LearnsetEditor } from "./LearnsetEditor";
 import { PagesEditor } from "./PagesEditor";
 import { MountsEditor } from "./MountsEditor";
+import { BattalionsEditor } from "./BattalionsEditor";
 import { SupportsEditor } from "./SupportsEditor";
 
 export function DevMode() {
@@ -44,6 +45,7 @@ export function DevMode() {
         <NavLink to="skill-list">Skills</NavLink>
         <NavLink to="learnset">Learnsets</NavLink>
         <NavLink to="mounts">Mounts</NavLink>
+        <NavLink to="battalions">Battalions</NavLink>
         <NavLink to="supports">Supports</NavLink>
         <NavLink to="gods">Gods</NavLink>
         <NavLink to="npcs">Important NPCs</NavLink>
@@ -68,6 +70,7 @@ export function DevMode() {
         <Route path="skill-list" element={<SkillsEditor />} />
         <Route path="learnset" element={<LearnsetEditor />} />
         <Route path="mounts" element={<MountsEditor />} />
+        <Route path="battalions" element={<BattalionsEditor />} />
         <Route path="supports" element={<SupportsEditor />} />
         <Route path="gods" element={<CastEditor kind="gods" label="Gods" subtitleLabel="Domain" />} />
         <Route path="npcs" element={<CastEditor kind="npcs" label="Important NPCs" subtitleLabel="Affiliation / role" />} />

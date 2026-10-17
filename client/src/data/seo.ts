@@ -73,6 +73,10 @@ const PAGE_META: Record<string, PageSeo> = {
     title: "Paralogues",
     description: "Paralogue calendar and availability windows for Fire Emblem: Fortune's Weave, by route.",
   },
+  "/battalions": {
+    title: "Battalions",
+    description: "Recruitable battalions in Fire Emblem: Fortune's Weave — rank, gather limit, ability, stat bonuses and locations.",
+  },
   "/supports": {
     title: "Supports",
     description: "Support relationship chart for Fire Emblem: Fortune's Weave characters.",

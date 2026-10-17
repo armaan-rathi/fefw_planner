@@ -11,6 +11,7 @@ import { Proficiencies } from "./pages/Proficiencies";
 import { Learnset } from "./pages/Learnset";
 import { Mounts } from "./pages/Mounts";
 import { Paralogues } from "./pages/Paralogues";
+import { Battalions } from "./pages/Battalions";
 import { Supports } from "./pages/Supports";
 import { CastPage } from "./pages/CastPage";
 import { ClassList } from "./pages/ClassList";
@@ -120,6 +121,7 @@ function Shell() {
             <Route path="/learnset" element={<Learnset />} />
             <Route path="/mounts" element={<Mounts />} />
             <Route path="/paralogues" element={<Paralogues />} />
+            <Route path="/battalions" element={<Battalions />} />
             <Route path="/supports" element={<Supports />} />
             <Route path="/classes" element={<ClassList />} />
             <Route path="/tiers" element={<TierList />} />

@@ -20,5 +20,6 @@ export const NAV_PAGES: NavPage[] = [
   { key: "learnset", to: "/learnset", label: "Learnsets", row: 2 },
   { key: "mounts", to: "/mounts", label: "Mounts", row: 2 },
   { key: "paralogues", to: "/paralogues", label: "Paralogues", row: 2 },
+  { key: "battalions", to: "/battalions", label: "Battalions", row: 2 },
   { key: "supports", to: "/supports", label: "Supports", row: 2 },
 ];

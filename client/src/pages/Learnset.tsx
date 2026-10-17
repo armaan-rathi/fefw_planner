@@ -132,7 +132,10 @@ export function Learnset() {
 
       {spells.length > 0 && <SpellReference spells={spells} label={profLabel(activeProf)} />}
       {arts.length > 0 && <CombatArtReference arts={arts} label={profLabel(activeProf)} />}
-      {catSkills.length > 0 && <SkillReference skills={catSkills} label={profLabel(activeProf)} />}
+      {/* Only show the skill-details table once descriptions exist for this proficiency. */}
+      {catSkills.some((s) => s.description || s.plus?.description || s.plusPlus?.description) && (
+        <SkillReference skills={catSkills} label={profLabel(activeProf)} />
+      )}
     </div>
   );
 }

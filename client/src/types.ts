@@ -425,4 +425,19 @@ export interface DB {
   spells?: Spell[]; // Magic catalog (spells), grouped by proficiency
   combatArts?: CombatArt[]; // Combat arts catalog, grouped by weapon proficiency
   skills?: Skill[]; // Skills catalog (personal/unique/class/authority), with +/++ upgrades
+  battalions?: Battalion[]; // recruitable battalions
+}
+
+// A recruitable battalion.
+export const BATTALION_CATEGORIES = ["Defense", "Magical", "Physical", "Support"] as const;
+export const BATTALION_RANKS = ["A", "B", "C", "D", "E"] as const; // A highest
+export interface Battalion {
+  id: string;
+  name: string;
+  category: string; // one of BATTALION_CATEGORIES
+  rank: string; // rank requirement (A–E)
+  gatherLimit: number;
+  ability: string;
+  stats: Growths; // flat stat bonuses
+  location: string;
 }
