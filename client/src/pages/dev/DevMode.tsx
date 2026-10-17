@@ -12,6 +12,8 @@ import { GachaEditor } from "./GachaEditor";
 import { RecruitmentEditor } from "./RecruitmentEditor";
 import { GrowthsEditor } from "./GrowthsEditor";
 import { MagicEditor } from "./MagicEditor";
+import { CombatArtsEditor } from "./CombatArtsEditor";
+import { SkillsEditor } from "./SkillsEditor";
 import { LearnsetEditor } from "./LearnsetEditor";
 import { PagesEditor } from "./PagesEditor";
 import { MountsEditor } from "./MountsEditor";
@@ -38,7 +40,9 @@ export function DevMode() {
         <NavLink to="recruitment">Recruitment</NavLink>
         <NavLink to="growths">Growth Rates</NavLink>
         <NavLink to="magic">Magic</NavLink>
-        <NavLink to="learnset">Learnset</NavLink>
+        <NavLink to="combat-arts">Combat Arts</NavLink>
+        <NavLink to="skill-list">Skills</NavLink>
+        <NavLink to="learnset">Learnsets</NavLink>
         <NavLink to="mounts">Mounts</NavLink>
         <NavLink to="supports">Supports</NavLink>
         <NavLink to="gods">Gods</NavLink>
@@ -60,6 +64,8 @@ export function DevMode() {
         <Route path="recruitment" element={<RecruitmentEditor />} />
         <Route path="growths" element={<GrowthsEditor />} />
         <Route path="magic" element={<MagicEditor />} />
+        <Route path="combat-arts" element={<CombatArtsEditor />} />
+        <Route path="skill-list" element={<SkillsEditor />} />
         <Route path="learnset" element={<LearnsetEditor />} />
         <Route path="mounts" element={<MountsEditor />} />
         <Route path="supports" element={<SupportsEditor />} />

@@ -60,7 +60,7 @@ const PAGE_META: Record<string, PageSeo> = {
       "Weapon and skill proficiencies for every unit in Fire Emblem: Fortune's Weave, with boon and bane filters.",
   },
   "/learnset": {
-    title: "Learnset",
+    title: "Learnsets",
     description:
       "Spells and combat arts each unit learns by proficiency rank in Fire Emblem: Fortune's Weave, with full spell stats.",
   },

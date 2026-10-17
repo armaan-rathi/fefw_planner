@@ -3304,6 +3304,87 @@
           "S": [
             "spell_faith_warp"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_defending_spear"
+          ],
+          "B": [
+            "art_lance_holy_spear"
+          ],
+          "A": [
+            "art_lance_raging_tempest"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_chop"
+          ],
+          "B": [
+            "art_sword_skysplit"
+          ],
+          "A": [
+            "art_sword_windsweep"
+          ],
+          "S+": [
+            "art_sword_swordfaire"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_magic_throw"
+          ],
+          "B": [
+            "art_axe_guard_spike"
+          ],
+          "A": [
+            "art_axe_triple_spike"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_mighty_fist"
+          ],
+          "C": [
+            "art_brawl_fading_blow"
+          ],
+          "B": [
+            "art_brawl_spirit_fist"
+          ],
+          "A": [
+            "art_brawl_spirit_blow"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_curved_shot"
+          ],
+          "C": [
+            "art_bow_breakaway_shot"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_attack_formation"
+          ],
+          "C": [
+            "skill_authority_distraction"
+          ],
+          "B": [
+            "skill_authority_distraction+"
+          ],
+          "A": [
+            "skill_authority_counter_cavalry"
+          ]
         }
       }
     },
@@ -3388,6 +3469,96 @@
           ],
           "A": [
             "spell_faith_berserk"
+          ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_gale_spear"
+          ],
+          "C": [
+            "art_lance_stinger"
+          ],
+          "B": [
+            "art_lance_graceful_blow"
+          ],
+          "A": [
+            "art_lance_flying_spear"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_grounder"
+          ],
+          "C": [
+            "art_sword_crosswise_cut"
+          ],
+          "B": [
+            "art_sword_flash_blow"
+          ],
+          "A": [
+            "art_sword_furious_strike"
+          ],
+          "S+": [
+            "art_sword_swordfaire"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_smash"
+          ],
+          "C": [
+            "art_axe_enrage"
+          ],
+          "B": [
+            "art_axe_riot"
+          ],
+          "A": [
+            "art_axe_killer_spike"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_deal_death"
+          ],
+          "C": [
+            "art_brawl_one_on_one"
+          ],
+          "B": [
+            "art_brawl_razor_fist"
+          ],
+          "A": [
+            "art_brawl_assassin_s_fist"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_vital_shot"
+          ],
+          "C": [
+            "art_bow_shadow_arrow"
+          ],
+          "B": [
+            "art_bow_spiral_shot"
+          ],
+          "A": [
+            "art_bow_haphazard"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_threaten"
+          ],
+          "C": [
+            "skill_authority_lend_strength"
+          ],
+          "B": [
+            "skill_authority_threaten+"
+          ],
+          "A": [
+            "skill_authority_lend_strength+"
+          ],
+          "S": [
+            "skill_authority_lend_strength++"
           ]
         }
       }
@@ -3481,6 +3652,102 @@
           "S": [
             "spell_faith_aura"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_armored_blow"
+          ],
+          "B": [
+            "art_lance_protective_storm"
+          ],
+          "A": [
+            "art_lance_brilliant_strike"
+          ],
+          "S+": [
+            "art_lance_spearfaire"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_chop"
+          ],
+          "B": [
+            "art_sword_ripple_slash"
+          ],
+          "A": [
+            "art_sword_blade_slam"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_helm_splitter"
+          ],
+          "B": [
+            "art_axe_guard_spike"
+          ],
+          "A": [
+            "art_axe_focused_strike"
+          ],
+          "S+": [
+            "art_axe_axefaire"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_mighty_fist"
+          ],
+          "C": [
+            "art_brawl_crush_armor"
+          ],
+          "B": [
+            "art_brawl_spirit_fist"
+          ],
+          "A": [
+            "art_brawl_one_two_punch"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_curved_shot"
+          ],
+          "C": [
+            "art_bow_lead_arrow"
+          ],
+          "B": [
+            "art_bow_arrowcrack"
+          ],
+          "A": [
+            "art_bow_spirit_bow"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_rein"
+          ],
+          "C": [
+            "skill_authority_attack_formation"
+          ],
+          "B": [
+            "skill_authority_rein+"
+          ],
+          "A": [
+            "skill_authority_attack_formation+"
+          ],
+          "S": [
+            "skill_authority_frontline_gambit"
+          ],
+          "S+": [
+            "skill_authority_gambit_mastery"
+          ]
         }
       }
     },
@@ -3570,6 +3837,93 @@
           ],
           "S": [
             "spell_faith_fortify"
+          ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_protective_spear"
+          ],
+          "B": [
+            "art_lance_sword_breaker"
+          ],
+          "A": [
+            "art_lance_flying_spear"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_destreza"
+          ],
+          "B": [
+            "art_sword_gale_blow"
+          ],
+          "A": [
+            "art_sword_heat_haze"
+          ],
+          "S+": [
+            "art_sword_swordfaire"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_wild_abandon"
+          ],
+          "B": [
+            "art_axe_riot"
+          ],
+          "A": [
+            "art_axe_double_swing"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_feint"
+          ],
+          "C": [
+            "art_brawl_beatdown"
+          ],
+          "B": [
+            "art_brawl_battle_rush"
+          ],
+          "A": [
+            "art_brawl_assassin_s_fist"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_curved_shot"
+          ],
+          "C": [
+            "art_bow_surprise_shot"
+          ],
+          "B": [
+            "art_bow_shadow_arrow"
+          ],
+          "A": [
+            "art_bow_calm_call"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_distraction"
+          ],
+          "C": [
+            "skill_authority_swap"
+          ],
+          "B": [
+            "skill_authority_distraction+"
+          ],
+          "A": [
+            "skill_authority_counter_mages"
           ]
         }
       }
@@ -3681,6 +4035,87 @@
           "S": [
             "spell_faith_aura"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_flowing_spear"
+          ],
+          "C": [
+            "art_lance_protective_spear"
+          ],
+          "B": [
+            "art_lance_sword_breaker"
+          ],
+          "A": [
+            "art_lance_frozen_spear_slice"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_finesse_blade"
+          ],
+          "B": [
+            "art_sword_hexblade"
+          ],
+          "A": [
+            "art_sword_greater_hexblade"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_half_spike"
+          ],
+          "C": [
+            "art_axe_careful_attack"
+          ],
+          "B": [
+            "art_axe_spear_buster"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_cautious_blow"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_warning_shot"
+          ],
+          "C": [
+            "art_bow_snipe"
+          ],
+          "B": [
+            "art_bow_magic_arrow"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_lend_strength"
+          ],
+          "D+": [
+            "skill_authority_lend_defense"
+          ],
+          "C": [
+            "skill_authority_lend_magic"
+          ],
+          "B": [
+            "skill_authority_lend_strength+"
+          ],
+          "B+": [
+            "skill_authority_lend_defense+"
+          ],
+          "A": [
+            "skill_authority_lend_magic+"
+          ],
+          "S": [
+            "skill_authority_lend_magic++"
+          ],
+          "S+": [
+            "skill_authority_gambit_mastery"
+          ]
         }
       }
     },
@@ -3775,6 +4210,97 @@
           "A": [
             "spell_faith_ward"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_protective_spear"
+          ],
+          "B": [
+            "art_lance_holy_spear"
+          ],
+          "A": [
+            "art_lance_frozen_spear_slice"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_shadow_gambit"
+          ],
+          "B": [
+            "art_sword_ripple_slash"
+          ],
+          "A": [
+            "art_sword_dark_ray"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_magic_throw"
+          ],
+          "B": [
+            "art_axe_devilwind_flurry"
+          ],
+          "A": [
+            "art_axe_magic_breaker"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_cautious_blow"
+          ],
+          "C": [
+            "art_brawl_feint"
+          ],
+          "B": [
+            "art_brawl_mind_s_eye_blow"
+          ],
+          "A": [
+            "art_brawl_magic_combo"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_curved_shot"
+          ],
+          "C": [
+            "art_bow_snipe"
+          ],
+          "B": [
+            "art_bow_ward_arrow"
+          ],
+          "A": [
+            "art_bow_calm_call"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_draw_back"
+          ],
+          "C": [
+            "skill_authority_lend_magic"
+          ],
+          "B": [
+            "skill_authority_counter_mages"
+          ],
+          "A": [
+            "skill_authority_lend_magic+"
+          ],
+          "S": [
+            "skill_authority_lend_magic++",
+            "skill_authority_counter_mages+"
+          ],
+          "S+": [
+            "skill_authority_gambit_mastery"
+          ]
         }
       }
     },
@@ -3865,6 +4391,67 @@
           ],
           "A": [
             "spell_faith_silence"
+          ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_flowing_spear"
+          ],
+          "C": [
+            "art_lance_quick_thrust"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_sunder"
+          ],
+          "C": [
+            "art_sword_hexblade"
+          ],
+          "B": [
+            "art_sword_vicious_flash"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_half_spike"
+          ],
+          "C": [
+            "art_axe_spear_buster"
+          ],
+          "B": [
+            "art_axe_devilwind_flurry"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_curtail_magic"
+          ],
+          "C": [
+            "art_brawl_beatdown"
+          ]
+        },
+        "bow": {
+          "C": [
+            "art_bow_leg_shot"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_lend_strength"
+          ],
+          "C": [
+            "skill_authority_lend_dexterity"
+          ],
+          "B": [
+            "skill_authority_lend_strength+"
+          ],
+          "A": [
+            "skill_authority_lend_strength++",
+            "skill_authority_lend_dexterity++"
+          ],
+          "S": [
+            "skill_authority_frontline_gambit"
           ]
         }
       }
@@ -3963,6 +4550,90 @@
           ],
           "A": [
             "spell_faith_rescue"
+          ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_armored_blow"
+          ],
+          "B": [
+            "art_lance_protective_storm"
+          ],
+          "A": [
+            "art_lance_raging_tempest"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_tiger_slash"
+          ],
+          "B": [
+            "art_sword_blaze_blow"
+          ],
+          "A": [
+            "art_sword_blade_slam"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_discerning_blow"
+          ],
+          "B": [
+            "art_axe_guard_spike"
+          ],
+          "A": [
+            "art_axe_power_throw"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_mighty_fist"
+          ],
+          "C": [
+            "art_brawl_battle_blow"
+          ],
+          "B": [
+            "art_brawl_knockout"
+          ],
+          "A": [
+            "art_brawl_power_combo"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_curved_shot"
+          ],
+          "C": [
+            "art_bow_leg_shot"
+          ],
+          "B": [
+            "art_bow_arrowcrack"
+          ],
+          "A": [
+            "art_bow_leaden_draw"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_defense_formation"
+          ],
+          "C": [
+            "skill_authority_rein"
+          ],
+          "B": [
+            "skill_authority_rein+"
+          ],
+          "A": [
+            "skill_authority_defense_formation+"
           ]
         }
       }
@@ -4064,6 +4735,79 @@
           ],
           "A": [
             "spell_faith_physic"
+          ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_quick_thrust"
+          ],
+          "B": [
+            "art_lance_double_throw"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_sunder"
+          ],
+          "C": [
+            "art_sword_rend_armor"
+          ],
+          "B": [
+            "art_sword_flash_blow"
+          ],
+          "A": [
+            "art_sword_single_sunder"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_smash"
+          ],
+          "C": [
+            "art_axe_hurl"
+          ],
+          "B": [
+            "art_axe_double_attack"
+          ],
+          "A": [
+            "art_axe_power_throw"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_deal_death"
+          ],
+          "C": [
+            "art_brawl_fading_blow"
+          ],
+          "B": [
+            "art_brawl_jack_hit"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_curved_shot",
+            "art_bow_vital_shot"
+          ],
+          "C": [
+            "art_bow_encloser"
+          ],
+          "B": [
+            "art_bow_spiral_shot"
+          ],
+          "A": [
+            "art_bow_leaden_draw"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_swap"
+          ],
+          "B": [
+            "skill_authority_counter_snipers"
           ]
         }
       }
@@ -4170,6 +4914,84 @@
           "A": [
             "spell_faith_barrier"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_focused_throw"
+          ],
+          "B": [
+            "art_lance_double_throw"
+          ],
+          "A": [
+            "art_lance_yawning_throw"
+          ],
+          "S+": [
+            "art_lance_spearfaire"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_chop"
+          ],
+          "B": [
+            "art_sword_blaze_blow"
+          ],
+          "A": [
+            "art_sword_blade_slam"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_wild_abandon"
+          ],
+          "B": [
+            "art_axe_guard_spike"
+          ],
+          "A": [
+            "art_axe_reflecting_dance"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_mighty_fist"
+          ],
+          "C": [
+            "art_brawl_crush_armor"
+          ],
+          "B": [
+            "art_brawl_knockout"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_vital_shot"
+          ],
+          "C": [
+            "art_bow_lead_arrow"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_threaten"
+          ],
+          "C": [
+            "skill_authority_shove"
+          ],
+          "B": [
+            "skill_authority_lend_defense"
+          ],
+          "A": [
+            "skill_authority_lend_defense+"
+          ]
         }
       }
     },
@@ -4255,6 +5077,88 @@
           ],
           "A": [
             "spell_faith_regenera"
+          ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_defending_spear"
+          ],
+          "B": [
+            "art_lance_vanguard_spear"
+          ],
+          "A": [
+            "art_lance_yawning_throw"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_tiger_slash"
+          ],
+          "B": [
+            "art_sword_blaze_blow"
+          ],
+          "A": [
+            "art_sword_furious_strike"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike",
+            "art_axe_half_spike"
+          ],
+          "C": [
+            "art_axe_enrage"
+          ],
+          "B": [
+            "art_axe_battleblade_strike"
+          ],
+          "A": [
+            "art_axe_triple_spike"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_mighty_fist"
+          ],
+          "C": [
+            "art_brawl_battle_blow"
+          ],
+          "B": [
+            "art_brawl_knockout"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_vital_shot"
+          ],
+          "C": [
+            "art_bow_lead_arrow"
+          ],
+          "B": [
+            "art_bow_spiral_shot"
+          ],
+          "A": [
+            "art_bow_haphazard"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_threaten"
+          ],
+          "C": [
+            "skill_authority_shove"
+          ],
+          "B": [
+            "skill_authority_threaten+"
+          ],
+          "A": [
+            "skill_authority_power_arts_order"
           ]
         }
       }
@@ -4364,6 +5268,90 @@
           "S": [
             "spell_faith_warp"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_flowing_spear"
+          ],
+          "C": [
+            "art_lance_stinger"
+          ],
+          "B": [
+            "art_lance_khamsin"
+          ],
+          "A": [
+            "art_lance_brilliant_strike"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_sunder"
+          ],
+          "C": [
+            "art_sword_grounder"
+          ],
+          "B": [
+            "art_sword_mist_reaper"
+          ],
+          "A": [
+            "art_sword_twin_blades"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_half_spike"
+          ],
+          "C": [
+            "art_axe_magic_throw"
+          ],
+          "B": [
+            "art_axe_devilwind_flurry"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_cautious_blow"
+          ],
+          "C": [
+            "art_brawl_curtail_magic"
+          ],
+          "B": [
+            "art_brawl_spirit_fist"
+          ],
+          "A": [
+            "art_brawl_one_two_punch"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_warning_shot"
+          ],
+          "C": [
+            "art_bow_encloser"
+          ],
+          "B": [
+            "art_bow_sneaky_shot"
+          ],
+          "A": [
+            "art_bow_calm_call"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_distraction"
+          ],
+          "C": [
+            "skill_authority_lend_dexterity"
+          ],
+          "B": [
+            "skill_authority_distraction+"
+          ],
+          "A": [
+            "skill_authority_lend_dexterity+"
+          ],
+          "S": [
+            "skill_authority_lend_dexterity++"
+          ]
         }
       }
     },
@@ -4469,6 +5457,81 @@
           "S": [
             "spell_faith_aura"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_defending_spear"
+          ],
+          "B": [
+            "art_lance_vanguard_spear"
+          ],
+          "A": [
+            "art_lance_brilliant_strike"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_grounder"
+          ],
+          "B": [
+            "art_sword_ripple_slash"
+          ],
+          "A": [
+            "art_sword_furious_strike"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_discerning_blow"
+          ],
+          "B": [
+            "art_axe_devilwind_flurry"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_mighty_fist"
+          ],
+          "C": [
+            "art_brawl_feint"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_curved_shot"
+          ],
+          "C": [
+            "art_bow_leg_shot"
+          ],
+          "B": [
+            "art_bow_magic_arrow"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_rein"
+          ],
+          "C": [
+            "skill_authority_defense_formation"
+          ],
+          "B": [
+            "skill_authority_rein+"
+          ],
+          "A": [
+            "skill_authority_defense_formation+"
+          ],
+          "S": [
+            "skill_authority_patch_up_stance"
+          ]
         }
       }
     },
@@ -4573,6 +5636,90 @@
           "A": [
             "spell_faith_fortify"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_armored_blow"
+          ],
+          "B": [
+            "art_lance_vanguard_spear"
+          ],
+          "A": [
+            "art_lance_raging_tempest"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_tiger_slash"
+          ],
+          "B": [
+            "art_sword_blaze_blow"
+          ],
+          "A": [
+            "art_sword_single_sunder"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_enrage"
+          ],
+          "B": [
+            "art_axe_crash"
+          ],
+          "A": [
+            "art_axe_bloodbath"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_mighty_fist"
+          ],
+          "C": [
+            "art_brawl_crush_armor"
+          ],
+          "B": [
+            "art_brawl_knockout"
+          ],
+          "A": [
+            "art_brawl_power_combo"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_warning_shot"
+          ],
+          "C": [
+            "art_bow_encloser"
+          ],
+          "B": [
+            "art_bow_mighty_shot"
+          ],
+          "A": [
+            "art_bow_leaden_draw"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_rein"
+          ],
+          "C": [
+            "skill_authority_distraction"
+          ],
+          "B": [
+            "skill_authority_rein+"
+          ],
+          "A": [
+            "skill_authority_distraction+"
+          ]
         }
       }
     },
@@ -4676,6 +5823,75 @@
           ],
           "A": [
             "spell_faith_rescue"
+          ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_jab"
+          ],
+          "B": [
+            "art_lance_vanguard_spear"
+          ],
+          "A": [
+            "art_lance_flying_spear"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_haze_slice"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_careful_attack"
+          ],
+          "B": [
+            "art_axe_riot"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_mighty_fist"
+          ],
+          "C": [
+            "art_brawl_feint"
+          ],
+          "B": [
+            "art_brawl_battle_rush"
+          ],
+          "A": [
+            "art_brawl_power_combo"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_vital_shot"
+          ],
+          "C": [
+            "art_bow_breakaway_shot"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_distraction"
+          ],
+          "C": [
+            "skill_authority_lend_speed"
+          ],
+          "B": [
+            "skill_authority_distraction+"
+          ],
+          "A": [
+            "skill_authority_lend_speed+"
           ]
         }
       }
@@ -4783,6 +5999,90 @@
           "S": [
             "spell_faith_berserk"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_gale_spear"
+          ],
+          "C": [
+            "art_lance_jab"
+          ],
+          "B": [
+            "art_lance_frozen_spear_slice"
+          ],
+          "A": [
+            "art_lance_raging_tempest"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_chop"
+          ],
+          "B": [
+            "art_sword_hexblade"
+          ],
+          "A": [
+            "art_sword_greater_hexblade"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_wild_abandon"
+          ],
+          "B": [
+            "art_axe_lightning_axe"
+          ],
+          "A": [
+            "art_axe_triple_spike"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_mighty_fist"
+          ],
+          "C": [
+            "art_brawl_one_on_one"
+          ],
+          "B": [
+            "art_brawl_mystic_blow"
+          ],
+          "A": [
+            "art_brawl_magic_combo"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_vital_shot"
+          ],
+          "C": [
+            "art_bow_surprise_shot"
+          ],
+          "B": [
+            "art_bow_magic_arrow"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_attack_formation"
+          ],
+          "C": [
+            "skill_authority_threaten"
+          ],
+          "B": [
+            "skill_authority_threaten+"
+          ],
+          "A": [
+            "skill_authority_attack_formation+"
+          ],
+          "S": [
+            "skill_authority_propel"
+          ]
         }
       }
     },
@@ -4882,6 +6182,93 @@
           ],
           "A": [
             "spell_faith_ward"
+          ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_gale_spear"
+          ],
+          "C": [
+            "art_lance_stinger"
+          ],
+          "B": [
+            "art_lance_sword_breaker"
+          ],
+          "A": [
+            "art_lance_khamsin"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_haze_slice"
+          ],
+          "C": [
+            "art_sword_rend_armor"
+          ],
+          "B": [
+            "art_sword_ripple_slash"
+          ],
+          "A": [
+            "art_sword_windsweep"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_smash"
+          ],
+          "C": [
+            "art_axe_hurl"
+          ],
+          "B": [
+            "art_axe_spear_buster"
+          ],
+          "A": [
+            "art_axe_double_swing"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_deal_death"
+          ],
+          "C": [
+            "art_brawl_fading_blow"
+          ],
+          "B": [
+            "art_brawl_jack_hit"
+          ],
+          "A": [
+            "art_brawl_assassin_s_fist"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_curved_shot"
+          ],
+          "C": [
+            "art_bow_encloser"
+          ],
+          "B": [
+            "art_bow_sneaky_shot"
+          ],
+          "A": [
+            "art_bow_calm_call"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_draw_back"
+          ],
+          "C": [
+            "skill_authority_safety_first_order"
+          ],
+          "B": [
+            "skill_authority_defense_formation"
+          ],
+          "A": [
+            "skill_authority_defense_formation+"
+          ],
+          "S": [
+            "skill_authority_frontline_gambit"
           ]
         }
       }
@@ -4986,6 +6373,90 @@
           "S": [
             "spell_faith_aura"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_quick_thrust"
+          ],
+          "B": [
+            "art_lance_graceful_blow"
+          ],
+          "A": [
+            "art_lance_flying_spear"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_shadow_gambit"
+          ],
+          "B": [
+            "art_sword_gale_blow"
+          ],
+          "A": [
+            "art_sword_twin_blades"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_enrage"
+          ],
+          "B": [
+            "art_axe_riot"
+          ],
+          "A": [
+            "art_axe_power_spike"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_deal_death"
+          ],
+          "C": [
+            "art_brawl_feint"
+          ],
+          "B": [
+            "art_brawl_battle_rush"
+          ],
+          "A": [
+            "art_brawl_saving_fist"
+          ],
+          "S+": [
+            "art_brawl_fistfaire"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_curved_shot"
+          ],
+          "C": [
+            "art_bow_leg_shot"
+          ],
+          "A": [
+            "art_bow_twin_shot_flow"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_distraction"
+          ],
+          "C": [
+            "skill_authority_draw_back"
+          ],
+          "B": [
+            "skill_authority_distraction+"
+          ],
+          "A": [
+            "skill_authority_counter_snipers"
+          ]
         }
       }
     },
@@ -5073,6 +6544,96 @@
           "A": [
             "spell_faith_berserk"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_defending_spear"
+          ],
+          "B": [
+            "art_lance_yawning_throw"
+          ],
+          "A": [
+            "art_lance_flying_spear"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_tiger_slash"
+          ],
+          "B": [
+            "art_sword_blaze_blow"
+          ],
+          "A": [
+            "art_sword_lunging_gale"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_enrage"
+          ],
+          "B": [
+            "art_axe_riot"
+          ],
+          "A": [
+            "art_axe_instant_strike"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_mighty_fist"
+          ],
+          "C": [
+            "art_brawl_one_on_one"
+          ],
+          "B": [
+            "art_brawl_battle_rush"
+          ],
+          "A": [
+            "art_brawl_revival"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_curved_shot"
+          ],
+          "C": [
+            "art_bow_snipe"
+          ],
+          "B": [
+            "art_bow_spiral_shot"
+          ],
+          "A": [
+            "art_bow_twin_shot_flow"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_distraction"
+          ],
+          "C": [
+            "skill_authority_attack_formation"
+          ],
+          "B": [
+            "skill_authority_distraction+"
+          ],
+          "A": [
+            "skill_authority_attack_formation+"
+          ],
+          "S": [
+            "skill_authority_teach_requiem"
+          ],
+          "S+": [
+            "skill_authority_gambit_mastery"
+          ]
         }
       }
     },
@@ -5158,6 +6719,90 @@
           ],
           "A": [
             "spell_faith_physic"
+          ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_focused_throw"
+          ],
+          "B": [
+            "art_lance_graceful_blow"
+          ],
+          "A": [
+            "art_lance_raging_tempest"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_grounder"
+          ],
+          "B": [
+            "art_sword_hexblade"
+          ],
+          "A": [
+            "art_sword_fateful_strike"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_magic_throw"
+          ],
+          "B": [
+            "art_axe_lightning_axe"
+          ],
+          "A": [
+            "art_axe_double_swing"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_cautious_blow"
+          ],
+          "C": [
+            "art_brawl_feint"
+          ],
+          "B": [
+            "art_brawl_jack_hit"
+          ],
+          "A": [
+            "art_brawl_spirit_blow"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_curved_shot"
+          ],
+          "C": [
+            "art_bow_leg_shot"
+          ],
+          "B": [
+            "art_bow_sneaky_shot"
+          ],
+          "A": [
+            "art_bow_calm_call"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_lend_luck"
+          ],
+          "C": [
+            "skill_authority_attack_formation"
+          ],
+          "B": [
+            "skill_authority_lend_luck+"
+          ],
+          "A": [
+            "skill_authority_attack_formation+"
           ]
         }
       }
@@ -5248,6 +6893,96 @@
           "S": [
             "spell_faith_fortify"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_armored_blow"
+          ],
+          "B": [
+            "art_lance_holy_spear"
+          ],
+          "A": [
+            "art_lance_brilliant_strike"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_chop"
+          ],
+          "B": [
+            "art_sword_blade_slam"
+          ],
+          "A": [
+            "art_sword_greater_hexblade"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_wild_abandon"
+          ],
+          "B": [
+            "art_axe_lightning_axe"
+          ],
+          "A": [
+            "art_axe_power_spike"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_mighty_fist"
+          ],
+          "C": [
+            "art_brawl_one_on_one"
+          ],
+          "B": [
+            "art_brawl_spirit_fist"
+          ],
+          "A": [
+            "art_brawl_spirit_blow"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_curved_shot"
+          ],
+          "C": [
+            "art_bow_lead_arrow"
+          ],
+          "B": [
+            "art_bow_mighty_shot"
+          ],
+          "A": [
+            "art_bow_magic_arrow"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_defense_formation"
+          ],
+          "C": [
+            "skill_authority_lend_magic"
+          ],
+          "B": [
+            "skill_authority_defense_formation+"
+          ],
+          "A": [
+            "skill_authority_lend_magic+"
+          ],
+          "S": [
+            "skill_authority_lend_magic++"
+          ],
+          "S+": [
+            "skill_authority_gambit_mastery"
+          ]
         }
       }
     },
@@ -5336,6 +7071,96 @@
           "A": [
             "spell_faith_warp"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_flowing_spear"
+          ],
+          "C": [
+            "art_lance_quick_thrust"
+          ],
+          "B": [
+            "art_lance_sword_breaker"
+          ],
+          "A": [
+            "art_lance_knightkneel"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_haze_slice"
+          ],
+          "C": [
+            "art_sword_shadow_gambit"
+          ],
+          "B": [
+            "art_sword_mist_reaper"
+          ],
+          "A": [
+            "art_sword_heat_haze"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_half_spike"
+          ],
+          "C": [
+            "art_axe_hurl"
+          ],
+          "B": [
+            "art_axe_riot"
+          ],
+          "A": [
+            "art_axe_triple_spike"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_mighty_fist"
+          ],
+          "C": [
+            "art_brawl_feint"
+          ],
+          "B": [
+            "art_brawl_battle_rush"
+          ],
+          "A": [
+            "art_brawl_one_two_punch"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_warning_shot"
+          ],
+          "C": [
+            "art_bow_breakaway_shot"
+          ],
+          "B": [
+            "art_bow_shadow_arrow"
+          ],
+          "A": [
+            "art_bow_calm_call"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_distraction"
+          ],
+          "C": [
+            "skill_authority_lend_speed"
+          ],
+          "B": [
+            "skill_authority_distraction+"
+          ],
+          "A": [
+            "skill_authority_lend_speed+"
+          ],
+          "S": [
+            "skill_authority_lend_speed++"
+          ],
+          "S+": [
+            "skill_authority_gambit_mastery"
+          ]
         }
       }
     },
@@ -5422,6 +7247,96 @@
           ],
           "A": [
             "spell_faith_rescue"
+          ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_gale_spear"
+          ],
+          "C": [
+            "art_lance_focused_throw"
+          ],
+          "B": [
+            "art_lance_protective_storm"
+          ],
+          "A": [
+            "art_lance_knightkneel"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_finesse_blade"
+          ],
+          "B": [
+            "art_sword_vicious_flash"
+          ],
+          "A": [
+            "art_sword_twin_blades"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_careful_attack"
+          ],
+          "B": [
+            "art_axe_crash"
+          ],
+          "A": [
+            "art_axe_power_throw"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_deal_death"
+          ],
+          "C": [
+            "art_brawl_fading_blow"
+          ],
+          "B": [
+            "art_brawl_jack_hit"
+          ],
+          "A": [
+            "art_brawl_spirit_blow"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_warning_shot"
+          ],
+          "C": [
+            "art_bow_breakaway_shot"
+          ],
+          "B": [
+            "art_bow_shadow_arrow"
+          ],
+          "A": [
+            "art_bow_twin_shot_flow"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_distraction"
+          ],
+          "C": [
+            "skill_authority_distraction+"
+          ],
+          "B": [
+            "skill_authority_counter_cavalry"
+          ],
+          "A": [
+            "skill_authority_brave_assist_stance"
+          ],
+          "S": [
+            "skill_authority_counter_cavalry+"
+          ],
+          "S+": [
+            "skill_authority_gambit_mastery"
           ]
         }
       }
@@ -5520,6 +7435,93 @@
           ],
           "A": [
             "spell_faith_fortify"
+          ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_gale_spear"
+          ],
+          "C": [
+            "art_lance_stinger"
+          ],
+          "B": [
+            "art_lance_double_throw"
+          ],
+          "A": [
+            "art_lance_raging_tempest"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_sunder"
+          ],
+          "C": [
+            "art_sword_shadow_gambit"
+          ],
+          "B": [
+            "art_sword_flash_blow"
+          ],
+          "A": [
+            "art_sword_twin_blades"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_smash"
+          ],
+          "C": [
+            "art_axe_helm_splitter"
+          ],
+          "B": [
+            "art_axe_double_attack"
+          ],
+          "A": [
+            "art_axe_triple_spike"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_cautious_blow"
+          ],
+          "C": [
+            "art_brawl_feint"
+          ],
+          "B": [
+            "art_brawl_razor_fist"
+          ],
+          "A": [
+            "art_brawl_assassin_s_fist"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_warning_shot"
+          ],
+          "C": [
+            "art_bow_breakaway_shot"
+          ],
+          "B": [
+            "art_bow_spiral_shot"
+          ],
+          "A": [
+            "art_bow_twin_shot_flow"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_distraction"
+          ],
+          "C": [
+            "skill_authority_swap"
+          ],
+          "B": [
+            "skill_authority_distraction+"
+          ],
+          "A": [
+            "skill_authority_counter_snipers"
+          ],
+          "S": [
+            "skill_authority_counter_snipers+"
           ]
         }
       }
@@ -5621,6 +7623,96 @@
           "A": [
             "spell_faith_berserk"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_quick_thrust"
+          ],
+          "B": [
+            "art_lance_graceful_blow"
+          ],
+          "A": [
+            "art_lance_knightkneel"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_sunder"
+          ],
+          "C": [
+            "art_sword_destreza"
+          ],
+          "B": [
+            "art_sword_skysplit"
+          ],
+          "A": [
+            "art_sword_heat_haze"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_smash"
+          ],
+          "C": [
+            "art_axe_hurl"
+          ],
+          "B": [
+            "art_axe_battleblade_strike"
+          ],
+          "A": [
+            "art_axe_killer_spike"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_deal_death"
+          ],
+          "C": [
+            "art_brawl_beatdown"
+          ],
+          "B": [
+            "art_brawl_fading_assault"
+          ],
+          "A": [
+            "art_brawl_assassin_s_fist"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_warning_shot"
+          ],
+          "C": [
+            "art_bow_surprise_shot"
+          ],
+          "B": [
+            "art_bow_twin_shot_flow"
+          ],
+          "A": [
+            "art_bow_spirit_bow"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_rein"
+          ],
+          "C": [
+            "skill_authority_rein+"
+          ],
+          "B": [
+            "skill_authority_counter_fliers"
+          ],
+          "A": [
+            "skill_authority_caretaker_stance"
+          ],
+          "S": [
+            "skill_authority_counter_fliers+"
+          ],
+          "S+": [
+            "skill_authority_gambit_mastery"
+          ]
         }
       }
     },
@@ -5714,6 +7806,94 @@
           ],
           "S": [
             "spell_faith_fortify"
+          ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_protective_spear"
+          ],
+          "B": [
+            "art_lance_protective_storm"
+          ],
+          "A": [
+            "art_lance_brilliant_strike"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_subdue"
+          ],
+          "C": [
+            "art_sword_shadow_gambit"
+          ],
+          "B": [
+            "art_sword_ripple_slash"
+          ],
+          "A": [
+            "art_sword_greater_hexblade"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_magic_throw"
+          ],
+          "B": [
+            "art_axe_lightning_axe"
+          ],
+          "A": [
+            "art_axe_reflecting_dance"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_curtail_magic"
+          ],
+          "C": [
+            "art_brawl_fading_blow"
+          ],
+          "B": [
+            "art_brawl_mystic_blow"
+          ],
+          "A": [
+            "art_brawl_magic_combo"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_warning_shot"
+          ],
+          "C": [
+            "art_bow_encloser"
+          ],
+          "B": [
+            "art_bow_magic_arrow"
+          ],
+          "A": [
+            "art_bow_twin_shot_flow"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_defense_formation"
+          ],
+          "C": [
+            "skill_authority_draw_back",
+            "skill_authority_lend_defense"
+          ],
+          "B": [
+            "skill_authority_lend_defense+"
+          ],
+          "A": [
+            "skill_authority_defense_formation+"
+          ],
+          "S": [
+            "skill_authority_lend_defense++"
           ]
         }
       }
@@ -5817,6 +7997,97 @@
           "A": [
             "spell_faith_freeze"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_flowing_spear"
+          ],
+          "C": [
+            "art_lance_jab"
+          ],
+          "B": [
+            "art_lance_frozen_spear"
+          ],
+          "A": [
+            "art_lance_frozen_spear_slice"
+          ],
+          "S+": [
+            "art_lance_spearfaire"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_sunder"
+          ],
+          "C": [
+            "art_sword_finesse_blade"
+          ],
+          "B": [
+            "art_sword_hexblade"
+          ],
+          "A": [
+            "art_sword_windsweep"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_magic_throw"
+          ],
+          "B": [
+            "art_axe_devilwind_flurry"
+          ],
+          "A": [
+            "art_axe_magic_breaker"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_cautious_blow"
+          ],
+          "C": [
+            "art_brawl_feint"
+          ],
+          "B": [
+            "art_brawl_mystic_blow"
+          ],
+          "A": [
+            "art_brawl_magic_combo"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_vital_shot"
+          ],
+          "C": [
+            "art_bow_surprise_shot"
+          ],
+          "B": [
+            "art_bow_magic_arrow"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_lend_strength"
+          ],
+          "C": [
+            "skill_authority_lend_defense"
+          ],
+          "B": [
+            "skill_authority_lend_strength+"
+          ],
+          "A": [
+            "skill_authority_lend_defense+",
+            "skill_authority_lend_strength++"
+          ],
+          "S": [
+            "skill_authority_lend_defense++"
+          ],
+          "S+": [
+            "skill_authority_gambit_mastery"
+          ]
         }
       }
     },
@@ -5915,6 +8186,84 @@
           ],
           "A": [
             "spell_faith_barrier"
+          ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_jab"
+          ],
+          "B": [
+            "art_lance_vanguard_spear"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_destreza"
+          ],
+          "B": [
+            "art_sword_vicious_flash"
+          ],
+          "A": [
+            "art_sword_fateful_strike"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_enrage"
+          ],
+          "B": [
+            "art_axe_battleblade_strike"
+          ],
+          "A": [
+            "art_axe_power_spike"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_mighty_fist"
+          ],
+          "C": [
+            "art_brawl_battle_blow"
+          ],
+          "B": [
+            "art_brawl_knockout"
+          ],
+          "A": [
+            "art_brawl_power_combo"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_vital_shot"
+          ],
+          "C": [
+            "art_bow_lead_arrow"
+          ],
+          "B": [
+            "art_bow_arrowcrack"
+          ],
+          "A": [
+            "art_bow_leaden_draw"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_threaten"
+          ],
+          "C": [
+            "skill_authority_lend_strength"
+          ],
+          "B": [
+            "skill_authority_threaten+"
           ]
         }
       }
@@ -6022,6 +8371,96 @@
           "S": [
             "spell_faith_aura"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_defending_spear"
+          ],
+          "B": [
+            "art_lance_holy_spear"
+          ],
+          "A": [
+            "art_lance_brilliant_strike"
+          ],
+          "S+": [
+            "art_lance_spearfaire"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_finesse_blade"
+          ],
+          "B": [
+            "art_sword_mist_reaper"
+          ],
+          "A": [
+            "art_sword_dark_ray"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_smash"
+          ],
+          "C": [
+            "art_axe_hurl"
+          ],
+          "B": [
+            "art_axe_guard_spike"
+          ],
+          "A": [
+            "art_axe_power_spike"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_cautious_blow"
+          ],
+          "C": [
+            "art_brawl_curtail_magic"
+          ],
+          "B": [
+            "art_brawl_spirit_fist"
+          ],
+          "A": [
+            "art_brawl_fading_assault"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_vital_shot"
+          ],
+          "C": [
+            "art_bow_encloser"
+          ],
+          "B": [
+            "art_bow_spirit_bow"
+          ],
+          "A": [
+            "art_bow_ward_arrow"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_threaten"
+          ],
+          "C": [
+            "skill_authority_lend_strength"
+          ],
+          "B": [
+            "skill_authority_threaten+"
+          ],
+          "A": [
+            "skill_authority_lend_strength+"
+          ],
+          "S": [
+            "skill_authority_lend_resistance"
+          ]
         }
       }
     },
@@ -6122,6 +8561,93 @@
           "A": [
             "spell_faith_barrier"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_gale_spear"
+          ],
+          "C": [
+            "art_lance_jab"
+          ],
+          "B": [
+            "art_lance_vanguard_spear"
+          ],
+          "A": [
+            "art_lance_flying_spear"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_crosswise_cut"
+          ],
+          "B": [
+            "art_sword_gale_blow"
+          ],
+          "A": [
+            "art_sword_lunging_gale"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_smash"
+          ],
+          "C": [
+            "art_axe_wild_abandon"
+          ],
+          "B": [
+            "art_axe_guard_spike"
+          ],
+          "A": [
+            "art_axe_instant_strike"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_deal_death"
+          ],
+          "C": [
+            "art_brawl_one_on_one"
+          ],
+          "B": [
+            "art_brawl_jack_hit"
+          ],
+          "A": [
+            "art_brawl_revival"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_vital_shot"
+          ],
+          "C": [
+            "art_bow_surprise_shot"
+          ],
+          "B": [
+            "art_bow_spiral_shot"
+          ],
+          "A": [
+            "art_bow_bowbreaker_arrow"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_distraction"
+          ],
+          "C": [
+            "skill_authority_attack_formation"
+          ],
+          "B": [
+            "skill_authority_distraction+"
+          ],
+          "A": [
+            "skill_authority_attack_formation+"
+          ],
+          "S": [
+            "skill_authority_quick_draw_order"
+          ]
         }
       }
     },
@@ -6220,6 +8746,93 @@
           ],
           "A": [
             "spell_faith_barrier"
+          ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_defending_spear"
+          ],
+          "B": [
+            "art_lance_vanguard_spear"
+          ],
+          "A": [
+            "art_lance_raging_tempest"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_chop"
+          ],
+          "B": [
+            "art_sword_blaze_blow"
+          ],
+          "A": [
+            "art_sword_furious_strike"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_wild_abandon"
+          ],
+          "B": [
+            "art_axe_guard_spike"
+          ],
+          "A": [
+            "art_axe_power_spike"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_mighty_fist"
+          ],
+          "C": [
+            "art_brawl_battle_blow"
+          ],
+          "B": [
+            "art_brawl_fading_assault"
+          ],
+          "A": [
+            "art_brawl_mind_s_eye_blow"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_curved_shot"
+          ],
+          "C": [
+            "art_bow_lead_arrow"
+          ],
+          "B": [
+            "art_bow_mighty_shot"
+          ],
+          "A": [
+            "art_bow_leaden_draw"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_threaten"
+          ],
+          "C": [
+            "skill_authority_defense_formation"
+          ],
+          "B": [
+            "skill_authority_threaten+"
+          ],
+          "A": [
+            "skill_authority_defense_formation+"
+          ],
+          "S": [
+            "skill_authority_propel"
           ]
         }
       }
@@ -6321,6 +8934,84 @@
           "A": [
             "spell_faith_berserk"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_quick_thrust"
+          ],
+          "B": [
+            "art_lance_graceful_blow"
+          ],
+          "A": [
+            "art_lance_flying_spear"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_haze_slice"
+          ],
+          "B": [
+            "art_sword_gale_blow"
+          ],
+          "A": [
+            "art_sword_lunging_gale"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_half_spike"
+          ],
+          "C": [
+            "art_axe_enrage"
+          ],
+          "B": [
+            "art_axe_riot"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_mighty_fist"
+          ],
+          "C": [
+            "art_brawl_beatdown"
+          ],
+          "B": [
+            "art_brawl_battle_rush"
+          ],
+          "A": [
+            "art_brawl_saving_fist"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_curved_shot"
+          ],
+          "C": [
+            "art_bow_surprise_shot"
+          ],
+          "B": [
+            "art_bow_shadow_arrow"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_rein"
+          ],
+          "C": [
+            "skill_authority_lend_speed"
+          ],
+          "B": [
+            "skill_authority_rein+"
+          ],
+          "A": [
+            "skill_authority_lend_speed+"
+          ]
         }
       }
     },
@@ -6417,6 +9108,90 @@
           ],
           "A": [
             "spell_faith_warp"
+          ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_protective_spear"
+          ],
+          "B": [
+            "art_lance_protective_storm"
+          ],
+          "A": [
+            "art_lance_yawning_throw"
+          ],
+          "S+": [
+            "art_lance_spearfaire"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_subdue"
+          ],
+          "C": [
+            "art_sword_grounder"
+          ],
+          "B": [
+            "art_sword_vicious_flash"
+          ],
+          "A": [
+            "art_sword_furious_strike"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_spear_buster"
+          ],
+          "B": [
+            "art_axe_giant_breaker"
+          ],
+          "A": [
+            "art_axe_focused_strike"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_mighty_fist"
+          ],
+          "C": [
+            "art_brawl_battle_blow"
+          ],
+          "B": [
+            "art_brawl_mind_s_eye_blow"
+          ],
+          "A": [
+            "art_brawl_spirit_blow"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_curved_shot"
+          ],
+          "C": [
+            "art_bow_breakaway_shot"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_distraction"
+          ],
+          "C": [
+            "skill_authority_draw_back"
+          ],
+          "B": [
+            "skill_authority_distraction+"
+          ],
+          "A": [
+            "skill_authority_counter_cavalry"
+          ],
+          "S": [
+            "skill_authority_counter_cavalry+"
           ]
         }
       }
@@ -6521,6 +9296,90 @@
           "A": [
             "spell_faith_regenera"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_armored_blow"
+          ],
+          "B": [
+            "art_lance_vanguard_spear"
+          ],
+          "A": [
+            "art_lance_raging_tempest"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_chop"
+          ],
+          "C": [
+            "art_sword_tiger_slash"
+          ],
+          "B": [
+            "art_sword_blaze_blow"
+          ],
+          "A": [
+            "art_sword_single_sunder"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_wild_abandon"
+          ],
+          "B": [
+            "art_axe_crash"
+          ],
+          "A": [
+            "art_axe_power_spike"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_mighty_fist"
+          ],
+          "C": [
+            "art_brawl_knockout"
+          ],
+          "B": [
+            "art_brawl_crush_armor"
+          ],
+          "A": [
+            "art_brawl_power_combo"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_vital_shot"
+          ],
+          "C": [
+            "art_bow_lead_arrow"
+          ],
+          "B": [
+            "art_bow_arrowcrack"
+          ],
+          "A": [
+            "art_bow_haphazard"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_shove"
+          ],
+          "C": [
+            "skill_authority_lend_strength"
+          ],
+          "B": [
+            "skill_authority_lend_strength+"
+          ],
+          "A": [
+            "skill_authority_teach_one_chance"
+          ]
         }
       }
     },
@@ -6619,6 +9478,96 @@
           ],
           "A": [
             "spell_faith_freeze"
+          ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_flowing_spear"
+          ],
+          "C": [
+            "art_lance_quick_thrust"
+          ],
+          "B": [
+            "art_lance_sword_breaker"
+          ],
+          "A": [
+            "art_lance_pivot_strike"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_haze_slice"
+          ],
+          "C": [
+            "art_sword_destreza"
+          ],
+          "B": [
+            "art_sword_mist_reaper"
+          ],
+          "A": [
+            "art_sword_heat_haze"
+          ],
+          "S+": [
+            "art_sword_swordfaire"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_smash"
+          ],
+          "C": [
+            "art_axe_hurl"
+          ],
+          "B": [
+            "art_axe_battleblade_strike"
+          ],
+          "A": [
+            "art_axe_triple_spike"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_mighty_fist"
+          ],
+          "C": [
+            "art_brawl_beatdown"
+          ],
+          "B": [
+            "art_brawl_battle_rush"
+          ],
+          "A": [
+            "art_brawl_one_two_punch"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_warning_shot"
+          ],
+          "C": [
+            "art_bow_leg_shot"
+          ],
+          "B": [
+            "art_bow_shadow_arrow"
+          ],
+          "A": [
+            "art_bow_calm_call"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_distraction"
+          ],
+          "C": [
+            "skill_authority_lend_speed"
+          ],
+          "B": [
+            "skill_authority_distraction+"
+          ],
+          "A": [
+            "skill_authority_lend_speed+"
+          ],
+          "S": [
+            "skill_authority_lend_speed++"
           ]
         }
       }
@@ -6726,6 +9675,87 @@
           "S": [
             "spell_faith_rescue"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_flowing_spear"
+          ],
+          "C": [
+            "art_lance_focused_throw"
+          ],
+          "B": [
+            "art_lance_frozen_spear"
+          ],
+          "A": [
+            "art_lance_brilliant_strike"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_haze_slice"
+          ],
+          "C": [
+            "art_sword_finesse_blade"
+          ],
+          "B": [
+            "art_sword_hexblade"
+          ],
+          "A": [
+            "art_sword_greater_hexblade"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_half_spike"
+          ],
+          "C": [
+            "art_axe_magic_throw"
+          ],
+          "B": [
+            "art_axe_lightning_axe"
+          ],
+          "A": [
+            "art_axe_reflecting_dance"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_cautious_blow"
+          ],
+          "C": [
+            "art_brawl_curtail_magic"
+          ],
+          "B": [
+            "art_brawl_spirit_fist"
+          ],
+          "A": [
+            "art_brawl_magic_combo"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_curved_shot"
+          ],
+          "C": [
+            "art_bow_encloser"
+          ],
+          "B": [
+            "art_bow_ward_arrow"
+          ],
+          "A": [
+            "art_bow_spirit_bow"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_lend_magic"
+          ],
+          "C": [
+            "skill_authority_draw_back"
+          ],
+          "B": [
+            "skill_authority_lend_magic+"
+          ]
         }
       }
     },
@@ -6829,6 +9859,87 @@
           "S": [
             "spell_faith_rescue"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_quick_thrust"
+          ],
+          "B": [
+            "art_lance_khamsin"
+          ],
+          "A": [
+            "art_lance_flying_spear"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_haze_slice"
+          ],
+          "C": [
+            "art_sword_chop"
+          ],
+          "B": [
+            "art_sword_gale_blow"
+          ],
+          "A": [
+            "art_sword_heat_haze"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_half_spike"
+          ],
+          "B": [
+            "art_axe_riot"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_beatdown"
+          ],
+          "C": [
+            "art_brawl_fading_blow"
+          ],
+          "B": [
+            "art_brawl_battle_rush"
+          ],
+          "A": [
+            "art_brawl_spirit_blow"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_warning_shot"
+          ],
+          "C": [
+            "art_bow_snipe"
+          ],
+          "B": [
+            "art_bow_arrowcrack"
+          ],
+          "A": [
+            "art_bow_haphazard"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_distraction"
+          ],
+          "C": [
+            "skill_authority_shove"
+          ],
+          "B": [
+            "skill_authority_distraction+"
+          ],
+          "A": [
+            "skill_authority_counter_snipers"
+          ]
         }
       }
     },
@@ -6927,6 +10038,96 @@
           "A": [
             "spell_faith_berserk"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_gale_spear"
+          ],
+          "C": [
+            "art_lance_stinger"
+          ],
+          "B": [
+            "art_lance_double_throw"
+          ],
+          "A": [
+            "art_lance_knightkneel"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_sunder"
+          ],
+          "C": [
+            "art_sword_rend_armor"
+          ],
+          "B": [
+            "art_sword_skysplit"
+          ],
+          "A": [
+            "art_sword_windsweep"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_half_spike"
+          ],
+          "C": [
+            "art_axe_hurl"
+          ],
+          "B": [
+            "art_axe_double_attack"
+          ],
+          "A": [
+            "art_axe_triple_spike"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_cautious_blow"
+          ],
+          "C": [
+            "art_brawl_feint"
+          ],
+          "B": [
+            "art_brawl_fading_assault"
+          ],
+          "A": [
+            "art_brawl_power_combo"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_warning_shot"
+          ],
+          "C": [
+            "art_bow_leg_shot"
+          ],
+          "B": [
+            "art_bow_mighty_shot"
+          ],
+          "A": [
+            "art_bow_twin_shot_flow"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_distraction"
+          ],
+          "C": [
+            "skill_authority_swap"
+          ],
+          "B": [
+            "skill_authority_lend_dexterity"
+          ],
+          "A": [
+            "skill_authority_lend_dexterity+"
+          ],
+          "S": [
+            "skill_authority_lend_dexterity++"
+          ],
+          "S+": [
+            "skill_authority_gambit_mastery"
+          ]
         }
       }
     },
@@ -7024,6 +10225,81 @@
           "S": [
             "spell_faith_aura"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_jab"
+          ],
+          "B": [
+            "art_lance_frozen_spear"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_sunder"
+          ],
+          "C": [
+            "art_sword_finesse_blade"
+          ],
+          "B": [
+            "art_sword_hexblade"
+          ],
+          "A": [
+            "art_sword_windsweep"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_wild_abandon"
+          ],
+          "B": [
+            "art_axe_devilwind_flurry"
+          ],
+          "A": [
+            "art_axe_power_throw"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_cautious_blow"
+          ],
+          "C": [
+            "art_brawl_crush_armor"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_vital_shot"
+          ],
+          "C": [
+            "art_bow_encloser"
+          ],
+          "B": [
+            "art_bow_magic_arrow"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_draw_back"
+          ],
+          "C": [
+            "skill_authority_lend_magic"
+          ],
+          "B": [
+            "skill_authority_healing_order"
+          ],
+          "A": [
+            "skill_authority_lend_magic+"
+          ],
+          "S": [
+            "skill_authority_lend_magic++"
+          ]
         }
       }
     },
@@ -7118,6 +10394,66 @@
           ],
           "A": [
             "spell_faith_barrier"
+          ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_gale_spear"
+          ],
+          "C": [
+            "art_lance_defending_spear"
+          ],
+          "B": [
+            "art_lance_protective_storm"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_rend_armor"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_discerning_blow"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_cautious_blow"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_curved_shot"
+          ],
+          "C": [
+            "art_bow_encloser"
+          ],
+          "B": [
+            "art_bow_spiral_shot"
+          ],
+          "A": [
+            "art_bow_haphazard"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_lend_dexterity"
+          ],
+          "C": [
+            "skill_authority_lend_defense"
+          ],
+          "B": [
+            "skill_authority_lend_dexterity+"
+          ],
+          "A": [
+            "skill_authority_lend_defense+"
           ]
         }
       }
@@ -7214,6 +10550,93 @@
           ],
           "A": [
             "spell_faith_recover"
+          ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_gale_spear"
+          ],
+          "C": [
+            "art_lance_flowing_spear"
+          ],
+          "B": [
+            "art_lance_brilliant_strike"
+          ],
+          "A": [
+            "art_lance_flying_spear"
+          ],
+          "S+": [
+            "art_lance_spearfaire"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_haze_slice"
+          ],
+          "C": [
+            "art_sword_rend_armor"
+          ],
+          "B": [
+            "art_sword_gale_blow"
+          ],
+          "A": [
+            "art_sword_lunging_gale"
+          ],
+          "S+": [
+            "art_sword_swordfaire"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_half_spike"
+          ],
+          "C": [
+            "art_axe_hurl"
+          ],
+          "B": [
+            "art_axe_spear_buster"
+          ],
+          "A": [
+            "art_axe_focused_strike"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_cautious_blow"
+          ],
+          "C": [
+            "art_brawl_curtail_magic"
+          ],
+          "B": [
+            "art_brawl_battle_rush"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_warning_shot"
+          ],
+          "C": [
+            "art_bow_snipe"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_distraction"
+          ],
+          "C": [
+            "skill_authority_lend_speed"
+          ],
+          "B": [
+            "skill_authority_distraction+"
+          ],
+          "A": [
+            "skill_authority_lend_speed+"
+          ],
+          "S": [
+            "skill_authority_lend_speed++"
+          ],
+          "S+": [
+            "skill_authority_gambit_mastery"
           ]
         }
       }
@@ -7314,6 +10737,72 @@
           "A": [
             "spell_faith_fortify"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_jab"
+          ],
+          "B": [
+            "art_lance_sword_breaker"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_sunder"
+          ],
+          "C": [
+            "art_sword_destreza"
+          ],
+          "B": [
+            "art_sword_flash_blow"
+          ],
+          "A": [
+            "art_sword_dark_ray"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_smash"
+          ],
+          "C": [
+            "art_axe_hurl"
+          ],
+          "B": [
+            "art_axe_spear_buster"
+          ],
+          "A": [
+            "art_axe_killer_spike"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_cautious_blow"
+          ],
+          "C": [
+            "art_brawl_one_on_one"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_vital_shot"
+          ],
+          "C": [
+            "art_bow_leg_shot"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_threaten"
+          ],
+          "C": [
+            "skill_authority_lend_dexterity"
+          ],
+          "B": [
+            "skill_authority_threaten+"
+          ]
         }
       }
     },
@@ -7408,6 +10897,81 @@
           ],
           "A": [
             "spell_faith_berserk"
+          ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_gale_spear"
+          ],
+          "C": [
+            "art_lance_focused_throw"
+          ],
+          "B": [
+            "art_lance_double_throw"
+          ],
+          "A": [
+            "art_lance_yawning_throw"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_sunder"
+          ],
+          "C": [
+            "art_sword_chop"
+          ],
+          "B": [
+            "art_sword_flash_blow"
+          ],
+          "A": [
+            "art_sword_furious_strike"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_smash"
+          ],
+          "C": [
+            "art_axe_hurl"
+          ],
+          "B": [
+            "art_axe_power_throw"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_deal_death"
+          ],
+          "C": [
+            "art_brawl_one_on_one"
+          ],
+          "B": [
+            "art_brawl_knockout"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_vital_shot"
+          ],
+          "C": [
+            "art_bow_breakaway_shot"
+          ],
+          "B": [
+            "art_bow_sneaky_shot"
+          ],
+          "A": [
+            "art_bow_haphazard"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_threaten"
+          ],
+          "C": [
+            "skill_authority_lend_dexterity"
+          ],
+          "B": [
+            "skill_authority_threaten+"
           ]
         }
       }
@@ -7510,6 +11074,78 @@
           "A": [
             "spell_faith_rescue"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_armored_blow"
+          ],
+          "B": [
+            "art_lance_protective_storm"
+          ],
+          "A": [
+            "art_lance_yawning_throw"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_grounder"
+          ],
+          "B": [
+            "art_sword_ripple_slash"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_discerning_blow"
+          ],
+          "B": [
+            "art_axe_guard_spike"
+          ],
+          "A": [
+            "art_axe_reflecting_dance"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_mighty_fist"
+          ],
+          "C": [
+            "art_brawl_battle_blow"
+          ],
+          "B": [
+            "art_brawl_spirit_fist"
+          ],
+          "A": [
+            "art_brawl_revival"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_curved_shot"
+          ],
+          "C": [
+            "art_bow_snipe"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_defense_formation"
+          ],
+          "C": [
+            "skill_authority_counter_cavalry"
+          ],
+          "B": [
+            "skill_authority_counter_order"
+          ]
         }
       }
     },
@@ -7609,6 +11245,90 @@
           "A": [
             "spell_faith_ward"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_gale_spear"
+          ],
+          "C": [
+            "art_lance_defending_spear"
+          ],
+          "B": [
+            "art_lance_double_throw"
+          ],
+          "A": [
+            "art_lance_raging_tempest"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_sunder"
+          ],
+          "C": [
+            "art_sword_destreza"
+          ],
+          "B": [
+            "art_sword_blaze_blow"
+          ],
+          "A": [
+            "art_sword_furious_strike"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_smash"
+          ],
+          "C": [
+            "art_axe_helm_splitter"
+          ],
+          "B": [
+            "art_axe_battleblade_strike"
+          ],
+          "A": [
+            "art_axe_double_swing"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_deal_death"
+          ],
+          "C": [
+            "art_brawl_fading_blow"
+          ],
+          "B": [
+            "art_brawl_jack_hit"
+          ],
+          "A": [
+            "art_brawl_power_combo"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_vital_shot"
+          ],
+          "C": [
+            "art_bow_surprise_shot"
+          ],
+          "B": [
+            "art_bow_arrowcrack"
+          ],
+          "A": [
+            "art_bow_leaden_draw"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_attack_formation"
+          ],
+          "C": [
+            "skill_authority_shove"
+          ],
+          "B": [
+            "skill_authority_counter_fliers"
+          ],
+          "A": [
+            "skill_authority_attack_formation+"
+          ]
         }
       }
     },
@@ -7702,6 +11422,72 @@
           ],
           "A": [
             "spell_faith_berserk"
+          ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_gale_spear"
+          ],
+          "C": [
+            "art_lance_focused_throw"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_sunder"
+          ],
+          "C": [
+            "art_sword_destreza"
+          ],
+          "B": [
+            "art_sword_flash_blow"
+          ],
+          "A": [
+            "art_sword_single_sunder"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_smash"
+          ],
+          "C": [
+            "art_axe_enrage"
+          ],
+          "B": [
+            "art_axe_double_attack"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_mighty_fist"
+          ],
+          "C": [
+            "art_brawl_beatdown"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_vital_shot"
+          ],
+          "C": [
+            "art_bow_encloser"
+          ],
+          "B": [
+            "art_bow_spirit_bow"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_lend_dexterity"
+          ],
+          "C": [
+            "skill_authority_swap"
+          ],
+          "B": [
+            "skill_authority_lend_dexterity+"
+          ],
+          "A": [
+            "skill_authority_hunter_s_order"
           ]
         }
       }
@@ -7800,6 +11586,84 @@
           "A": [
             "spell_faith_berserk"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_quick_thrust"
+          ],
+          "B": [
+            "art_lance_graceful_blow"
+          ],
+          "A": [
+            "art_lance_knightkneel"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_grounder"
+          ],
+          "C": [
+            "art_sword_destreza"
+          ],
+          "B": [
+            "art_sword_flash_blow"
+          ],
+          "A": [
+            "art_sword_twin_blades"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_smash"
+          ],
+          "C": [
+            "art_axe_discerning_blow"
+          ],
+          "B": [
+            "art_axe_battleblade_strike"
+          ],
+          "A": [
+            "art_axe_killer_spike"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_deal_death"
+          ],
+          "C": [
+            "art_brawl_fading_blow"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_vital_shot"
+          ],
+          "C": [
+            "art_bow_surprise_shot"
+          ],
+          "B": [
+            "art_bow_sneaky_shot"
+          ],
+          "A": [
+            "art_bow_spiral_shot"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_rein"
+          ],
+          "C": [
+            "skill_authority_lend_strength"
+          ],
+          "B": [
+            "skill_authority_rein+"
+          ],
+          "A": [
+            "skill_authority_lend_strength+"
+          ]
         }
       }
     },
@@ -7894,6 +11758,93 @@
           ],
           "A": [
             "spell_faith_recover"
+          ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_jab"
+          ],
+          "B": [
+            "art_lance_protective_storm"
+          ],
+          "A": [
+            "art_lance_raging_tempest"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_grounder"
+          ],
+          "B": [
+            "art_sword_blaze_blow"
+          ],
+          "A": [
+            "art_sword_twin_blades"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_hurl"
+          ],
+          "B": [
+            "art_axe_riot"
+          ],
+          "A": [
+            "art_axe_power_spike"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_mighty_fist"
+          ],
+          "C": [
+            "art_brawl_beatdown"
+          ],
+          "B": [
+            "art_brawl_battle_rush"
+          ],
+          "A": [
+            "art_brawl_spirit_blow"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_curved_shot"
+          ],
+          "C": [
+            "art_bow_breakaway_shot"
+          ],
+          "B": [
+            "art_bow_spiral_shot"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_distraction"
+          ],
+          "C": [
+            "skill_authority_lend_strength"
+          ],
+          "B": [
+            "skill_authority_distraction+"
+          ],
+          "A": [
+            "skill_authority_lend_strength+"
+          ],
+          "S": [
+            "skill_authority_lend_strength++"
+          ],
+          "S+": [
+            "skill_authority_gambit_mastery"
           ]
         }
       }
@@ -7996,6 +11947,84 @@
           "A": [
             "spell_faith_rescue"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_armored_blow"
+          ],
+          "B": [
+            "art_lance_protective_storm"
+          ],
+          "A": [
+            "art_lance_raging_tempest"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_tiger_slash"
+          ],
+          "B": [
+            "art_sword_flash_blow"
+          ],
+          "A": [
+            "art_sword_furious_strike"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_enrage"
+          ],
+          "B": [
+            "art_axe_battleblade_strike"
+          ],
+          "A": [
+            "art_axe_power_spike"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_mighty_fist"
+          ],
+          "C": [
+            "art_brawl_crush_armor"
+          ],
+          "B": [
+            "art_brawl_fading_assault"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_curved_shot"
+          ],
+          "C": [
+            "art_bow_surprise_shot"
+          ],
+          "B": [
+            "art_bow_sneaky_shot"
+          ],
+          "A": [
+            "art_bow_twin_shot_flow"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_defense_formation"
+          ],
+          "C": [
+            "skill_authority_counter_cavalry"
+          ],
+          "B": [
+            "skill_authority_barging_order"
+          ]
         }
       }
     },
@@ -8095,6 +12124,78 @@
           "A": [
             "spell_faith_regenera"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_defending_spear"
+          ],
+          "B": [
+            "art_lance_protective_storm"
+          ],
+          "A": [
+            "art_lance_raging_tempest"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_crosswise_cut"
+          ],
+          "B": [
+            "art_sword_vicious_flash"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_enrage"
+          ],
+          "B": [
+            "art_axe_guard_spike"
+          ],
+          "A": [
+            "art_axe_power_spike"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_deal_death"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_vital_shot"
+          ],
+          "C": [
+            "art_bow_surprise_shot"
+          ],
+          "B": [
+            "art_bow_spiral_shot"
+          ],
+          "A": [
+            "art_bow_leaden_draw"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_threaten"
+          ],
+          "C": [
+            "skill_authority_attack_formation"
+          ],
+          "B": [
+            "skill_authority_counter_cavalry"
+          ],
+          "A": [
+            "skill_authority_attack_formation+"
+          ]
         }
       }
     },
@@ -8192,6 +12293,81 @@
           "A": [
             "spell_faith_warp"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_flowing_spear"
+          ],
+          "C": [
+            "art_lance_quick_thrust"
+          ],
+          "B": [
+            "art_lance_khamsin"
+          ],
+          "A": [
+            "art_lance_flying_spear"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_haze_slice"
+          ],
+          "C": [
+            "art_sword_crosswise_cut"
+          ],
+          "B": [
+            "art_sword_gale_blow"
+          ],
+          "A": [
+            "art_sword_windsweep"
+          ],
+          "S+": [
+            "art_sword_swordfaire"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_half_spike"
+          ],
+          "C": [
+            "art_axe_hurl"
+          ],
+          "B": [
+            "art_axe_spear_buster"
+          ],
+          "A": [
+            "art_axe_instant_strike"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_cautious_blow"
+          ],
+          "C": [
+            "art_brawl_beatdown"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_warning_shot"
+          ],
+          "C": [
+            "art_bow_encloser"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_distraction"
+          ],
+          "C": [
+            "skill_authority_threaten"
+          ],
+          "B": [
+            "skill_authority_distraction+"
+          ],
+          "A": [
+            "skill_authority_threaten+"
+          ]
         }
       }
     },
@@ -8288,6 +12464,81 @@
           ],
           "A": [
             "spell_faith_silence"
+          ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_flowing_spear"
+          ],
+          "C": [
+            "art_lance_jab"
+          ],
+          "B": [
+            "art_lance_vanguard_spear"
+          ],
+          "A": [
+            "art_lance_knightkneel"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_shadow_gambit"
+          ],
+          "B": [
+            "art_sword_heat_haze"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_enrage"
+          ],
+          "B": [
+            "art_axe_crash"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_mighty_fist"
+          ],
+          "C": [
+            "art_brawl_fading_blow"
+          ],
+          "B": [
+            "art_brawl_battle_rush"
+          ],
+          "A": [
+            "art_brawl_spirit_blow"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_warning_shot"
+          ],
+          "C": [
+            "art_bow_lead_arrow"
+          ],
+          "B": [
+            "art_bow_mighty_shot"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_distraction"
+          ],
+          "C": [
+            "skill_authority_rein"
+          ],
+          "B": [
+            "skill_authority_distraction+"
+          ],
+          "A": [
+            "skill_authority_rein+"
           ]
         }
       }
@@ -8390,6 +12641,78 @@
           "S": [
             "spell_faith_aura"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_gale_spear"
+          ],
+          "C": [
+            "art_lance_protective_spear"
+          ],
+          "B": [
+            "art_lance_holy_spear"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_finesse_blade"
+          ],
+          "B": [
+            "art_sword_vicious_flash"
+          ],
+          "A": [
+            "art_sword_greater_hexblade"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_smash"
+          ],
+          "C": [
+            "art_axe_discerning_blow"
+          ],
+          "B": [
+            "art_axe_lightning_axe"
+          ],
+          "A": [
+            "art_axe_magic_breaker"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_mighty_fist"
+          ],
+          "C": [
+            "art_brawl_curtail_magic"
+          ],
+          "B": [
+            "art_brawl_spirit_fist"
+          ],
+          "A": [
+            "art_brawl_saving_fist"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_curved_shot"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_swap"
+          ],
+          "C": [
+            "skill_authority_lend_magic"
+          ],
+          "B": [
+            "skill_authority_lend_magic+"
+          ],
+          "A": [
+            "skill_authority_teach_monkly_havoc"
+          ]
         }
       }
     },
@@ -8489,6 +12812,90 @@
           "A": [
             "spell_faith_warp"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_armored_blow"
+          ],
+          "B": [
+            "art_lance_vanguard_spear"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_chop"
+          ],
+          "B": [
+            "art_sword_blaze_blow"
+          ],
+          "A": [
+            "art_sword_furious_strike"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_wild_abandon"
+          ],
+          "B": [
+            "art_axe_crash"
+          ],
+          "A": [
+            "art_axe_power_spike"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_mighty_fist"
+          ],
+          "C": [
+            "art_brawl_crush_armor"
+          ],
+          "B": [
+            "art_brawl_knockout"
+          ],
+          "A": [
+            "art_brawl_power_combo"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_curved_shot"
+          ],
+          "C": [
+            "art_bow_lead_arrow"
+          ],
+          "B": [
+            "art_bow_mighty_shot"
+          ],
+          "A": [
+            "art_bow_leaden_draw"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_threaten"
+          ],
+          "C": [
+            "skill_authority_rein"
+          ],
+          "B": [
+            "skill_authority_threaten+"
+          ],
+          "A": [
+            "skill_authority_rein+"
+          ],
+          "S": [
+            "skill_authority_propel"
+          ]
         }
       }
     },
@@ -8560,6 +12967,96 @@
           "S": [
             "spell_faith_warp"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_flowing_spear"
+          ],
+          "C": [
+            "art_lance_frozen_spear"
+          ],
+          "B": [
+            "art_lance_holy_spear"
+          ],
+          "A": [
+            "art_lance_frozen_spear_slice"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_ripple_slash"
+          ],
+          "B": [
+            "art_sword_hexblade"
+          ],
+          "A": [
+            "art_sword_greater_hexblade"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_half_spike"
+          ],
+          "C": [
+            "art_axe_magic_throw"
+          ],
+          "B": [
+            "art_axe_devilwind_flurry"
+          ],
+          "A": [
+            "art_axe_killer_spike"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_cautious_blow"
+          ],
+          "C": [
+            "art_brawl_curtail_magic"
+          ],
+          "B": [
+            "art_brawl_mystic_blow"
+          ],
+          "A": [
+            "art_brawl_mind_s_eye_blow"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_vital_shot"
+          ],
+          "C": [
+            "art_bow_encloser"
+          ],
+          "B": [
+            "art_bow_sneaky_shot"
+          ],
+          "A": [
+            "art_bow_ward_arrow"
+          ]
+        },
+        "authority": {
+          "C": [
+            "skill_authority_lend_magic"
+          ],
+          "B": [
+            "skill_authority_lend_defense"
+          ],
+          "B+": [
+            "skill_authority_lend_magic+"
+          ],
+          "A": [
+            "skill_authority_lend_defense+"
+          ],
+          "S": [
+            "skill_authority_lend_magic++"
+          ],
+          "S+": [
+            "skill_authority_gambit_mastery"
+          ]
         }
       }
     },
@@ -8624,6 +13121,85 @@
           "S": [
             "spell_faith_recover",
             "spell_faith_barrier"
+          ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_defending_spear"
+          ],
+          "B": [
+            "art_lance_sword_breaker"
+          ],
+          "A": [
+            "art_lance_pivot_strike"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_haze_slice"
+          ],
+          "C": [
+            "art_sword_shadow_gambit"
+          ],
+          "B": [
+            "art_sword_gale_blow"
+          ],
+          "A": [
+            "art_sword_skysplit"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_double_attack"
+          ],
+          "B": [
+            "art_axe_battleblade_strike"
+          ],
+          "A": [
+            "art_axe_double_swing"
+          ]
+        },
+        "brawl": {
+          "A+": [
+            "art_brawl_battle_rush",
+            "art_brawl_beatdown"
+          ],
+          "S": [
+            "art_brawl_assassin_s_fist"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_curved_shot"
+          ],
+          "C": [
+            "art_bow_snipe"
+          ],
+          "B": [
+            "art_bow_shadow_arrow"
+          ],
+          "A": [
+            "art_bow_bowbreaker_arrow"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_distraction"
+          ],
+          "B": [
+            "skill_authority_distraction+"
+          ],
+          "B+": [
+            "skill_authority_counter_fliers"
+          ],
+          "A": [
+            "skill_authority_counter_fliers+"
           ]
         }
       }
@@ -8699,6 +13275,83 @@
           "S": [
             "spell_faith_aura"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "A+": [
+            "art_lance_graceful_blow",
+            "art_lance_frozen_spear"
+          ],
+          "S": [
+            "art_lance_raging_tempest",
+            "art_lance_brilliant_strike"
+          ],
+          "S+": [
+            "art_lance_spearfaire"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_flash_blow"
+          ],
+          "B": [
+            "art_sword_windsweep"
+          ],
+          "A": [
+            "art_sword_twin_blades"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_guard_spike"
+          ],
+          "B": [
+            "art_axe_focused_strike"
+          ],
+          "A": [
+            "art_axe_power_spike"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_mighty_fist"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_curved_shot"
+          ],
+          "C": [
+            "art_bow_spiral_shot"
+          ],
+          "B": [
+            "art_bow_spirit_bow"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_attack_formation"
+          ],
+          "C": [
+            "skill_authority_defense_formation"
+          ],
+          "B": [
+            "skill_authority_attack_formation+"
+          ],
+          "A": [
+            "skill_authority_defense_formation+"
+          ],
+          "S+": [
+            "skill_authority_gambit_mastery"
+          ]
         }
       }
     },
@@ -8762,6 +13415,96 @@
           ],
           "A": [
             "spell_faith_warp"
+          ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_protective_spear"
+          ],
+          "B": [
+            "art_lance_graceful_blow"
+          ],
+          "A": [
+            "art_lance_yawning_throw"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_grounder"
+          ],
+          "B": [
+            "art_sword_flash_blow"
+          ],
+          "A": [
+            "art_sword_twin_blades"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_crash"
+          ],
+          "B": [
+            "art_axe_power_throw"
+          ],
+          "A": [
+            "art_axe_double_swing"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_mighty_fist"
+          ],
+          "C": [
+            "art_brawl_battle_blow"
+          ],
+          "B": [
+            "art_brawl_razor_fist"
+          ],
+          "A": [
+            "art_brawl_spirit_blow"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_curved_shot"
+          ],
+          "C": [
+            "art_bow_spirit_bow"
+          ],
+          "B": [
+            "art_bow_spiral_shot"
+          ],
+          "A": [
+            "art_bow_twin_shot_flow"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_lend_dexterity"
+          ],
+          "C": [
+            "skill_authority_attack_formation"
+          ],
+          "B": [
+            "skill_authority_lend_dexterity+"
+          ],
+          "A": [
+            "skill_authority_attack_formation+"
+          ],
+          "S": [
+            "skill_authority_lend_dexterity++"
+          ],
+          "S+": [
+            "skill_authority_gambit_mastery"
           ]
         }
       }
@@ -8829,6 +13572,63 @@
           "A": [
             "spell_faith_regenera"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_defending_spear"
+          ],
+          "B": [
+            "art_lance_vanguard_spear"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_tiger_slash"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_crash"
+          ],
+          "B": [
+            "art_axe_helm_splitter"
+          ],
+          "A": [
+            "art_axe_reflecting_dance"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_mighty_fist"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_curved_shot"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_defense_formation"
+          ],
+          "C": [
+            "skill_authority_lend_defense"
+          ],
+          "B": [
+            "skill_authority_lend_defense+"
+          ],
+          "A": [
+            "skill_authority_defense_formation+"
+          ]
         }
       }
     },
@@ -8895,6 +13695,58 @@
           "A": [
             "spell_faith_warp"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_armored_blow"
+          ],
+          "B": [
+            "art_lance_vanguard_spear"
+          ],
+          "A": [
+            "art_lance_raging_tempest"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_chop"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ],
+          "C": [
+            "art_axe_enrage"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_mighty_fist"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_attack_formation"
+          ],
+          "C": [
+            "skill_authority_lend_strength"
+          ],
+          "B": [
+            "skill_authority_lend_strength+"
+          ],
+          "A": [
+            "skill_authority_lend_strength++"
+          ],
+          "S+": [
+            "skill_authority_gambit_mastery"
+          ]
         }
       }
     },
@@ -8960,6 +13812,78 @@
           "A": [
             "spell_faith_emergis"
           ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_flowing_spear"
+          ],
+          "C": [
+            "art_lance_stinger"
+          ],
+          "B": [
+            "art_lance_graceful_blow"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_haze_slice"
+          ],
+          "C": [
+            "art_sword_crosswise_cut"
+          ],
+          "B": [
+            "art_sword_skysplit"
+          ],
+          "A": [
+            "art_sword_lunging_gale"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_half_spike"
+          ],
+          "C": [
+            "art_axe_spear_buster"
+          ],
+          "B": [
+            "art_axe_riot"
+          ],
+          "A": [
+            "art_axe_focused_strike"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_mighty_fist"
+          ],
+          "C": [
+            "art_brawl_feint"
+          ],
+          "B": [
+            "art_brawl_battle_rush"
+          ]
+        },
+        "bow": {
+          "D": [
+            "art_bow_warning_shot"
+          ],
+          "C": [
+            "art_bow_snipe"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_rein"
+          ],
+          "C": [
+            "skill_authority_lend_defense"
+          ],
+          "B": [
+            "skill_authority_rein+"
+          ],
+          "A": [
+            "skill_authority_lend_defense+"
+          ]
         }
       }
     },
@@ -9012,6 +13936,72 @@
           ],
           "B": [
             "spell_faith_restore"
+          ]
+        },
+        "sword": {
+          "D": [
+            "art_sword_wrath_strike"
+          ],
+          "C": [
+            "art_sword_chop"
+          ],
+          "B": [
+            "art_sword_blaze_blow"
+          ],
+          "A": [
+            "art_sword_blade_slam"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_smash"
+          ],
+          "C": [
+            "art_axe_careful_attack"
+          ],
+          "B": [
+            "art_axe_crash"
+          ],
+          "A": [
+            "art_axe_bloodbath"
+          ]
+        },
+        "brawl": {
+          "D": [
+            "art_brawl_mighty_fist"
+          ],
+          "C": [
+            "art_brawl_deal_death"
+          ],
+          "B": [
+            "art_brawl_cautious_blow"
+          ],
+          "A": [
+            "art_brawl_jack_hit",
+            "art_brawl_saving_fist"
+          ],
+          "S": [
+            "art_brawl_mind_s_eye_blow"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_attack_formation"
+          ],
+          "C": [
+            "skill_authority_swap"
+          ],
+          "B": [
+            "skill_authority_draw_back"
+          ],
+          "A": [
+            "skill_authority_attack_formation+"
+          ],
+          "S": [
+            "skill_authority_propel"
+          ],
+          "S+": [
+            "skill_authority_gambit_mastery"
           ]
         }
       }
@@ -9070,6 +14060,39 @@
           ],
           "A": [
             "spell_faith_seraphim"
+          ]
+        },
+        "lance": {
+          "D": [
+            "art_lance_tempest_spear"
+          ],
+          "C": [
+            "art_lance_armored_blow"
+          ],
+          "B": [
+            "art_lance_protective_storm"
+          ],
+          "A": [
+            "art_lance_raging_tempest"
+          ]
+        },
+        "axe": {
+          "D": [
+            "art_axe_spike"
+          ]
+        },
+        "authority": {
+          "D": [
+            "skill_authority_lend_defense"
+          ],
+          "C": [
+            "skill_authority_defense_formation"
+          ],
+          "B": [
+            "skill_authority_lend_defense+"
+          ],
+          "A": [
+            "skill_authority_defense_formation+"
           ]
         }
       }
@@ -15815,6 +20838,2681 @@
       "avo": 0,
       "uses": 1,
       "effect": "Teleport other adjacent character up to 5 spaces away."
+    }
+  ],
+  "combatArts": [
+    {
+      "id": "art_lance_armored_blow",
+      "proficiency": "lance",
+      "name": "Armored Blow",
+      "cost": 4,
+      "might": 3,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "After defeating a foe, grants Prt+3 until unit's next phase. Cannot make a follow-up."
+    },
+    {
+      "id": "art_lance_brilliant_strike",
+      "proficiency": "lance",
+      "name": "Brilliant Strike",
+      "cost": 5,
+      "might": 5,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "After defeating a foe, grants Rsl+7 until unit's next phase"
+    },
+    {
+      "id": "art_lance_defending_spear",
+      "proficiency": "lance",
+      "name": "Defending Spear",
+      "cost": 4,
+      "might": 3,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Grants Shld+3 during combat"
+    },
+    {
+      "id": "art_lance_double_throw",
+      "proficiency": "lance",
+      "name": "Double Throw",
+      "cost": 5,
+      "might": 0,
+      "hit": -30,
+      "crit": 0,
+      "range": "2",
+      "effect": "Attacks twice. Only usable by spears with Rng 1-2"
+    },
+    {
+      "id": "art_lance_flowing_spear",
+      "proficiency": "lance",
+      "name": "Flowing Spear",
+      "cost": 2,
+      "might": 3,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Grants Avo+10 during combat"
+    },
+    {
+      "id": "art_lance_flying_spear",
+      "proficiency": "lance",
+      "name": "Flying Spear",
+      "cost": 7,
+      "might": 0,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Unit's follow-up occurs before foe's counter."
+    },
+    {
+      "id": "art_lance_focused_throw",
+      "proficiency": "lance",
+      "name": "Focused Throw",
+      "cost": 3,
+      "might": 3,
+      "hit": 20,
+      "crit": 0,
+      "range": "2",
+      "effect": "Only usable by spears with Rng=1-2."
+    },
+    {
+      "id": "art_lance_frozen_spear",
+      "proficiency": "lance",
+      "name": "Frozen Spear",
+      "cost": 5,
+      "might": 7,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Treated as a magical attack"
+    },
+    {
+      "id": "art_lance_frozen_spear_slice",
+      "proficiency": "lance",
+      "name": "Frozen-Spear Slice",
+      "cost": 6,
+      "might": 7,
+      "hit": 0,
+      "crit": 0,
+      "range": "2",
+      "effect": "Treated as a magical attack. Only usable by spears with Rng= 1-2."
+    },
+    {
+      "id": "art_lance_gale_spear",
+      "proficiency": "lance",
+      "name": "Gale Spear",
+      "cost": 2,
+      "might": 4,
+      "hit": 0,
+      "crit": 5,
+      "range": "0",
+      "effect": "No additional effect"
+    },
+    {
+      "id": "art_lance_graceful_blow",
+      "proficiency": "lance",
+      "name": "Graceful Blow",
+      "cost": 5,
+      "might": 7,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Reduces weapon durability cost to 0 for the attack. Trigger% = Dex/2"
+    },
+    {
+      "id": "art_lance_holy_spear",
+      "proficiency": "lance",
+      "name": "Holy Spear",
+      "cost": 6,
+      "might": 8,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "After combat, restores a little HP to unit"
+    },
+    {
+      "id": "art_lance_jab",
+      "proficiency": "lance",
+      "name": "Jab",
+      "cost": 1,
+      "might": 3,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "No additional effect"
+    },
+    {
+      "id": "art_lance_khamsin",
+      "proficiency": "lance",
+      "name": "Khamsin",
+      "cost": 5,
+      "might": 7,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "If foe's Hit ≤ 20, reduces foe's Hit to 0 during combat"
+    },
+    {
+      "id": "art_lance_knightkneel",
+      "proficiency": "lance",
+      "name": "Knightkneel",
+      "cost": 10,
+      "might": 0,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Strikes 2 times at 70% damage. If foe is cavalry, grants Hit+10"
+    },
+    {
+      "id": "art_lance_pivot_strike",
+      "proficiency": "lance",
+      "name": "Pivot Strike",
+      "cost": 5,
+      "might": 12,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Foe attacks first"
+    },
+    {
+      "id": "art_lance_protective_spear",
+      "proficiency": "lance",
+      "name": "Protective Spear",
+      "cost": 4,
+      "might": 5,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Grants Ddg+20 during combat"
+    },
+    {
+      "id": "art_lance_protective_storm",
+      "proficiency": "lance",
+      "name": "Protective Storm",
+      "cost": 6,
+      "might": 5,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Grants Prt+7 during combat"
+    },
+    {
+      "id": "art_lance_quick_thrust",
+      "proficiency": "lance",
+      "name": "Quick Thrust",
+      "cost": 2,
+      "might": 0,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Grants AS+3 during combat"
+    },
+    {
+      "id": "art_lance_raging_tempest",
+      "proficiency": "lance",
+      "name": "Raging Tempest",
+      "cost": 8,
+      "might": 12,
+      "hit": 20,
+      "crit": 0,
+      "range": "1",
+      "effect": "No additional effect"
+    },
+    {
+      "id": "art_lance_stinger",
+      "proficiency": "lance",
+      "name": "Stinger",
+      "cost": 3,
+      "might": 7,
+      "hit": -20,
+      "crit": 0,
+      "range": "1",
+      "effect": "No additional effect"
+    },
+    {
+      "id": "art_lance_sword_breaker",
+      "proficiency": "lance",
+      "name": "Sword Breaker",
+      "cost": 4,
+      "might": 4,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "If foes uses a sword, grants Atk+8"
+    },
+    {
+      "id": "art_lance_tempest_spear",
+      "proficiency": "lance",
+      "name": "Tempest Spear",
+      "cost": 2,
+      "might": 4,
+      "hit": 10,
+      "crit": 0,
+      "range": "1",
+      "effect": "No additional effect"
+    },
+    {
+      "id": "art_lance_vanguard_spear",
+      "proficiency": "lance",
+      "name": "Vanguard Spear",
+      "cost": 5,
+      "might": 7,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Grants Atk+5 for the attack. Trigger% = Str/2"
+    },
+    {
+      "id": "art_lance_yawning_throw",
+      "proficiency": "lance",
+      "name": "Yawning Throw",
+      "cost": 7,
+      "might": 10,
+      "hit": 10,
+      "crit": 0,
+      "range": "2",
+      "effect": "Only usable by spears with Rng= 1-2."
+    },
+    {
+      "id": "art_lance_spearfaire",
+      "proficiency": "lance",
+      "name": "Spearfaire",
+      "cost": null,
+      "might": null,
+      "hit": null,
+      "crit": null,
+      "range": "",
+      "effect": ""
+    },
+    {
+      "id": "art_sword_blade_slam",
+      "proficiency": "sword",
+      "name": "Blade Slam",
+      "cost": 5,
+      "might": 13,
+      "hit": null,
+      "crit": 0,
+      "range": "1",
+      "effect": "Sets unit's Hit% to 50."
+    },
+    {
+      "id": "art_sword_blaze_blow",
+      "proficiency": "sword",
+      "name": "Blaze Blow",
+      "cost": 5,
+      "might": 7,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Grants Atk+5 for the attack. Trigger%=Str/2"
+    },
+    {
+      "id": "art_sword_chop",
+      "proficiency": "sword",
+      "name": "Chop",
+      "cost": 4,
+      "might": 8,
+      "hit": -30,
+      "crit": 0,
+      "range": "1",
+      "effect": "No additional effect"
+    },
+    {
+      "id": "art_sword_crosswise_cut",
+      "proficiency": "sword",
+      "name": "Crosswise Cut",
+      "cost": 4,
+      "might": 5,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "After combat, grants Dex+2 until the end of the map (Max +10)"
+    },
+    {
+      "id": "art_sword_dark_ray",
+      "proficiency": "sword",
+      "name": "Dark Ray",
+      "cost": 7,
+      "might": 8,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Inflict Hit/Crit/Avoid -20 during combat"
+    },
+    {
+      "id": "art_sword_destreza",
+      "proficiency": "sword",
+      "name": "Destreza",
+      "cost": 3,
+      "might": 3,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "If foe's HP ≤ 50%, grants Atk+5, Crit+10"
+    },
+    {
+      "id": "art_sword_fateful_strike",
+      "proficiency": "sword",
+      "name": "Fateful Strike",
+      "cost": 7,
+      "might": 5,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Grants Atk+10 for the atk. Trigger%=Lck/2"
+    },
+    {
+      "id": "art_sword_finesse_blade",
+      "proficiency": "sword",
+      "name": "Finesse Blade",
+      "cost": 2,
+      "might": 0,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Deals at least 10 damage."
+    },
+    {
+      "id": "art_sword_flash_blow",
+      "proficiency": "sword",
+      "name": "Flash Blow",
+      "cost": 5,
+      "might": 7,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Grants Atk+5 for the attack. Trigger%=Dex/2"
+    },
+    {
+      "id": "art_sword_furious_strike",
+      "proficiency": "sword",
+      "name": "Furious Strike",
+      "cost": 8,
+      "might": 12,
+      "hit": 10,
+      "crit": 0,
+      "range": "1",
+      "effect": "No additional effect"
+    },
+    {
+      "id": "art_sword_gale_blow",
+      "proficiency": "sword",
+      "name": "Gale Blow",
+      "cost": 5,
+      "might": 7,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Grants Atk+5 for the attack. Trigger%=Spd/2"
+    },
+    {
+      "id": "art_sword_greater_hexblade",
+      "proficiency": "sword",
+      "name": "Greater Hexblade",
+      "cost": 8,
+      "might": 12,
+      "hit": 10,
+      "crit": 0,
+      "range": "1",
+      "effect": "Treated as a magical attack"
+    },
+    {
+      "id": "art_sword_grounder",
+      "proficiency": "sword",
+      "name": "Grounder",
+      "cost": 3,
+      "might": 3,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Effective against flying"
+    },
+    {
+      "id": "art_sword_haze_slice",
+      "proficiency": "sword",
+      "name": "Haze Slice",
+      "cost": 2,
+      "might": 3,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Grants 10 avoid during combat"
+    },
+    {
+      "id": "art_sword_heat_haze",
+      "proficiency": "sword",
+      "name": "Heat Haze",
+      "cost": 3,
+      "might": 3,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "After defeating foe, grant's Avo+20 unit unit's next phase"
+    },
+    {
+      "id": "art_sword_hexblade",
+      "proficiency": "sword",
+      "name": "Hexblade",
+      "cost": 5,
+      "might": 7,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Treated as a magical attack"
+    },
+    {
+      "id": "art_sword_lunging_gale",
+      "proficiency": "sword",
+      "name": "Lunging Gale",
+      "cost": 7,
+      "might": 0,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "AS+3 during combat, grants Atk+7 when making a follow up"
+    },
+    {
+      "id": "art_sword_mist_reaper",
+      "proficiency": "sword",
+      "name": "Mist Reaper",
+      "cost": 6,
+      "might": 2,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Grants Avo+10 during combat. Grants Crit+10 when making a follow-up"
+    },
+    {
+      "id": "art_sword_rend_armor",
+      "proficiency": "sword",
+      "name": "Rend Armor",
+      "cost": 3,
+      "might": 3,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Effective against armor"
+    },
+    {
+      "id": "art_sword_ripple_slash",
+      "proficiency": "sword",
+      "name": "Ripple Slash",
+      "cost": 5,
+      "might": -3,
+      "hit": null,
+      "crit": 0,
+      "range": "1",
+      "effect": "Guaranteed hit"
+    },
+    {
+      "id": "art_sword_shadow_gambit",
+      "proficiency": "sword",
+      "name": "Shadow Gambit",
+      "cost": 2,
+      "might": 3,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "If foe is on favorable terrain, ignores those terrain effects"
+    },
+    {
+      "id": "art_sword_single_sunder",
+      "proficiency": "sword",
+      "name": "Single Sunder",
+      "cost": 4,
+      "might": 12,
+      "hit": -50,
+      "crit": 0,
+      "range": "",
+      "effect": "No additional effect"
+    },
+    {
+      "id": "art_sword_skysplit",
+      "proficiency": "sword",
+      "name": "Skysplit",
+      "cost": 5,
+      "might": 1,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Grants AS+5 during combat"
+    },
+    {
+      "id": "art_sword_subdue",
+      "proficiency": "sword",
+      "name": "Subdue",
+      "cost": 2,
+      "might": 0,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "If foe's HP ≥ 2, leaves foe with 1 HP. Cannot follow up."
+    },
+    {
+      "id": "art_sword_sunder",
+      "proficiency": "sword",
+      "name": "Sunder",
+      "cost": 2,
+      "might": 4,
+      "hit": 0,
+      "crit": 10,
+      "range": "1",
+      "effect": "No additional effect"
+    },
+    {
+      "id": "art_sword_tiger_slash",
+      "proficiency": "sword",
+      "name": "Tiger Slash",
+      "cost": 3,
+      "might": 3,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Effective against cavalry"
+    },
+    {
+      "id": "art_sword_twin_blades",
+      "proficiency": "sword",
+      "name": "Twin Blades",
+      "cost": 10,
+      "might": 0,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Strikes 2 times at 80% damage"
+    },
+    {
+      "id": "art_sword_vicious_flash",
+      "proficiency": "sword",
+      "name": "Vicious Flash",
+      "cost": 1,
+      "might": 2,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Grants Atk+8 for the attack. Trigger%=Dex/2"
+    },
+    {
+      "id": "art_sword_windsweep",
+      "proficiency": "sword",
+      "name": "Windsweep",
+      "cost": 10,
+      "might": 5,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "If unit's attack hits, cannot be countered. Trigger%=20"
+    },
+    {
+      "id": "art_sword_wrath_strike",
+      "proficiency": "sword",
+      "name": "Wrath Strike",
+      "cost": 2,
+      "might": 4,
+      "hit": 10,
+      "crit": 0,
+      "range": "1",
+      "effect": "No additional effect"
+    },
+    {
+      "id": "art_sword_swordfaire",
+      "proficiency": "sword",
+      "name": "Swordfaire",
+      "cost": null,
+      "might": null,
+      "hit": null,
+      "crit": null,
+      "range": "",
+      "effect": ""
+    },
+    {
+      "id": "art_axe_battleblade_strike",
+      "proficiency": "axe",
+      "name": "Battleblade Strike",
+      "cost": 5,
+      "might": 7,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "After combat, grants Dex+2 until the end of the map. (Max +10)"
+    },
+    {
+      "id": "art_axe_bloodbath",
+      "proficiency": "axe",
+      "name": "Bloodbath",
+      "cost": 7,
+      "might": 5,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "After defeating foe, grants Shld+10 through unit's next combat."
+    },
+    {
+      "id": "art_axe_careful_attack",
+      "proficiency": "axe",
+      "name": "Careful Attack",
+      "cost": 2,
+      "might": 0,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "When foe avoids attack, foe cannot counter. Deals half damage. Cannot make a follow-up."
+    },
+    {
+      "id": "art_axe_crash",
+      "proficiency": "axe",
+      "name": "Crash",
+      "cost": 6,
+      "might": 9,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "If unit's attack hits, inflicts Confusion on foe (trigger %=5). Cannot make follow-up."
+    },
+    {
+      "id": "art_axe_devilwind_flurry",
+      "proficiency": "axe",
+      "name": "Devilwind Flurry",
+      "cost": 5,
+      "might": 7,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Will make a follow-up regardless of AS during combat. Trigger % = Mag ÷ 2."
+    },
+    {
+      "id": "art_axe_discerning_blow",
+      "proficiency": "axe",
+      "name": "Discerning Blow",
+      "cost": 3,
+      "might": 0,
+      "hit": 50,
+      "crit": 0,
+      "range": "1",
+      "effect": "Deals half damage."
+    },
+    {
+      "id": "art_axe_double_swing",
+      "proficiency": "axe",
+      "name": "Double Swing",
+      "cost": 7,
+      "might": 0,
+      "hit": -20,
+      "crit": 0,
+      "range": "2",
+      "effect": "Only usable on 1-2 range weapons. Strikes twice at 90% damage."
+    },
+    {
+      "id": "art_axe_enrage",
+      "proficiency": "axe",
+      "name": "Enrage",
+      "cost": 4,
+      "might": 0,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "After combat, grants Str+1 until the end of the map. (Max +5)"
+    },
+    {
+      "id": "art_axe_focused_strike",
+      "proficiency": "axe",
+      "name": "Focused Strike",
+      "cost": 7,
+      "might": 5,
+      "hit": 40,
+      "crit": 0,
+      "range": "1",
+      "effect": "No additional effect."
+    },
+    {
+      "id": "art_axe_guard_spike",
+      "proficiency": "axe",
+      "name": "Guard Spike",
+      "cost": 6,
+      "might": 7,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Grants Prt+10 during combat."
+    },
+    {
+      "id": "art_axe_half_spike",
+      "proficiency": "axe",
+      "name": "Half Spike",
+      "cost": 2,
+      "might": 3,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Grants Avo+10 during combat."
+    },
+    {
+      "id": "art_axe_helm_splitter",
+      "proficiency": "axe",
+      "name": "Helm Splitter",
+      "cost": 3,
+      "might": 3,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Effective vs. armored."
+    },
+    {
+      "id": "art_axe_hurl",
+      "proficiency": "axe",
+      "name": "Hurl",
+      "cost": 3,
+      "might": 3,
+      "hit": 20,
+      "crit": 0,
+      "range": "2",
+      "effect": "Only usable by axes with Rng 1-2."
+    },
+    {
+      "id": "art_axe_instant_strike",
+      "proficiency": "axe",
+      "name": "Instant Strike",
+      "cost": 2,
+      "might": 2,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Grants Atk+5 for the attack and when making a follow up. Trigger % = Spd/2"
+    },
+    {
+      "id": "art_axe_killer_spike",
+      "proficiency": "axe",
+      "name": "Killer Spike",
+      "cost": null,
+      "might": null,
+      "hit": null,
+      "crit": null,
+      "range": "",
+      "effect": ""
+    },
+    {
+      "id": "art_axe_lightning_axe",
+      "proficiency": "axe",
+      "name": "Lightning Axe",
+      "cost": 5,
+      "might": 7,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Treated as a magical attack"
+    },
+    {
+      "id": "art_axe_magic_breaker",
+      "proficiency": "axe",
+      "name": "Magic Breaker",
+      "cost": 5,
+      "might": 3,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "If foe uses magic, Atk+12."
+    },
+    {
+      "id": "art_axe_magic_throw",
+      "proficiency": "axe",
+      "name": "Magic Throw",
+      "cost": 3,
+      "might": 1,
+      "hit": 0,
+      "crit": 0,
+      "range": "2",
+      "effect": "Magic. Only usable by axes with Rng 1-2."
+    },
+    {
+      "id": "art_axe_power_spike",
+      "proficiency": "axe",
+      "name": "Power Spike",
+      "cost": 8,
+      "might": 12,
+      "hit": 10,
+      "crit": 0,
+      "range": "1",
+      "effect": "No additional effect"
+    },
+    {
+      "id": "art_axe_power_throw",
+      "proficiency": "axe",
+      "name": "Power Throw",
+      "cost": 7,
+      "might": 10,
+      "hit": 10,
+      "crit": 0,
+      "range": "2",
+      "effect": "Only usable by axes with Rng 1-2."
+    },
+    {
+      "id": "art_axe_reflecting_dance",
+      "proficiency": "axe",
+      "name": "Reflecting Dance",
+      "cost": 10,
+      "might": -10,
+      "hit": -20,
+      "crit": 0,
+      "range": "1",
+      "effect": "If foe would have made a followup, foe cannot and unit makes a followup instead."
+    },
+    {
+      "id": "art_axe_riot",
+      "proficiency": "axe",
+      "name": "Riot",
+      "cost": 4,
+      "might": 5,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Grants Atk+5 when making a follow-up."
+    },
+    {
+      "id": "art_axe_smash",
+      "proficiency": "axe",
+      "name": "Smash",
+      "cost": 2,
+      "might": 4,
+      "hit": 0,
+      "crit": 5,
+      "range": "1",
+      "effect": "No additional effect"
+    },
+    {
+      "id": "art_axe_spear_buster",
+      "proficiency": "axe",
+      "name": "Spear Buster",
+      "cost": 3,
+      "might": 3,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "If foe uses a spear, grants Atk+7."
+    },
+    {
+      "id": "art_axe_spike",
+      "proficiency": "axe",
+      "name": "Spike",
+      "cost": 2,
+      "might": 4,
+      "hit": 10,
+      "crit": 0,
+      "range": "1",
+      "effect": "No additional effect"
+    },
+    {
+      "id": "art_axe_triple_spike",
+      "proficiency": "axe",
+      "name": "Triple Spike",
+      "cost": 10,
+      "might": 0,
+      "hit": -50,
+      "crit": 0,
+      "range": "1",
+      "effect": "Strikes 3 times. When foe avoids a strike, grants Hit+10 to unit."
+    },
+    {
+      "id": "art_axe_wild_abandon",
+      "proficiency": "axe",
+      "name": "Wild Abandon",
+      "cost": 4,
+      "might": 8,
+      "hit": -30,
+      "crit": 0,
+      "range": "1",
+      "effect": "No additional effect"
+    },
+    {
+      "id": "art_axe_axefaire",
+      "proficiency": "axe",
+      "name": "Axefaire",
+      "cost": null,
+      "might": null,
+      "hit": null,
+      "crit": null,
+      "range": "",
+      "effect": ""
+    },
+    {
+      "id": "art_axe_double_attack",
+      "proficiency": "axe",
+      "name": "Double Attack",
+      "cost": null,
+      "might": null,
+      "hit": null,
+      "crit": null,
+      "range": "",
+      "effect": ""
+    },
+    {
+      "id": "art_axe_giant_breaker",
+      "proficiency": "axe",
+      "name": "Giant Breaker",
+      "cost": null,
+      "might": null,
+      "hit": null,
+      "crit": null,
+      "range": "",
+      "effect": ""
+    },
+    {
+      "id": "art_brawl_assassin_s_fist",
+      "proficiency": "brawl",
+      "name": "Assassin's Fist",
+      "cost": 6,
+      "might": 0,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Deals at least 20 damage."
+    },
+    {
+      "id": "art_brawl_battle_blow",
+      "proficiency": "brawl",
+      "name": "Battle Blow",
+      "cost": 4,
+      "might": 4,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "If unit's HP = 100%, grants Atk+3."
+    },
+    {
+      "id": "art_brawl_battle_rush",
+      "proficiency": "brawl",
+      "name": "Battle Rush",
+      "cost": 7,
+      "might": -2,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Unit's follow-up occurs before foe's counter."
+    },
+    {
+      "id": "art_brawl_beatdown",
+      "proficiency": "brawl",
+      "name": "Beatdown",
+      "cost": 3,
+      "might": 3,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "After combat, grants Spd+1 until the end of the map. (Max +10)"
+    },
+    {
+      "id": "art_brawl_cautious_blow",
+      "proficiency": "brawl",
+      "name": "Cautious Blow",
+      "cost": 2,
+      "might": 3,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Grants Avo+10 during combat."
+    },
+    {
+      "id": "art_brawl_crush_armor",
+      "proficiency": "brawl",
+      "name": "Crush Armor",
+      "cost": 4,
+      "might": 5,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Effective vs armored."
+    },
+    {
+      "id": "art_brawl_curtail_magic",
+      "proficiency": "brawl",
+      "name": "Curtail Magic",
+      "cost": 3,
+      "might": 0,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Grants Rsl+5 during combat."
+    },
+    {
+      "id": "art_brawl_deal_death",
+      "proficiency": "brawl",
+      "name": "Deal Death",
+      "cost": 2,
+      "might": 4,
+      "hit": 0,
+      "crit": 5,
+      "range": "1",
+      "effect": "No additional effect"
+    },
+    {
+      "id": "art_brawl_fading_assault",
+      "proficiency": "brawl",
+      "name": "Fading Assault",
+      "cost": 8,
+      "might": 0,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "After combat, unit can move up to 2 spaces."
+    },
+    {
+      "id": "art_brawl_fading_blow",
+      "proficiency": "brawl",
+      "name": "Fading Blow",
+      "cost": 10,
+      "might": -5,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "After combat, unit can move up to 1 space."
+    },
+    {
+      "id": "art_brawl_feint",
+      "proficiency": "brawl",
+      "name": "Feint",
+      "cost": 2,
+      "might": 0,
+      "hit": -50,
+      "crit": 0,
+      "range": "1",
+      "effect": "After combat, inflicts Avo-20 on foe through their next combat."
+    },
+    {
+      "id": "art_brawl_jack_hit",
+      "proficiency": "brawl",
+      "name": "Jack Hit",
+      "cost": 1,
+      "might": 1,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Grants Atk+10 for the attack. Trigger % = 5."
+    },
+    {
+      "id": "art_brawl_knockout",
+      "proficiency": "brawl",
+      "name": "Knockout",
+      "cost": 5,
+      "might": 7,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "If unit's attack hits, inflicts Confusion on foe for ??? (trigger % = 5). Cannot make a follow-up."
+    },
+    {
+      "id": "art_brawl_magic_combo",
+      "proficiency": "brawl",
+      "name": "Magic Combo",
+      "cost": 10,
+      "might": 0,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Strikes 2 times at 80% damage. Treated as a magical attack."
+    },
+    {
+      "id": "art_brawl_mighty_fist",
+      "proficiency": "brawl",
+      "name": "Mighty Fist",
+      "cost": 2,
+      "might": 4,
+      "hit": 10,
+      "crit": 0,
+      "range": "1",
+      "effect": "No additional effect"
+    },
+    {
+      "id": "art_brawl_mind_s_eye_blow",
+      "proficiency": "brawl",
+      "name": "Mind's-Eye Blow",
+      "cost": 5,
+      "might": 7,
+      "hit": 30,
+      "crit": 0,
+      "range": "1",
+      "effect": ""
+    },
+    {
+      "id": "art_brawl_mystic_blow",
+      "proficiency": "brawl",
+      "name": "Mystic Blow",
+      "cost": 5,
+      "might": 7,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Treated as a magical attack."
+    },
+    {
+      "id": "art_brawl_one_on_one",
+      "proficiency": "brawl",
+      "name": "One-on-One",
+      "cost": 3,
+      "might": 0,
+      "hit": -50,
+      "crit": 0,
+      "range": "1",
+      "effect": "If unit's attack hits, inflicts Immobilize on foe."
+    },
+    {
+      "id": "art_brawl_one_two_punch",
+      "proficiency": "brawl",
+      "name": "One-Two Punch",
+      "cost": 5,
+      "might": 10,
+      "hit": 20,
+      "crit": 0,
+      "range": "1",
+      "effect": "Foe attacks first. Grants Avo+20 during combat."
+    },
+    {
+      "id": "art_brawl_power_combo",
+      "proficiency": "brawl",
+      "name": "Power Combo",
+      "cost": 7,
+      "might": 7,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Strikes 2 times. Reduces Hit to 50%."
+    },
+    {
+      "id": "art_brawl_razor_fist",
+      "proficiency": "brawl",
+      "name": "Razor Fist",
+      "cost": 6,
+      "might": 8,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "If unit makes a critical, reduces weapon durability cost to 0."
+    },
+    {
+      "id": "art_brawl_revival",
+      "proficiency": "brawl",
+      "name": "Revival",
+      "cost": 6,
+      "might": 5,
+      "hit": null,
+      "crit": null,
+      "range": "",
+      "effect": "Restores HP after defeating foe"
+    },
+    {
+      "id": "art_brawl_saving_fist",
+      "proficiency": "brawl",
+      "name": "Saving Fist",
+      "cost": 4,
+      "might": 12,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "If foe's HP ≥ 2, leaves foe with 1 HP. Cannot make a follow-up."
+    },
+    {
+      "id": "art_brawl_spirit_blow",
+      "proficiency": "brawl",
+      "name": "Spirit Blow",
+      "cost": 8,
+      "might": 12,
+      "hit": 10,
+      "crit": 0,
+      "range": "1",
+      "effect": "No additional effect"
+    },
+    {
+      "id": "art_brawl_spirit_fist",
+      "proficiency": "brawl",
+      "name": "Spirit Fist",
+      "cost": 5,
+      "might": 7,
+      "hit": 0,
+      "crit": 0,
+      "range": "1",
+      "effect": "Grants Atk+5 for the attack. Trigger%= Res/2"
+    },
+    {
+      "id": "art_brawl_fistfaire",
+      "proficiency": "brawl",
+      "name": "Fistfaire",
+      "cost": null,
+      "might": null,
+      "hit": null,
+      "crit": null,
+      "range": "",
+      "effect": ""
+    },
+    {
+      "id": "art_bow_arrowcrack",
+      "proficiency": "bow",
+      "name": "Arrowcrack",
+      "cost": 5,
+      "might": 0,
+      "hit": 0,
+      "crit": 0,
+      "range": "2",
+      "effect": "Grants Atk+15 for the attack. Trigger % = 50."
+    },
+    {
+      "id": "art_bow_bowbreaker_arrow",
+      "proficiency": "bow",
+      "name": "Bowbreaker Arrow",
+      "cost": 6,
+      "might": 0,
+      "hit": 0,
+      "crit": 0,
+      "range": "2",
+      "effect": "If foe uses a bow, strikes 2 times at 90% damage"
+    },
+    {
+      "id": "art_bow_breakaway_shot",
+      "proficiency": "bow",
+      "name": "Breakaway Shot",
+      "cost": 10,
+      "might": -5,
+      "hit": 0,
+      "crit": 0,
+      "range": "2",
+      "effect": "After combat, unit can move up to 1 space."
+    },
+    {
+      "id": "art_bow_calm_call",
+      "proficiency": "bow",
+      "name": "Calm Call",
+      "cost": 3,
+      "might": 1,
+      "hit": 0,
+      "crit": 0,
+      "range": "2",
+      "effect": "After defeating a foe, grants Avo+30 through unit's next combat"
+    },
+    {
+      "id": "art_bow_curved_shot",
+      "proficiency": "bow",
+      "name": "Curved Shot",
+      "cost": 2,
+      "might": 4,
+      "hit": 10,
+      "crit": 0,
+      "range": "2",
+      "effect": "No additional effect"
+    },
+    {
+      "id": "art_bow_encloser",
+      "proficiency": "bow",
+      "name": "Encloser",
+      "cost": 3,
+      "might": 0,
+      "hit": 0,
+      "crit": 0,
+      "range": "2",
+      "effect": "If unit's attack hits, inflicts Mov-3 on foe until unit's next phase."
+    },
+    {
+      "id": "art_bow_haphazard",
+      "proficiency": "bow",
+      "name": "Haphazard",
+      "cost": 10,
+      "might": 0,
+      "hit": -50,
+      "crit": 0,
+      "range": "2",
+      "effect": "Strikes 4 times at 90% damage."
+    },
+    {
+      "id": "art_bow_lead_arrow",
+      "proficiency": "bow",
+      "name": "Lead Arrow",
+      "cost": 4,
+      "might": 5,
+      "hit": 0,
+      "crit": 0,
+      "range": "0",
+      "effect": "Effective vs. armored."
+    },
+    {
+      "id": "art_bow_leaden_draw",
+      "proficiency": "bow",
+      "name": "Leaden Draw",
+      "cost": 8,
+      "might": 12,
+      "hit": 10,
+      "crit": 0,
+      "range": "2",
+      "effect": "No additional effect"
+    },
+    {
+      "id": "art_bow_leg_shot",
+      "proficiency": "bow",
+      "name": "Leg Shot",
+      "cost": 2,
+      "might": 0,
+      "hit": 0,
+      "crit": 0,
+      "range": "2",
+      "effect": "If unit's attack hits, inflicts Avo-20 on foe through their next combat. Cannot make a follow-up."
+    },
+    {
+      "id": "art_bow_magic_arrow",
+      "proficiency": "bow",
+      "name": "Magic Arrow",
+      "cost": 5,
+      "might": 7,
+      "hit": 0,
+      "crit": 0,
+      "range": "2",
+      "effect": "Treated as a magical attack"
+    },
+    {
+      "id": "art_bow_mighty_shot",
+      "proficiency": "bow",
+      "name": "Mighty Shot",
+      "cost": 4,
+      "might": 12,
+      "hit": -30,
+      "crit": 0,
+      "range": "2",
+      "effect": "No additional effect"
+    },
+    {
+      "id": "art_bow_shadow_arrow",
+      "proficiency": "bow",
+      "name": "Shadow Arrow",
+      "cost": 7,
+      "might": 7,
+      "hit": 0,
+      "crit": 0,
+      "range": "2",
+      "effect": "Grants Avo+10 during combat."
+    },
+    {
+      "id": "art_bow_sneaky_shot",
+      "proficiency": "bow",
+      "name": "Sneaky Shot",
+      "cost": 4,
+      "might": 5,
+      "hit": 0,
+      "crit": 0,
+      "range": "2",
+      "effect": "If unit is on favorable terrain, grants Atk+5, Hit/Crit +10."
+    },
+    {
+      "id": "art_bow_snipe",
+      "proficiency": "bow",
+      "name": "Snipe",
+      "cost": 4,
+      "might": 5,
+      "hit": 0,
+      "crit": 0,
+      "range": "2",
+      "effect": "If foe's HP ≤ 50%, grants Atk+3, Hit+10."
+    },
+    {
+      "id": "art_bow_surprise_shot",
+      "proficiency": "bow",
+      "name": "Surprise Shot",
+      "cost": 2,
+      "might": 3,
+      "hit": 0,
+      "crit": 0,
+      "range": "2",
+      "effect": "If foe's HP = 100%, grants Atk +5. Trigger % = 30."
+    },
+    {
+      "id": "art_bow_spiral_shot",
+      "proficiency": "bow",
+      "name": "Spiral Shot",
+      "cost": 5,
+      "might": 7,
+      "hit": 0,
+      "crit": 0,
+      "range": "2",
+      "effect": "Grants Atk+5 for the attack. Trigger % = Dex / 2."
+    },
+    {
+      "id": "art_bow_spirit_bow",
+      "proficiency": "bow",
+      "name": "Spirit Bow",
+      "cost": 6,
+      "might": 8,
+      "hit": 0,
+      "crit": 0,
+      "range": "2",
+      "effect": "Grants Rsl+7 during combat."
+    },
+    {
+      "id": "art_bow_twin_shot_flow",
+      "proficiency": "bow",
+      "name": "Twin-shot Flow",
+      "cost": 10,
+      "might": 0,
+      "hit": 0,
+      "crit": 0,
+      "range": "2",
+      "effect": "Strikes 2 times at 70% damage."
+    },
+    {
+      "id": "art_bow_vital_shot",
+      "proficiency": "bow",
+      "name": "Vital Shot",
+      "cost": 2,
+      "might": 4,
+      "hit": 0,
+      "crit": 5,
+      "range": "2",
+      "effect": "No additional effect"
+    },
+    {
+      "id": "art_bow_warning_shot",
+      "proficiency": "bow",
+      "name": "Warning Shot",
+      "cost": 2,
+      "might": 3,
+      "hit": 0,
+      "crit": 0,
+      "range": "2",
+      "effect": "Grants Avo+10 during combat."
+    },
+    {
+      "id": "art_bow_ward_arrow",
+      "proficiency": "bow",
+      "name": "Ward Arrow",
+      "cost": 6,
+      "might": 0,
+      "hit": -40,
+      "crit": 0,
+      "range": "2",
+      "effect": "If unit's attack hits, inflicts Silence on foe."
+    }
+  ],
+  "skills": [
+    {
+      "id": "skill_personal_brio",
+      "type": "Personal",
+      "name": "Brio",
+      "description": "Grants Mov+1."
+    },
+    {
+      "id": "skill_unique_flamekeeper",
+      "type": "Unique",
+      "name": "Flamekeeper",
+      "description": "Unit and allies are unaffected by Underworld Flames and take half damage from attacks while in Underworld Flames."
+    },
+    {
+      "id": "skill_personal_murderous_intent",
+      "type": "Personal",
+      "name": "Murderous Intent",
+      "description": "If unit attacks first, grants Crit+5 during combat."
+    },
+    {
+      "id": "skill_unique_bestial_impulse",
+      "type": "Unique",
+      "name": "Bestial Impulse",
+      "description": "After combat, grants Crit+2 until a unit makes a critical."
+    },
+    {
+      "id": "skill_personal_royal_resolve",
+      "type": "Personal",
+      "name": "Royal Resolve",
+      "description": "Unit takes half damage when attacked. Trigger % = 30."
+    },
+    {
+      "id": "skill_unique_unstoppable_force",
+      "type": "Unique",
+      "name": "Unstoppable Force",
+      "description": "Multiplies damage by 3 when attacking obstacles."
+    },
+    {
+      "id": "skill_unique_direct_hit",
+      "type": "Unique",
+      "name": "Direct Hit",
+      "description": "Deals +10 damage when attacking with Blaze Arts. Trigger % = 30."
+    },
+    {
+      "id": "skill_personal_blindside",
+      "type": "Personal",
+      "name": "Blindside",
+      "description": "If unit attacks first, cannot be countered during combat. Trigger % = 5."
+    },
+    {
+      "id": "skill_unique_improviso",
+      "type": "Unique",
+      "name": "Improviso",
+      "description": "After using Blaze Arts during Overblaze, unit can attack."
+    },
+    {
+      "id": "skill_personal_tactician_s_wit",
+      "type": "Personal",
+      "name": "Tactician’s Wit",
+      "description": "Grants Rng+1 to combat arts usable on allies."
+    },
+    {
+      "id": "skill_unique_tactician_s_insight",
+      "type": "Unique",
+      "name": "Tactician’s Insight",
+      "description": "After combat, If unit attacked first, inflicts Avo-5 on foe throughout their next combat.",
+      "plus": {
+        "name": "Tactician’s Insight+",
+        "description": "After combat, If unit attacked first, inflicts Avo-10 on foe throughout their next combat."
+      }
+    },
+    {
+      "id": "skill_personal_dark_calling",
+      "type": "Personal",
+      "name": "Dark Calling",
+      "description": "Inflicts Ddg-5 on adjacent foes."
+    },
+    {
+      "id": "skill_unique_dark_secrets",
+      "type": "Unique",
+      "name": "Dark Secrets",
+      "description": "Extends range of Dark Calling to 2 spaces.",
+      "plus": {
+        "name": "Dark Secrets+",
+        "description": "Extends range of Dark Calling to 3 spaces."
+      }
+    },
+    {
+      "id": "skill_personal_sage_advice",
+      "type": "Personal",
+      "name": "Sage Advice",
+      "description": "Grants Def+3 to adjacent allies."
+    },
+    {
+      "id": "skill_unique_additional_intel",
+      "type": "Unique",
+      "name": "Additional Intel",
+      "description": "Grants Hit+10 to adjacent allies during their combats. Trigger % = 30.",
+      "plus": {
+        "name": "Additional Intel+",
+        "description": "Grants Hit+20 to adjacent allies during their combats. Trigger % = 30."
+      }
+    },
+    {
+      "id": "skill_personal_guardian_s_duty",
+      "type": "Personal",
+      "name": "Guardian’s Duty",
+      "description": "Reduces damage to 90% when attacked."
+    },
+    {
+      "id": "skill_unique_retaliatory_blow",
+      "type": "Unique",
+      "name": "Retaliatory Blow",
+      "description": "If foe attacks first, multiples damage by 1.3 when attacking. Trigger % = 5.",
+      "plus": {
+        "name": "Retaliatory Blow+",
+        "description": "If foe attacks first, multiples damage by 1.3 when attacking. Trigger % = 10."
+      }
+    },
+    {
+      "id": "skill_personal_steady_aim",
+      "type": "Personal",
+      "name": "Steady Aim",
+      "description": "Grants Rng+1 when attacking with a bow combat art."
+    },
+    {
+      "id": "skill_unique_correct_for_drift",
+      "type": "Unique",
+      "name": "Correct for Drift",
+      "description": "If unit’s hit % ≥ 90, grants Hit+10 during combat.",
+      "plus": {
+        "name": "Correct for Drift+",
+        "description": "If unit’s hit % ≥ 75, grants Hit+20 during combat."
+      }
+    },
+    {
+      "id": "skill_personal_brawn",
+      "type": "Personal",
+      "name": "Brawn",
+      "description": "Reduces Wt of unit’s equipment to 80%."
+    },
+    {
+      "id": "skill_unique_throwing_arm",
+      "type": "Unique",
+      "name": "Throwing Arm",
+      "description": "If throwing a spear, grants Hit+10, Atk+2 during combat.",
+      "plus": {
+        "name": "Throwing Arm+",
+        "description": "If throwing a spear, grants Hit+20, Atk+4 during combat."
+      }
+    },
+    {
+      "id": "skill_personal_power_arts",
+      "type": "Personal",
+      "name": "Power Arts",
+      "description": "Grants Atk+3 when attacking with a combat art."
+    },
+    {
+      "id": "skill_unique_all_out_attack",
+      "type": "Unique",
+      "name": "All-Out Attack",
+      "description": "Multiplies damage by 1.3 when attacking with a combat art. Trigger % = 30.",
+      "plus": {
+        "name": "All-Out Attack+",
+        "description": "Multiplies damage by 1.5 when attacking with a combat art. Trigger % = 30."
+      }
+    },
+    {
+      "id": "skill_personal_goddess_s_favor",
+      "type": "Personal",
+      "name": "Goddess’s Favor",
+      "description": "After combat, restores 5 HP to unit."
+    },
+    {
+      "id": "skill_unique_wind_s_caprice",
+      "type": "Unique",
+      "name": "Wind’s Caprice",
+      "description": "Grants one of Avo+1, Avo+5, or Avo+20 during combat.",
+      "plus": {
+        "name": "Wind’s Caprice+",
+        "description": "Grants one of Avo+1, Avo+5, Avo+20, or Avo+30 during combat."
+      }
+    },
+    {
+      "id": "skill_personal_patch_up",
+      "type": "Personal",
+      "name": "Patch Up",
+      "description": "After an adjacent ally’s combat, restores a little HP to that ally."
+    },
+    {
+      "id": "skill_unique_pray_for_safety",
+      "type": "Unique",
+      "name": "Pray for Safety",
+      "description": "Grants Ddg+10 to adjacent allies.",
+      "plus": {
+        "name": "Pray for Safety+",
+        "description": "Grants Ddg+20 to adjacent allies."
+      }
+    },
+    {
+      "id": "skill_personal_veteran_s_mettle",
+      "type": "Personal",
+      "name": "Veteran’s Mettle",
+      "description": "Grants Hit+10 during combat against an adjacent foe."
+    },
+    {
+      "id": "skill_unique_redblade_s_will",
+      "type": "Unique",
+      "name": "Redblade’s Will",
+      "description": "Grants Atk+3 during combat against an adjacent foe.",
+      "plus": {
+        "name": "Redblade’s Will+",
+        "description": "Grants Atk+3 during combat against an adjacent foe. Also grants Atk+3 when attacking an adjacent foe (trigger % =30)."
+      }
+    },
+    {
+      "id": "skill_personal_racing_attack",
+      "type": "Personal",
+      "name": "Racing Attack",
+      "description": "If unit attacks first, grants Avo+15 during combat."
+    },
+    {
+      "id": "skill_unique_accelerate",
+      "type": "Unique",
+      "name": "Accelerate",
+      "description": "After defeating a foe, grants Spd+1 until the end of the map. (Max +10)",
+      "plus": {
+        "name": "Accelerate+",
+        "description": "After defeating a foe, grants Spd+2 until the end of the map. (Max +10)"
+      }
+    },
+    {
+      "id": "skill_personal_competitive_zeal",
+      "type": "Personal",
+      "name": "Competitive Zeal",
+      "description": "When equipped with magic, grants Crit +10."
+    },
+    {
+      "id": "skill_unique_ardent_nosferatu",
+      "type": "Unique",
+      "name": "Ardent Nosferatu",
+      "description": "When using Nosferatu, grants Atk+3, Crit+5 during combat.",
+      "plus": {
+        "name": "Ardent Nosferatu+",
+        "description": "When using Nosferatu, grants Atk+5, Crit+10 during combat."
+      }
+    },
+    {
+      "id": "skill_personal_safety_first",
+      "type": "Personal",
+      "name": "Safety First",
+      "description": "If foe cannot counter, grants Hit+10 to unit during combat."
+    },
+    {
+      "id": "skill_unique_upper_hand",
+      "type": "Unique",
+      "name": "Upper Hand",
+      "description": "If unit’s hit % = 100, grants Atk +3 when attacking.",
+      "plus": {
+        "name": "Upper Hand+",
+        "description": "If unit’s hit % = 100, grants Atk +5 when attacking."
+      }
+    },
+    {
+      "id": "skill_personal_signs_of_growth",
+      "type": "Personal",
+      "name": "Signs of Growth",
+      "description": "When unit levels up, gains enhanced basic stat growth."
+    },
+    {
+      "id": "skill_unique_warrior_s_blood",
+      "type": "Unique",
+      "name": "Warrior’s Blood",
+      "description": "Grants stat increase based on equipped weapon type.",
+      "plus": {
+        "name": "Warrior’s Blood+",
+        "description": "Grants a large stat increase based on equipped weapon type."
+      }
+    },
+    {
+      "id": "skill_personal_requiem_style",
+      "type": "Personal",
+      "name": "Requiem Style",
+      "description": "Unit makes a follow-up regardless of AS during combat. Trigger % = 5."
+    },
+    {
+      "id": "skill_unique_go_no_sen",
+      "type": "Unique",
+      "name": "Go No Sen",
+      "description": "In enemy’s phase, unit attacks first during combat. Trigger % = 25."
+    },
+    {
+      "id": "skill_unique_sen_no_sen",
+      "type": "Unique",
+      "name": "Sen No Sen",
+      "description": "If unit attacks first, unit’s follow-up occurs before foe’s counter during combat. Trigger % = 25."
+    },
+    {
+      "id": "skill_personal_swashbuckler_s_luck",
+      "type": "Personal",
+      "name": "Swashbuckler’s Luck",
+      "description": "Grants Lck+3."
+    },
+    {
+      "id": "skill_unique_cannoning_flair",
+      "type": "Unique",
+      "name": "Cannoning Flair",
+      "description": "When using artillery, grants Hit+30 during combat."
+    },
+    {
+      "id": "skill_unique_swashbuckler_s_luck",
+      "type": "Unique",
+      "name": "Swashbuckler’s Luck+",
+      "description": "Grants Lck+5 to unit and all allies."
+    },
+    {
+      "id": "skill_personal_solid_and_sturdy",
+      "type": "Personal",
+      "name": "Solid and Sturdy",
+      "description": "Grants Def+5. Unit is armored. Cannot change class to cavalry or flying."
+    },
+    {
+      "id": "skill_unique_predictive_sense",
+      "type": "Unique",
+      "name": "Predictive Sense",
+      "description": "If unit attacks first, grants Hit+20 to magic during combat."
+    },
+    {
+      "id": "skill_personal_celestial_flow",
+      "type": "Personal",
+      "name": "Celestial Flow",
+      "description": "Grants Avo+3."
+    },
+    {
+      "id": "skill_unique_continuum",
+      "type": "Unique",
+      "name": "Continuum",
+      "description": "When unit avoids an attack, restores 5 HP to unit.",
+      "plus": {
+        "name": "Continuum+",
+        "description": "When unit avoids an attack, restores 10 HP to unit."
+      }
+    },
+    {
+      "id": "skill_personal_brave_assist",
+      "type": "Personal",
+      "name": "Brave Assist",
+      "description": "Grants Def+3 to adjacent allies."
+    },
+    {
+      "id": "skill_unique_flashing_fang",
+      "type": "Unique",
+      "name": "Flashing Fang",
+      "description": "Grants Atk+4, Hit+50 when attacking. Trigger % = 20.",
+      "plus": {
+        "name": "Flashing Fang+",
+        "description": "Grants Atk+7, Hit+100 when attacking. Trigger % = 20."
+      }
+    },
+    {
+      "id": "skill_personal_management_skills",
+      "type": "Personal",
+      "name": "Management Skills",
+      "description": "Allows storage access to unit and allies within 2 spaces."
+    },
+    {
+      "id": "skill_unique_seize_the_chance",
+      "type": "Unique",
+      "name": "Seize the Chance",
+      "description": "Multiplies damage by 1.3 when attacking. Trigger % = Lck ÷ 2.",
+      "plus": {
+        "name": "Seize the Chance+",
+        "description": "Multiplies damage by 1.5 when attacking. Trigger % = Lck ÷ 2."
+      }
+    },
+    {
+      "id": "skill_personal_caretaker",
+      "type": "Personal",
+      "name": "Caretaker",
+      "description": "Adjacent allies cannot suffer a follow-up during combat. Trigger % = 5."
+    },
+    {
+      "id": "skill_unique_no_mercy",
+      "type": "Unique",
+      "name": "No Mercy",
+      "description": "Grants Hit/Crit+5 when making a follow-up.",
+      "plus": {
+        "name": "No Mercy+",
+        "description": "Grants Hit/Crit+10 when making a follow-up."
+      }
+    },
+    {
+      "id": "skill_personal_cooler_heads",
+      "type": "Personal",
+      "name": "Cooler Heads",
+      "description": "After using Draw Back, unit can use assist magic."
+    },
+    {
+      "id": "skill_unique_watchfulness",
+      "type": "Unique",
+      "name": "Watchfulness",
+      "description": "Grants Spd+2 to adjacent allies.",
+      "plus": {
+        "name": "Watchfulness+",
+        "description": "Grants Spd+4 to adjacent allies."
+      }
+    },
+    {
+      "id": "skill_personal_stage_direction",
+      "type": "Personal",
+      "name": "Stage Direction",
+      "description": "Grants Ddg+10 to allies within 2 spaces during their combats. Trigger % = ally’s Cha ÷ 2."
+    },
+    {
+      "id": "skill_unique_dramatic_effect",
+      "type": "Unique",
+      "name": "Dramatic Effect",
+      "description": "When Stage Direction triggers, grants Hit+10 to target allies.",
+      "plus": {
+        "name": "Dramatic Effect+",
+        "description": "When Stage Direction triggers, grants Hit/Crit+10 to target allies."
+      }
+    },
+    {
+      "id": "skill_personal_close_call",
+      "type": "Personal",
+      "name": "Close Call",
+      "description": "If unit’s HP ≥ 2 and damage would reduce it to 0, leaves unit with 1 HP. Trigger % = Lck."
+    },
+    {
+      "id": "skill_unique_devil_s_luck",
+      "type": "Unique",
+      "name": "Devil’s Luck",
+      "description": "After defeating a foe, grants Lck+1 until the end of the map. (Max +10)",
+      "plus": {
+        "name": "Devil’s Luck+",
+        "description": "After defeating a foe, grants Lck+2 until the end of the map. (Max +10)"
+      }
+    },
+    {
+      "id": "skill_personal_spirits_voice",
+      "type": "Personal",
+      "name": "Spirits’ Voice",
+      "description": "If foe uses magic, grants Hit/Avo+10 to unit during combat."
+    },
+    {
+      "id": "skill_unique_spirits_guidance",
+      "type": "Unique",
+      "name": "Spirits’ Guidance",
+      "description": "Grants Spirits’ Voice to adjacent allies.",
+      "plus": {
+        "name": "Spirits’ Guidance+",
+        "description": "Grants Spirits’ Voice to allies within 2 spaces."
+      }
+    },
+    {
+      "id": "skill_personal_quick_draw",
+      "type": "Personal",
+      "name": "Quick Draw",
+      "description": "If unit attacks first, grants Atk+3 during combat. Trigger % = 50."
+    },
+    {
+      "id": "skill_unique_never_stop",
+      "type": "Unique",
+      "name": "Never Stop",
+      "description": "Grants Atk+5 when attacking after Quick Draw. Trigger % = 30.",
+      "plus": {
+        "name": "Never Stop+",
+        "description": "Grants Atk+5 when attacking after Quick Draw. Trigger % = 50."
+      }
+    },
+    {
+      "id": "skill_personal_heavyweight_class",
+      "type": "Personal",
+      "name": "Heavyweight Class",
+      "description": "Unit cannot change to cavalry or flying. Grants Bld+5."
+    },
+    {
+      "id": "skill_unique_pin_down",
+      "type": "Unique",
+      "name": "Pin Down",
+      "description": "Inflicts Mov-3 on adjacent foes.",
+      "plus": {
+        "name": "Pin Down+",
+        "description": "Inflicts Mov-5 on adjacent foes."
+      }
+    },
+    {
+      "id": "skill_personal_falcon",
+      "type": "Personal",
+      "name": "Falcon",
+      "description": "If unit attacks first, grants AS+3 during combat."
+    },
+    {
+      "id": "skill_unique_perception",
+      "type": "Unique",
+      "name": "Perception",
+      "description": "If unit can make a follow-up, grants Avo+10 during combat.",
+      "plus": {
+        "name": "Perception+",
+        "description": "If unit can make a follow-up, grants Avo+20 during combat."
+      }
+    },
+    {
+      "id": "skill_personal_ready_for_battle",
+      "type": "Personal",
+      "name": "Ready for Battle",
+      "description": "For the first combat in enemy’s phase, unit attacks first. Trigger % = 50."
+    },
+    {
+      "id": "skill_unique_pass_judgement",
+      "type": "Unique",
+      "name": "Pass Judgement",
+      "description": "When Diadem of Balance triggers, grants Atk+4.",
+      "plus": {
+        "name": "Pass Judgement+",
+        "description": "When Diadem of Balance triggers, grants Atk+7."
+      }
+    },
+    {
+      "id": "skill_personal_one_chance",
+      "type": "Personal",
+      "name": "One Chance",
+      "description": "If unit and foe cannot make a follow-up, grants Atk+5 to unit during combat."
+    },
+    {
+      "id": "skill_unique_full_strength",
+      "type": "Unique",
+      "name": "Full Strength",
+      "description": "Multiplies damage by 1.3 when attacking. Trigger % = Str ÷ 2.",
+      "plus": {
+        "name": "Full Strength+",
+        "description": "Multiplies damage by 1.5 when attacking. Trigger % = Str ÷ 2."
+      }
+    },
+    {
+      "id": "skill_personal_blink_of_an_eye",
+      "type": "Personal",
+      "name": "Blink of an Eye",
+      "description": "After using Swap, grants Def+3 until unit’s next phase."
+    },
+    {
+      "id": "skill_unique_flickering_edge",
+      "type": "Unique",
+      "name": "Flickering Edge",
+      "description": "When unit evades an attack, grants Atk+3 during combat.",
+      "plus": {
+        "name": "Flickering Edge+",
+        "description": "When unit evades an attack, grants Atk+5 during combat."
+      }
+    },
+    {
+      "id": "skill_personal_graceful_light",
+      "type": "Personal",
+      "name": "Graceful Light",
+      "description": "When healing an ally with magic, reduces magic cost to 0. Trigger % = Lck."
+    },
+    {
+      "id": "skill_unique_gift_of_faith",
+      "type": "Unique",
+      "name": "Gift of Faith",
+      "description": "When healing an ally with magic, restores +20 HP. Trigger % = Lck.",
+      "plus": {
+        "name": "Gift of Faith+",
+        "description": "When healing an ally with magic, restores +30 HP. Trigger % = Lck."
+      }
+    },
+    {
+      "id": "skill_personal_steadfast",
+      "type": "Personal",
+      "name": "Steadfast",
+      "description": "If unit’s HP ≥ 50%, grants Avo+10 during combat."
+    },
+    {
+      "id": "skill_unique_peak_form",
+      "type": "Unique",
+      "name": "Peak Form",
+      "description": "If unit’s HP = 100%, grants Atk+3 during combat.",
+      "plus": {
+        "name": "Peak Form+",
+        "description": "If unit’s HP = 100%, grants Atk+3, Avo+10 during combat."
+      }
+    },
+    {
+      "id": "skill_personal_adaptability",
+      "type": "Personal",
+      "name": "Adaptability",
+      "description": "After combat, grants Hit+2 until the end of the map. (Max +30)"
+    },
+    {
+      "id": "skill_unique_halt_advance",
+      "type": "Unique",
+      "name": "Halt Advance",
+      "description": "After combat, if unit attacked first, inflicts Spd-2 on foe throughout their next combat.",
+      "plus": {
+        "name": "Halt Advance+",
+        "description": "After combat, if unit attacked first, inflicts Spd-3 on foe throughout their next combat."
+      }
+    },
+    {
+      "id": "skill_personal_healing_knowledge",
+      "type": "Personal",
+      "name": "Healing Knowledge",
+      "description": "When healing an ally with magic, restores +10 HP."
+    },
+    {
+      "id": "skill_unique_distant_healing",
+      "type": "Unique",
+      "name": "Distant Healing",
+      "description": "Grants Rng+1 to healing magic.",
+      "plus": {
+        "name": "Distant Healing+",
+        "description": "Grants Rng+2 to healing magic."
+      }
+    },
+    {
+      "id": "skill_personal_wheeled_warrior",
+      "type": "Personal",
+      "name": "Wheeled Warrior",
+      "description": "[Cavalry] If unit is a charioteer, grants Hit+20."
+    },
+    {
+      "id": "skill_unique_chariot_stagger",
+      "type": "Unique",
+      "name": "Chariot Stagger",
+      "description": "If unit is charioteer, grants +1 uses to staggering blows.",
+      "plus": {
+        "name": "Chariot Stagger+",
+        "description": "If unit is charioteer, grants +2 uses to staggering blows."
+      }
+    },
+    {
+      "id": "skill_personal_silver_maiden",
+      "type": "Personal",
+      "name": "Silver Maiden",
+      "description": "Grants Hit/Avo+5 to unit for each adjacent ally."
+    },
+    {
+      "id": "skill_unique_soar",
+      "type": "Unique",
+      "name": "Soar",
+      "description": "If unit is on inaccessible terrain, grants AS+3.",
+      "plus": {
+        "name": "Soar+",
+        "description": "If unit is on inaccessible terrain, grants AS+5."
+      }
+    },
+    {
+      "id": "skill_personal_hatchet_man",
+      "type": "Personal",
+      "name": "Hatchet Man",
+      "description": "When equipped with an axe, grants Hit+10."
+    },
+    {
+      "id": "skill_unique_vulgar_conduct",
+      "type": "Unique",
+      "name": "Vulgar Conduct",
+      "description": "If foe’s HP ≤ 50%, grants Hit+20 during combat.",
+      "plus": {
+        "name": "Vulgar Conduct+",
+        "description": "If foe’s HP ≤ 50%, grants Hit+20, Atk+3 during combat."
+      }
+    },
+    {
+      "id": "skill_personal_tyranny",
+      "type": "Personal",
+      "name": "Tyranny",
+      "description": "If foe has a status effect, grants Atk+3, Crit+10 to unit during combat."
+    },
+    {
+      "id": "skill_unique_menace",
+      "type": "Unique",
+      "name": "Menace",
+      "description": "Halves foe’s Ddg during combat. Trigger % = 10.",
+      "plus": {
+        "name": "Menace+",
+        "description": "Halves foe’s Ddg during combat. Trigger % = 20."
+      }
+    },
+    {
+      "id": "skill_personal_expert_counter",
+      "type": "Personal",
+      "name": "Expert Counter",
+      "description": "If foe attacks first, grants Hit+20 to unit during combat."
+    },
+    {
+      "id": "skill_unique_raging_counter",
+      "type": "Unique",
+      "name": "Raging Counter",
+      "description": "If foe attacks first, grants Atk+3 to unit during combat.",
+      "plus": {
+        "name": "Raging Counter+",
+        "description": "If foe attacks first, grants Atk+3, Crit+10 to unit during combat."
+      }
+    },
+    {
+      "id": "skill_personal_heavy_bow_user",
+      "type": "Personal",
+      "name": "Heavy-Bow User",
+      "description": "When equipped with a bow, grants Str +3."
+    },
+    {
+      "id": "skill_unique_pierce",
+      "type": "Unique",
+      "name": "Pierce",
+      "description": "Grants Atk+2, Crit+5 when attacking with a bow combat art.",
+      "plus": {
+        "name": "Pierce+",
+        "description": "Grants Atk+4, Crit+10 when attacking with a bow combat art."
+      }
+    },
+    {
+      "id": "skill_personal_hunter_s_snare",
+      "type": "Personal",
+      "name": "Hunter’s Snare",
+      "description": "In enemy’s phase, if foe is damaged, unit attacks first during combat. Trigger % = 30."
+    },
+    {
+      "id": "skill_unique_king_s_majesty",
+      "type": "Unique",
+      "name": "King’s Majesty",
+      "description": "If foe is damaged, grants Atk +2, Crit+5 during combat.",
+      "plus": {
+        "name": "King’s Majesty+",
+        "description": "If foe is damaged, grants Atk +4, Crit+10 during combat."
+      }
+    },
+    {
+      "id": "skill_personal_har_hali_wisdom",
+      "type": "Personal",
+      "name": "Har Hali Wisdom",
+      "description": "If unit is effective against foe, grants Atk+3 during combat."
+    },
+    {
+      "id": "skill_unique_precision_strike",
+      "type": "Unique",
+      "name": "Precision Strike",
+      "description": "If unit is effective against foe, grants Hit+10 during combat.",
+      "plus": {
+        "name": "Precision Strike+",
+        "description": "If unit is effective against foe, grants Hit+20 during combat."
+      }
+    },
+    {
+      "id": "skill_personal_hot_headed",
+      "type": "Personal",
+      "name": "Hot-Headed",
+      "description": "Grants one of Hit+10, Avo+10 or Crit+10 during combat."
+    },
+    {
+      "id": "skill_unique_top_form",
+      "type": "Unique",
+      "name": "Top Form",
+      "description": "Changes the effect of Hot-Headed to grant +15.",
+      "plus": {
+        "name": "Top Form+",
+        "description": "Changes the effect of Hot-Headed to grant +20."
+      }
+    },
+    {
+      "id": "skill_personal_barge_through",
+      "type": "Personal",
+      "name": "Barge Through",
+      "description": "[Cavalry] Can move through foe’s space. (Cannot move through large-scale foes.)"
+    },
+    {
+      "id": "skill_unique_at_a_gallop",
+      "type": "Unique",
+      "name": "At a Gallop",
+      "description": "[Cavalry] Applies -1 to movement cost for terrain (cannot be reduced below 1).",
+      "plus": {
+        "name": "At a Gallop+",
+        "description": "[Cavalry] Applies -2 to movement cost for terrain (cannot be reduced below 1)."
+      }
+    },
+    {
+      "id": "skill_personal_with_my_steed",
+      "type": "Personal",
+      "name": "With My Steed",
+      "description": "[Cavalry] If unit attacks first, grants Shld+3, Ddg+30 during combat."
+    },
+    {
+      "id": "skill_unique_mounted_push",
+      "type": "Unique",
+      "name": "Mounted Push",
+      "description": "[Cavalry] If unit attacks first, grants Hit+10 during combat.",
+      "plus": {
+        "name": "Mounted Push+",
+        "description": "[Cavalry] If unit attacks first, grants Hit+10, Atk+3 during combat."
+      }
+    },
+    {
+      "id": "skill_personal_punishing_squall",
+      "type": "Personal",
+      "name": "Punishing Squall",
+      "description": "If AS ≥ foe’s AS+3, grants Hit+20 during combat."
+    },
+    {
+      "id": "skill_unique_wind_my_friend",
+      "type": "Unique",
+      "name": "Wind My Friend",
+      "description": "If AS ≥ foe’s AS+5, grants Atk+3 during combat.",
+      "plus": {
+        "name": "Wind My Friend+",
+        "description": "If AS ≥ foe’s AS+5, grants Atk+3, and if AS ≥ foe’s AS+8, grants Avo+20 during combat."
+      }
+    },
+    {
+      "id": "skill_personal_warrior_s_clarity",
+      "type": "Personal",
+      "name": "Warrior’s Clarity",
+      "description": "After combat, grants Avo+3 until unit’s next phase."
+    },
+    {
+      "id": "skill_unique_attuned",
+      "type": "Unique",
+      "name": "Attuned",
+      "description": "When Warrior’s Clarity triggers, grants Avo+10 until unit’s next phase. Trigger % = 10.",
+      "plus": {
+        "name": "Attuned+",
+        "description": "When Warrior’s Clarity triggers, grants Avo+10 until unit’s next phase. Trigger % = 20."
+      }
+    },
+    {
+      "id": "skill_personal_monkly_havoc",
+      "type": "Personal",
+      "name": "Monkly Havoc",
+      "description": "After defeating a foe, recovers HP equal to max HP. Trigger % = Lck ÷ 2."
+    },
+    {
+      "id": "skill_unique_robust_health",
+      "type": "Unique",
+      "name": "Robust Health",
+      "description": "Grants Shld+3 when attacked. Trigger % = unit’s remaining HP.",
+      "plus": {
+        "name": "Robust Health+",
+        "description": "Grants Shld+5 when attacked. Trigger % = unit’s remaining HP."
+      }
+    },
+    {
+      "id": "skill_personal_hellbent_axe",
+      "type": "Personal",
+      "name": "Hellbent Axe",
+      "description": "When equipped with an axe, grants Str+3."
+    },
+    {
+      "id": "skill_unique_fear_nothing",
+      "type": "Unique",
+      "name": "Fear Nothing",
+      "description": "If unit attacks first, grants Atk+3 at cost of Avo-30 to unit during combat.",
+      "plus": {
+        "name": "Fear Nothing+",
+        "description": "If unit attacks first, grants Atk+6 at cost of Avo-30 to unit during combat."
+      }
+    },
+    {
+      "id": "skill_personal_crimson_magic",
+      "type": "Personal",
+      "name": "Crimson Magic",
+      "description": "Increase Hit for magic attacks"
+    },
+    {
+      "id": "skill_personal_princess_of_arrows",
+      "type": "Personal",
+      "name": "Princess of Arrows",
+      "description": "When equipped with a bow, grants Hit+20"
+    },
+    {
+      "id": "skill_personal_sturdy_corundum",
+      "type": "Personal",
+      "name": "Sturdy Corundum",
+      "description": "For the first combat in the enemy's phase, unit takes half damage"
+    },
+    {
+      "id": "skill_personal_headlong_rush",
+      "type": "Personal",
+      "name": "Headlong Rush",
+      "description": "If unit attacks first, grants AS+3 Hit+10 during combat"
+    },
+    {
+      "id": "skill_personal_steady_hands",
+      "type": "Personal",
+      "name": "Steady Hands",
+      "description": "If foe attacks first, grants AS+3, Avo+10 to unit during combat"
+    },
+    {
+      "id": "skill_personal_python_technique",
+      "type": "Personal",
+      "name": "Python Technique",
+      "description": "When using a gauntlet combat art, unit makes a follow-up regardless of AS during combat. Trigger % = 15"
+    },
+    {
+      "id": "skill_personal_spirit_of_silver",
+      "type": "Personal",
+      "name": "Spirit of Silver",
+      "description": "After combat, grants Def+1 to unit until the end of the map. (Max +10) Trigger % = Def"
+    },
+    {
+      "id": "skill_authority_distraction",
+      "type": "Authority",
+      "name": "Distraction",
+      "description": "",
+      "plus": {
+        "name": "Distraction+",
+        "description": ""
+      }
+    },
+    {
+      "id": "skill_authority_lend_speed",
+      "type": "Authority",
+      "name": "Lend Speed",
+      "description": "",
+      "plus": {
+        "name": "Lend Speed+",
+        "description": ""
+      },
+      "plusPlus": {
+        "name": "Lend Speed++",
+        "description": ""
+      }
+    },
+    {
+      "id": "skill_authority_gambit_mastery",
+      "type": "Authority",
+      "name": "Gambit Mastery",
+      "description": ""
+    },
+    {
+      "id": "skill_authority_lend_dexterity",
+      "type": "Authority",
+      "name": "Lend Dexterity",
+      "description": "",
+      "plus": {
+        "name": "Lend Dexterity+",
+        "description": ""
+      },
+      "plusPlus": {
+        "name": "Lend Dexterity++",
+        "description": ""
+      }
+    },
+    {
+      "id": "skill_authority_attack_formation",
+      "type": "Authority",
+      "name": "Attack Formation",
+      "description": "",
+      "plus": {
+        "name": "Attack Formation+",
+        "description": ""
+      }
+    },
+    {
+      "id": "skill_authority_lend_defense",
+      "type": "Authority",
+      "name": "Lend Defense",
+      "description": "",
+      "plus": {
+        "name": "Lend Defense+",
+        "description": ""
+      },
+      "plusPlus": {
+        "name": "Lend Defense++",
+        "description": ""
+      }
+    },
+    {
+      "id": "skill_authority_teach_requiem",
+      "type": "Authority",
+      "name": "Teach Requiem",
+      "description": ""
+    },
+    {
+      "id": "skill_authority_lend_strength",
+      "type": "Authority",
+      "name": "Lend Strength",
+      "description": "",
+      "plus": {
+        "name": "Lend Strength+",
+        "description": ""
+      },
+      "plusPlus": {
+        "name": "Lend Strength++",
+        "description": ""
+      }
+    },
+    {
+      "id": "skill_authority_frontline_gambit",
+      "type": "Authority",
+      "name": "Frontline Gambit",
+      "description": ""
+    },
+    {
+      "id": "skill_authority_defense_formation",
+      "type": "Authority",
+      "name": "Defense Formation",
+      "description": "",
+      "plus": {
+        "name": "Defense Formation+",
+        "description": ""
+      }
+    },
+    {
+      "id": "skill_authority_rein",
+      "type": "Authority",
+      "name": "Rein",
+      "description": "",
+      "plus": {
+        "name": "Rein+",
+        "description": ""
+      }
+    },
+    {
+      "id": "skill_authority_counter_cavalry",
+      "type": "Authority",
+      "name": "Counter Cavalry",
+      "description": "",
+      "plus": {
+        "name": "Counter Cavalry+",
+        "description": ""
+      }
+    },
+    {
+      "id": "skill_authority_threaten",
+      "type": "Authority",
+      "name": "Threaten",
+      "description": "",
+      "plus": {
+        "name": "Threaten+",
+        "description": ""
+      }
+    },
+    {
+      "id": "skill_authority_shove",
+      "type": "Authority",
+      "name": "Shove",
+      "description": ""
+    },
+    {
+      "id": "skill_authority_teach_one_chance",
+      "type": "Authority",
+      "name": "Teach One Chance",
+      "description": ""
+    },
+    {
+      "id": "skill_authority_counter_fliers",
+      "type": "Authority",
+      "name": "Counter Fliers",
+      "description": "",
+      "plus": {
+        "name": "Counter Fliers+",
+        "description": ""
+      }
+    },
+    {
+      "id": "skill_authority_caretaker_stance",
+      "type": "Authority",
+      "name": "Caretaker Stance",
+      "description": ""
+    },
+    {
+      "id": "skill_authority_draw_back",
+      "type": "Authority",
+      "name": "Draw Back",
+      "description": ""
+    },
+    {
+      "id": "skill_authority_lend_magic",
+      "type": "Authority",
+      "name": "Lend Magic",
+      "description": "",
+      "plus": {
+        "name": "Lend Magic+",
+        "description": ""
+      },
+      "plusPlus": {
+        "name": "Lend Magic++",
+        "description": ""
+      }
+    },
+    {
+      "id": "skill_authority_counter_mages",
+      "type": "Authority",
+      "name": "Counter Mages",
+      "description": "",
+      "plus": {
+        "name": "Counter Mages+",
+        "description": ""
+      }
+    },
+    {
+      "id": "skill_authority_brave_assist_stance",
+      "type": "Authority",
+      "name": "Brave-Assist Stance",
+      "description": ""
+    },
+    {
+      "id": "skill_authority_propel",
+      "type": "Authority",
+      "name": "Propel",
+      "description": ""
+    },
+    {
+      "id": "skill_authority_swap",
+      "type": "Authority",
+      "name": "Swap",
+      "description": ""
+    },
+    {
+      "id": "skill_authority_counter_order",
+      "type": "Authority",
+      "name": "Counter Order",
+      "description": ""
+    },
+    {
+      "id": "skill_authority_safety_first_order",
+      "type": "Authority",
+      "name": "Safety First Order",
+      "description": ""
+    },
+    {
+      "id": "skill_authority_counter_snipers",
+      "type": "Authority",
+      "name": "Counter Snipers",
+      "description": "",
+      "plus": {
+        "name": "Counter Snipers+",
+        "description": ""
+      }
+    },
+    {
+      "id": "skill_authority_quick_draw_order",
+      "type": "Authority",
+      "name": "Quick-Draw Order",
+      "description": ""
+    },
+    {
+      "id": "skill_authority_lend_resistance",
+      "type": "Authority",
+      "name": "Lend Resistance",
+      "description": ""
+    },
+    {
+      "id": "skill_authority_barging_order",
+      "type": "Authority",
+      "name": "Barging Order",
+      "description": ""
+    },
+    {
+      "id": "skill_authority_hunter_s_order",
+      "type": "Authority",
+      "name": "Hunter's Order",
+      "description": ""
+    },
+    {
+      "id": "skill_authority_healing_order",
+      "type": "Authority",
+      "name": "Healing Order",
+      "description": ""
+    },
+    {
+      "id": "skill_authority_lend_luck",
+      "type": "Authority",
+      "name": "Lend Luck",
+      "description": "",
+      "plus": {
+        "name": "Lend Luck+",
+        "description": ""
+      }
+    },
+    {
+      "id": "skill_authority_power_arts_order",
+      "type": "Authority",
+      "name": "Power-Arts Order",
+      "description": ""
+    },
+    {
+      "id": "skill_authority_patch_up_stance",
+      "type": "Authority",
+      "name": "Patch Up Stance",
+      "description": ""
+    },
+    {
+      "id": "skill_authority_teach_monkly_havoc",
+      "type": "Authority",
+      "name": "Teach Monkly Havoc",
+      "description": ""
     }
   ]
 }

@@ -154,9 +154,41 @@ export interface Spell {
   effect: string;
 }
 
+// A combat art in the catalog, grouped by weapon proficiency (sword, lance, …).
+export interface CombatArt {
+  id: string;
+  proficiency: string; // skillType id (weapon type)
+  name: string;
+  cost: number | null;
+  might: number | null;
+  hit: number | null; // the "<" column — hit modifier
+  crit: number | null;
+  range: string;
+  effect: string;
+}
+
 // Learnset ranks, low → high (a subset of GRADES used for spell/art acquisition).
-export const LEARNSET_RANKS = ["D", "D+", "C", "C+", "B", "B+", "A", "A+", "S"] as const;
+// Magic uses D→S; weapon combat arts use D, C, B, A, A+, S, S+.
+export const LEARNSET_RANKS = ["D", "D+", "C", "C+", "B", "B+", "A", "A+", "S", "S+"] as const;
 export type LearnsetRank = (typeof LEARNSET_RANKS)[number];
+
+// Skills catalog (personal/unique/class/authority skills), distinct from combat
+// arts and spells. A skill can upgrade to a "+" and "++" version.
+export const SKILL_CATEGORIES = ["Personal", "Unique", "Authority", "Armor", "Infantry", "Riding", "Flying", "Enemy Only"] as const;
+export type SkillCategory = (typeof SKILL_CATEGORIES)[number];
+
+export interface SkillUpgrade {
+  name: string;
+  description: string;
+}
+export interface Skill {
+  id: string;
+  type: string; // SkillCategory
+  name: string;
+  description: string;
+  plus?: SkillUpgrade; // the "+" upgrade
+  plusPlus?: SkillUpgrade; // the "++" upgrade
+}
 
 export type IconShape = "circle" | "square" | "triangle" | "invtriangle" | "star4" | "star8";
 
@@ -390,5 +422,7 @@ export interface DB {
   paralogueColors?: Record<string, string>; // optional per-paralogue accent color (by name)
   supports?: SupportEdge[]; // symmetric support links between units
   showSpoilerToggle?: boolean; // show the navbar "Allow Part 3 Spoilers" toggle
-  spells?: Spell[]; // Magic catalog (combat arts / spells), grouped by proficiency
+  spells?: Spell[]; // Magic catalog (spells), grouped by proficiency
+  combatArts?: CombatArt[]; // Combat arts catalog, grouped by weapon proficiency
+  skills?: Skill[]; // Skills catalog (personal/unique/class/authority), with +/++ upgrades
 }

@@ -2797,3 +2797,4 @@ input[type="range"]::-moz-range-thumb {
 .learnset-cell .tag { cursor: default; white-space: nowrap; }
 .learnset-disclaimer { margin: 0 0 14px; color: var(--ink-faint); font-size: 12.5px; }
 .learnset-disclaimer i { font-style: italic; color: var(--ink-dim); }
+.learnset-tabs button { display: inline-flex; align-items: center; justify-content: center; min-width: 48px; }
