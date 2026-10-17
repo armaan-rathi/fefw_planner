@@ -1969,7 +1969,7 @@
         "brawl",
         "infantry"
       ],
-      "portrait": null,
+      "portrait": "/images/mvcbheamqbrf2v.png",
       "bonusExp": [],
       "classAbilities": [
         {
@@ -2026,7 +2026,7 @@
         "bow",
         "infantry"
       ],
-      "portrait": null,
+      "portrait": "/images/mvcbhklocz1pfw.png",
       "bonusExp": [],
       "classAbilities": [
         {
@@ -2071,7 +2071,7 @@
         "bow",
         "infantry"
       ],
-      "portrait": null,
+      "portrait": "/images/mvcbhpf76s4tmi.png",
       "bonusExp": [],
       "classAbilities": [
         {
@@ -2122,7 +2122,7 @@
         "faith",
         "infantry"
       ],
-      "portrait": null,
+      "portrait": "/images/mvcbhvc002jy0n.png",
       "bonusExp": [],
       "classAbilities": [
         {
@@ -2172,7 +2172,7 @@
         "infantry",
         "armor"
       ],
-      "portrait": null,
+      "portrait": "/images/mvcbi16wjbzsas.png",
       "bonusExp": [],
       "classAbilities": [
         {
@@ -2227,7 +2227,7 @@
         "axe",
         "riding"
       ],
-      "portrait": null,
+      "portrait": "/images/mvcbi6z8xktxv4.png",
       "bonusExp": [],
       "classAbilities": [
         {
@@ -2282,7 +2282,7 @@
         "lance",
         "flying"
       ],
-      "portrait": null,
+      "portrait": "/images/mvcbibn72kui7j.png",
       "bonusExp": [],
       "classAbilities": [
         {
@@ -2343,7 +2343,7 @@
         "axe",
         "flying"
       ],
-      "portrait": null,
+      "portrait": "/images/mvcbig9f2nbsj1.png",
       "bonusExp": [],
       "classAbilities": [
         {
@@ -2398,7 +2398,7 @@
         "reason",
         "infantry"
       ],
-      "portrait": null,
+      "portrait": "/images/mvcbiln59itoro.png",
       "bonusExp": [],
       "classAbilities": [
         {
@@ -2444,7 +2444,7 @@
         "faith",
         "infantry"
       ],
-      "portrait": null,
+      "portrait": "/images/mvcbirth707kxs.png",
       "bonusExp": [],
       "classAbilities": [
         {
@@ -2489,7 +2489,7 @@
         "lance",
         "infantry"
       ],
-      "portrait": null,
+      "portrait": "/images/mvcbixjbjkyi1v.png",
       "bonusExp": [],
       "classAbilities": [
         {
@@ -2502,7 +2502,7 @@
         }
       ],
       "masteredAbility": {
-        "name": "[CA]Astra",
+        "name": "[CA] Astra",
         "description": "Strikes 5 times at 50% damage."
       },
       "secondarySkills": [],
@@ -2532,7 +2532,7 @@
         "reason",
         "riding"
       ],
-      "portrait": null,
+      "portrait": "/images/mvcbj2awbrtz3z.png",
       "bonusExp": [],
       "classAbilities": [
         {
@@ -2591,7 +2591,7 @@
         "faith",
         "infantry"
       ],
-      "portrait": null,
+      "portrait": "/images/mvcbj788cie71y.png",
       "bonusExp": [],
       "classAbilities": [
         {
@@ -2608,7 +2608,7 @@
         }
       ],
       "masteredAbility": {
-        "name": "[CA]Strike and Heal",
+        "name": "[CA] Strike and Heal",
         "description": "After combat, unit can use assist magic."
       },
       "secondarySkills": [],
@@ -2643,7 +2643,7 @@
         "bow",
         "riding"
       ],
-      "portrait": null,
+      "portrait": "/images/mvcbjheecdcpno.png",
       "bonusExp": [],
       "classAbilities": [
         {
@@ -2660,7 +2660,7 @@
         }
       ],
       "masteredAbility": {
-        "name": "[CA]Hunter's Cross",
+        "name": "[CA] Hunter's Cross",
         "description": "High Hit/Crit"
       },
       "secondarySkills": [],
@@ -2698,7 +2698,7 @@
         "armor",
         "riding"
       ],
-      "portrait": null,
+      "portrait": "/images/mvcbjobw39q8b0.png",
       "bonusExp": [],
       "classAbilities": [
         {
@@ -2756,7 +2756,7 @@
         "faith",
         "riding"
       ],
-      "portrait": null,
+      "portrait": "/images/mvcbjt9qfuc4pr.png",
       "bonusExp": [],
       "classAbilities": [
         {
@@ -2769,7 +2769,7 @@
         }
       ],
       "masteredAbility": {
-        "name": "[CA]Song of Calm",
+        "name": "[CA] Song of Calm",
         "description": "Grants Res +2 to allies in range until unit's next phase."
       },
       "secondarySkills": [
@@ -2812,7 +2812,7 @@
         "axe",
         "riding"
       ],
-      "portrait": null,
+      "portrait": "/images/mvcbkxdd0xfqjv.png",
       "bonusExp": [],
       "classAbilities": [
         {
@@ -2876,7 +2876,7 @@
         "lance",
         "infantry"
       ],
-      "portrait": null,
+      "portrait": "/images/mvcbl4nwjmodyv.png",
       "bonusExp": [],
       "classAbilities": [
         {
@@ -2922,7 +2922,7 @@
         "bow",
         "infantry"
       ],
-      "portrait": null,
+      "portrait": "/images/mvcblao8g32688.png",
       "bonusExp": [],
       "classAbilities": [
         {
@@ -2976,7 +2976,7 @@
         "faith",
         "infantry"
       ],
-      "portrait": null,
+      "portrait": "/images/mvcblka220pxag.png",
       "bonusExp": [],
       "classAbilities": [
         {
@@ -3030,7 +3030,7 @@
         "faith",
         "infantry"
       ],
-      "portrait": null,
+      "portrait": "/images/mvcblw83bgz0ep.png",
       "bonusExp": [],
       "classAbilities": [
         {
@@ -3083,7 +3083,7 @@
         "faith",
         "infantry"
       ],
-      "portrait": null,
+      "portrait": "/images/mvcbm2m7e6l6h8.png",
       "bonusExp": [],
       "classAbilities": [
         {
@@ -3138,7 +3138,7 @@
         "brawl",
         "infantry"
       ],
-      "portrait": null,
+      "portrait": "/images/mvcbmkopn2kol5.png",
       "bonusExp": [],
       "classAbilities": [
         {
@@ -3191,7 +3191,7 @@
         "bow",
         "infantry"
       ],
-      "portrait": null,
+      "portrait": "/images/mvcbmrgrmg91x2.png",
       "bonusExp": [],
       "classAbilities": [
         {
@@ -3199,8 +3199,13 @@
           "description": "Unit can equip +3 combat arts."
         },
         {
-          "name": "[CA]Dance",
+          "name": "[CA] Dance",
           "description": "Allows the use of the Dance combat art."
+        },
+        {
+          "name": "",
+          "description": "",
+          "icon": null
         }
       ],
       "masteredAbility": {
