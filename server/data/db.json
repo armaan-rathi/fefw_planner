@@ -8245,8 +8245,12 @@
       "name": "Gaitz",
       "portrait": "/images/mt923ttbb6bftv.jpg",
       "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
+      "routeIds": [
+        "route_bertrand"
+      ],
+      "starterFor": [
+        "route_bertrand"
+      ],
       "classId": null,
       "boons": [
         "lance",
@@ -8464,8 +8468,12 @@
       "name": "Ursula",
       "portrait": "/images/mt923og72kebtj.jpg",
       "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
+      "routeIds": [
+        "route_talimun"
+      ],
+      "starterFor": [
+        "route_talimun"
+      ],
       "classId": "class_archer",
       "boons": [
         "sword",
@@ -8699,8 +8707,12 @@
       "name": "Diego",
       "portrait": "/images/mtahz95c5htrza.jpg",
       "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
+      "routeIds": [
+        "route_orchel"
+      ],
+      "starterFor": [
+        "route_orchel"
+      ],
       "classId": "class_ms4czk6qlyp89",
       "boons": [
         "sword",
@@ -8923,8 +8935,12 @@
       "name": "Sha Lan",
       "portrait": "/images/mtahzig1p21eub.jpg",
       "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
+      "routeIds": [
+        "route_anatolia"
+      ],
+      "starterFor": [
+        "route_anatolia"
+      ],
       "classId": "class_priest",
       "boons": [
         "lance",
@@ -9149,8 +9165,12 @@
       "name": "Dante",
       "portrait": "/images/mtbhqbap85kn6r.jpg",
       "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
+      "routeIds": [
+        "route_bertrand"
+      ],
+      "starterFor": [
+        "route_bertrand"
+      ],
       "classId": "class_diviner",
       "boons": [
         "reason",
@@ -9390,8 +9410,12 @@
       "name": "Simon",
       "portrait": "/images/mtc0af0tzjmf59.jpg",
       "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
+      "routeIds": [
+        "route_talimun"
+      ],
+      "starterFor": [
+        "route_talimun"
+      ],
       "classId": null,
       "boons": [
         "sword",
@@ -9605,8 +9629,12 @@
       "name": "Ninae",
       "portrait": "/images/mtcvgfjxxsfoya.jpg",
       "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
+      "routeIds": [
+        "route_orchel"
+      ],
+      "starterFor": [
+        "route_orchel"
+      ],
       "classId": null,
       "boons": [
         "lance",
@@ -9857,8 +9885,12 @@
       "name": "Nezha",
       "portrait": "/images/mtd4prfd51w8pl.jpg",
       "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
+      "routeIds": [
+        "route_anatolia"
+      ],
+      "starterFor": [
+        "route_anatolia"
+      ],
       "classId": "class_ms3o7io5clmwu",
       "boons": [
         "sword",
@@ -10083,8 +10115,12 @@
       "name": "Goliath",
       "portrait": "/images/mtsu5n1kpwepsm.jpg",
       "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
+      "routeIds": [
+        "route_bertrand"
+      ],
+      "starterFor": [
+        "route_bertrand"
+      ],
       "classId": "class_armored",
       "boons": [
         "axe",
@@ -10300,8 +10336,12 @@
       "name": "Ludia",
       "portrait": "/images/mu2phmecu6a41b.jpg",
       "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
+      "routeIds": [
+        "route_talimun"
+      ],
+      "starterFor": [
+        "route_talimun"
+      ],
       "classId": "class_ms4axgsyshgov",
       "boons": [
         "sword",
@@ -10522,8 +10562,12 @@
       "name": "Seteth",
       "portrait": "/images/mtwvwj9kigendl.jpg",
       "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
+      "routeIds": [
+        "route_orchel"
+      ],
+      "starterFor": [
+        "route_orchel"
+      ],
       "classId": "class_msesu5uoyogcq",
       "boons": [
         "lance",
@@ -10744,8 +10788,12 @@
       "name": "Dadao",
       "portrait": "/images/mtx31iadd2ejeo.jpg",
       "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
+      "routeIds": [
+        "route_anatolia"
+      ],
+      "starterFor": [
+        "route_anatolia"
+      ],
       "classId": null,
       "boons": [
         "axe",
@@ -10965,8 +11013,12 @@
       "name": "Jester",
       "portrait": "/images/mtsu5rw8g3hnsz.jpg",
       "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
+      "routeIds": [
+        "route_bertrand"
+      ],
+      "starterFor": [
+        "route_bertrand"
+      ],
       "classId": null,
       "boons": [
         "sword",
@@ -11191,8 +11243,12 @@
       "name": "Fianna",
       "portrait": "/images/mtv8m5eam5bnmq.jpg",
       "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
+      "routeIds": [
+        "route_talimun"
+      ],
+      "starterFor": [
+        "route_talimun"
+      ],
       "classId": "class_soldier",
       "boons": [
         "reason",
@@ -11428,8 +11484,12 @@
       "name": "Loretta",
       "portrait": "/images/mtwvwp9t21b6yf.jpg",
       "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
+      "routeIds": [
+        "route_orchel"
+      ],
+      "starterFor": [
+        "route_orchel"
+      ],
       "classId": "class_ms3o7io5clmwu",
       "boons": [
         "sword",
@@ -11662,8 +11722,12 @@
       "name": "Halvin",
       "portrait": "/images/mtx31p4kqwgso0.jpg",
       "isLord": false,
-      "routeIds": [],
-      "starterFor": [],
+      "routeIds": [
+        "route_anatolia"
+      ],
+      "starterFor": [
+        "route_anatolia"
+      ],
       "classId": "class_archer",
       "boons": [
         "bow",
@@ -19934,7 +19998,7 @@
       "description": "",
       "color": "#cf4b45",
       "portrait": "/images/mvbn4iqn3bekhw.png",
-      "banner": null,
+      "banner": "/images/mved0eghv98pzy.png",
       "dlc": true
     },
     {
@@ -19944,7 +20008,7 @@
       "description": "",
       "color": "#57a95d",
       "portrait": "/images/mvbn4wnudiycp5.png",
-      "banner": null,
+      "banner": "/images/mved0jfujvw2i4.png",
       "dlc": true
     },
     {
@@ -19954,7 +20018,7 @@
       "description": "",
       "color": "#4bb2c9",
       "portrait": "/images/mvbn528son25ot.png",
-      "banner": null,
+      "banner": "/images/mved0r6ovrbbcr.png",
       "dlc": true
     },
     {
@@ -19964,7 +20028,7 @@
       "description": "",
       "color": "#aab6bd",
       "portrait": "/images/mvbn6gmabhqnas.png",
-      "banner": null,
+      "banner": "/images/mved0w35i1n9e3.png",
       "dlc": true
     }
   ],
