@@ -31,6 +31,21 @@ export function growthUnits(db: DB): Unit[] {
   return db.units.filter(hasGrowths);
 }
 
+// Min/max of every unit's growth-stat values — a stable range for heat-coloring
+// a single character's growths consistently with the Growth Rates page.
+export function growthStatRange(db: DB): { min: number; max: number } {
+  const vals: number[] = [];
+  for (const u of db.units) {
+    const g = u.growths;
+    if (!g) continue;
+    for (const k of GROWTH_STATS) {
+      const v = g[k];
+      if (typeof v === "number") vals.push(v);
+    }
+  }
+  return vals.length ? { min: Math.min(...vals), max: Math.max(...vals) } : { min: 0, max: 1 };
+}
+
 // Dark-mode diverging heat: deep blue → dark neutral → deep red, for t in [0,1].
 // Tuned to sit on the site's dark panels with light text on top.
 export function heatColor(t: number): string {

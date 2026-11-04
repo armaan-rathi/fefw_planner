@@ -2803,3 +2803,8 @@ input[type="range"]::-moz-range-thumb {
 .battalion-table { min-width: 980px; }
 .battalion-table .th-sort { cursor: pointer; user-select: none; white-space: nowrap; }
 .battalion-table .th-sort:hover { color: var(--gold-bright); }
+
+/* Heat-colored growth chips on the Character Database detail */
+.growth-chip.heat { border-color: rgba(0, 0, 0, 0.28); }
+.growth-chip.heat .gc-k { color: rgba(236, 230, 214, 0.78); }
+.growth-chip.heat .gc-v { color: #f4efe0; }

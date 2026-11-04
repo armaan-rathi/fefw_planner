@@ -62,7 +62,9 @@
       "Bash(cp server/data/db.json __TRACKED_VAR__/db.backup.elefix.__CMDSUB_OUTPUT__.json)",
       "Bash(cp server/data/db.json __TRACKED_VAR__/db.backup.elename.__CMDSUB_OUTPUT__.json)",
       "Bash(cp server/data/db.json __TRACKED_VAR__/db.backup.battalions.__CMDSUB_OUTPUT__.json)",
-      "Bash(node __TRACKED_VAR__/import-battalions.js)"
+      "Bash(node __TRACKED_VAR__/import-battalions.js)",
+      "Bash(node -e 'const db=require\\(\"./server/data/db.json\"\\);console.log\\(\"growthsOnCharPage:\",db.growthsOnCharPage\\)')",
+      "Bash(cp server/data/db.json __TRACKED_VAR__/db.backup.growthschar.__CMDSUB_OUTPUT__.json)"
     ]
   }
 }

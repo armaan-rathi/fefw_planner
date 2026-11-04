@@ -4181,9 +4181,7 @@
       "name": "Tialla",
       "portrait": "/images/ms4gw3cafe6980.jpg",
       "isLord": false,
-      "routeIds": [
-        "cai"
-      ],
+      "routeIds": [],
       "starterFor": [
         "cai"
       ],
@@ -4422,9 +4420,7 @@
       "name": "Fabio",
       "portrait": "/images/ms4gwz927u78u1.jpg",
       "isLord": false,
-      "routeIds": [
-        "dietrich"
-      ],
+      "routeIds": [],
       "starterFor": [
         "dietrich"
       ],
@@ -4647,9 +4643,7 @@
       "name": "Bonaventure",
       "portrait": "/images/mtv8xci5m6qtb2.jpg",
       "isLord": false,
-      "routeIds": [
-        "theodora"
-      ],
+      "routeIds": [],
       "starterFor": [
         "theodora"
       ],
@@ -4834,9 +4828,7 @@
       "name": "Buccar",
       "portrait": "/images/ms4gzs7mhkk8qy.jpg",
       "isLord": false,
-      "routeIds": [
-        "leda"
-      ],
+      "routeIds": [],
       "starterFor": [
         "leda"
       ],
@@ -5075,9 +5067,7 @@
       "name": "Peter",
       "portrait": "/images/ms4h0ggs6iezd0.jpg",
       "isLord": false,
-      "routeIds": [
-        "cai"
-      ],
+      "routeIds": [],
       "starterFor": [
         "cai"
       ],
@@ -5293,9 +5283,7 @@
       "name": "Esmeralda",
       "portrait": "/images/ms4h13bt2m4t1p.jpg",
       "isLord": false,
-      "routeIds": [
-        "dietrich"
-      ],
+      "routeIds": [],
       "starterFor": [
         "dietrich"
       ],
@@ -5535,9 +5523,7 @@
       "name": "Tobias",
       "portrait": "/images/mtv8x3tgmwgza7.jpg",
       "isLord": false,
-      "routeIds": [
-        "theodora"
-      ],
+      "routeIds": [],
       "starterFor": [
         "theodora"
       ],
@@ -5744,9 +5730,7 @@
       "name": "Sirocco",
       "portrait": "/images/ms4h2qul98q2nw.jpg",
       "isLord": false,
-      "routeIds": [
-        "leda"
-      ],
+      "routeIds": [],
       "starterFor": [
         "leda"
       ],
@@ -5986,9 +5970,7 @@
       "name": "Ultand",
       "portrait": "/images/ms4h3vf6hz9tpq.jpg",
       "isLord": false,
-      "routeIds": [
-        "cai"
-      ],
+      "routeIds": [],
       "starterFor": [
         "cai"
       ],
@@ -6222,9 +6204,7 @@
       "name": "Mikaela",
       "portrait": "/images/ms4h4jgijzi11w.jpg",
       "isLord": false,
-      "routeIds": [
-        "dietrich"
-      ],
+      "routeIds": [],
       "starterFor": [
         "dietrich"
       ],
@@ -6457,9 +6437,7 @@
       "name": "Lysander",
       "portrait": "/images/mtv8wyjvyf86lq.jpg",
       "isLord": false,
-      "routeIds": [
-        "theodora"
-      ],
+      "routeIds": [],
       "starterFor": [
         "theodora"
       ],
@@ -6677,9 +6655,7 @@
       "name": "Olympia",
       "portrait": "/images/ms9e4j4i7kxstk.jpg",
       "isLord": false,
-      "routeIds": [
-        "leda"
-      ],
+      "routeIds": [],
       "starterFor": [
         "leda"
       ],
@@ -6920,9 +6896,7 @@
       "name": "Lilian",
       "portrait": "/images/mtv8ws3ixsca23.jpg",
       "isLord": false,
-      "routeIds": [
-        "theodora"
-      ],
+      "routeIds": [],
       "starterFor": [
         "theodora"
       ],
@@ -7146,9 +7120,7 @@
       "name": "Mu",
       "portrait": "/images/ms7meqfxs69gcl.jpg",
       "isLord": false,
-      "routeIds": [
-        "leda"
-      ],
+      "routeIds": [],
       "starterFor": [
         "leda"
       ],
@@ -8245,9 +8217,7 @@
       "name": "Gaitz",
       "portrait": "/images/mt923ttbb6bftv.jpg",
       "isLord": false,
-      "routeIds": [
-        "route_bertrand"
-      ],
+      "routeIds": [],
       "starterFor": [
         "route_bertrand"
       ],
@@ -8468,9 +8438,7 @@
       "name": "Ursula",
       "portrait": "/images/mt923og72kebtj.jpg",
       "isLord": false,
-      "routeIds": [
-        "route_talimun"
-      ],
+      "routeIds": [],
       "starterFor": [
         "route_talimun"
       ],
@@ -8707,9 +8675,7 @@
       "name": "Diego",
       "portrait": "/images/mtahz95c5htrza.jpg",
       "isLord": false,
-      "routeIds": [
-        "route_orchel"
-      ],
+      "routeIds": [],
       "starterFor": [
         "route_orchel"
       ],
@@ -8935,9 +8901,7 @@
       "name": "Sha Lan",
       "portrait": "/images/mtahzig1p21eub.jpg",
       "isLord": false,
-      "routeIds": [
-        "route_anatolia"
-      ],
+      "routeIds": [],
       "starterFor": [
         "route_anatolia"
       ],
@@ -9165,9 +9129,7 @@
       "name": "Dante",
       "portrait": "/images/mtbhqbap85kn6r.jpg",
       "isLord": false,
-      "routeIds": [
-        "route_bertrand"
-      ],
+      "routeIds": [],
       "starterFor": [
         "route_bertrand"
       ],
@@ -9410,9 +9372,7 @@
       "name": "Simon",
       "portrait": "/images/mtc0af0tzjmf59.jpg",
       "isLord": false,
-      "routeIds": [
-        "route_talimun"
-      ],
+      "routeIds": [],
       "starterFor": [
         "route_talimun"
       ],
@@ -9629,9 +9589,7 @@
       "name": "Ninae",
       "portrait": "/images/mtcvgfjxxsfoya.jpg",
       "isLord": false,
-      "routeIds": [
-        "route_orchel"
-      ],
+      "routeIds": [],
       "starterFor": [
         "route_orchel"
       ],
@@ -9885,9 +9843,7 @@
       "name": "Nezha",
       "portrait": "/images/mtd4prfd51w8pl.jpg",
       "isLord": false,
-      "routeIds": [
-        "route_anatolia"
-      ],
+      "routeIds": [],
       "starterFor": [
         "route_anatolia"
       ],
@@ -10115,9 +10071,7 @@
       "name": "Goliath",
       "portrait": "/images/mtsu5n1kpwepsm.jpg",
       "isLord": false,
-      "routeIds": [
-        "route_bertrand"
-      ],
+      "routeIds": [],
       "starterFor": [
         "route_bertrand"
       ],
@@ -10336,9 +10290,7 @@
       "name": "Ludia",
       "portrait": "/images/mu2phmecu6a41b.jpg",
       "isLord": false,
-      "routeIds": [
-        "route_talimun"
-      ],
+      "routeIds": [],
       "starterFor": [
         "route_talimun"
       ],
@@ -10562,9 +10514,7 @@
       "name": "Seteth",
       "portrait": "/images/mtwvwj9kigendl.jpg",
       "isLord": false,
-      "routeIds": [
-        "route_orchel"
-      ],
+      "routeIds": [],
       "starterFor": [
         "route_orchel"
       ],
@@ -10788,9 +10738,7 @@
       "name": "Dadao",
       "portrait": "/images/mtx31iadd2ejeo.jpg",
       "isLord": false,
-      "routeIds": [
-        "route_anatolia"
-      ],
+      "routeIds": [],
       "starterFor": [
         "route_anatolia"
       ],
@@ -11013,9 +10961,7 @@
       "name": "Jester",
       "portrait": "/images/mtsu5rw8g3hnsz.jpg",
       "isLord": false,
-      "routeIds": [
-        "route_bertrand"
-      ],
+      "routeIds": [],
       "starterFor": [
         "route_bertrand"
       ],
@@ -11243,9 +11189,7 @@
       "name": "Fianna",
       "portrait": "/images/mtv8m5eam5bnmq.jpg",
       "isLord": false,
-      "routeIds": [
-        "route_talimun"
-      ],
+      "routeIds": [],
       "starterFor": [
         "route_talimun"
       ],
@@ -11484,9 +11428,7 @@
       "name": "Loretta",
       "portrait": "/images/mtwvwp9t21b6yf.jpg",
       "isLord": false,
-      "routeIds": [
-        "route_orchel"
-      ],
+      "routeIds": [],
       "starterFor": [
         "route_orchel"
       ],
@@ -11722,9 +11664,7 @@
       "name": "Halvin",
       "portrait": "/images/mtx31p4kqwgso0.jpg",
       "isLord": false,
-      "routeIds": [
-        "route_anatolia"
-      ],
+      "routeIds": [],
       "starterFor": [
         "route_anatolia"
       ],
@@ -27652,5 +27592,6 @@
       },
       "location": "Tutorial, Raivo Port, Baina Oasis, Barsk Post Town, Yaaman, Orens, Shama Port, Whill, Niiza Port, Regia, Bombae, Kassite, Ribeira, Messalina Orchards, Osiris, Daimōn, Port of Pandora, Twalinn"
     }
-  ]
+  ],
+  "growthsOnCharPage": true
 }

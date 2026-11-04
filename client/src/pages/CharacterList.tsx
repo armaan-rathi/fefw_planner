@@ -8,6 +8,7 @@ import { availableAttrs, charPageConfig } from "../data/characterAttrs";
 import { unitFaction } from "../data/units";
 import { GROWTH_LABELS, GROWTH_STATS } from "../types";
 import type { DB, Unit } from "../types";
+import { growthStatRange, heatColor } from "../data/growths";
 import { filterSpoilerUnits, useSpoilers } from "../data/spoilers";
 import { useVisibleRoutes } from "../data/sublords";
 
@@ -55,19 +56,25 @@ function RecruitmentSection({ unit, routes }: { unit: Unit; routes: DB["routes"]
 }
 
 // Growth rates grid, shown only when enabled in Dev Mode → Growth Rates.
-function GrowthsSection({ unit }: { unit: Unit }) {
+// Chips are heat-colored (blue→gold) on the same scale as the Growth Rates page.
+function GrowthsSection({ unit, range }: { unit: Unit; range: { min: number; max: number } }) {
   const g = unit.growths;
   if (!g || !GROWTH_STATS.some((k) => typeof g[k] === "number")) return null;
+  const norm = (v: number) => (range.max === range.min ? 0.5 : (v - range.min) / (range.max - range.min));
   return (
     <div className="char-attr block">
       <div className="k">Growth Rates</div>
       <div className="growth-chips">
-        {GROWTH_STATS.map((k) => (
-          <span className="growth-chip" key={k}>
-            <span className="gc-k">{GROWTH_LABELS[k]}</span>
-            <span className="gc-v">{typeof g[k] === "number" ? `${g[k]}%` : "—"}</span>
-          </span>
-        ))}
+        {GROWTH_STATS.map((k) => {
+          const v = g[k];
+          const heat = typeof v === "number";
+          return (
+            <span className={"growth-chip" + (heat ? " heat" : "")} key={k} style={heat ? { background: heatColor(norm(v)) } : undefined}>
+              <span className="gc-k">{GROWTH_LABELS[k]}</span>
+              <span className="gc-v">{heat ? `${v}%` : "—"}</span>
+            </span>
+          );
+        })}
       </div>
     </div>
   );
@@ -96,6 +103,7 @@ export function CharacterList() {
 
   const [allowSpoilers] = useSpoilers();
   const visibleRoutes = useVisibleRoutes();
+  const growthRange = useMemo(() => growthStatRange(db), [db]);
   const filtered = useMemo(() => {
     const base = filterSpoilerUnits(db.units, allowSpoilers);
     const q = query.toLowerCase().trim();
@@ -190,7 +198,7 @@ export function CharacterList() {
                 <p className="muted">No detail fields configured. Choose them in Dev Mode → Characters.</p>
               )}
               <RecruitmentSection unit={openUnit} routes={visibleRoutes} />
-              {db.growthsOnCharPage && <GrowthsSection unit={openUnit} />}
+              {db.growthsOnCharPage && <GrowthsSection unit={openUnit} range={growthRange} />}
             </div>
           </div>
         </Modal>
