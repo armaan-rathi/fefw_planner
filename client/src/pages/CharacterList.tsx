@@ -6,9 +6,11 @@ import { CastTabs } from "../components/CastTabs";
 import { CharAttr } from "../components/CharAttr";
 import { availableAttrs, charPageConfig } from "../data/characterAttrs";
 import { unitFaction } from "../data/units";
-import { GROWTH_LABELS, GROWTH_STATS } from "../types";
+import { GROWTH_LABELS, GROWTH_STATS, LEARNSET_RANKS } from "../types";
 import type { DB, Unit } from "../types";
 import { growthStatRange, heatColor } from "../data/growths";
+import { learnsetEntryMap } from "../data/magic";
+import { SkillMark } from "../components/icons";
 import { filterSpoilerUnits, useSpoilers } from "../data/spoilers";
 import { useVisibleRoutes } from "../data/sublords";
 
@@ -80,6 +82,42 @@ function GrowthsSection({ unit, range }: { unit: Unit; range: { min: number; max
   );
 }
 
+// The character's learnset, grouped by proficiency, each rank → entry chips.
+function CharacterLearnsets({ unit }: { unit: Unit }) {
+  const { db } = useDB();
+  const nameOf = useMemo(() => learnsetEntryMap(db), [db]);
+  const ls = unit.learnsets ?? {};
+  const profs = db.skillTypes.filter((st) => {
+    const l = ls[st.id];
+    return l && Object.values(l).some((ids) => ids.length > 0);
+  });
+
+  if (profs.length === 0) return <p className="muted" style={{ marginTop: 10 }}>No learnsets recorded for this character.</p>;
+  return (
+    <div className="char-learnsets">
+      {profs.map((st) => {
+        const l = ls[st.id];
+        const ranks = LEARNSET_RANKS.filter((r) => (l[r] ?? []).length > 0);
+        return (
+          <div className="cl-prof" key={st.id}>
+            <div className="cl-prof-head"><SkillMark type={st} size={18} /> <b>{st.label}</b></div>
+            <div className="cl-ranks">
+              {ranks.map((r) => (
+                <div className="cl-rank" key={r}>
+                  <span className="cl-rank-k">{r}</span>
+                  <span className="cl-rank-v">
+                    {(l[r] ?? []).map((id) => <span className="tag" key={id}>{nameOf.get(id) ?? "?"}</span>)}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
 function Portrait({ unit, className }: { unit: Unit; className?: string }) {
   const initial = (unit.name.trim()[0] || "?").toUpperCase();
   return (
@@ -104,6 +142,7 @@ export function CharacterList() {
   const [allowSpoilers] = useSpoilers();
   const visibleRoutes = useVisibleRoutes();
   const growthRange = useMemo(() => growthStatRange(db), [db]);
+  const [detailTab, setDetailTab] = useState<"details" | "learnsets">("details");
   const filtered = useMemo(() => {
     const base = filterSpoilerUnits(db.units, allowSpoilers);
     const q = query.toLowerCase().trim();
@@ -163,7 +202,7 @@ export function CharacterList() {
       ) : (
         <div className="char-grid">
           {shown.map((u) => (
-            <button key={u.id} className="ornate char-card" onClick={() => setOpenId(u.id)}>
+            <button key={u.id} className="ornate char-card" onClick={() => { setOpenId(u.id); setDetailTab("details"); }}>
               <Portrait unit={u} />
               <div className="char-card-body">
                 <div className="char-name">
@@ -190,16 +229,24 @@ export function CharacterList() {
                 {unitFaction(openUnit) && <div className="muted">{unitFaction(openUnit)}</div>}
               </div>
             </div>
-            <div className="char-detail-attrs">
-              {detailAttrs.map((id) => (
-                <CharAttr key={id} id={id} unit={openUnit} />
-              ))}
-              {detailAttrs.length === 0 && (
-                <p className="muted">No detail fields configured. Choose them in Dev Mode → Characters.</p>
-              )}
-              <RecruitmentSection unit={openUnit} routes={visibleRoutes} />
-              {db.growthsOnCharPage && <GrowthsSection unit={openUnit} range={growthRange} />}
+            <div className="cast-tabs">
+              <button className={detailTab === "details" ? "active" : ""} onClick={() => setDetailTab("details")}>Details</button>
+              <button className={detailTab === "learnsets" ? "active" : ""} onClick={() => setDetailTab("learnsets")}>Learnsets</button>
             </div>
+            {detailTab === "details" ? (
+              <div className="char-detail-attrs">
+                {detailAttrs.map((id) => (
+                  <CharAttr key={id} id={id} unit={openUnit} />
+                ))}
+                {detailAttrs.length === 0 && (
+                  <p className="muted">No detail fields configured. Choose them in Dev Mode → Characters.</p>
+                )}
+                <RecruitmentSection unit={openUnit} routes={visibleRoutes} />
+                {db.growthsOnCharPage && <GrowthsSection unit={openUnit} range={growthRange} />}
+              </div>
+            ) : (
+              <CharacterLearnsets unit={openUnit} />
+            )}
           </div>
         </Modal>
       )}

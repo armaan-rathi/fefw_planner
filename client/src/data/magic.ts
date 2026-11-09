@@ -28,6 +28,20 @@ export function combatArtsFor(db: DB, profId: string): CombatArt[] {
   return (db.combatArts ?? []).filter((a) => a.proficiency === profId);
 }
 
+// Resolve any learnset id to its display name — spells, combat arts, and skills
+// (with their "+" / "++" upgrade variants).
+export function learnsetEntryMap(db: DB): Map<string, string> {
+  const m = new Map<string, string>();
+  for (const s of db.spells ?? []) m.set(s.id, s.name);
+  for (const a of db.combatArts ?? []) m.set(a.id, a.name);
+  for (const s of db.skills ?? []) {
+    m.set(s.id, s.name);
+    if (s.plus) m.set(s.id + "+", s.plus.name);
+    if (s.plusPlus) m.set(s.id + "++", s.plusPlus.name);
+  }
+  return m;
+}
+
 export function combatArtMap(db: DB): Map<string, CombatArt> {
   return new Map((db.combatArts ?? []).map((a) => [a.id, a]));
 }
