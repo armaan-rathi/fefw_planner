@@ -20122,7 +20122,7 @@
     {
       "id": "cast_msetoyu3483vr",
       "name": "Smyrnos",
-      "portrait": "/images/msf8dsb46454kl.png",
+      "portrait": "/images/mwjo3lxucq4gpw.png",
       "subtitle": "",
       "description": "",
       "crest": "Macuil",
@@ -20135,7 +20135,7 @@
     {
       "id": "cast_msu3g6v7nvzvh",
       "name": "Jurah",
-      "portrait": "/images/msu3gcm5s1edan.jpg",
+      "portrait": "/images/mwjo3rnwt95exo.png",
       "subtitle": "",
       "description": "",
       "crest": "Fraldarius",
@@ -20161,7 +20161,7 @@
     {
       "id": "cast_msu3j0g5oyvkc",
       "name": "Credna",
-      "portrait": "/images/msu3j53pssvunp.png",
+      "portrait": "/images/mwjo3vfp3zq000.png",
       "subtitle": "",
       "description": "",
       "crest": "Noa",
@@ -22999,6 +22999,21 @@
       "a": "unit_msftrzee97kx3",
       "b": "unit_ms3oeprflm40x",
       "rank": "A"
+    },
+    {
+      "a": "unit_mt4vbrsx1692p",
+      "b": "unit_cai",
+      "rank": "A"
+    },
+    {
+      "a": "unit_mt4vbrsx1692p",
+      "b": "unit_ms4ax1urookeq",
+      "rank": "A"
+    },
+    {
+      "a": "unit_mt4vbrsx1692p",
+      "b": "unit_theodora",
+      "rank": "B"
     }
   ],
   "showSpoilerToggle": true,
